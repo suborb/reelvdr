@@ -1,0 +1,34 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Emanuel Wontorra
+
+Project's homepage:          http://www.wontorra.net/staticpages/index.php?page=director
+
+See the file COPYING for license information.
+
+Description:
+-----------
+Director is a plugin to use the multifeed option of some Premiere channels(Direkt,Sport1,Sport2).
+
+Requirements:
+-------------
+VDR >= 1.4.X
+You need to apply the patch vdr-director.diff to vdr
+
+Usage:
+-----
+Left  switches to the first mulifeed channel
+Right switches to the last multifeed channel
+Up	  switches one multifeed channel up
+Down	switches one multifeed channel down
+1...9		choose one of the first nine channels direct
+0		toggle between the last two channels
+OK		show/hide the OSD
+
+Setup Option:
+-------------
+
+- Hide Mainmenu Entry: Hides the plugin main menu entry
+- Swap up and down: Swaps the action on up and down keys
+- Portal Mode: in portal mode the first multifeed channel has no number,
+  introduced to match the Sport Portal option numbers

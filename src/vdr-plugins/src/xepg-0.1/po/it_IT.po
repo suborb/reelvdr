@@ -1,0 +1,53 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-10-20 18:13+0200\n"
+"PO-Revision-Date: 2009-06-21 00:28+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "A plugin to import EPG data into VDR"
+msgstr "Plugin per importazione dati EPG su VDR"
+
+msgid "Load custom EPG"
+msgstr ""
+
+msgid "United Kingdom (BBC+Sky)"
+msgstr "Regno Unito (BBC+Sky)"
+
+msgid " Retrieve EPG now"
+msgstr " Scaricare EPG ora"
+
+msgid "External BBC-SKY EPG"
+msgstr "EPG BBC-SKY Esterno"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "On"
+msgstr "On"
+
+msgid "Okay, Starting download in the background"
+msgstr "Download iniziato in background"
+
+msgid "Download already in progress!"
+msgstr "Download già in corso!"
+
+#~ msgid "Load BBC-SKY EPG"
+#~ msgstr "Caricare BBC-SKY EPG"

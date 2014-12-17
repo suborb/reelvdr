@@ -1,0 +1,3 @@
+REELFPCTL=/sbin/reelfpctl
+HDCONTROL=/usr/sbin/hdctrld
+FPLEDS=/usr/sbin/fpleds

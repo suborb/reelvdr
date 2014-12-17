@@ -1,0 +1,34 @@
+
+Hier können Sie das Verhalten des Videorekorders beeinflussen
+und die Festplatte formatieren:
+
+Aufnahme Einstellungen:
+-Vor- und Nachlaufzeit definieren, Nutzung des VPS-Signals, 
+ Aufnahme von Digitalton,  Aufnahmeverzeichnisse definieren etc.
+
+Wiedergabe Einstellungen:
+-Verhalten bei der Wiedergabe von Aufzeichnungen festlegen:
+ MultiSpeed-Modus mehrere Geschwindigkeiten für 
+ Vor- und Rücklauf.
+  
+-Wiedergabestatus anzeigen:
+ Anzeige des Wiedergabemodus im OSD
+  
+-Wiedergabe nach Sprung:
+ Wiedergabe nach Anspringen einer Schnittmarke.
+  
+-Sprung bei Schnittmarke: 
+ Automatisches Springen zur nächsten Startmarke, wenn eine 
+ Endmarke erreicht wird.
+
+-Festplatte formatieren: 
+ Löscht alle Daten auf der Festplatte unwiderruflich.
+
+-Festplatte abschalten: 
+ Zeit (in Minuten) festlegen, nach der die Festplatte bei Inaktivität 
+ abschaltet. 
+ Diese Einstellung reduziert Wärme- und Geräuschentwicklung.
+
+-NoAd nach Aufnahme starten: 
+ Automatisches Markieren von Werbeblöcken in Aufzeichnungen 
+ aktivieren / deaktivieren.

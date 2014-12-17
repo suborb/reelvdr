@@ -1,0 +1,364 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare-Tododream. Diciembre 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreel3\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-03-01 16:42+0100\n"
+"PO-Revision-Date: 2008-09-26 12:52+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal no válido ***"
+
+msgid "mins"
+msgstr "Mints"
+
+msgid "min"
+msgstr "Min"
+
+msgid "en_US"
+msgstr "es_ES"
+
+msgid "Unknown Recording"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Cable TV"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Terrestrial TV"
+msgstr ""
+
+msgid "CI-slot: Upper"
+msgstr ""
+
+msgid "CI-slot: Lower"
+msgstr ""
+
+msgid "background process"
+msgstr ""
+
+msgid "Play Disk"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+msgid "Languages"
+msgstr "Idiomas"
+
+msgid "Image for recording"
+msgstr ""
+
+msgid "Size"
+msgstr "Tamaño"
+
+msgid "Auxiliary information"
+msgstr "Información adicional"
+
+msgid "Subtitles"
+msgstr "Subtítulos"
+
+msgid "Reel Avantgarde"
+msgstr ""
+
+msgid "TrueType Font"
+msgstr "Fuente TrueType"
+
+msgid "No TTF support!"
+msgstr "¡Sin soporte TTF!"
+
+msgid "Default OSD Font"
+msgstr "Fuente OSD defecto"
+
+msgid "Default Fixed Size Font"
+msgstr "Fuente tamaño fijo defecto"
+
+msgid "Default Small Font"
+msgstr "Fuente pequeña defecto"
+
+msgid "General"
+msgstr "General"
+
+msgid "Logos & Symbols"
+msgstr "Logos y símbolos"
+
+msgid "Fonts"
+msgstr "Fuentes"
+
+msgid "Changes done"
+msgstr "Cambios hechos"
+
+msgid "elapsed"
+msgstr "Transcurrido"
+
+msgid "remaining"
+msgstr "Restante"
+
+msgid "percent"
+msgstr "Porcentaje"
+
+msgid "never"
+msgstr "Nunca"
+
+msgid "use size.vdr only"
+msgstr "Sólo usar size.vdr"
+
+msgid "always"
+msgstr "Siempre"
+
+msgid "Last line"
+msgstr "Última línea"
+
+msgid "Help buttons"
+msgstr "Botones ayuda"
+
+msgid "Free last line"
+msgstr "Última línea libre"
+
+msgid "simple"
+msgstr ""
+
+msgid "graphical"
+msgstr "Gráfico"
+
+msgid "graphical small"
+msgstr "Gráfico pequeño"
+
+msgid "Show auxiliary information"
+msgstr "Mostrar información adicional"
+
+msgid "top"
+msgstr "Arriba"
+
+msgid "bottom"
+msgstr "Abajo"
+
+msgid "Show recording's size"
+msgstr "Mostrar tamaño de grabación"
+
+msgid "Show remaining/elapsed time"
+msgstr "Mostrar tiempo restante/transcurrido"
+
+msgid "Show VPS"
+msgstr "Mostrar VPS"
+
+msgid "Show source in the channelinfo"
+msgstr ""
+
+msgid "Progressbar type"
+msgstr "Tipo de barra de progreso"
+
+msgid "Show channel logos"
+msgstr "Mostrar logos de los canales"
+
+msgid "Flushing channel logo cache..."
+msgstr "Limpiando la caché..."
+
+msgid "Show symbols"
+msgstr "Mostrar símbolos"
+
+msgid "  Show symbols in replay"
+msgstr "  Mostrar símbolos en reproducción"
+
+msgid "  Show symbols in messages"
+msgstr "  Mostrar símbolos en mensajes"
+
+msgid "  Show symbols in audio"
+msgstr "  Mostrar símbolos en audio"
+
+msgid "Show symbols in lists"
+msgstr "Mostrar símbolos en listas"
+
+msgid "Show marker in lists"
+msgstr "Mostrar marcador en listas"
+
+msgid "Show status symbols"
+msgstr "Mostrar símbolos"
+
+msgid "  Identify channel by"
+msgstr "  Identificar el canal por"
+
+msgid "name"
+msgstr "Nombre"
+
+msgid "data"
+msgstr "Datos"
+
+msgid "Channel logo cache size"
+msgstr "Tamaño de caché para los logos"
+
+msgid "Button$Flush cache"
+msgstr "Limpiar caché"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Width"
+msgstr "Anchura"
+
+msgid "No TrueType fonts installed!"
+msgstr "¡Ninguna fuente TrueType instalada!"
+
+msgid "Font Sizes"
+msgstr "Fuentes"
+
+msgid "Fixed Font"
+msgstr "Fuente Fija"
+
+msgid "Button$Set"
+msgstr "Cambiar"
+
+msgid "OSD title"
+msgstr "Título OSD"
+
+msgid "Messages"
+msgstr "Mensajes"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Help keys"
+msgstr "Botones de ayuda"
+
+msgid "Channelinfo: title"
+msgstr "Info canal: título"
+
+msgid "Channelinfo: subtitle"
+msgstr "Info canal: subtítulo"
+
+msgid "Channelinfo: language"
+msgstr "Info canal: idioma"
+
+msgid "List items"
+msgstr "Listado"
+
+msgid "Info area: timers title"
+msgstr "Área info: título programación"
+
+msgid "Info area: timers text"
+msgstr "Área info: texto programación"
+
+msgid "Info area: warning title"
+msgstr "Área info: título aviso"
+
+msgid "Info area: warning text"
+msgstr "Área info: texto aviso"
+
+msgid "Details: title"
+msgstr "Detalles: título"
+
+msgid "Details: subtitle"
+msgstr "Detalles: subtítulo"
+
+msgid "Details: date"
+msgstr "Detalles: fecha"
+
+msgid "Details: text"
+msgstr "Detalles: texto"
+
+msgid "Replay: times"
+msgstr "Reproducir: veces"
+
+msgid "ReelBox skin 3rd generation"
+msgstr ""
+
+msgid "Channel:"
+msgstr "Canal:"
+
+msgid "Search pattern:"
+msgstr "Buscar patrón:"
+
+msgid "Timer check"
+msgstr "Comprobar programación"
+
+msgid "No timer check"
+msgstr "No comprobar programación"
+
+#~ msgid "Try 8bpp single area"
+#~ msgstr "Probar un área de 8bpp"
+
+#~ msgid "Show progressbar"
+#~ msgstr "Mostrar barra de progreso"
+
+#~ msgid "Show messages in menu on"
+#~ msgstr "Mostrar mensajes en menú on"
+
+#~ msgid "Sunday"
+#~ msgstr "Domingo"
+
+#~ msgid "Monday"
+#~ msgstr "Lunes"
+
+#~ msgid "Tuesday"
+#~ msgstr "Martes"
+
+#~ msgid "Wednesday"
+#~ msgstr "Miércoles"
+
+#~ msgid "Thursday"
+#~ msgstr "Jueves"
+
+#~ msgid "Friday"
+#~ msgstr "Viernes"
+
+#~ msgid "Saturday"
+#~ msgstr "Sábado"
+
+#~ msgid "TIMERS"
+#~ msgstr "PROGRAMACIONES"
+
+#~ msgid "Reel Classic"
+#~ msgstr "Reel clásico"
+
+#~ msgid "Show info area in main menu"
+#~ msgstr "Mostrar info en menú principal"
+
+#~ msgid "pixel algo"
+#~ msgstr "Algoritmo píxel"
+
+#~ msgid "ratio algo"
+#~ msgstr "Algoritmo ratio"
+
+#~ msgid "zoom image"
+#~ msgstr "Aumentar imagen"
+
+#~ msgid "  Show symbols in menu"
+#~ msgstr "  Mostrar símbolos en menú"
+
+#~ msgid "  Show flags"
+#~ msgstr "  Mostrar banderas"
+
+#~ msgid "Show event/recording images"
+#~ msgstr "Mostrar imágenes grabación/suceso"
+
+#~ msgid "  Resize images"
+#~ msgstr "  Redimensionar imágenes"
+
+#~ msgid "  Image width"
+#~ msgstr "  Anchura de imagen"
+
+#~ msgid "  Image height"
+#~ msgstr "  Altura de imagen"
+
+#~ msgid "  Image format"
+#~ msgstr "  Formato de imagen"
+
+#~ msgid "ReelNG skin"
+#~ msgstr "Skin ReelNG"
+
+#~ msgid "Full title width"
+#~ msgstr "Ancho completo para título"

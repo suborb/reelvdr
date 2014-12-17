@@ -1,0 +1,106 @@
+diff -ubw vdr-1.4.0/device.h vdr-1.4.0-Rotor/device.h
+--- vdr-1.4.0/device.h	2006-04-14 16:35:13.000000000 +0200
++++ vdr-1.4.0-Rotor/device.h	2006-05-01 16:37:47.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include "spu.h"
+ #include "thread.h"
+ #include "tools.h"
++#include <linux/dvb/frontend.h>
+ 
+ #define MAXDEVICES         16 // the maximum number of devices in the system
+ #define MAXPIDHANDLES      64 // the maximum number of different PIDs per device
+@@ -250,6 +251,7 @@
+   virtual bool HasProgramme(void);
+          ///< Returns true if the device is currently showing any programme to
+          ///< the user, either through replaying or live.
++  virtual bool SendDiseqcCmd(dvb_diseqc_master_cmd cmd) {return false;}
+ 
+ // PID handle facilities
+ 
+diff -ubw vdr-1.4.0/dvbdevice.c vdr-1.4.0-Rotor/dvbdevice.c
+--- vdr-1.4.0/dvbdevice.c	2006-04-01 16:19:43.000000000 +0200
++++ vdr-1.4.0-Rotor/dvbdevice.c	2006-05-01 16:38:04.000000000 +0200
+@@ -71,6 +71,7 @@
+ class cDvbTuner : public cThread {
+ private:
+   enum eTunerStatus { tsIdle, tsSet, tsTuned, tsLocked };
++ bool SendDiseqc;
+   int fd_frontend;
+   int cardIndex;
+   int tuneTimeout;
+@@ -84,6 +85,7 @@
+   cMutex mutex;
+   cCondVar locked;
+   cCondVar newSet;
++  dvb_diseqc_master_cmd diseqc_cmd;
+   bool GetFrontendStatus(fe_status_t &Status, int TimeoutMs = 0);
+   bool SetFrontend(void);
+   virtual void Action(void);
+@@ -92,12 +94,14 @@
+   virtual ~cDvbTuner();
+   bool IsTunedTo(const cChannel *Channel) const;
+   void Set(const cChannel *Channel, bool Tune);
++  bool SendDiseqcCmd(dvb_diseqc_master_cmd cmd);
+   bool Locked(int TimeoutMs = 0);
+   };
+ 
+ cDvbTuner::cDvbTuner(int Fd_Frontend, int CardIndex, fe_type_t FrontendType, cCiHandler *CiHandler)
+ {
+   fd_frontend = Fd_Frontend;
++  SendDiseqc=false;
+   cardIndex = CardIndex;
+   frontendType = FrontendType;
+   ciHandler = CiHandler;
+@@ -147,6 +151,17 @@
+   return tunerStatus >= tsLocked;
+ }
+ 
++bool cDvbTuner::SendDiseqcCmd(dvb_diseqc_master_cmd cmd)
++{
++  cMutexLock MutexLock(&mutex);
++  if (frontendType!=FE_QPSK || SendDiseqc)
++    return false;
++  diseqc_cmd=cmd;
++  SendDiseqc=true;
++  newSet.Broadcast();
++  return true;
++}
++
+ bool cDvbTuner::GetFrontendStatus(fe_status_t &Status, int TimeoutMs)
+ {
+   if (TimeoutMs) {
+@@ -302,6 +317,10 @@
+         if (GetFrontendStatus(NewStatus, 10))
+            Status = NewStatus;
+         cMutexLock MutexLock(&mutex);
++        if (SendDiseqc) {
++           CHECK(ioctl(fd_frontend, FE_DISEQC_SEND_MASTER_CMD, &diseqc_cmd));
++           SendDiseqc=false;
++           }
+         switch (tunerStatus) {
+           case tsIdle:
+                break;
+@@ -876,6 +895,11 @@
+   return dvbTuner ? dvbTuner->Locked(TimeoutMs) : false;
+ }
+ 
++bool cDvbDevice::SendDiseqcCmd(dvb_diseqc_master_cmd cmd)
++{
++  return dvbTuner->SendDiseqcCmd(cmd);
++}
++
+ int cDvbDevice::GetAudioChannelDevice(void)
+ {
+   if (HasDecoder()) {
+Nur in vdr-1.4.0-Rotor: dvbdevice.c~.
+diff -ubw vdr-1.4.0/dvbdevice.h vdr-1.4.0-Rotor/dvbdevice.h
+--- vdr-1.4.0/dvbdevice.h	2006-04-01 16:18:59.000000000 +0200
++++ vdr-1.4.0-Rotor/dvbdevice.h	2006-05-01 16:37:47.000000000 +0200
+@@ -67,6 +67,7 @@
+   virtual bool SetChannelDevice(const cChannel *Channel, bool LiveView);
+ public:
+   virtual bool HasLock(int TimeoutMs = 0);
++  virtual bool SendDiseqcCmd(dvb_diseqc_master_cmd cmd);
+ 
+ // PID handle facilities
+ 

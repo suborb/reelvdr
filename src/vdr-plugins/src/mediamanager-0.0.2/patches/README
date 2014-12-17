@@ -1,0 +1,18 @@
+Apply patches in plugin-source directory with
+    patch -p1 < patch-file
+
+After applying patches the plugins works as expected even if mediamanager is
+not running.
+
+Notes on mp3 and image plugin
+-----------------------------
+
+remove any entry which points to the cdrom device in
+mp3sources.conf and/or imagesources.conf
+
+to use these plugins without any files on harddisk create an empty
+mp3sources.conf and/or imagesources.conf
+
+if harddisk directorys are defined in mp3sources.conf and/or imagesources.conf
+you will get your normal plugin mainmenuentrys and if a disc is inserted an
+additional entry named "Media Mp3" or "Media Image"

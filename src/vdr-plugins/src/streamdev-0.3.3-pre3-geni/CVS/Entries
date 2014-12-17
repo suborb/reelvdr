@@ -1,0 +1,21 @@
+D/client////
+D/libdvbmpeg////
+D/patches////
+D/remux////
+D/server////
+D/tools////
+/CONTRIBUTORS/1.1.1.1/Wed Oct 24 13:26:45 2007//
+/COPYING/1.1.1.1/Wed Oct 24 13:26:45 2007//
+/HISTORY/1.1.1.1/Wed Oct 24 13:26:45 2007//
+/Makefile/1.8/Result of merge//
+/PROTOCOL/1.1.1.1/Wed Oct 24 13:26:45 2007//
+/README/1.10/Wed Oct 24 13:26:45 2007//
+/common.c/1.5/Mon Nov 12 09:22:10 2007//
+/common.h/1.8/Mon Nov 12 09:22:11 2007//
+/i18n.h/1.1.1.1/Wed Oct 24 13:26:45 2007//
+/streamdevhosts.conf.example/1.1.1.1/Wed Oct 24 13:26:45 2007//
+/i18n.c/1.5/Mon Nov 12 09:25:02 2007//
+/streamdev-client.c/1.2/Mon Nov 12 09:25:02 2007//
+/streamdev-client.h/1.1.1.1/Mon Nov 12 09:25:02 2007//
+/streamdev-server.c/1.6/Mon Nov 12 09:25:02 2007//
+/streamdev-server.h/1.4/Mon Nov 12 09:25:02 2007//

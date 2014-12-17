@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-15 17:49+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Smartbrowser"
+msgstr ""
+
+msgid "Webbrowser"
+msgstr ""
+
+msgid "KDE-Desktop"
+msgstr ""
+
+msgid "No browser available"
+msgstr ""
+
+msgid "CRT"
+msgstr ""
+
+msgid "LCD (RGB)"
+msgstr ""
+
+msgid "LCD (BGR)"
+msgstr ""
+
+msgid "Simple Browser"
+msgstr ""
+
+msgid "SNES-emu-only session"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Full"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "start URL"
+msgstr ""
+
+msgid "font size in menu"
+msgstr ""
+
+msgid "font size"
+msgstr ""
+
+msgid "picture scaling (%)"
+msgstr ""
+
+msgid "transparency"
+msgstr ""
+
+msgid "margin horizontal"
+msgstr ""
+
+msgid "margin vertical"
+msgstr ""
+
+msgid "optimize for"
+msgstr ""
+
+msgid "scaling mode"
+msgstr ""

@@ -1,0 +1,176 @@
+diff -uNr vdr-1.3.34.prepatch/ci.c vdr-1.3.34/ci.c
+--- vdr-1.3.34.prepatch/ci.c	2005-10-25 15:17:59.000000000 +0200
++++ vdr-1.3.34/ci.c	2005-12-14 13:32:29.000000000 +0100
+@@ -156,7 +156,7 @@
+   uint8_t Status(void);
+   int Write(int fd);
+   int Read(int fd);
+-  void Dump(bool Outgoing);
++  void Dump(int fd, bool Outgoing);
+   };
+ 
+ cTPDU::cTPDU(uint8_t Slot, uint8_t Tcid, uint8_t Tag, int Length, const uint8_t *Data)
+@@ -207,7 +207,7 @@
+ 
+ int cTPDU::Write(int fd)
+ {
+-  Dump(true);
++  Dump(fd, true);
+   if (size)
+      return write(fd, data, size) == size ? OK : ERROR;
+   esyslog("ERROR: attemp to write TPDU with zero size");
+@@ -222,20 +222,20 @@
+      size = 0;
+      return ERROR;
+      }
+-  Dump(false);
++  Dump(fd, false);
+   return OK;
+ }
+ 
+-void cTPDU::Dump(bool Outgoing)
++void cTPDU::Dump(int fd, bool Outgoing)
+ {
+   if (DumpTPDUDataTransfer) {
+ #define MAX_DUMP 256
+-     fprintf(stderr, "%s ", Outgoing ? "-->" : "<--");
++     fprintf(stderr, "%2d %s ", fd, Outgoing ? "-->" : "<--");
+      for (int i = 0; i < size && i < MAX_DUMP; i++)
+          fprintf(stderr, "%02X ", data[i]);
+      fprintf(stderr, "%s\n", size >= MAX_DUMP ? "..." : "");
+      if (!Outgoing) {
+-        fprintf(stderr, "   ");
++        fprintf(stderr, "      ");
+         for (int i = 0; i < size && i < MAX_DUMP; i++)
+             fprintf(stderr, "%2c ", isprint(data[i]) ? data[i] : '.');
+         fprintf(stderr, "%s\n", size >= MAX_DUMP ? "..." : "");
+@@ -1064,12 +1064,12 @@
+ cCiMMI::~cCiMMI()
+ {
+   if (fetchedMenu) {
+-     cMutexLock MutexLock(&fetchedMenu->mutex);
++     cMutexLock MutexLock(fetchedMenu->mutex);
+      fetchedMenu->mmi = NULL;
+      }
+   delete menu;
+   if (fetchedEnquiry) {
+-     cMutexLock MutexLock(&fetchedEnquiry->mutex);
++     cMutexLock MutexLock(fetchedEnquiry->mutex);
+      fetchedEnquiry->mmi = NULL;
+      }
+   delete enquiry;
+@@ -1243,7 +1243,7 @@
+ 
+ cCiMenu::~cCiMenu()
+ {
+-  cMutexLock MutexLock(&mutex);
++  cMutexLock MutexLock(mutex);
+   if (mmi)
+      mmi->Menu(true);
+   free(titleText);
+@@ -1270,7 +1270,8 @@
+ 
+ bool cCiMenu::Select(int Index)
+ {
+-  cMutexLock MutexLock(&mutex);
++  cMutexLock MutexLock(mutex);
++  dbgprotocol("%d: ==> Select %d\n", mmi ? mmi->SessionId() : -1, Index);
+   if (mmi && -1 <= Index && Index < numEntries)
+      return mmi->SendMenuAnswer(Index + 1);
+   return false;
+@@ -1283,6 +1284,7 @@
+ 
+ bool cCiMenu::Abort(void)
+ {
++  cMutexLock MutexLock(mutex);
+   return mmi && mmi->SendCloseMMI();
+ }
+ 
+@@ -1298,7 +1300,7 @@
+ 
+ cCiEnquiry::~cCiEnquiry()
+ {
+-  cMutexLock MutexLock(&mutex);
++  cMutexLock MutexLock(mutex);
+   if (mmi)
+      mmi->Enquiry(true);
+   free(text);
+@@ -1306,7 +1308,7 @@
+ 
+ bool cCiEnquiry::Reply(const char *s)
+ {
+-  cMutexLock MutexLock(&mutex);
++  cMutexLock MutexLock(mutex);
+   return mmi ? mmi->SendAnswer(s) : false;
+ }
+ 
+@@ -1317,6 +1319,7 @@
+ 
+ bool cCiEnquiry::Abort(void)
+ {
++  cMutexLock MutexLock(mutex);
+   return mmi && mmi->SendCloseMMI();
+ }
+ 
+@@ -1639,9 +1642,13 @@
+   cMutexLock MutexLock(&mutex);
+   for (int Slot = 0; Slot < numSlots; Slot++) {
+       cCiMMI *mmi = (cCiMMI *)GetSessionByResourceId(RI_MMI, Slot);
+-      if (mmi)
+-         return mmi->Menu();
++      if (mmi) {
++	cCiMenu *Menu = mmi->Menu();
++	if (Menu)
++	  Menu->mutex = &mutex;
++	return Menu;
+       }
++  }
+   return NULL;
+ }
+ 
+@@ -1650,9 +1657,13 @@
+   cMutexLock MutexLock(&mutex);
+   for (int Slot = 0; Slot < numSlots; Slot++) {
+       cCiMMI *mmi = (cCiMMI *)GetSessionByResourceId(RI_MMI, Slot);
+-      if (mmi)
+-         return mmi->Enquiry();
++      if (mmi) {
++	cCiEnquiry *Enquiry = mmi->Enquiry();
++	if (Enquiry)
++	  Enquiry->mutex = &mutex;
++	return Enquiry;
+       }
++  }
+   return NULL;
+ }
+ 
+diff -uNr vdr-1.3.34.prepatch/ci.h vdr-1.3.34/ci.h
+--- vdr-1.3.34.prepatch/ci.h	2005-10-25 15:17:59.000000000 +0200
++++ vdr-1.3.34/ci.h	2005-12-14 13:33:32.000000000 +0100
+@@ -17,11 +17,12 @@
+ class cCiMMI;
+ 
+ class cCiMenu {
++  friend class cCiHandler;
+   friend class cCiMMI;
+ private:
+   enum { MAX_CIMENU_ENTRIES = 64 }; ///< XXX is there a specified maximum?
+   cCiMMI *mmi;
+-  cMutex mutex;
++  cMutex *mutex;
+   bool selectable;
+   char *titleText;
+   char *subTitleText;
+@@ -45,10 +46,11 @@
+   };
+ 
+ class cCiEnquiry {
++  friend class cCiHandler;
+   friend class cCiMMI;
+ private:
+   cCiMMI *mmi;
+-  cMutex mutex;
++  cMutex *mutex;
+   char *text;
+   bool blind;
+   int expectedLength;

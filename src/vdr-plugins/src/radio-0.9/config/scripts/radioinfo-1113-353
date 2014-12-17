@@ -1,0 +1,27 @@
+#!/bin/bash
+# radio top40-Playlist
+# $1 = outfile
+
+### Variabel
+Name="radio top40 [www.radiotop40.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.radiotop40.de/titel.php"
+
+# Artist/Title
+artist=`grep -A6 '<body' /tmp/playlist`
+artist=${artist/*$'">'/}; artist=${artist/$' - '*/}
+title=`grep -A6 '<body' /tmp/playlist`
+title=${title/*$' - '/}; title=${title/$'<'\/'td>'*/}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

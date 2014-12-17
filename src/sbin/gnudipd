@@ -1,0 +1,176 @@
+#!/bin/sh
+
+PATH="/sbin:/bin:/usr/bin"
+
+# Source sysconfig
+if [ -f /etc/sysconfig ] ; then
+	. /etc/sysconfig
+else
+	. /etc/default/sysconfig
+fi
+
+if [ -f /etc/reel/globals ] ; then
+	. /etc/reel/globals
+else
+	. /etc/default/globals
+fi
+
+#
+# Global vars
+#
+delta=$((5*60))
+loglevel=3
+MyName=`basename $0`
+URL="http://$GNUDIPSRV/gnudip/cgi-bin/gdipupdt.cgi"
+
+Syntax () {
+cat << EOF
+Usage: $MyName [ -d | -h | -t | -u ]
+Description:
+     ReelBox mconnect daemon
+
+Options:
+     no option,
+     -h         give help
+     -d         run as daemon in background
+     -t         terminate a running daemon
+     -u         update dns now
+
+EOF
+}
+
+GetCurIp () {
+        Log 3 "checking current ip"
+        wget -q -O - http://checkip.dyndns.org/index.html | awk {'print $6'}| sed 's/<.*$//'
+}
+
+SetHostsEntry () {
+        if grep -q "$GNUDIPUSER.$GNUDIPDOMN" /etc/hosts ; then
+                sed -i "s/.* $GNUDIPUSER.$GNUDIPDOMN/$newIp $GNUDIPUSER.$GNUDIPDOMN/" /etc/hosts
+        else
+                echo "$newIp $GNUDIPUSER.$GNUDIPDOMN" >> /etc/hosts
+        fi
+}
+
+SetNewIp () {
+    HTML=`wget -q -O - $URL | grep "meta name" | cut -d '"' -f 2,4`
+    for LINE in $HTML
+    do
+        TYP=`echo $LINE | cut -c 1-4`
+        case  "$TYP" in
+            "sign")
+                SIGN=`echo $LINE | cut -c 6-`
+                ;;
+            "time")
+                TIME=`echo $LINE | cut -c 6-`
+                ;;
+            "salt")
+                SALT=`echo $LINE | cut -c 6-`
+                ;;
+        esac
+    done
+    PASS=`perl -e 'use Digest::MD5 qw(md5_hex);print md5_hex("'$GNUDIPPASS'")'`
+    PASS=`perl -e 'use Digest::MD5 qw(md5_hex);print md5_hex("'$PASS.$SALT'")'`
+    QUERY="salt=$SALT&time=$TIME&sign=$SIGN&user=$GNUDIPUSER&pass=$PASS&domn=$GNUDIPDOMN&reqc=2&addr=0"
+    HTML=`wget -q -O - "$URL?$QUERY" | grep "meta name" | cut -d '"' -f 2,4`
+    RETC=""
+    ADDR=""
+    for LINE in $HTML
+    do
+        TYP=`echo $LINE | cut -c 1-4`
+        case  "$TYP" in
+            "retc")
+                RETC=`echo $LINE | cut -c 6-`
+                ;;
+            "addr")
+                ADDR=`echo $LINE | cut -c 6-`
+                ;;
+        esac
+    done
+    if [ "$RETC" = "0" ] ; then
+        Log 2 "ADDR=$ADDR"
+        return 0
+    else
+        return 1
+    fi
+}
+
+MainLoop () {
+        Log 3 "MainLoop ()"
+        myIP=""
+        while true ; do
+                newIp=`GetCurIp`
+                Log 3 "myIP: $myIP newIp: $newIp"
+                if [ $? = 0 ] ; then
+                        if [ "$myIP" != "$newIp" ] ; then
+				SetNewIp
+                                if [ $? = 0 ] ; then
+                                        Log 1 "Updated IP to $newIp"
+                                        myIP=$newIp
+                                        SetHostsEntry
+                                else
+                                        Log 1 "IP update failed!"
+                                fi
+                        fi
+                else
+                        Log 0 "Checking current IP failed. check network."
+                fi
+                sleep $delta
+        done
+}
+
+
+for i in $GNUDIPUSER $GNUDIPPASS $GNUDIPSRV $GNUDIPDOMN; do
+        if [ -z "$i" ] ; then
+                Log 0 "$MyName not configured. Exiting."
+		exit 1
+        fi
+done
+
+
+case $1 in
+        -d)
+                #daemonize
+                if [ "$USE_GNUDIP" = "yes" ] ; then
+                        MainLoop &
+                        echo $! > /var/run/$MyName
+                else
+                        Log 0 "GNUDIP turned of in $Sysconfig"
+                fi
+                ;;
+        -t|-k)
+                if [ -f /var/run/$MyName ] ; then
+                        Log 1 "Terminating running $MyName"
+                        kill `cat /var/run/$MyName`
+                        rm /var/run/$MyName
+                else
+                        Log 1 "$MyName not running"
+                        exit 1
+                fi
+                ;;
+        -u)
+                #update immediate
+                newIp=`GetCurIp`
+                if [ $? = 0 ] ; then
+                        Log 1 "new IP is $newIp"
+                        Log 3 "setting new IP"
+                        ret=`SetNewIp`
+                        if [ $? = 0 ] ; then
+                            Log 3 "successful"
+                            SetHostsEntry
+                        else
+                            Log 3 "Failed"
+                        fi
+                fi
+                ;;
+        restart)
+                $0 -t
+                $0 -d
+                ;;
+        *|-h)
+                Syntax
+                exit 1
+                ;;
+esac
+
+

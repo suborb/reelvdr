@@ -1,0 +1,26 @@
+#!/bin/bash
+# Fritz-Playlist
+# $1 = outfile
+
+### Variabel
+Name="Fritz [www.fritz.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.fritz.de/ds/ds.html"
+
+# Artist/Title
+all=`grep -A0 'on air Titel:' /tmp/playlist`
+artist=${all/*$'<span class='\"'titelanzeige'\"'>'/}; artist=${artist/$' - '*/}
+title=${all//*$' - '/}; title=${title/$'<'\/'span>'*/}
+# temp. no Info
+artist=${artist:='...'}; titel=${title:='...'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

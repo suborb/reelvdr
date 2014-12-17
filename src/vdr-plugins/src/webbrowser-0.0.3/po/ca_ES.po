@@ -1,0 +1,94 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-06-22 18:03+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Web Browser"
+msgstr ""
+
+msgid "Smartbrowser"
+msgstr "Explorador"
+
+msgid "Webbrowser (Firefox)"
+msgstr ""
+
+msgid "KDE-Desktop"
+msgstr "Escriptori KDE"
+
+msgid "Webbrowser (Chrome)"
+msgstr ""
+
+msgid "No browser available"
+msgstr ""
+
+msgid "CRT"
+msgstr "CRT"
+
+msgid "LCD (RGB)"
+msgstr "LCD (RGB)"
+
+msgid "LCD (BGR)"
+msgstr "LCD (BGR)"
+
+msgid "Simple Browser"
+msgstr "Navegador"
+
+msgid "Webbrowser: Firefox"
+msgstr ""
+
+msgid "SNES-emu-only session"
+msgstr "Sessió emulador SNES"
+
+msgid "Webbrowser: Chrome"
+msgstr ""
+
+msgid "Center"
+msgstr "Al centre"
+
+msgid "Full"
+msgstr "Pantalla completa"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "start URL"
+msgstr "inicia URL"
+
+msgid "font size in menu"
+msgstr "tipus de lletra al menú"
+
+msgid "font size"
+msgstr "tipus de lletra"
+
+msgid "picture scaling (%)"
+msgstr "ampliació d'imatges (%)"
+
+msgid "transparency"
+msgstr "transparència"
+
+msgid "margin horizontal"
+msgstr "marge horitzontal"
+
+msgid "margin vertical"
+msgstr "marge vertical"
+
+msgid "optimize for"
+msgstr "optimitza per a"
+
+msgid "scaling mode"
+msgstr "mode d'ampliació"
+
+#~ msgid "Webbrowser"
+#~ msgstr "Navegador WEB"

@@ -1,0 +1,136 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dimitrios Dimitrakos <mail@dimitrios.de>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2008-10-01 18:15+0200\n"
+"Last-Translator: Dimitrios Dimitrakos <mail@dimitrios.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "My Radio Stations"
+msgstr ""
+
+msgid "Getting playlist for Genre: "
+msgstr ""
+
+msgid "Internet Radio - Add New Server"
+msgstr ""
+
+msgid "Internet Radio - Edit Station Info"
+msgstr ""
+
+msgid "New Station"
+msgstr ""
+
+msgid "Station Name"
+msgstr ""
+
+msgid "Station Url"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "No URL entered!"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Could not be saved!"
+msgstr ""
+
+msgid "Already present"
+msgstr ""
+
+msgid "Couldnot save changes"
+msgstr ""
+
+msgid "Check URL: could not open radio-station"
+msgstr ""
+
+msgid "Please wait: opening radio-station"
+msgstr ""
+
+msgid "Internet Radio Functions"
+msgstr ""
+
+msgid "1  Add New Radio Station"
+msgstr ""
+
+msgid "2  Edit current Radio Station"
+msgstr ""
+
+msgid "3  Delete current  Radio Station"
+msgstr ""
+
+msgid "Selected Radio Station:"
+msgstr ""
+
+msgid "Could not save to disk"
+msgstr ""
+
+msgid "Deletion failed"
+msgstr ""
+
+msgid "Internet Radio: My Stations"
+msgstr ""
+
+msgid "Button$Functions"
+msgstr ""
+
+msgid "No Radio Stations found."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please use 'Function' to add a station."
+msgstr ""
+
+msgid "Your SHOUTcast is active."
+msgstr ""
+
+msgid "Your SHOUTcast DevID is"
+msgstr ""
+
+msgid "Reset DevID"
+msgstr ""
+
+msgid "Welcome to Internetradio setup"
+msgstr ""
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr ""
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr ""
+
+msgid "Enter DevID"
+msgstr ""
+
+msgid "Show this page again"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr ""
+
+msgid "Internet Radio Setup"
+msgstr ""
+
+msgid "Radio station added to favorites"
+msgstr ""

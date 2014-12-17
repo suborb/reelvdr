@@ -1,0 +1,284 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-reelbox\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-04-03 19:08+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "brightness"
+msgstr "brillantor"
+
+msgid "contrast"
+msgstr "contrast"
+
+msgid "colour"
+msgstr "color"
+
+msgid "sharpness"
+msgstr "nitidessa"
+
+msgid "gamma cor."
+msgstr "corr. gamma"
+
+msgid "flicker"
+msgstr "parpelleig"
+
+msgid "Reset to default"
+msgstr "Opcions per defecte"
+
+msgid "Picture Settings"
+msgstr "Ajustaments de la imatge"
+
+msgid "Fill to Screen"
+msgstr "Ajusta a la pantalla"
+
+msgid "Fill to Aspect"
+msgstr "Ajusta segons l'aspecte"
+
+msgid "Crop to Fill"
+msgstr "Retalla per ajustar"
+
+msgid "Setup - Video"
+msgstr "Configuració - Vídeo"
+
+msgid "SDTV only"
+msgstr "Només SDTV"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "Progressive"
+msgstr "Progressiu"
+
+msgid "Interlaced"
+msgstr "Entrellaçat"
+
+msgid "Maximum"
+msgstr "Màxim"
+
+msgid "Media resolution"
+msgstr "Resolució mitjana"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Always on"
+msgstr "Sempre actiu"
+
+msgid "Always off"
+msgstr "Sempre inactiu"
+
+msgid "On"
+msgstr "On"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "SCART"
+msgstr "Euroconnector"
+
+msgid "Mini-DIN"
+msgstr "Mini-DIN"
+
+msgid "Analog+digital"
+msgstr "Analògic i digital"
+
+msgid "Experts"
+msgstr "Avançats"
+
+msgid "Video Settings"
+msgstr "Configuració de vídeo"
+
+msgid "Use extension HD"
+msgstr "Utilitza extensió HD"
+
+msgid "Output"
+msgstr "Sortida"
+
+msgid "Analog Output"
+msgstr "Sortida analògica"
+
+msgid "Analog Port"
+msgstr "Port analògic"
+
+msgid "Secondary Output"
+msgstr "Sortida addicional"
+
+msgid "Switching Voltage"
+msgstr "Canvia el voltatge"
+
+msgid "Display Type"
+msgstr "Tipus de visualització"
+
+msgid "Aspect Ratio"
+msgstr "Relació d'aspecte"
+
+msgid "Resolution"
+msgstr "Resolució"
+
+msgid "Refresh Rate"
+msgstr "Freq. actual. pantalla"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressiu/Entrellaçat"
+
+msgid "Deinterlacer for SDTV"
+msgstr "Desentrellaça per SDTV"
+
+msgid "Dot by Dot"
+msgstr "Punt a punt"
+
+msgid "Resolution change"
+msgstr "Canvia la resolució"
+
+msgid "OSD scaling"
+msgstr "Canvi d'escala OSD"
+
+msgid "Overscan"
+msgstr "Overscan"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output mode"
+msgstr "Mode de sortida"
+
+msgid "Anamorphic+WSS"
+msgstr "Anamòrfic i WSS"
+
+msgid "Anamorphic"
+msgstr "Anamòrfic"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Ctrl. Relació d'aspecte"
+
+msgid "Auto PAL50/PAL60"
+msgstr "Auto PAL50/PAL60"
+
+msgid "PAL50 only"
+msgstr "només PAL50"
+
+msgid "NTSC only"
+msgstr "només NTSC"
+
+msgid "Norm/Framerate"
+msgstr "Norma/Imatges per segon"
+
+msgid "At Startup"
+msgstr "A l'inici"
+
+msgid "Scart Voltage"
+msgstr "Voltatge Euroconnector"
+
+msgid "Auto 75Hz+60Hz (VESA)"
+msgstr "Auto 75Hz+60Hz (VESA)"
+
+msgid "Auto 50Hz+60Hz (NON-VESA!)"
+msgstr "Auto 50Hz+60Hz (NON-VESA!)"
+
+msgid "Auto 67Hz+60Hz (NON-VESA!)"
+msgstr "Auto 67Hz+60Hz (NON-VESA!)"
+
+msgid "50Hz Only (NON-VESA!)"
+msgstr "Només 50Hz (NON-VESA!)"
+
+msgid "60Hz Only (VESA)"
+msgstr "Només 60Hz (VESA)"
+
+msgid "67Hz Only (NON-VESA!)"
+msgstr "Només 67Hz (NON-VESA!)"
+
+msgid "75Hz Only (VESA)"
+msgstr "Només 75Hz (VESA)"
+
+msgid "Framerate"
+msgstr "Imatges per segon"
+
+msgid "no"
+msgstr "no"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "Upscaling for SDTV"
+msgstr "Amplia per SDTV"
+
+msgid "Setup - Audio"
+msgstr "Configuració - Àudio"
+
+msgid "Audio Settings"
+msgstr "Configuració d'Àudio"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Utilitza Dolby Digital"
+
+msgid " Output Dolby D/dts on"
+msgstr "Sortida Dolby D/dts activa"
+
+msgid "S/P-DIF"
+msgstr "S/P-DIF"
+
+msgid " Output as"
+msgstr "Tipus sortida"
+
+msgid "Stereo (PCM)"
+msgstr "Estèreo (PCM)"
+
+msgid "bitstream (Dolby D)"
+msgstr "bitstream (Dolby D)"
+
+msgid "Soundcard"
+msgstr "Tarja de so"
+
+msgid " Delay (1/100s)"
+msgstr " Retard (1/100s)"
+
+msgid "Analog Audio on"
+msgstr "Àudio analògic actiu"
+
+msgid "TRS (3.5mm phone jack)"
+msgstr "TRS (jack de 3.5mm)"
+
+msgid "HDMI/SCART/RCA jack"
+msgstr "jack HDMI/Euroconector/RCA"
+
+msgid "Analog Mix"
+msgstr "Mescla analògica"
+
+msgid "Restart ReelBox now? Please wait 2 minutes!"
+msgstr "Reiniciar la Reelbox? Si us plau, espereu 2 minuts!"
+
+#~ msgid "Reel"
+#~ msgstr "Reel"
+
+#~ msgid "Reel Lite"
+#~ msgstr "Reel Lite"
+
+#~ msgid " Delay Dolby D/dts"
+#~ msgstr " Retard Dolby D/dts"
+
+#~ msgid "Delay Stereo"
+#~ msgstr "Retard Estèreo"

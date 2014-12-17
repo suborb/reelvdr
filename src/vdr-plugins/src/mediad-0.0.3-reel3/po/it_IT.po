@@ -1,0 +1,140 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediad\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-03 12:50+0200\n"
+"PO-Revision-Date: 2009-06-21 00:39+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "autoplays identified media"
+msgstr "Rip. autom. supporti riconosciuti"
+
+msgid "Play Disk"
+msgstr "Riprodurre disco"
+
+msgid "Play Medium"
+msgstr "Riprodurre supporto"
+
+msgid "Identifying Disc"
+msgstr "Identificazione disco..."
+
+msgid "Choose action"
+msgstr "Selezionare azione"
+
+msgid "Couldn't read disc!"
+msgstr "Impossibile leggere il disco!!"
+
+msgid "Start of"
+msgstr "Inizio di"
+
+msgid "Missing appropriate PlugIn!"
+msgstr "Plugin appropriato mancante!"
+
+msgid "Play recordings"
+msgstr "Riprodurre registrazioni"
+
+msgid "Show archive"
+msgstr "Mostrare archivio"
+
+msgid "Play video CD"
+msgstr "Riprodurre CD video"
+
+msgid "Play music"
+msgstr "Riprodurre musica"
+
+msgid "Archive audio CD"
+msgstr "Archiviare CD audio"
+
+msgid "Play multimedia"
+msgstr "Riprodurre cont. multimediali"
+
+msgid "Play DVD"
+msgstr "Riprodurre DVD"
+
+msgid "Play photo CD"
+msgstr "Riprodurre CD photo"
+
+msgid "Play audio CD"
+msgstr "Riprodurre CD audio"
+
+msgid "Burn recordings"
+msgstr "Masterizzare registrazioni"
+
+msgid "Copy DVD"
+msgstr "Copiare DVD"
+
+msgid "Browse data"
+msgstr "Sfogliare i dati"
+
+msgid "Play video"
+msgstr "Riprodurre video"
+
+msgid "Play video DVD"
+msgstr "Riprodurre DVD video"
+
+msgid "Wrong dmh-archive-dvd structure!"
+msgstr "Struttura errata dmh-archive-dvd!"
+
+msgid "Drive not present in mplayersources.conf!"
+msgstr "Drive NON presente in mplayersources.conf!"
+
+msgid "Drive not present in mp3sources.conf!"
+msgstr "Drive NON presente in mp3sources.conf!"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Data"
+msgstr "Dati"
+
+msgid "Video DVD"
+msgstr "DVD video"
+
+msgid "SVCD"
+msgstr "SVCD"
+
+msgid "blank disc"
+msgstr "Disco vuoto"
+
+msgid "unknown"
+msgstr "Sconosciuto"
+
+msgid "Select device"
+msgstr "Selezionare dispositivo"
+
+msgid "ask each time"
+msgstr "Chiedere ogni volta"
+
+msgid "AutoStart"
+msgstr "AutoStart"
+
+msgid "Request for DVD action"
+msgstr "Richiesta azione DVD"
+
+msgid "Request for CD action"
+msgstr "Richiesta azione CD"
+
+msgid "Recordings"
+msgstr "Registrazioni"
+
+#~ msgid "no"
+#~ msgstr "No"
+
+#~ msgid "yes"
+#~ msgstr "Sì"
+
+#~ msgid "RequestDvdAction"
+#~ msgstr "RequestDvdAction"

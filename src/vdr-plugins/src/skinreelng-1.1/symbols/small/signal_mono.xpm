@@ -1,0 +1,27 @@
+/* XPM */
+static char *signal_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"72 18 3 1",
+"  c black",
+". c gray100",
+"X c None",
+/* pixels */
+"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX               ",
+"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ... ... ...  ",
+"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  .    .  . .  ",
+"X                           X                  XXXXXXXXXX  ...  .  ..   ",
+"                                               XXXXXXXXXX    .  .  . .  ",
+"   ....   ....   .....   .     .    ...    ..  XXXXXXXXXX  ..   .  . .  ",
+"  ..   .   ..   ..    .  ..    .    ...    ..  XXXXXXXXXX               ",
+"  ..       ..   ..       ...   .   .. ..   ..  XXXXXXXXXX               ",
+"  .....    ..   ..       . ..  .   .. ..   ..  XXXXXXXXXXXXXXXXXXXXXXXXX",
+"   . ...   ..   ..  ...  .  .. .   .. ..   ..  XXXXXXXXXXXXXXXXXXXXXXXXX",
+"      ..   ..   ..   .   .   ...  ..... .  ..      XXXXX                ",
+"  .    .   ..    .   ..  .     .  .    ..   .      XXXXX                ",
+"   .. .    . .   . . ..  .     .  .    .   .. . .  XXXXX  ... .  . ...  ",
+"                                                   XXXXX  .   .  . . .  ",
+"X                           X                      XXXXX  ... .. . ..   ",
+"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    . . .. . .  ",
+"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ..  .  . . .  ",
+"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                "
+};

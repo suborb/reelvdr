@@ -1,0 +1,2194 @@
+# VDR language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006, 2008
+# Jiří Dobrý <jdobry@centrum.cz>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 13:00+0100\n"
+"PO-Revision-Date: 2009-03-08 20:39+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team: Czech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "New Channels"
+msgstr "Nové kanály"
+
+msgid "Favorites"
+msgstr "Oblíbené"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Neplatný kanál ***"
+
+msgid "Channel not available!"
+msgstr "Kanál není dostupný!"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Nelze zahájit přenos!"
+
+msgid "Starting EPG scan"
+msgstr "Začíná prohledávání EPG"
+
+msgid "No title"
+msgstr "Bez názvu"
+
+msgid "No help available"
+msgstr "Nápověda není k dispozici."
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Česky"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "cze"
+
+#. TRANSLATORS:
+#. / Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr "Televize a rádio"
+
+msgid "TV-Guide (EPG)"
+msgstr "TV průvodce (EPG)"
+
+msgid "Timer Manager"
+msgstr "Správce časovačů"
+
+msgid "Search-Timer Manager"
+msgstr "Správce časovačů hledání"
+
+msgid "Parental Control"
+msgstr "Rodičovská kontrola"
+
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr "Seznam kanálů DVB, TV průvodce, časovače a časovače hledání, rodičovská kontrola"
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr "Přehled všech TV a rozhlasových stanic - přepínání, správa a úpravy kanálů"
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr "Informace o TV programech a snadný výběr pořadů pro nahrávání"
+
+msgid "View, edit and manage recording timers"
+msgstr "Zobrazení, úpravy a správa časovačů nahrávání"
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr "Hledání pořadů pomocí uživatelských kritérií, např. pro nahrávání seriálů"
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr "Zabránění přístupu k TV kanálům, pořadům či nahrávkám pomocí kódu PIN"
+
+#. TRANSLATORS:
+#. / Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr "Hudba a obrázky"
+
+msgid "Image Library"
+msgstr "Knihovna obrázků"
+
+msgid "Music Library"
+msgstr "Knihovna hudby"
+
+msgid "Internet Radio"
+msgstr "Internetové rádio"
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr "Knihovna hudby, knihovna obrázků, internetové rádio, kopírování zvukových CD"
+
+#, fuzzy
+msgid "Music library, Picture library, Internet radio"
+msgstr "Knihovna hudby, knihovna obrázků, internetové rádio, kopírování zvukových CD"
+
+msgid "Play music, manage and copy music files"
+msgstr "Přehrávání hudby, správa a kopírování hudebních souborů"
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr "Prohlížení obrázků, správa a kopírování obrazových souborů"
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr "Poslech internetového rádia, správa a přidávání rozhlasových stanic"
+
+msgid "Copy an Audio CD to the music library"
+msgstr "Kopírování zvukového CD do knihovny hudby"
+
+#. TRANSLATORS:
+#. / Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr "Filmy a DVD"
+
+msgid "Movie Library"
+msgstr "Knihovna filmů"
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Zvuk"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Časová rezerva na začátku (min.)"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Časová rezerva na konci (min.)"
+
+#, fuzzy
+msgid "Undelete Recordings"
+msgstr "Odstranit nahrávku?"
+
+msgid "New folder"
+msgstr "Nový adresář"
+
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr "Knihovna filmů, TV nahrávky, vypalování nahrávek, kopírování filmových DVD"
+
+#, fuzzy
+msgid "Movie library, TV recordings"
+msgstr "Přesunout nahrávku"
+
+msgid "Watch movies, manage and copy movie files"
+msgstr "Sledování filmů, správa a kopírování filmových souborů"
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr "Sledování, střih, správa a kopírování TV nahrávek"
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr "Obnovení nechtěně odstraněných TV nahrávek"
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr "Vypalování TV nahrávek na CD nebo DVD"
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr "Kopírování filmového DVD do knihovny filmů"
+
+#. TRANSLATORS:
+#. / Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr "Internet a doplňky"
+
+msgid "Filebrowser"
+msgstr "Prohlížeč souborů"
+
+msgid "Create directory"
+msgstr "Vytvořit adresář"
+
+msgid "Playlist"
+msgstr "Seznam stop"
+
+msgid "Playlist actions"
+msgstr "Akce se seznamem stop"
+
+msgid "Playlist Commands"
+msgstr "Příkazy seznamu stop"
+
+msgid "Filebrowser Commands"
+msgstr "Příkaz prohlížeče souborů"
+
+#, fuzzy
+msgid "Save playlist as"
+msgstr "Akce se seznamem stop"
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "File Manager, Web browser, ReelBlog"
+msgstr "Správce souborů, webový prohlížeč, Reelblog"
+
+#, fuzzy
+msgid "File Manager, ReelBlog"
+msgstr "Správce souborů, webový prohlížeč, Reelblog"
+
+msgid "Copy, move, edit and delete files"
+msgstr "Kopírování, přesouvání, úpravy a odstraňování souborů"
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr "Procházení webu s prohlížečem Firefox, plocha systému Linux"
+
+msgid "Read news & information on the ReelBox"
+msgstr "Novinky a informace o zařízení ReelBox"
+
+#. TRANSLATORS:
+#. / Menu "Additional Software"
+msgid "Additional Software"
+msgstr "Další software"
+
+msgid "Magazine EPG"
+msgstr "Časopis EPG"
+
+msgid "Additional software provided by third party developers"
+msgstr "Další software poskytnutý jinými vývojáři"
+
+#. TRANSLATORS:
+#. / More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr "Přehrát disk v jednotce"
+
+msgid "Show currently active background processes"
+msgstr "Zobrazit aktivní procesy na pozadí"
+
+msgid "Format a DVD-RW"
+msgstr "Zformátovat DVD-RW"
+
+msgid "Directory browser"
+msgstr "Prohlížeč adresářů"
+
+#. TRANSLATORS:
+#. / Special Menus that have a bar at the left
+msgid "My Pictures"
+msgstr "Moje obrázky"
+
+msgid "My Music"
+msgstr "Moje hudba"
+
+msgid "My Videos"
+msgstr "Moje videa"
+
+msgid "My DVDs"
+msgstr "Moje DVD"
+
+msgid "EPG Commands: "
+msgstr "Příkazy EPG:"
+
+msgid "Search actions"
+msgstr "Akce hledání"
+
+msgid "Search entries"
+msgstr "Položky hledání"
+
+msgid "Search templates"
+msgstr "Šablony hledání"
+
+msgid "Edit search"
+msgstr "Upravit hledání"
+
+msgid "Edit timer"
+msgstr "Upravit časovač"
+
+msgid "Edit blacklist"
+msgstr "Upravit černou listinu"
+
+msgid "Edit template"
+msgstr "Upravit šablonu"
+
+msgid "Edit user-defined days of week"
+msgstr "Upravit uživatelské dny týdne"
+
+msgid "found recordings"
+msgstr "nalezených nahrávek"
+
+msgid "Select directory"
+msgstr "Vybrat adresář"
+
+msgid "Timer conflicts -"
+msgstr "Konflikty časovačů -"
+
+msgid "Title$Childlock"
+msgstr "Dětský zámek"
+
+msgid "Games"
+msgstr "Hry"
+
+msgid "Multifeed Options"
+msgstr "Možnosti multifeedu"
+
+msgid "Move recording"
+msgstr "Přesunout nahrávku"
+
+msgid "Select Reelblog item"
+msgstr "Vyberte položku Reelblogu"
+
+msgid "SleepTimer"
+msgstr "Časovač uspání"
+
+#, fuzzy
+msgid "Rename entry"
+msgstr "jen názvy"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Vytvořit adresář"
+
+#, fuzzy
+msgid "Choose action"
+msgstr "Ochrana dětí"
+
+#. TRANSLATORS:
+#. / Setup Menus with "Setup"-bar on the left
+msgid "Setup"
+msgstr "Nastavení"
+
+msgid "Software Update"
+msgstr "Aktualizace softwaru"
+
+msgid "Channel Lists"
+msgstr "Seznamy kanálů"
+
+msgid "Channel lists functions"
+msgstr "Funkce seznamů kanálů"
+
+msgid "Channelscan"
+msgstr "Hled. kanálů"
+
+msgid "Installation Wizard"
+msgstr "Průvodce instalací"
+
+#, fuzzy
+msgid "Installation"
+msgstr "Průvodce instalací"
+
+msgid "Remote Control / Automation"
+msgstr "Dálkové ovl./automatizace"
+
+#, fuzzy
+msgid "MultiRoom Setup"
+msgstr "Nastavení rotoru"
+
+#, fuzzy
+msgid "MultiRoom - Error!"
+msgstr "Nastavení rotoru"
+
+msgid "Basic Settings"
+msgstr "Základní nastavení"
+
+#, fuzzy
+msgid "Network Settings"
+msgstr "Nastavení rotoru"
+
+msgid "EPG Services"
+msgstr "Služby EPG"
+
+msgid "Reception Settings"
+msgstr "Reception Settings"
+
+msgid "Network"
+msgstr "Síť"
+
+msgid "Global Settings"
+msgstr "Globální nastavení"
+
+#, fuzzy
+msgid "UMTS Settings"
+msgstr "Nastavení systému"
+
+msgid "Dynamic DNS"
+msgstr "Dynamická služba DNS"
+
+#, fuzzy
+msgid "GnuDIP service"
+msgstr "Služby EPG"
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr "Ruční připojení k síti"
+
+msgid "Windows Network Connection"
+msgstr "Připojení k síti Windows"
+
+msgid "NFS Client"
+msgstr "Klient NFS"
+
+msgid "Video Recorder "
+msgstr "Videorekordér"
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr "Síťové jednotky"
+
+msgid "Setup - Audio/Video"
+msgstr "Nastavení zvuku a obrazu"
+
+msgid "Timezone & clock"
+msgstr "Časové pásmo a hodiny"
+
+msgid "System Information"
+msgstr "Systémové informace"
+
+msgid "NetCeiver diagnostics"
+msgstr "Diagnostika netceiveru"
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr "Nastavení antény"
+
+msgid "Rotor Setup"
+msgstr "Nastavení rotoru"
+
+msgid "Language Settings"
+msgstr "Nastavení jazyka"
+
+msgid "Timezone"
+msgstr "Časové pásmo"
+
+msgid "Timezone Settings"
+msgstr "Nastavení časového pásma"
+
+msgid "Front Panel"
+msgstr "Přední panel"
+
+msgid "TVTV Service"
+msgstr "Služba TVTV"
+
+msgid "International EPG"
+msgstr "Mezinárodní EPG"
+
+msgid "Energy Options"
+msgstr "Možnosti napájení"
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "Možnosti zapnutí a vypnutí"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr "Kanál po spuštění"
+
+#, fuzzy
+msgid "Option$Quick"
+msgstr "Pohotovostní režim"
+
+#. TRANSLATORS:
+#. / Recording Commands
+msgid "Mark Commercials"
+msgstr "Označovat reklamy"
+
+msgid "Add Child Lock"
+msgstr "Přidat dětský zámek"
+
+msgid "Remove Child Lock"
+msgstr "Odebrat dětský zámek"
+
+msgid "Change title"
+msgstr "Změnit název"
+
+msgid "Mark as New"
+msgstr "Označit jako nové"
+
+msgid "Remove Archive Mark"
+msgstr "Odebrat značku archivu"
+
+msgid "Remove Crop Mark"
+msgstr "Odebrat značku oříznutí"
+
+msgid "Remove Archived Recording"
+msgstr "Odebrat archivovanou nahrávku"
+
+msgid "Restore Archived Recording"
+msgstr "Obnovit archivovanou nahrávku"
+
+msgid "Convert to MPEG (TS)"
+msgstr "Převést do formátu MPEG (TS)"
+
+#, fuzzy
+msgid "Directory Selector:"
+msgstr "Prohlížeč adresářů"
+
+#, fuzzy
+msgid "Select Media"
+msgstr "Vybrat adresář"
+
+#, fuzzy
+msgid "Directory commands"
+msgstr "Příkazy pro nahrávání"
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "No CI-Module"
+msgstr ""
+
+msgid "Edit Channels"
+msgstr "Upravit kanály"
+
+#, fuzzy
+msgid "Customize Bouquets"
+msgstr "do paketů"
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Fáze 1: Rozpoznávání typu kódu dálkového ovladače"
+
+msgid "Press any key on the RC unit"
+msgstr "Stiskněte libovolnou klávesu dálkového ovladače"
+
+msgid "RC code detected!"
+msgstr "Kód dálkového ovladače byl rozpoznán!"
+
+msgid "Do not press any key..."
+msgstr "Nemačkejte žádné klávesy..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Fáze 2: Učení konkrétních kódů tlačítek"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Stiskněte tlačítko %s"
+
+msgid "Press 'Up' to confirm"
+msgstr "Potvrďte stisknutím tlačítka Nahoru"
+
+msgid "Press 'Down' to continue"
+msgstr "Pokračujte stisknutím tlačítka Dolů"
+
+msgid "(press 'Up' to go back)"
+msgstr "(stisknutím tlačítka Nahoru se vrátíte)"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(stisknutím tlačítka Dolů ukončíte definování)"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "(stisknutím tlačítka Nabídka toto tlačítko přeskočíte)"
+
+msgid "Learning Remote Control Keys"
+msgstr "Učení tlačítek dálkového ovladače"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Fáze 3: Ukládání kódů tlačítek"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "Nahoru - uložení kódů, Dolů - zrušení operace"
+
+msgid "Key$Up"
+msgstr "Nahoru"
+
+msgid "Key$Down"
+msgstr "Dolů"
+
+msgid "Key$Menu"
+msgstr "Nabídka"
+
+msgid "Key$Ok"
+msgstr "OK"
+
+msgid "Key$Back"
+msgstr "Zpět"
+
+msgid "Key$Left"
+msgstr "Doleva"
+
+msgid "Key$Right"
+msgstr "Doprava"
+
+msgid "Key$Red"
+msgstr "Červené"
+
+msgid "Key$Green"
+msgstr "Zelené"
+
+msgid "Key$Yellow"
+msgstr "Žluté"
+
+msgid "Key$Blue"
+msgstr "Modré"
+
+msgid "Key$Play"
+msgstr "Přehrát"
+
+msgid "Key$Pause"
+msgstr "Pozastavit"
+
+msgid "Key$Stop"
+msgstr "Zastavit"
+
+msgid "Key$Eject"
+msgstr "Vysunout"
+
+msgid "Key$Record"
+msgstr "Nahrát"
+
+msgid "Key$FastFwd"
+msgstr "Převinout vpřed"
+
+msgid "Key$FastRew"
+msgstr "Převinout vzad"
+
+msgid "Key$Next"
+msgstr "Další"
+
+msgid "Key$Prev"
+msgstr "Předchozí"
+
+msgid "Key$Power"
+msgstr "Napájení"
+
+msgid "Key$Channel+"
+msgstr "Kanál +"
+
+msgid "Key$Channel-"
+msgstr "Kanál -"
+
+msgid "Key$PrevChannel"
+msgstr "Předchozí kanál"
+
+msgid "Key$Volume+"
+msgstr "Hlasitost +"
+
+msgid "Key$Volume-"
+msgstr "Hlasitost -"
+
+msgid "Key$Mute"
+msgstr "Ztlumit"
+
+msgid "Key$Audio"
+msgstr "Zvuk"
+
+msgid "Key$Subtitles"
+msgstr "Titulky"
+
+msgid "Key$Aspect"
+msgstr "Poměr stran"
+
+msgid "Key$Schedule"
+msgstr "Program"
+
+msgid "Key$Channels"
+msgstr "Kanály"
+
+msgid "Key$Timers"
+msgstr "Časovače"
+
+msgid "Key$Search"
+msgstr "Hledat"
+
+msgid "Key$Recordings"
+msgstr "Nahrávky"
+
+msgid "Key$Setup"
+msgstr "Nastavení"
+
+msgid "Key$Commands"
+msgstr "Příkazy"
+
+msgid "Key$Greater"
+msgstr "Větší"
+
+msgid "Key$Less"
+msgstr "Menší"
+
+msgid "Key$2digit"
+msgstr "2 číslice"
+
+msgid "Key$DVD"
+msgstr "DVD"
+
+msgid "Key$DVB"
+msgstr "DVB"
+
+msgid "Key$PVR"
+msgstr "PVR"
+
+msgid "Key$Reel"
+msgstr "Reel"
+
+msgid "Key$TT"
+msgstr "TT"
+
+msgid "Key$PiP"
+msgstr "PiP"
+
+msgid "Key$User1"
+msgstr "Uživatelské 1"
+
+msgid "Key$User2"
+msgstr "Uživatelské 2"
+
+msgid "Key$User3"
+msgstr "Uživatelské 3"
+
+msgid "Key$User4"
+msgstr "Uživatelské 4"
+
+msgid "Key$User5"
+msgstr "Uživatelské 5"
+
+msgid "Key$User6"
+msgstr "Uživatelské 6"
+
+msgid "Key$User7"
+msgstr "Uživatelské 7"
+
+msgid "Key$User8"
+msgstr "Uživatelské 8"
+
+msgid "Key$User9"
+msgstr "Uživatelské 9"
+
+msgid "Key$Info"
+msgstr "Informace"
+
+msgid "Key$Help"
+msgstr "Nápověda"
+
+msgid "Timeshift mode"
+msgstr "Režim časového posunu"
+
+msgid "Recording started"
+msgstr "Nahrávání bylo zahájeno"
+
+msgid "Free To Air"
+msgstr "bezplatné vysílání"
+
+msgid "no"
+msgstr "ne"
+
+msgid "internal CAM"
+msgstr "interní CAM"
+
+msgid "No CI at"
+msgstr "Chybí CI -"
+
+msgid "upper slot"
+msgstr "horní slot"
+
+msgid "lower slot"
+msgstr "dolní slot"
+
+msgid "encrypted"
+msgstr "kódovaný"
+
+msgid "Rotor - shared LNB"
+msgstr "Rotor - sdílený LNB"
+
+msgid "auto"
+msgstr "automaticky"
+
+msgid "Edit channel"
+msgstr "Upravit kanál"
+
+msgid "New"
+msgstr "Nový"
+
+msgid "Name"
+msgstr "Název"
+
+msgid "Source"
+msgstr "Zdroj"
+
+msgid "Frequency"
+msgstr "Frekvence"
+
+msgid "Polarization"
+msgstr "Polarizace"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "none"
+msgstr "žádný"
+
+msgid "CoderateL"
+msgstr "CoderateL"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid1"
+msgstr "Apid1"
+
+msgid "Apid2"
+msgstr "Apid2"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Modulation"
+msgstr "Modulace"
+
+msgid "Bandwidth"
+msgstr "Šířka pásma"
+
+msgid "Transmission"
+msgstr "Přenos"
+
+msgid "Guard"
+msgstr "Guard"
+
+msgid "Hierarchy"
+msgstr "Hierarchie"
+
+msgid "Rolloff"
+msgstr "Rolloff"
+
+msgid "Button$New"
+msgstr "Nový"
+
+msgid "Channel settings are not unique!"
+msgstr "Nastavení kanálů nejsou jedinečná!"
+
+msgid "channellist"
+msgstr "seznam kanálů"
+
+msgid "current bouquet"
+msgstr "aktuální paket"
+
+msgid "bouquet list"
+msgstr "seznam paketů"
+
+#, fuzzy
+msgid "Channellist: set filters"
+msgstr "Funkce seznamů kanálů"
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+#, fuzzy
+msgid "All channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "Only TV channels"
+msgstr "Upravit kanál"
+
+#, fuzzy
+msgid "Only radio channels"
+msgstr "Upravit kanál"
+
+#, fuzzy
+msgid "non encrypted channels"
+msgstr "Odstranit kanály?"
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Začátek seznamu kanálů"
+
+#, fuzzy
+msgid "non encrypted TV channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "encrypted radio channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "HD channels"
+msgstr "Kanály"
+
+msgid "Channels"
+msgstr "Kanály"
+
+msgid "Button$Edit"
+msgstr "Upravit"
+
+msgid "Button$Delete"
+msgstr "Odstranit"
+
+msgid "Button$Mark"
+msgstr "Označit"
+
+msgid "Channel is being used by a timer!"
+msgstr "Kanál je používán časovačem!"
+
+msgid "Delete channel?"
+msgstr "Odstranit kanál?"
+
+msgid "Edit Bouquet"
+msgstr "Upravit paket"
+
+msgid "Add Bouquet"
+msgstr "Přidat paket"
+
+msgid "CI-Slot for this Bouquet"
+msgstr "Slot CI pro tento paket"
+
+msgid "Note:"
+msgstr "Poznámka:"
+
+msgid "Select CI-Slot for current Bouquet."
+msgstr "Vyberte slot CI pro aktuální paket."
+
+msgid "Bouquets"
+msgstr "Pakety"
+
+#, fuzzy
+msgid "Button$Customize"
+msgstr "Zastavit"
+
+msgid "Move"
+msgstr "Přesunout"
+
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "Delete Bouquet?"
+msgstr "Odstranit paket?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Nahoru/dolů - nové umístění, OK - přesunout"
+
+msgid "Select channels with OK"
+msgstr "Vyberte kanály tlačítkem OK"
+
+#, fuzzy
+msgid "Customize channels: "
+msgstr "Upravit kanál"
+
+#, fuzzy
+msgid "free radio channels"
+msgstr "Upravit kanál"
+
+#, fuzzy
+msgid "radio channels"
+msgstr "Upravit kanál"
+
+#, fuzzy
+msgid "encrypted TV channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "free TV channels"
+msgstr "Kanály"
+
+#, fuzzy
+msgid "TV channels"
+msgstr "Kanály"
+
+#, fuzzy
+msgid "encrypted channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "free channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "non HD channels"
+msgstr "Upravit kanál"
+
+#, fuzzy
+msgid "all channels"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "Select channels with blue key"
+msgstr "Vyberte kanály tlačítkem OK"
+
+#, fuzzy
+msgid "Channel deleted"
+msgstr "Seznam kanálů"
+
+msgid "Delete channels?"
+msgstr "Odstranit kanály?"
+
+#, fuzzy
+msgid "Channels deleted"
+msgstr "Seznam kanálů"
+
+#, fuzzy
+msgid "Channels have been moved"
+msgstr "Seznam kanálů"
+
+msgid "Add to Favorites?"
+msgstr "Přidat k oblíbeným?"
+
+msgid "Button$Insert"
+msgstr "Vložit"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Nahoru/dolů - nové umístění, OK - přesunout"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Nahoru/dolů - nové umístění, OK - přesunout"
+
+msgid "Help"
+msgstr "Nápověda"
+
+msgid "Already first help item"
+msgstr "Byla dosažena první položka nápovědy."
+
+msgid "Already last help item"
+msgstr "Byla dosažena poslední položka nápovědy."
+
+msgid "low"
+msgstr "nízká"
+
+msgid "normal"
+msgstr "normální"
+
+msgid "high"
+msgstr "vysoká"
+
+msgid "Active"
+msgstr "Aktivní"
+
+msgid "Channel"
+msgstr "Kanál"
+
+msgid "Day"
+msgstr "Den"
+
+msgid "Start"
+msgstr "Začátek"
+
+msgid "Stop"
+msgstr "Konec"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Lifetime"
+msgstr "Životnost"
+
+msgid "unlimited"
+msgstr "bez omezení"
+
+msgid "Child protection"
+msgstr "Ochrana dětí"
+
+msgid "yes"
+msgstr "ano"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "First day"
+msgstr "První den"
+
+#, fuzzy
+msgid "Could not add timer"
+msgstr "Odstranit časovač?"
+
+msgid "Timers"
+msgstr "Časovače"
+
+msgid "Button$On/Off"
+msgstr "Zap/vyp"
+
+msgid "Button$Info"
+msgstr "Informace"
+
+msgid "Delete timer?"
+msgstr "Odstranit časovač?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Časovač stále nahrává - opravdu odstranit?"
+
+#, fuzzy
+msgid "Could not delete timer"
+msgstr "Odstranit časovač?"
+
+msgid "Event"
+msgstr "Událost"
+
+msgid "Button$Timer"
+msgstr "Časovač"
+
+msgid "Button$Record"
+msgstr "Nahrát"
+
+msgid "Button$Switch"
+msgstr "Přepnout"
+
+msgid "ActiveEvent"
+msgstr "Aktivní událost"
+
+msgid "What's on now?"
+msgstr "Aktuální program"
+
+msgid "What's on next?"
+msgstr "Následující program"
+
+msgid "Button$Next"
+msgstr "Další"
+
+msgid "Button$Now"
+msgstr "Nyní"
+
+msgid "Button$Schedule"
+msgstr "Program"
+
+msgid "Can't switch channel!"
+msgstr "Kanál nelze přepnout!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Program - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr "Tato událost - %s"
+
+msgid "This event - all channels"
+msgstr "Tato událost - všechny kanály"
+
+msgid "All events - all channels"
+msgstr "Všechny událost - všechny kanály"
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "Zadejte %d číslic!"
+
+msgid "Recording info"
+msgstr "Informace o nahrávce"
+
+msgid "Button$Play"
+msgstr "Přehrát"
+
+msgid "Button$Rewind"
+msgstr "Na začátek"
+
+#, fuzzy
+msgid "Scale Picture"
+msgstr "Moje obrázky"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "Button$Open"
+msgstr "Otevřít"
+
+msgid "Commands"
+msgstr "Příkazy"
+
+msgid "Error while accessing recording!"
+msgstr "Chyba při přístupu k nahrávce!"
+
+msgid "Delete recording?"
+msgstr "Odstranit nahrávku?"
+
+msgid "Error while deleting recording!"
+msgstr "Chyba při odstraňování nahrávky!"
+
+msgid "Recording commands"
+msgstr "Příkazy pro nahrávání"
+
+msgid "OSD & Language"
+msgstr "OSD a jazyk"
+
+msgid "never"
+msgstr "nikdy"
+
+msgid "skin dependent"
+msgstr "podle vzhledu"
+
+msgid "always"
+msgstr "vždy"
+
+msgid "User defined"
+msgstr "uživatelská"
+
+msgid "Small"
+msgstr "malá"
+
+msgid "FontSize$Normal"
+msgstr "normální"
+
+msgid "Setup.OSD$Language"
+msgstr "Jazyk"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "Zobrazovat titulky"
+
+#, fuzzy
+msgid "Setup.OSD$OSD color"
+msgstr "Barva vzhledu"
+
+msgid "Setup.OSD$OSD Font Size"
+msgstr "Velikost písma OSD"
+
+msgid "Setup.OSD$OSD font size (pixel)"
+msgstr "Velikost písma OSD (pixely)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Používat malé písmo"
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Posouvat stránky"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "Z konce na začátek"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "Doba zobr. inf. o kanálu (s)"
+
+#, fuzzy
+msgid "Setup.OSD$Show expert menu options"
+msgstr "Používat malé písmo"
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr "Téma"
+
+msgid "channelinfo"
+msgstr "inf. o kanálu"
+
+#, fuzzy
+msgid "Standard"
+msgstr "Pohotovostní režim"
+
+#, fuzzy
+msgid "Setup.OSD$  Program +/- keys"
+msgstr "Doba zobr. inf. o kanálu (s)"
+
+#, fuzzy
+msgid "Channell./Bouquets"
+msgstr "Kanály"
+
+msgid "Expertmenu"
+msgstr "Rozšířené"
+
+msgid "OSD - Expertmenu"
+msgstr "OSD - rozšířená nabídka"
+
+msgid "Setup.OSD$Skin"
+msgstr "Vzhled"
+
+msgid "Setup.OSD$OSD font name"
+msgstr "Název písma OSD"
+
+msgid "Setup.OSD$Small font name"
+msgstr "Název malého písma"
+
+msgid "Setup.OSD$Fixed font name"
+msgstr "Název neproporc. písma"
+
+msgid "Setup.OSD$Small font size (pixel)"
+msgstr "Velikost malého písma (pixely)"
+
+msgid "Setup.OSD$Fixed font size (pixel)"
+msgstr "Velikost neproporc. písma (pixely)"
+
+msgid "Setup.OSD$Left"
+msgstr "Vlevo"
+
+msgid "Setup.OSD$Top"
+msgstr "Nahoře"
+
+msgid "Setup.OSD$Width"
+msgstr "Šířka"
+
+msgid "Setup.OSD$Height"
+msgstr "Výška"
+
+msgid "Setup.OSD$Random menu placement"
+msgstr "Náhodné umístění nabídky"
+
+msgid "Setup.OSD$Optional languages"
+msgstr "Volitelné jazyky"
+
+msgid "Setup.OSD$ Optional language"
+msgstr " Volitelný jazyk"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "Button$Scan"
+msgstr "Prohledat"
+
+msgid "Audio"
+msgstr "Zvuk"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "Jazyky titulků"
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "Jazyk titulků"
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "Posunutí titulků"
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "Průhlednost písma titulků"
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "Průhlednost pozadí titulků"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Používat zvuk v Dolby Digital"
+
+msgid " Delay ac3 (10ms)"
+msgstr " Zpoždění AC3 (10 ms)"
+
+msgid " Prefer ac3 over HDMI"
+msgstr " Upřednostňovat AC3 před HDMI"
+
+msgid "Delay Stereo (10ms)"
+msgstr "Zpoždění stereo (10 ms)"
+
+msgid "Dish settings"
+msgstr "Nastavení talíře"
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC zakázáno"
+
+msgid "Different Setups"
+msgstr "Různé nastavení"
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DiSEqC Type"
+msgstr "Typ DiSEqC"
+
+msgid "Satellite"
+msgstr "Satelit"
+
+msgid "   LNB Type"
+msgstr "   Typ LNB"
+
+msgid "Delay (ms)"
+msgstr "Zpoždění (ms)"
+
+msgid "Number of LNBs"
+msgstr "Počet LNB"
+
+msgid "Repeat"
+msgstr "Opakovat"
+
+msgid "Rotor on tuner"
+msgstr "Rotor na tuneru"
+
+msgid "Normal"
+msgstr "Normální"
+
+msgid "Expert"
+msgstr "Rozšířené"
+
+msgid "Rotor Settings"
+msgstr "Nastavení rotoru"
+
+msgid "Sat positions must be unique!"
+msgstr "Pozice satelitů musí být jedinečné!"
+
+msgid "Overwrite DiSEqC.conf?"
+msgstr "Přepsat soubor DiSEqC.conf?"
+
+msgid "Changes done"
+msgstr "Změny provedeny"
+
+msgid "Init"
+msgstr "Inicializovat"
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "Disabled"
+msgstr "Zakázáno"
+
+msgid "--OFF--"
+msgstr "Vypnuto"
+
+msgid "Common Interface"
+msgstr "Běžné rozhraní"
+
+msgid "Reset"
+msgstr "Resetovat"
+
+msgid "On/Off"
+msgstr "Zap/vyp"
+
+msgid "Opening CAM menu..."
+msgstr "Otevírání nabídky CAM..."
+
+msgid "Can't open CAM menu!"
+msgstr "Nabídku CAM nelze otevřít!"
+
+msgid "Resetting CAM..."
+msgstr "Resetování modulu CAM..."
+
+msgid "CAM has been reset"
+msgstr "Modul CAM byl resetován"
+
+msgid "Can't reset CAM!"
+msgstr "Modul CAM nelze resetovat!"
+
+msgid "Recording"
+msgstr "Nahrávání"
+
+msgid "Setup.Recording$Timer Buffer at Start (min)"
+msgstr "Časová rezerva na začátku (min.)"
+
+msgid "Setup.Recording$Timer Buffer at End (min)"
+msgstr "Časová rezerva na konci (min.)"
+
+msgid "Setup.Recording$Default Priority"
+msgstr "Výchozí priorita"
+
+msgid "Setup.Recording$Default Recording Lifetime"
+msgstr "Výchozí životnost nahrávky"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "Používat VPS"
+
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr "Označit okamžitou nahrávku"
+
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr "Délka okamžité nahrávky (min.)"
+
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr "Životnost okamžité nahrávky"
+
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr "Priorita okamžité nahrávky"
+
+msgid "Setup.Recording$Mark Blocks after Recording"
+msgstr "Označit bloky za nahrávkou"
+
+msgid "Replay"
+msgstr "Přehrát"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Vícerychlostní režim"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Zobrazit režim přehrávání"
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+#, fuzzy
+msgid "intelligent"
+msgstr "Satelit"
+
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr "Přeskočit střihovou značku"
+
+msgid "Setup.Replay$Resume play after jump"
+msgstr "Po přeskočení pokračovat v přehrávání"
+
+msgid "off"
+msgstr "vypnuto"
+
+msgid "update"
+msgstr "aktualizovat"
+
+msgid "add"
+msgstr "přidat"
+
+msgid "at the end"
+msgstr "na konec"
+
+msgid "to bouquets"
+msgstr "do paketů"
+
+msgid "Background Services"
+msgstr "Služby na pozadí"
+
+msgid "Request"
+msgstr "Požadavek"
+
+msgid "Standby"
+msgstr "Pohotovostní režim"
+
+#, fuzzy
+msgid "Power off"
+msgstr "dolní slot"
+
+msgid "Button$Scan EPG"
+msgstr "Prohledat EPG"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "Časový limit Zap (s)"
+
+msgid "Setup.DVB$Autom. update channels"
+msgstr "Autom. aktualizovat kanály"
+
+msgid "  Update mode"
+msgstr "  Režim aktualizace"
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "Kanál po spuštění"
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "jako naposledy"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Initial volume (%)"
+msgstr "Hlasitost po spuštění"
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Časový limit prohl. EPG (h)"
+
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr "Zjišťovat aktualizace při spuštění"
+
+msgid "Permanent Timeshift"
+msgstr "Trvalý časový posun"
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr "Rezerva (min.)"
+
+#, fuzzy
+msgid "Info:"
+msgstr "Informace"
+
+#, fuzzy
+msgid "Permanent Timeshift has been disabled."
+msgstr "Trvalý časový posun"
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+msgid "System Settings"
+msgstr "Nastavení systému"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Modul nemá konfigurační parametry!"
+
+msgid "Title$Setup"
+msgstr "Nastavení"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "OSD"
+msgstr "OSD"
+
+msgid "DVB"
+msgstr "DVB"
+
+msgid "CICAM"
+msgstr "CICAM"
+
+msgid "Recording settings"
+msgstr "Nastavení nahrávání"
+
+msgid "Replay settings"
+msgstr "Nastavení přehrávání"
+
+msgid "Miscellaneous"
+msgstr "Různé"
+
+msgid "Plugins"
+msgstr "Moduly"
+
+msgid "Restart"
+msgstr "Restartovat"
+
+msgid "Really restart?"
+msgstr "Opravdu restartovat?"
+
+msgid "Recording - restart anyway?"
+msgstr "Probíhá nahrávání - přesto restartovat?"
+
+msgid "restart anyway?"
+msgstr "přesto restartovat?"
+
+msgid " Stop recording "
+msgstr " Zastavit nahrávání "
+
+msgid "Channel list"
+msgstr "Seznam kanálů"
+
+msgid "Title$Menu"
+msgstr "Nabídka"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "free"
+msgstr "volných"
+
+msgid "Title$Main Menu"
+msgstr "Hlavní nabídka"
+
+msgid " Stop replaying"
+msgstr " Zastavit přehrávání"
+
+msgid "Button$Recordings"
+msgstr "Nahrávky"
+
+msgid "Button$Multifeed"
+msgstr "Multifeed"
+
+msgid " Cancel editing"
+msgstr " Zrušit úpravy"
+
+msgid "Stop recording?"
+msgstr "Zastavit nahrávání?"
+
+msgid "Cancel editing?"
+msgstr "Zrušit úpravy?"
+
+msgid "Button$Audio"
+msgstr "Zvuk"
+
+msgid "No audio available!"
+msgstr "Zvuk není dostupný!"
+
+msgid "No subtitles"
+msgstr "Bez titulků"
+
+msgid "Button$Subtitles"
+msgstr "Titulky"
+
+msgid "No subtitles available!"
+msgstr "Žádné dostupné titulky!"
+
+msgid "Not enough disk space to start recording!"
+msgstr "Nedostatek volného místa k zahájení nahrávání!"
+
+msgid "recording already running - Start another?"
+msgstr "Již probíhá nahrávání - zahájit další?"
+
+#, fuzzy
+msgid "A recording is already active!"
+msgstr "Již probíhá nahrávání - zahájit další?"
+
+#, fuzzy
+msgid "An instant recording is already active!"
+msgstr "Již probíhá nahrávání - zahájit další?"
+
+msgid "No free DVB device to record!"
+msgstr "Žádné zařízení DVB není volné k nahrávání!"
+
+msgid "Pausing live video..."
+msgstr "Pozastavení živého programu..."
+
+msgid "Jump: "
+msgstr "Přejít:"
+
+msgid "No editing marks defined!"
+msgstr "Nejsou nadefinovány žádné střihové značky!"
+
+msgid "Can't start editing process!"
+msgstr "Proces úprav nelze zahájit!"
+
+msgid "Editing process started"
+msgstr "Proces úprav byl zahájen"
+
+msgid "Editing process already active!"
+msgstr "Proces úprav je již aktivní!"
+
+#, fuzzy
+msgid "Power Off ReelBox"
+msgstr "Možnosti zapnutí a vypnutí"
+
+#, fuzzy
+msgid "Recording - Activating QuickStandby"
+msgstr "Aktivace pohotovostního režimu"
+
+#, fuzzy
+msgid "Activating QuickStandby"
+msgstr "Aktivace pohotovostního režimu"
+
+#, fuzzy
+msgid "Running Process - Activating QuickStandby"
+msgstr "Aktivace pohotovostního režimu"
+
+#, fuzzy
+msgid "Quick Standby"
+msgstr "Pohotovostní režim"
+
+msgid "Reboot"
+msgstr "Restartovat"
+
+msgid "Set Sleeptimer"
+msgstr "Nastavit časovač uspání"
+
+msgid "Pause Live-TV"
+msgstr "Pozastavit živou TV"
+
+msgid "Activating standby"
+msgstr "Aktivace pohotovostního režimu"
+
+msgid "Activating deep standby"
+msgstr "Aktivace režimu spánku"
+
+#, fuzzy
+msgid "Activating quick standby"
+msgstr "Aktivace pohotovostního režimu"
+
+msgid "Activating reboot"
+msgstr "Aktivace restartování"
+
+msgid "Recording - shut down anyway?"
+msgstr "Probíhá nahrávání - přesto vypnout?"
+
+#, fuzzy
+msgid "A recording starts soon, shut down anyway?"
+msgstr "Probíhá nahrávání - přesto vypnout?"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc"
+
+msgid "Button$Overwrite"
+msgstr "Přepsat"
+
+msgid "Please select"
+msgstr "Vyberte"
+
+msgid "Main Menu"
+msgstr "Hlavní nabídka"
+
+msgid "Channel locked (recording)!"
+msgstr "Channel locked (recording)!"
+
+msgid "can't record - check your configuration"
+msgstr "Nelze nahrávat - zkontrolujte konfiguraci"
+
+msgid "Low disk space!"
+msgstr "Disk bude brzy zaplněn!"
+
+msgid "Recording-file already exists!"
+msgstr "Soubor nahrávky již existuje!"
+
+#, fuzzy
+msgid "Teletext not available!"
+msgstr "Kanál není dostupný!"
+
+#, fuzzy
+msgid "PiP not available!"
+msgstr "Kanál není dostupný!"
+
+msgid "Volume "
+msgstr "Hlasitost "
+
+msgid "Classic VDR"
+msgstr "Klasické VDR"
+
+msgid "ST:TNG Panels"
+msgstr "Panely ST:TNG"
+
+msgid "MTWTFSS"
+msgstr "PÚSČPSN"
+
+#, fuzzy
+msgid "Database not available!"
+msgstr "Kanál není dostupný!"
+
+msgid "MonTueWedThuFriSatSun"
+msgstr "Po Út St Čt Pá So Ne "
+
+msgid "Monday"
+msgstr "Pondělí"
+
+msgid "Tuesday"
+msgstr "Úterý"
+
+msgid "Wednesday"
+msgstr "Středa"
+
+msgid "Thursday"
+msgstr "Čtvrtek"
+
+msgid "Friday"
+msgstr "Pátek"
+
+msgid "Saturday"
+msgstr "Sobota"
+
+msgid "Sunday"
+msgstr "Neděle"
+
+msgid "ejecting media"
+msgstr "vysunout DVD"
+
+msgid "Upcoming VPS recording!"
+msgstr "Brzo začne nahrávání VPS!"
+
+#, fuzzy
+msgid "Timeshift is not available!"
+msgstr "Žádné dostupné titulky!"
+
+#, fuzzy
+msgid "No free tuner to record!"
+msgstr "Žádné zařízení DVB není volné k nahrávání!"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Nelze vypnout - nebyl uveden přepínač '-s'!"
+
+msgid "Switching primary DVB..."
+msgstr "Přepínání primárního DVB..."
+
+msgid "End recording"
+msgstr "Ukončit nahrávání"
+
+msgid "Editing process failed!"
+msgstr "Proces úprav se nezdařil!"
+
+msgid "Editing process finished"
+msgstr "Proces úprav byl dokončen"
+
+msgid "Switching to server-mode"
+msgstr ""
+
+#~ msgid "Edit"
+#~ msgstr "Upravit"
+
+#~ msgid "Back"
+#~ msgstr "Zpět"
+
+#~ msgid "Next"
+#~ msgstr "Další"
+
+#~ msgid "Options"
+#~ msgstr "Možnosti"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Skin color"
+#~ msgstr "Barva vzhledu"
+
+#~ msgid "Setup.OSD$Ok shows"
+#~ msgstr "Tlačítko OK zobrazí"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Channel +/- keys"
+#~ msgstr "Doba zobr. inf. o kanálu (s)"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Switch Channels in EPG"
+#~ msgstr "Doba zobr. inf. o kanálu (s)"
+
+#~ msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+#~ msgstr "Min. nečinnost uživatele (min)"
+
+#, fuzzy
+#~ msgid "An instant recording is already runnig!"
+#~ msgstr "Již probíhá nahrávání - zahájit další?"
+
+#, fuzzy
+#~ msgid "Select bouquet with OK"
+#~ msgstr "Vyberte kanály tlačítkem OK"
+
+#, fuzzy
+#~ msgid "Channels sucessfully moved"
+#~ msgstr "Seznam kanálů"
+
+#, fuzzy
+#~ msgid "Only video channels"
+#~ msgstr "přidat nové kanály"
+
+#, fuzzy
+#~ msgid "Only non decrypted channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "Only non decrypted video channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "Only decrypted radio channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "non encrypted radio channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "encrypted video channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "non encrypted video channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "video channels"
+#~ msgstr "přidat nové kanály"
+
+#, fuzzy
+#~ msgid "Only non encrypted channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "Only non encrypted TV channels"
+#~ msgstr "Odstranit kanály?"
+
+#, fuzzy
+#~ msgid "Setup.OSD$  Ok button shows"
+#~ msgstr "Tlačítko OK zobrazí"
+
+#, fuzzy
+#~ msgid "Setup.OSD$  Channellist/Bouquets on +/- keys"
+#~ msgstr "Doba zobr. inf. o kanálu (s)"
+
+#, fuzzy
+#~ msgid "Insert"
+#~ msgstr "Vložit"
+
+#, fuzzy
+#~ msgid "Dolby Digital"
+#~ msgstr "Používat zvuk v Dolby Digital"
+
+#, fuzzy
+#~ msgid "Rename"
+#~ msgstr "jen názvy"
+
+#, fuzzy
+#~ msgid "Activate QuickStandby?"
+#~ msgstr "Aktivace pohotovostního režimu"
+
+#~ msgid "Deep standby"
+#~ msgstr "Režim spánku"
+
+#, fuzzy
+#~ msgid "Activating QuickShutdown"
+#~ msgstr "Aktivace pohotovostního režimu"
+
+#~ msgid "UMTS"
+#~ msgstr "UMTS"
+
+#~ msgid "Activated standby after current recording"
+#~ msgstr "Byl aktivován pohotovostní režim po aktuální nahrávce."
+
+#~ msgid "shut down anyway?"
+#~ msgstr "přesto vypnout?"
+
+#~ msgid "Recording in %ld minutes, shut down anyway?"
+#~ msgstr "Nahrávání začne za %ld minut - přesto vypnout?"
+
+#, fuzzy
+#~ msgid "Setup.Recording$Record Digital Audio"
+#~ msgstr "Označit okamžité nahrávky"
+
+#~ msgid "Setup.OSD$Theme"
+#~ msgstr "Téma"
+
+#~ msgid "Setup.OSD$Anti-alias"
+#~ msgstr "Vyhladit písmo"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Use Symbol"
+#~ msgstr "Používat malé písmo"
+
+#, fuzzy
+#~ msgid "Setup.OSD$ScrollBar Width"
+#~ msgstr "Šířka"
+
+#~ msgid "Setup.Miscellaneous$Min. event timeout (min)"
+#~ msgstr "Min. pauza mezi událostmi (min)"
+
+#~ msgid "Setup.Recording$Split edited files"
+#~ msgstr "Dělit editované soubory"
+
+#, fuzzy
+#~ msgid "Setup.Miscellaneous$Mark Blocks after Recording"
+#~ msgstr "jako naposledy"
+
+#, fuzzy
+#~ msgid "Receiving"
+#~ msgstr "Nahrávání"
+
+#, fuzzy
+#~ msgid "Scheduled Recordings"
+#~ msgstr "Nahrávky"
+
+#, fuzzy
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#, fuzzy
+#~ msgid "*Recordings"
+#~ msgstr "Nahrávky"
+
+#~ msgid "Dpid1"
+#~ msgstr "Dpid1"
+
+#~ msgid "Dpid2"
+#~ msgstr "Dpid2"
+
+#~ msgid "Spid1"
+#~ msgstr "Spid1"
+
+#~ msgid "Spid2"
+#~ msgstr "Spid2"
+
+#~ msgid "CA"
+#~ msgstr "CA"
+
+#~ msgid "Inversion"
+#~ msgstr "Inversion"
+
+#~ msgid "CAM not responding!"
+#~ msgstr "CAM neodpovídá!"
+
+#~ msgid "Setup.OSD$Message time (s)"
+#~ msgstr "Čas zobrazení zpávy (s)"
+
+#~ msgid "Setup.OSD$Default font"
+#~ msgstr "Výchozí písmo"
+
+#~ msgid "Setup.OSD$Default font size (pixel)"
+#~ msgstr "Velikost výchozího písma (pixely)"
+
+#~ msgid "bottom"
+#~ msgstr "dole"
+
+#~ msgid "top"
+#~ msgstr "hahoře"
+
+#~ msgid "Setup.OSD$Info on channel switch"
+#~ msgstr "Informace při změně kanálu"
+
+#~ msgid "Setup.OSD$Timeout requested channel info"
+#~ msgstr "Časový limit informace o kanálu"
+
+#~ msgid "Setup.OSD$Menu key closes"
+#~ msgstr "Klávesa Menu zavírá"
+
+#~ msgid "Setup.OSD$Recording directories"
+#~ msgstr "Seznam nahrávek"
+
+#~ msgid "Setup.EPG$EPG bugfix level"
+#~ msgstr "EPG úroveň chyb"
+
+#~ msgid "Setup.EPG$EPG linger time (min)"
+#~ msgstr "Ukazovat starší EPG data (min)"
+
+#~ msgid "Setup.EPG$Set system time"
+#~ msgstr "Nastavit systémový čas"
+
+#~ msgid "Setup.EPG$Use time from transponder"
+#~ msgstr "Použít čas z kanálu"
+
+#~ msgid "Setup.EPG$Preferred languages"
+#~ msgstr "Preferované jazyky"
+
+#~ msgid "Setup.EPG$Preferred language"
+#~ msgstr "Preferovaný jazyk"
+
+#~ msgid "pan&scan"
+#~ msgstr "pan&scan"
+
+#~ msgid "letterbox"
+#~ msgstr "letterbox"
+
+#~ msgid "center cut out"
+#~ msgstr "dostředu oříznout"
+
+#~ msgid "PIDs only"
+#~ msgstr "jen PIDs"
+
+#~ msgid "names and PIDs"
+#~ msgstr "názvy a PIDs"
+
+#~ msgid "add new transponders"
+#~ msgstr "přidat nové transpondéry"
+
+#~ msgid "Setup.DVB$Primary DVB interface"
+#~ msgstr "Primární DVB interface"
+
+#~ msgid "Setup.DVB$Video format"
+#~ msgstr "Formát videa"
+
+#~ msgid "Setup.DVB$Video display format"
+#~ msgstr "Formát zobrazení videa"
+
+#~ msgid "Setup.DVB$Audio language"
+#~ msgstr "Jazyk zvuku"
+
+#~ msgid "Setup.LNB$Use DiSEqC"
+#~ msgstr "Používat DiSEqC"
+
+#~ msgid "Setup.LNB$SLOF (MHz)"
+#~ msgstr "SLOF (MHz)"
+
+#~ msgid "Setup.LNB$Low LNB frequency (MHz)"
+#~ msgstr "Dolní frekvence LNB (MHz)"
+
+#~ msgid "Setup.LNB$High LNB frequency (MHz)"
+#~ msgstr "Horní frekvence LNB (MHz)"
+
+#~ msgid "CAM present"
+#~ msgstr "CAM přítomen"
+
+#~ msgid "CAM ready"
+#~ msgstr "CAM připraven"
+
+#~ msgid "Button$Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Button$Reset"
+#~ msgstr "Reset"
+
+#~ msgid "CAM is in use - really reset?"
+#~ msgstr "CAM se používá - opravdu restartovat?"
+
+#~ msgid "Setup.Recording$Primary limit"
+#~ msgstr "Primární limit"
+
+#~ msgid "Setup.Recording$Pause priority"
+#~ msgstr "Priorita přerušení"
+
+#~ msgid "Setup.Recording$Pause lifetime (d)"
+#~ msgstr "Životnost přerušení (d)"
+
+#~ msgid "Setup.Recording$Use episode name"
+#~ msgstr "Používat název epizody"
+
+#~ msgid "Setup.Recording$VPS margin (s)"
+#~ msgstr "Časová rezerva pro VPS (s)"
+
+#~ msgid "Setup.Recording$Name instant recording"
+#~ msgstr "Pojmenovat okamžité nahrávky"
+
+#~ msgid "Setup.Recording$Max. video file size (MB)"
+#~ msgstr "Maximální velikost nahrávky (MB)"
+
+#~ msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+#~ msgstr "Časový limit SVDRP (s)"
+
+#~ msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+#~ msgstr "Prodleva při volbě kanálu (ms)"
+
+#~ msgid "Schedule"
+#~ msgstr "Program (EPG)"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"
+
+#~ msgid "Button$Stop"
+#~ msgstr "Ukončit"
+
+#~ msgid "Button$Resume"
+#~ msgstr "Pokračovat"
+
+#~ msgid "Plugin"
+#~ msgstr "Modul"
+
+#~ msgid "Editing - shut down anyway?"
+#~ msgstr "Edituji - přesto vypnout?"
+
+#~ msgid "Plugin %s wakes up in %ld min, continue?"
+#~ msgstr "Modul %s startuje za %ld min., pokračovat?"
+
+#~ msgid "Editing - restart anyway?"
+#~ msgstr "Edituji - přesto restartovat?"
+
+#~ msgid "VDR will shut down later - press Power to force"
+#~ msgstr "Vypnutí VDR bude odloženo - vypnete klávesou Power"
+
+#~ msgid "Press any key to cancel shutdown"
+#~ msgstr "Jakákoliv klávesa zruší vypnutí"
+
+#~ msgid "Press any key to cancel restart"
+#~ msgstr "Jakákoliv klávesa zruší restart"
+
+#~ msgid "VDR will shut down in %s minutes"
+#~ msgstr "VDR se vypne za %s minut"

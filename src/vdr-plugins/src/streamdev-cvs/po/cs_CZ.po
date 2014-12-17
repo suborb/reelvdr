@@ -1,0 +1,258 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2010-04-15 12:16+0200\n"
+"PO-Revision-Date: 2009-03-08 18:46+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr "Klient datového toku VTP"
+
+msgid "Streaming Client"
+msgstr "Klient datového toku"
+
+msgid "Server is suspended"
+msgstr "Server je pozastaven."
+
+msgid "Couldn't suspend Server!"
+msgstr "Server nelze pozastavit!"
+
+msgid "VDR Streaming Server"
+msgstr "Server datového toku VDR"
+
+msgid "Pause Live TV"
+msgstr "Pozastavit živou TV"
+
+msgid "Streaming Server"
+msgstr "Server datového toku"
+
+msgid "Streaming active"
+msgstr "Datový tok je aktivní"
+
+msgid "Offer suspend mode"
+msgstr ""
+
+#, fuzzy
+msgid "Always suspended"
+msgstr "Klient může pozastavit"
+
+#, fuzzy
+msgid "Never suspended"
+msgstr "Server je pozastaven."
+
+msgid "Common Settings"
+msgstr "Obecné nastavení"
+
+msgid "Maximum Number of Clients"
+msgstr "Maximální počet klientů"
+
+msgid "Suspend behaviour"
+msgstr "Chování při pozastavení"
+
+msgid "Client may suspend"
+msgstr "Klient může pozastavit"
+
+#, fuzzy
+msgid "ReelBox-to-ReelBox Server"
+msgstr "Server VDR-VDR"
+
+#, fuzzy
+msgid "Start ReelBox-to-ReelBox Server"
+msgstr "Spustit server VDR-VDR"
+
+#, fuzzy
+msgid "ReelBox-to-ReelBox Server Port"
+msgstr "Port serveru VDR-VDR"
+
+msgid "Bind to IP"
+msgstr "Svázat s IP adresou"
+
+msgid "HTTP Server"
+msgstr "Server HTTP"
+
+msgid "Start HTTP Server"
+msgstr "Spustit server HTTP"
+
+msgid "HTTP Server Port"
+msgstr "Port serveru HTTP"
+
+msgid "HTTP Streamtype"
+msgstr "Typ datového toku HTTP"
+
+#, fuzzy
+msgid "Multicast Streaming Server"
+msgstr "Server datového toku"
+
+#, fuzzy
+msgid "Start IGMP Server"
+msgstr "Spustit server HTTP"
+
+#, fuzzy
+msgid "Multicast Client Port"
+msgstr "Spustit klienta"
+
+#, fuzzy
+msgid "Multicast Streamtype"
+msgstr "Typ datového toku HTTP"
+
+msgid "Start Client"
+msgstr "Spustit klienta"
+
+msgid "Remote IP"
+msgstr "IP adresa vzdáleného serveru"
+
+msgid "Remote Port"
+msgstr "Port vzdáleného serveru"
+
+msgid "Filter Streaming"
+msgstr "Filtrovat datový tok"
+
+msgid "Synchronize EPG"
+msgstr "Synchronizovat EPG"
+
+#, fuzzy
+msgid "Minimum Priority"
+msgstr "Priorita"
+
+#, fuzzy
+msgid "Maximum Priority"
+msgstr "Priorita"
+
+#~ msgid "Streaming Control"
+#~ msgstr "Řízení datového toku"
+
+#~ msgid "Remote Schedule"
+#~ msgstr "Vzdálený program"
+
+#~ msgid "Remote Timers"
+#~ msgstr "Vzdálené časovače"
+
+#~ msgid "Remote Recordings"
+#~ msgstr "Vzdálené nahrávky"
+
+#~ msgid "Suspend Server"
+#~ msgstr "Pozastavit server"
+
+#~ msgid "Edit remote timer"
+#~ msgstr "Upravit vzdálený časovač"
+
+#~ msgid "Active"
+#~ msgstr "Aktivní"
+
+#~ msgid "Channel"
+#~ msgstr "Kanál"
+
+#~ msgid "Day"
+#~ msgstr "Den"
+
+#~ msgid "Start"
+#~ msgstr "Začátek"
+
+#~ msgid "Stop"
+#~ msgstr "Konec"
+
+#~ msgid "VPS"
+#~ msgstr "VPS"
+
+#~ msgid "Lifetime"
+#~ msgstr "Životnost"
+
+#~ msgid "File"
+#~ msgstr "Soubor"
+
+#~ msgid "First day"
+#~ msgstr "První den"
+
+#~ msgid "*** Invalid Channel ***"
+#~ msgstr "*** Neplatný kanál ***"
+
+#~ msgid "What's on now?"
+#~ msgstr "Aktuální program"
+
+#~ msgid "What's on next?"
+#~ msgstr "Následující program"
+
+#~ msgid "Record"
+#~ msgstr "Nahrát"
+
+#~ msgid "Next"
+#~ msgstr "Další"
+
+#~ msgid "Now"
+#~ msgstr "Nyní"
+
+#~ msgid "Schedule"
+#~ msgstr "Program"
+
+#~ msgid "Switch"
+#~ msgstr "Přepnout"
+
+#~ msgid "Can't switch channel!"
+#~ msgstr "Kanál nelze přepnout!"
+
+#~ msgid "Schedule - %s"
+#~ msgstr "Program - %s"
+
+#~ msgid "Fetching recordings..."
+#~ msgstr "Načítání nahrávek..."
+
+#~ msgid "Open"
+#~ msgstr "Otevřít"
+
+#~ msgid "Delete"
+#~ msgstr "Odstranit"
+
+#~ msgid "Summary"
+#~ msgstr "Shrnutí"
+
+#~ msgid "Error while accessing recording!"
+#~ msgstr "Chyba při přístupu k nahrávce!"
+
+#~ msgid "Delete recording?"
+#~ msgstr "Odstranit nahrávku?"
+
+#~ msgid "Edit"
+#~ msgstr "Upravit"
+
+#~ msgid "New"
+#~ msgstr "Nový"
+
+#~ msgid "On/Off"
+#~ msgstr "Zap/vyp"
+
+#~ msgid "Delete timer?"
+#~ msgstr "Odstranit časovač?"
+
+#~ msgid "MTWTFSS"
+#~ msgstr "MTWTFSS"
+
+#~ msgid "Please restart VDR to activate changes"
+#~ msgstr "Změny se projeví až po restartování VDR."
+
+#~ msgid "Recordings not in sync! Try again..."
+#~ msgstr "Nahrávky nejsou synchronní! Opakujte akci..."
+
+#~ msgid "Couldn't delete recording! Try again..."
+#~ msgstr "Nahrávku nelze odstranit! Opakujte akci..."
+
+#~ msgid "Couldn't save timer! Try again..."
+#~ msgstr "Časovač nelze uložit! Opakujte akci..."
+
+#~ msgid "Timers not in sync! Try again..."
+#~ msgstr "Časovače nejsou synchronní! Opakujte akci..."
+
+#~ msgid "Server error! Try again..."
+#~ msgstr "Chyba serveru! Opakujte akci..."
+
+#~ msgid "Couldn't delete timer! Try again..."
+#~ msgstr "Časovač nelze odstranit! Opakujte akci..."

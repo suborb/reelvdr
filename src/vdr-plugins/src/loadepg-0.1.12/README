@@ -1,0 +1,44 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  lukkino <dpluca@libero.it>
+
+Project's homepage:          http://kikko77.altervista.org
+
+Latest version available at: http://kikko77.altervista.org
+
+See the file COPYING for license information.
+
+
+Description:
+This plugin load EPG data sent to Mediahighway receivers ( Canal+ group )
+or executes external scripts and load EPG data from file.
+
+Command:
+Press Up or Down arrow for switch on a provider
+Press Ok for start a new scan
+Press Back for stop a current scan.
+
+
+******************************* WARNING *******************************
+
+This plugin work only with vdr >= 1.3.18
+
+***********************************************************************
+
+ATTENTION:
+copy a "loadepg.conf" file and "loadepg.equiv" file into a your plugin dir 
+for samples my is:
+
+    /video/plugins/loadepg.conf
+    /video/plugins/loadepg.equiv
+
+
+----------------------------------------------------------------------------------------------------
+A special thanks for Klaus, for him work on vdr...
+
+Same thanks for:
+- 999 and Ashura and Kikko77 for the c/c++ code help.
+- Ninoger for test.
+- Gringo for translate.
+- All the users of the italian #vdr channel in the irc.azzurra.net server.
+- All the users of italian forum http://vdr-italia.phpbb24.com

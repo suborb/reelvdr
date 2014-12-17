@@ -1,0 +1,75 @@
+diff -Nur vdr-1.3.21/config.h vdr-1.3.21-reel/config.h
+--- vdr-1.3.21/config.h	2005-07-10 17:12:44.000000000 +0200
++++ vdr-1.3.21-reel/config.h	2005-07-09 01:48:54.000000000 +0200
+@@ -20,6 +20,9 @@
+ #include "i18n.h"
+ #include "tools.h"
+ 
++#define VDRNAME  " |ReelVDR"
++#define VDRDIST  "ReelBox"
++#define DISTVERSION  "009-drX"
+ #define VDRVERSION  "1.3.34"
+ #define VDRVERSNUM   10334  // Version * 10000 + Major * 100 + Minor
+ 
+###
+diff -Nur vdr-1.3.21/menu.c vdr-1.3.21-reel/menu.c
+--- vdr-1.3.21/menu.c	2005-07-10 17:12:44.000000000 +0200
++++ vdr-1.3.21-reel/menu.c	2005-07-07 23:40:49.000000000 +0200
+@@ -2567,13 +2468,13 @@
+ {
+   Clear();
+   char buffer[64];
+-  snprintf(buffer, sizeof(buffer), "%s - VDR %s", tr("Setup"), VDRVERSION);
++  snprintf(buffer, sizeof(buffer), "%s - %s %s", tr("VDR-Setup"), VDRDIST, DISTVERSION);
+   SetTitle(buffer);
+   SetHasHotkeys();
+   Add(new cOsdItem(hk(tr("OSD")),           osUser1));
+   Add(new cOsdItem(hk(tr("EPG")),           osUser2));
+   Add(new cOsdItem(hk(tr("DVB")),           osUser3));
+-  Add(new cOsdItem(hk(tr("LNB")),           osUser4));
++  Add(new cOsdItem(hk(tr("LNB / DiSEqC")),  osUser4));
+   Add(new cOsdItem(hk(tr("CICAM")),         osUser5));
+   Add(new cOsdItem(hk(tr("Recording")),     osUser6));
+   Add(new cOsdItem(hk(tr("Replay")),        osUser7));
+@@ -2692,7 +2593,7 @@
+   int Minutes = int(double(FreeMB) / MB_PER_MINUTE);
+   int Hours = Minutes / 60;
+   Minutes %= 60;
+-  snprintf(buffer, sizeof(buffer), "%s  -  %s %d%%  -  %2d:%02d %s", tr("VDR"), tr("Disk"), Percent, Hours, Minutes, tr("free"));
++  snprintf(buffer, sizeof(buffer), "%s  -  %s %d%%  -  %2d:%02d %s", VDRDIST, tr("Disk"), Percent, Hours, Minutes, tr("free"));
+   //XXX -> skin function!!!
+   SetTitle(buffer);
+ 
+@@ -3006,7 +2878,7 @@
+ 
+ // --- cDisplayChannel -------------------------------------------------------
+ 
+-#define DIRECTCHANNELTIMEOUT 1000 //ms
++#define DIRECTCHANNELTIMEOUT 1500 //ms
+ 
+ cDisplayChannel::cDisplayChannel(int Number, bool Switched)
+ :cOsdObject(true)
+diff -Nur vdr-1.3.21/skinsttng.c vdr-1.3.21-reel/skinsttng.c
+--- vdr-1.3.21/skinsttng.c      2005-01-08 16:37:55.000000000 +0100
++++ vdr-1.3.21-reel/skinsttng.c 2005-06-25 02:58:33.000000000 +0200
+@@ -454,7 +454,7 @@
+ void cSkinSTTNGDisplayMenu::SetTitle(const char *Title)
+ {
+   const cFont *font = cFont::GetFont(fontOsd);
+-  const char *VDR = " VDR";
++  const char *VDR = VDRNAME;
+   int w = font->Width(VDR);
+   osd->DrawText(x3 + 5, y0, Title, Theme.Color(clrMenuTitle), frameColor, font, x4 - w - x3 - 5);
+   osd->DrawText(x4 - w, y0, VDR, frameColor, clrBlack, font);
+diff -Nur vdr-1.3.21/skins.c vdr-1.3.21-reel/skins.c
+--- vdr-1.3.21/skins.c  2005-01-14 14:07:19.000000000 +0100
++++ vdr-1.3.21-reel/skins.c     2005-07-09 01:48:54.000000000 +0200
+@@ -75,7 +75,7 @@
+ // --- cSkinDisplayReplay::cProgressBar --------------------------------------
+
+ cSkinDisplayReplay::cProgressBar::cProgressBar(int Width, int Height, int Current, int Total, const cMarks *Marks, tColor ColorSeen, tColor ColorRest, tColor ColorSelected, tColor ColorMark, tColor ColorCurrent)
+-:cBitmap(Width, Height, 2)
++:cBitmap(Width, Height, 4)
+ {
+   total = Total;
+   if (total > 0) {

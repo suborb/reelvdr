@@ -1,0 +1,16 @@
+/.cvsignore/1.1/Mon May 27 08:36:05 2002//
+/Makefile/1.24/Mon Jul 18 17:21:08 2005//
+/audiogen.c/1.2/Wed Oct 15 01:22:50 2003//
+/dsptest.c/1.6/Mon May 27 08:39:04 2002//
+/ffmpeg.regression.ref/1.142/Mon Jul 25 14:36:58 2005//
+/ffserver.regression.ref/1.13/Mon Jul 18 17:21:08 2005//
+/lena.pnm/1.1/Fri Apr 11 13:43:17 2003/-kb/
+/libav.regression.ref/1.71/Mon Jul 25 14:36:58 2005//
+/regression.sh/1.78/Mon Jul 25 14:36:58 2005//
+/rotozoom.c/1.5/Fri Dec 24 12:34:11 2004//
+/rotozoom.regression.ref/1.97/Mon Jul 25 14:36:58 2005//
+/server-regression.sh/1.9/Sun Aug 24 21:14:02 2003//
+/test.conf/1.7/Mon Jul 18 09:02:58 2005//
+/tiny_psnr.c/1.7/Tue Feb  1 20:32:47 2005//
+/videogen.c/1.4/Wed Oct 15 01:22:50 2003//
+D

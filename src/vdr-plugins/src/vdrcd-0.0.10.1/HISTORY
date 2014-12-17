@@ -1,0 +1,48 @@
+VDR Plugin 'vdrcd' Revision History
+-----------------------------------
+
+2003-07-12: Version 0.0.10
+
+- adopted to VDR >= 1.3.7 (older versions work as usual)
+- adopted to VDR >= 1.3.11 (older versions work as usual)
+
+2003-06-03: Version 0.0.9
+
+- added french translations (thanks to Olivier Jaques)
+- added support for Photo CDs (thanks to Thomas Heiligenmann)
+
+2003-05-23: Version 0.0.8
+
+- added autonavigation for avi(mplayer)-cds (thanks to Herbert Attenberger)
+- added support for cds containing ogg-files (thanks to Herbert Attenberger)
+- updated all those capital-letter files ;)
+
+2003-04-01: Version 0.0.7
+
+- introduced use of a mount.sh script
+- multiple drives on the commandline are possible
+- added autonavigation for video- and audio-cd (instant playback)
+- code cleanup
+
+2003-03-23: Version 0.0.6a
+
+- fixed a serious bug in the internationalized phrases listing
+
+2003-02-25: Version 0.0.6
+
+- fixed a bug that locked the drive so automount couldn't release them
+- added internationalization support and german translations
+- rewrote the README file
+  
+2003-02-04: Version 0.0.5
+
+- calls plugins by names instead of menu entries
+
+2002-11-14: Version 0.0.2
+
+- bugfix: media detection has a serious bug
+- now mp3 discs and avi discs schould do it to (see README)
+
+2002-11-06: Version 0.0.1
+
+- Initial revision.

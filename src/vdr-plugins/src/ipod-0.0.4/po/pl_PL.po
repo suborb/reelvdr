@@ -1,0 +1,56 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ipod\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-14 20:20+0200\n"
+"PO-Revision-Date: 2008-10-08 11:35+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ipod not found."
+msgstr "Nie znaleziono Ipoda"
+
+msgid "Add recursivly?"
+msgstr "Dodac rekursywnie?"
+
+msgid "Play"
+msgstr "Odgrywaj"
+
+msgid "Add"
+msgstr "Dodaj"
+
+msgid "Playlist"
+msgstr "Lista odtwarzania"
+
+msgid "Add to playlist"
+msgstr "Dodaj do listy odtwarzania"
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Clear"
+msgstr "Wyczyść"
+
+msgid "Delete entry?"
+msgstr "Usunać pole?"
+
+msgid "Clear playlist?"
+msgstr "Wyczyścić liste odtwarzania?"
+
+msgid "Mount Script"
+msgstr "Scrypt montowania"
+
+msgid "Mount Point"
+msgstr "Punkt Montowania"
+
+msgid "mp3 Plugin's Playlist Path"
+msgstr "Ścieżka wtyczek mp3 do listy odtwarzania"

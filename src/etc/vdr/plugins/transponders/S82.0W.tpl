@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S82.0W
+2=Nimiq 4
+3=West
+4=82.0

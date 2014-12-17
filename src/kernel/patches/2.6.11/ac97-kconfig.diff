@@ -1,0 +1,12 @@
+diff -Naur kernel-2.6.11-orig/sound/pci/Kconfig kernel-2.6.11/sound/pci/Kconfig
+--- kernel-2.6.11-orig/sound/pci/Kconfig	2005-03-02 08:37:58.000000000 +0100
++++ kernel-2.6.11/sound/pci/Kconfig	2005-03-04 03:14:18.000000000 +0100
+@@ -4,7 +4,7 @@
+ 	depends on SND!=n && PCI
+ 
+ config SND_AC97_CODEC
+-	tristate
++	tristate "Generic AC97 support for external drivers"
+ 	select SND_PCM
+ 
+ config SND_ALI5451

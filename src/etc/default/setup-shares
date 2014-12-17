@@ -1,0 +1,49 @@
+#
+# config for setup-shares, automounter and link-shares
+#
+
+MOUNTBASE=/media
+
+# prefix for variables in sysconfig
+PREFIX=MOUNT
+
+# prefix for mountpoint
+MOUNTPREFIX=".mount"
+
+# Delimiter for mountpoint
+DELIM=""
+
+
+#
+# config for setup-shares and automounter
+#
+
+# UID/GID for samba
+MAP_UID=reel
+MAP_GID=ftpusers
+
+
+#
+# config for link-shares
+# case: insensitive for last dirname
+#
+
+# subdirs for linking 
+NAS_PICTURES="pictures images bilder fotos"
+NAS_VIDEOS="movies video videos filme"
+NAS_MUSIC="music mp3 mp3s musik audio"
+NAS_RECORDINGS="recordings aufnahmen video"
+NAS_DVDS="dvd dvds video/dvd video"
+
+# path for mediadirs
+MEDIADIR=$MOUNTBASE/reel
+
+PICTURESDIR=$MEDIADIR/pictures
+VIDEODIR=$MEDIADIR/video
+DVDDIR=$MEDIADIR/video/dvd
+MUSICDIR=$MEDIADIR/music
+RECORDINGSDIR=$MEDIADIR/recordings
+
+# mediaarrays
+LOCAL_MEDIAVAR="PICTURES VIDEOS DVDS MUSIC RECORDINGS"
+LOCAL_MEDIADIR="$PICTURESDIR $VIDEODIR $DVDDIR $MUSICDIR $RECORDINGSDIR"

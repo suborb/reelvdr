@@ -1,0 +1,289 @@
+****** Einleitung ******
+
+Das SETUP-Plugin erlaubt die einfache Konfiguration der wichtigsten
+Systemeinstellungen über das OSD des VDR's. Dieses Plugin wurde speziell für die
+MiniVDR Distribution entwickelt, kann aber einfach für andere Distributionen
+konfiguriert werden.
+
+****** Features ******
+
+Folgende Funktionen werden mit dem Setup Plugin realisiert:
+
+****** An- und Abwahl von Plugins ******
+
+Per OSD können Plugins an oder abgeschaltet werden. Eventuell benötigte Plugin-
+Parameter können im Konfigurationsfile minivdr-setup.xml hinzugefügt werden.
+Eine geänderte Plugin-Konfiguration wird erst nach dem nächsten Neustart aktiv.
+
+
+------- für Reelvdr --------------------------------------------------------
+Die An- und Abwahl der Plugins ist nur für optionale Plugins gedacht. 
+
+***** VDR-Menüs *****
+
+Mit dem Setup-Plugin wird ein Patch für den VDR ab Version 1.3.33 geliefert,
+welcher die Erzeugung von Submenüs erlaubt.
+
+ACHTUNG: Hierbei handelt es sich um eine eigene neue Entwicklung, welcher
+         beliebig viele geschachtelte Sub-Sub-Menüs zulässt. Das Plugin Submenu
+         und dessen Patch kann nicht zusammen mit dem Setup-Plugin verwendet
+         werden!
+
+Menüs können im Setup-Plugin per OSD hinzugefügt, editiert und verschoben
+werden. Eine geänderte Menükonfiguration wird sofort nach dem Speichern und
+erneutem Öffnen des Menüs aktiv.
+
+In der Menükonfigurationsdatei "vdr-menu.xml" können zusätzlich Kommandos
+definiert werden, welche dann wie ein Plugin per OSD ausgeführt werden können.
+Eventuelle Bildschirmausgaben des Kommandos werden auf dem OSD ausgegeben.
+
+****** Systemkonfiguration ändern ******
+
+Im Setup Plugin können die gängigen Systemkonfigurationen per OSD geändert
+werden. Im Konfigurations-File minivdr-setup.xml können dazu beliebige
+geschachtelte Menüs (XML Tag <menu> </menu> konfiguriert werden. Jedem
+Systemparameter wird ein Variablenname zugeordnet, der dann im angegebenen
+System-Konfigurationsfile, welches mit dem Attribut "sysconfigFile" definiert
+wurde, abgespeichert. Diese Datei kann dann von der Distribution beim Booten und
+Starten des VDR ausgelesen werden und das System nach den Einstellungen des
+Benutzers konfigurieren.
+Die Beschreibung der Konfigurationsdateien wird hier im Detail beschrieben.
+
+****** Systemvoraussetzungen ******
+
+    * In das Plugin Konfigurationsverzeichnis (z.B: /etc/vdr/plugins/setup)
+      müssen die Dateien minivdr-setup.xml und vdr-menu.xml abgelegt werden.
+    * Die in der Datei minivdr-setup.xml mit dem Attribut "sysconfigFile
+      gekennzeichnete Datei wird vom Plugin angelegt, falls Sie nicht existieren
+      sollte. In dieser Datei werden die Einstellungen in Form von
+      Shellvariablen gespeichert.
+    * Hilfedateien werden in dem Vezeichnis /etc/vdr/plugins/setup/help
+      abgelegt.
+    * Der beigefügte Patch für VDR 1.3.x muss installiert werden.
+    * Das Submenü-Plugin darf nicht zusammen mit dem Setup-Plugin verwendet
+      werden.
+
+****** Support ******
+
+Fragen, Verbesserungsvorschläge und eventuelle Fehler können direkt über das
+Forum im MiniVDR-Portal weiter gegeben werden.
+
+
+*************************************
+****** VDR-Setup Konfiguration ******
+*************************************
+
+Das VDR-Setup Plugin nutzt drei Konfigurationsdateien.
+    * minivdr-setup.xml
+    * vdr-menu.xml
+    * setup-lang.xml 
+
+***** Beschreibung minivdr-setup.xml *****
+
+Die Dateiminivdr-setup.xml beschreibt die Konfiguration des Setup-Plugins im XML
+Format.
+
+Tag <setup>
+
+Das ist das Wurzelelement der Konfigurationsdatei. Alle anderen Elemente liegen
+innerhalb dieses tags.
+Attribute:
+ "sysconfigFile"
+              Pfad zu Sysconfig Datei. In dieser Datei speichert das Plugin die
+              Einstellungen in Form von SHELL Variablen. Diese Datei kann dann vom Backend 
+		  z.B.:runvdr einfach eingelesen und ausgewertet werden.
+              Achtung: die Datei wird bei jeder Änderung im Setupmenu 
+		  neu geschrieben
+
+"bootLinux"   Enthält das Kommando, welches aufgerufen wird um LINUX zu
+              rebooten. Default ="/sbin/reboot"
+
+"VDRlibDir"   Gibt das Verzeichnsi an, in welchem die VDR-Plugins abgelegt sind.
+              Deafult ="/usr/lib/vdr/plugins"
+ 
+
+Tag <plugins>
+
+Beinhaltet die Liste der Plugins.
+Attribute Beschreibung
+sysconfig Variablen Name im sysconfigFile. In dieser Variable wird die Liste der
+          aktivierten Plugins gespeichert.
+ 
+Beim Reelvdr nur für optionale Plugins.
+
+<plugin>
+
+Beschreibt ein Plugin.
+Attribute Beschreibung
+          Name des Plugins. Gibt den Namen des Plugins an. Im VDR-Lib-
+name      Verzeichnis muss das Plugin dann unter dem Namenlib-"name"-vdrversion
+          gefunden werden.
+param     Dieses optionale Attribut gibt die Aufrufparameter des Plugins an.
+info      Beschreibung des Plugins
+active    Hat den Wert "yes" oder "no" und gibt an, ob das Plugin aktiv ist.
+          Hat den Wert "yes" oder "no". Wenn == yes , dann kann dieses Plugin
+protected nicht deaktiviert werden und im OSD erscheint "geschützt".
+
+          Dieses Attribut ist optional. Default: "no".
+ 
+
+<menus>
+
+Es folgen nun beliebig viele Menübeschreibungen <menu>. Innerhalb eines Menüs
+können weitere Menüs <menu> oder aber Einträge (<entry>) folgen.
+ 
+
+<menu>
+
+Beschreibt ein Menü. Innerhalb eines Menüs können weitere Menüs <menu> oder aber
+Einträge (<entry>) folgen.
+Attribute Beschreibung
+name      Name des Menüs. Dieser String wird dann im VDR-Menü angezeigt.
+          Dieses optionale Attribut gibt ein Kommando mit kompletter
+command   Pfadbeschreibung und Parametern an, welches ausgeführt wird, wenn das
+          Submenü mit OK beendet wird.
+          erlaubt die Angabe eines Standard Untermenüs der "Einstellungen".
+          Mögliche Werte sind:
+              * OSD
+              * EPG
+              * DVB
+              * LNB
+              * CICAM
+system        * Record
+              * Replay
+              * Misc
+              * Plugins
+          Zusätzlich zu den VDR-Standardmenüs sind die folgenden Untermenü
+          definiert:
+              * ActPlugins (Aktiviere /Deaktiviere Plugin)
+              * VDRMenu (Editiere das VDR-Menü)
+          Während dem Build-Prozess werden alle in <vdr>/menu.c definierten
+          Setup-Menüs eingelesen und konfiguriert.
+          Ist z.B. der BigPatch angewendet worden, dann können zum Beispiel
+          zusätzlich die folgenden Werte genutzt werden:
+              * BigPatch (Menü des Bigpatches)
+              * LiveBuffer (Menü des Live-Buffer Patches)
+help1     Dieses optionale Attribut gibt einen kurzen Hilfstext an welcher in
+          der Statuszeile angezeigt wird, wenn der Cursor auf dem Eintrag steht.
+          Dieses optionale Attribut gibt eine Datei mit einem langen Hilfstext
+help2     an. Diese Datei muss sich in dem Verzeichnis PluginConfigDir/setup/
+          help befinden. Der Text der Datei wird ausgegeben, wenn die rote Taste
+          gedrückt wird.
+ 
+
+<entry>
+
+Innerhalb eines Menü können beliebig viele Einträge aufgeführt werden, mit denen
+jeweils einen Wert konfiguriert werden kann.
+Attribute Beschreibung
+name      Name des Eintrags. Dieser String wird dann im VDR-Menü angezeigt.
+sysconfig Variablen Name im sysconfigFile. In dieser Variable wird die Liste der
+          aktivierten Plugins gespeichert.
+          Dieses optionale Attribut gibt ein Kommando mit kompletter
+command   Pfadbeschreibung und Parametern an, welches ausgeführt wird, wenn das
+          Submenü mit OK beendet wird.
+          definiert den Typ des Eintrags. Erlaubt sind die folgenden Einträge:
+            text
+                Erlaubt das Editieren eines Textes.
+            bool
+                Erlaubt das Editieren eines Booleschen Wertes (yes oder no)
+            numtext
+                Erlaubt die Eingabe eines Strings der nur aus Ziffern besteht.
+                Führende Nullen bleiben erhalten.
+type        hex
+                Erlaubt die Eingabe von Hexadezimalwerten.
+            number
+                Erlaubt die Eingabe eines Integer Wertes.
+            ip
+                Erlaubt die Eingabe einer Internetadresse der Form
+                DDD.DDD.DDD.DDD.
+            selection
+                Erlaubt die Auswahl eines Elementes welches innerhalb des
+                <entry> Eintrags mit <value> definiert werden muss.
+value     Ausgewählter Wert.
+          Mit diesem Attribut können interne Funktionen aufgerufen werden.
+            childlock
+                Definiert die Kindersicherungsfunktion. Die eingegebenen Werte
+                werden in Form von "*" angezeigt.
+            channellist
+setup           Erlaubt die Auswahl von vordefinierten Kanallisten. Die
+                Kanallisten müssen in den Verzeichnis <vdrdir>/plugins/channels
+                mit der Endung *.conf abgelegt werden. Das Setup-Plugin linkt
+                dann die ausgewählte Kanalliste nach <vdrdir>/channels.conf
+            networkdriver"
+                erlaubt die Auswahl eines Netzwerktreibers
+help1     Dieses optionale Attribut gibt einen kurzen Hilfstext an welcher in
+          der Statuszeile angezeigt wird, wenn der Cursor auf dem Eintrag steht.
+          Dieses optionale Attribut gibt eine Datei mit einem langen Hilfstext
+help2     an. Diese Datei muss sich in dem Verzeichnis PluginConfigDir/setup/
+          help befinden. Der Text der Datei wird ausgegeben, wenn die rote Taste
+          gedrückt wird.
+ 
+
+<value>
+
+Innerhalb eines Entries vom Typ "selection" können beliebig viele <value> Werte
+definiert werden, die dann zur Auswahl stehen.
+ 
+***** Beschreibung vdr-menu.xml *****
+
+In der Datei vdr-menu.xml wird die Menükonfiguration des VDR abgelegt.
+
+<menus>
+
+Das ist das Wurzelelement der Konfigurationsdatei. Innerhalb dieses Elementes
+dürfen beliebig viele Elemente der folgenden Typen liegen:
+    * menu
+    * plugin
+    * system
+    * command
+
+<menu>
+
+Innerhalb eines Menüs, können beliebig viele weitere Tags von folgende Typen
+folgen:
+    * menu
+    * plugin
+    * system
+    * command
+Attribute Beschreibung
+name      Name des Menüs. Dieser String wird dann als VDR-Menü angezeigt.
+
+
+<plugin>
+
+Beschreibt den Name des Plugins, der an dieser Stelle im Menü angezeigt wird.
+Attribute Beschreibung
+name      Name des Plugins. Im Menü erscheint dann der Sprachen spezifische Name
+          des Plugins.
+
+
+<system>
+
+Beschreibt eines der Standart VDR-Menüs, die an dieser Stelle im Menü angezeigt
+wird.
+Attribute Beschreibung
+          Name des System Kommandos. Im Menü erscheint dann der Sprachen
+          spezifische Name des System Kommandos. Die folgenden Werte sind
+          definiert:
+            Schedule
+                Das Programm Menü.
+            Channels
+name            Das Menü Kanäle.
+            Timers
+                Das Timer Menü.
+            Recordings
+                Das Aufnahme Menü.
+            Setup
+                Das Menü Einstellungen.
+
+
+<command>
+
+Beschreibt ein Kommando welches im Menü eingebunden werden kann.
+Attribute Beschreibung
+name      Name des Kommandos. Dieser String wird dann als VDR-Menü angezeigt.
+execute   Kompletter String mit Pfadname zum Kommando und optionalen Parametern,
+          der ausgeführt werden soll.
+ 
+

@@ -1,0 +1,390 @@
+VDR Plugin 'dvd' Revision History
+---------------------------------
+
+    - add finnish translation (thanks to Ville Skyttä)
+    - fix error in picturetype detection to save still iframes
+    - fix highlight in letterbox and pan&scan mode (need patch vdr-1.3.23-dvbspu.c.diff works also on vdr-1.3.22)
+    - fix highlight button when button == 0
+    - change menu detection (test)
+    - use DeviceClrAvailableTracks/DeviceSetCurrentAudioTrack from vdr 
+    - only set possible subtitles
+    - fix subtitlehandling in replay display
+    - fix aspectratio in pan and scan mode
+    - fix stillpicture in menu
+    - fix allways showed subtitles
+    - fix audiotrackcount and audiolanguage in progress display
+    - add mpeg2 audio language
+
+2005-01-24 Version 0.3.6-b02
+    - added respect to vdr 1.3.19 multiple ac3 audioid's,
+      as well as converting ac3->lpcm with the same audio id's
+    - use this only with vdr >= 1.3.19
+
+2005-01-23 Version 0.3.6-b01
+    - fix vdr >= 1.3.18 audio selection
+    	- AUDIO and DOLBY type works fine now
+	- this needs a little fix, since klaus has
+	  added support for multiple ac3 audio id's ..
+    - backward trick and very-fast fwd trick is fixed !
+
+    - change audio switch from '1' to 'Audio'
+    - changes for vdr-1.3.18 (is not ready yet)
+    - add gain in setup for analog output
+    - fixed backward play
+    - add fields for Danish language texts
+    - add fields for Estonian language texts
+    - deactivate "new a/v sync code" it produced high CPU load
+    - fixed PTS sync
+    - fixed error in the replay display
+    - add finnish translation (thanks to Rolf Ahrenberg)
+    - add 'data alignment indicator' Bit for AC3 loop through Firmware
+    - add virtual plugin methods
+    - move RegisterI18n(...) from Start() to Initialize()
+    - fixed hightlight in menu
+    - correct subtitle position (test)
+    - fix audiostream selection
+    - move 'forced subs' to VDR SpuDecoder
+    - fix stop playing if message displayed
+
+2004-06-24: Version 0.3.5-b06
+    - fixed segfault at plugin exit
+    - fixed segfault in ac3 softdecoder
+    - fixed AC3/DTS audiostream selection
+    - remove 'forced subs' from setup
+    - fixed video glitches at startup
+    - remove code < vdr-1.3.7 it does not work
+    - change stop to speedup exit
+
+2004-06-17: Version 0.3.5-b05...  
+    - div by zero ..
+    - dvd aspect ..
+    - ReadAHead is boolean again
+    - fetching dvd infos, only if necessary (new):
+	    bool UpdateBlockInfo(void);
+	    void UpdateVTSInfo(void);
+      else, data is cached within player.
+    - Try to use ReadAHead := true,
+      and check dvd drive access/performance !!
+
+2004-06-17: Version 0.3.5-b04  
+    - many merges/fixes ..
+    	- highlight
+	- QNX support
+	- still/audio dvd's (hybrid dvd-audio)
+		- dvd-v part only ..
+
+    - pcm support started ..
+      /**
+       * the funny thing here is, that:
+       *	- it plays well within vdr-xine
+       *	- it plays broken with vdr/dvb itself (PlayVideo)
+       *	- it plays broken with bitstreamout (PlayAudio)
+       */
+
+2004-06-10: Version 0.3.5-b02  
+    - SPU AUTO PROBLEM:
+    	 *
+	#define FORCED_SUBS_ONLY_SEMANTICS
+	 * this was "weak"'s solution of a forced 
+	 * SPU only stream choice,
+	 * which does _not_ work ..
+	 *
+	 * Problem:
+	 *   - forcedDisplay | menu ctrseq within the SPU,
+	 *     means kinda "just do it"
+	 *
+	 *   - special SPU channels, which only shows up
+	 *     e.g. if a klingon speaks klingon,
+	 *     are handled by a special SPU channel id,
+	 *     which dvdnav will choose for you automatic,
+	 *     and if your appropriate language is set
+	 *     as the default language !
+	 *   FIXME ??
+	 *
+
+    - correct pre-parse of SPU to check for forcedDisplay ctrl-seq
+    	- take forceDisplay into account, if outta menu space
+
+    - take care of all SPU channel id's [0x00 .. 0x1F]
+    - take care of all Audio channel id's [0x00 .. 0x1F]
+
+    - all SPU and Audio channels are looked up at VTS_CHANGE,
+      and are therefore available if start a new title !
+
+    - take very good care ;-), of who owns the OSD,
+    	this one is needed to use softdevices, alike vdr-xine !
+	*** be aware that we do need the very little patch
+		patches/vdr-1.3.10_spu_01.diff
+	*** to enable access to 
+		- cSpuDecoder::Hide,Draw,IsVisible
+		- cDvbSpuDecoder::Hide,Draw,IsVisible
+	now you can switch to dvd-osd, vdr-menu and spu,
+	without seg fault, or else with a softdevice ..
+
+    - minimized dvdnav access for title string data ..
+
+    - many stuff learned about SPU control, and channel hopping ;-)
+
+    - please apply the mandatory patches to the regarding vanilla version:
+    	- vdr-1.3.10_spu_01.diff (see above, spu stuff) 
+	- vdr-xine-0.3.4-withSpu_02.diff (add dvbspu to the xineDevice)
+
+
+2004-06-08: 
+    - merge with inofficial fork @ dvdplugin.pimps.at ..:
+	    - fixed some display errors during navigation
+	    - ringbuffer implemented
+	    - fixed buffer overflow in sound handling
+	    - fixed language selection bug in plugin setup
+	    - added 'forced subs only' mode
+	    - added support for vdr >= 1.3.7, and < 1.3.7 !
+
+2004-05-26: Version 0.3.5-b01
+    - ported to vdr 1.3.8, no more support for vdr pre 1.3.8
+    - added DevicePoll timeout > MAX_POLL_TOs -> DeviceClear 
+    	- good for softdevices, like vdr-xine
+    - added some patches for vdr 1.3.8 support ..
+
+2003-11-18: Version 0.3.4-rc11 .. sven at jausoft.com
+    - cleaned up termination (as well as UC: no disc inserted ..)
+    - fixed case where device->GetSTC returns < 0 (dxr3 users)
+
+2003-11-11: Version 0.3.4-rc10 .. sven at jausoft.com
+    - fixed setting correct 16:9 / 4:3 bits in mpeg stream
+    - fixed usage of DeviceClear ..
+    - fixed variable osd position, regarding to video height 
+    - needs vdr >= 1.2.6pre6 - no more extra STC patch !
+
+2003-11-03: Version 0.3.4-rc9 .. sven at jausoft.com
+    - bugfix: error introduced in rc8 are removed 
+      (new threading errors) - menue navi is stable again.
+
+2003-11-02: Version 0.3.4-rc8 .. sven at jausoft.com
+    - bugfix: AudioSwitch had a bad thread deadlock,
+              while using an audio plugin, e.g. bitstreamout.
+	      After switching, audio was no more played.
+
+2003-11-02: Version 0.3.4-rc7 .. sven at jausoft.com
+
+    All Menue's with all sounds within Menue's should work now !
+    Also any missed sync (Audio/Video/SPU) should being fixed !
+
+    - using new sync code, with the new getSTC function
+      therefore _you_have_to_ apply the patch:
+	vdr-1.2.6-device-getSTC-v2.diff
+      if not allready done (-> latest bitstreamout ) !!
+
+    - the new a/v sync code does (simplified):
+          delay_ticks (
+		 (pktptsAudio-pktptsLastAudio)-(stcPTSAudio-stcPTSLastAudio ) )
+	where pktpts is PTS of the stream
+	and   stcPTS is PTS seen by the dvb device !
+        therefore, we do usleep for this diff ticks we should had being passed.
+
+    - cleaned up transition back to case where a DevicePlay/DeviceClear
+      is needed (-> within Empty now )
+
+
+2003-10-22: Version 0.3.4-rc6 .. sven at jausoft.com
+    - added cPlayer default functions as well (AudioTrack..)
+    - BITSTREAM
+	- uses bitstreamout >= 0.48pre3
+
+2003-10-14: Version 0.3.4-rc5 .. sven at jausoft.com
+    - removed workarounds for vdr version < 1.2.6pre2 !
+
+    - BITSTREAM
+	- uses bitstreamout >= 0.47c
+
+    - const int cDvdPlayer::MaxSubpStreams  = 16;
+	- so hopefully 16 subtitles can be detected ..
+    
+
+2003-10-11: Version 0.3.4-rc4 .. sven at jausoft.com
+    - BITSTREAM
+	well, i got it to work well
+	so the tee can be hot - no problem ;-)
+
+	- made a stabilize bitstreamout-0.46g-jau01.patch,
+	  read ths incl. ChangeLog !
+  	  since this patch is not incl. within bitstreamout,
+	  this patch is a MUST HAVE  !
+
+	- understanding how bitstreamout works, 
+ 	  therefore simplifying the usage to a simple PlayAudio ;-)
+	  the only difference to just PlayAudio is that we do not feed the
+	  packet to another decoder ..
+
+	- added an extra DeviceClear() at VTS_CHANGE,
+	  so (especially AudioPlugins) can re-sync ..
+  	  DeviceClear is called at any place it won't disturb ..
+	  (manually switch track, audio, ..)
+
+2003-10-11: Version 0.3.4-rc3 .. sven at jausoft.com
+	- cleaned up Stop, no more hurting your ears on stopping plugin ;-)
+		- still no audio after leaveing the plugin, any ideas ?
+
+    	- cleaned up usage of clearSeenSubpStream(), clearSeenAudioTrack();
+		- they do really clean up the lists,
+		- they are called only if really intended ;-)
+
+	- SPU fix:
+		- cleared highlight button at startup (dvbspu.c)
+		  bug workaround.
+		  cDvbSpuDecoder::clearHighlight should set
+		  hlpsize members to -1 !
+		- fixed issue about:
+			TV 4:3 DVD 16:9 Menu 4:3 -> cSpuDecoder::eSpuPanAndScan
+		  the 16:9 flag is cleared out in this case - propper button pos. !
+
+		- Tested with StarTrek - TheDirectorsCut - widescreeen Edition
+
+	- BITSTREAM
+		- bitstreamout plugin used only if avaiable and active
+		- fixed the usage of PlayAudio -> bitstreamout,  
+		  as seen in dvbplayer.c (StripAudioPackets)
+			- index i was not used within "search" loop ..
+	- BITSTREAM PROBLEM:
+		- using the latest of all ;-)
+		- bitstream out works sometimes, and sometimes not !
+		- in the latter case, i have to restart vdr :-(
+		- the not case:
+			- other recordings running
+			- previous menu struggle arround ..
+			- the tee was a very hot one ;-)
+
+	- Force DvdNavigation (-> or HowTo play DVD games ..)
+		- Key 5  	DvdNavigationForce ON (not if progess display on)
+		- Key Red  	Leave DvdNavigationForce
+		- Assume you have a typical DVD game, so now you can
+		  navigate it - see Keys above (-> README) !
+		- Tested with DVD 
+			Die Monster AG, BonusMaterial.BoosDoorGame, Track #15
+
+2003-10-09: Version 0.3.4-rc2 sven at jausoft.com
+	This is the 2nd release candidate for 0.3.4 !
+
+	- cleaned up SPU usage ..
+	- OSD keeps alive while subtitles -> it hides subtitles
+	- ..
+
+2003-10-09: Version 0.3.3-jau-p9 sven at jausoft.com
+	This is a release candidate for 0.3.4 !
+
+	So please check and report !
+
+	- finish translations ( Lauri Tischler )
+	- "beauty" status progress line (title, chapters, ..)
+	- ReadAHead defaults := 0 (recommended -> no memcpy)
+	- cStatus usage e.g. for lcdproc (Martin Hammerschmid)
+	- control/player GetIndex returns frame values now,
+	  like all vdr players/controllers !
+	  therefore the lcd problem should being fixed ...
+	- fixed slow motion backward
+	- fixed send no more audio packets in slomo-fwd, pause
+
+
+2003-10-07: Version 0.3.3-jau-p8 sven at jausoft.com
+	BugFixes:
+		- DVDActiveAndRunning checks active && running && nav !
+		- All public methods does check DVDActiveAndRunning now,
+		  therefore no seg.faults should happen.
+		- Typos: 'prefered' -> 'Preferred'
+		- 1st Jumper fast backward ..
+		- cleaned up threading .. compared with dvbplayer ..
+		- SPU ...
+
+	- Enhanced fast forward/backward 
+		- incl. half a secound jumps (fwd>3, bwd>3)
+		- slow backward works now with good pics
+		- allows speeds 1-9 now
+
+	- Added subtitle SPU handling alike the audio handling 
+
+	- Enhanced dvd-player's SPU and controller/interface locking/hide
+
+	- Exits in plain mode (no more to recordings dir)
+
+	- integrated patched dvd-bitstreamout-0.3.3.dif
+
+	- changed key usage -> README 
+
+2003-10-06: Version 0.3.3-jau-p7 sven at jausoft.com
+	- BugFixed TrickMode (-> FastBackward, SlowBackward ok with picture)
+		- We have to go as many loops and blocks forward
+		  as long the I_Frame is being sliced ...
+		  Then we jump back IFrameBlocks * factor !
+
+	- Removed notes about a special libdvdnav version ;-)
+
+	- Added ReadAHead setup value (defaults to 1)
+
+
+2003-10-06: Version 0.3.3-jau-p6 sven at jausoft.com
+	- bugfix: lock current audio, if set manually,
+	  so DVDNAV_AUDIO_STREAM_CHANGE won't affect,
+	  as well as the seen audio streams won't be cleaned ...
+
+	  the lock will be released if switching to a menu,
+	  or changing the title !
+
+2003-10-06: Version 0.3.3-jau-p5 sven at jausoft.com
+	- Blue	       Goto title (enter title number)
+		so you can seek manually to a specific title,
+		you might want to look at "hidden" ones ;-)
+
+
+2003-10-06: Version 0.3.3-jau-p4 sven at jausoft.com
+
+	- Add to TitleString: TitleNo/ChapterNo + Angle if avaiable (outta xine ..), AudioType
+	- Add new direct (keyboard/rc) navigation:
+		- audio id
+		- title
+		- chapter
+		- angle
+	  SEE README !
+
+2003-10-02: Version 0.3.3-jau-p3 sven at jausoft.com
+
+	Keyboard (added, changed,fixed):
+		- Left/Right    fast forward/rewind 
+		- Red           Goto position
+		- Green         1 min. backward
+		- Yellow        1 min. forward
+		- 2             skip to next/previous chapter
+		- 5             skip to next/previous chapter
+		- OK		ShowProgress Bar
+	
+		- 6/9		Move the ProgressBar in this mode ..
+
+		.. see README !
+
+	now the behavior is like normal recording-playback,
+	plus the mplayer-feature of moving the menu bar.
+
+	- Impl./Enabled TimeSearch, ShowProgress, Goto, SkipSeconds, SkipFrames - using new:
+		- PTSTicksToHMSm
+		- BlocksToPGCTicks
+		- PGCTicksToBlocks
+		- GetIndex
+		- GetTitleString
+		- GetAspectString
+	- NextPG, PreviousPG
+	- BugFixed TrickMode (-> FastForward ok, any backward ok, but no picture)
+	- REMOVED: #if defined(dvdnav_set_trick_speed)
+	- introduced define CTRLDEBUG to enable DEBUG_CONTROL
+
+2003-09-30: Version 0.3.3-jau-p2 sven at jausoft.com
+    - audio track change to MP2 id's nor works properly
+        - the former audioTrack member, ain'T initialized, but was used 
+	  to determine the asked aid !
+	  this never worked for MP2 aid's C1, C2, ..
+	- now using currentNavAudioTrack = dvdnav_get_active_audio_stream(nav);
+	- introduced define AUDIOIDDEBUG to enable DEBUG_AUDIO_ID
+
+     - disabled all three debug def's as default
+	DVDDEBUG, PTSDEBUG, AUDIOIDDEBUG
+
+2002-05-12: Version 0.0.1
+
+- Initial revision.

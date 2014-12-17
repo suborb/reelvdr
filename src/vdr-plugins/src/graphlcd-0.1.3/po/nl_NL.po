@@ -1,0 +1,134 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2011-09-07 17:57+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "JanFebMarAprMeiJunJulAugSepOktNovDec"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Muziek"
+
+msgid "File"
+msgstr "Bestand"
+
+msgid "Image"
+msgstr "Beeld"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Herhaal"
+
+msgid "no"
+msgstr "nee"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "not in menu"
+msgstr "niet in menu"
+
+msgid "compressed"
+msgstr "gecomprimeerd"
+
+msgid "auto"
+msgstr "auto"
+
+msgid "medium"
+msgstr "media"
+
+msgid "large"
+msgstr "groot"
+
+msgid "never"
+msgstr "nooit"
+
+msgid "once"
+msgstr "éénmalig"
+
+msgid "always"
+msgstr "altijd"
+
+msgid "Show Date/Time"
+msgstr "Toon datum/tijd"
+
+msgid "Show Channel"
+msgstr "Toon zender"
+
+msgid "Show Logo"
+msgstr "Toon logo"
+
+msgid "Show Symbols"
+msgstr "Toon symbolen"
+
+msgid "Show ET Symbols"
+msgstr "Toon ET symbolen"
+
+msgid "Show Program"
+msgstr "Toon programma"
+
+msgid "Show Timebar"
+msgstr "Toon tijdlijn"
+
+msgid "Show Menu"
+msgstr "Toon Menu"
+
+msgid "Show Messages"
+msgstr "Toon berichten"
+
+msgid "Show Volume"
+msgstr "Toon volume"
+
+msgid "Show free Tuner"
+msgstr "Toon vrije tuner"
+
+msgid "Identify replay type"
+msgstr " Identificeer replay type"
+
+msgid "Modify replay string"
+msgstr "Wijzigen replay string"
+
+msgid "Scroll text lines"
+msgstr "Scroll regels tekst"
+
+msgid "Scroll speed"
+msgstr "Scroll snelheid"
+
+msgid "Scroll time interval"
+msgstr "Scroll Interval tijd"
+
+msgid "Brightness on user activity"
+msgstr "Helderheid tijdens gebruikersactiviteit"
+
+msgid "Brightness on user inactivity"
+msgstr "Helderheid bij gebruiker inactiviteit"
+
+msgid "Brightness delay [s]"
+msgstr "Helderheid vertraging [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Toon klok bij gebruiker inactiviteit"
+
+msgid "Unknown title"
+msgstr "Onbekende titel"
+

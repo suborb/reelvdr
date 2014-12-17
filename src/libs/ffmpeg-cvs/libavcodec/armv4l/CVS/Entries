@@ -1,0 +1,9 @@
+/dsputil_arm.c/1.10/Tue Jun 28 22:46:36 2005//
+/dsputil_arm_s.S/1.1/Thu May 26 14:32:46 2005//
+/dsputil_iwmmxt.c/1.2/Tue Jun 28 22:46:36 2005//
+/dsputil_iwmmxt_rnd.h/1.1/Thu May 26 14:32:46 2005//
+/jrevdct_arm.S/1.1/Mon Aug 13 21:38:25 2001//
+/mpegvideo_arm.c/1.9/Thu May 26 14:40:20 2005//
+/mpegvideo_iwmmxt.c/1.2/Tue Jun 28 22:46:36 2005//
+/simple_idct_arm.S/1.1/Mon Jul  7 11:19:18 2003//
+D

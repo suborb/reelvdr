@@ -1,0 +1,12 @@
+#!/bin/sh
+
+xrdb -load $HOME/.Xresources
+xsetroot -solid gray &
+matchbox-window-manager -theme reel &
+if [ -f /usr/lib/firefox/firefox-bin ]; then
+	exec /bin/sh /usr/lib/firefox/run-mozilla.sh /usr/lib/firefox/firefox-bin -height 1600 -width 900 $*
+else
+	exec /bin/sh /usr/lib/firefox-3.*/run-mozilla.sh /usr/lib/firefox-3.*/firefox -height 1600 -width 900 $*
+fi
+
+

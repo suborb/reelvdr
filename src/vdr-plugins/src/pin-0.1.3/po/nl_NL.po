@@ -1,0 +1,187 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-pin 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-11-27 15:04+0100\n"
+"PO-Revision-Date: 2011-09-07 18:07+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Recordings"
+msgstr "Opname's"
+
+msgid "1 Activate childlock"
+msgstr "1 Activeer kinderslot"
+
+msgid "2 Add current channel to protection list"
+msgstr "2 Voeg huidige zender toe aan blokkeer lijst "
+
+msgid "3 Add current broadcast to protection list"
+msgstr "3 Voeg lopende uitzending toe aan blokkeer lijst "
+
+msgid "4 Edit channel locks"
+msgstr "4 Bewerk geblokkeerde kanalen"
+
+msgid "5 Edit broadcast locks"
+msgstr "5 Bewerk geblokkeerde uitzending "
+
+msgid "6 Unlock setup"
+msgstr "6 Ontgrendel setup"
+
+msgid "6 Lock setup"
+msgstr "6 Vergrendel setup"
+
+msgid "Note:"
+msgstr "Opmerking:"
+
+msgid "Please activate Childlock by pressing (1)."
+msgstr "Activeer kinderbeveiliging door (1) te drukken."
+
+msgid "Activated pin protection"
+msgstr "Activeer pin beveiliging"
+
+msgid "Please setup a pin code first!"
+msgstr "Maak eerst een pincode aan!"
+
+msgid "Protected channels"
+msgstr "Beveiligde kanalen"
+
+msgid "Protected broadcasts"
+msgstr "Beveiligde uitzendingen"
+
+msgid "Plugin protections"
+msgstr "Beveiligde plugins"
+
+msgid "locked"
+msgstr "vergrendeld"
+
+msgid "unlocked"
+msgstr "ontgrendeld"
+
+msgid "already in list"
+msgstr "Bestaat al in de lijst"
+
+msgid "added to protection list"
+msgstr "toegevoegd aan de blokkeer lijst"
+
+msgid "No locked channels present."
+msgstr "Geen geblokkeerde kanalen aanwezig."
+
+msgid "Use the green button to lock channels."
+msgstr "Gebruik de groene knop om kanalen te blokkeren."
+
+msgid "No locked broadcasts present."
+msgstr "Geen geblokkeerde uitzendingen aanwezig."
+
+msgid "Use the green button to lock broadcasts."
+msgstr "Gebruik de groene knop om uitzendingen te blokkeren."
+
+msgid "Edit"
+msgstr "Bewerk"
+
+msgid "Lock / Unlock"
+msgstr "Vergrendelen / Ontgrendelen"
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "On/Off"
+msgstr "Aan/Uit"
+
+msgid "- new -"
+msgstr "-Nieuw-"
+
+msgid "Remove entry?"
+msgstr "Verwijder bestand?"
+
+msgid "Lock active"
+msgstr "Vergrendelen actief"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Keyword"
+msgstr "Trefwoord"
+
+msgid "Search mode"
+msgstr "Zoek modus"
+
+msgid "Setup your pin code: "
+msgstr "Maak je pincode: "
+
+msgid "Pin Code: "
+msgstr "Pincode: "
+
+msgid "Pin code successfully setup"
+msgstr "Pincode maken gelukt"
+
+msgid "Code accepted"
+msgstr "Code geaccepteerd"
+
+msgid "Invalid Code !"
+msgstr "Foutieve code !"
+
+msgid "Title$Childlock"
+msgstr "Kinderbeveiliging"
+
+msgid "Please enter pin code first"
+msgstr "Eerst pincode ingeven aub"
+
+msgid "channel is protected"
+msgstr "zender is beveiligd"
+
+msgid "broadcast is protected"
+msgstr "uitzending is beveiligd"
+
+msgid "is protected"
+msgstr "beveiligd"
+
+msgid "Pin code"
+msgstr "Pincode"
+
+msgid "Skip protected channel silent"
+msgstr "Sla beveiligde zender onopgemerkt over"
+
+msgid "Open menu after pin request"
+msgstr "Open menu na pincode aanvraag"
+
+msgid "Pin inactivity time [min]"
+msgstr "Pin tijd inactief [min]"
+
+msgid "Autoprotection of recordings"
+msgstr "Beveilig opnames automatisch"
+
+msgid "Ignoring invalid pin"
+msgstr "Negeer foutieve pin"
+
+msgid "Childlock plugin"
+msgstr "Kinderbeveiliging plugin"
+
+msgid "Parental Control"
+msgstr "Ouderlijk toezicht"
+
+#~ msgid "Add"
+#~ msgstr "Voeg toe"
+
+#~ msgid "7 Unlock setup"
+#~ msgstr "7 Ontgrendel setup"
+
+#~ msgid "7 Lock setup"
+#~ msgstr "7 Vergrendel setup"
+
+#~ msgid "6 Edit plugin locks"
+#~ msgstr "6 Bewerk geblokkeerde plugins"

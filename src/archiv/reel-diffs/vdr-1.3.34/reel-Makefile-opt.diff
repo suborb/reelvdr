@@ -1,0 +1,118 @@
+diff -Nur vdr-1.3.21/libsi/Makefile vdr-1.3.21-reel/libsi/Makefile
+--- vdr-1.3.21/libsi/Makefile	2004-10-16 15:31:50.000000000 +0200
++++ vdr-1.3.21-reel/libsi/Makefile	2005-06-20 22:19:12.000000000 +0200
+@@ -12,6 +12,10 @@
+ RANLIB = ranlib
+
+ -include ../Make.config
++-include ../Make.config.64
++
++### GA
++CXXFLAGS += -O3 -march=pentium-mmx -mmmx -funroll-loops
+
+ ### The directory environment:
+ 
+diff -Nur vdr-1.3.21/Make.config vdr-1.3.21-reel/Make.config
+--- vdr-1.3.21/Make.config	2005-07-10 15:01:35.000000000 +0200
++++ vdr-1.3.21-reel/Make.config	1970-01-01 01:00:00.000000000 +0100
+@@ -0,0 +1,31 @@
++#
++# User defined Makefile options for the Video Disk Recorder
++#
++# Copy this file to 'Make.config' and change the parameters as necessary.
++#
++# See the main source file 'vdr.c' for copyright information and
++# how to reach the author.
++#
++# $Id: Make.config.template 1.4 2005/05/14 10:32:33 kls Exp $
++
++### The C compiler and options:
++
++CC       = ccache gcc
++CFLAGS   = -O2
++
++CXX      = ccache c++
++CXXFLAGS = -O2 -march=pentium-mmx -mmmx -Wall -Woverloaded-virtual -funroll-loops
++
++### The directory environment:
++
++DVBDIR   = ../DVB
++MANDIR   = /usr/local/man
++BINDIR   = /usr/local/bin
++
++PLUGINDIR= ../vdr-plugins
++PLUGINLIBDIR= /usr/share/vdr/PLUGINS/lib
++VIDEODIR = /mnt/hd/video
++
++WITHOUT_MPLAYER=1
++REMOTE=LIRC
++LIRC_DEVICE = /tmp/lircd
+diff -Nur vdr-1.3.21/Makefile vdr-1.3.21-reel/Makefile
+--- vdr-1.3.21/Makefile	2005-07-10 15:00:22.000000000 +0200
++++ vdr-1.3.21-reel/Makefile	2005-07-07 23:40:52.000000000 +0200
+@@ -171,7 +171,8 @@
+ # Plugins:
+
+ plugins: include-dir
+-	@for i in `ls $(PLUGINDIR)/src | grep -v '[^a-z0-9]'`; do $(MAKE) -C "$(PLUGINDIR)/src/$$i" all; done
++	@for i in `ls $(PLUGINDIR)/src | grep -v '[^a-z0-9]'`; do \
++		$(MAKE) -C "$(PLUGINDIR)/src/$$i" all || exit 1; done
+
+ plugins-clean:
+ 	@for i in `ls $(PLUGINDIR)/src | grep -v '[^a-z0-9]'`; do $(MAKE) -C "$(PLUGINDIR)/src/$$i" clean; done
+@@ -192,20 +192,20 @@
+ # Install the files:
+ 
+ install:
+-	@mkdir -p $(BINDIR)
+-	@cp vdr runvdr $(BINDIR)
+-	@mkdir -p $(MANDIR)/man1
+-	@mkdir -p $(MANDIR)/man5
++	install -sp vdr $(BINDIR)
++	@#mkdir -p $(BINDIR)
++	@#cp vdr runvdr $(BINDIR)
++	@#mkdir -p $(MANDIR)/man1
++	@#mkdir -p $(MANDIR)/man5
+ 	@gzip -c vdr.1 > $(MANDIR)/man1/vdr.1.gz
+ 	@gzip -c vdr.5 > $(MANDIR)/man5/vdr.5.gz
+-	@if [ ! -d $(VIDEODIR) ]; then\
+-            mkdir -p $(VIDEODIR);\
+-            cp *.conf $(VIDEODIR);\
+-            fi
++	@#if [ ! -d $(VIDEODIR) ]; then\
++        #    mkdir -p $(VIDEODIR);\
++        #    cp *.conf $(VIDEODIR);\
++        #    fi
+ 
+ plugins-install:
+-	@mkdir -p $(BINDIR)/$(PLUGINLIBDIR)
+-	@cp $(PLUGINLIBDIR)/* $(BINDIR)/$(PLUGINLIBDIR)
++	install -sp $(PLUGINDIR)/lib/* $(PLUGINLIBDIR)
+ 
+ # Source documentation:
+ 
+diff -Nur vdr-1.3.27/thread.c vdr-1.3.27-reel/thread.c
+--- vdr-1.3.27/thread.c 2005-10-03 13:22:43.000000000 +0200
++++ vdr-1.3.27-reel/thread.c    2005-08-21 14:33:46.000000000 +0200
+@@ -291,7 +291,8 @@
+                return;
+             cCondWait::SleepMs(10);
+             }
+-        esyslog("ERROR: thread %ld won't end (waited %d seconds) - canceling it...", childTid, WaitSeconds);
++        esyslog("ERROR: thread %s (%ld) won't end (waited %d seconds) - canceling it...", 
++               description, childTid, WaitSeconds);
+         }
+      pthread_cancel(childTid);
+      childTid = 0;
+diff -Nur vdr-1.3.27/vdr.c vdr-1.3.27-reel/vdr.c
+--- vdr-1.3.27/vdr.c    2005-10-03 13:51:15.000000000 +0200
++++ vdr-1.3.27-reel/vdr.c       2005-09-10 18:09:22.000000000 +0200
+@@ -62,7 +62,7 @@
+ #define ACTIVITYTIMEOUT    60 // seconds before starting housekeeping
+ #define SHUTDOWNWAIT      300 // seconds to wait in user prompt before automatic shutdown
+ #define MANUALSTART       600 // seconds the next timer must be in the future to assume manual start
+-#define CHANNELSAVEDELTA  600 // seconds before saving channels.conf after automatic modifications
++#define CHANNELSAVEDELTA 3600 // seconds before saving channels.conf after automatic modifications
+ #define LASTCAMMENUTIMEOUT  3 // seconds to run the main loop 'fast' after a CAM menu has been closed
+                               // in order to react on a possible new CAM menu as soon as possible
+ #define DEVICEREADYTIMEOUT 30 // seconds to wait until all devices are ready

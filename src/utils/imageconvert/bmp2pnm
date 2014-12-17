@@ -1,0 +1,5 @@
+PATH=$PATH:`dirname $0`
+
+for i in $* ; do 
+	bmptopnm $i  > `echo $i | cut -f2- -d/ |sed s/bmp/pnm/` 
+done

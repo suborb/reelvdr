@@ -1,0 +1,295 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreel3\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-10-21 09:51+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal no vàlid ***"
+
+msgid "mins"
+msgstr "min"
+
+msgid "min"
+msgstr "min"
+
+msgid "en_US"
+msgstr "ca_ES"
+
+msgid "background process"
+msgstr "processos en segon pla"
+
+msgid "Play Disk"
+msgstr "Reprodueix Disc"
+
+msgid "up"
+msgstr ""
+
+msgid "Languages"
+msgstr "Idiomes"
+
+msgid "Image for recording"
+msgstr ""
+
+msgid "Size"
+msgstr "Mida"
+
+msgid "Auxiliary information"
+msgstr "Informació addicional"
+
+msgid "Subtitles"
+msgstr "Subtítols"
+
+msgid "Reel Avantgarde"
+msgstr "ReelBox Avantgarde"
+
+msgid "TrueType Font"
+msgstr "Tipus de lletra TrueType"
+
+msgid "No TTF support!"
+msgstr "No hi ha suport TTF!"
+
+msgid "Default OSD Font"
+msgstr "Tipus de lletra per defecte OSD"
+
+msgid "Default Fixed Size Font"
+msgstr "Mida lletra normal per defecte"
+
+msgid "Default Small Font"
+msgstr "Mida lletra petita per defecte"
+
+msgid "General"
+msgstr "General"
+
+msgid "Logos & Symbols"
+msgstr "Logotips i Símbols"
+
+msgid "Fonts"
+msgstr "Tipus de lletra"
+
+msgid "Changes done"
+msgstr "S'han desat els canvis"
+
+msgid "elapsed"
+msgstr "transcorregut"
+
+msgid "remaining"
+msgstr "restant"
+
+msgid "percent"
+msgstr "percentatge"
+
+msgid "never"
+msgstr "mai"
+
+msgid "use size.vdr only"
+msgstr "només utilitza size.vdr"
+
+msgid "always"
+msgstr "sempre"
+
+msgid "Last line"
+msgstr "Darrera línia"
+
+msgid "Help buttons"
+msgstr "Botons d'ajuda"
+
+msgid "Free last line"
+msgstr "Darrera línia lliure"
+
+msgid "simple"
+msgstr "simple"
+
+msgid "graphical"
+msgstr "gràfic"
+
+msgid "graphical small"
+msgstr "petit gràfic"
+
+msgid "Show auxiliary information"
+msgstr "Mostra informació addicional"
+
+msgid "top"
+msgstr "a dalt"
+
+msgid "bottom"
+msgstr "a baix"
+
+msgid "Show recording's size"
+msgstr "Mostra la mida de la gravació"
+
+msgid "Show remaining/elapsed time"
+msgstr "Mostra temps restant/transcorregut"
+
+msgid "Show VPS"
+msgstr "Mostra VPS"
+
+msgid "Show source in the channelinfo"
+msgstr "Mostra les fonts a la informació de canal"
+
+msgid "Progressbar type"
+msgstr "Tipus de barra de progrés"
+
+msgid "Show channel logos"
+msgstr "Mostra els logotips dels canals"
+
+msgid "Flushing channel logo cache..."
+msgstr "S'està buidant la memòria cau de logotips..."
+
+msgid "Show symbols"
+msgstr "Mostra símbols"
+
+msgid "  Show symbols in replay"
+msgstr "  Mostra símbols durant la reproducció"
+
+msgid "  Show symbols in messages"
+msgstr "  Mostra símbols als missatges"
+
+msgid "  Show symbols in audio"
+msgstr "  Mosta símbols als fitxers d'àudio"
+
+msgid "Show symbols in lists"
+msgstr "Mostra símbols a les llistes"
+
+msgid "Show marker in lists"
+msgstr "Mostra marcadors a les llistes"
+
+msgid "Show status symbols"
+msgstr "Mostra símbols d'estat"
+
+msgid "  Identify channel by"
+msgstr "  Identifica el canal per"
+
+msgid "name"
+msgstr "nom"
+
+msgid "data"
+msgstr "data"
+
+msgid "Channel logo cache size"
+msgstr "Mida de la memòria cau de logotips"
+
+msgid "Button$Flush cache"
+msgstr "Buida memòria cau"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Width"
+msgstr "Amplada"
+
+msgid "No TrueType fonts installed!"
+msgstr "No s'han instal·lat tipus de lletra TrueType!"
+
+msgid "Font Sizes"
+msgstr "Mida de la lletra"
+
+msgid "Fixed Font"
+msgstr "Tipus de lletra normal"
+
+msgid "Button$Set"
+msgstr "Fixa"
+
+msgid "OSD title"
+msgstr "Títol OSD"
+
+msgid "Messages"
+msgstr "Missatges"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Help keys"
+msgstr "Tecles d'ajuda"
+
+msgid "Channelinfo: title"
+msgstr "Informació de canal: títol"
+
+msgid "Channelinfo: subtitle"
+msgstr "Informació de canal: subtítol"
+
+msgid "Channelinfo: language"
+msgstr "Informació de canal: idioma"
+
+msgid "List items"
+msgstr "Llista els ítems"
+
+msgid "Info area: timers title"
+msgstr "Àrea d'informació: títol de la gravació"
+
+msgid "Info area: timers text"
+msgstr "Àrea d'informació: text de la gravació"
+
+msgid "Info area: warning title"
+msgstr "Àrea d'informació: títol d'alerta"
+
+msgid "Info area: warning text"
+msgstr "Àrea d'informació: text d'alerta"
+
+msgid "Details: title"
+msgstr "Detalls: títol"
+
+msgid "Details: subtitle"
+msgstr "Detalls: subtítol"
+
+msgid "Details: date"
+msgstr "Detalls: data"
+
+msgid "Details: text"
+msgstr "Detalls: text"
+
+msgid "Replay: times"
+msgstr "Reproducció: vegades"
+
+msgid "ReelBox skin 3rd generation"
+msgstr "Aparença de la Reelbox - 3a. gen"
+
+msgid "Channel:"
+msgstr "Canal:"
+
+msgid "Search pattern:"
+msgstr "Cerca patró:"
+
+msgid "Timer check"
+msgstr "Comprova gravació programada"
+
+msgid "No timer check"
+msgstr "No comprovis la gravació programada"
+
+#~ msgid "Try 8bpp single area"
+#~ msgstr "Prova una àrea de 8bpp"
+
+#~ msgid "Show messages in menu on"
+#~ msgstr "Mostra missatges al menú actiu"
+
+#~ msgid "Sunday"
+#~ msgstr "Diumenge"
+
+#~ msgid "Monday"
+#~ msgstr "Dilluns"
+
+#~ msgid "Tuesday"
+#~ msgstr "Dimarts"
+
+#~ msgid "Wednesday"
+#~ msgstr "Dimecres"
+
+#~ msgid "Thursday"
+#~ msgstr "Dijous"
+
+#~ msgid "Friday"
+#~ msgstr "Divendres"
+
+#~ msgid "Saturday"
+#~ msgstr "Dissabte"

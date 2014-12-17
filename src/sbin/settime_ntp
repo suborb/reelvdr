@@ -1,0 +1,109 @@
+#!/bin/sh
+#
+# Nettime Script for Reelbox Avantgarde
+#
+# Version 0.9
+# Date 02.12.2008
+#
+# 2008-12-02: Initial Version by RollerCoaster
+#
+
+PATH="/sbin:/bin/:/usr/bin"
+
+
+SYSCONFIG="/etc/default/sysconfig"
+. $SYSCONFIG
+
+. /etc/default/globals
+
+#set -x
+
+#
+# Variables
+#
+# TODO: make this language/country dependent
+SERVER_POOL="de.pool.ntp.org"
+CRONTAB=/etc/crontab
+
+#
+# Functions
+#
+syntax () {
+cat << EOF
+Usage: `basename $0` [ on | off | check ]
+Options:
+     [ on | off | check ]
+     no option: set system time once
+
+Description:
+     Adds an entry to crontab to set system time by ntp every hour
+EOF
+}
+
+
+ENTRY='55 *  * * *  root   /usr/sbin/ntpdate'" $SERVER_POOL "'>> /var/log/ntpset.log 2>&1 && hwclock -w'
+
+
+TurnOn () {
+	Syslog "Adding ntp-entry to crontab."
+	echo "$ENTRY" >> $CRONTAB
+}
+
+TurnOff () {
+	Syslog "Removing ntp-entry from crontab."
+	sed -i /ntpdate/d /etc/crontab
+}
+
+
+CheckCrontab () {
+	if grep -q ntpdate $CRONTAB ; then
+		return `true`
+	else
+		return `false`
+	fi
+}
+
+OPTION=$1
+
+case $OPTION in
+	on)
+		if CheckCrontab ; then
+			Syslog "ntpdate already set in $CRONTAB. Nothing to do."
+			return 1
+		else
+			TurnOn
+		fi
+		;;
+	off)
+		if CheckCrontab ; then
+			TurnOff
+		else
+			Syslog "ntpdate NOT set in $CRONTAB. Nothing to do."
+			return 1
+		fi
+		;;
+	check)
+		if CheckCrontab ; then
+			echo "ntptime is ENABLED in crontab. Entry is:"
+			grep ntpdate $CRONTAB
+		else
+			echo "ntpdate DISABLED in crontab."
+		fi
+		;;
+	"")
+		echo "Setting time by NTP..."
+		/usr/sbin/ntpdate $SERVER_POOL
+		echo "Setting hardware clock..."
+		hwclock -w
+		;;
+	-h)
+		syntax
+		exit 0
+		;;
+	*)
+		echo "Unknown option $SOPTION."
+		syntax
+		exit 2
+		;;
+esac
+

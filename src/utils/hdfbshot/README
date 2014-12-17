@@ -1,0 +1,14 @@
+fbshot is a simple utility to grab images of the framebuffer, than 
+it saves them to a .png file. actually it supports 8,15,16,24 and 32-bit
+depth's. it can grab any size of the screen.
+
+actualy i'm working at 16-bit planar VGA support.
+this utility was writen on the x86 hardware, ad so it supports typical pc 
+cards, if you are using any other hw, and succseed or not in using this 
+tool than please e-mail me
+
+as soon as i get my hands on any different hw i'm going to make suitable 
+changes
+
+sfires@sfires.net
+

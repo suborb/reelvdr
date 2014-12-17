@@ -1,0 +1,24 @@
+#!/bin/bash
+# AntenneBayern-Playlist
+# $1 = outfile
+
+### Variabel
+Name="Antenne Bayern [www.antenne.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.antenne.de/antenne/mediathek/c_titelinfos/aby-big.php"
+
+# Artist/Title
+all=`tail -n 6 /tmp/playlist | tac`
+artist=${all/*$';">'/}; artist=${artist/$'<br>'*/}
+title=${all/*$'<br>'/}; title=${title/$'<'\/'div>'*/}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

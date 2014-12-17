@@ -1,0 +1,135 @@
+# VDR plugin language source file.
+# Copyright (C) 2010 Reel Multimedia GmbH
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2008-10-02 10:45+0100\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Internet Radio"
+msgstr "Internetradio"
+
+msgid "My Radio Stations"
+msgstr "Meine Radiosender"
+
+msgid "Getting playlist for Genre: "
+msgstr "Playliste für Genre: "
+
+msgid "Internet Radio - Add New Server"
+msgstr "Internetradio - Neuen Server hinzufügen"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Internetradio - Editiere Sender"
+
+msgid "New Station"
+msgstr "Neuer Sender"
+
+msgid "Station Name"
+msgstr "Sendername"
+
+msgid "Station Url"
+msgstr "Sender-URL"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "No URL entered!"
+msgstr "Keine gültige URL angegeben"
+
+msgid "Saved"
+msgstr "Gespeichert"
+
+msgid "Could not be saved!"
+msgstr "Eintrag wurde nicht gespeichert!"
+
+msgid "Already present"
+msgstr "Bereits vorhanden"
+
+msgid "Couldnot save changes"
+msgstr "Konnte Änderungen nicht speichern"
+
+msgid "Check URL: could not open radio-station"
+msgstr "Konnte Verbindung nicht herstellen - bitte URL überprüfen."
+
+msgid "Please wait: opening radio-station"
+msgstr "Verbinde mit Radiosender..."
+
+msgid "Internet Radio Functions"
+msgstr "Internetradio Funktionen"
+
+msgid "1  Add New Radio Station"
+msgstr "1  Neuen Radiosender hinzufügen"
+
+msgid "2  Edit current Radio Station"
+msgstr "2  Bearbeite aktuellen Radiosender"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3  Lösche aktuellen Radiosender"
+
+msgid "Selected Radio Station:"
+msgstr "Aktueller Radiosender:"
+
+msgid "Could not save to disk"
+msgstr "Abspeichern nicht möglich"
+
+msgid "Deletion failed"
+msgstr "Löschen fehlgeschlagen"
+
+msgid "Internet Radio: My Stations"
+msgstr "Internetradio: Meine Sender"
+
+msgid "Button$Functions"
+msgstr "Funktionen"
+
+msgid "No Radio Stations found."
+msgstr "Keine Radiosender vorhanden."
+
+msgid "Info:"
+msgstr "Hinweis:"
+
+msgid "Please use 'Function' to add a station."
+msgstr "Wählen Sie 'Funktionen', um einen neuen Sender hinzuzufügen."
+
+msgid "Your SHOUTcast is active."
+msgstr "SHOUTcast ist eingerichtet."
+
+msgid "Your SHOUTcast DevID is"
+msgstr "Ihre SHOUTcast DevID ist"
+
+msgid "Reset DevID"
+msgstr "DevID ändern"
+
+msgid "Welcome to Internetradio setup"
+msgstr "Willkommen zum Internetradio-Setup"
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr "Zur Nutzung des Internetradiodienstes von SHOUTcast wird seit der Umstellung auf die neue Schnittstelle (API 2.0) ein Zugangsschlüssel benötigt. "
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr "Dieser DevID genannte Schlüssel kann auf der Website des AOL Developer Network http://dev.aol.com/keys beantragt werden."
+
+msgid "Enter DevID"
+msgstr "DevID eingeben"
+
+msgid "Show this page again"
+msgstr "Diese Seite erneut anzeigen"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr "DevID ist zur kurz, diese muss mindestens 16 Zeichen enthalten"
+
+msgid "Internet Radio Setup"
+msgstr "Internetradio Setup"
+
+msgid "Radio station added to favorites"
+msgstr "Sender zu den Favoriten hinzugefügt"

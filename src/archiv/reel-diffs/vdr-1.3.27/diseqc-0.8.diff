@@ -1,0 +1,1138 @@
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/config.c vdr-rdevel/config.c
+--- vdr-1.3.25/config.c	2005-02-20 13:52:59.000000000 +0100
++++ vdr-rdevel/config.c	2005-07-11 18:01:44.069728248 +0200
+@@ -257,6 +257,7 @@
+   LnbFrequLo =  9750;
+   LnbFrequHi = 10600;
+   DiSEqC = 0;
++  LnbNumbers = 0;
+   SetSystemTime = 0;
+   TimeSource = 0;
+   TimeTransponder = 0;
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/config.h vdr-rdevel/config.h
+--- vdr-1.3.25/config.h	2005-05-14 11:18:08.000000000 +0200
++++ vdr-rdevel/config.h	2005-07-11 18:01:44.070728096 +0200
+@@ -218,6 +218,7 @@
+   int LnbFrequLo;
+   int LnbFrequHi;
+   int DiSEqC;
++  int LnbNumbers;
+   int SetSystemTime;
+   int TimeSource;
+   int TimeTransponder;
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/diseqc.c vdr-rdevel/diseqc.c
+--- vdr-1.3.25/diseqc.c	2005-01-09 14:05:11.000000000 +0100
++++ vdr-rdevel/diseqc.c	2005-07-11 21:23:11.698129416 +0200
+@@ -7,15 +7,18 @@
+  * $Id: diseqc.c 1.4 2005/01/09 13:05:11 kls Exp $
+  */
+ 
+-#include "diseqc.h"
+ #include <ctype.h>
++#include "tools.h"
++#include "diseqc.h"
+ #include "sources.h"
+ #include "thread.h"
++#include "config.h"
+ 
+ // -- cDiseqc ----------------------------------------------------------------
+ 
+ cDiseqc::cDiseqc(void)
+ {
++  satName  = NULL; 
+   commands = NULL;
+   parsing = false;
+   numCodes = 0;
+@@ -21,20 +24,36 @@
+   numCodes = 0;
+ }
+ 
++
++
+ cDiseqc::~cDiseqc()
+ {
+-  free(commands);
++  free(satName);
+ }
+ 
++cDiseqc &cDiseqc::operator=(const cDiseqc &diseqc)
++{
++  source = diseqc.source; 
++  satName =  strcpyrealloc(satName,diseqc.satName);
++  polarization = diseqc.polarization;
++  commands =  strcpyrealloc(commands,diseqc.commands);
++  numCodes = diseqc.numCodes;
++  
++  slof = diseqc.slof;
++  lof = diseqc.lof;
++  lnbID = diseqc.lnbID; 
++  return *this;  
++}
++
++
+ bool cDiseqc::Parse(const char *s)
+ {
+   bool result = false;
+-  char *sourcebuf = NULL;
+-  int fields = sscanf(s, "%a[^ ] %d %c %d %a[^\n]", &sourcebuf, &slof, &polarization, &lof, &commands);
++  int fields = sscanf(s, "%a[^ ] %d %c %d %a[^\n]", &satName, &slof, &polarization, &lof, &commands);
+   if (fields == 4)
+      commands = NULL; //XXX Apparently sscanf() doesn't work correctly if the last %a argument results in an empty string
+   if (4 <= fields && fields <= 5) {
+-     source = cSource::FromString(sourcebuf);
++     source = cSource::FromString(satName);
+      if (Sources.Get(source)) {
+         polarization = toupper(polarization);
+         if (polarization == 'V' || polarization == 'H' || polarization == 'L' || polarization == 'R') {
+@@ -49,9 +68,9 @@
+            esyslog("ERROR: unknown polarization '%c'", polarization);
+         }
+      else
+-        esyslog("ERROR: unknown source '%s'", sourcebuf);
++        esyslog("ERROR: unknown source '%s'", satName);
+      }
+-  free(sourcebuf);
++
+   return result;
+ }
+ 
+@@ -122,6 +141,131 @@
+   return daNone;
+ }
+ 
++void cDiseqc::NewDiseqc(const char *Sat, int *Source, int Type, int P, int ID, int Line)
++{
++      satName = NULL; 	
++	
++      int of[2][2] = { { 11700,  9750 },
++		  	     { 99999, 10600 }}; 
++		
++	line = Line; 
++	type = Type;
++	source  = *Source; 
++	asprintf(&satName,"%s",Sat);
++	
++	if ((Line+1)%2){
++		  lof = of[0][0];
++		 slof = of[0][1]; 
++	}
++      else  {
++		  lof = of[1][0];
++		 slof = of[1][1];
++	}
++	  
++	SetCommands(Type, satName, slof, P, lof, ID,  Line);
++}
++
++
++
++cString cDiseqc::ToText(const cDiseqc *Diseqc)
++{
++/* Syntax: 	 single LNB  		| mini | all    	  	full 		          mini 		  mini 	 
++ *   | S19.2E  | 11700 |  V  | 9750 |   t  |   v  | W15  | [E0 10 38 F0] | W15  |   A   |  W15  | t
++ *   | SatCode | SLOF  | POL | LOF  | tone | volt | Wait |  diseqc code  | Wait | MinAB |  Wait | tone 
++ *   |
++ * 1.|   --    |  low  |  V  |  low |  x   |  13  |  x   | [E0 10 38 x ]  | x    |   x   | t     
++ * 2.|   --    |   hi  |  V  |  hi  |  x   |  13  |  x   | [E0 10 38 x+1] | x    |   x   | T    
++ * 3.|   --    |  low  |  H  |  low |  x   |  18  |  x   | [E0 10 38 x+2] | x    |   x   | t    
++ * 3.|   --    |   hi  |  H  |  hi  |  x   |  18  |  x   | [E0 10 38 x+3] | x    |   x   | T    
++ */
++
++ char *s, fullString[60] ;
++ 
++ 	s = fullString; 
++	 
++ 	s += sprintf(s,"%s  %5d ", Diseqc->satName,Diseqc->slof);  
++	s += sprintf(s,"%c  %5d ", Diseqc->polarization,Diseqc->lof);  
++	s += sprintf(s,"%s",Diseqc->commands);	
++	s += sprintf(s,"\n");
++ *s = 0; 
++
++
++ return cString(fullString,false);  
++}
++
++void cDiseqc::SetID(int LnbID)
++{
++	lnbID = static_cast<ID> (A +LnbID); 
++	Diseqcs.SetModified(true);
++}
++
++//--- ::SetCommands setting new DiSEqC (1.x) commands for old diseqc ojects 
++void cDiseqc::SetCommands(int Type, char *SatName, int slof, int P, int lof, int ID, int Line){
++
++	SetID(ID); 
++	char pol = P? 'H': 'V';   
++	char ab =(ID+1)%2? 'A' : 'B';   
++      char *buffer = NULL; 	
++
++	if(Type == FFAST){
++		  asprintf(&buffer,"%s %5d %c %5d [E0 10 38 F%X]", SatName, slof, pol, lof,Line);
++	}
++      else {
++		asprintf(&buffer,"%s %5d %c %5d t %c W15", SatName, slof, pol, lof, P?'V':'v');
++		
++		if(Type == FULL) asprintf(&buffer,"%s [E0 10 38 F%X] W15",buffer,line);
++		
++		asprintf(&buffer,"%s %c W15 %c",buffer, ab, Line%2?'T':'t');
++	 }	
++		  
++	Parse(buffer);
++}
++
++//--- ::SetCommands setting new DiSEqC (1.x) commands for new  diseqc ojects 
++void cDiseqc::SetCommands(int Type, char *SatName, int P, int ID, int Line){
++
++	SetID(ID); 
++	char pol = P? 'H': 'V';  
++      char *buffer = NULL; 	
++
++	char ab =(ID+1)%2? 'A' : 'B';   
++	
++	if ((Line+1) % 2){
++		 lof =   9750; 
++		 slof = 11700;
++	}
++      else  {
++		 lof =  10600;
++		 slof = 99999;
++	}
++	if(Type == FFAST){
++		  asprintf(&buffer,"%s %5d %c %5d [E0 10 38 F%X]", SatName, slof, pol, lof,Line);
++	}
++      else {
++		asprintf(&buffer,"%s %5d %c %5d t %c W15", SatName, slof, pol, lof, P?'V':'v');
++		if(Type == FULL)
++		   asprintf(&buffer,"%s [E0 10 38 F%X] W15",buffer,Line);
++		asprintf(&buffer,"%s %c W15 %c",buffer, ab, Line%2?'T':'t');
++	 }	
++
++	Parse(buffer);
++}
++
++cString cDiseqc::ToText(void)
++{
++	    return ToText(this);
++}
++
++
++
++bool cDiseqc::Save(FILE *f)
++{
++   return fprintf(f, "%s", *ToText()) > 0;
++
++}
++
++
++
+ // -- cDiseqcs ---------------------------------------------------------------
+ 
+ cDiseqcs Diseqcs;
+@@ -134,3 +278,98 @@
+       }
+   return NULL;
+ }
++
++bool cDiseqcs::Load(const char *FileName, bool AllowComments, bool MustExist)
++{
++  if (cConfig<cDiseqc>::Load(FileName, AllowComments, MustExist)) {
++    ReNumber(); 
++	return true;
++	}
++  return false;
++}
++
++
++void cDiseqcs::ReNumber(void)
++{
++ int id = 0, line = 0; 
++ for(cDiseqc *diseqc = First(); diseqc; diseqc = Next(diseqc)){
++	   
++    diseqc->SetLine(line); 
++    diseqc->SetID(id); 
++    if (!((line+1)%4)) id++;  // 4 Lines == 1 LNB
++
++    line++; 
++ }
++}
++
++
++cDiseqc *cDiseqcs::Get(const char *SatName)
++{
++  for (cDiseqc *p = First(); p; p = Next(p)) {
++	  if (!(strcmp(p->SatName(),SatName)));
++        return p;
++      }
++  return NULL;
++}
++
++
++cDiseqc *cDiseqcs::Get(int Line)
++{
++  for (cDiseqc *p = First(); p; p = Next(p)) {
++	  if (p->Line() ==  Line);
++        return p;
++      }
++  return NULL;
++}
++
++
++void cDiseqcs::SetOszilatorFrequenzies(int LofStat)
++{
++	if (LofStat == 0){
++		::Setup.LnbFrequHi = 10600;
++		::Setup.LnbFrequLo = 9750;
++	}
++	else {
++		::Setup.LnbFrequHi = 11250;
++		::Setup.LnbFrequLo = 10750;
++	}
++}
++
++void cDiseqcs::SetModified(bool ByUser)
++{
++	modified = ByUser ? DISEQCMOD_USER : !modified ? DISEQCMOD_FILE : modified;
++}
++
++
++int cDiseqcs::Modified(void)
++{
++	  int Result = modified;
++	  modified = DISEQCSMOD_NONE;
++	  return Result;
++}
++
++bool cDiseqcs::IsUnique(int *Src, int Lnbs)
++{
++  for(int i = 0; i<Lnbs*4; i+=4){
++    int k = i+4;
++    while (k < Lnbs*4){
++	if( Src[i] == Src[k]){
++	  return false; 
++	}
++	k+=4;
++    }
++ }
++  return true; 
++}
++
++bool cDiseqcs::ConfigLocked (void)
++{
++	 
++   bool ret = true;
++   if (FileWriteble(FileName())){ // returns true if writable
++	ret = false;
++   } 
++   fprintf(stderr,"cDiseqcs::ConfigLocked? %s\n",ret?"locked":"writable"); 
++  return ret; 
++
++}
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/diseqc.h vdr-rdevel/diseqc.h
+--- vdr-1.3.25/diseqc.h	2002-12-07 14:54:02.000000000 +0100
++++ vdr-rdevel/diseqc.h	2005-07-11 20:27:08.716380352 +0200
+@@ -10,9 +10,24 @@
+ #ifndef __DISEQC_H
+ #define __DISEQC_H
+ 
++#define  MINI  1
++#define  FULL  2 
++#define  FFAST 3
++
++#define DISEQCMOD_NONE 0
++#define DISEQCMOD_FILE 1
++#define DISEQCMOD_USER 2
++
++#define DISEQCSMOD_NONE 0
++
++#define MINLNBS 1
++#define MAXLNBS 4
++
+ #include "config.h"
+ 
++
+ class cDiseqc : public cListObject {
++  friend class cMenuSetupLNB;
+ public:
+   enum eDiseqcActions {
+     daNone,
+@@ -26,19 +38,30 @@
+     };
+   enum { MaxDiseqcCodes = 6 };
+ private:
++  static cString ToText(const cDiseqc *Diseqc);  
++  enum ID {A=65, B, C, D, E, F, G, H} lnbID;  
++  int line; 
++  int type;   
++  char *satName;
+   int source;
+   int slof;
+-  char polarization;
+   int lof;
++  char polarization;
+   char *commands;
+   bool parsing;
++  cString ToText(const cDiseqc diseqc);
+   uchar codes[MaxDiseqcCodes];
+   int numCodes;
+   char *Wait(char *s);
+   char *Codes(char *s);
+ public:
+   cDiseqc(void);
++  cDiseqc(const cDiseqc &diseqc);
+   ~cDiseqc();
++  cDiseqc &operator=(const cDiseqc &diseqc);
++  void NewDiseqc(const char *satName, int *source,int type, int pol, int id, int line);
++  cString ToText(void);
++  bool Save(FILE *f);
+   bool Parse(const char *s);
+   eDiseqcActions Execute(char **CurrentAction);
+       // Parses the DiSEqC commands and returns the appropriate action code
+@@ -48,6 +71,11 @@
+       // it. Call Execute() repeatedly (always providing the same CurrentAction pointer)
+       // until it returns daNone. After a successful execution of all commands
+       // *CurrentAction points to the value 0x00.
++  char *SatName(void) const { return satName; } 
++  int NumCodes(void) const { return numCodes; } 
++  int Line(void) const { return line; }; 
++  int Type(void) const { return type;   };     
++  int LnbID(void) const { return lnbID; } 
+   int Source(void) const { return source; }
+   int Slof(void) const { return slof; }
+   char Polarization(void) const { return polarization; }
+@@ -53,12 +81,34 @@
+   char Polarization(void) const { return polarization; }
+   int Lof(void) const { return lof; }
+   const char *Commands(void) const { return commands; }
++
+   uchar *Codes(int &NumCodes) { NumCodes = numCodes; return numCodes ? codes : NULL; }
++  void SetID(int lnbID); 
++  void SetLine(int Line)  { line = Line; };
++  void SetCommands(int type, char *satName, int slof, int pol, int lof, int id, int line);
++  void SetCommands(int type, char *satName, int pol, int id, int line);
+   };
+ 
++
++// --- cDiseqcs ----------------------------------------------- 
+ class cDiseqcs : public cConfig<cDiseqc> {
++
++  int lines; // total numbers of lines 
++  int modified; 
++
+ public:
++	
++  bool Load(const char *FileName, bool AllowComments = false, bool MustExist = false);
++  void ReNumber(void);  
+   cDiseqc *Get(int Source, int Frequency, char Polarization);
++  cDiseqc *Get(const char *satName); 
++  cDiseqc *Get(int line);
++  cDiseqc *Get(void);  
++  int Modified(void);
++  void SetModified(bool);
++  bool IsUnique(int *src, int lnbs);
++  bool cDiseqcs::ConfigLocked(void);
++  static void  SetOszilatorFrequenzies(int LofStat); 
+   };
+ 
+ extern cDiseqcs Diseqcs;
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/i18n.c vdr-rdevel/i18n.c
+--- vdr-1.3.25/i18n.c	2005-05-15 16:37:59.000000000 +0200
++++ vdr-rdevel/i18n.c	2005-07-11 18:01:44.083726120 +0200
+@@ -3472,6 +3472,342 @@
+     "DiSEqC kasutamine",
+     "Anvend DiSEqC",
+   },
++  { "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++    "DiSEqC / LNB",
++  },
++  { "DiSEqC Type",
++    "DiSEqC Typ",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++  },
++  { "None / Single LNB",
++    "Kein / einfach LNB",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++  },
++  { "LNB Type",
++    "LNB Typ",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++  },
++  { "Number of LNBs",
++    "Anzahl der LNBs",
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++    "", 
++  },
++  { "Overwrite DiSEqC.conf?",
++    "DiSEqC Conf. Überschreiben?,"
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++  },
++  { "Sat positions must be unique!",
++    "Keine doppelten Sat Positionen!",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++  },
++  { "Use GotoX",
++    "GotoX benutzen",
++    "",
++    "",
++    "GotoX gebruiken",
++    "",
++    "Utiliser Aller à X",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "¸áßÞÛì×ÞÒÐâì GotoX",
++    "",
++    "",
++    "",
++  },
++  { "Longitude",
++    "Längengrad",
++    "",
++    "",
++    "Lengtegraad",
++    "",
++    "Longitude",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "´ÞÛÓÞâÐ",
++    "",
++    "",
++    "",
++  },
++  { "East or West",
++    "Ost oder West",
++    "",
++    "",
++    "Oost of West",
++    "",
++    "Est ou Ouest",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "²ÞáâÞÚ ØÛØ ×ÐßÐÔ",
++    "",
++    "",
++    "",
++  },
++  { "East",
++    "Ost",
++    "",
++    "",
++    "Oost",
++    "",
++    "Est",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "ÒÞáâÞÚ",
++    "",
++    "",
++    "",
++  },
++  { "West",
++    "West",
++    "",
++    "",
++    "West",
++    "",
++    "Ouest",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "×ÐßÐÔ",
++    "",
++    "",
++    "",
++  },
++  { "Latitude",
++    "Breitengrad",
++    "",
++    "",
++    "Breedtegraad",
++    "",
++    "Latitude",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "ÈØàÞâÐ",
++    "",
++    "",
++    "",
++  },
++  { "South or North",
++    "Süd oder Nord",
++    "",
++    "",
++    "Zuid of Noord",
++    "",
++    "Sud ou Nord",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "ÎÓ ØÛØ áÕÒÕà",
++    "",
++    "",
++    "",
++  },
++  { "South",
++    "Süd",
++    "",
++    "",
++    "Zuid",
++    "",
++    "Sud",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "îÓ",
++    "",
++    "",
++    "",
++  },
++  { "North",
++    "Nord",
++    "",
++    "",
++    "Noord",
++    "",
++    "Nord",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "áÕÒÕà",
++    "",
++    "",
++    "",
++  },
+   { "Setup.CICAM$CICAM DVB",
+     "CICAM DVB",
+     "CICAM DVB",
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/menu.c vdr-rdevel/menu.c
+--- vdr-1.3.25/menu.c	2005-05-16 15:59:03.000000000 +0200
++++ vdr-rdevel/menu.c	2005-07-11 21:22:56.396455624 +0200
+@@ -29,6 +29,7 @@
+ #include "timers.h"
+ #include "transfer.h"
+ #include "videodir.h"
++#include "diseqc.h"
+ 
+ #define MENUTIMEOUT     120 // seconds
+ #define MAXWAIT4EPGINFO   3 // seconds
+@@ -2081,6 +2087,24 @@
+ class cMenuSetupLNB : public cMenuSetupBase {
+ private:
+   void Setup(void);
++  
++  bool locked; 
++  cSource *source; 
++  cDiseqc *diseqc;
++  int tmpSource[MAXLNBS*4];  
++
++  int lofStat;  
++  const char *useDiSEqcTexts[4];
++  const char *lofTexts[5];
++  bool diseqcConfRead;
++  int diseqObjNumber;
++  int lnbNumber;
++  int oldlnbNumber;
++  int oldDiSEqC;
++  int oldLofStat; 
++  int currentchannel; 
++	
++
+ public:
+   cMenuSetupLNB(void);
+   virtual eOSState ProcessKey(eKeys Key);
+@@ -2088,7 +2112,31 @@
+ 
+ cMenuSetupLNB::cMenuSetupLNB(void)
+ {
+-  SetSection(tr("LNB"));
++
++   lofStat = 0; 
++   diseqcConfRead = false;
++   int initSource[] = {35008, 34946, 35031, 35098}; 
++	  
++   diseqc = 0; 
++   diseqObjNumber = 0; 
++   for(diseqc = Diseqcs.First(); diseqc; diseqc = Diseqcs.Next(diseqc)){
++	tmpSource[diseqObjNumber] = diseqc->Source(); 
++	diseqObjNumber++;
++   }
++	  
++   for (int i = diseqObjNumber; i < MAXLNBS*4; i+=4){
++	tmpSource[i] = initSource[ (int)(i/4)];
++   }
++	   
++   ::Setup.LnbNumbers = lnbNumber = diseqObjNumber/4; 
++   oldlnbNumber = ::Setup.LnbNumbers;
++   oldDiSEqC = ::Setup.DiSEqC; 
++   oldLofStat = ::Setup.LnbFrequHi == 10600 ? 0 : 1; 
++   currentchannel = cDevice::CurrentChannel();
++	if (currentchannel > 100) 
++	   currentchannel = 1 ; 
++         	
++  SetSection(tr("DiSEqC / LNB"));
+   Setup();
+ }
+ 
+@@ -2096,14 +2144,65 @@
+ {
+   int current = Current();
+ 
++	useDiSEqcTexts [0] = tr("None / Single LNB");
++	useDiSEqcTexts [1] = "mini DiSEqC";
++	useDiSEqcTexts [2] = "Full DiSEqC";
++	useDiSEqcTexts [3] = "Optim. DiSEqC";
++	
++	lofTexts [0] = "10.6/9.75 GHz EURO Univ. LNB";
++	lofTexts [1] = "11.25/10.75 GHz N. America Univ. LNB";
++
++
+   Clear();
+ 
+-  Add(new cMenuEditBoolItem(tr("Setup.LNB$Use DiSEqC"),               &data.DiSEqC));
+-  if (!data.DiSEqC) {
+-     Add(new cMenuEditIntItem( tr("Setup.LNB$SLOF (MHz)"),               &data.LnbSLOF));
+-     Add(new cMenuEditIntItem( tr("Setup.LNB$Low LNB frequency (MHz)"),  &data.LnbFrequLo));
+-     Add(new cMenuEditIntItem( tr("Setup.LNB$High LNB frequency (MHz)"), &data.LnbFrequHi));
++  	int i; 
++  	char buffer[16];
++   	char LnbC = 'A';
++
++      Add(new cMenuEditStraItem(tr("DiSEqC Type"), 	&data.DiSEqC, 4, useDiSEqcTexts));
++
++#ifdef DEVEL 
++	 fprintf(stderr," Setup() data.DiSEqC: %d \n",data.DiSEqC); 
++#endif
++	
++
++    	switch (data.DiSEqC){
++		case 0 :    // none DiSEqC 
++      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++					lnbNumber = 1; 
++					break;
++		case 1 :	// mini DiSEqC
++      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++					lnbNumber = 2; 
++					for (i=0; i < lnbNumber;i++){
++  			    		snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++  						Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4])); 
+      }
++					break;
++		case 2 :     // Full DiSEqC  2,4,8  with waits 
++      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++     				Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS,MAXLNBS));  
++					
++					for (i=0; i < lnbNumber;i++){
++  			    		snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++  						Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4])); 
++					}
++					break;
++
++		case 3 :    // Full Fast DiSEqC  (ohne waits) 
++      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++     				Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS,MAXLNBS));  
++					for (i=0;i < lnbNumber;i++){
++  			       	snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++  						Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4])); 
++					}
++					break;
++
++		}
++
++#ifdef DEVEL 
++	 fprintf(stderr,"                         Setup() data.DiSEqC: %d, lnbNumber %d\n",data.DiSEqC,lnbNumber); 
++#endif
+ 
+   SetCurrent(Get(current));
+   Display();
+@@ -2111,11 +2210,148 @@
+ 
+ eOSState cMenuSetupLNB::ProcessKey(eKeys Key)
+ {
+-  int oldDiSEqC = data.DiSEqC;
++	  int setupLnbNumber = ::Setup.LnbNumbers; 
++	  int oldSource[MAXLNBS];  
++	  for (int i = 0;i< lnbNumber; i++){
++		  oldSource[i] =  tmpSource[i*4];    
++	  }
++
+   eOSState state = cMenuSetupBase::ProcessKey(Key);
+ 
+-  if (Key != kNone && data.DiSEqC != oldDiSEqC)
++#ifdef DEBUG 
++ 
++  fprintf(stderr," cMenuSetupLNB::ProcessKey vars: lofStat %d, lnbnumb: %d\n", lofStat, lnbNumber);
++  fprintf(stderr," cMenuSetupLNB::ProcessKey oldSource[MAXLNBS]\n"); 
++
++	  for (int i = 0;i< lnbNumber; i++){
++		fprintf(stderr," oldSource[%d]: %d\n",i,oldSource[i]); 
++	  }
++  fprintf(stderr," cMenuSetupLNB::ProcessKey tmpSrc[MAXLNBS]\n"); 
++  
++	  for (int i = 0;i< lnbNumber; i++){
++		fprintf(stderr," oldtmp[%d]: %d\n",i,tmpSource[i]); 
++	  }
++  
++
++#endif 
++
++	  if(Key == kOk){
++		   //check for double entries 
++
++	    ::Setup.LnbNumbers =  lnbNumber;
++	    if (!Diseqcs.IsUnique(tmpSource, lnbNumber)){
++		 Skins.Message(mtError, tr("Sat positions must be unique!"));
++	  	 return osContinue; 	   
++	    }
++		    // ask user to rewrite diseqc.conf
++	   if (Interface->Confirm(tr("Overwrite DiSEqC.conf?"))){
++				  
++		     if (oldLofStat != lofStat)
++			  cDiseqcs::SetOszilatorFrequenzies(lofStat);
++	      if (data.DiSEqC == 0){  
++
++
++#ifdef DEVEL 
++  				fprintf(stderr," delet all (%d)  diseqc objects! \n", diseqObjNumber); 
++
++#endif 
++			   // delete all diseqc objects 
++				for (int i = 0;i < diseqObjNumber; i++)
++					Diseqcs.Del(Diseqcs.Get(i)); 
++			}
++	  	   else {
++		    // delete  unused Diseqc Objects 
++		     if ( lnbNumber < setupLnbNumber){
++			  	for (int i = lnbNumber*4; i < diseqObjNumber; i++){
++				  Diseqcs.Del(Diseqcs.Get(i)); 
++			  }
++		    }
++
++		    //change old diseqc Objects
++		    int id = 0 ,line = 0, p = 0; 
++		    diseqc = 0 ; 
++		    char *satname;
++		    for(diseqc=Diseqcs.First(); diseqc; diseqc = Diseqcs.Next(diseqc)){
++			  	asprintf(&satname,*cSource::ToString(tmpSource[id*4]));
++
++				diseqc->SetCommands(data.DiSEqC,satname, p, id, line);
++
++#ifdef DEVEL 
++  fprintf(stderr," change diseqc object #: %d \n", line); 
++
++#endif 
++				if ((line)%2) p = p ? 0 : 1;  // polarization bit
++				line++;
++				if (!(line%4)) id++;   		// ID counter every 4rth line 
++		    }
++
++		    	// Add diseqc Objects if required
++		    if  (lnbNumber > setupLnbNumber  ){  
++				int newObjects; 	
++				setupLnbNumber == 1 ? newObjects  = lnbNumber*4  : newObjects = (lnbNumber - setupLnbNumber) *4 ; 
++					  
++#ifdef DEVEL 
++  fprintf(stderr," add %d diseqc objects #: \n", newObjects); 
++
++#endif 
++			  	
++				int *newSource = NULL, k = 0, p = 0 ; 
++				char *buffer = NULL;
++
++				for (int line = diseqObjNumber; line < (diseqObjNumber + (newObjects)); line++){
++					  cDiseqc *d = new cDiseqc;
++					  if(!(line% 4)){
++						    asprintf(&buffer,"%s",*cSource::ToString(tmpSource[line]));
++						    newSource = &tmpSource[line];
++						    k++; 
++					  }
++					  d->NewDiseqc(buffer,newSource,data.DiSEqC, p, k, line);
++#ifdef DEVEL 
++  fprintf(stderr," add diseqc object #: %d \n", line); 
++
++#endif 
++					  Diseqcs.Add(d); 
++					  if((line)%2) p = p ? 0 : 1; 
++				}
++		   } 
++	  	} //end elseif  DiSEqC != 0 
++
++		 // update current Setup  Object 
++	  	::Setup.DiSEqC= data.DiSEqC; 
++
++	  	Diseqcs.SetModified(true);
++	  	if (data.DiSEqC){
++			Diseqcs.Save(); 
++			// workaround to trigger diseqc codes 
++ 			Channels.SwitchTo(currentchannel+9);
++ 			Channels.SwitchTo(currentchannel);
++	  	}
++	     	state = osBack; 
++	
++	  } // endif overwrite confirm 
++   } //endif kOK 
++	 
++		
++	
++	if ((Key != kNone)) {
++
++		 if (data.DiSEqC != oldDiSEqC || 
++		     lnbNumber != oldlnbNumber || 
++		     lofStat != oldLofStat) {
++			  
++
++#ifdef DEVEL 
++			   
++  fprintf(stderr,"if Key != kNone: oldDiSEqC : %d oldlnbNumber  %d oldLofStat   %d\n", oldDiSEqC, oldlnbNumber, oldLofStat); 
++  fprintf(stderr,"if Key != kNone: newDiSEqC: %d  lnbNumber     %d lofStat      %d\n", data.DiSEqC, lnbNumber, lofStat); 
++
++#endif 
++
++		     oldlnbNumber = lnbNumber; 
+      Setup();
++		 }
++     } // endif other key as kOk
++   
+   return state;
+ }
+ 
+@@ -3745,3 +3982,20 @@
+      ShowMode();
+   return osContinue;
+ }
++
++/* 
++
++
++*/
++			  /* 
++				// set for all in diseqc.c    -> SetOszilatorFrequenzies(int lofStat)
++			  if (lofStat){
++			    ::Setup.LnbFrequHi = 10600;
++			    ::Setup.LnbFrequLo = 9750;
++			  }
++			  else {
++			    ::Setup.LnbFrequHi = 11250;
++			    ::Setup.LnbFrequLo = 10750;
++			  }
++			}
++			*/ 
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/tools.c vdr-rdevel/tools.c
+--- vdr-1.3.25/tools.c	2005-05-29 12:18:26.000000000 +0200
++++ vdr-rdevel/tools.c	2005-07-11 18:01:44.097723992 +0200
+@@ -277,6 +277,29 @@
+   return Free;
+ }
+ 
++bool FileWriteble(const char *FileName,bool LogErrors)
++{
++  LogErrors = true ; // remove this
++  struct stat fs;
++  if (stat(FileName, &fs) == 0) {
++     if (S_ISREG(fs.st_mode)) {
++		 fprintf(stderr,"file %s ist regular file\n",FileName);
++        if (fs.st_mode & S_IWUSR){  // FileName, R_OK | W_OK) == 0)
++		 fprintf(stderr,"file %s user writable\n",FileName);
++           return true;
++	  }
++        else if (LogErrors)
++           esyslog("ERROR: can't access %s", FileName);
++        }
++     else if (LogErrors)
++        esyslog("ERROR: %s is not a Filename", FileName);
++     }
++  else if (LogErrors)
++     LOG_ERROR_STR(FileName);
++  return false;
++}
++  
++
+ bool DirectoryOk(const char *DirName, bool LogErrors)
+ {
+   struct stat ds;
+diff -NuBw -x'*.conf' -x'[A-Z]*' vdr-1.3.25/tools.h vdr-rdevel/tools.h
+--- vdr-1.3.25/tools.h	2005-05-29 12:24:54.000000000 +0200
++++ vdr-rdevel/tools.h	2005-07-11 18:01:44.099723688 +0200
+@@ -91,6 +91,7 @@
+ cString itoa(int n);
+ cString AddDirectory(const char *DirName, const char *FileName);
+ int FreeDiskSpaceMB(const char *Directory, int *UsedMB = NULL);
++bool FileWriteble(const char *FileName, bool LogErrors = false);
+ bool DirectoryOk(const char *DirName, bool LogErrors = false);
+ bool MakeDirs(const char *FileName, bool IsDirectory = false);
+ bool RemoveFileOrDir(const char *FileName, bool FollowSymlinks = false);

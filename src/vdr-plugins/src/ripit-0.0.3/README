@@ -1,0 +1,118 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Stefan Franz
+
+See the file COPYING for license information.
+
+With this plugin you can rip AudioCDs.
+
+
+=========================================================================
+Req.:
+=========================================================================
+All requirements of ripit.pl.
+Special version of ripit.pl (Its in dir "commands").
+a VDR :P
+
+
+
+=========================================================================
+Install :
+=========================================================================
+Install the original ripit ( http://www.suwald.com/ripit/ripitde.html)
+I used version 0.34 (i think).
+
+Install this plugin like the other :
+Copy ripit-x.x.x.tar.gz to your plugins (where x is a placeholder)
+tar -xzvf ripit-x.x.x.tar.gz
+ln -s ripit-x.x.x ripit
+cd ripit
+make all
+
+Now copy the lib libvdr-ripit.so-x.x.x to VDRs LIBDIR
+and add -Pripit to your VDR command.
+
+Edit the special ripit.pl ($cddevice and $svdrpcmd)
+and copy the file into /usr/bin.
+
+THIS IS HARDCODED !! IF YOU WANT ANOTHER PLACE , CHANGE THE
+COMMAND IN SOURCECODE.
+
+TAKE CARE THAT YOU OVERWRITE THE ORIGINAL (AFTER BACKUP) AND
+THERE ISNT ANOTHER ripit.pl IN YOUR $PATH.
+! After an updatedb you should find only one ripit.pl with
+"locate ripit.pl"
+
+
+
+=========================================================================
+Usage:
+=========================================================================
+Go to setup and change your settings.
+Before you can use this plugin , edit the
+special ripit.pl and "maybe" create the output
+directory.
+
+Start the plugin from your menu and put the
+AudioCD in device.
+Now press red button (Start).
+Now you can watch the ripping process live.
+After some time the menu will close,
+maybe i change that but hmm maybe not.
+At least you get a message over svdrp.
+
+After The process started , the plugin
+need writeaccess to your /tmp directory.
+It will write 2 files.
+"ripit.process" while a rip process is running
+and "ripit.log" for a log ;). This one you see live in the OSD.
+
+
+
+=========================================================================
+HOWTO CALL RIPIT EXTERNAL :
+=========================================================================
+To see which commands are buildin:
+svdrpsend.pl PLUG ripit HELP
+
+To see what command will do:
+svdrpsend.pl PLUG ripit HELP START
+
+If you want to start an external rip process :
+svdrpsend.pl PLUG ripit START [device]
+If device is not given , ripit will use the device from Setup,
+otherwise if [device] exists, this one. 
+
+If you want to call the plugin external or from a (mp3ng)commandsmenu,
+put an entry like this in commands.conf/mp3ng_cmds.dat :
+AUDIOCD-RIPPER? : echo "/PATH_TO_YOU_SCRIPT/SCRIPT.sh" | at now;
+
+Content of SCRIPT.sh should be:
+
+#!/bin/sh
+/PATH_TO_svdrpsend.pl/svdrpsend.pl PLUG ripit MAIN
+#EOF
+
+Call the script whatever you like , maybe mp3ng_audiocdripper.sh.
+If you got it working, go to setup and hide the mainmenu entry.
+Or use the script inside the folder "commands" of ripit. lol
+
+
+
+
+=========================================================================
+=========================================================================
+Afterall , its a quick and dirty plugin..
+After ripped all my cds , i think i will never need/use it anymore. :D
+The Aborting/commands are ugly and maybe dont work for you.
+
+So , if its not doing the right job for you,
+write an own plugin or use another way.
+
+bye ..maybe the README isnt complete..so what......
+IF YOU ASK A QUESTION OR SOMETHING YOU NEED A PASSWORD FOR
+AN ANSWER , SO I KNOW THAT YOU (MAYBE FROM LAST) READ THIS README.
+=========================================================================
+PASSWORD IS : "VISTA SUCK" .
+=========================================================================
+

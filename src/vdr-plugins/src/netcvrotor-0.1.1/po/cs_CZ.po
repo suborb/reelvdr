@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: netcvrotor 0.1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-19 11:57+0200\n"
+"PO-Revision-Date: 2009-03-04 12:57+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team: RMM Team <reelbox-devel@mailings.reelbox.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Rotor settings"
+msgstr "Nastavení rotoru"
+
+msgid "no rotor available"
+msgstr "Rotor není k dispozici"
+
+msgid "Go to position"
+msgstr "Přejít na pozici"
+
+msgid "Transponders"
+msgstr "Transpondéry"
+
+msgid "Perform transponder scan"
+msgstr "Prohledat transpondéry"
+
+msgid "Please select the rotor position"
+msgstr "Vyberte pozici rotoru"
+
+msgid "Satellite"
+msgstr "Satelit"
+
+#, fuzzy
+msgid "STR"
+msgstr "SNR"
+
+msgid "SNR"
+msgstr "SNR"
+
+msgid "moving rotor"
+msgstr "otáčení antény"
+
+msgid "Status: Rotor stopped. Current deviation: "
+msgstr ""
+
+msgid "Status: Rotor is moving to a cached position"
+msgstr ""
+
+msgid "Status: Rotor is moving to an uncached position"
+msgstr ""
+
+msgid "Status: Rotor is doing autofocus"
+msgstr ""
+
+msgid "Lock: yes"
+msgstr ""
+
+msgid "Lock: no"
+msgstr ""
+
+msgid "Rotor interface for NetCeiver"
+msgstr "Rozhraní rotoru pro netceiver"
+
+msgid "Rotor Setup"
+msgstr "Nastavení rotoru"
+
+#~ msgid "Signal strength"
+#~ msgstr "Síla signálu"

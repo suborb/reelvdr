@@ -1,0 +1,100 @@
+
+
+Plugin für den Video Disk Recorder (VDR)
+----------------------------------------
+
+Written by:                  Jörg Wendel 
+Mail:                        vdr@jwendel.de
+
+Project's homepage:          www.jwendel.de
+Latest version available at: www.jwendel.de
+
+See the file COPYING for license information.
+
+
+Beschreibung: 
+-------------
+
+Dieses Plugin für den VDR zeigt Titel / Gernre / Artists / etc. der ITunesDB 
+des iPod an. Der Menüaufbau ist dem des iPod's weitestgehend nachempfunden.
+
+Um nicht den ganzen Player Stuff noch mal programmieren zu müssen, habe ich mich 
+entschieden stattdessen Playlisten für das mp3-Plugin zu erzeugen.
+
+
+Bedienung:
+----------
+
+Es werden die Eintrage aus der iTunesDB des Players in ähnlicher wenn auch 
+etwas abgespeckter Form wie auf dem iPod selbst angezeigt. Mit der grünen Taste kann man 
+nun Titel zu der mp3-Plugin Playlist 'ipod.m3u' hinzufügen. Ist ein Titel gewählt wird eben 
+dieser in die Liste aufgenommen, ist hingegen ein Untermenü selektiert, so werden ale Titel des 
+Untermenüs rekursiv hinzugefügt. Die so erzeugte Playlist kann man wie gewohnt mit dem 
+mp3-Player Plugin abspielen.
+Mit der Blauen Taste im iPod Menü gelangt in den Bearbeitungsmodus dieser Playliste. 
+Mit der Rotem taste werden einzelne Titel oder auch ganze Bäume rekursiv abgespielt. 
+Hierzu wird das mp3-Plugin verwendet.
+
+
+TODOS:
+------
+1.) Unterstützung der iPod Playlisten
+2.) Internationalization
+3.) ... ?? ...
+
+
+Installation:
+-------------
+
+Wie immer 'make plugins' im VDR source Pfad, ins Plugin Verzeichnis kopieren
+und den vdr mit -Pipod starten. Das mountskript ist das selbe, welches schon von
+diversen anderen Plugins verwendet wird. Wenn man es noch nicht hat, es ist im scripts 
+Unterordner des Pugins nochmals enthalten.
+
+Konfiguration:
+--------------
+
+Es können die folgenden 3 Optionen konfiguriert werden
+
+Beschreibung:                    Default:
+
+"Mount Point"                 -  /pub/mp3/ipod
+"mp3 Plugin's Playlist Path"  -  /pub/mp3
+"Mount Script"                -  /usr/bin/mount.sh
+
+Hinweis:
+Da das mp3 Plugin in seinen Playlisten keine Titel über Sym-Links und auch keine 
+oberhalb  des mp3 Verzeichnisses abspielt (damit habe ich lange rumprobiert :-( ) 
+muss der Mountpoint des iPod derzeit zwingend unterhalb des mp3 Pfades liegen.
+Wenn jemand herausfindet, wie man Playlisteinträge wir '../../***' oder sogar absolute 
+Pfade für das mp3-Plugin angeben kann her damit ;-)
+
+Eintrag in /etc/fstab:
+
+/dev/sda2   /pub/mp3/ipod   vfat   ro,noauto,user,gid=0,uid=0   0 0
+wobei gid und uid die des vdr sein sollten, bei linvdr halt 0 für root.
+Für HFS+ ist der Eintrag entsprechend anzupassen und auch die Unterstützung 
+im Kernel muss verfügbar sein:
+CONFIG_HFS_FS=m
+CONFIG_HFSPLUS_FS=m
+
+Eintrag für umount des iPod in commands.conf:
+
+9 iPod aushängen : /bin/umount /pub/mp3/ipod
+
+
+Quellen:
+--------
+
+- Das Format der iTuneDB habe ich von 
+  http://homepage.ntlworld.com/simon.mason20/ipod_tunes_spec.htm
+- Die Header Strukturen der DB stammen aus einen pod2sql Programm 
+  von Folkert Saathoff.
+
+
+Danke:
+------
+
+Vielen Dank an Klaus Schmidinger für den tollen VDR, an Folkert Saathoff
+für die Header der Datenstruktur und dem Provider der iTunsDB 
+Formatbeschreibung (simon.mason20 ?).

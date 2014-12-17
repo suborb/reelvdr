@@ -1,0 +1,190 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr "Connector Dpkg"
+
+msgid "Start Online Update"
+msgstr "Inicia l'actualització en línia"
+
+msgid "Updates available! Press OK to update now."
+msgstr "Hi ha actualitzacions disponibles! Premeu la tecla OK per actualitzar."
+
+msgid "Addon Plugin"
+msgstr "Connector complementari"
+
+msgid "Optional Software "
+msgstr "Programari opcional"
+
+msgid "Online Update"
+msgstr "Actualització en línia"
+
+msgid "Updating sources..."
+msgstr "S'estan actualitzant les fonts..."
+
+msgid "Updating packages..."
+msgstr "S'estan actualitzant els paquets..."
+
+msgid "Rebooting, please wait..."
+msgstr "S'està reiniciant... Si us plau, espereu-vos!"
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Actualització de programari mitjançant connexió en línia:"
+
+msgid "Upgrade"
+msgstr "Actualitza"
+
+msgid "Install"
+msgstr "Instal·la"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Skip"
+msgstr "Omet"
+
+msgid "Packages"
+msgstr "Paquets"
+
+msgid "Optional"
+msgstr "Opcional"
+
+msgid "Sources"
+msgstr "Fonts"
+
+msgid "Please restart your ReelBox after the recording."
+msgstr "Si us plau, reinicieu la Reelbox en acabar la gravació."
+
+msgid "Reboot ?"
+msgstr "Reiniciar?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr "S'està interrompent..."
+
+msgid "Press OK to abort update."
+msgstr "Premeu OK per interrompre l'actualització."
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "No s'han pogut actualitzar totes les fonts! S'estan cercant actualitzacions..."
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "No s'han pogut actualitzar totes les fonts! S'estan cercant paquets..."
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Fonts actualitzades. S'estan cercant actualitzacions..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Fonts actualitzades. S'estan cercant paquets..."
+
+msgid "Failed to process all packages!"
+msgstr "S'ha produït un error en processar tots els paquets!"
+
+msgid "Failed"
+msgstr "S'ha produït un error"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Seleccioneu 'Actualitza' per instal·lar els nous paquets."
+
+msgid "Following packages will be updated:"
+msgstr "S'han d'actualitzar els paquets següents:"
+
+msgid "The software is up to date."
+msgstr "El programari està actualitzat."
+
+msgid "No updates found."
+msgstr "No s'han trobat actualitzacions."
+
+msgid "Downloading Packages..."
+msgstr "S'estan baixant els paquets..."
+
+msgid "Processing Packages..."
+msgstr "S'estan processant els paquets..."
+
+msgid "All changes successfull!"
+msgstr "Els canvis s'han realitzat amb èxit!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Si us plau, reinicieu la Reelbox!"
+
+msgid "Please go into deep standby,"
+msgstr "Si us plau, aneu a l'aturada ràpida,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "reinicieu la Reelbox i proveu a actualitzar de nou."
+
+msgid "Error"
+msgstr "S'ha produït un error"
+
+msgid "Load"
+msgstr "Carrega"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Si us plau, comproveu la connexió a internet."
+
+msgid "IGN"
+msgstr "IGN"
+
+msgid "Source list"
+msgstr "Llista de fonts"
+
+msgid "Save"
+msgstr "Desa"
+
+msgid "Undo"
+msgstr "Desfés"
+
+msgid "Insert"
+msgstr "Insereix"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Unable to read from sources.list!"
+msgstr "No es pot llegir sources.list!"
+
+msgid "Unable to write to surces.list!"
+msgstr "No es pot escriure a sources.list!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Instal·lació Dpkg"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Instal·lació de programari opcional"
+
+#~ msgid "Recording is running !"
+#~ msgstr "La gravació s'està executant!"

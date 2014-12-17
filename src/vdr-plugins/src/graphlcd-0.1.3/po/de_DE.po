@@ -1,0 +1,130 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-01-12 11:37+0100\n"
+"PO-Revision-Date: 2008-09-29 10:10+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "JanFebMarAprMaiJunJulAugSepOktNovDez"
+
+msgid "DVD"
+msgstr ""
+
+msgid "Music"
+msgstr "Musik"
+
+msgid "File"
+msgstr "Datei"
+
+msgid "Image"
+msgstr "Bild"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Spiele"
+
+msgid "no"
+msgstr "nein"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "not in menu"
+msgstr "nicht im Menu"
+
+msgid "compressed"
+msgstr "komprimiert"
+
+msgid "auto"
+msgstr "automatisch"
+
+msgid "medium"
+msgstr "mittel"
+
+msgid "large"
+msgstr "groß"
+
+msgid "never"
+msgstr "niemals"
+
+msgid "once"
+msgstr "einmal"
+
+msgid "always"
+msgstr "immer"
+
+msgid "Show Date/Time"
+msgstr "Zeige Datum/Uhrzeit"
+
+msgid "Show Channel"
+msgstr "Zeige Kanal"
+
+msgid "Show Logo"
+msgstr "Zeige Logo"
+
+msgid "Show Symbols"
+msgstr "Zeige Symbole"
+
+msgid "Show ET Symbols"
+msgstr "Zeige ET Symbole"
+
+msgid "Show Program"
+msgstr "Zeige Programm"
+
+msgid "Show Timebar"
+msgstr "Zeige Zeitbalken"
+
+msgid "Show Menu"
+msgstr "Zeige Menüs"
+
+msgid "Show Messages"
+msgstr "Zeige Nachrichten"
+
+msgid "Show Volume"
+msgstr "Zeige Lautstärke"
+
+msgid "Show free Tuner"
+msgstr "Zeige freie Tuner"
+
+msgid "Identify replay type"
+msgstr "Wiedergabetyp erkennen"
+
+msgid "Modify replay string"
+msgstr "Wiedergabetext verändern"
+
+msgid "Scroll text lines"
+msgstr "Textzeilen scrollen"
+
+msgid "Scroll speed"
+msgstr "Scrollgeschwindigkeit"
+
+msgid "Scroll time interval"
+msgstr "Zeitabstand beim Scrollen"
+
+msgid "Brightness on user activity"
+msgstr "Helligkeit bei Nutzeraktivität"
+
+msgid "Brightness on user inactivity"
+msgstr "Helligkeit bei Nutzerinaktivität"
+
+msgid "Brightness delay [s]"
+msgstr "Verzögerung der Helligkeit [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Zeige Uhr bei Nutzerinaktivität"
+
+msgid "Unknown title"
+msgstr "Unbekannter Titel"

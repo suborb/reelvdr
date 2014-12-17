@@ -1,0 +1,192 @@
+VDR Plugin 'dvdswitch' Revision History
+---------------------------------------
+?? 0.1.2-reel2:
+- adoptions to work with xinemediaplayer (replaces dvd-pi)
+
+2006-05-01: Version 0.1.2
+- Anpassung an VDR Version 1.4.0
+- FIX: Kurzparameter "i" wird nun nicht mehr ignoriert (Danke zulu)
+- FIX: i18n.c (Danke hd.brummy)
+
+
+2006-03-04: Version 0.1.1
+- FIX: Fehlerhafte Stelle in command.c behoben (Danke pat und hanker)
+
+
+2006-03-03: Version 0.1.0 
+- FIX: Kompilierprobleme mit der 'dvdplugin.c' behoben (Danke an Frank99)
+- FIX: DVD-Plugin Thread-Objekt wird nun sauber beendet.
+- FIX: Beim Erstellen von Images wurde in bestimmten Situationen der
+DVD-Gerätename falsch übergeben. Die Funkion "ReadLink", die der VDR nutzt hat
+hier bei relativen Links leider nicht den absoluten Pfad ausgegeben. Das Plugin
+setzt das nun korrekt um.
+- FIX: Die Funktion strtok wurde gg. strtok_r ausgetauscht das sollte einige 
+Komplierprobleme beheben und hoffentlich keine neue hervorufen :) (Danke an
+soave)
+- NEU: Ein komplettes Verzeichnis-Management wurde hinzugefügt. Damit ist es
+möglich Verzeichnisse anzulegen, umzubenenen, zu verschieden und zu löschen.
+Hinweis: Sollte eine derartige Aktion ausgeführt worden sein, wird die
+Image-Liste nach verlassen des Management-Bereiches neu aufgebaut. Das
+Verschieben ist Thread gesteuert. Es kann dadurch vorkommen, wenn das
+Verschieben noch nicht noch nicht beendet ist, das während des Neuaufbaus das
+verschobene Element nicht auftaucht. Hier hilft ein Neu-Öffnen des Plugin. Damit
+dies nicht allzuoft passiert, ist eine kleine Pause von 500ms zwischen Aktion
+und Neuaufbau gesetzt.
+- NEU: Images lassen sich nun in die verschiedenen Unterverzeichnisse
+verschieben. Auch hier kann es dazu kommen, dass das verschobene Element nicht
+gleich wieder auftaucht, wenn das Verschieben noch nicht abgeschlossen ist.
+- NEU: Images lassen sich nun umbenennen.
+- NEU: Zum Löschen von Images und Verzeichnissen ist eine eigene Routine
+implementiert worden. Damit sollten "Löschprobleme" endlich nicht mehr
+existieren. In diesem Zusammenhang ist der ganze Löschvorgang in einem Thread
+ausgelagert worden. Damit sollte es keine Behinderung des eigentlichen
+VDR-Betriebes geben. Hinweis: In diesem Thread werden VOR Beginn des
+Löschvorganges die Images/Verzeichnisse mit einem ".del" versehen und in der
+Image-Anzeige wird alles mit ".del" am Ende ausgefiltert und nicht angezeigt.
+- NEU: Das Plugin wird NICHT mehr nach einem Löschvorgang beendet
+- NEU: Die Schublade des DVD-Laufwerkes lässt sich über das Plugin öffnen und
+schließen. Das ganze passiert über das Programm "eject" in ähnlicher weise wie
+das "trayopen" Plugin.
+- NEU: Das im Plugin zuletzt selektierte Element (Image, Verzeichnis,
+DVD-Geräte-Eintrag) bleibt während des VDR-Betriebes selektiert, auch wenn das
+Plugin geschlossen wird.
+- NEU: Ein "Befehle" Menü wurde hinzugefügt, welches alle bisherigen und
+natürlich die neuen Funktionen anbietet. konkret sind das:
+* Verzeichnis Management
+* DVD Schublade öffnen
+* DVD Schublade schließen
+* Wiedergabe
+* Image umbenennen
+* Image verschieben
+* Image löschen
+* Image brennen
+* Image von DVD erstellen
+Im Standard ist nun die Taste "Rot" mit dem Aufruf dieses Befehlemenüs versehen.
+- NEU: Im Setup lassen sich die Tasten 1-9, 0, die Farbtasten sowie OK
+individuell mit allen Befehlen individuell belegen. So kann sich jeder
+die Bedienung so legen. wie er es mag bzw. gewohnt ist. Macht im Grunde das
+Befehlemenü überflüssig, aber evtl. ist dem einen oder anderen das Arbeiten
+über dieses Menü lieber :)
+- NEU: An allen relevanten Stellen (wenn ich nicht gerade eine Übersehen habe)
+sollte eine Rechteprüfung in Bezug des Nutzers, unter dem der VDR läuft,
+passieren. Will man bspw. ein Verzeichnis in einem anderen anlegen, in dem man
+nicht die benötigten Rechte hat, so gibt das Plugin eine entsprechende Info
+aus.
+- NEU: Vor den Image-Namen kann man sich eine Spalte "Image-Größe" angzeigen
+lassen. Die Größenangabe bezieht sich auf GB und wird mit einer Nachkommastelle
+angezeigt. Entsprechende Option zum aktivieren befindet sich im Setup unter
+"Detailierte Anzeigen Einstellung".
+- Die Funktionsweise zum Anzeige-Modi "Kategorie" wurde verändert.
+Die Kategorie "Image-Typ" unterscheidet nicht mehr nach "Verzeichnis" und
+"ISO-Image" sondern nach den unterschiedlichen Typen die im Setup unter
+"Imagetyp" eingetragen sind. Dafür gibt es einen dritten Kategoriemodus mit der
+Bezeichnung "Datei-Typ", welcher die alte Funktion übernimmt.
+In diesem Zusammenhang wurde die Setup-Einstellung "ISO zuerst" entfernt.
+- ACHTUNG: Die Funktion "Image erstellen" wurde verändert:
+1. Nun kann nebst dem Image-Namen auch das Verzeichnis relativ zum
+Image-Hauptverzeichnis ausgewählt werden und somit das zu erstellende Image
+gleich in ein Unterverzeichnis einsortiert werden. Wird nichts angegeben, geht
+das Plugin vom Hauptverzeichnis aus.
+2. Zudem gibt es nicht mehr die Selektierung "ISO-Image" und "Verzeichnis" für
+die Wahl nach dem ImageTyp. Die vorhandenen ImageTyp-Liste, die im Setup
+erstellt werden kann, wird als Auswahl zur Verfügung gestellt. Wird ein
+ImageTyp mit der Option "Datei" ausgewählt, wird dem angegebenen Image-Namen
+die entsprechende Extension automatisch angehangen. Diese SOLLTE also nicht
+beim Namen angegeben werden.
+3. Dem Script wurde als 3. Parameter immer das DVD-Device übergeben. War das
+dem DVD-Plugin übergebene Device nur ein Link (bspw. /dev/dvd auf /dev/hd?), so
+sollte der Link entsprechend aufgelöst werden um das echte Device zu übergeben.
+Nicht nur, das diese Auflösung in einigen Fällen fehlerhaft war, so brachte es
+den ReadScript's schlicht nichts. Benötigt wird ja eher ein MountPoint, in den
+die eingelegte DVD gemountet werden kann. Aus diesem Grund wird das Plugin nun
+versuchen aus der fstab einen evtl. eingetragenen MountPoint herauszufiltern
+und dem Script als 4ten Parameter zu übergeben. Gibt es in der fstab keinen
+Eintrag, so wird nichts übergeben. Dann muss dieser Pfad in das benutzte Script
+hart eingetragen werden.
+Übergebene Parameter sind demzufolge:
+1. Pfad in dem das Image abgelegt werden soll
+2. Name des zukünftigen Images INKLUSIVE der Datei-Extension
+3. Das echte DVD-Device
+4. ein evtl. in der fstab eingetragener MountPoint für das DVD-Device
+5. Info ob das Image als "IMAGE" oder "DIR" angelegt werden soll.
+Ob und was für Parameter ausgewertet werden, kann das Script natürlich selbst
+entscheiden.
+- Die Parameter für das "WriteScript" wurden geändert. Hier muss eine Anpassung
+vorgenommen werden. Parameter 3 (Image-Kurzname) ist entfallen.
+Übergeben Paremeter sind jetzt:
+1. voller Imagename inkl. Pfad
+2. Image Typ (wie vorher: "IMAGE" bzw. "DIR").
+- Die Aufrufe für das Einlesen von DVDs und Brennen vom Images sind in Thread's
+ausgelagert worden. Bringt derzeit noch keine großen Vorteile ... aber wer weiß
+was noch kommt :)
+
+
+2005-10-18: Version 0.0.3
+- NEU: Das Plugin startet nun auch, wenn im ImageDir kein Image vorgefunden
+  wird, damit wenigstens über die "Lies DVD" Funktion Images generiert werden
+  können (Danke an m0190).
+- FIX: In diesem Zusammenhang gab es an vielen Stellen Crash's, wenn kein
+  Image vorhanden war. Alle Fehler sollten behoben sein.
+- NEU: Im Anzeige-Modi "Verzeichnisse" wird beim Navigieren einer Ebene zurück
+  ([..]), das ursprünglich selektierte Verzeichnis wieder ausgewählt.
+- NEU: Über das Setup kann man nun in jedem Anzeige-Modi ein Eintrag für das
+  eigentliche DVD-Laufwerk einblenden lassen. Die Auswahl dieses
+  Eintrages startet dann entsprechend das DVD-Plugin mit dem echten DVD-Device.
+- NEU: Der im Setup angegebene Name für das DVDSwitch Plugin wird nun nicht
+  mehr nur im Hauptmenü angezeigt, sondern auch als Titel der Images-Übersicht.
+- NEU: Im Titel der Images-Übersicht kann man sich bei Bedarf den noch
+  verfügbaren Speicherplatz anzeigen lassen inkl. der Anzeige über die Anzahl an
+  DVD5 (4,7GB) und DVD9 (8,5GB) Images, die noch Platz haben dürften. Die
+  Anzeige lässt sich im Setup entsprechen de-/aktivieren.
+- NEU: Das, was das Plugin als "DVD-Image" ansieht (derzeit Dateien mit der
+  Extension ".iso" und Verzeichnisse mit einem Unterverzeichnis namens
+  "video_ts") kann nun direkt beinflusst werden. Dazu kann man über das
+  Setup-Menü eine "Image-Liste" pflegen. Bei der Imageart "Verzeichnis" muss
+  angegeben werden, was dieses Verzeichnis für ein(e) Datei/Verzeichnis
+  beinhaltet. Bei der Imageart "Datei" muss die Extension angegeben werden.
+  Zustätzlich kann zu jeder Dateiart ausgewählt werden, ob die Extension
+  ausgeblendet werden soll. Wer sich die "ImageTyp" Spalte einblenden lässt wird
+  zukünftig das sehen, was in der Image-Liste zu jedem Eintrag als anzuzeigende
+  Bezeichnung angegeben wurde.
+  Als Standard sind hier Image-Dateien mit ".iso" als Extension und
+  Image-Verzeichnise mit "video_ts" als Unterverzeichnis angeben.
+- Aus Gründen der Übersicht wurde die SetupPage überarbeitet.
+- Das DVD-Plugin wird nun bei einer VDR-Version >= 1.3.32 über die Funktion
+  "cRemote::CallPlugin()" gestartet.
+- FIX: Ein möglicher Crash bei der Übergabe des TempDevices sollte nun nicht
+  mehr auftauchen (Danke Viking).
+- FIX/NEU: Netter Nebeneffekt: Ein zusätzlicher DVD-Plugin-Patch ist nicht mehr
+  nötig, es sollte nun auch ohne klappen (Danke wieder einmal für den Test an
+  ravenclaw_78!! :)).
+- FIX: syslog läuft beim Parsen der Konfigeinträge nun nicht mehr unnötig mit
+  Fehlern voll (Danke an egal).
+
+
+2005-10-07: Version 0.0.2
+- NEU: Übergabe des ImageDir nun optional via Parameter. Der entsprechende
+  Menüpunkt im Setup ist dann deaktiviert. (Idee von ronnykornexl)
+- NEU: Es gibt nun Defaultangaben für das Write- und Readscript. Sollte keine
+  Angaben über die Pluginparameter erfolgen so gilt:
+  /usr/local/bin/dvdswitch_writedvd.sh und
+  /usr/local/bin/dvdswitch_readdvd.sh.
+  Entsprechend sind einige Sicherheitsabfragen über die existens etc.
+  eingeflossen. (Idee von neves)
+- FIX: Im SetupMenü kann bei der Angabe für das ImageDir nun auch der Slash
+  ausgewählt werden. (Danke an ravenclaw_78)
+- FIX: Im Submenü zum einlesen einer DVD werden nun beim editieren des
+  gewünschten DVD-Namens auch die Optionen zum Umschalten Groß-/Kleinschreibung
+  etc. angeboten. Zudem kann der Lesevorgang zu der Farbtaste auch über OK
+  gestartet werden.
+- PATCH: Sollte es mit der Übergabe des TempDevices des Switch-Plugins an das
+  DVD-Plugin nicht klappen, so sollte erst mal das DVD-Plugin mit dem
+  beigefügten Diff-File (patches Ordner) gepatcht werden. (ganz großen Dank hier
+  an ravenclaw_78 für die vielen Tests!!)
+- Die Funktionen der Farbtasten wurden neu zugeordnet.
+- Aus dem "lese DVD" bei den Farbtasten wurde ein "lies DVD".
+- Einige Codeverbesserungen (so hoffe ich :)).
+
+
+
+2005-10-05: Version 0.0.1
+
+- Initial revision.

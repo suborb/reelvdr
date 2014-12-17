@@ -1,0 +1,130 @@
+--- base_pkgs/vdr-1.3.21/libsi/si.c	2004-10-16 17:12:57.000000000 +0200
++++ vdr-1.3.21/libsi/si.c	2005-04-01 03:03:42.000000000 +0200
+@@ -105,7 +105,7 @@
+    return (DescriptorTag)((const DescriptorHeader*)d)->descriptor_tag;
+ }
+ 
+-Descriptor *DescriptorLoop::getNext(Iterator &it) {
++Descriptor *DescriptorLoop::getNext(Iterator &it) {       
+    if (isValid() && it.i<getLength()) {
+       return createDescriptor(it.i, true);
+    }
+@@ -114,9 +114,10 @@
+ 
+ Descriptor *DescriptorLoop::getNext(Iterator &it, DescriptorTag tag, bool returnUnimplemetedDescriptor) {
+    Descriptor *d=0;
+-   if (isValid() && it.i<getLength()) {
++   int len=getLength(); // GA
++   if (isValid() && it.i<len) {
+       const unsigned char *p=data.getData(it.i);
+-      const unsigned char *end=p+getLength()-it.i;
++      const unsigned char *end=p+len-it.i;
+       while (p < end) {
+          if (Descriptor::getDescriptorTag(p) == tag) {
+             d=createDescriptor(it.i, returnUnimplemetedDescriptor);
+@@ -132,9 +133,10 @@
+ 
+ Descriptor *DescriptorLoop::getNext(Iterator &it, DescriptorTag *tags, int arrayLength, bool returnUnimplementedDescriptor) {
+    Descriptor *d=0;
+-   if (isValid() && it.i<getLength()) {
++   int len=getLength(); // GA
++   if (isValid() && it.i<len) {
+       const unsigned char *p=data.getData(it.i);
+-      const unsigned char *end=p+getLength()-it.i;
++      const unsigned char *end=p+len-it.i;
+       while (p < end) {
+          for (int u=0; u<arrayLength;u++)
+             if (Descriptor::getDescriptorTag(p) == tags[u]) {
+@@ -211,15 +213,17 @@
+ }
+ 
+ char *String::getText() {
+-   if (getLength() < 0 || getLength() >4095)
++   int len=getLength(); // GA Speedup
++   if (len < 0 || len >4095)
+       return strdup("text error"); // caller will delete it!
+-   char *data=new char(getLength()+1);
+-   decodeText(data, getLength()+1);
++   char *data=new char(len+1);
++   decodeText(data, len+1);
+    return data;
+ }
+ 
+ char *String::getText(char *buffer, int size) {
+-   if (getLength() < 0 || getLength() >= size) {
++   int len=getLength(); // GA Speedup
++   if (len < 0 || len >= size) {
+       strncpy(buffer, "text error", size);
+       buffer[size-1] = 0;
+       return buffer;
+@@ -230,7 +234,8 @@
+ 
+ //taken from VDR, Copyright Klaus Schmidinger <kls@cadsoft.de>
+ char *String::getText(char *buffer, char *shortVersion, int sizeBuffer, int sizeShortVersion) {
+-   if (getLength() < 0 || getLength() >= sizeBuffer) {
++   int len=getLength(); // GA Speedup
++   if (len< 0 || len >= sizeBuffer) {
+       strncpy(buffer, "text error", sizeBuffer);
+       buffer[sizeBuffer-1] = 0;
+       *shortVersion = 0;
+@@ -244,7 +249,7 @@
+ void String::decodeText(char *buffer, int size) {
+    const unsigned char *from=data.getData(0);
+    char *to=buffer;
+-
++   int len=getLength(); // GA Speedup
+    /* Disable detection of coding tables - libdtv doesn't do it either
+    if ( (0x01 <= *from) && (*from <= 0x1f) ) {
+       codeTable=*from
+@@ -254,7 +259,7 @@
+    if (*from == 0x10)
+       from += 3; // skips code table info
+ 
+-   for (int i = 0; i < getLength(); i++) {
++   for (int i = 0; i < len; i++) {
+       if (*from == 0)
+          break;
+       if (    ((' ' <= *from) && (*from <= '~'))
+@@ -277,13 +282,13 @@
+    char *to=buffer;
+    char *toShort=shortVersion;
+    int IsShortName=0;
++   int len=getLength(); // GA Speedup
+ 
+    if (*from == 0x10)
+       from += 3; // skips code table info
+ 
+-   for (int i = 0; i < getLength(); i++) {
+-      if (*from == 0)
+-         break;
++   for (int i = 0; i < len; i++) {
++      
+       if (    ((' ' <= *from) && (*from <= '~'))
+            || (*from == '\n')
+            || (0xA0 <= *from)
+@@ -299,6 +304,8 @@
+          IsShortName++;
+       else if (*from == 0x87)
+          IsShortName--;
++      else if (*from == 0) // GA Speedup
++         break;
+       from++;
+       if (to - buffer >= sizeBuffer - 1 || toShort - shortVersion >= sizeShortVersion - 1)
+          break;
+--- base_pkgs/vdr-1.3.21/libsi/util.c	2004-10-16 11:58:41.000000000 +0200
++++ vdr-1.3.21/libsi/util.c	2005-03-25 18:56:34.000000000 +0100
+@@ -263,9 +263,11 @@
+ u_int32_t CRC32::crc32 (const char *d, int len, u_int32_t crc)
+ {
+    register int i;
++   // GA Speedup
++   const unsigned char *u=(unsigned char*)d; // Saves & 0xff
+ 
+-   for (i=0; i<len; i++)
+-      crc = (crc << 8) ^ crc_table[((crc >> 24) ^ *d++) & 0xff];
++   for (i=0; i<len; i++) 
++      crc = (crc << 8) ^ crc_table[ ((crc >> 24) ^ *u++) ];
+ 
+    return crc;
+ }
+ 

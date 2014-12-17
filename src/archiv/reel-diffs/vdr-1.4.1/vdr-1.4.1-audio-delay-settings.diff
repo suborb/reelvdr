@@ -1,0 +1,157 @@
+diff -u vdr-1.4.1-pl2/config.c vdr-1.4.1/config.c
+--- vdr-1.4.1-pl2/config.c	2006-08-03 13:44:19.000000000 +0200
++++ vdr-1.4.1/config.c	2006-08-03 13:38:12.000000000 +0200
+@@ -256,6 +256,10 @@
+   UpdateChannels = 5;
+   UseDolbyDigital = 1;
+   UseDolbyInRecordings = 1;
++  LiveDelay = 20;
++  ReplayDelay = 25;
++  PCMDelay = 6;
++  MP2Delay = 25;
+   ChannelInfoPos = 0;
+   ChannelInfoTime = 5;
+   OSDLeft = 54;
+@@ -418,6 +422,10 @@
+   else if (!strcasecmp(Name, "UpdateChannels"))      UpdateChannels     = atoi(Value);
+   else if (!strcasecmp(Name, "UseDolbyDigital"))     UseDolbyDigital    = atoi(Value);
+   else if (!strcasecmp(Name, "UseDolbyInRecordings")) UseDolbyInRecordings = atoi(Value);
++  else if (!strcasecmp(Name, "LiveDelay"))           LiveDelay          = atoi(Value);
++  else if (!strcasecmp(Name, "ReplayDelay"))         ReplayDelay        = atoi(Value);
++  else if (!strcasecmp(Name, "PCMDelay"))            PCMDelay           = atoi(Value);
++  else if (!strcasecmp(Name, "MP2Delay"))            MP2Delay           = atoi(Value);
+   else if (!strcasecmp(Name, "ChannelInfoPos"))      ChannelInfoPos     = atoi(Value);
+   else if (!strcasecmp(Name, "ChannelInfoTime"))     ChannelInfoTime    = atoi(Value);
+   else if (!strcasecmp(Name, "OSDLeft"))             OSDLeft            = atoi(Value);
+@@ -487,6 +495,10 @@
+   Store("UpdateChannels",     UpdateChannels);
+   Store("UseDolbyDigital",    UseDolbyDigital);
+   Store("UseDolbyInRecordings", UseDolbyInRecordings);
++  Store("LiveDelay",          LiveDelay);
++  Store("ReplayDelay",        ReplayDelay);
++  Store("PCMDelay",           PCMDelay);
++  Store("MP2Delay",           MP2Delay);
+   Store("ChannelInfoPos",     ChannelInfoPos);
+   Store("ChannelInfoTime",    ChannelInfoTime);
+   Store("OSDLeft",            OSDLeft);
+diff -u vdr-1.4.1-pl2/config.h vdr-1.4.1/config.h
+--- vdr-1.4.1-pl2/config.h	2006-08-03 13:44:19.000000000 +0200
++++ vdr-1.4.1/config.h	2006-08-03 13:38:12.000000000 +0200
+@@ -236,6 +236,10 @@
+   int VideoFormat;
+   int UpdateChannels;
+   int UseDolbyDigital;
++  int LiveDelay;   //RC: for bitstreamout
++  int ReplayDelay; //RC: for bitstreamout
++  int PCMDelay;    //RC: for bitstreamout
++  int MP2Delay;    //RC: for bitstreamout
+   int UseDolbyInRecordings;
+   int ChannelInfoPos;
+   int ChannelInfoTime;
+diff -u vdr-1.4.1-pl2/i18n.c vdr-1.4.1/i18n.c
+--- vdr-1.4.1-pl2/i18n.c	2006-05-05 15:26:09.000000000 +0200
++++ vdr-1.4.1/i18n.c	2006-08-03 13:43:25.000000000 +0200
+@@ -3678,11 +3678,11 @@
+     "Video format",
+     "Formát videa",
+   },
+-  { "Setup.DVB$Use Dolby Digital",
+-    "Dolby-Digital-Ton benutzen",
++  { "Setup.DVB$Use Dolby Digital/dts",
++    "Dolby Digital/dts benutzen",
+     "Uporabljaj Dolby Digital",
+-    "Dolby Digital",
+-    "Dolby Digital gebruiken",
++    "Attivare uscita audio digitale", //TODO
++    "Dolby Digital/dts gebruiken",
+     "",//TODO
+     "Utiliser le Dolby Digital",
+     "",//TODO
+@@ -3700,6 +3700,72 @@
+     "Anvend Dolby Digital",
+     "Pou¾ívat zvuk v Dolby Digital",
+   },
++  { " Delay in Live Mode (10ms)", //pls note the leading blank
++    " Verzögerung bei Livebild (10ms)",
++    "",
++    " Ritardo in Modalita' Live (10ms)",//TODO
++    " Vertraging in Live Mode (10ms)",
++    "",//TODO
++    "",
++    "",//TODO
++    "",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",
++    "",
++    "",//TODO
++    "",//TODO
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { " Delay in Replay Mode (10ms)",
++    " Verzögerung bei Wiedergabe (10ms)",
++    "",
++    " Ritardo in Modalita' Riproduzione (10ms)",//TODO
++    " Vertraging in weergave mode (10ms)",
++    "",//TODO
++    "",
++    "",//TODO
++    "",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",
++    "",
++    "",//TODO
++    "",//TODO
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { " Delay Stereo (10ms)",
++    " Verzögerung Stereo (10ms)",
++    "",
++    " Ritardo Stereo (10ms)",//TODO
++    " Stereo vertraging (10ms)",
++    "",//TODO
++    "",
++    "",//TODO
++    "",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",
++    "",
++    "",//TODO
++    "",//TODO
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
+   { "Setup.DVB$Update channels",
+     "Kanäle aktualisieren",
+     "Posodobi kanale",
+diff -u vdr-1.4.1-pl2/menu.c vdr-1.4.1/menu.c
+--- vdr-1.4.1-pl2/menu.c	2006-08-03 13:44:19.000000000 +0200
++++ vdr-1.4.1/menu.c	2006-08-03 13:38:12.000000000 +0200
+@@ -2364,6 +2364,11 @@
+   for (int i = 0; i < numAudioLanguages; i++)
+       Add(new cMenuEditStraItem(tr("Setup.DVB$Audio language"),    &data.AudioLanguages[i], I18nNumLanguages, I18nLanguages()));
+ 
++  Add(new cMenuEditBoolItem(tr("Setup.DVB$Use Dolby Digital/dts"),     &data.UseDolbyDigital));
++  if (data.UseDolbyDigital) {
++     Add(new cMenuEditIntItem(tr(" Delay ac3/dts (10ms)"),     &data.ReplayDelay, 0, 80));
++  }
++  Add(new cMenuEditIntItem(tr(" Delay Stereo (10ms)"),                &data.MP2Delay, 0, 80));
+   SetCurrent(Get(current));
+   Display();
+ }

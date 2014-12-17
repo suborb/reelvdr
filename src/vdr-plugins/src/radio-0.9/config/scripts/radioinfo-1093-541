@@ -1,0 +1,27 @@
+#!/bin/bash
+# MDR Jump-Playlist
+# $1 = outfile
+
+### Variabel
+Name="MDR Jump [www.jumpradio.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.jumpradio.de/scripts/musik/wsx_vote_recher.cfm?&titelsuche=zeit"
+
+# Artist/Title
+artist=`grep -B30 '<h2>Suche nach Datum und Uhrzeit' /tmp/playlist | tac`
+artist=${artist/*$'">'/}; artist=${artist/$'<'\/'h2>'*/}
+title=`grep -B29 '<h2>Suche nach Datum und Uhrzeit' /tmp/playlist | tac`
+title=${title/*$'">"'/}; title=${title/$'"<'\/'p>'*/}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

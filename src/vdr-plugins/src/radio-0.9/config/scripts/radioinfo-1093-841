@@ -1,0 +1,25 @@
+#!/bin/bash
+# radioeins-Playlist
+# $1 = outfile
+
+### Variabel
+Name="radioeins [radioeins.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://radioeins.funtip.de/playList.do"
+
+# Artist/Title
+artist=`grep -A17 'summary="Liste der radioeins Musiktitel"*' /tmp/playlist`
+artist=${artist/*$'<td>'/}; artist=${artist/$'<'\/'td>'*/}
+title=`grep -A18 'summary="Liste der radioeins Musiktitel"*' /tmp/playlist`
+title=${title/*$'<td>'/}; title=${title/$'<'\/'td>'*/}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

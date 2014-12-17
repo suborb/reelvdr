@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S120.0E
+2=Thaicom 1A
+3=East
+4=120.0

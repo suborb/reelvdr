@@ -1,0 +1,49 @@
+/*
+ * eitscan.h: EIT scanner
+ *
+ * See the main source file 'vdr.c' for copyright information and
+ * how to reach the author.
+ *
+ * $Id: eitscan.h 2.1 2012/03/07 13:54:16 kls Exp $
+ */
+
+#ifndef __EITSCAN_H
+#define __EITSCAN_H
+
+#include <time.h>
+#include "channels.h"
+#include "config.h"
+#include "device.h"
+
+class cScanList;
+class cTransponderList;
+
+class cEITScanner {
+private:
+  enum { ActivityTimeout = 60,
+         ScanTimeout = 20
+       };
+  time_t lastScan, lastActivity;
+  int currentChannel;
+#ifdef REELVDR
+  bool dailyScanActive;
+#endif
+  cScanList *scanList;
+  cTransponderList *transponderList;
+public:
+  cEITScanner(void);
+  ~cEITScanner();
+#ifdef REELVDR
+  bool Active(void) { return currentChannel || lastActivity == 0 || dailyScanActive; }
+#else
+  bool Active(void) { return currentChannel || lastActivity == 0; }
+#endif
+  void AddTransponder(cChannel *Channel);
+  void ForceScan(void);
+  void Activity(void);
+  void Process(void);
+  };
+
+extern cEITScanner EITScanner;
+
+#endif //__EITSCAN_H

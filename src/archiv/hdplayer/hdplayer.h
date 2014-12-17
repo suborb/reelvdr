@@ -1,0 +1,5 @@
+#ifndef HDPLAYER_H_INCLUDED
+#define HDPLAYER_H_INCLUDED
+
+
+#endif // def HDPLAYER_H_INCLUDED

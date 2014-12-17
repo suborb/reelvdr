@@ -1,0 +1,433 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-burn\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 09:40+0200\n"
+"PO-Revision-Date: 2009-02-26 17:54+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Versatile convert-and-burn plugin"
+msgstr "Univerzální modul pro převádění a vypalování"
+
+msgid "Burn Recordings to DVD"
+msgstr "Vypálit nahrávky na DVD"
+
+msgid "iso8859-15"
+msgstr "iso8859-15"
+
+msgid "Burn job active"
+msgstr "Úloha vypalování aktivní"
+
+msgid "Burn"
+msgstr "Vypálit"
+
+msgid "Please enter the burn plugin"
+msgstr "Přejděte do modulu pro vypalování"
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Vložte prázdný disk a stiskněte tlačítko OK"
+
+msgid "Job still active - really cancel?"
+msgstr "Úloha stále aktivní - opravdu zrušit?"
+
+msgid "Burning DVD"
+msgstr "Vypalování DVD"
+
+msgid "done"
+msgstr "hotovo"
+
+msgid "DVD with menus"
+msgstr "DVD s nabídkami"
+
+msgid "DVD without menus"
+msgstr "DVD bez nabídek"
+
+msgid "Archive disk"
+msgstr "Archivní disk"
+
+msgid "ISO file only"
+msgstr ""
+
+msgid "Disc"
+msgstr ""
+
+msgid "ISO file and Disc"
+msgstr ""
+
+msgid "No chapters"
+msgstr "Bez kapitol"
+
+msgid "Use editing marks"
+msgstr "Použít střihové značky"
+
+msgid "Every 5 minutes"
+msgstr "Každých 5 minut"
+
+msgid "Every 10 minutes"
+msgstr "Každých 10 minut"
+
+msgid "Every 15 minutes"
+msgstr "Každých 15 minut"
+
+msgid "Every 30 minutes"
+msgstr "Každých 30 minut"
+
+msgid "Every hour"
+msgstr "Každou hodinu"
+
+msgid "none"
+msgstr "žádný"
+
+msgid "Couldn't convert character sets!"
+msgstr "Nelze převést znakové sady!"
+
+msgid "Couldn't open image file!"
+msgstr "Nelze otevřít obrazový soubor!"
+
+msgid "Couldn't create new image!"
+msgstr "Nelze vytvořit nový obraz!"
+
+msgid "Couldn't render menu images!"
+msgstr "Nelze vykreslit obrázky nabídky!"
+
+msgid "Couldn't save image file!"
+msgstr "Nelze uložit obrazový soubor!"
+
+msgid "Recording too big for disc type!"
+msgstr "Nahrávka je pro typ disku příliš veliká!"
+
+msgid "Disc too big for disc type!"
+msgstr "Disk je pro typ disku příliš veliký!"
+
+msgid "A job failed!"
+msgstr "Úloha se nezdařila!"
+
+msgid "A job was finished successfully."
+msgstr "Úloha byla úspěšně dokončena."
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "Options"
+msgstr "Možnosti"
+
+msgid "Title of recording"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+msgid "Move down"
+msgstr "Dolů"
+
+msgid "Track$Off"
+msgstr "Vyp"
+
+msgid "Track$On"
+msgstr "Zap"
+
+msgid "Language code"
+msgstr "Kód jazyka"
+
+msgid "Choose title"
+msgstr "Zvolte název"
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "Nahrávky: %1$d, celková velikost: %2$.1f MB"
+
+msgid "Write DVD"
+msgstr "Zapsat na DVD"
+
+msgid "Select recordings for burning with 'OK'"
+msgstr ""
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr "Doporučené médium: %s"
+
+msgid "Only archive disk possible"
+msgstr "Lze použít pouze archivní disk"
+
+msgid "Info"
+msgstr "Informace"
+
+msgid "Button$Burn"
+msgstr "Vypálit"
+
+msgid "Select recording with > OK <"
+msgstr "Vyberte nahrávku tlačítkem OK"
+
+msgid "Analyzing recording..."
+msgstr "Analýza nahrávky..."
+
+msgid "Job"
+msgstr "Úloha"
+
+msgid "DVD title"
+msgstr "Název DVD"
+
+msgid "Archive-ID"
+msgstr "ID archivu"
+
+msgid "Recordings scheduled to be burnt are:"
+msgstr ""
+
+msgid "No recordings marked"
+msgstr "Žádné vybrané nahrávky"
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please press the blue key to select recording."
+msgstr ""
+
+msgid "Remove"
+msgstr "Odebrat"
+
+msgid "Details"
+msgstr ""
+
+msgid "Button$Cancel"
+msgstr "Storno"
+
+msgid "No video track selected!"
+msgstr "Není vybrána žádná stopa videa!"
+
+msgid "No audio track selected!"
+msgstr "Není vybrána žádná zvuková stopa!"
+
+msgid "Not enough free disk space!"
+msgstr "Nedostatek volného místa na disku!"
+
+msgid "Remove recording from list?"
+msgstr "Odebrat nahrávku ze seznamu?"
+
+msgid "Remove all recordings from list?"
+msgstr ""
+
+msgid "Status"
+msgstr "Stav"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Úloha aktivní (zápis: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Úloha aktivní (převod: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Úloha aktivní (zápis)"
+
+msgid "Job active (Converting)"
+msgstr "Úloha aktivní (převod)"
+
+msgid "No active or waiting jobs present"
+msgstr "Žádná aktivní nebo čekající úloha"
+
+msgid "Canceled jobs"
+msgstr "Zrušené úlohy"
+
+msgid "Erroneous jobs"
+msgstr "Úlohy s chybou"
+
+msgid "Button$Recordings"
+msgstr "Nahrávky"
+
+msgid "Restart"
+msgstr "Restartovat"
+
+msgid "Retry"
+msgstr "Opakovat"
+
+msgid "Button$Remove"
+msgstr "Odebrat"
+
+msgid "Replace current job?"
+msgstr "Nahradit aktuální úlohu?"
+
+msgid "Remove job from list?"
+msgstr "Odebrat úlohu ze seznamu?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Celková velikost: %1$.1f MB %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(bylo by zmenšeno)"
+
+msgid "Aspect ratio"
+msgstr "Poměr stran"
+
+msgid "Previous page"
+msgstr "Předchozí stránka"
+
+msgid "Next page"
+msgstr "Další stránka"
+
+msgid "Play movie"
+msgstr "Přehrát film"
+
+msgid "Button$Back"
+msgstr "Zpět"
+
+msgid "Couldn't read index"
+msgstr "Nelze načíst index"
+
+msgid "Couldn't browse recording"
+msgstr "Nelze procházet nahrávku"
+
+msgid "mp2"
+msgstr ""
+
+msgid "dolby"
+msgstr "dolby"
+
+msgid "Couldn't read marks"
+msgstr "Nelze načíst značky"
+
+msgid "Recording is too short"
+msgstr "Nahrávka je příliš krátká"
+
+msgid "Disk type"
+msgstr "Typ disku"
+
+msgid "Write to"
+msgstr ""
+
+msgid "Burn speed"
+msgstr "Rychlost vypalování"
+
+msgid "unlimited"
+msgstr "bez omezení"
+
+msgid "Skin"
+msgstr "Vzhled"
+
+msgid "Chapters"
+msgstr "Kapitoly"
+
+msgid "Cut"
+msgstr "Střih"
+
+msgid "Skip empty titlemenu"
+msgstr "Přeskočit prázdnou titulní nabídku"
+
+msgid "Skip short mainmenu"
+msgstr "Přeskočit krátkou hlavní nabídku"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Obecné nastavení -------------------------------------------------"
+
+msgid "Remove path component"
+msgstr "Odebrat cestu"
+
+msgid "Eject disc after burn"
+msgstr "Po vypálení vysunout disk"
+
+msgid "Demux using"
+msgstr "Demux pomocí"
+
+msgid "Requant using"
+msgstr "Requant pomocí"
+
+msgid "Preserve logfiles"
+msgstr "Zachovat soubory protokolu"
+
+msgid "Spare language code"
+msgstr "Náhradní kód jazyka"
+
+msgid "Status in main menu"
+msgstr "Stav v hlavní nabídce"
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Výchozí nastavení úlohy ------------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Nastavení nabídky úlohy ------------------------------------------"
+
+msgid "Offer disk type"
+msgstr "Nabízet typ disku"
+
+msgid "Offer chapters"
+msgstr "Nabízet kapitoly"
+
+msgid "Offer target"
+msgstr "Nabízet cíl"
+
+msgid "Offer burn speed"
+msgstr "Nabízet rychlost vypalování"
+
+msgid "Offer cutting"
+msgstr "Nabízet střih"
+
+msgid "Offer skip titlemenu"
+msgstr "Nabízet přeskočení titulní nabídky"
+
+msgid "Offer skip mainmenu"
+msgstr "Nabízet přeskočení hlavní nabídky"
+
+msgid "Job options"
+msgstr "Možnosti úlohy"
+
+msgid "Please select burn options below:"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+msgid "skip"
+msgstr ""
+
+msgid "Button$Start"
+msgstr "Spustit"
+
+msgid "Default"
+msgstr "Výchozí"
+
+msgid "Video track"
+msgstr "Stopa videa"
+
+msgid "Audio track"
+msgstr "Zvuková stopa"
+
+msgid "Subtitle track"
+msgstr ""
+
+msgid "page"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Neznámý"
+
+#~ msgid "No recordings marked for burning"
+#~ msgstr "Nejsou vybrány žádné nahrávky k vypálení"
+
+#~ msgid "Create ISO only"
+#~ msgstr "Vytvořit pouze obraz ISO"
+
+#~ msgid "Write to Disc"
+#~ msgstr "Zapsat na disk"
+
+#~ msgid "Create ISO and write"
+#~ msgstr "Vytvořit obraz ISO a zapsat"
+
+#~ msgid "analog"
+#~ msgstr "analogový"
+
+#~ msgid "Disk content"
+#~ msgstr "Obsah disku"
+
+#, fuzzy
+#~ msgid "Format DVD"
+#~ msgstr "Zapsat na DVD"

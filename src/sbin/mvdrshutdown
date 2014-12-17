@@ -1,0 +1,71 @@
+#!/bin/sh
+# Shutdown script for vdr on ReelBox
+
+# Parameters
+# $1 = next wakeup
+# $2 = time to next wakeup
+# $3 = channel
+# $4 = broadcast name
+# $5 = Shutdownmode (UserShutdown=?)
+
+
+BOOTTIME=300
+
+. /etc/default/globals
+. /etc/reel/platform/*.inc
+
+echo "==== $0 $*"
+
+# Avoid vdr restart
+touch /tmp/vdr.shutdown
+
+# Blink standby LED so the user sees something is going on
+$REELFPCTL -nowait -clearled 1 -blinkled 1 #Standby
+
+# Set Clock
+hwclock -w -u
+
+if RbLite ; then
+    #close CD-Tray
+    eject -t -p /dev/dvd &
+    rm /tmp/cdopen
+fi
+
+# default: disable wakeup
+# TODO: this overflows on Jan 19th, 2038. Find a better way for it before that date
+wakeuptime=2147483647
+now=`date +%s`
+
+if [ "$1" != "0" ]; then
+	wakeuptime=$(($1-$BOOTTIME))
+fi
+
+logger -s "Setting wakeuptime to $wakeuptime"
+echo $wakeuptime >/tmp/vdr.wakeup
+
+# make shure wakeuptime for fp is in the future. Is 60s enough?
+if [ $wakeuptime -lt $now ] ; then
+	wakeuptime=$(($now+60))
+fi
+
+# Tell FP to wakeup at x
+$REELFPCTL -wakeup $wakeuptime
+
+
+# Shutdown System
+if [ "$6" = "deepstandby" ]; then
+    Syslog "shutdown system"
+    touch /tmp/vdr.deepstandby
+fi
+
+# Reboot System
+if [ "$6" = "reboot" ]; then
+    Syslog "reboot system"
+    if RbLite ; then
+	touch /tmp/reboot
+    else
+	touch /var/tmp/reboot
+        touch /tmp/vdr.deepstandby
+    fi
+fi
+

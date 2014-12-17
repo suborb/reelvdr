@@ -1,0 +1,256 @@
+#!/bin/sh
+#
+# Reelbox Frontpanel LED control
+#
+# (C) 2005 by Reel Multimedia AG http://www.reelbox.org
+# Author: RollerCoaster@reel-multimedia.com
+# Licence: GPL2
+# History: 20050830 initial version
+#          20070824 adoptions for RB II
+#
+
+NAME="fpleds"
+DESC="Setting ReelBox frontpanel LEDs"
+
+. /lib/lsb/init-functions
+
+# Global vars
+PATH="/sbin:/bin:/usr/bin"
+
+REELFPCTL="/sbin/reelfpctl -nowait"
+
+# Source sysconfig
+if [ -f /etc/default/sysconfig ] ; then
+        . /etc/default/sysconfig
+else
+        . /etc/sysconfig
+fi
+
+#
+# global definitions
+#
+
+STANDBY_LED=1
+REMOTE_LED=2
+RECORD_LED=4
+POWER_LED=8
+ALL_LED=15
+
+NOCLOCK=0
+CLOCK=1
+
+IMAGEDIR="/etc/reel/images"
+
+STANDBY=false
+
+#set -x
+#exec > /root/$(basename $0).log 2>&1
+#exec > /dev/tty11 2>&1
+
+[ -L /dev/frontpanel ] || /sbin/dev_frontpanel.sh
+
+#
+# Functions
+#
+Syntax () {
+cat << EOF
+Usage: `basename $0` [ red | blue | pink ] [ brightness ]
+Options:
+     [ red | blue | pink ]
+     no option: read from sysconfig
+     pink:      you may only use this if your RB is in your childrens room
+
+     brightness: 0 or off: turn off LEDs
+                 1..5:     minimum ... maximum
+
+Description:
+     Sets brigthness and color of frontpanel LEDs
+EOF
+}
+
+#Startfunction
+fstart () {
+	echo "done"
+}
+
+#Stopfunction aka deep-standby
+fstop () {
+	SetDisplayContrast
+	# DS: turn off any leds except Power-LED
+	$REELFPCTL -setledbrightness `eval_bright high` -clearled $ALL_LED -setled $POWER_LED
+
+	# set clock and brightness of display
+	if [ "$BLACKDISP" = "yes" ] ; then
+		DBRIGHT=8
+	else
+		DBRIGHT=0
+	fi
+
+	if [ -f /var/tmp/reboot ] || [ "$1" = "reboot" ]; then
+	    $REELFPCTL -displaymode $NOCLOCK -clearlcd -brightness 64 -showpnm "$IMAGEDIR/reboot/reboot.pnm"
+	else
+	    $REELFPCTL -clearlcd $TOPTEXT -displaymode $CLOCK -brightness $DBRIGHT
+	    #reelfpctl -clearlcd
+	fi
+}
+
+eval_bright () {
+	case $1 in
+		off|0)
+			VAL=0
+			;;
+		1|min)
+			VAL=1
+			;;
+		2|low)
+			VAL=2
+			;;
+		3|med)
+			VAL=4
+			;;
+		4|high)
+			VAL=8
+			;;
+		5|max)
+			VAL=16
+			;;
+		*)
+			VAL=4
+			echo unknown value $1
+			;;
+	esac
+	echo $VAL
+}
+
+
+SetDisplayContrast () {
+	if [ "$BLACKDISP" = "yes" ] ; then
+		$REELFPCTL -contrast 205 &
+	else
+		$REELFPCTL -contrast 240 &
+	fi
+}
+
+
+#
+# Main
+#
+
+wakeup=$(cat /tmp/vdr.wakeup)
+if [ "$wakeup" = "2147483647" ] || [ "$wakeup" = "0" ] ; then
+    TOPTEXT=""
+else
+    TOPTEXT="-toptext TIMER"
+fi
+
+#eval cmd line options
+if [ "$1" != "" ]; then
+	case $1 in
+		start)
+			# called by init on startup
+			STANDBY=true
+			$REELFPCTL -displaymode 0 -clearlcd -showpnm "$IMAGEDIR/boot00.pnm"
+			log_daemon_msg "$DESC (startup)"
+			;;
+		blue|red|pink)
+			log_daemon_msg "$DESC to $1"
+			FPCOLOR="$1"
+			;;
+		trayopen|-)
+			log_daemon_msg "$DESC because DVD-tray is opened"
+			# is called with "trayopen" by mount.sh to brighten LEDs if CDtray is opened
+			;;
+		stop|deep-standby)
+			# called by init when going to ds
+			log_daemon_msg "$DESC (shutdown)"
+			fstop
+			exit 0
+			;;
+		reboot)
+			# called by init when going to reboot
+			log_daemon_msg "$DESC (shutdown)"
+                        fstop reboot
+                        exit 0
+			;;
+		standby)
+			log_daemon_msg "$DESC (standby)"
+			STANDBY=true
+			;;
+		off)
+			# turn off the whole christmas tree
+			log_daemon_msg "$DESC to off"
+			$REELFPCTL -setledbrightness 0 -clearled $ALL_LED
+			$REELFPCTL -displaymode $NOCLOCK -brightness 0
+			exit 0
+			;;
+		-h)
+			Syntax
+			exit 2
+			;;
+		*)
+			echo unknown option $1
+			Syntax
+			exit 2
+			;;
+	esac
+fi
+
+if [ -z $2 ] ; then
+	test -z $FPSLEDBR && FPSLEDBR=3
+	test -z $FPCLEDBR && FPCLEDBR=3
+else
+	#FPSLEDBR=$2
+	FPCLEDBR=$2
+fi
+
+if ! $STANDBY && [ -f /tmp/vdr.shutdown ] ; then
+	STANDBY=true
+fi
+
+SetDisplayContrast
+
+# brightness for status leds on left side of FP
+BSTATUS=`eval_bright $FPSLEDBR`
+
+if $STANDBY ; then
+	BCONTROL=`eval_bright $FPCLEDBRSTB`
+	#$REELFPCTL $TOPTEXT -displaymode $CLOCK
+else
+        echo "Status LEDs: $BSTATUS"
+	BCONTROL=`eval_bright $FPCLEDBR`
+	echo "Control LEDs: $BCONTROL"
+fi
+
+
+test "$1" = "trayopen" && BCONTROL=$(($BCONTROL+10))
+
+if $STANDBY && [ $FPCOLORSTB ] ; then
+	FPCOLOR=$FPCOLORSTB
+fi
+
+case $FPCOLOR in
+	red)
+		BBLUE=0
+		BRED=$BCONTROL
+		;;
+	blue)
+		BRED=0
+		BBLUE=$BCONTROL
+		;;
+	pink)
+		BRED=$BCONTROL
+		BBLUE=$BCONTROL
+		;;
+	*)
+		echo "Unknown option $SOPTION."
+		Syntax
+		exit 2
+		;;
+esac
+
+VAL=$(($BSTATUS+256*$BRED+65536*$BBLUE))
+$REELFPCTL -setledbrightness $VAL
+
+test "$1" = "trayopen" && (sleep 15 ; $0) &
+
+log_end_msg 0

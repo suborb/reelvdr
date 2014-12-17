@@ -1,0 +1,174 @@
+diff -Nur vdr-1.3.27/i18n.c vdr-1.3.27-reel/i18n.c
+--- vdr-1.3.27/i18n.c   2005-10-03 16:43:49.000000000 +0200
++++ vdr-1.3.27-reel/i18n.c      2005-09-28 10:38:02.000000000 +0200
+@@ -235,7 +235,7 @@
+     "Aufzeichnungen",
+     "Posnetki",
+     "Registrazioni",
+-    "Opnames",
++    "Opname's",
+     "Gravações",
+     "Enregistrements",
+     "Opptak",
+@@ -1519,7 +1519,7 @@
+     "Inversion",
+     "Inverzija",
+     "Inversion",
+-    "Inversion",
++    "Inversie",
+     "Inversion",
+     "Inversion",
+     "Inversion",
+@@ -1540,7 +1540,7 @@
+     "Bandwidth",
+     "Pasovna sirina",
+     "Bandwidth",
+-    "Bandwidth",
++    "Bandbreedte",
+     "Bandwidth",
+     "Bande passante",
+     "Bandwidth",
+@@ -1603,7 +1603,7 @@
+     "Modulation",
+     "Modulacija",
+     "Modulation",
+-    "Modulation",
++    "Modulatie",
+     "Modulation",
+     "Modulation",
+     "Modulation",
+@@ -1624,7 +1624,7 @@
+     "Transmission",
+     "Prenos",
+     "Transmission",
+-    "Transmission",
++    "Transmissie",
+     "Transmission",
+     "Transmission",
+     "Transmission",
+@@ -2467,7 +2467,7 @@
+     "Sonstiges",
+     "Ostalo",
+     "Generici",
+-    "Overig",
++    "Overige",
+     "Outros",
+     "Divers",
+     "Forskjellig",
+@@ -2909,7 +2909,7 @@
+     "Aufnahmeverzeichnisse",
+     "Direktoriji za posnetke",
+     "Directory di registrazione",
+-    "Opname directories",
++    "Opname directorie's",
+     "Directorias de gravação",
+     "Dossiers d'enregistrements",
+     "Kataloger til opptak",
+@@ -2972,7 +2972,7 @@
+     "Alte EPG-Daten anzeigen (min)",// TODO
+     "",// TODO
+     "Visualizzazione dati vecchi (min)",
+-    "Oude EPG data tonen (min)",
++    "Oude EPG-Data's tonen (min)",
+     "",// TODO
+     "Montrer l'EPG plus vieux de m min",
+     "",// TODO
+@@ -3035,7 +3035,7 @@
+     "Bevorzugte Sprachen",
+     "",// TODO
+     "Lingue preferite",
+-    "Voorkeurstalen",
++    "Voorkeur Talen",
+     "",// TODO
+     "Langues préférées",
+     "",// TODO
+@@ -3056,7 +3056,7 @@
+     "Bevorzugte Sprache",
+     "",// TODO
+     "Lingua preferita",
+-    "Voorkeurstaal",
++    "Voorkeur Talen",
+     "",// TODO
+     "Langue préférée",
+     "",// TODO
+@@ -3119,7 +3119,7 @@
+     "Dolby Digital Ton benutzen",
+     "",//TODO
+     "",//TODO
+-    "Dolby Digital gebruiken",
++    "Dolby Digitaal gebruiken",
+     "",//TODO
+     "Utiliser le Dolby Digital",
+     "",//TODO
+@@ -3770,7 +3770,7 @@
+     "Zeitpuffer bei VPS (s)",
+     "",// TODO
+     "Margine VPS",
+-    "Marge VPS (s)",
++    "Marge bij VPS (s)",
+     "",// TODO
+     "Marge VPS",
+     "",// TODO
+@@ -4151,7 +4151,7 @@
+     "Eine Taste auf der FB drücken",
+     "Pritisnite tipko na upravljalcu",
+     "Premere un tasto dell'unita` RC",
+-    "Druk op een willekeurige knop",
++    "Druk willekeurige toets op de AB",
+     "Pressione qualquer tecla do telecomando",
+     "Appuyer sur une touche de la télécommande",
+     "Trykk en av tastene på fjernkontrollen",
+@@ -4172,7 +4172,7 @@
+     "FB Code erkannt!",
+     "IR koda sprejeta!",
+     "Codice RC rilevato!",
+-    "Afstandsbediening code herkend!",
++    "AB code herkend!",
+     "Código do telecomando detectado!",
+     "Code de la télécommande détecté!",
+     "Fjernkontroll-kodetype funnet!",
+@@ -4193,7 +4193,7 @@
+     "Keine Taste drücken...",
+     "Ne pritiskajte tipk...",
+     "Non premere alcun tasto...",
+-    "Druk niet op een knop...",
++    "Druk geen enkele toets...",
+     "Não pressione nada...",
+     "N'appuyer sur aucune touche ...",
+     "Ikke trykk på noen av tastene...",
+@@ -4235,7 +4235,7 @@
+     "Taste für '%s' drücken",
+     "Pritisnite tipko za '%s'",
+     "Premere il tasto per '%s'",
+-    "Druk knop voor '%s'",
++    "Druk toets voor '%s'",
+     "Pressione tecla para '%s'",
+     "Appuyer sur la touche '%s'",
+     "Trykk tasten for '%s'",
+@@ -4382,7 +4382,7 @@
+     "'Auf' speichert, 'Ab' bricht ab",
+     "'Gor' za potrditev, 'Dol' za prekinitev",
+     "'Su' per salvare, 'Giu' per annullare",
+-    "'Omhoog' te bewaren, 'Omlaag' voor annuleren",
++    "'Omhoog' bewaren, 'Omlaag' annuleren",
+     "'Cima' para Salvar, 'Baixo' para Cancelar",
+     "Appuyer sur 'Haut' pour sauvegarder, 'Bas' pour annuler",
+     "Trykk 'Opp' for å lagre, 'Ned' for å avbryte",
+@@ -4719,7 +4719,7 @@
+     "Vorlauf",
+     "Hitro naprej",
+     "Avanti Veloce",
+-    "Vooruitspoelen",
++    "Snel vooruit",
+     "",// TODO
+     "Avance rapide",
+     "",// TODO
+@@ -4740,7 +4740,7 @@
+     "Rücklauf",
+     "Hitro nazaj",
+     "Indietro Veloce",
+-    "Terugspoelen",
++    "Snel terug",
+     "",// TODO
+     "Retour rapide",
+     "",// TODO

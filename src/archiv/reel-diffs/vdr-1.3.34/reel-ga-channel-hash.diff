@@ -1,0 +1,184 @@
+diff -Nur vdr-1.3.27-svn/channels.c vdr-1.3.27/channels.c
+--- vdr-1.3.27-svn/channels.c	2005-05-29 12:32:38.000000000 +0200
++++ vdr-1.3.27/channels.c	2005-07-14 19:02:12.000000000 +0200
+@@ -796,6 +796,8 @@
+      else
+         return false;
+      }
++  // GA Speedup
++  Channels.AddHash(this,this->Sid());
+   return ok;
+ }
+ 
+@@ -883,19 +885,31 @@
+   return channel ? Idx : -1;
+ }
+ 
++void cChannels::AddHash(cChannel* channel, int id)
++{
++       if (!channel_hash)
++               channel_hash=new cHash<cChannel>;
++       channel_hash->Add(channel,channel->Sid());
++}
++
+ void cChannels::ReNumber( void )
+ {
+   int Number = 1;
++  delete channel_hash;
++  channel_hash=new cHash<cChannel>;
++
+   for (cChannel *channel = First(); channel; channel = Next(channel)) {
+       if (channel->GroupSep()) {
+          if (channel->Number() > Number)
+             Number = channel->Number();
+          }
+       else {
++             channel_hash->Add(channel,channel->Sid()); // GA Speedup
+          maxNumber = Number;
+          channel->SetNumber(Number++);
+          }
+       }
++  printf("Renumber done\n");
+ }
+ 
+ cChannel *cChannels::GetByNumber(int Number, int SkipGap)
+@@ -915,34 +929,90 @@
+ 
+ cChannel *cChannels::GetByServiceID(int Source, int Transponder, unsigned short ServiceID)
+ {
++#if 0
+   for (cChannel *channel = First(); channel; channel = Next(channel)) {
+       if (!channel->GroupSep() && channel->Source() == Source && ISTRANSPONDER(channel->Transponder(), Transponder) && channel->Sid() == ServiceID)
+          return channel;
+       }
+   return NULL;
++#else
++  // GA Speedup
++  cList<cHashObject> *channel_list=channel_hash->GetList(ServiceID);
++  if (!channel_list)
++         return NULL;
++
++  for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++         cChannel *channel=(cChannel*)hobj->object;
++         if (!channel->GroupSep() && channel->Source() == Source &&
++             ISTRANSPONDER(channel->Transponder(), Transponder) && channel->Sid() == ServiceID)
++                 return channel;
++      }
++  return 0;
++#endif
++
+ }
+ 
+ cChannel *cChannels::GetByChannelID(tChannelID ChannelID, bool TryWithoutRid, bool TryWithoutPolarization)
+ {
++  int sid=ChannelID.Sid(); // GA-Speedup
++
++#if 0
+   for (cChannel *channel = First(); channel; channel = Next(channel)) {
+-      if (!channel->GroupSep() && channel->GetChannelID() == ChannelID)
+-         return channel;
+-      }
++         if (!channel->GroupSep() && channel->Sid()==sid)
++                 if (channel->GetChannelID() == ChannelID)
++                         return channel;
++  }
+   if (TryWithoutRid) {
+      ChannelID.ClrRid();
+      for (cChannel *channel = First(); channel; channel = Next(channel)) {
+-         if (!channel->GroupSep() && channel->GetChannelID().ClrRid() == ChannelID)
+-            return channel;
+-         }
++            if (!channel->GroupSep() && channel->Sid()==sid)
++                    if ( channel->GetChannelID().ClrRid() == ChannelID)
++                            return channel;
+      }
++  }
+   if (TryWithoutPolarization) {
+      ChannelID.ClrPolarization();
+      for (cChannel *channel = First(); channel; channel = Next(channel)) {
+-         if (!channel->GroupSep() && channel->GetChannelID().ClrPolarization() == ChannelID)
+-            return channel;
++         if (!channel->GroupSep() && channel->Sid()==sid)
++                if (channel->GetChannelID().ClrPolarization() == ChannelID)
++                        return channel;
++     }
++  }
++  return NULL;
++#else
++  // GA Speedup
++  cList<cHashObject> *channel_list=channel_hash->GetList(sid);
++  if (!channel_list)
++         return NULL;
++
++  for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++         cChannel *channel=(cChannel*)hobj->object;
++         if (!channel->GroupSep() && channel->Sid()==sid)
++                 if (channel->GetChannelID() == ChannelID)
++                         return channel;
++      }
++  if (TryWithoutRid) {
++     ChannelID.ClrRid();
++     for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++
++            cChannel *channel=(cChannel*)hobj->object;
++            if (!channel->GroupSep() && channel->Sid()==sid)
++                    if ( channel->GetChannelID().ClrRid() == ChannelID)
++                            return channel;
+          }
+      }
++  if (TryWithoutPolarization) {
++     ChannelID.ClrPolarization();
++     for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++
++            cChannel *channel=(cChannel*)hobj->object;
++            if (!channel->GroupSep() && channel->Sid()==sid)
++                    if (channel->GetChannelID().ClrPolarization() == ChannelID)
++                            return channel;
++     }
++  }
+   return NULL;
++#endif
+ }
+ 
+ bool cChannels::HasUniqueChannelID(cChannel *NewChannel, cChannel *OldChannel)
+diff -Nur vdr-1.3.27-svn/channels.h vdr-1.3.27/channels.h
+--- vdr-1.3.27-svn/channels.h	2005-07-14 20:33:18.000000000 +0200
++++ vdr-1.3.27/channels.h	2005-07-14 18:47:25.000000000 +0200
+@@ -65,10 +65,11 @@
+ public:
+   tChannelID(void) { source = nid = tid = sid = rid = 0; }
+   tChannelID(int Source, int Nid, int Tid, int Sid, int Rid = 0) { source = Source; nid = Nid; tid = Tid; sid = Sid; rid = Rid; }
+-  bool operator== (const tChannelID &arg) const { return source == arg.source && nid == arg.nid && tid == arg.tid && sid == arg.sid && rid == arg.rid; }
++  bool inline operator== (const tChannelID &arg) const { return source == arg.source && nid == arg.nid && tid == arg.tid && sid == arg.sid && rid == arg.rid; }
+   bool Valid(void) const { return (nid || tid) && sid; } // rid is optional and source may be 0//XXX source may not be 0???
+   tChannelID &ClrRid(void) { rid = 0; return *this; }
+   tChannelID &ClrPolarization(void);
++  int Sid(void) {return sid;};
+   static tChannelID FromString(const char *s);
+   cString ToString(void) const;
+   static const tChannelID InvalidID;
+@@ -199,9 +201,11 @@
+   int maxNumber;
+   int modified;
+   int beingEdited;
++  cHash<cChannel> *channel_hash;
+   void DeleteDuplicateChannels(void);
+ public:
+   cChannels(void);
++  void AddHash(cChannel*, int id);
+   bool Load(const char *FileName, bool AllowComments = false, bool MustExist = false);
+   int GetNextGroup(int Idx);   // Get next channel group
+   int GetPrevGroup(int Idx);   // Get previous channel group
+diff -Nur vdr-1.3.27-svn/tools.h vdr-1.3.27/tools.h
+--- vdr-1.3.27-svn/tools.h	2005-07-13 14:13:14.000000000 +0200
++++ vdr-1.3.27/tools.h	2005-07-14 19:03:05.000000000 +0200
+@@ -241,8 +241,8 @@
+   friend class cHashBase;
+ private:
+   unsigned int id;
+-  cListObject *object;
+ public:
++  cListObject *object;
+   cHashObject(cListObject *Object, unsigned int Id) { object = Object; id = Id; }
+   };
+ 

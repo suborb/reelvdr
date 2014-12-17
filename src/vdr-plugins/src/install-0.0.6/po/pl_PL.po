@@ -1,0 +1,806 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-install\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-06-26 09:59+0200\n"
+"PO-Revision-Date: 2008-09-30 12:43+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "The ReelBox installation wizard"
+msgstr "Kreator Instalacyjny"
+
+msgid "The channellist could not be installed automatically from the ReelBox Avantgarde."
+msgstr ""
+
+msgid "Channellist"
+msgstr "Lista Kanałów"
+
+msgid "Channelscan"
+msgstr "Szukanie Kanałów"
+
+msgid "We shall now scan for channels."
+msgstr "Teraz bedziemy szukac Kanałów"
+
+msgid "This will take a few minutes."
+msgstr "To zabierze pare minut."
+
+msgid "Press OK to continue"
+msgstr "Nasicnij OK zeby okntynuować"
+
+msgid "MultiRoom"
+msgstr ""
+
+msgid "Scanning for ReelBox MultiRoom server on network. Please wait..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Prosze czekać..."
+
+msgid "The MultiRoom system is already active."
+msgstr ""
+
+msgid "The MultiRoom system cannot be activated."
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is currently configured as recording server:"
+msgstr "Następujący ReelBox Avantgarde jest odnaleziony i bedzie urzyty:"
+
+#, fuzzy
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server (the first one was used up to now):"
+msgstr "Następujący ReelBox Avantgarde jest odnaleziony i bedzie urzyty:"
+
+#, fuzzy
+msgid "\tDisable MultiRoom"
+msgstr "Wyłącz sieć"
+
+#, fuzzy
+msgid "Note:"
+msgstr "Zrobiona"
+
+msgid "* MultiRoom is not enabled!"
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is found, but has MultiRoom disabled, so cannot be used as recording server:"
+msgstr "Następujący ReelBox Avantgarde jest odnaleziony i bedzie urzyty:"
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is found and will be used as recording server:"
+msgstr "Następujący ReelBox Avantgarde jest odnaleziony i bedzie urzyty:"
+
+msgid "\tLeave MultiRoom unconfigured"
+msgstr ""
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server."
+msgstr ""
+
+#, fuzzy
+msgid "Please select one of them:"
+msgstr "Prosze wybrać ReelBox Avantgarde:"
+
+#, fuzzy
+msgid "No ReelBox Avantgarde was found in the network."
+msgstr "Nie znaleziono w sieci ReelBox Avantgarde"
+
+msgid "If you own an Avantgarde, turn it on and activate the MultiRoom System in Setup/Installation/MultiRoom."
+msgstr ""
+
+msgid "Rescan"
+msgstr ""
+
+msgid "Back"
+msgstr "Cofnąć"
+
+msgid "Skip"
+msgstr "Pominąć"
+
+msgid "Setting changes - please wait"
+msgstr "ustawienia zmienione - prosze czekać"
+
+msgid "Storing failed! (UUID is missing)"
+msgstr ""
+
+msgid "Settings stored"
+msgstr ""
+
+msgid "Reception"
+msgstr "Odbiór"
+
+msgid "No internal NetCeiver found. Searching network. Please wait..."
+msgstr ""
+
+msgid "Searching for internal NetCeiver..."
+msgstr ""
+
+#, c-format
+msgid "Searching for NetCeiver in VLAN %d"
+msgstr ""
+
+msgid "Internal NetCeiver found"
+msgstr ""
+
+msgid "NetCeiver found in VLAN"
+msgstr ""
+
+msgid "System error!"
+msgstr "Błąd Systemu!"
+
+#, fuzzy
+msgid "No NetCeiver found!"
+msgstr "Nie znaleziono NetCeiver!"
+
+msgid "Please check if the system cable is connected properly."
+msgstr "Prosze sprawdzić czy kabel systemowy jest prawidłowo podłączony."
+
+msgid "Harddisk"
+msgstr "Twardy dysk"
+
+msgid "Internal harddisk found."
+msgstr ""
+
+msgid "Press OK to format now, otherwise the yellow buttown 'skip'."
+msgstr ""
+
+msgid ""
+"If this is the first usage of the harddisk, it must be formatted now. Formatting will DELETE ALL data on the harddisk.\n"
+" If you have used this harddisk before, you could skip this step."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' was already used before and may contain recordings and multimedia files."
+msgstr ""
+
+msgid "Do you want to mount it and use it as a device for your media files?"
+msgstr ""
+
+msgid "\tYes, mount it, preserve all recordings"
+msgstr ""
+
+msgid "\tNo, do not use the harddisk at all"
+msgstr ""
+
+msgid "You should mount this disk now if you want to use it for permanent timeshift even if you are not going to use it for your media files."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' is already in use for media files."
+msgstr ""
+
+msgid "No action needs to be taken."
+msgstr ""
+
+#, fuzzy
+msgid "Press red key, if you want to format this harddisk:"
+msgstr "Prosze nacisnąć 'Ok' jeżeli chcesz formatować"
+
+msgid "CAUTION:"
+msgstr "UWAGA:"
+
+#, fuzzy
+msgid "If you choose to format, ALL data on the internal harddisk will be deleted!"
+msgstr "Wszystko na twardym dysku bedzie usunięte!"
+
+msgid "Format"
+msgstr "Formatuj"
+
+#, fuzzy
+msgid "Formatting in progress"
+msgstr "Formatowanie nie powiodło się!"
+
+#, fuzzy
+msgid "Formatting"
+msgstr "Formatuj"
+
+#, fuzzy
+msgid "Formatting in progress."
+msgstr "Formatowanie z sukcesem."
+
+#, fuzzy
+msgid "Please wait ..."
+msgstr "Prosze czekać..."
+
+msgid "Time elapsed"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting complete"
+msgstr "Formatowanie nie powiodło się!"
+
+#, fuzzy
+msgid "Formatting was successful."
+msgstr "Formatowanie z sukcesem."
+
+#, fuzzy
+msgid "The harddisk is now prepared for recording."
+msgstr "Twardy dysk jest teraz przygotowywany"
+
+msgid "Press 'Next' to proceed with the installation."
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Not Formatting!"
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "Formatting failed!"
+msgstr ""
+
+#, fuzzy
+msgid "Formating failed!"
+msgstr "Formatowanie nie powiodło się!"
+
+msgid "Mounting harddisk ..."
+msgstr ""
+
+#, fuzzy
+msgid "Please select the target for your recordings:"
+msgstr "Prosze wybrać cel dla swoich nagran:"
+
+#, fuzzy
+msgid " I want to store my recordings ..."
+msgstr " Jj chce zapisać swoje nagrania..."
+
+#, fuzzy
+msgid " - on the local harddisk of this NetClient."
+msgstr " - ... na twardym dysku NetClienta."
+
+#, fuzzy
+msgid " - on the harddisk of the ReelBox Avantgarde."
+msgstr " - ... na twardym dysku ReelBox Avantgarde."
+
+msgid "Error"
+msgstr "Błąd"
+
+msgid "No Harddisk found."
+msgstr "Nie odnaleziono Twardego dysku."
+
+msgid "Recording is not possible."
+msgstr "Nagrywanie niemożliwe."
+
+msgid "Handling"
+msgstr "Obsługa"
+
+msgid "Please select a language"
+msgstr "Prosze wybrać jezyk"
+
+msgid "Please select a language and timezone"
+msgstr "prosze wybrac jezyk i strefe czasową"
+
+msgid "Setup.OSD$Language"
+msgstr "Jezyk"
+
+msgid "City/Region"
+msgstr "Miejscowość/Region"
+
+msgid "Please select the prefered language using the"
+msgstr "Prosze wybrać preferowany jezyk uzywając"
+
+msgid "cursor keys on the remote control."
+msgstr "kursos przycisków na pilocie."
+
+msgid "Then press OK to continue."
+msgstr "potem nacisnąć OK zeby kontynuować."
+
+msgid "Done"
+msgstr "Zrobiona"
+
+msgid "Congratulations."
+msgstr "Gratulacje."
+
+msgid "All required settings for the initial operation have"
+msgstr ""
+
+msgid "been saved."
+msgstr ""
+
+msgid "Reel Multimedia wishes you a lot of fun with"
+msgstr ""
+
+msgid "your NetClient."
+msgstr ""
+
+msgid "your ReelBox."
+msgstr "twoj ReelBox."
+
+msgid "The Install prodecure wasn't completed"
+msgstr ""
+
+msgid "successfully."
+msgstr ""
+
+msgid "End"
+msgstr "Koniec"
+
+#, c-format
+msgid "Reception check... %d%%"
+msgstr ""
+
+msgid "In this step you can configure the Reel MultiRoom system."
+msgstr ""
+
+msgid "Enable MultiRoom"
+msgstr ""
+
+msgid "Use this Reelbox as recording server?"
+msgstr ""
+
+msgid "No. of Clients in the network"
+msgstr ""
+
+msgid "Scan for MultiRoom server now"
+msgstr ""
+
+#, c-format
+msgid "Configuring as server: %d%%"
+msgstr ""
+
+msgid "Network"
+msgstr "Sieć"
+
+msgid "Changes done"
+msgstr "Zmiany zrobione"
+
+msgid "Network (WLAN)"
+msgstr ""
+
+msgid "setup plugin missing: cannot configure WLAN"
+msgstr ""
+
+msgid "Network disabled"
+msgstr "Sieć wyłączona"
+
+msgid "Do you want to enable the network?"
+msgstr "Czy chcesz włączyć sieć?"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "No"
+msgstr "Nie"
+
+#, fuzzy
+msgid "Do you want to set up the network now?"
+msgstr "Czy chcesz teraz ustawić sieć?"
+
+msgid "Disable Network"
+msgstr "Wyłącz sieć"
+
+msgid "These settings are retrieved by DHCP:"
+msgstr "Nastepujące ustawienia odebrano z DHCP:"
+
+msgid "IP Address"
+msgstr "Adres IP"
+
+msgid "Network mask"
+msgstr "Maska podsieciowa"
+
+msgid "Gateway"
+msgstr "Bramka"
+
+msgid "Nameserver"
+msgstr "Serwer nazwy"
+
+msgid "Current settings:"
+msgstr "Bierzące ustawienia:"
+
+msgid "Do you want to use these settings?"
+msgstr "Czy chcesz uzywac te ustawienia?"
+
+msgid "Yes, store"
+msgstr ""
+
+msgid "No, configure network manually"
+msgstr "Nie, konfiguruj sieć recznie"
+
+msgid "No, configure WiFi"
+msgstr ""
+
+msgid "Manual network setting"
+msgstr "Reczne ustawienia sieci"
+
+msgid "Use DHCP"
+msgstr "Uzywaj DHCP"
+
+msgid "no"
+msgstr "nie"
+
+msgid "yes"
+msgstr "tak"
+
+msgid "Hostname"
+msgstr "Nazwa Serwera"
+
+msgid "Domain"
+msgstr "Domena"
+
+msgid "Software"
+msgstr "oprogramowanie"
+
+msgid "Connection"
+msgstr "Połączenie"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Progressive"
+msgstr "Progresywne"
+
+msgid "Interlaced"
+msgstr ""
+
+msgid "Off"
+msgstr "Off"
+
+msgid "On"
+msgstr "On"
+
+msgid "Component"
+msgstr "Komponent"
+
+msgid "Select a video mode for your screen"
+msgstr "Wybierz tryb obrazu dla swojego obrazu"
+
+msgid "TV connected by"
+msgstr "TV podłączone jak"
+
+msgid "Display Type"
+msgstr "Rodzaj obrazu"
+
+msgid "Digital Output"
+msgstr "Wyjście Cyfrowe"
+
+msgid "Analog Output"
+msgstr "Wyjście analogowe"
+
+msgid "Analog Port"
+msgstr "Port analogowy"
+
+msgid "fill to screen"
+msgstr ""
+
+msgid "fill to aspect"
+msgstr ""
+
+msgid "crop to fill"
+msgstr ""
+
+msgid "Aspect Ratio Ctrl."
+msgstr ""
+
+msgid "Resolution"
+msgstr "Rezolucja"
+
+msgid "Norm/Framerate"
+msgstr ""
+
+msgid "Progressive/Interlaced"
+msgstr ""
+
+msgid "Normal"
+msgstr "Normalny"
+
+msgid "Expert"
+msgstr "Ekspert"
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Error: no menu got from reelice plugin"
+msgstr ""
+
+msgid "reelice plugin not found"
+msgstr ""
+
+#, fuzzy
+msgid "Keep these settings?"
+msgstr "Czy chcesz uzywac te ustawienia?"
+
+msgid "Using old settings"
+msgstr ""
+
+#, fuzzy
+msgid "HDMI settings"
+msgstr "Bierzące ustawienia:"
+
+msgid "Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Output"
+msgstr "Wyjście analogowe"
+
+msgid "Aspect"
+msgstr ""
+
+msgid "Aspect ratio"
+msgstr ""
+
+#, fuzzy
+msgid "SCART settings"
+msgstr "Bierzące ustawienia:"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr ""
+
+msgid "samba not installed!"
+msgstr ""
+
+msgid "not set"
+msgstr ""
+
+msgid "Installation Wizard"
+msgstr "Przewodnik Instalacyjny"
+
+#, fuzzy
+msgid "None"
+msgstr "Zrobiona"
+
+msgid "TS"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Init"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Pause"
+msgstr ""
+
+msgid "Trick"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Mpg2"
+msgstr ""
+
+msgid "h264"
+msgstr ""
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Ntsc Jap"
+msgstr ""
+
+msgid "Ntsc 443"
+msgstr ""
+
+msgid "Pal B IT"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "Pal B Aus"
+msgstr ""
+
+msgid "Pal B NZ"
+msgstr ""
+
+msgid "Pal I"
+msgstr ""
+
+msgid "SECAM"
+msgstr ""
+
+msgid "Secam D"
+msgstr ""
+
+msgid "Pal D"
+msgstr ""
+
+msgid "Pal G"
+msgstr ""
+
+msgid "Pal H"
+msgstr ""
+
+msgid "Pal M"
+msgstr ""
+
+msgid "Pal 60"
+msgstr ""
+
+msgid "Pal N"
+msgstr ""
+
+msgid "Pal NC"
+msgstr ""
+
+msgid "Ntsc BT470"
+msgstr ""
+
+msgid "480p60"
+msgstr ""
+
+msgid "576p50"
+msgstr ""
+
+msgid "720p50"
+msgstr ""
+
+msgid "720p59"
+msgstr ""
+
+msgid "720p60"
+msgstr ""
+
+msgid "1080i50"
+msgstr ""
+
+msgid "1080i59"
+msgstr ""
+
+msgid "1080i60"
+msgstr ""
+
+msgid "1080p23"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p29"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "1:1"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "14:9"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "20:9"
+msgstr ""
+
+msgid "Fill to Screen"
+msgstr ""
+
+msgid "Crop to Fill"
+msgstr ""
+
+msgid "Fill to Aspect"
+msgstr ""
+
+msgid "NL X"
+msgstr ""
+
+msgid "NL Y"
+msgstr ""
+
+msgid "NL XY"
+msgstr ""
+
+msgid "DVI"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "CVBS DLY"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "YC"
+msgstr ""
+
+msgid "YPrPb"
+msgstr ""
+
+msgid "Deblock"
+msgstr ""
+
+msgid "Deblock & dering"
+msgstr ""
+
+#~ msgid "of"
+#~ msgstr "of"
+
+#, fuzzy
+#~ msgid "Please wait!"
+#~ msgstr "Prosze czekać..."
+
+#, fuzzy
+#~ msgid "Storing settings. Please wait..."
+#~ msgstr "Formatuje Twary dysk... prosze czekać"
+
+#, fuzzy
+#~ msgid "Do you want to keep these settings?"
+#~ msgstr "Czy chcesz uzywac te ustawienia?"
+
+#, fuzzy
+#~ msgid "Do you want to enable the Reel MultiRoom system?"
+#~ msgstr "Czy chcesz włączyć sieć?"
+
+#, fuzzy
+#~ msgid ""
+#~ "Disables the MultiRoom-System.\n"
+#~ "Please press 'OK' to store the setting."
+#~ msgstr "prosze nacisnąć 'Ok' zeby zapisać te ustawienia."
+
+#, fuzzy
+#~ msgid "No ReelBox Avantgarde was found on the network!"
+#~ msgstr "Nie znaleziono w sieci ReelBox Avantgarde"
+
+#, fuzzy
+#~ msgid "If you want to format now, press the red key."
+#~ msgstr "Jezeli naprawde chcesz formatować, prosze nacisnąć Czerwony guzik."
+
+#, fuzzy
+#~ msgid "Formatting harddisk. Please wait..."
+#~ msgstr "Formatuje Twary dysk... prosze czekać"
+
+#~ msgid "builtin Harddisk."
+#~ msgstr "wbudowany Twardy dysk."
+
+#~ msgid "for recording."
+#~ msgstr "dla nagrania."
+
+#, fuzzy
+#~ msgid "ReelBox Avantgarde found in network."
+#~ msgstr "ReelBox Avantgarde znaleziony w sieci"
+
+#~ msgid "Scanning Network..."
+#~ msgstr "Skanuje Sieć..."
+
+#~ msgid "Watching TV is not available"
+#~ msgstr "Oglądanie TV jest nie mozliwe"

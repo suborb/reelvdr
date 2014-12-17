@@ -1,0 +1,27 @@
+#!/bin/bash
+# SRG-DRS Virus-Playlist
+# $1 = outfile
+
+### Variabel
+Name="SRG-DRS Virus [virus.ch]"
+### 
+
+# get...
+all=`wget -q --tries=2 --timeout=5 -O - "http://virus.ch/virusonair/get"`
+
+# Artist/Title
+all=${all//---/|}			# delimiter "---" > "|"
+IFS="|"; all=( echo $all )	# change to array
+artist=${all[12]}
+title=${all[11]}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

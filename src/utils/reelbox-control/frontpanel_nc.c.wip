@@ -1,0 +1,248 @@
+/*
+ * Frontpanel communication emulation for Reelbox NetClient
+ *
+ * (c) Georg Acher, acher (at) baycom dot de
+ *     BayCom GmbH, http://www.baycom.de
+ *
+ * #include <gpl-header.h>
+ *
+*/
+
+#include <stdlib.h>
+#include <linux/cdrom.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/time.h>
+#include <time.h>
+#include <sys/types.h>
+#include <termios.h>
+#include <sys/ioctl.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <poll.h>
+
+#include "frontpanel.h"
+
+#define REELDRV_DEVICE "/dev/reeldrv"
+
+// Some magic timings
+#define IR_1MIN  180
+#define IR_1MAX  300
+#define IR_TMIN  915
+#define IR_TMAX  1025
+#define IR_STEP  137
+#define IR_MAX   3200
+
+
+// FIXME: get from reeldrv.h
+
+#define IOCTL_REEL_LED_ON _IOWR('d', 0x1, int)
+#define IOCTL_REEL_LED_OFF _IOWR('d', 0x2, int)
+#define IOCTL_REEL_GET_KEY _IOWR('d', 0x3, int)
+
+static int fd;
+int rs232_fd;
+
+extern unsigned long long get_timestamp(void);
+
+/*-------------------------------------------------------------------------*/
+void fp_noop(void)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_get_version(void)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_enable_messages(int n)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_display_brightness(int n)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_display_contrast(int n)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_clear_display(void)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_write_display(unsigned char *data, int datalen)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_display_cmd(char cmd)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_display_data(char *data, int l)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_set_leds(int blink, int state)
+{
+	int cmd;
+	if (blink==0x10)
+		ioctl(fd, IOCTL_REEL_LED_ON, state);
+
+	if (blink==0x20)
+		ioctl(fd, IOCTL_REEL_LED_OFF, state);
+}
+/*-------------------------------------------------------------------------*/
+void fp_set_clock(void)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_set_wakeup(time_t t)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_set_displaymode(int m)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_set_switchcpu(int timeout)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_get_clock(void)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_set_clock_adjust(int v1, int v2)
+{
+}
+/*-------------------------------------------------------------------------*/
+void fp_power_control(int v)
+{
+}
+/*-------------------------------------------------------------------------*/
+int fp_open_serial(void)
+{
+	fd=open(REELDRV_DEVICE, O_RDWR|O_NONBLOCK);
+	if (fd<0)
+		return -1;
+
+        rs232_fd=fd;
+	return 0;
+}
+/*-------------------------------------------------------------------------*/
+void fp_close_serial(void)
+{
+	close(fd);
+}
+/*-------------------------------------------------------------------------*/
+size_t fp_read(unsigned char *b, size_t len)
+{
+}
+/*-------------------------------------------------------------------------*/
+int get_answer_length(int cmd)
+{
+}
+/*-------------------------------------------------------------------------*/
+static int irstate=0;
+static int hist[4];
+static int cmd=0;
+static int last_keyval=0;
+static int rpt=0;
+
+int fp_read_msg(unsigned char *msg, int ms)
+{
+	int buf;
+	int len,bit,m;
+	struct pollfd pfd[]=  {{fd, POLLIN|POLLERR|POLLHUP,0}};
+	int keyval;
+
+	keyval=ioctl(fd, IOCTL_REEL_GET_KEY, 0);
+
+	if (!(keyval&(REEL_KBD_BT0|REEL_KBD_BT1)))
+		rpt=0;
+
+	if (rpt>=6 && ((rpt&2)==0))
+		keyval&=~(REEL_KBD_BT0|REEL_KBD_BT1);
+	rpt++;
+	if (keyval!=last_keyval) {
+		msg[0]=0x00;
+                msg[1]=0xf1;
+                msg[2]=0;
+                msg[3]=keyval;
+                msg[4]=0;
+                msg[5]=0;
+		last_keyval=keyval;	
+		return 6;
+	}
+
+	m=poll(pfd, 1, 50);
+
+
+	while(read(fd, &buf, 4)==4) {
+		len=buf&0xffffff;
+		bit=buf>>24;
+//		printf("%i %i\n",irstate, len);
+		if (len>IR_MAX) {                       
+			cmd=0;
+			irstate=0;
+		}
+		else {
+			if (!irstate && bit)
+				irstate++;
+			else if (irstate)
+				irstate++;
+			
+			if (irstate>=2 && !(irstate&1)) {
+				int avg;
+				int nibble;
+				avg=hist[1]/2+len/2+hist[0];
+				if (avg<IR_TMIN || avg>IR_MAX || len>IR_1MAX || len<IR_1MIN) {
+					irstate=0;
+				}
+				else {
+					nibble=((avg-IR_TMIN)/IR_STEP)&0xf;
+					cmd=(cmd<<4)|nibble;
+					if (irstate==16) {
+						int csum,n;
+						csum=0;
+						for(n=0;n<8;n++)
+							csum+=(cmd>>(4*n))&0xf;
+						csum&=0xf;
+						irstate=0;
+
+						if (csum==0) {
+							msg[0]=0x00;
+							msg[1]=0xf2;
+							msg[2]=(cmd>>24)&0xff;
+							msg[3]=(cmd>>16)&0xff;
+							msg[4]=(cmd>>8)&0xff;
+							msg[5]=cmd&0xff;
+//							printf("---------------%x \n",cmd);
+							return 6;
+						}
+					}
+				}
+			}
+		}
+		hist[2]=hist[1];
+		hist[1]=hist[0];
+		hist[0]=len;		
+	}
+
+	return 0;
+}
+/*-------------------------------------------------------------------------*/
+int u_sleep(long long usec)
+{
+	struct timespec st_time;
+	st_time.tv_sec = 0;
+	st_time.tv_nsec = (usec * 1000);
+	return nanosleep(&st_time,NULL);
+}
+/*-------------------------------------------------------------------------*/
+// Check Temp
+void* fan_control_thread(void* para)
+{
+}

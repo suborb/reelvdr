@@ -1,0 +1,62 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Tomas Prybil <tomas@prybil.se>, 2002
+# Jan Ekholm <chakie@infa.abo.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-premiereepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-01-11 18:06+0100\n"
+"PO-Revision-Date: 2008-09-29 10:21+0200\n"
+"Last-Translator: Tomas Prybil <tomas@prybil.se>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Parses extended Premiere EPG data"
+msgstr ""
+
+msgid "Sky EPG"
+msgstr ""
+
+msgid "PremiereEPG"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "Tag option events"
+msgstr ""
+
+msgid "Show order information"
+msgstr ""
+
+msgid "Show rating information"
+msgstr ""
+
+msgid "Fix EPG data"
+msgstr ""
+
+msgid "Ordernumber"
+msgstr ""
+
+msgid "Price"
+msgstr ""
+
+msgid "Ordering"
+msgstr ""
+
+msgid "SMS"
+msgstr ""
+
+msgid "WWW"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "years"
+msgstr ""

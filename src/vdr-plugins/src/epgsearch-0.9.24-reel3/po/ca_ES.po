@@ -1,0 +1,1304 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-epgsearch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-11-22 07:16+0000\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel groups"
+msgstr "Grups de canals"
+
+#, fuzzy
+msgid "Channel group used by:"
+msgstr "Grup de canals utilitzat per: "
+
+msgid "Edit$Delete group?"
+msgstr "Suprimir el grup?"
+
+msgid "Edit channel group"
+msgstr "Edita el grup de canals"
+
+msgid "Group name"
+msgstr "Nom del grup"
+
+msgid "Button$Invert selection"
+msgstr "Inverteix selecció"
+
+msgid "Button$All yes"
+msgstr "Tots Sí"
+
+msgid "Button$All no"
+msgstr "Tots No"
+
+msgid "Group name is empty!"
+msgstr "Nou heu posat nom al grup!"
+
+msgid "Group name already exists!"
+msgstr "El nom del grup ja existeix!"
+
+#, c-format
+msgid "%d timer conflict(s)! First at %s. Show them?"
+msgstr "%d errors de programació! El primer a les %s. Els voleu veure?"
+
+msgid "Direct access to epgsearch's conflict check menu"
+msgstr "Accés directe a la comprovació d'errors d'epgsearch"
+
+msgid "Timer conflicts"
+msgstr "Errors de programació"
+
+msgid "Conflict info in main menu"
+msgstr "Informació d'errors al menú principal"
+
+msgid "next"
+msgstr "següent"
+
+msgid "search the EPG for repeats and more"
+msgstr "Cerca a l'EPG les reemissions"
+
+msgid "TV-Guide (EPG)"
+msgstr "Programació (EPG)"
+
+msgid "Direct access to epgsearch's search menu"
+msgstr "Accés directe al menú de cerques de l'epgsearch"
+
+msgid "Search-Timer Manager"
+msgstr "Gestiona la programació de gravacions"
+
+msgid "EpgSearch-Search in main menu"
+msgstr "Les cerques de l'epgsearch al menú principal"
+
+msgid "Button$Help"
+msgstr "Ajuda"
+
+msgid "Standard"
+msgstr "Estàndard"
+
+#, fuzzy
+msgid "Button$Commands"
+msgstr "Ordres"
+
+msgid "Button$Search"
+msgstr "Cerca"
+
+msgid "pipes"
+msgstr "barres"
+
+msgid "graphical"
+msgstr "gràfic"
+
+msgid "never"
+msgstr "mai"
+
+msgid "always"
+msgstr "sempre"
+
+msgid "smart"
+msgstr "intel·ligent"
+
+msgid "before user-def. times"
+msgstr "vegades abans def. usuari"
+
+msgid "after user-def. times"
+msgstr "vegades després def. usuari"
+
+msgid "before 'next'"
+msgstr "abans 'següent'"
+
+msgid "Standard EPG"
+msgstr "EPG estàndard"
+
+msgid "Use 'OK Button' for opening and closing menus"
+msgstr ""
+
+msgid "General"
+msgstr "General"
+
+msgid "EPG menus"
+msgstr "Menús EPG"
+
+msgid "User-defined EPG times"
+msgstr "Vegades EPG def. usuari"
+
+msgid "Timer programming"
+msgstr "Programació de gravacions"
+
+msgid "Search and search timers"
+msgstr "Cerca"
+
+msgid "Timer conflict checking"
+msgstr "Comprova errors a les gravacions programades"
+
+msgid "Main menu entry"
+msgstr "Entrada al menú principal"
+
+msgid "Help$The name of the main menu entry which defaults to 'Programm guide'."
+msgstr "El nom del menú principal és, per defecte, 'Graella de programació'."
+
+msgid "Start menu"
+msgstr "Menú inicial"
+
+msgid "Help$Choose between 'Overview - Now' and 'Schedule' as start menu when this plugin is called."
+msgstr "Trieu entre 'Mostra Ara' i 'Programació' com a menú inicial quan arrenca el connector."
+
+msgid "Ok key"
+msgstr "Tecla OK"
+
+msgid ""
+"Help$Choose here the behaviour of key 'Ok'. You can use it to display the summary or to switch to the corresponding channel.\n"
+"Note: the functionality of key 'blue' (Switch/Info/Search) depends on this setting."
+msgstr ""
+"Trieu el comportament de la tecla 'OK'. Pot mostrar el sumari o canviar al canal seleccionat.\n"
+"Nota: la funció de la tecla 'blava' (Canvia/Info/Cerca) depèn d'aquest valor."
+
+msgid "Show channel numbers"
+msgstr "Mostra el número de canal"
+
+msgid ""
+"Help$Display channel numbers in 'Overview - Now'.\n"
+"\n"
+"(To completely define your own menu look please inspect the MANUAL)"
+msgstr ""
+"Mostra el número de canal a 'Mostra Ara'.\n"
+"\n"
+"(Consulteu el manual per acabar de completar el vostre menú)"
+
+#, fuzzy
+msgid "Show bouquet separators"
+msgstr "Mostra un separador per cada dia"
+
+msgid "Help$Display VDR channel groups as separators between your channels in 'Overview - Now'."
+msgstr "Mostra els grups de canals com a separadors entre canals a 'Mostra - Ara'."
+
+msgid "Show day separators"
+msgstr "Mostra un separador per cada dia"
+
+msgid "Help$Display a separator line at day break in 'Schedule'."
+msgstr "Mostra un separador per cada dia a 'Programació'."
+
+msgid "Show radio channels"
+msgstr "Mostra els canals de ràdio"
+
+msgid "Help$Show also radio channels."
+msgstr "Mostra també els canals de ràdio"
+
+msgid "Limit channels from 1 to"
+msgstr "Limita els canals de l'1 al"
+
+msgid "Help$If you have a large channel set you can speed up things when you limit the displayed channels with this setting. Use '0' to disable the limit."
+msgstr "Si teniu una llista de canals massa llarga, els límits afavoreixen una navegació ràpida. Utilitzeu '0' per desactivar el límit."
+
+msgid "'One press' timer creation"
+msgstr "Programa una gravació amb 'un sol clic'"
+
+msgid "Help$When a timer is created with 'Record' you can choose between an immediate creation of the timer or the display of the timer edit menu."
+msgstr "Quan heu de crear una gravació podeu triar entre fer-ho amb 'un sol clic' o des del menú de gravacions programades."
+
+msgid "Time interval for FRew/FFwd [min]"
+msgstr "Interval de temps per a FRew/FFwd [min]"
+
+msgid ""
+"Help$Choose here the time interval which should be used for jumping through the EPG by pressing FRew/FFwd.\n"
+"\n"
+"(If you don't have those keys, you can toggle to this functionality pressing '0' and get '<<' and '>>' on the keys green and yellow)"
+msgstr ""
+"Trieu l'interval de temps que voleu utilitzar per saltar per l'EPG amb les tecles FRew/FFwd.\n"
+"\n"
+"(Si no teniu aquestes tecles al comandament, prement la tecla '0' podeu commutar aquesta funció de les tecles '<<' i '>>' a les tecles verda i groga)"
+
+msgid "Toggle Green/Yellow"
+msgstr "Commutar a Verda/Groga"
+
+msgid "Help$Specify if green and yellow shall also be switched when pressing '0'."
+msgstr "Especifiqueu si voleu commutar les tecles Verda i Groga en prémer '0'"
+
+msgid "Show favorites menu"
+msgstr "Mostra el menú preferits"
+
+msgid ""
+"Help$A favorites menu can display a list of your favorite broadcasts. Enable this if you want an additional menu besides 'Now' and 'Next'\n"
+"Any search can be used as a favorite. You only have to set the option 'Use in favorites menu' when editing a search."
+msgstr ""
+"El menú preferits mostra una llista de les vostres emissions preferides. Activeu-lo si voleu un menú addicional.\n"
+"Cada programa cercat es considera com a preferit. Només heu d'activar l'opció 'Utilitza el menú preferits' quan editeu la cerca."
+
+msgid "for the next ... hours"
+msgstr "per a les ... hores següents"
+
+msgid "Help$This value controls the timespan used to display your favorites."
+msgstr "Aquest valor controla el temps que es mostren els vostres preferits."
+
+msgid "Use user-defined time"
+msgstr "Utilitza el temps definit per l'usuari"
+
+msgid "Help$Besides 'Now' and 'Next' you can specify up to 4 other times in the EPG which can be used by repeatedly pressing the green key, e.g. 'prime time', 'late night',..."
+msgstr "A banda d''Ara' i 'Següent' podeu indicar uns altres 4 moments de l'EPG prement la tecla verda, p.ex. 'prime time', 'late night',..."
+
+msgid "Description"
+msgstr "Descripció"
+
+msgid "Help$This is the description for your user-defined time as it will appear as label on the green button."
+msgstr "Aquesta descripció correspon amb les opcions definides per a la tecla verda."
+
+msgid "Time"
+msgstr "Temps"
+
+msgid "Help$Specify the user-defined time here in 'HH:MM'."
+msgstr "Especifiqueu el temps en 'HH:MM'."
+
+msgid "Default recording dir"
+msgstr "Carpeta de gravacions"
+
+msgid "Help$When creating a timer you can specify here a default recording directory."
+msgstr "En programar una gravació heu d'indicar la carpeta de gravació per defecte."
+
+msgid "Add episode to manual timers"
+msgstr "Afegeix el nom de l'episodi a les gravacions programades"
+
+msgid ""
+"Help$If you create a timer for a series, you can automatically add the episode name.\n"
+"\n"
+"- never: no addition\n"
+"- always: always add episode name if present\n"
+"- smart: add only if event lasts less than 80 mins."
+msgstr ""
+"Si heu programat la gravació d'una sèrie, podeu afegir l'episodi automàticament.\n"
+"\n"
+"- mai: no afegir\n"
+"- sempre: afegir sempre el nom de l'episodi\n"
+"- intel·ligent: afegir si té menys de 80 min."
+
+msgid "Button$Select"
+msgstr "Selecciona"
+
+msgid "Default timer check method"
+msgstr "Mètode de comprovació de gravacions programades"
+
+msgid "Use search timers"
+msgstr "Utilitza el cercador de gravacions programades"
+
+msgid "Help$'Search timers' can be used to automatically create timers for events that match your search criterions."
+msgstr "Podeu utilitzar el cercador de gravacions programades per a crear gravacions amb els mateixos criteris."
+
+msgid "  Update interval [min]"
+msgstr "  Interval d'actualització [min]"
+
+msgid "Help$Specify here the time intervall to be used when searching for events in the background."
+msgstr "Indiqueu l'interval de temps per cercar esdeveniments en segon pla"
+
+msgid "Help$Specify here the default lifetime of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Indiqueu la durada per defecte de les gravacions creades amb aquest connector. Aquest valor es pot modificar en cada cas."
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Temps de memòria cau a l'iniciar (min)"
+
+msgid "Help$Specify here the default start recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Indiqueu el marge inicial per a les gravacions creades amb aquest connector. Aquest valor es pot modificar en cada cas."
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Temps de memòria cau al finalitzar (min)"
+
+msgid "Help$Specify here the default stop recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Indiqueu el marge final per a les gravacions creades amb aquest connector. Aquest valor es pot modificar en cada cas."
+
+msgid "No announcements when replaying"
+msgstr "Sense avisos a les reemissions"
+
+msgid "Help$Set this to 'yes' if you don't like to get any announcements of broadcasts if you currently replay anything."
+msgstr "Trieu 'sí' si no voleu avisos de les emissions si esteu tornant a veure qualsevol cosa."
+
+msgid "Show pip on announcements"
+msgstr ""
+
+msgid "Help$Set this to 'yes' if you want to show up the pip window with the announced channel."
+msgstr ""
+
+msgid "Recreate timers after deletion"
+msgstr "Recupera gravacions programades després de esborrar-les"
+
+msgid "Help$Set this to 'yes' if you want timers to be recreated with the next search timer update after deleting them."
+msgstr "Trieu 'sí' si voleu recuperar una gravació programada esborrada per a una nova actualització."
+
+msgid "Without PayTV channels"
+msgstr "Sense canals de pagament"
+
+msgid "Help$Set this to 'yes' if don't want to see events on PayTV channels when searching for repeats."
+msgstr "Trieu 'sí' si no voleu que es mostrin els canals de pagament quan es cerquen les reemissions."
+
+msgid "Search templates"
+msgstr "Cerca plantilles"
+
+msgid "Help$Here you can setup templates for your searches."
+msgstr "Podeu configurar plantilles per a les vostres cerques"
+
+msgid "Blacklists"
+msgstr "Llistes negres"
+
+msgid "Help$Here you can setup blacklists which can be used within a search to exclude events you don't like."
+msgstr "Podeu configurar 'llistes negres' per excloure esdeveniments a les vostres cerques."
+
+msgid "Button$Setup"
+msgstr "Configuració"
+
+msgid "Ignore below priority"
+msgstr "Ignora les prioritats de rang inferior"
+
+msgid "Help$If a timer with priority below the given value will fail it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Les prioritats de rang inferior produiran un error (no important) en cas de conflicte. Només els conflictes importants generen missatges d'error a través de l'OSD."
+
+msgid "Ignore conflict duration less ... min."
+msgstr "Ignora els conflictes de temps inferior a ... min."
+
+msgid "Help$If a conflicts duration is less then the given number of minutes it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Quan el conflicte de temps sigui inferior al valor donat, es produirà un error (no important). Només els conflictes importants generen missatges d'error a través de l'OSD."
+
+msgid "Only check within next ... days"
+msgstr "Només comprova els propers ... dies"
+
+msgid "Help$This value reduces the conflict check to the given range of days. All other conflicts are classified as 'not yet important'."
+msgstr "Aquest valor redueix la comprovació d'errors al marge de dies indicat. Els altres errors no són considerats com a importants."
+
+msgid "--- Automatic checking ---"
+msgstr "--Comprovació automàtica--"
+
+msgid "After each timer programming"
+msgstr "Després de cada programació"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each manual timer programming. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if this timer is involved in any conflict."
+msgstr "Trieu 'sí' si voleu comprovar els errors després de cada programació. En cas de conflicte es mostrarà un missatge informatiu."
+
+msgid "When a recording starts"
+msgstr "Quan s'inicia la gravació"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed when a recording starts. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if the conflict is within the next 2 hours."
+msgstr "Trieu 'sí' si voleu comprovar els errors quan s'inicia la gravació. En cas de conflicte es mostrarà un missatge informatiu si el conflicte s'ha de produir en les 2 hores següents."
+
+msgid "After each search timer update"
+msgstr "Després de cada actualització de gravacions programades"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each search timer update."
+msgstr "Trieu 'sí' si voleu comprovar els errors després de cada actualització de gravacions programades."
+
+msgid "every ... minutes"
+msgstr "cada ... minuts"
+
+msgid ""
+"Help$Specify here the time intervall to be used for an automatic conflict check in the background.\n"
+"('0' disables an automatic check)"
+msgstr ""
+"Indiqueu l'interval de temps a utilitzar per a la comprovació d'errors en segon pla.\n"
+"('0' desactiva la comprovació automàtica)"
+
+msgid "if conflicts within next ... minutes"
+msgstr "si el conflicte és dins dels ... minuts següents"
+
+msgid "Help$If the next conflict will appear in the given number of minutes you can specify here a shorter check intervall to get more OSD notifications about it."
+msgstr "Si el conflicte s'ha de produir dins de l'interval indicat, es mostraran missatges d'avís a l'OSD."
+
+msgid "Avoid notification when replaying"
+msgstr "Evita les notificacions a les reemissions"
+
+msgid "Help$Set this to 'yes' if the don't want to get OSD messages about conflicts if you currently replay something. Nevertheless messages will be displayed if the first upcoming conflict is within the next 2 hours."
+msgstr "Trieu 'sí' no voleu que l'OSD mostri els missatges d'avís durant les reemissions. Els missatges d'error es mostraran si hi torna a haver conflictes durant les 2 hores següents."
+
+msgid "Direct access to epgsearch's timers menu"
+msgstr "Accés directe al menú de gravacions de l'epgsearch"
+
+msgid "Timer Manager"
+msgstr "Gestiona les gravacions programades"
+
+msgid "This version of EPGSearch does not support this service!"
+msgstr "Aquesta versió de l'epgsearch no suporta aquest servei!"
+
+msgid "EPGSearch does not exist!"
+msgstr "EPGSearch no està instal·lat!"
+
+msgid "Start/Stop time has changed"
+msgstr "Ha canviat l'hora d'Inici/Final"
+
+msgid "Title/episode has changed"
+msgstr "Ha canviat el Títol/Episodi"
+
+msgid "No new timers were added."
+msgstr "No s'han programat gravacions."
+
+msgid "No timers were modified."
+msgstr "No s'han modificat les gravacions programades."
+
+msgid "No timers were deleted."
+msgstr "No s'han suprimit gravacions programades."
+
+#, c-format
+msgid "%d new broadcast"
+msgstr "%d nova emissió"
+
+msgid "Button$by channel"
+msgstr "per canal"
+
+msgid "Button$by time"
+msgstr "per temps"
+
+msgid "Button$Episode"
+msgstr "Episodi"
+
+msgid "Button$Title"
+msgstr "Títol"
+
+msgid "announce details"
+msgstr "mostra els detalls"
+
+msgid "announce again"
+msgstr "mostra de nou"
+
+msgid "with next update"
+msgstr "amb la nova actualització"
+
+msgid "again from"
+msgstr "de nou des de"
+
+msgid "Search timer"
+msgstr "Cerca gravació programada"
+
+msgid "Edit blacklist"
+msgstr "Edita llista negra"
+
+msgid "phrase"
+msgstr "frase"
+
+msgid "all words"
+msgstr "totes les paraules"
+
+msgid "at least one word"
+msgstr "almenys una paraula"
+
+msgid "match exactly"
+msgstr "coincidència total"
+
+msgid "regular expression"
+msgstr "expressió comuna"
+
+msgid "fuzzy"
+msgstr "confús"
+
+msgid "user-defined"
+msgstr "definit per l'usuari"
+
+msgid "interval"
+msgstr "interval"
+
+msgid "channel group"
+msgstr "grup de canals"
+
+msgid "only FTA"
+msgstr "només FTA"
+
+msgid "Search term"
+msgstr "Paraula de cerca"
+
+msgid "Search mode"
+msgstr "Mode de cerca"
+
+msgid "Tolerance"
+msgstr "Tolerància"
+
+msgid "Match case"
+msgstr "No discr. Maj./Min."
+
+msgid "Use title"
+msgstr "Utilitza títol"
+
+msgid "Use subtitle"
+msgstr "Utilitza subtítol"
+
+msgid "Use description"
+msgstr "Utilitza descripció"
+
+msgid "Use extended EPG info"
+msgstr "Utilitza inf. addicional EPG"
+
+msgid "Ignore missing categories"
+msgstr "Ignora categories perdudes"
+
+msgid "Use channel"
+msgstr "Utilitza canal"
+
+msgid "  from channel"
+msgstr "  des del canal"
+
+msgid "  to channel"
+msgstr "  al canal"
+
+msgid "Channel group"
+msgstr "Grup de canals"
+
+msgid "Use time"
+msgstr "Utilitza temps"
+
+msgid "  Start after"
+msgstr "  Inicia després"
+
+msgid "  Start before"
+msgstr "  Inicia abans"
+
+msgid "Use duration"
+msgstr "Utilitza durada"
+
+msgid "  Min. duration"
+msgstr "  Durada Mín."
+
+msgid "  Max. duration"
+msgstr "  Durada Màx."
+
+msgid "Use day of week"
+msgstr "Utilitza dia de la setmana"
+
+#, fuzzy
+msgid "Day of week"
+msgstr "  Dia de la setmana"
+
+msgid "Button$Templates"
+msgstr "Plantilles"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal no vàlid ***"
+
+msgid "Please check channel criteria!"
+msgstr "Si us plau, comprova els criteris de canal!"
+
+msgid "Edit$Delete blacklist?"
+msgstr "Editar/Suprimir llista negra?"
+
+msgid "Create searchtimer"
+msgstr "Crea cercador de gravacions programades"
+
+msgid "List searchtimers"
+msgstr "Mostra cercadors de gravacions programades"
+
+msgid "Search for repeats"
+msgstr "Cerca les reemissions"
+
+msgid "List recordings of this broadcast"
+msgstr "Mosta les gravacions d'aquest programa"
+
+msgid "Mark as 'already recorded'?"
+msgstr "Marcar com a 'enregistrat'?"
+
+msgid "Activate/deactivate automatic switch?"
+msgstr "Activar/desactivar canvis automàtics?"
+
+msgid "Ignore this broadcast"
+msgstr "Ignora aquesta emissió"
+
+msgid "EPG Commands"
+msgstr "Ordres EPG"
+
+msgid "Search"
+msgstr ""
+
+msgid "Already running!"
+msgstr "S'està executant!"
+
+msgid "Add to switch list?"
+msgstr "Afegir a la llista de canvis?"
+
+msgid "Delete from switch list?"
+msgstr "Suprimir de la llista de canvis?"
+
+msgid "Button$Details"
+msgstr "Detalls"
+
+msgid "Button$Filter"
+msgstr "Filtres"
+
+msgid "Button$Show all"
+msgstr "Mostra-ho tot"
+
+msgid "conflicts"
+msgstr "conflictes"
+
+msgid "no conflicts!"
+msgstr "no hi ha conflictes!"
+
+msgid "no important conflicts!"
+msgstr "no hi ha conflictes importants!"
+
+msgid "C"
+msgstr "C"
+
+msgid "Button$Repeats"
+msgstr "Reemissions"
+
+msgid "Button$Functions"
+msgstr "Funcions"
+
+msgid "no check"
+msgstr "no comprovar"
+
+msgid "by channel and time"
+msgstr "per canal i temps"
+
+msgid "by event ID"
+msgstr "per ID"
+
+msgid "Select directory"
+msgstr "Selecciona carpeta"
+
+msgid "Button$Level"
+msgstr "Nivell"
+
+msgid "Timers"
+msgstr "Gravacions programades"
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Tomorrow"
+msgstr ""
+
+msgid "No timers present."
+msgstr "No hi ha gravacions programades."
+
+#, fuzzy
+msgid "Info:"
+msgstr "Info"
+
+msgid "Use the green button to create a new timer."
+msgstr ""
+
+msgid "Button$Delete"
+msgstr "Suprimeix"
+
+msgid "Button$New"
+msgstr "Nou"
+
+#, fuzzy
+msgid "Button$Off"
+msgstr "On/Off"
+
+#, fuzzy
+msgid "Button$On"
+msgstr "Obre"
+
+msgid "Delete timer?"
+msgstr "Suprimir gravació programada?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Hi ha una gravació activa - Voleu suprimir-la?"
+
+msgid "Delete switchtimer?"
+msgstr ""
+
+msgid "Directory"
+msgstr "Carpeta"
+
+msgid "Event"
+msgstr "Esdeveniment"
+
+msgid "Favorites"
+msgstr "Preferits"
+
+msgid "Search results"
+msgstr "Resultats de la cerca"
+
+msgid "No EPG data available"
+msgstr ""
+
+msgid "Button$Timer"
+msgstr "Gravació programada"
+
+msgid "Timer conflict! Show?"
+msgstr "S'ha produït un error! Mostrar?"
+
+msgid "New timer"
+msgstr ""
+
+msgid "Please confirm changes with OK"
+msgstr ""
+
+msgid "Channel not in list. Please choose another."
+msgstr ""
+
+msgid ""
+"\n"
+"No epg data available for this channel.\n"
+"Switch to channel to get epg data."
+msgstr ""
+
+msgid "Please select a programme for switchtimer:"
+msgstr ""
+
+msgid "low"
+msgstr "baixa"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "alta"
+
+msgid "Timer type"
+msgstr ""
+
+msgid "Recording"
+msgstr ""
+
+msgid "SwitchTimer"
+msgstr ""
+
+msgid "Channel"
+msgstr "Canal"
+
+msgid "Next date"
+msgstr ""
+
+msgid "Repeat"
+msgstr "Reemissió"
+
+msgid "  Day of Week"
+msgstr "  Dia de la Setmana"
+
+msgid "First day"
+msgstr "Primer dia"
+
+msgid "unlimited"
+msgstr "il·limitada"
+
+msgid "Child protection"
+msgstr "Protecció infantil"
+
+msgid "[Standard]"
+msgstr ""
+
+msgid "Timer check"
+msgstr "Comprova gravació programada"
+
+msgid "recording with device"
+msgstr "s'està gravant amb la unitat"
+
+msgid "File"
+msgstr "Fitxer"
+
+msgid "Button$With subtitle"
+msgstr "Amb subtítols"
+
+msgid "Button$Without subtitle"
+msgstr "Sense subtítols"
+
+msgid "Week Day"
+msgstr "Dia de la Setmana"
+
+msgid "Button$Reset"
+msgstr "Reinicia"
+
+msgid "Please, select a program to set switch timer"
+msgstr ""
+
+msgid "Switchtimer to this programme already present"
+msgstr ""
+
+msgid "Button$Extended"
+msgstr "Addicional"
+
+msgid "Button$Simple"
+msgstr "Simple"
+
+msgid "Use blacklists"
+msgstr "Utilitza llistes negres"
+
+msgid "Edit$Search text too short - use anyway?"
+msgstr "El text d'Edició o Cerca és massa curt - Voleu utilitzar-lo?"
+
+msgid "Button$by name"
+msgstr "per nom"
+
+msgid "Button$by date"
+msgstr "per data"
+
+msgid "Button$Delete all"
+msgstr "Suprimeix tot"
+
+msgid "Recordings"
+msgstr "Gravacions"
+
+msgid "Edit$Delete entry?"
+msgstr "Esborrar l'entrada?"
+
+msgid "Edit$Delete all entries?"
+msgstr "Esborrar totes les entrades?"
+
+msgid "Summary"
+msgstr "Sumari"
+
+msgid "Auxiliary info"
+msgstr "Info addicional"
+
+msgid "Button$Aux info"
+msgstr "Info Aux."
+
+msgid "No searchtimers present."
+msgstr "No hi ha cerques de gravacions programades."
+
+msgid "Use the green button to create a new searchtimer."
+msgstr ""
+
+msgid "Search entries"
+msgstr "Entrades de cerca"
+
+msgid "active"
+msgstr "activa"
+
+msgid "Execute"
+msgstr "Executa"
+
+msgid "Button$Actions"
+msgstr "Accions"
+
+msgid "Edit$Delete search?"
+msgstr "Suprimir cerca?"
+
+msgid "Delete all timers created from this search?"
+msgstr "Suprimir totes les gravacions programades creades des d'aquesta cerca?"
+
+msgid "Search actions"
+msgstr "Accions de cerca"
+
+msgid "Execute search"
+msgstr "Executa cerca"
+
+msgid "Use as search timer on/off"
+msgstr "Utilitza com a cercador on/off"
+
+msgid "Trigger search timer update"
+msgstr "Activa l'actualització de gravacions programades."
+
+msgid "Show recordings done"
+msgstr "Mostra les gravacions"
+
+msgid "Delete created timers?"
+msgstr "Suprimir les gravacions programades?"
+
+msgid "Timer conflict check"
+msgstr "Comprova conflictes de programació"
+
+msgid "Disable associated timers too?"
+msgstr "Desactivar les programacions vinculades?"
+
+msgid "Activate associated timers too?"
+msgstr "Activar les programacions vinculades?"
+
+msgid "Search timers activated in setup."
+msgstr "Cerca de programacions activada."
+
+msgid "Run search timer update?"
+msgstr "Executar l'actualització de gravacions programades?"
+
+msgid "ERROR: Could not trigger search timer update!"
+msgstr "ERROR: No s'ha pogut activar l'actualització de gravacions programades!"
+
+msgid "Search timer update triggered."
+msgstr "S'ha activat l'actualització de gravacions programades."
+
+msgid "Copy this entry?"
+msgstr "Copiar aquesta entrada?"
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Expert"
+msgstr "Avançat"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Edit search"
+msgstr "Edita cerca"
+
+msgid "Record"
+msgstr "Grava"
+
+msgid "Announce only"
+msgstr "Només avisa"
+
+msgid "Switch only"
+msgstr "Només canvia"
+
+msgid "Selection"
+msgstr "Selecció"
+
+msgid "all"
+msgstr "tot"
+
+msgid "count recordings"
+msgstr "compta gravacions"
+
+msgid "count days"
+msgstr "compta dies"
+
+msgid "Template name"
+msgstr "Nom de la plantilla"
+
+msgid "Help$Specify the name of the template."
+msgstr "Indica el nom de la plantilla"
+
+msgid "Help$Specify here the term to search for."
+msgstr "Indica el terme a cercar."
+
+msgid ""
+"Help$The following search modes exist:\n"
+"\n"
+"- phrase: searches for sub terms\n"
+"- all words: all single words must appear\n"
+"- at least one word: at least one single word must appear\n"
+"- match exactly: must match exactly\n"
+"- regular expression: match a regular expression\n"
+"- fuzzy searching: searches approximately"
+msgstr ""
+"Hi ha disponibles els següents modes de cerca:\n"
+"\n"
+"- frase: cerques per termes\n"
+"- totes les paraules: s'hi troben totes les paraules \n"
+"- almenys una paraula: s'hi troba almenys una paraula \n"
+"- coincidència exacta: la coincidència és exacta\n"
+"- expressió habitual: troba una expressió habitual\n"
+"- cerca confusa: cerca aproximada"
+
+msgid "Help$This sets the tolerance of fuzzy searching. The value represents the allowed errors."
+msgstr "Fixa la tolerància de la cerca aproximada. El valor representa els errors permesos."
+
+msgid "Help$Set this to 'Yes' if your search should match the case."
+msgstr "Trieu 'sí' si voleu que la cerca discrimini majúscules/minúscules."
+
+msgid "Help$Set this to 'Yes' if you like to search in the title of an event."
+msgstr "Trieu 'sí' si voleu cercar al títol d'un esdeveniment."
+
+msgid "Help$Set this to 'Yes' if you like to search in the episode of an event."
+msgstr "Trieu 'sí' si voleu cercar a l'episodi d'un esdeveniment."
+
+msgid "Help$Set this to 'Yes' if you like to search in the summary of an event."
+msgstr "Trieu 'sí' si voleu cercar al sumari d'un esdeveniment."
+
+msgid "Help$The summary of an event, can contain additional information like 'Genre', 'Category', 'Year',... called 'EPG categories' within EPGSearch. External EPG providers often deliver this information. This allows refining a search and other nice things, like searching for the 'tip of the day'. To use it set this to 'Yes'."
+msgstr "El sumari d'un esdeveniment pot contenir informació addicional com 'Gènere', 'Categoria', 'Any',... anomenades 'categories EPG' dins de l'EPGSearch. Proveïdors externs d'EPG sovint ofereixen aquesta informació. Això permet afinar una cerca o, entre altres coses, rebre 'el consell del dia'. Trieu 'sí' si en voleu tenir accés."
+
+msgid "Help$The file epgsearchcats.conf specifies the search mode for this entry. One can search by text or by value. You can also edit a list of predefined values in this file that can be selected here."
+msgstr "El fitxer epgsearchcats.conf indica el mode de cerca per a aquesta entrada. Podeu cercar per text o valor. També podeu editar una llista de valors predefinits, els quals podeu seleccionar aquí."
+
+msgid "Help$If a selected category is not part of the summary of an event this normally excludes this event from the search results. To avoid this, set this option to 'Yes', but please handle this with care to avoid a huge amount of results."
+msgstr "Si seleccioneu una categoria que no forma part del sumari d'un event, aquesta normalment exclou aquest event dels resultats de cerca. Trieu 'sí' per evitar-ho. Penseu, però, que es poden obviar molts resultats."
+
+msgid "Use in favorites menu"
+msgstr "Utilitza al menú de preferits"
+
+msgid "Result menu layout"
+msgstr "Format del menú Resultats"
+
+msgid "Use as search timer"
+msgstr "Utilitza com a cercador de gravacions programades"
+
+msgid "Action"
+msgstr "Acció"
+
+msgid "Switch ... minutes before start"
+msgstr "Canvia ... minuts abans de l'inici"
+
+msgid "Unmute sound"
+msgstr "Desactiva el silenci"
+
+msgid "  Series recording"
+msgstr "  Enregistrant sèries"
+
+msgid "Delete recordings after ... days"
+msgstr "Suprimeix les gravacions després de ... dies"
+
+msgid "Keep ... recordings"
+msgstr "Conserva .. gravacions"
+
+msgid "Pause when ... recordings exist"
+msgstr "Posa en pausa quan ... existeix la gravació"
+
+msgid "Avoid repeats"
+msgstr "Evita reemissions"
+
+msgid "Allowed repeats"
+msgstr "Permet reemissions"
+
+msgid "Only repeats within ... days"
+msgstr "Només reemet dins dels propers ... dies"
+
+msgid "Compare title"
+msgstr "Compara títols"
+
+msgid "Compare subtitle"
+msgstr "Compara subtítols"
+
+msgid "Compare summary"
+msgstr "Compara sumari"
+
+msgid "Compare categories"
+msgstr "Compara categories"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Auto delete"
+msgstr "Suprimeix automàticament"
+
+msgid "after ... recordings"
+msgstr "després de ... gravacions"
+
+msgid "after ... days after first rec."
+msgstr "després de ... dies des de la primera gravació"
+
+msgid "Button$Edit"
+msgstr "Edita"
+
+msgid "Edit user-defined days of week"
+msgstr "Edita els dies definits per l'usuari"
+
+msgid "Compare"
+msgstr "Compara"
+
+msgid "Select blacklists"
+msgstr "Selecciona llista negra"
+
+msgid "Values for EPG category"
+msgstr "Valor per la categoria EPG"
+
+msgid "Button$Apply"
+msgstr "Aplica"
+
+msgid "less"
+msgstr "menor"
+
+msgid "less or equal"
+msgstr "menor o igual"
+
+msgid "greater"
+msgstr "major"
+
+msgid "greater or equal"
+msgstr "major o igual"
+
+msgid "equal"
+msgstr "igual"
+
+msgid "not equal"
+msgstr "no igual"
+
+msgid "Activation of search timer"
+msgstr "Activació de la programació de cerques"
+
+msgid "Last day"
+msgstr "Darrer dia"
+
+msgid "Button$all channels"
+msgstr "tots els canals"
+
+msgid "Button$only FTA"
+msgstr "només FTA"
+
+msgid "Button$Timer preview"
+msgstr "Previsualitza"
+
+#, fuzzy
+msgid "no broadcast found"
+msgstr "- no s'han trobat emissions -"
+
+msgid "Blacklist results"
+msgstr "Resultats de la llista negra"
+
+msgid "found recordings"
+msgstr "troba gravacions"
+
+msgid "- no recording found -"
+msgstr "- no s'han trobat gravacions -"
+
+msgid "Error while accessing recording!"
+msgstr "S'ha produït un error en accedir a la gravació!"
+
+msgid "No templates present."
+msgstr "No s'han trobat plantilles."
+
+msgid "Use the yellow button to create a new template."
+msgstr "Utilitza el botó groc per crear una plantilla."
+
+msgid "Edit$Delete template?"
+msgstr "Suprimir plantilla?"
+
+msgid "Overwrite existing entries?"
+msgstr "Sobreescriure les entrades existents?"
+
+msgid "Edit entry"
+msgstr "Edita entrada"
+
+msgid "action at"
+msgstr "actua a"
+
+msgid "Unknown channel"
+msgstr ""
+
+msgid "Switch list"
+msgstr "Llista de canvis"
+
+msgid "Edit template"
+msgstr "Edita plantilla"
+
+msgid ">>> no info! <<<"
+msgstr ">>> no info! <<<"
+
+msgid "Overview"
+msgstr "Descripció"
+
+msgid "Button$Favorites"
+msgstr "Preferits"
+
+msgid "Button$Schedule"
+msgstr "Programació"
+
+msgid "Quick search for broadcasts"
+msgstr "Cerca ràpida d'emissions"
+
+msgid "Quick search"
+msgstr "Cerca ràpida"
+
+msgid "Show in main menu"
+msgstr "Mostra al menú principal"
+
+#, c-format
+msgid "%d new broadcast(s) found! Show them?"
+msgstr "%d noves emissions trobades! Mostrar?"
+
+msgid "Search timer update done!"
+msgstr "S'han actualitzat els cercadors de gravacions programades!"
+
+msgid "Programming timer failed!"
+msgstr "S'ha produït un error en programar la gravació!"
+
+#~ msgid "° EPG for :"
+#~ msgstr "° EPG per a :"
+
+#~ msgid "Edit timer"
+#~ msgstr "Edita gravació programada"
+
+#~ msgid "Use the blue button to create a new timer."
+#~ msgstr "Utilitza la tecla blava per programar una gravació."
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#~ msgid "Use the yellow button to create a new searchtimer."
+#~ msgstr "Utilitza la tecla groga per a crear una nova cerca."
+
+#~ msgid "Red key"
+#~ msgstr "Tecla vermella"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Record' or 'Commands') you like to have on the red key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Trieu la funció ('Enregistra' o 'Ordres') per a la tecla vermella.\n"
+#~ "(Es pot commutar amb la tecla '0')"
+
+#~ msgid "Blue key"
+#~ msgstr "Tecla blava"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Switch'/'Info' or 'Search') you like to have on the blue key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Trieu la funció ('Canvia'/'Info' o 'Cerca') per a la tecla blava.\n"
+#~ "(Es pot commutar amb la tecla '0')"
+
+#, fuzzy
+#~ msgid "No search templates present."
+#~ msgstr "No hi ha cerques de tasques."
+
+#, fuzzy
+#~ msgid "Use the green button to create a new template."
+#~ msgstr "Utilitza la tecla blava per a crear una nova tasca"
+
+#~ msgid "Show channel separators"
+#~ msgstr "Mostra els separadors de canals"
+
+#~ msgid "no"
+#~ msgstr "no"
+
+#~ msgid "yes"
+#~ msgstr "sí"
+
+#~ msgid "Switch"
+#~ msgstr "Canvia"
+
+#~ msgid "Button$Now"
+#~ msgstr "Ara"
+
+#~ msgid "Use VDR's timer edit menu"
+#~ msgstr "Utilitza el menú d'edició de gravacions programades de l'VDR"
+
+#~ msgid ""
+#~ "Help$This plugin has it's own timer edit menu extending the original one with some extra functionality like\n"
+#~ "- an addtional directory entry\n"
+#~ "- user-defined days of week for repeating timers\n"
+#~ "- adding an episode name\n"
+#~ "- support for EPG variables (see MANUAL)"
+#~ msgstr ""
+#~ "Aquest connector activa opcions addicionals per a l'edició de gravacions programades\n"
+#~ "- una carpeta d'entrada addicional\n"
+#~ "- definir dies de la setmana per a la repetició de gravacions programades\n"
+#~ "- afegir el nom de l'episodi\n"
+#~ "- suport per a EPG variables (consulteu manual)"
+
+#~ msgid "Button$Record"
+#~ msgstr "Grava"
+
+#~ msgid "announce details: %s"
+#~ msgstr "mostra els detalls: %s"
+
+#~ msgid "Can't switch channel!"
+#~ msgstr "No es pot canviar de canal!"
+
+#~ msgid "Button$Switch"
+#~ msgstr "Canvia"
+
+#~ msgid "EPG -"
+#~ msgstr "EPG -"
+
+#~ msgid "Button$Next"
+#~ msgstr "Següent"
+
+#~ msgid "Active"
+#~ msgstr "Activa"
+
+#~ msgid "Day"
+#~ msgstr "Dia"
+
+#~ msgid "Start"
+#~ msgstr "Inicia"
+
+#~ msgid "Stop"
+#~ msgstr "Atura"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritat"
+
+#~ msgid "Lifetime"
+#~ msgstr "Durada"
+
+#~ msgid "Button$Default"
+#~ msgstr "Per defecte"
+
+#~ msgid "EPG"
+#~ msgstr "EPG"

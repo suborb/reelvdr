@@ -1,0 +1,154 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ripit\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 16:14+0200\n"
+"PO-Revision-Date: 2008-09-26 13:00+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "user defined"
+msgstr ""
+
+msgid "low"
+msgstr ""
+
+msgid "standard"
+msgstr ""
+
+msgid "great"
+msgstr ""
+
+msgid "best"
+msgstr ""
+
+msgid "Destination format"
+msgstr ""
+
+msgid "Hide mainmenu entry"
+msgstr ""
+
+msgid "Shutdown when finished"
+msgstr ""
+
+msgid "Verbose output"
+msgstr ""
+
+msgid "Fast mode"
+msgstr ""
+
+msgid "Eject CD when finished"
+msgstr ""
+
+msgid "Presets"
+msgstr ""
+
+msgid "Min. bitrate"
+msgstr ""
+
+msgid "Max. bitrate"
+msgstr ""
+
+msgid "More encoder settings"
+msgstr ""
+
+msgid "Device"
+msgstr ""
+
+msgid "Directory for ripped tracks"
+msgstr ""
+
+msgid "Priority of task (nice)"
+msgstr ""
+
+msgid "Encode remotely"
+msgstr ""
+
+msgid "Options for remote encoding"
+msgstr ""
+
+msgid "Abort"
+msgstr ""
+
+msgid "No CD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please insert an audio CD to archive it."
+msgstr ""
+
+msgid "CD found in drive."
+msgstr ""
+
+msgid "Please select archive format and quality and press RED to start archiving your audio CD."
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Ripped: \t"
+msgstr ""
+
+msgid "completed"
+msgstr ""
+
+msgid "Ripping: \t"
+msgstr ""
+
+msgid "Encoded: \t"
+msgstr ""
+
+msgid "Encoding: \t"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Aborted"
+msgstr ""
+
+msgid "No medium found"
+msgstr ""
+
+msgid "Searching CDDB entry, please wait"
+msgstr ""
+
+msgid "Total Tracks: "
+msgstr ""
+
+msgid "Reading CD"
+msgstr ""
+
+msgid "PROCESS MANUALLY ABORTED"
+msgstr ""
+
+msgid "Encoding tracks"
+msgstr ""
+
+msgid "Ripping and Encoding tracks"
+msgstr ""
+
+msgid "Audio-CD ripper"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+msgid "Audio-CD archive "
+msgstr ""

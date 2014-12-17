@@ -1,0 +1,23 @@
+VDR Plugin 'ripit' Revision History
+-----------------------------------
+2006-11-14: Version 0.0.2
+- Added SVDRP command "ABORT"
+- Added SVDRP commnad "STATUS"
+- Removed SVDRP command "OPEN" (use MAIN instead ;))
+- Added option [device] to "START" (see README)
+- small bugfixing
+
+2006-11-14: Version 0.0.1b
+- Added SVDRP command "START"
+- Added "Hide mainmenu entry" to setup
+- french translation (goes to Patrice Staudt)
+
+2006-10-11: Version 0.0.1a
+- Added "Distributed work over network"
+- Verbose output
+- Remove "bad" chars from log and filename.
+
+2006-10-10: Version 0.0.1
+
+- Initial revision.
+

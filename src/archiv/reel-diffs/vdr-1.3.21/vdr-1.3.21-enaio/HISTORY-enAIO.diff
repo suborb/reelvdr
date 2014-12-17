@@ -1,0 +1,66 @@
+diff -Nru vdr-1.3.21-vanilla/HISTORY-enAIO vdr-1.3.21-enaio/HISTORY-enAIO
+--- vdr-1.3.21-vanilla/HISTORY-enAIO	1970-01-01 02:00:00.000000000 +0200
++++ vdr-1.3.21-enaio/HISTORY-enAIO	2005-02-13 18:22:49.984993472 +0200
+@@ -0,0 +1,62 @@
++History enAIO:
++--------------
++
++20-05-2004: Version 1.0
++
++- Initial revision based on following patches:
++  * Easyinput Patch by Marcel Schaeben / Patrick Maier
++  * Rename Recordings Patch by Torsten Kunkel
++  * Menu Selection Patch by Peter Dittmann
++  * Recording Length Patch by Tobias Faust
++  * Show Weekdays Patch by Oskar Signell
++
++23-05-2004: Version 1.1
++
++- Updated for vdr-1.3.8 (aka. removed Show Weekdays Patch).
++
++06-06-2004: Version 1.2
++
++- Added VDRAdmin changes from Recording Length Patch v0.3.
++
++20-06-2004: Version 1.3
++
++- Updated for vdr-1.3.11 (Rename Recordings Patch).
++- Added "Main Menu command position" feature.
++  Thanks to Olaf Henkel for his excellent weekly rants :)
++
++11-09-2004: Version 1.4
++
++- Removed centering from the recording length field.
++
++06-11-2004: Version 1.5
++
++- Updated for vdr-1.3.15.
++- Added the missing progress bar feature for "What's on now?"
++  menu (enable only for iso8859-1/15 charsets):
++  "Setup / EPG / Show progress bar"
++
++09-11-2004: Version 1.6
++
++- Changed the minute abbreviation from acute accent to apostrophe.
++
++30-12-2004: Version 1.7
++
++- Fixed a memory leak in Recording Length Patch.
++  Thanks to Ralf1970 @ VDRPortal.
++
++10-01-2005: Version 1.8
++
++- Updated for vdr-1.3.18.
++- Fixed the spelling of menu items in Recording Length Patch.
++
++20-01-2005: Version 1.9
++
++- Added 'text2skin' modifications (Thanks to Sascha Volkenandt).
++
++24-01-2005: Version 2.0
++
++- Fixed a crash bug in Rename Recordings Patch (Thanks to Darren Salt).
++
++13-02-2005: Version 2.1
++
++- Modified the constructor of cMenuWhatsOnItem (Thanks to Anssi Hannula).

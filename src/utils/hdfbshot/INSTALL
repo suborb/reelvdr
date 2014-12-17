@@ -1,0 +1,13 @@
+Basic Installation
+
+ At your shell prompt just type:
+ 
+ # make
+ # make install
+ 
+ and thats all
+
+ if you want to see any debug info then compile with:
+
+ # gcc fbshot.c -lpng -lz -DDEBUG -o fbshot
+ 

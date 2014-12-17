@@ -1,0 +1,115 @@
+#!/bin/bash
+#
+# Reelbox NFS Client Start/Stop
+# Support NFS
+# Version 0.1
+# Date 21.10.2007
+#
+
+PATH="/sbin:/bin/:/usr/bin"
+
+#set -x
+
+SYSCONFIG="/etc/default/sysconfig"
+. $SYSCONFIG
+
+# include language
+. /etc/default/globals
+
+#Global vars
+if [ "$1" = "" ];then
+	SOPTION="start"
+else
+	SOPTION="$1"
+fi
+
+MOUNTPOINT="/media/nfs"
+
+#
+# Functions
+#
+syntax () {
+cat << EOF
+Usage: `basename $0` [start | stop | restart]
+Options:
+     [start | stop | restart]
+     no option: start
+
+Description:
+     Starts ReelBox II NFS (Unix Network) Client
+EOF
+}
+
+#Startfunction
+fstart () {
+	RW=rw
+	HS=soft
+	LOCK=lock
+
+	test "$NFS_OPT_RW" = "no" && RW=ro
+	test "$NFS_OPT_HS" = "hard" && HS=hard
+	test "$NFS_OPT_LOCK" = "no" && LOCK=nolock
+
+	test -d $MOUNTPOINT || mkdir $MOUNTPOINT
+	grep -q $MOUNTPOINT /proc/mounts && umount -l $MOUNTPOINT
+
+	#kill the mount after 30s to not let vdr-watchdog do a restart. timeout of mount can be 3-6min!
+	( sleep 30 ; killall mount ) &
+
+	mount -t nfs -o rsize=$NFS_BSIZE,wsize=$NFS_BSIZE,$RW,$NFS_PROTO,$HS,$LOCK,nfsvers=$NFS_VERS \
+		$NFS_PC:$NFS_SHARECL $MOUNTPOINT
+
+	if [ $? -gt 0 ] ; then
+		echo "no success or timeout"
+		exit 2
+	else
+		#cause vdr to re-read videodir
+		touch /media/reel/recordings/.update
+	fi
+}
+
+#Stopfunction
+fstop () {
+	#we umount everything, just to be shure...
+	umount $MOUNTPOINT
+	rmdir $MOUNTPOINT
+}
+
+#
+# Main
+#
+
+case $SOPTION in
+	start)
+		if [ "$START_NFSCL" = "yes" ]; then
+			echo "trying to mount $NFS_PC:$NFS_SHARECL"
+			fstart
+		else
+			echo "NFS is turned off in sysconfig."
+			exit 0
+                fi
+                ;;
+	stop)
+		fstop
+		;;
+	restart)
+		fstop
+		sleep 1
+		if [ "$START_NFSCL" = "yes" ]; then
+			echo "trying to mount $NFS_PC/$NFS_SHARECL"
+			fstart
+		else
+			echo "NFS is turned off in sysconfig."
+			exit 0
+                fi
+		;;
+	-h)
+		syntax
+		exit 1
+		;;
+	*)
+		echo "Unknown option $SOPTION."
+		syntax
+		exit 2
+		;;
+esac

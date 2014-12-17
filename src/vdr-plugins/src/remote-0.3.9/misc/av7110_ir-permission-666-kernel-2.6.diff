@@ -1,0 +1,11 @@
+--- av7110_ir.c.orig	Mon Mar 29 01:58:31 2004
++++ av7110_ir.c	Mon Mar 29 02:03:51 2004
+@@ -188,7 +188,7 @@ int __init av7110_ir_init(void)
+ 	av7110_setup_irc_config(NULL, 0x0001);
+ 	av7110_register_irc_handler(av7110_emit_key);
+ 
+-	e = create_proc_entry("av7110_ir", S_IFREG | S_IRUGO | S_IWUSR, NULL);
++	e = create_proc_entry("av7110_ir", S_IFREG | S_IRUGO | S_IWUGO, NULL);
+ 	if (e) {
+ 		e->write_proc = av7110_ir_write_proc;
+ 		e->size = 4 + 256 * sizeof(u16);

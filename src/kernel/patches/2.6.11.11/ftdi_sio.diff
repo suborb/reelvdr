@@ -1,0 +1,645 @@
+diff -uNr linux-2.6.11.11.orig/drivers/usb/serial/ftdi_sio.c linux-2.6.11.11/drivers/usb/serial/ftdi_sio.c
+--- linux-2.6.11.11.orig/drivers/usb/serial/ftdi_sio.c	2006-12-13 16:38:46.000000000 +0100
++++ linux-2.6.11.11/drivers/usb/serial/ftdi_sio.c	2006-12-13 20:26:59.000000000 +0100
+@@ -76,7 +76,7 @@
+  *      Defererence pointers after any paranoid checks, not before.
+  *
+  * (21/Jun/2003) Erik Nygren
+- *      Added support for Home Electronics Tira-1 IR tranceiver using FT232BM chip.
++ *      Added support for Home Electronics Tira-1 IR transceiver using FT232BM chip.
+  *      See <http://www.home-electro.com/tira1.htm>.  Only operates properly 
+  *      at 100000 and RTS-CTS, so set custom divisor mode on startup.
+  *      Also force the Tira-1 and USB-UIRT to only use their custom baud rates.
+@@ -91,7 +91,7 @@
+  *      Minor whitespace and comment changes.
+  *
+  * (12/Jun/2003) David Norwood
+- *      Added support for USB-UIRT IR tranceiver using 8U232AM chip.
++ *      Added support for USB-UIRT IR transceiver using 8U232AM chip.
+  *      See <http://home.earthlink.net/~jrhees/USBUIRT/index.htm>.  Only
+  *      operates properly at 312500, so set custom divisor mode on startup.
+  *
+@@ -264,7 +264,7 @@
+ /*
+  * Version Information
+  */
+-#define DRIVER_VERSION "v1.4.1"
++#define DRIVER_VERSION "v1.4.2"
+ #define DRIVER_AUTHOR "Greg Kroah-Hartman <greg@kroah.com>, Bill Ryder <bryder@sgi.com>, Kuba Ober <kuba@mareimbrium.org>"
+ #define DRIVER_DESC "USB FTDI Serial Converters Driver"
+ 
+@@ -272,9 +272,13 @@
+ 
+ static struct usb_device_id id_table_sio [] = {
+ 	{ USB_DEVICE(FTDI_VID, FTDI_SIO_PID) },
++	{ USB_DEVICE(MOBILITY_VID, MOBILITY_USB_SERIAL_PID) },
+ 	{ }						/* Terminating entry */
+ };
+ 
++
++
++
+ /*
+  * The 8U232AM has the same API as the sio except for:
+  * - it can support MUCH higher baudrates; up to:
+@@ -363,20 +367,24 @@
+ 	{ USB_DEVICE_VER(FTDI_VID, PROTEGO_SPECIAL_3, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, PROTEGO_SPECIAL_4, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_ELV_UO100_PID, 0, 0x3ff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_ELV_UM100_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, INSIDE_ACCESSO, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(INTREPID_VID, INTREPID_VALUECAN_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(INTREPID_VID, INTREPID_NEOVI_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(FALCOM_VID, FALCOM_TWIST_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_SUUNTO_SPORTS_PID, 0, 0x3ff) },
+-	{ USB_DEVICE_VER(FTDI_RM_VID, FTDI_RMCANVIEW_PID, 0, 0x3ff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_RM_CANVIEW_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(BANDB_VID, BANDB_USOTL4_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(BANDB_VID, BANDB_USTL4_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(BANDB_VID, BANDB_USO9ML2_PID, 0, 0x3ff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, EVER_ECO_PRO_CDS, 0, 0x3ff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_4N_GALAXY_DE_0_PID, 0, 0x3ff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_4N_GALAXY_DE_1_PID, 0, 0x3ff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_4N_GALAXY_DE_2_PID, 0, 0x3ff) },
++	{ USB_DEVICE_VER(WBE_VID, WBE_SMARTMOUSE_PID, 0, 0x3ff) },
+ 	{ }						/* Terminating entry */
+ };
+ 
+-
+ static struct usb_device_id id_table_FT232BM [] = {
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_IRTRANS_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_8U232AM_PID, 0x400, 0xffff) },
+@@ -471,6 +479,7 @@
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88E_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88F_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_ELV_UO100_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_ELV_UM100_PID, 0x400, 0xffff) },
+  	{ USB_DEVICE_VER(FTDI_VID, LINX_SDMUSBQSS_PID, 0x400, 0xffff) },
+  	{ USB_DEVICE_VER(FTDI_VID, LINX_MASTERDEVEL2_PID, 0x400, 0xffff) },
+  	{ USB_DEVICE_VER(FTDI_VID, LINX_FUTURE_0_PID, 0x400, 0xffff) },
+@@ -483,11 +492,16 @@
+ 	{ USB_DEVICE_VER(INTREPID_VID, INTREPID_NEOVI_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(FALCOM_VID, FALCOM_TWIST_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, FTDI_SUUNTO_SPORTS_PID, 0x400, 0xffff) },
+-	{ USB_DEVICE_VER(FTDI_RM_VID, FTDI_RMCANVIEW_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_RM_CANVIEW_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(BANDB_VID, BANDB_USOTL4_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(BANDB_VID, BANDB_USTL4_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(BANDB_VID, BANDB_USO9ML2_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE_VER(FTDI_VID, EVER_ECO_PRO_CDS, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_4N_GALAXY_DE_0_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_4N_GALAXY_DE_1_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_4N_GALAXY_DE_2_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_ACTIVE_ROBOTS_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(WBE_VID, WBE_SMARTMOUSE_PID, 0x400, 0xffff) },
+ 	{ }						/* Terminating entry */
+ };
+ 
+@@ -593,7 +607,24 @@
+ 	{ USB_DEVICE(FTDI_VID, PROTEGO_R2X0) },
+ 	{ USB_DEVICE(FTDI_VID, PROTEGO_SPECIAL_3) },
+ 	{ USB_DEVICE(FTDI_VID, PROTEGO_SPECIAL_4) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E808_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E809_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E80A_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E80B_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E80C_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E80D_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E80E_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E80F_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E888_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E889_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88A_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88B_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88C_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88D_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88E_PID, 0x400, 0xffff) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_GUDEADS_E88F_PID, 0x400, 0xffff) },
+ 	{ USB_DEVICE(FTDI_VID, FTDI_ELV_UO100_PID) },
++	{ USB_DEVICE(FTDI_VID, FTDI_ELV_UM100_PID) },
+  	{ USB_DEVICE_VER(FTDI_VID, LINX_SDMUSBQSS_PID, 0x400, 0xffff) },
+  	{ USB_DEVICE_VER(FTDI_VID, LINX_MASTERDEVEL2_PID, 0x400, 0xffff) },
+  	{ USB_DEVICE_VER(FTDI_VID, LINX_FUTURE_0_PID, 0x400, 0xffff) },
+@@ -606,11 +637,17 @@
+ 	{ USB_DEVICE(INTREPID_VID, INTREPID_NEOVI_PID) },
+ 	{ USB_DEVICE(FALCOM_VID, FALCOM_TWIST_PID) },
+ 	{ USB_DEVICE(FTDI_VID, FTDI_SUUNTO_SPORTS_PID) },
+-	{ USB_DEVICE(FTDI_RM_VID, FTDI_RMCANVIEW_PID) },
++	{ USB_DEVICE(FTDI_VID, FTDI_RM_CANVIEW_PID) },
+ 	{ USB_DEVICE(BANDB_VID, BANDB_USOTL4_PID) },
+ 	{ USB_DEVICE(BANDB_VID, BANDB_USTL4_PID) },
+ 	{ USB_DEVICE(BANDB_VID, BANDB_USO9ML2_PID) },
+ 	{ USB_DEVICE(FTDI_VID, EVER_ECO_PRO_CDS) },
++	{ USB_DEVICE(FTDI_VID, FTDI_4N_GALAXY_DE_0_PID) },
++	{ USB_DEVICE(FTDI_VID, FTDI_4N_GALAXY_DE_1_PID) },
++	{ USB_DEVICE(FTDI_VID, FTDI_4N_GALAXY_DE_2_PID) },
++	{ USB_DEVICE(MOBILITY_VID, MOBILITY_USB_SERIAL_PID) },
++	{ USB_DEVICE(WBE_VID, WBE_SMARTMOUSE_PID) },
++	{ USB_DEVICE_VER(FTDI_VID, FTDI_ACTIVE_ROBOTS_PID, 0x400, 0xffff) },
+ 	{ }						/* Terminating entry */
+ };
+ 
+@@ -623,6 +660,13 @@
+ 	.id_table =	id_table_combined,
+ };
+ 
++static char *ftdi_chip_name[] = {
++	[SIO] = "SIO",	/* the serial part of FT8U100AX */
++	[FT8U232AM] = "FT8U232AM",
++	[FT232BM] = "FT232BM",
++	[FT2232C] = "FT2232C",
++};
++
+ 
+ /* Constants for read urb and write urb */
+ #define BUFSZ 512
+@@ -648,6 +692,8 @@
+  	char prev_status, diff_status;        /* Used for TIOCMIWAIT */
+ 	__u8 rx_flags;		/* receive state flags (throttling) */
+ 	spinlock_t rx_lock;	/* spinlock for receive state */
++	struct work_struct rx_work;
++	int rx_processed;
+ 
+ 	__u16 interface;	/* FT2232C port interface (0 for FT232/245) */
+ 
+@@ -678,7 +724,7 @@
+ static int  ftdi_chars_in_buffer	(struct usb_serial_port *port);
+ static void ftdi_write_bulk_callback	(struct urb *urb, struct pt_regs *regs);
+ static void ftdi_read_bulk_callback	(struct urb *urb, struct pt_regs *regs);
+-static void ftdi_process_read		(struct usb_serial_port *port);
++static void ftdi_process_read		(void *param);
+ static void ftdi_set_termios		(struct usb_serial_port *port, struct termios * old);
+ static int  ftdi_tiocmget               (struct usb_serial_port *port, struct file *file);
+ static int  ftdi_tiocmset		(struct usb_serial_port *port, struct file * file, unsigned int set, unsigned int clear);
+@@ -852,7 +898,7 @@
+ 
+ 
+ 
+-#define WDR_TIMEOUT (HZ * 5 ) /* default urb timeout */
++#define WDR_TIMEOUT 5000 /* default urb timeout */
+ 
+ /* High and low are for DTR, RTS etc etc */
+ #define HIGH 1
+@@ -1001,7 +1047,6 @@
+ 	struct ftdi_private *priv = usb_get_serial_port_data(port);
+ 	__u32 div_value = 0;
+ 	int div_okay = 1;
+-	char *chip_name = "";
+ 	int baud;
+ 
+ 	/*
+@@ -1046,7 +1091,6 @@
+ 	if (!baud) baud = 9600;	
+ 	switch(priv->chip_type) {
+ 	case SIO: /* SIO chip */
+-		chip_name = "SIO";
+ 		switch(baud) {
+ 		case 300: div_value = ftdi_sio_b300; break;
+ 		case 600: div_value = ftdi_sio_b600; break;
+@@ -1066,7 +1110,6 @@
+ 		}
+ 		break;
+ 	case FT8U232AM: /* 8U232AM chip */
+-		chip_name = "FT8U232AM";
+ 		if (baud <= 3000000) {
+ 			div_value = ftdi_232am_baud_to_divisor(baud);
+ 		} else {
+@@ -1077,11 +1120,6 @@
+ 		break;
+ 	case FT232BM: /* FT232BM chip */
+ 	case FT2232C: /* FT2232C chip */
+-		if (priv->chip_type == FT2232C) {
+-			chip_name = "FT2232C";
+-		} else {
+-			chip_name = "FT232BM";
+-		}
+ 		if (baud <= 3000000) {
+ 			div_value = ftdi_232bm_baud_to_divisor(baud);
+ 		} else {
+@@ -1094,7 +1132,8 @@
+ 
+ 	if (div_okay) {
+ 		dbg("%s - Baud rate set to %d (divisor 0x%lX) on chip %s",
+-			__FUNCTION__, baud, (unsigned long)div_value, chip_name);
++			__FUNCTION__, baud, (unsigned long)div_value,
++			ftdi_chip_name[priv->chip_type]);
+ 	}
+ 
+ 	return(div_value);
+@@ -1184,7 +1223,7 @@
+  * ***************************************************************************
+  */
+ 
+-ssize_t show_latency_timer(struct device *dev, char *buf)
++static ssize_t show_latency_timer(struct device *dev, char *buf)
+ {
+ 	struct usb_serial_port *port = to_usb_serial_port(dev);
+ 	struct ftdi_private *priv = usb_get_serial_port_data(port);
+@@ -1211,7 +1250,8 @@
+ }
+ 
+ /* Write a new value of the latency timer, in units of milliseconds. */
+-ssize_t store_latency_timer(struct device *dev, const char *valbuf, size_t count)
++static ssize_t store_latency_timer(struct device *dev, const char *valbuf,
++				   size_t count)
+ {
+ 	struct usb_serial_port *port = to_usb_serial_port(dev);
+ 	struct ftdi_private *priv = usb_get_serial_port_data(port);
+@@ -1241,7 +1281,8 @@
+ 
+ /* Write an event character directly to the FTDI register.  The ASCII
+    value is in the low 8 bits, with the enable bit in the 9th bit. */
+-ssize_t store_event_char(struct device *dev, const char *valbuf, size_t count)
++static ssize_t store_event_char(struct device *dev, const char *valbuf,
++				size_t count)
+ {
+ 	struct usb_serial_port *port = to_usb_serial_port(dev);
+ 	struct ftdi_private *priv = usb_get_serial_port_data(port);
+@@ -1269,10 +1310,10 @@
+ 	return count;
+ }
+ 
+-static DEVICE_ATTR(latency_timer, S_IWUGO | S_IRUGO, show_latency_timer, store_latency_timer);
+-static DEVICE_ATTR(event_char, S_IWUGO, NULL, store_event_char);
++static DEVICE_ATTR(latency_timer, S_IWUSR | S_IRUGO, show_latency_timer, store_latency_timer);
++static DEVICE_ATTR(event_char, S_IWUSR, NULL, store_event_char);
+ 
+-void create_sysfs_attrs(struct usb_serial *serial)
++static void create_sysfs_attrs(struct usb_serial *serial)
+ {	
+ 	struct ftdi_private *priv;
+ 	struct usb_device *udev;
+@@ -1282,14 +1323,18 @@
+ 	priv = usb_get_serial_port_data(serial->port[0]);
+ 	udev = serial->dev;
+ 	
+-	if (priv->chip_type == FT232BM) {
+-		dbg("sysfs attributes for FT232BM");
++	/* XXX I've no idea if the original SIO supports the event_char
++	 * sysfs parameter, so I'm playing it safe.  */
++	if (priv->chip_type != SIO) {
++		dbg("sysfs attributes for %s", ftdi_chip_name[priv->chip_type]);
+ 		device_create_file(&udev->dev, &dev_attr_event_char);
+-		device_create_file(&udev->dev, &dev_attr_latency_timer);
++		if (priv->chip_type == FT232BM || priv->chip_type == FT2232C) {
++			device_create_file(&udev->dev, &dev_attr_latency_timer);
++		}
+ 	}
+ }
+ 
+-void remove_sysfs_attrs(struct usb_serial *serial)
++static void remove_sysfs_attrs(struct usb_serial *serial)
+ {
+ 	struct ftdi_private *priv;
+ 	struct usb_device *udev;
+@@ -1299,9 +1344,12 @@
+ 	priv = usb_get_serial_port_data(serial->port[0]);
+ 	udev = serial->dev;
+ 	
+-	if (priv->chip_type == FT232BM) {
++	/* XXX see create_sysfs_attrs */
++	if (priv->chip_type != SIO) {
+ 		device_remove_file(&udev->dev, &dev_attr_event_char);
+-		device_remove_file(&udev->dev, &dev_attr_latency_timer);
++		if (priv->chip_type == FT232BM || priv->chip_type == FT2232C) {
++			device_remove_file(&udev->dev, &dev_attr_latency_timer);
++		}
+ 	}
+ 	
+ }
+@@ -1335,9 +1383,7 @@
+ 	priv->flags = ASYNC_LOW_LATENCY;
+ 
+ 	/* Increase the size of read buffers */
+-	if (port->bulk_in_buffer) {
+-		kfree (port->bulk_in_buffer);
+-	}
++	kfree(port->bulk_in_buffer);
+ 	port->bulk_in_buffer = kmalloc (BUFSZ, GFP_KERNEL);
+ 	if (!port->bulk_in_buffer) {
+ 		kfree (priv);
+@@ -1348,15 +1394,15 @@
+ 		port->read_urb->transfer_buffer_length = BUFSZ;
+ 	}
+ 
++	INIT_WORK(&priv->rx_work, ftdi_process_read, port);
++
+ 	/* Free port's existing write urb and transfer buffer. */
+ 	if (port->write_urb) {
+ 		usb_free_urb (port->write_urb);
+ 		port->write_urb = NULL;
+ 	}
+-	if (port->bulk_out_buffer) {
+-		kfree (port->bulk_out_buffer);
+-		port->bulk_out_buffer = NULL;
+-	}
++	kfree(port->bulk_out_buffer);
++	port->bulk_out_buffer = NULL;
+ 
+ 	usb_set_serial_port_data(serial->port[0], priv);
+ 	
+@@ -1403,6 +1449,8 @@
+ 	priv->chip_type = FT8U232AM;
+ 	priv->baud_base = 48000000 / 2; /* Would be / 16, but FTDI supports 0.125, 0.25 and 0.5 divisor fractions! */
+ 	
++	create_sysfs_attrs(serial);
++	
+ 	return (0);
+ } /* ftdi_8U232AM_startup */
+ 
+@@ -1447,13 +1495,15 @@
+ 	inter = serial->interface->altsetting->desc.bInterfaceNumber;
+ 
+ 	if (inter) {
+-		priv->interface = INTERFACE_B;
++		priv->interface = PIT_SIOB;
+ 	}
+ 	else  {
+-		priv->interface = INTERFACE_A;
++		priv->interface = PIT_SIOA;
+ 	}
+ 	priv->baud_base = 48000000 / 2; /* Would be / 16, but FT2232C supports multiple of 0.125 divisor fractions! */
+ 	
++	create_sysfs_attrs(serial);
++
+ 	return (0);
+ } /* ftdi_FT2232C_startup */
+ 
+@@ -1576,6 +1626,7 @@
+ 	spin_unlock_irqrestore(&priv->rx_lock, flags);
+ 
+ 	/* Start reading from the device */
++	priv->rx_processed = 0;
+ 	usb_fill_bulk_urb(port->read_urb, dev,
+ 		      usb_rcvbulkpipe(dev, port->bulk_in_endpointAddress),
+ 		      port->read_urb->transfer_buffer, port->read_urb->transfer_buffer_length,
+@@ -1626,6 +1677,10 @@
+ 			err("Error from RTS LOW urb");
+ 		}
+ 	} /* Note change no line if hupcl is off */
++
++	/* cancel any scheduled reading */
++	cancel_delayed_work(&priv->rx_work);
++	flush_scheduled_work();
+ 	
+ 	/* shutdown our bulk read */
+ 	if (port->read_urb)
+@@ -1821,23 +1876,14 @@
+ 		return;
+ 	}
+ 
+-	/* If throttled, delay receive processing until unthrottled. */
+-	spin_lock(&priv->rx_lock);
+-	if (priv->rx_flags & THROTTLED) {
+-		dbg("Deferring read urb processing until unthrottled");
+-		priv->rx_flags |= ACTUALLY_THROTTLED;
+-		spin_unlock(&priv->rx_lock);
+-		return;
+-	}
+-	spin_unlock(&priv->rx_lock);
+-
+ 	ftdi_process_read(port);
+ 
+ } /* ftdi_read_bulk_callback */
+ 
+ 
+-static void ftdi_process_read (struct usb_serial_port *port)
++static void ftdi_process_read (void *param)
+ { /* ftdi_process_read */
++	struct usb_serial_port *port = (struct usb_serial_port*)param;
+ 	struct urb *urb;
+ 	struct tty_struct *tty;
+ 	struct ftdi_private *priv;
+@@ -1848,6 +1894,7 @@
+ 	int result;
+ 	int need_flip;
+ 	int packet_offset;
++	unsigned long flags;
+ 
+ 	dbg("%s - port %d", __FUNCTION__, port->number);
+ 
+@@ -1874,12 +1921,18 @@
+ 
+ 	data = urb->transfer_buffer;
+ 
+-        /* The first two bytes of every read packet are status */
+-	if (urb->actual_length > 2) {
+-		usb_serial_debug_data(debug, &port->dev, __FUNCTION__, urb->actual_length, data);
++	if (priv->rx_processed) {
++		dbg("%s - already processed: %d bytes, %d remain", __FUNCTION__,
++				priv->rx_processed,
++				urb->actual_length - priv->rx_processed);
+ 	} else {
+-                dbg("Status only: %03oo %03oo",data[0],data[1]);
+-        }
++		/* The first two bytes of every read packet are status */
++		if (urb->actual_length > 2) {
++			usb_serial_debug_data(debug, &port->dev, __FUNCTION__, urb->actual_length, data);
++		} else {
++			dbg("Status only: %03oo %03oo",data[0],data[1]);
++		}
++	}
+ 
+ 
+ 	/* TO DO -- check for hung up line and handle appropriately: */
+@@ -1888,8 +1941,12 @@
+ 	/* if CD is dropped and the line is not CLOCAL then we should hangup */
+ 
+ 	need_flip = 0;
+-	for (packet_offset=0; packet_offset < urb->actual_length; packet_offset += PKTSZ) {
++	for (packet_offset = priv->rx_processed; packet_offset < urb->actual_length; packet_offset += PKTSZ) {
++		int length;
++
+ 		/* Compare new line status to the old one, signal if different */
++		/* N.B. packet may be processed more than once, but differences
++		 * are only processed once.  */
+ 		if (priv != NULL) {
+ 			char new_status = data[packet_offset+0] & FTDI_STATUS_B0_MASK;
+ 			if (new_status != priv->prev_status) {
+@@ -1899,6 +1956,35 @@
+ 			}
+ 		}
+ 
++		length = min(PKTSZ, urb->actual_length-packet_offset)-2;
++		if (length < 0) {
++			err("%s - bad packet length: %d", __FUNCTION__, length+2);
++			length = 0;
++		}
++
++		/* have to make sure we don't overflow the buffer
++		   with tty_insert_flip_char's */
++		if (tty->flip.count+length > TTY_FLIPBUF_SIZE) {
++			tty_flip_buffer_push(tty);
++			need_flip = 0;
++
++			if (tty->flip.count != 0) {
++				/* flip didn't work, this happens when ftdi_process_read() is
++				 * called from ftdi_unthrottle, because TTY_DONT_FLIP is set */
++				dbg("%s - flip buffer push failed", __FUNCTION__);
++				break;
++			}
++		}
++		if (priv->rx_flags & THROTTLED) {
++			dbg("%s - throttled", __FUNCTION__);
++			break;
++		}
++		if (tty->ldisc.receive_room(tty)-tty->flip.count < length) {
++			/* break out & wait for throttling/unthrottling to happen */
++			dbg("%s - receive room low", __FUNCTION__);
++			break;
++		}
++
+ 		/* Handle errors and break */
+ 		error_flag = TTY_NORMAL;
+ 		/* Although the device uses a bitmask and hence can have multiple */
+@@ -1921,13 +2007,8 @@
+ 			error_flag = TTY_FRAME;
+ 			dbg("FRAMING error");
+ 		}
+-		if (urb->actual_length > packet_offset + 2) {
+-			for (i = 2; (i < PKTSZ) && ((i+packet_offset) < urb->actual_length); ++i) {
+-				/* have to make sure we don't overflow the buffer
+-				  with tty_insert_flip_char's */
+-				if(tty->flip.count >= TTY_FLIPBUF_SIZE) {
+-					tty_flip_buffer_push(tty);
+-				}
++		if (length > 0) {
++			for (i = 2; i < length+2; i++) {
+ 				/* Note that the error flag is duplicated for 
+ 				   every character received since we don't know
+ 				   which character it applied to */
+@@ -1964,6 +2045,35 @@
+ 		tty_flip_buffer_push(tty);
+ 	}
+ 
++	if (packet_offset < urb->actual_length) {
++		/* not completely processed - record progress */
++		priv->rx_processed = packet_offset;
++		dbg("%s - incomplete, %d bytes processed, %d remain",
++				__FUNCTION__, packet_offset,
++				urb->actual_length - packet_offset);
++		/* check if we were throttled while processing */
++		spin_lock_irqsave(&priv->rx_lock, flags);
++		if (priv->rx_flags & THROTTLED) {
++			priv->rx_flags |= ACTUALLY_THROTTLED;
++			spin_unlock_irqrestore(&priv->rx_lock, flags);
++			dbg("%s - deferring remainder until unthrottled",
++					__FUNCTION__);
++			return;
++		}
++		spin_unlock_irqrestore(&priv->rx_lock, flags);
++		/* if the port is closed stop trying to read */
++		if (port->open_count > 0){
++			/* delay processing of remainder */
++			schedule_delayed_work(&priv->rx_work, 1);
++		} else {
++			dbg("%s - port is closed", __FUNCTION__);
++		}
++		return;
++	}
++
++	/* urb is completely processed */
++	priv->rx_processed = 0;
++
+ 	/* if the port is closed stop trying to read */
+ 	if (port->open_count > 0){
+ 		/* Continue trying to always read  */
+@@ -2403,7 +2513,7 @@
+ 	spin_unlock_irqrestore(&priv->rx_lock, flags);
+ 
+ 	if (actually_throttled)
+-		ftdi_process_read(port);
++		schedule_work(&priv->rx_work);
+ }
+ 
+ static int __init ftdi_init (void)
+diff -uNr linux-2.6.11.11.orig/drivers/usb/serial/ftdi_sio.h linux-2.6.11.11/drivers/usb/serial/ftdi_sio.h
+--- linux-2.6.11.11.orig/drivers/usb/serial/ftdi_sio.h	2006-12-13 16:38:46.000000000 +0100
++++ linux-2.6.11.11/drivers/usb/serial/ftdi_sio.h	2006-12-13 20:27:02.000000000 +0100
+@@ -136,7 +136,7 @@
+ /*
+  * Home Electronics (www.home-electro.com) USB gadgets
+  */
+-#define FTDI_HE_TIRA1_PID	0xFA78	/* Tira-1 IR tranceiver */
++#define FTDI_HE_TIRA1_PID	0xFA78	/* Tira-1 IR transceiver */
+ 
+ /* USB-UIRT - An infrared receiver and transmitter using the 8U232AM chip */
+ /* http://home.earthlink.net/~jrhees/USBUIRT/index.htm */
+@@ -144,6 +144,8 @@
+ 
+ /* ELV USB Module UO100 (PID sent by Stefan Frings) */
+ #define FTDI_ELV_UO100_PID	0xFB58	/* Product Id */
++/* ELV USB Module UM100 (PID sent by Arnim Laeuger) */
++#define FTDI_ELV_UM100_PID	0xFB5A	/* Product Id */
+ 
+ /*
+  * Definitions for ID TECH (www.idt-net.com) devices
+@@ -156,7 +158,8 @@
+  */
+ #define OCT_VID			0x0B39	/* OCT vendor ID */
+ /* Note: OCT US101 is also rebadged as Dick Smith Electronics (NZ) XH6381 */
+-/* Also rebadged as SIIG Inc. model US2308 */
++/* Also rebadged as Dick Smith Electronics (Aus) XH6451 */
++/* Also rebadged as SIIG Inc. model US2308 hardware version 1 */
+ #define OCT_US101_PID		0x0421	/* OCT US101 USB to RS-232 */
+ 
+ /* an infrared receiver for user access control with IR tags */
+@@ -235,10 +238,10 @@
+ 
+ /*
+  * RM Michaelides CANview USB (http://www.rmcan.com)
+- * CAN filedbus interface adapter, addad by port GmbH www.port.de)
++ * CAN fieldbus interface adapter, added by port GmbH www.port.de)
++ * Ian Abbott changed the macro names for consistency.
+  */
+-#define FTDI_RM_VID		0x0403	/* Vendor  Id */
+-#define FTDI_RMCANVIEW_PID	0xfd60	/* Product Id */
++#define FTDI_RM_CANVIEW_PID	0xfd60	/* Product Id */
+ 
+ /*
+  * EVER Eco Pro UPS (http://www.ever.com.pl/)
+@@ -246,6 +249,33 @@
+ 
+ #define	EVER_ECO_PRO_CDS	0xe520	/* RS-232 converter */
+ 
++/*
++ * 4N-GALAXY.DE PIDs for CAN-USB, USB-RS232, USB-RS422, USB-RS485,
++ * USB-TTY activ, USB-TTY passiv.  Some PIDs are used by several devices
++ * and I'm not entirely sure which are used by which.
++ */
++#define FTDI_4N_GALAXY_DE_0_PID	0x8372
++#define FTDI_4N_GALAXY_DE_1_PID	0xF3C0
++#define FTDI_4N_GALAXY_DE_2_PID	0xF3C1
++
++/*
++ * Mobility Electronics products.
++ */
++#define MOBILITY_VID			0x1342
++#define MOBILITY_USB_SERIAL_PID		0x0202	/* EasiDock USB 200 serial */
++
++/*
++ * Active Robots product ids.
++ */
++#define FTDI_ACTIVE_ROBOTS_PID	0xE548	/* USB comms board */
++
++/*
++ * WB Electronics products.
++ */
++#define WBE_VID			0x104F
++#define WBE_SMARTMOUSE_PID	0x0002	/* Smartmouse USB */
++
++
+ /* Commands */
+ #define FTDI_SIO_RESET 		0 /* Reset the port */
+ #define FTDI_SIO_MODEM_CTRL 	1 /* Set the modem control register */
+@@ -258,10 +288,6 @@
+ #define FTDI_SIO_SET_LATENCY_TIMER	9 /* Set the latency timer */
+ #define FTDI_SIO_GET_LATENCY_TIMER	10 /* Get the latency timer */
+ 
+-/* Port interface code for FT2232C */
+-#define INTERFACE_A		1
+-#define INTERFACE_B		2
+-
+ 
+ /*
+  *   BmRequestType:  1100 0000b

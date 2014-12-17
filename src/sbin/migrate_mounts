@@ -1,0 +1,146 @@
+#!/bin/sh
+
+NAME=setup-shares
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+SYSCONFIG=/etc/default/sysconfig
+[ -f $SYSCONFIG ] || { echo "$SYSCONFIG nicht gefunden"; exit 1; }
+. $SYSCONFIG
+
+if grep -q 12d51000 /proc/bus/pci/devices; then
+	BINDIR=/opt/bin/
+	NFSCLIENT="/etc/init.d/nfs_client"
+	NETCLIENT=$(which setup-shares)
+	BACKUP=/opt/ReelMount/old_netvars.conf-$(date +%s)
+	mkdir -p /opt/ReelMount 2>/dev/null
+else
+	BINDIR=""
+	NFSCLIENT=$(which nfs_client)
+	NETCLIENT=$(which setup-shares)
+	BACKUP=/media/hd/home/reel/old_netvars.conf-$(date +%s)
+fi
+
+IFS="
+"
+# Leerzeichenkorrektur fuer Linknamen
+sed -i '/MOUNT[0-9]*_[SN][MF][BS]_LINKNAME/s/\ /_/g' $SYSCONFIG
+
+smb_param () {
+	for param in CLUSER SMB_USER SAMBA_PC SAMBA_SHARECL SMB_LINKNAME SMB_LINK_IMAGES SMB_LINK_MUSIC SMB_LINK_VIDEO SMB_LINK_MOVIES SMB_PASSWORD START_SMBCL NAS_DVDDIR; do
+		set_param
+		grep ^$addnum$param $SYSCONFIG >> $BACKUP
+		sed -i "/^$addnum$param/ d" $SYSCONFIG
+	done
+	if [ -z $addnum ]; then
+		/etc/init.d/smb_client stop
+	else
+		addnum=$(echo $addnum | sed "s/ADDMOUNT//" | sed "s/_//")
+		/opt/additional-mounts/bin/addmounts.sh stop smb $addnum
+	fi
+}
+
+nfs_param () {
+	for param in NFS_BSIZE NFS_LINKNAME NFS_LINK_IMAGES NFS_LINK_MUSIC NFS_LINK_VIDEO NFS_LINK_MOVIES NFS_OPT_HS \
+			NFS_OPT_LOCK NFS_OPT_RW NFS_PC NFS_PROTO NFS_SHARECL NFS_VERS START_NFSCL NFS_NAS_DVDDIR; do
+		set_param
+		grep ^$addnum$param $SYSCONFIG >> $BACKUP
+		sed -i "/^$addnum$param/ d" $SYSCONFIG
+	done
+	if [ -z $addnum ]; then
+		$NFSCLIENT stop
+	else
+		addnum=$(echo $addnum | sed "s/ADDMOUNT//" | sed "s/_//")
+		/opt/additional-mounts/bin/addmounts.sh stop nfs $addnum
+	fi
+}
+
+set_param () {
+	if grep -q ^$addnum$param $SYSCONFIG ; then
+		newparam=$param
+		[ $param = "CLUSER" ] && newparam=SMB_USERNAME
+		[ $param = "SMB_USER" ] && newparam=SMB_USERNAME
+		[ $param = "SAMBA_PC" ] && newparam=SMB_HOST
+		[ $param = "NFS_PC" ] && newparam=NFS_HOST
+		[ $param = "SAMBA_SHARECL" ] && newparam=SMB_SHARENAME
+		[ $param = "NFS_SHARECL" ] && newparam=NFS_SHARENAME
+		[ $param = "NAS_DVDDIR" ] && newparam=SMB_NAS_DVDDIR
+		[ $param = "SMB_LINK_VIDEO" ] && newparam=SMB_RECORDINGS
+		[ $param = "NFS_LINK_VIDEO" ] && newparam=NFS_RECORDINGS
+		[ $param = "SMB_LINK_MOVIES" ] && newparam=SMB_VIDEOS
+		[ $param = "NFS_LINK_MOVIES" ] && newparam=NFS_VIDEOS
+		[ $param = "SMB_LINK_IMAGES" ] && newparam=SMB_PICTURES
+		[ $param = "NFS_LINK_IMAGES" ] && newparam=NFS_PICTURES
+		[ $param = "SMB_LINK_MUSIC" ] && newparam=SMB_MUSIC
+		[ $param = "NFS_LINK_MUSIC" ] && newparam=NFS_MUSIC
+		[ $param = "SMB_LINKNAME" ] && newparam=SMB_DISPLAYNAME
+		[ $param = "NFS_LINKNAME" ] && newparam=NFS_DISPLAYNAME
+		[ $param = "START_SMBCL" ] && newparam=SMB_STARTCLIENT
+		[ $param = "START_NFSCL" ] && newparam=NFS_STARTCLIENT
+		[ $param = "NFS_OPT_HS" ] && newparam=NFS_OPTIONHS
+		[ $param = "NFS_OPT_LOCK" ] && newparam=NFS_OPTIONLOCK
+		[ $param = "NFS_OPT_RW" ] && newparam=NFS_OPTIONRW
+		[ $param = "NFS_VERS" ] && newparam=NFS_NFSVERSION
+		[ $param = "NFS_BSIZE" ] && newparam=NFS_BLOCKSIZE
+		[ $param = "NFS_PROTO" ] && newparam=NFS_NETWORKPROTOCOL
+
+		echo $PREFIX$nr"_"$newparam"="$(grep ^$addnum$param $SYSCONFIG | cut -d= -f2) >> $SYSCONFIG
+#echo $PREFIX$nr"_"$newparam"="$(grep ^$addnum$param $SYSCONFIG | cut -d= -f2)
+	else
+		if [ $param != "CLUSER" ] && [ $param != "SMB_USER" ]; then
+			newparam=$param
+			value=none
+			[ $param = "SMB_LINKNAME" ] && value=smb-link
+			[ $param = "NFS_LINKNAME" ] && value=nfs-link
+			[ $param = "SMB_LINKNAME" ] && newparam=SMB_DISPLAYNAME
+			[ $param = "NFS_LINKNAME" ] && newparam=NFS_DISPLAYNAME
+
+			( [ $param = "NAS_DVDDIR" ] || [ $param = "NFS_NAS_DVDDIR" ] ) && value=dvd
+			[ $param = "NAS_DVDDIR" ] && newparam=SMB_NAS_DVDDIR
+
+			( [ $param = "SMB_LINK_IMAGES" ] || [ $param = "NFS_LINK_IMAGES" ] ) && value=yes
+			( [ $param = "SMB_LINK_MOVIES" ] || [ $param = "NFS_LINK_MOVIES" ] ) && value=yes
+			( [ $param = "SMB_LINK_MUSIC" ] || [ $param = "NFS_LINK_MUSIC" ] ) && value=yes
+			( [ $param = "SMB_LINK_VIDEO" ] || [ $param = "NFS_LINK_VIDEO" ] ) && value=yes
+			[ $param = "SMB_LINK_VIDEO" ] && newparam=SMB_RECORDINGS
+			[ $param = "NFS_LINK_VIDEO" ] && newparam=NFS_RECORDINGS
+			[ $param = "SMB_LINK_MOVIES" ] && newparam=SMB_VIDEOS
+			[ $param = "NFS_LINK_MOVIES" ] && newparam=NFS_VIDEOS
+			[ $param = "SMB_LINK_IMAGES" ] && newparam=SMB_PICTURES
+			[ $param = "NFS_LINK_IMAGES" ] && newparam=NFS_PICTURES
+			[ $param = "SMB_LINK_MUSIC" ] && newparam=SMB_MUSIC
+			[ $param = "NFS_LINK_MUSIC" ] && newparam=NFS_MUSIC
+
+			[ $value != "none" ] && echo $PREFIX$nr"_"$newparam"="$value >> $SYSCONFIG
+#[ $value != "none" ] && echo $PREFIX$nr"_"$newparam"="$value
+		fi
+	fi
+}
+
+MIGRATE=no
+for oldmount in $(grep ^START_SMBCL $SYSCONFIG) $(grep ADDMOUNT $SYSCONFIG | grep START_SMBCL) \
+		$(grep ^START_NFSCL $SYSCONFIG) $(grep ADDMOUNT $SYSCONFIG | grep START_NFSCL) ; do
+	addnum=""
+	nr=0
+	if echo $oldmount | grep -q ADDMOUNT ; then
+		addnum="$(echo $oldmount | cut -d_ -f1)_"
+	fi
+	while grep -q ^$PREFIX$nr"_[SN][MF][BS]_STARTCLIENT" $SYSCONFIG; do
+		nr=$(expr $nr + 1)
+	done
+	if echo $oldmount | grep -q SMB ; then
+		smb_param
+	else
+		nfs_param
+	fi
+	MIGRATE=yes
+done
+
+if [ $MIGRATE = "yes" ]; then
+	# deactivate/hide additional-mounts:
+	grep -q ADDMOUNT_STATUS=\"disable\" $SYSCONFIG ||  echo "ADDMOUNT_STATUS=\"disable\"" >> $SYSCONFIG
+	[ -x /opt/additional-mounts/bin/menu-delete.sh ] && /opt/additional-mounts/bin/menu-delete.sh
+	[ -x /etc/init.d/additional-mounts-automounter ] && /etc/init.d/additional-mounts-automounter stop
+	$NETCLIENT restart
+fi

@@ -1,0 +1,11 @@
+--- busybox-1.2.1/networking/udhcp/packet.h.org	2006-10-25 12:04:40.000000000 +0200
++++ busybox-1.2.1/networking/udhcp/packet.h	2006-10-25 12:03:59.000000000 +0200
+@@ -1,6 +1,8 @@
+ #ifndef _PACKET_H
+ #define _PACKET_H
+ 
++#include <netinet/in.h>      // added to define in_port_t
++#include <netinet/in_systm.h> // added to define n_long 
+ #include <netinet/udp.h>
+ #include <netinet/ip.h>
+ 

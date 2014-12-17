@@ -1,0 +1,449 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvdswitch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 13:48+0200\n"
+"PO-Revision-Date: 2009-02-218:20+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Reading DVD"
+msgstr "Načítání DVD"
+
+msgid "Writing DVD"
+msgstr "Zápis na DVD"
+
+#, fuzzy
+msgid "Copying DVD"
+msgstr "Načítání DVD"
+
+msgid "Please insert DVD: "
+msgstr "Vložte DVD:"
+
+msgid "Commands"
+msgstr "Příkazy"
+
+msgid "Burn image"
+msgstr "Vypálit obraz"
+
+msgid "Rename image"
+msgstr "Přejmenovat obraz"
+
+msgid "Open DVD-tray"
+msgstr "Otevřít jednotku DVD"
+
+msgid "Close DVD-tray"
+msgstr "Zavřít jednotku DVD"
+
+msgid "Delete cache"
+msgstr "Vymazat mezipaměť"
+
+msgid "Format DVD-RW"
+msgstr "Zformátovat DVD-RW"
+
+msgid "Directory management"
+msgstr "Správa adresářů"
+
+msgid "Success..."
+msgstr "Úspěch..."
+
+msgid "Directory Management"
+msgstr "Správa adresářů"
+
+msgid "Select Directory"
+msgstr "Vybrat adresář"
+
+msgid "New"
+msgstr "Nový"
+
+msgid "Select"
+msgstr "Vybrat"
+
+msgid "Rename"
+msgstr "Přejmenovat"
+
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "Move"
+msgstr "Přesunout"
+
+msgid "Edit Directories"
+msgstr "Upravit adresáře"
+
+msgid "no Rights!"
+msgstr "Žádná práva!"
+
+msgid "really delete?"
+msgstr "Opravdu vymazat?"
+
+msgid "Directory not empty. however delete?"
+msgstr "Adresář není prázdný. Přesto vymazat?"
+
+msgid "no rights!"
+msgstr "Žádná práva!"
+
+msgid "no rights to create"
+msgstr "Žádná práva vytvářet"
+
+msgid "Directory exists"
+msgstr "Adresář existuje"
+
+msgid "no rights to rename"
+msgstr "Žádná práva přejmenovat"
+
+msgid "Insert"
+msgstr "Vložit"
+
+msgid "Specified Writescript not exist!"
+msgstr "Zadaný zápisový skript neexistuje!"
+
+msgid "Cannot execute Writescript!"
+msgstr "Nelze provést zápisový skript!"
+
+msgid "Burn Now?"
+msgstr "Vypálit nyní?"
+
+msgid "Read DVD"
+msgstr "Načíst DVD"
+
+msgid "Specified Readscript not exist!"
+msgstr "Zadaný čtecí skript neexistuje!"
+
+msgid "Cannot execute Readscript!"
+msgstr "Nelze provést čtecí skript!"
+
+msgid "Now Read?"
+msgstr "Načíst nyní?"
+
+msgid "Image-File"
+msgstr "Obrazový soubor"
+
+msgid "Image-Directory"
+msgstr "Obrazový adresář"
+
+msgid "Previously seen DVDs"
+msgstr "Dříve použité disky DVD"
+
+msgid "Archives DVDs and plays it from Harddisk"
+msgstr "Archivace disků DVD a přehrávání z pevného disku"
+
+msgid "Archive Video-DVD"
+msgstr "Archivovat Video-DVD"
+
+msgid "Image Directory not readable or does not exist"
+msgstr ""
+
+msgid "DVD-Plugin not found! Function deactivated!"
+msgstr "Modul DVD nebyl nalezen! Funkce deaktivována!"
+
+msgid "Directory with 'VIDEO_TS' Folder"
+msgstr "Adresář se složkou VIDEO_TS"
+
+msgid "Directory"
+msgstr "Adresář"
+
+msgid "File with '.iso' Extension"
+msgstr "Soubor s příponou .iso"
+
+msgid "Iso-Image"
+msgstr "Obraz ISO"
+
+msgid "My DVDs"
+msgstr "Moje DVD"
+
+msgid "free"
+msgstr "volných"
+
+msgid "DVD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Use the red button to create a archive."
+msgstr ""
+
+msgid "No DVD found in drive."
+msgstr ""
+
+msgid "Insert a DVD to create a archive"
+msgstr ""
+
+msgid "to change"
+msgstr "Změnit"
+
+msgid "File exists in Directory"
+msgstr "Soubor v adresáři existuje"
+
+msgid "Please wait. Searching for DVD images"
+msgstr "Počkejte, probíhá hledání obrazů DVD"
+
+msgid "without Category"
+msgstr "Bez kategorie"
+
+#, c-format
+msgid "(Size %03.1f GB)\t"
+msgstr "(velikost %03.1f GB)\t"
+
+msgid "DVD-Drive"
+msgstr "Jednotka DVD"
+
+msgid "insert Media"
+msgstr ""
+
+msgid "no Rights to rename"
+msgstr "Žádná práva přejmenovat"
+
+msgid "RIP a DVD"
+msgstr "Kopírovat DVD"
+
+msgid "All Images"
+msgstr "Všechny obrazy"
+
+msgid "All with Cat."
+msgstr "Vše s kat."
+
+msgid "Directories"
+msgstr "Adresáře"
+
+msgid "Image-Type"
+msgstr "Typ obrazu"
+
+msgid "File-Type"
+msgstr "Typ souboru"
+
+msgid "none"
+msgstr "žádný"
+
+msgid "ascending"
+msgstr "vzestupně"
+
+msgid "descending"
+msgstr "sestupně"
+
+msgid "none Function"
+msgstr "Bez funkce"
+
+msgid "Dir. Management"
+msgstr "Správa adr."
+
+msgid "Tray open"
+msgstr "Otevřít jednotku"
+
+msgid "Tray close"
+msgstr "Zavřít jednotku"
+
+msgid "Play"
+msgstr "Přehrát"
+
+msgid "Image rename"
+msgstr "Přejmenovat obraz"
+
+msgid "Image move"
+msgstr "Přesunout obraz"
+
+msgid "Image delete"
+msgstr "Odstranit obraz"
+
+msgid "Image burn"
+msgstr "Vypálit obraz"
+
+msgid "Image read"
+msgstr "Načíst obraz"
+
+msgid "Dir.Mgmt."
+msgstr "Správa adr."
+
+msgid "Open"
+msgstr "Otevřít"
+
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "Burn"
+msgstr "Vypálit"
+
+msgid "Copy"
+msgstr "Kopírovat"
+
+msgid "Use -> and <- for opening and closing menus"
+msgstr "K otevření a zavření nabídky použijte tlačítka -> a <-"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Generic Settings"
+msgstr "Obecné nastavení"
+
+msgid "\tImagetypes"
+msgstr "\tTypy obrazů"
+
+msgid "\tView free DiskSpace"
+msgstr "\tZobrazit volné místo na disku"
+
+msgid "Display Settings"
+msgstr "Nastavení zobrazení"
+
+msgid "\tDisplay Mode"
+msgstr "\tRežim zobrazení"
+
+msgid "\t  Category Type"
+msgstr "\t  Typ kategorie"
+
+msgid "\t  invisible empty Dir's/Cat."
+msgstr "\t  Skrýt prázdné adr./kat."
+
+msgid "\tAlphabetic Sort"
+msgstr "\tAbecední řazení"
+
+msgid "\tvisible DVD-Drive"
+msgstr "\tZobrazit jednotku DVD"
+
+msgid "Special Display Settings"
+msgstr "Rozšířené nastavení zobrazení"
+
+msgid "\tvisible Image-Type Col"
+msgstr "\tZobrazit sl. Typ obrazu"
+
+msgid "\t  Width for Image-Col"
+msgstr "\t  Šířka sl. Typ obrazu"
+
+msgid "\tchar for Cat.Line"
+msgstr "\tZnak pro řádek kat."
+
+msgid "\t  Count before Cat.Name"
+msgstr "\t  Počet před názvem kat."
+
+msgid "\tSpaces before/after Cat.Name"
+msgstr "\tMezery před/za názvem kat."
+
+msgid "\tCutText for Subcat"
+msgstr "\tDělicí text pro podkat."
+
+msgid "Navigation"
+msgstr "Navigace"
+
+msgid "\tCat.Jump by Left/Right"
+msgstr "\tZměna kat. pomocí doleva/doprava"
+
+msgid "Key allocation"
+msgstr "Přiřazení tlačítek"
+
+msgid "\tKey 1"
+msgstr "\tTlačítko 1"
+
+msgid "\tKey 2"
+msgstr "\tTlačítko 2"
+
+msgid "\tKey 3"
+msgstr "\tTlačítko 3"
+
+msgid "\tKey 4"
+msgstr "\tTlačítko 4"
+
+msgid "\tKey 5"
+msgstr "\tTlačítko 5"
+
+msgid "\tKey 6"
+msgstr "\tTlačítko 6"
+
+msgid "\tKey 7"
+msgstr "\tTlačítko 7"
+
+msgid "\tKey 8"
+msgstr "\tTlačítko 8"
+
+msgid "\tKey 9"
+msgstr "\tTlačítko 9"
+
+msgid "\tKey 0"
+msgstr "\tTlačítko 0"
+
+msgid "\tKey Green"
+msgstr "\tZelené tlačítko"
+
+msgid "\tKey Yellow"
+msgstr "\tŽluté tlačítko"
+
+msgid "\tKey OK"
+msgstr "\tTlačítko OK"
+
+msgid "to adjust"
+msgstr "Upravit"
+
+msgid "Imagetypes"
+msgstr "Typy obrazů"
+
+msgid "Edit"
+msgstr "Upravit"
+
+msgid "really delete Entry?"
+msgstr "Opravdu odstranit položku?"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Description:"
+msgstr "Popis"
+
+msgid "Type-Title:"
+msgstr "Název typu"
+
+msgid "Image Type"
+msgstr "Typ obrazu"
+
+msgid "Directory contains:"
+msgstr "Adresář obsahuje"
+
+msgid "File Extension:"
+msgstr "Přípona souboru"
+
+msgid "Hide Extension"
+msgstr "Skrýt příponu"
+
+msgid "'Description' must not empty!"
+msgstr "Popis nesmí být prázdný!"
+
+msgid "'Type-Title' must not empty!"
+msgstr "Název typu nesmí být prázdný!"
+
+msgid "'Directory contains' must not empty!"
+msgstr "Pole Adresář obsahuje nesmí být prázdné!"
+
+msgid "'File Extension' must not empty!"
+msgstr "Přípona souboru nesmí být prázdná!"
+
+#~ msgid "Image Directory not readable or not exist"
+#~ msgstr "Obrazový adresář je nečitelný nebo neexistuje"
+
+#, fuzzy
+#~ msgid "Rename DVD"
+#~ msgstr "Načíst DVD"
+
+#~ msgid "New:"
+#~ msgstr "Nový:"
+
+#~ msgid "Rename:"
+#~ msgstr "Přejmenovat:"
+
+#~ msgid "\tImage Dir."
+#~ msgstr "\tObrazový adr."
+
+#~ msgid "\tchange Character"
+#~ msgstr "\tZměnit znak"
+
+#~ msgid "DVD-Tray close"
+#~ msgstr "DVD-mechanika zavrena"
+
+#, fuzzy
+#~ msgid "Rip a DVD"
+#~ msgstr "Nacist DVD"

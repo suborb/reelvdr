@@ -1,0 +1,135 @@
+Remote Control Mini-FAQ (En, 2004-02-01)
+========================================
+
+Q1: Which hardware is supported?
+A1: Configurations which have been reported to work:
+
+type          connector         ir protocol
+-------------------------------------------
+Activy 300                      RCMM
+DVB-S 1.3[1]  J2                RC5
+DVB-S 1.5[1]  ???               ???
+DVB-S 1.6[1]  CI module         RC5
+DVB-S 2.1     ir connector      RC5
+DVB-S 2.2     ir connector      RC5
+
+[1] Probably DVB-S board revisions 1.3/1.5/1.6 work with:
+- J2 connector (if no CI module has been connected)
+- ir receiver connected to the CI module
+
+Please report if you have a working configuration not listed here. Thx.
+
+------------------------------------------------------------------------------
+
+Q2: What is the expected behavior of evtest?
+A2: You should see something like this:
+
+./evtest /dev/input/event0
+Input driver version is 1.0.0
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "DVB on-card IR receiver"
+Supported events:
+  Event type 1 (Key)
+    Event code 2 (1)
+    Event code 3 (2)
+    Event code 4 (3)
+    Event code 5 (4)
+    Event code 6 (5)
+    Event code 7 (6)
+    Event code 8 (7)
+    Event code 9 (8)
+    Event code 10 (9)
+    Event code 11 (0)
+    Event code 113 (Mute)
+    Event code 114 (VolumeDown)
+    Event code 115 (VolumeUp)
+    Event code 154 (CycleWindows)
+    Event code 353 (Select)
+    Event code 360 (Vendor)
+    Event code 375 (Screen)
+    Event code 377 (TV)
+    Event code 385 (Radio)
+    Event code 402 (ChannelUp)
+    Event code 403 (ChannelDown)
+Testing ... (interrupt to exit)
+Event: time 1047342384.790038, type 1 (Key), code 402 (ChannelUp), value 1
+Event: time 1047342385.290630, type 1 (Key), code 402 (ChannelUp), value 0
+
+'DVB on-card IR receiver' indicates that you are using the correct device.
+'Event:' lines are the result of pressing the 'Up' key on the remote control.
+
+------------------------------------------------------------------------------
+
+Q3: evtest does not show any events.
+A3: Try this checklist:
+
+0. compile everything:
+   cd DVB/driver
+   make
+   makedev.napi
+   cd DVB/apps/av7110_loadkeys
+   make
+
+1. load the driver
+   cd DVB/driver
+   make insmod
+
+2. load the keymap [see note below]
+   cd DVB/apps/av7110_loadkeys
+   ./av7110_loadkeys hauppauge.rc5 > /proc/av7110_ir
+
+3. run evtest
+   ./evtest /dev/input/event0
+
+If this does not work, try
+   ./evtest /dev/input/event1
+   ./evtest /dev/input/event2
+   ./evtest /dev/input/event3
+   ...
+
+One of these should work. (If your device is not '/dev/input/event0', 
+you have to specify this device with the '-i' command line option of
+the remote control plugin.)
+
+Note:
+   The keymap above works for the RC5 remote of a DVB-S Nexus 2.1 card.
+   For RCMM receivers, use a .rcmm keymap, i.e. 'activy.rcmm'.
+   If unsure, you might also try
+   ./av7110_loadkeys -i hauppauge.rc5 > /proc/av7110_ir
+   ./av7110_loadkeys activy.rcmm > /proc/av7110_ir
+   ./av7110_loadkeys -i activy.rcmm > /proc/av7110_ir
+
+------------------------------------------------------------------------------
+
+Q4: It still doesn't work. Any other idea?
+A4: Verify that the plug of the remote control receiver is connected properly.
+   :)
+
+------------------------------------------------------------------------------
+
+Q5: How do I have to modify 'runvdr' to load the keymap?
+A5: Have a look at the script 'runvdr.remote' in sub-directory 'misc'.
+
+------------------------------------------------------------------------------
+
+Q6: Keys are duplicated, i.e. pressing '1' switches to channel '11' or '111'.
+A6: Try this: Switch to a different virtual console.
+   If the problem disappeares, read on.
+
+When loaded, the keybdev device driver catches all remote control events.
+vdr receives these events from the keyboard _and_ the remote plugin.
+There are different solutions for kernel versions 2.4.x and 2.6.x.
+
+Fix for kernel 2.4:
+- If you don't use an USB keyboard, remove the keybdev driver:
+  rmmod keybdev, rename/delete keybdev.o
+- If you have an USB keyboard, patch the keybdev driver using
+    misc/kernel-2.4-keybdev-patch.diff
+  and recompile the driver.
+
+Fix for kernel 2.6 (already included in remote plugin 0.2.1 and later):
+  The keybdev driver is no longer optional. All keyboards use this driver.
+  Fortunately, there is a new ioctl to grab an input device in 2.6.x.
+  Patch the remote plugin using
+    http://www.escape-edv.de/endriss/vdr/misc/remote-0.2.0_kernel-2.6_grab_device.diff
+  and recompile the plugin.

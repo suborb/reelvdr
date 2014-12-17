@@ -1,0 +1,45 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          remove-symlinks
+# Required-Start:    
+# Required-Stop:
+# Should-Start:      
+# Default-Start:     
+# Default-Stop:      6
+# Short-Description: Execute the reboot command.
+# Description:
+### END INIT INFO
+
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+case "$1" in
+   start)
+      # No-op
+   ;;
+
+   restart|reload|force-reload)
+      echo "Error: argument '$1' not supported" >&2
+      exit 3
+   ;;
+
+   stop)
+      export ACTION=remove
+
+      cat /var/run/usbmount/mounts | while read line; do
+         export mountname=`echo $line | awk '{print $NF}'`
+
+         #remove symlinks of vdr
+         /etc/usbmount/umount.d/reelvdr
+
+         #umount
+         umount /media/$mountname
+         rmdir /media/$mountname
+      done
+   ;;
+
+   *)
+      echo "Usage: $0 start|stop" >&2
+      exit 3
+   ;;
+esac
+

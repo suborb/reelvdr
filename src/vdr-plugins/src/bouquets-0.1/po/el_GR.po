@@ -1,0 +1,199 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dimitrios Dimitrakos <mail@dimitrios.de>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bouquets 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-01-22 02:29+0100\n"
+"PO-Revision-Date: 2008-07-09 14:54+0200\n"
+"Last-Translator: Dimitrios Dimitrakos <mail@dimitrios.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Select channels with OK"
+msgstr ""
+
+msgid "Customize channels: "
+msgstr ""
+
+msgid "Favorites: "
+msgstr ""
+
+msgid "encrypted radio channels"
+msgstr ""
+
+msgid "free radio channels"
+msgstr ""
+
+msgid "radio channels"
+msgstr ""
+
+msgid "encrypted TV channels"
+msgstr ""
+
+msgid "free TV channels"
+msgstr ""
+
+msgid "TV channels"
+msgstr ""
+
+msgid "encrypted channels"
+msgstr ""
+
+msgid "free channels"
+msgstr ""
+
+msgid "HD channels"
+msgstr ""
+
+msgid "non HD channels"
+msgstr ""
+
+msgid "all channels"
+msgstr ""
+
+msgid "Select channels with blue key"
+msgstr ""
+
+msgid "Up/Dn for new location - OK to move"
+msgstr ""
+
+msgid "Channel is being used by a timer!"
+msgstr ""
+
+msgid "Delete channel?"
+msgstr ""
+
+msgid "Channel deleted"
+msgstr ""
+
+msgid "Delete channels?"
+msgstr ""
+
+msgid "Channels deleted"
+msgstr ""
+
+msgid "Channels have been moved"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Add to Favorites?"
+msgstr ""
+
+msgid "Button$New"
+msgstr ""
+
+msgid "Bouquets"
+msgstr ""
+
+msgid "Key$Previous"
+msgstr ""
+
+msgid "Key$Next"
+msgstr ""
+
+msgid "Button$Customize"
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr ""
+
+msgid "Move up/down for new position - then press 'OK'"
+msgstr ""
+
+msgid "Channels"
+msgstr ""
+
+msgid "Customize Bouquets"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Delete Bouquet?"
+msgstr ""
+
+msgid "Edit Bouquet"
+msgstr ""
+
+msgid "Add Bouquet"
+msgstr ""
+
+msgid "CI-Slot for this Bouquet"
+msgstr ""
+
+msgid "Bouquet starts with number"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Select CI-Slot for this Bouquet."
+msgstr ""
+
+msgid "Select channelnumber for first channel inside this bouquet"
+msgstr ""
+
+msgid "Symbolrate"
+msgstr ""
+
+msgid "System-ID"
+msgstr ""
+
+msgid "CI-Slot"
+msgstr ""
+
+msgid "No CAM at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "channellist"
+msgstr ""
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+msgid "Channellist: set filters"
+msgstr ""
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+msgid "All channels"
+msgstr ""
+
+msgid "Only TV channels"
+msgstr ""
+
+msgid "Only radio channels"
+msgstr ""
+
+msgid "non encrypted channels"
+msgstr ""
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr ""
+
+msgid "non encrypted TV channels"
+msgstr ""
+
+msgid "Channellist"
+msgstr ""

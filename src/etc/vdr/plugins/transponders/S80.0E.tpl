@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S80.0E
+2=Express AM2/MD1
+3=East
+4=80.0

@@ -1,0 +1,88 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-05-30 16:11+0200\n"
+"PO-Revision-Date: 2009-03-04 11:37+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Media Player"
+msgstr "Přehrávač médií"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "Music"
+msgstr "Hudba"
+
+msgid "Images"
+msgstr "Obrázky"
+
+msgid "Videos"
+msgstr "Videa"
+
+msgid "My Music"
+msgstr "Moje hudba"
+
+msgid "My Images"
+msgstr "Moje obrázky"
+
+msgid "My Videos"
+msgstr "Moje videa"
+
+msgid "Browser"
+msgstr ""
+
+msgid "Rotor"
+msgstr "Rotor"
+
+msgid "My Recordings"
+msgstr "Moje nahrávky"
+
+msgid "Play CD/DVD"
+msgstr "Přehrát CD/DVD"
+
+msgid "Internet radio"
+msgstr "Internetové rádio"
+
+msgid "Play Ipod"
+msgstr "Přehrát iPod"
+
+msgid "Audio Player2"
+msgstr ""
+
+msgid "Music & media player"
+msgstr ""
+
+msgid "Audio Player"
+msgstr "Zvukový přehrávač"
+
+msgid "Music Library"
+msgstr "Knihovna hudby"
+
+msgid "Image Player"
+msgstr "Přehrávač obrázků"
+
+msgid "Image Library"
+msgstr "Knihovna obrázků"
+
+msgid "MediaplayerDvd"
+msgstr "Přeh.médií DVD"
+
+msgid "Video Library"
+msgstr "Knihovna videa"
+
+msgid "Movie & media player"
+msgstr ""
+
+msgid "Movie Library"
+msgstr "Knihovna filmů"

@@ -1,0 +1,2166 @@
+# VDR language source file.
+# Copyright (C) 2013 Klaus Schmidinger <vdr@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Milan Hrala <hrala.milan@gmail.com>, 2011, 2013
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 2.0.0\n"
+"Report-Msgid-Bugs-To: <vdr-bugs@tvdr.de>\n"
+"POT-Creation-Date: 2013-05-11 15:59+0200\n"
+"PO-Revision-Date: 2013-03-04 21:24+0100\n"
+"Last-Translator: Milan Hrala <hrala.milan@gmail.com>\n"
+"Language-Team: Slovak <vdr@linuxtv.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Neplatný kanál ***"
+
+msgid "File already exists - overwrite?"
+msgstr ""
+
+msgid "Channel not available!"
+msgstr "Kanál nie je dostupný!"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Nemô¾e spusti» prenos!"
+
+msgid "off"
+msgstr "vypnuté"
+
+msgid "on"
+msgstr "zapnuté"
+
+msgid "auto"
+msgstr "automaticky"
+
+msgid "none"
+msgstr "¾iadny"
+
+msgid "Polarization"
+msgstr "Polarizácia"
+
+msgid "System"
+msgstr "systém"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "Inversion"
+msgstr "Inversion"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "CoderateL"
+msgstr "CoderateL"
+
+msgid "Modulation"
+msgstr "Modulácia"
+
+msgid "Bandwidth"
+msgstr "©írka pásma"
+
+msgid "Transmission"
+msgstr "Prenos"
+
+msgid "Guard"
+msgstr "Ochrana"
+
+msgid "Hierarchy"
+msgstr "Hierarchia"
+
+msgid "Rolloff"
+msgstr "Rolloff"
+
+msgid "StreamId"
+msgstr "StreamId"
+
+msgid "Starting EPG scan"
+msgstr "Spú¹»a sa snímanie EPG"
+
+msgid "Content$Movie/Drama"
+msgstr "Film/Dráma"
+
+msgid "Content$Detective/Thriller"
+msgstr "Detektívka/Triler"
+
+msgid "Content$Adventure/Western/War"
+msgstr "Dobrodru¾ný/Western/Vojnový"
+
+msgid "Content$Science Fiction/Fantasy/Horror"
+msgstr "Vedecko fantastický/Fantastický/Horor"
+
+msgid "Content$Comedy"
+msgstr "Komédia"
+
+msgid "Content$Soap/Melodrama/Folkloric"
+msgstr "Soap epera/Melodráma/Folklór"
+
+msgid "Content$Romance"
+msgstr "Romantický"
+
+msgid "Content$Serious/Classical/Religious/Historical Movie/Drama"
+msgstr "Skutoèný/Klasický/Nábo¾ensky/Historický film/Dráma"
+
+msgid "Content$Adult Movie/Drama"
+msgstr "Film pre dospelých/Dráma"
+
+msgid "Content$News/Current Affairs"
+msgstr "Správy/Aktuálne udalosti"
+
+msgid "Content$News/Weather Report"
+msgstr "Správy/Predpoveï poèasia"
+
+msgid "Content$News Magazine"
+msgstr "Spravodajský magazín"
+
+msgid "Content$Documentary"
+msgstr "Dokumentárny"
+
+msgid "Content$Discussion/Inverview/Debate"
+msgstr "Diskusia/Rozhovor/debata"
+
+msgid "Content$Show/Game Show"
+msgstr "©ou/Zábavné hry"
+
+msgid "Content$Game Show/Quiz/Contest"
+msgstr "Zábavná hra/vedemostná/sú»a¾ná"
+
+msgid "Content$Variety Show"
+msgstr "varieté"
+
+msgid "Content$Talk Show"
+msgstr "Televízna relácia"
+
+msgid "Content$Sports"
+msgstr "©port"
+
+msgid "Content$Special Event"
+msgstr "Zvlá¹tne udalosti"
+
+msgid "Content$Sport Magazine"
+msgstr "©portový magazín"
+
+msgid "Content$Football/Soccer"
+msgstr "Fudbal"
+
+msgid "Content$Tennis/Squash"
+msgstr "Tenis/Squash"
+
+msgid "Content$Team Sports"
+msgstr "Týmové ¹porty"
+
+msgid "Content$Athletics"
+msgstr "Atletika"
+
+msgid "Content$Motor Sport"
+msgstr "Motorizmus"
+
+msgid "Content$Water Sport"
+msgstr "Vodné ¹porty"
+
+msgid "Content$Winter Sports"
+msgstr "Zimné ¹porty"
+
+msgid "Content$Equestrian"
+msgstr "Jazdecké ¹porty"
+
+msgid "Content$Martial Sports"
+msgstr "Bojvé ¹porty"
+
+msgid "Content$Children's/Youth Programme"
+msgstr "Pre deti/program pre mláde¾"
+
+msgid "Content$Pre-school Children's Programme"
+msgstr "Program pre pred¹kolské deti"
+
+msgid "Content$Entertainment Programme for 6 to 14"
+msgstr "Zábavný program od 6 do 14 rokov"
+
+msgid "Content$Entertainment Programme for 10 to 16"
+msgstr "Zábavný program od 10 do 16 rokov"
+
+msgid "Content$Informational/Educational/School Programme"
+msgstr "Informaèný/Výchovný/©kolský program"
+
+msgid "Content$Cartoons/Puppets"
+msgstr "Kreslený/Bábkový"
+
+msgid "Content$Music/Ballet/Dance"
+msgstr "Hudba/Balet/Tanec"
+
+msgid "Content$Rock/Pop"
+msgstr "Rock/Pop"
+
+msgid "Content$Serious/Classical Music"
+msgstr "Vá¾na/Klasická hudba"
+
+msgid "Content$Folk/Tradional Music"
+msgstr "¥udová/Tradièná Hudba"
+
+msgid "Content$Jazz"
+msgstr "Jazz"
+
+msgid "Content$Musical/Opera"
+msgstr "Muzikál/Opera"
+
+msgid "Content$Ballet"
+msgstr "Balet"
+
+msgid "Content$Arts/Culture"
+msgstr "Umenie/Kultúra"
+
+msgid "Content$Performing Arts"
+msgstr "Herecké umenie"
+
+msgid "Content$Fine Arts"
+msgstr "Výtvarné umenie"
+
+msgid "Content$Religion"
+msgstr "Nábo¾enstvo"
+
+msgid "Content$Popular Culture/Traditional Arts"
+msgstr "Populárna kultúra/Tradièné umenie"
+
+msgid "Content$Literature"
+msgstr "Literatúra"
+
+msgid "Content$Film/Cinema"
+msgstr "Film/Kino"
+
+msgid "Content$Experimental Film/Video"
+msgstr "Experimentálny film/Video"
+
+msgid "Content$Broadcasting/Press"
+msgstr "Rozhlas/Tlaè"
+
+msgid "Content$New Media"
+msgstr "Nové média"
+
+msgid "Content$Arts/Culture Magazine"
+msgstr "Umenie/Kultúrny magazín"
+
+msgid "Content$Fashion"
+msgstr "Móda"
+
+msgid "Content$Social/Political/Economics"
+msgstr "Sociálny/Politický/Ekonomický"
+
+msgid "Content$Magazine/Report/Documentary"
+msgstr "Magazín/Reportá¾e/"
+
+msgid "Content$Economics/Social Advisory"
+msgstr "Ekonomika/Sociálne poradenstvo"
+
+msgid "Content$Remarkable People"
+msgstr "Významné osobnosti"
+
+msgid "Content$Education/Science/Factual"
+msgstr "Vzdelávanie/Veda/Fakta"
+
+msgid "Content$Nature/Animals/Environment"
+msgstr "Príroda/Zvieratá/®ivotné prostredie"
+
+msgid "Content$Technology/Natural Sciences"
+msgstr "Technológia/Prírodné vedy"
+
+msgid "Content$Medicine/Physiology/Psychology"
+msgstr "Medicína/Filozofia/Psychológia"
+
+msgid "Content$Foreign Countries/Expeditions"
+msgstr "Zahranièné krajiny/Expediícia"
+
+msgid "Content$Social/Spiritual Sciences"
+msgstr "sociálne/duchovné vedy"
+
+msgid "Content$Further Education"
+msgstr "ïal¹ie vzdelávanie"
+
+msgid "Content$Languages"
+msgstr "Jazyky"
+
+msgid "Content$Leisure/Hobbies"
+msgstr "vólny èas"
+
+msgid "Content$Tourism/Travel"
+msgstr "Turistika/Cestovanie"
+
+msgid "Content$Handicraft"
+msgstr "Remeslá"
+
+msgid "Content$Motoring"
+msgstr "Motorizmus"
+
+msgid "Content$Fitness & Health"
+msgstr "Fitness a zdravie"
+
+msgid "Content$Cooking"
+msgstr "Varenie"
+
+msgid "Content$Advertisement/Shopping"
+msgstr "Reklama/Predaj"
+
+msgid "Content$Gardening"
+msgstr "Záhradkárstvo"
+
+msgid "Content$Original Language"
+msgstr "Pôvodný jazyk"
+
+msgid "Content$Black & White"
+msgstr "Èiernobiely"
+
+msgid "Content$Unpublished"
+msgstr "Nepublikované"
+
+msgid "Content$Live Broadcast"
+msgstr "®ivé vysielanie"
+
+#, c-format
+msgid "ParentalRating$from %d"
+msgstr "od %d"
+
+msgid "No title"
+msgstr "Bez názvu"
+
+msgid "Help"
+msgstr ""
+
+msgid "No help available"
+msgstr ""
+
+msgid "Already first help item"
+msgstr ""
+
+msgid "Already last help item"
+msgstr ""
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Slovensky"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "slk"
+
+#. TRANSLATORS:
+#. Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+msgid "Timer Manager"
+msgstr ""
+
+msgid "Search-Timer Manager"
+msgstr ""
+
+msgid "Parental Control"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "TV & Radio"
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr ""
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr ""
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr ""
+
+msgid "View, edit and manage recording timers"
+msgstr ""
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr ""
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "Music & Pictures"
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio"
+msgstr ""
+
+msgid "Play music, manage and copy music files"
+msgstr ""
+
+msgid "Play music and films from your collection"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr ""
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr ""
+
+msgid "Copy an Audio CD to the music library"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+#. TRANSLATORS:
+#. Tooltips Menu "Films & DVD"
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr ""
+
+msgid "Movie library, TV recordings"
+msgstr ""
+
+msgid "Watch movies, manage and copy movie files"
+msgstr ""
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr ""
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr ""
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr ""
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI epgsearch
+msgid "Button$Functions"
+msgstr ""
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr ""
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI extrecmenu
+msgid "Undelete Recordings"
+msgstr ""
+
+msgid "Recording commands"
+msgstr "Príkazy nahrávania"
+
+#. TRANSLATORS:
+#. PI undelete
+#. PI burn
+msgid "Write DVD - Job"
+msgstr ""
+
+msgid "Write DVD - Job options"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI dvdswitch
+msgid "New folder"
+msgstr "Nový zlo¾ka"
+
+#. TRANSLATORS:
+#. Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr ""
+
+#. TRANSLATORS:
+#. Tooltips Menu "Internet & Extras"
+msgid "File Manager, Web browser, ReelBlog"
+msgstr ""
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr ""
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr ""
+
+msgid "Read news & information on the ReelBox"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI Filebrowser
+msgid "Filebrowser"
+msgstr ""
+
+msgid "Create directory"
+msgstr ""
+
+msgid "Playlist"
+msgstr ""
+
+msgid "Playlist actions"
+msgstr ""
+
+msgid "Playlist Commands"
+msgstr ""
+
+msgid "Filebrowser Commands"
+msgstr ""
+
+msgid "Copy playlist"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Additional Software"
+msgid "Additional Software"
+msgstr ""
+
+msgid "Magazine EPG"
+msgstr ""
+
+msgid "Additional software provided by third party developers"
+msgstr ""
+
+#. TRANSLATORS:
+#. More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr ""
+
+msgid "Show currently active background processes"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu Media Manager
+msgid "Format a DVD-RW"
+msgstr ""
+
+msgid "Directory browser"
+msgstr ""
+
+#. TRANSLATORS:
+#. Special Menus that have a banner at the left
+msgid "My Pictures"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "My DVDs"
+msgstr ""
+
+msgid "EPG Commands: "
+msgstr ""
+
+msgid "Search actions"
+msgstr ""
+
+msgid "Search entries"
+msgstr ""
+
+msgid "Search templates"
+msgstr ""
+
+msgid "Edit search"
+msgstr ""
+
+msgid "Edit timer"
+msgstr "Úprava plánu nahrávania"
+
+msgid "Edit blacklist"
+msgstr ""
+
+msgid "Edit template"
+msgstr ""
+
+msgid "Edit user-defined days of week"
+msgstr ""
+
+msgid "found recordings"
+msgstr ""
+
+msgid "Select directory"
+msgstr ""
+
+msgid "Timer conflicts -"
+msgstr ""
+
+msgid "Title$Childlock"
+msgstr ""
+
+msgid "Games"
+msgstr ""
+
+msgid "Multifeed Options"
+msgstr ""
+
+msgid "Move recording"
+msgstr ""
+
+msgid "Select Reelblog item"
+msgstr ""
+
+msgid "SleepTimer"
+msgstr ""
+
+msgid "Rename entry"
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Choose action"
+msgstr ""
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid "Channel List:"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup Menus with "Setup"-banner on the left
+msgid "Title$Setup"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Settings: System Settings"
+msgstr ""
+
+msgid "Software Update"
+msgstr ""
+
+msgid "Channel Lists"
+msgstr ""
+
+msgid "Channel lists functions"
+msgstr ""
+
+msgid "Channelscan"
+msgstr ""
+
+msgid "Installation Wizard"
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+msgid "Remote Control / Automation"
+msgstr ""
+
+msgid "MultiRoom Setup"
+msgstr ""
+
+msgid "MultiRoom - Error!"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "EPG Services"
+msgstr ""
+
+msgid "Reception Settings"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "Global Settings"
+msgstr ""
+
+msgid "UMTS Settings"
+msgstr ""
+
+msgid "Dynamic DNS"
+msgstr ""
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr ""
+
+msgid "Windows Network Connection"
+msgstr ""
+
+msgid "NFS Client"
+msgstr ""
+
+msgid "Video Recorder "
+msgstr ""
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr ""
+
+msgid "Setup - Audio/Video"
+msgstr ""
+
+msgid "Timezone & clock"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr ""
+
+msgid "Rotor Setup"
+msgstr ""
+
+msgid "Streaming Clients"
+msgstr ""
+
+msgid "Language Settings"
+msgstr ""
+
+msgid "Timezone"
+msgstr ""
+
+msgid "Timezone Settings"
+msgstr ""
+
+msgid "Front Panel"
+msgstr ""
+
+msgid "TVTV Service"
+msgstr ""
+
+msgid "International EPG"
+msgstr ""
+
+msgid "Energy Options"
+msgstr ""
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr ""
+
+msgid "Option$Quick"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup OSD and Language
+msgid "Setup.OSD$OSD Font Size"
+msgstr ""
+
+msgid "FontSize$Normal"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "User defined"
+msgstr ""
+
+#. TRANSLATORS:
+#. Recording Commands
+msgid "Mark Commercials"
+msgstr ""
+
+msgid "Add Child Lock"
+msgstr ""
+
+msgid "Remove Child Lock"
+msgstr ""
+
+msgid "Change title"
+msgstr ""
+
+msgid "Mark as New"
+msgstr ""
+
+msgid "Remove Archive Mark"
+msgstr ""
+
+msgid "Remove Crop Mark"
+msgstr ""
+
+msgid "Remove Archived Recording"
+msgstr ""
+
+msgid "Restore Archived Recording"
+msgstr ""
+
+msgid "Convert to MPEG (TS)"
+msgstr ""
+
+msgid "Directory Selector:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+msgid "Directory commands"
+msgstr ""
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "Generate preview"
+msgstr ""
+
+msgid "Remove preview"
+msgstr ""
+
+msgid "Compress recording"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI MCLI
+msgid "No CI-Module"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+#. TRANSLATORS:
+#. Channels/Bouquets
+msgid "Edit Channels"
+msgstr ""
+
+msgid "Customize Bouquets"
+msgstr ""
+
+msgid "Channellist: set filters"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI CHANNELLIST
+msgid "All Channels"
+msgstr ""
+
+msgid "Functions: Favourites"
+msgstr ""
+
+msgid "Functions: Channel list"
+msgstr ""
+
+msgid "Functions: Select favourite folder"
+msgstr ""
+
+msgid "Functions: search for channel"
+msgstr ""
+
+msgid "Functions: Create new Favourite folder"
+msgstr ""
+
+msgid "Functions: Rename favourite folder"
+msgstr ""
+
+msgid "Functions: Select "
+msgstr ""
+
+msgid "Functions: search "
+msgstr ""
+
+msgid "Functions: Create "
+msgstr ""
+
+msgid "Functions: Rename "
+msgstr ""
+
+msgid "Functions: Channel "
+msgstr ""
+
+msgid "Functions: Move Channel"
+msgstr ""
+
+msgid "Sources"
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "Music Browser"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Fáza 1: Detekcia typu diaµkového ovládania"
+
+msgid "Press any key on the RC unit"
+msgstr "Stlaète µubovolné tlaèidlo ovládania"
+
+msgid "RC code detected!"
+msgstr "Bol zosnímaný kód diaµkového ovládania!"
+
+msgid "Do not press any key..."
+msgstr "Nestláèajte ¾iadne klávesy..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Fáza 2: Urèenie funkcie tlaèidiel"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Stlaète tlaèidlo pre funkciu  '%s'"
+
+msgid "Press 'Up' to confirm"
+msgstr "Pre potvrdenie stlaète tlaèidlo 'Hore'"
+
+msgid "Press 'Down' to continue"
+msgstr "Pokraèujete stlaèením tlaèidla 'Dole' "
+
+msgid "(press 'Up' to go back)"
+msgstr "(Vrátite sa stlaèením tlaèidla 'hore')"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(Definovanie tlaèidiel ukonèíte stlaèením tlaèidla 'dole')"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "(stlaèením 'Menu' preskoèíte definíciu tlaèidla)"
+
+msgid "Learning Remote Control Keys"
+msgstr "Programovanie diaµkového ovládania"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Fáza 3: Ulo¾enie kódu tlaèidiel"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "Nastavenie stlaèením tlaèidla 'hore' ulo¾íte, 'Dole' zru¹íte"
+
+msgid "Key$Up"
+msgstr "Hore"
+
+msgid "Key$Down"
+msgstr "Dole"
+
+msgid "Key$Menu"
+msgstr "Menu"
+
+msgid "Key$Ok"
+msgstr "Ok"
+
+msgid "Key$Back"
+msgstr "Spä»"
+
+msgid "Key$Left"
+msgstr "Vµavo"
+
+msgid "Key$Right"
+msgstr "Vpravo"
+
+msgid "Key$Red"
+msgstr "Èervené"
+
+msgid "Key$Green"
+msgstr "Zelené"
+
+msgid "Key$Yellow"
+msgstr "®lté"
+
+msgid "Key$Blue"
+msgstr "Modré"
+
+msgid "Key$Info"
+msgstr "Info"
+
+msgid "Key$Play/Pause"
+msgstr "Prehra»/Pozastavi»"
+
+msgid "Key$Play"
+msgstr "Prehra»"
+
+msgid "Key$Pause"
+msgstr "Pozastavi»"
+
+msgid "Key$Stop"
+msgstr "Zastavi»"
+
+msgid "Key$Record"
+msgstr "Nahra»"
+
+msgid "Key$FastFwd"
+msgstr "Pretoèi» dopredu"
+
+msgid "Key$FastRew"
+msgstr "Pretoèi» spä»"
+
+msgid "Key$Next"
+msgstr "Nasledujúci"
+
+msgid "Key$Prev"
+msgstr "Predchádzajúci"
+
+msgid "Key$Power"
+msgstr "Vypínaè"
+
+msgid "Key$Channel+"
+msgstr "Kanál+"
+
+msgid "Key$Channel-"
+msgstr "Kanál-"
+
+msgid "Key$PrevChannel"
+msgstr "Predchádzajúci kanál"
+
+msgid "Key$Volume+"
+msgstr "Hlasitos»+"
+
+msgid "Key$Volume-"
+msgstr "Hlasitos» -"
+
+msgid "Key$Mute"
+msgstr "Ticho"
+
+msgid "Key$Audio"
+msgstr "Zvuk"
+
+msgid "Key$Subtitles"
+msgstr "Titulky"
+
+msgid "Key$Schedule"
+msgstr "Televízny program"
+
+msgid "Key$Channels"
+msgstr "Kanály"
+
+msgid "Key$Timers"
+msgstr "Plány nahrávania"
+
+msgid "Key$Recordings"
+msgstr "Nahrávky"
+
+msgid "Key$Setup"
+msgstr "Nastavenie"
+
+msgid "Key$Commands"
+msgstr "Príkazy"
+
+msgid "Key$Greater"
+msgstr ""
+
+msgid "Key$Less"
+msgstr ""
+
+msgid "Key$2digit"
+msgstr ""
+
+msgid "Key$DVD"
+msgstr ""
+
+msgid "Key$DVB"
+msgstr ""
+
+msgid "Key$PVR"
+msgstr ""
+
+msgid "Key$Reel"
+msgstr ""
+
+msgid "Key$TT"
+msgstr ""
+
+msgid "Key$PiP"
+msgstr ""
+
+msgid "Key$Help"
+msgstr ""
+
+msgid "Key$Eject"
+msgstr ""
+
+msgid "Key$Aspect"
+msgstr ""
+
+msgid "Key$Search"
+msgstr ""
+
+msgid "Key$Searchtimers"
+msgstr ""
+
+msgid "Key$Internet"
+msgstr ""
+
+msgid "Key$Guide"
+msgstr ""
+
+msgid "Key$Multimedia"
+msgstr ""
+
+msgid "Key$Radio"
+msgstr ""
+
+msgid "Key$Heart"
+msgstr ""
+
+msgid "Key$Favourites"
+msgstr ""
+
+msgid "Key$AddFavorite"
+msgstr ""
+
+msgid "Key$User0"
+msgstr "U¾ívateµ0"
+
+msgid "Key$User1"
+msgstr "U¾ívateµ1"
+
+msgid "Key$User2"
+msgstr "U¾ívateµ2"
+
+msgid "Key$User3"
+msgstr "U¾ívateµ3"
+
+msgid "Key$User4"
+msgstr "U¾ívateµ4"
+
+msgid "Key$User5"
+msgstr "U¾ívateµ5"
+
+msgid "Key$User6"
+msgstr "U¾ívateµ6"
+
+msgid "Key$User7"
+msgstr "U¾ívateµ7"
+
+msgid "Key$User8"
+msgstr "U¾ívateµ8"
+
+msgid "Key$User9"
+msgstr "U¾ívateµ9"
+
+msgid "Free To Air"
+msgstr "volne ¹íriteµný"
+
+msgid "encrypted"
+msgstr "kódovaný"
+
+msgid "Edit channel"
+msgstr "Prispôsobi» kanál"
+
+msgid "Name"
+msgstr "Názov"
+
+msgid "Source"
+msgstr "Zdroj"
+
+msgid "Frequency"
+msgstr "Frekvencia"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid1"
+msgstr "Apid1"
+
+msgid "Apid2"
+msgstr "Apid2"
+
+msgid "Dpid1"
+msgstr "Dpid1"
+
+msgid "Dpid2"
+msgstr "Dpid2"
+
+msgid "Spid1"
+msgstr "Spid1"
+
+msgid "Spid2"
+msgstr "Spid2"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "CA"
+msgstr "CA"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Channel settings are not unique!"
+msgstr "Nastavenia kanálu nie sú výnimoèné!"
+
+msgid "Channels"
+msgstr "Kanály"
+
+msgid "Button$Edit"
+msgstr "Upravi»"
+
+msgid "Button$New"
+msgstr "Nový"
+
+msgid "Button$Delete"
+msgstr "Zmaza»"
+
+msgid "Button$Mark"
+msgstr "Oznaèi»"
+
+msgid "Channel is being used by a timer!"
+msgstr "Plán nahrávania práve pou¾íva kanál!"
+
+msgid "Delete channel?"
+msgstr "Odstráni» kanál?"
+
+msgid "Edit folder"
+msgstr "Upravi» zlo¾ku"
+
+msgid "Sub folder"
+msgstr "Pod zlo¾ka"
+
+msgid "Folder name already exists!"
+msgstr "Názov zlo¾ky u¾ existuje!"
+
+#, c-format
+msgid "Folder name must not contain '%c'!"
+msgstr "Názov zlo¾ky nesmie obsahova» '%c'!"
+
+msgid "Button$Select"
+msgstr "Vybra»"
+
+msgid "Delete folder and all sub folders?"
+msgstr "Vymaza» zlo¾ku a v¹etky pod zlo¾ky?"
+
+msgid "Delete folder?"
+msgstr "Vymaza» zlo¾ku?"
+
+msgid "Active"
+msgstr "Aktívny"
+
+msgid "Channel"
+msgstr "Kanál"
+
+msgid "Day"
+msgstr "Deò"
+
+msgid "Start"
+msgstr "Zaèína"
+
+msgid "Stop"
+msgstr "Konèí"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Lifetime"
+msgstr "®ivotnos»"
+
+msgid "Childlock"
+msgstr ""
+
+msgid "yes"
+msgstr "áno"
+
+msgid "no"
+msgstr "nie"
+
+msgid "File"
+msgstr "Súbor"
+
+msgid "Button$Folder"
+msgstr "Zlo¾ka"
+
+msgid "Button$Single"
+msgstr "bez opakovania"
+
+msgid "Button$Repeating"
+msgstr "s opakovaním"
+
+msgid "First day"
+msgstr "Odo dòa"
+
+msgid "Select folder"
+msgstr "Vybra» zlo¾ku"
+
+msgid "Timers"
+msgstr "Plány nahrávania"
+
+msgid "Button$On/Off"
+msgstr "Zap./Vyp."
+
+msgid "Button$Info"
+msgstr "Info"
+
+msgid "Delete timer?"
+msgstr "Zmaza» plán nahrávania?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Práve nahráva- naozaj zmaza»?"
+
+msgid "Event"
+msgstr "Udalosti"
+
+msgid "Button$Timer"
+msgstr "Plány"
+
+msgid "Button$Record"
+msgstr "Nahra»"
+
+msgid "Button$Switch"
+msgstr "Prepnú»"
+
+msgid "What's on now?"
+msgstr "Èo ide aktuálne?"
+
+msgid "What's on next?"
+msgstr "Èo nasleduje?"
+
+msgid "Button$Next"
+msgstr "Nasleduje"
+
+msgid "Button$Now"
+msgstr "Teraz"
+
+msgid "Button$Schedule"
+msgstr "TV program"
+
+msgid "Can't switch channel!"
+msgstr "Kanál nejde prepnú»!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "TV program - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr "Tato udalos» - %s"
+
+msgid "This event - all channels"
+msgstr "Tato udalos» - v¹etky kanály"
+
+msgid "All events - all channels"
+msgstr "V¹etky udalosti - v¹etky kanály"
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "Prosím vlo¾te %d znakov!"
+
+msgid "CAM not responding!"
+msgstr "CAM neodpovedá!"
+
+msgid "Recording info"
+msgstr "Podrobnosti nahrávky"
+
+msgid "Button$Play"
+msgstr "Prehra»"
+
+msgid "Button$Rewind"
+msgstr "Od zaèiatku"
+
+msgid "Edit recording"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Length"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "TS"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Delete marks information?"
+msgstr ""
+
+msgid "Delete resume information?"
+msgstr ""
+
+msgid "Button$Cut"
+msgstr ""
+
+msgid "Button$Copy"
+msgstr ""
+
+msgid "Button$Rename/Move"
+msgstr ""
+
+msgid "No editing marks defined!"
+msgstr "Neboli vyznaèené znaèky pre zostrihanie!"
+
+msgid "Can't start editing process!"
+msgstr "Nemô¾e zaèa» zostrihanie!"
+
+msgid "Editing process started"
+msgstr "Proces strihania sa spustil"
+
+msgid "Editing process already active!"
+msgstr "Proces zostrihania je aktívny!"
+
+msgid "File transfer started"
+msgstr ""
+
+msgid "Can't start file transfer!"
+msgstr ""
+
+msgid "File transfer already active!"
+msgstr ""
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "Button$Open"
+msgstr "Otvori»"
+
+msgid "Commands"
+msgstr "Príkazy"
+
+msgid "Delete recording?"
+msgstr "Zmaza» nahrávku?"
+
+msgid "Recording is being edited - really delete?"
+msgstr "Nahrávka sa upravuje - Naozaj zmaza»?"
+
+msgid "Error while deleting recording!"
+msgstr "Pri vymazávaní nahrávky pri¹lo k chybe!"
+
+msgid "never"
+msgstr "nikdy"
+
+msgid "skin dependent"
+msgstr "podµa vzhµadu"
+
+msgid "always"
+msgstr "v¾dy"
+
+msgid "OSD"
+msgstr "OSD (Menu na obrazovke)"
+
+msgid "Setup.OSD$Language"
+msgstr "Jazyk"
+
+msgid "Setup.OSD$Skin"
+msgstr "Vzhµad"
+
+msgid "Setup.OSD$Theme"
+msgstr "Téma"
+
+msgid "Setup.OSD$WarEagle icons"
+msgstr ""
+
+msgid "Setup.OSD$Left (%)"
+msgstr "Vµavo (%)"
+
+msgid "Setup.OSD$Top (%)"
+msgstr "Navrchu (%)"
+
+msgid "Setup.OSD$Width (%)"
+msgstr "©írka (%)"
+
+msgid "Setup.OSD$Height (%)"
+msgstr "Vý¹ka (%)"
+
+msgid "Setup.OSD$Message time (s)"
+msgstr "Èas zobrazenia správy (s)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Pou¾íva» malé písmo"
+
+msgid "Setup.OSD$Anti-alias"
+msgstr "Vyhladi» písmo"
+
+msgid "Setup.OSD$Default font"
+msgstr "Predvolené písmo"
+
+msgid "Setup.OSD$Small font"
+msgstr "Malé písmo"
+
+msgid "Setup.OSD$Fixed font"
+msgstr "Fixné písmo"
+
+msgid "Setup.OSD$Default font size (%)"
+msgstr "Veµkos» predvoleného písma (%)"
+
+msgid "Setup.OSD$Small font size (%)"
+msgstr "Veµkos» malého písma (%)"
+
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr "Veµkos» fixného písma (%)"
+
+msgid "Setup.OSD$Channel info position"
+msgstr "Pozícia informácií o kanále"
+
+msgid "bottom"
+msgstr "na spodku"
+
+msgid "top"
+msgstr "na vrchu"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "Èas zobr. informácií o kanále (s)"
+
+msgid "Setup.OSD$Info on channel switch"
+msgstr "Informácie pri zmene kanálu"
+
+msgid "Setup.OSD$Timeout requested channel info"
+msgstr "Èasový limit na informáciu o kanále"
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Rolova» strany"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "Rolova» cyklicky"
+
+msgid "Setup.OSD$Menu key closes"
+msgstr "Klávesa Menu zaviera"
+
+msgid "Setup.OSD$Recording directories"
+msgstr "Prevádzkova» zlo¾ky nahrávky"
+
+msgid "Setup.OSD$Folders in timer menu"
+msgstr "Zlo¾ky v menu plánovaèa"
+
+msgid "Setup.OSD$Always sort folders first"
+msgstr "Zlo¾ky v¾dy najprv usporiada»"
+
+msgid "Setup.OSD$Number keys for characters"
+msgstr "Písa» znaky èíselnými tlaèidlami"
+
+msgid "Setup.OSD$Color key 0"
+msgstr "Farba klávesy 0"
+
+msgid "Setup.OSD$Color key 1"
+msgstr "Farba klávesy 1"
+
+msgid "Setup.OSD$Color key 2"
+msgstr "Farba klávesy 2"
+
+msgid "Setup.OSD$Color key 3"
+msgstr "Farba klávesy 3"
+
+msgid "EPG"
+msgstr "EPG (Elektronický programový sprievodca)"
+
+msgid "Button$Scan"
+msgstr "Skenova»"
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Interval snímania EPG (h)"
+
+msgid "Setup.EPG$EPG bugfix level"
+msgstr "Úroveò opravy EPG chýb"
+
+msgid "Setup.EPG$EPG linger time (min)"
+msgstr "Ukazova» star¹ie EPG dáta (min)"
+
+msgid "Setup.EPG$Set system time"
+msgstr "Nastavi» systémový èas"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "Pou¾i» èas z transpondéru"
+
+#. TRANSLATORS: note the plural!
+msgid "Setup.EPG$Preferred languages"
+msgstr "Uprednostòova» jazyky"
+
+#. TRANSLATORS: note the singular!
+msgid "Setup.EPG$Preferred language"
+msgstr "Uprednostni» jazyk"
+
+msgid "pan&scan"
+msgstr "pan&scan"
+
+msgid "letterbox"
+msgstr "letterbox"
+
+msgid "center cut out"
+msgstr "oreza» do stredu"
+
+msgid "names only"
+msgstr "iba názvy"
+
+msgid "PIDs only"
+msgstr "iba PID-y"
+
+msgid "names and PIDs"
+msgstr "názvy a PID-y"
+
+msgid "add new channels"
+msgstr "prida» nové kanály"
+
+msgid "add new transponders"
+msgstr "prida» nové transpondéry"
+
+msgid "DVB"
+msgstr "DVB (digitálne televízne vysielanie)"
+
+msgid "Button$Audio"
+msgstr "Zvuk"
+
+msgid "Button$Subtitles"
+msgstr "Titulky"
+
+msgid "Setup.DVB$Primary DVB interface"
+msgstr "Hlavné DVB rozhranie"
+
+msgid "Setup.DVB$Standard compliance"
+msgstr "Kompatibilná norma"
+
+msgid "Setup.DVB$Video format"
+msgstr "Formát videa"
+
+msgid "Setup.DVB$Video display format"
+msgstr "Formát zobrazenia videa"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Pou¾íva» zvuk v Dolby Digital"
+
+msgid "Setup.DVB$Update channels"
+msgstr "Aktualizácia kanálov"
+
+msgid "Setup.DVB$Audio languages"
+msgstr "Jazyky zvuku"
+
+msgid "Setup.DVB$Audio language"
+msgstr "Jazyk zvuku"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "Zobrazova» titulky"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "Jazyky titulkov"
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "Jazyk titulkov"
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "Posunutie titulkov"
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "Priehµadnos» písma titulkov"
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "Priehµadnos» pozadia titulkov"
+
+msgid "Setup.DVB$Enable teletext support"
+msgstr ""
+
+msgid "LNB"
+msgstr "LNB (nízko ¹umová jednotka)"
+
+msgid "Setup.LNB$Use DiSEqC"
+msgstr "Pou¾íva» DiSEqC"
+
+msgid "Setup.LNB$SLOF (MHz)"
+msgstr "SLOF (MHz)"
+
+msgid "Setup.LNB$Low LNB frequency (MHz)"
+msgstr "Dolná frekvencia LNB (MHz)"
+
+msgid "Setup.LNB$High LNB frequency (MHz)"
+msgstr "Horná frekvencia LNB (MHz)"
+
+#, c-format
+msgid "Setup.LNB$Device %d connected to sat cable"
+msgstr "Zariadenie %d je pripojené na sat. kábel"
+
+msgid "Setup.LNB$own"
+msgstr "vlastný"
+
+msgid "CAM reset"
+msgstr "Resetnutie CAMu"
+
+msgid "CAM present"
+msgstr "CAM prítomný"
+
+msgid "CAM ready"
+msgstr "CAM pripravený"
+
+msgid "CAM"
+msgstr "CAM (modul podmieneného prístupu)"
+
+msgid "Button$Menu"
+msgstr "Menu"
+
+msgid "Button$Reset"
+msgstr "Resetnú»"
+
+msgid "Opening CAM menu..."
+msgstr "Otvára sa menu CAM..."
+
+msgid "Can't open CAM menu!"
+msgstr "Menu CAM nie je dostupné"
+
+msgid "CAM is in use - really reset?"
+msgstr "CAM sa pou¾íva - naozaj re¹tartova»?"
+
+msgid "Can't reset CAM!"
+msgstr "CAM modul nejde re¹tartova»!"
+
+msgid "do not pause live video"
+msgstr "nepozastavova» ¾ivé vysielanie"
+
+msgid "confirm pause live video"
+msgstr "potvrdi» pozastavenie ¾ivého vysielania"
+
+msgid "pause live video"
+msgstr "pozastavi» ¾ivé vysielanie"
+
+msgid "confirm"
+msgstr "overi»"
+
+msgid "Recording"
+msgstr "Nahrávanie"
+
+msgid "Setup.Recording$Margin at start (min)"
+msgstr "Nahráva» pred zaèiatkom (min)"
+
+msgid "Setup.Recording$Margin at stop (min)"
+msgstr "Nahráva» po konci (min)"
+
+msgid "Setup.Recording$Default priority"
+msgstr "Predvolená priorita"
+
+msgid "Setup.Recording$Default lifetime (d)"
+msgstr "Predvolená ¾ivotnos»"
+
+msgid "Setup.Recording$Pause key handling"
+msgstr "Chovanie klávesy pozastavenia"
+
+msgid "Setup.Recording$Pause priority"
+msgstr "Priorita pozastavenia"
+
+msgid "Setup.Recording$Pause lifetime (d)"
+msgstr "®ivotnos» pozastavania (d)"
+
+msgid "Setup.Recording$Use episode name"
+msgstr "Pou¾íva» názov epizódy"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "Pou¾íva» VPS"
+
+msgid "Setup.Recording$VPS margin (s)"
+msgstr "Èasová rezerva pre VPS (s)"
+
+msgid "Setup.Recording$Mark instant recording"
+msgstr "Oznaèi» okam¾ité nahrávky"
+
+msgid "Setup.Recording$Name instant recording"
+msgstr "Pomenova» okam¾ité nahrávky"
+
+msgid "Setup.Recording$Instant rec. time (min)"
+msgstr "Då¾ka okam¾itého nahrávania (min)"
+
+msgid "Setup.Recording$present event"
+msgstr "súèasná udalos»"
+
+msgid "Setup.Recording$Max. video file size (MB)"
+msgstr "Maximálna veµkos» nahrávky (MB)"
+
+msgid "Setup.Recording$Split edited files"
+msgstr "Deli» upravované súbory"
+
+msgid "Setup.Recording$Delete timeshift recording"
+msgstr "Vymaza» timeshift záznamy"
+
+msgid "Replay"
+msgstr "Prehrávanie"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Viac rýchlostný re¾im"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Zobrazi» spôsob prehrávania"
+
+msgid "Setup.Replay$Show remaining time"
+msgstr "Zobrazi» zostávajúci èas"
+
+msgid "Setup.Replay$Progress display time (s)"
+msgstr "Doba zobrazenia ukazovateµa priebehu (s)"
+
+msgid "Setup.Replay$Pause replay when setting mark"
+msgstr "Pozastavi» prehrávanie pri stanovení znaèky"
+
+msgid "Setup.Replay$Resume ID"
+msgstr "ident. èíslo obnovenia prehrávania"
+
+msgid "Setup.Replay$Jump&Play"
+msgstr ""
+
+msgid "Setup.Replay$Play&Jump"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds Slow"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds (Repeat)"
+msgstr ""
+
+msgid "Setup.Replay$Pause at last mark"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr "Rôzne"
+
+msgid "Setup.Miscellaneous$Min. event timeout (min)"
+msgstr "V pohotovosti pred nahrávaním (min)"
+
+msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+msgstr "Vymedzi» u¾ívateµskú neèinnos» (min)"
+
+msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+msgstr "Èasový limit odpovede SVDRP (s)"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "pamäta» predo¹lý kanál po ... (s)"
+
+msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+msgstr "Limit pri èíselnej voµbe kanála (ms)"
+
+msgid "Setup.Miscellaneous$Remote control repeat delay (ms)"
+msgstr "Zdr¾anie opakovaného stlaèenia  tlaèidla (ms)"
+
+msgid "Setup.Miscellaneous$Remote control repeat delta (ms)"
+msgstr "Perióda opakovania stlaèeného tlaèidla (ms)"
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "Kanál po spustení"
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "ako naposledy"
+
+msgid "Setup.Miscellaneous$Initial volume"
+msgstr "Hlasitos» po spustení"
+
+msgid "Setup.Miscellaneous$Channels wrap"
+msgstr "Kanály cyklova» pri prepnutí"
+
+msgid "Setup.Miscellaneous$Show channel names with source"
+msgstr "Zobrazi» kanály so zdrojom"
+
+msgid "Setup.Miscellaneous$Emergency exit"
+msgstr "Núdzové ukonèenie"
+
+msgid "Plugins"
+msgstr "Moduly"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Modul nemá konfiguraèné parametre!"
+
+msgid "Setup"
+msgstr "Nastavenie"
+
+msgid "Restart"
+msgstr "Re¹tart"
+
+msgid "Really restart?"
+msgstr "Naozaj re¹tartova»?"
+
+#. TRANSLATORS: note the leading and trailing blanks!
+msgid " Stop recording "
+msgstr " Zastavi» nahrávanie"
+
+msgid "Schedule"
+msgstr "TV program"
+
+msgid "VDR"
+msgstr ""
+
+#. TRANSLATORS: note the leading blank!
+msgid " Stop replaying"
+msgstr " Zastavi» prehrávanie"
+
+msgid "Button$Pause"
+msgstr "Pozastavi»"
+
+msgid "Button$Stop"
+msgstr "Zastavi»"
+
+msgid "Button$Resume"
+msgstr "Pokraèova»"
+
+#. TRANSLATORS: note the leading blank!
+msgid " Cancel editing"
+msgstr " Zru¹i» úpravu"
+
+#. TRANSLATORS: note the leading blank!
+msgid " Cancel file transfer"
+msgstr ""
+
+msgid "Stop recording?"
+msgstr "Ukonèi» nahrávanie?"
+
+msgid "Cancel editing?"
+msgstr "Zru¹i» úpravy?"
+
+msgid "Cancel file transfer?"
+msgstr ""
+
+msgid "No audio available!"
+msgstr "Zvukové stopy nie sú dostupné!"
+
+msgid "No subtitles"
+msgstr "Bez titulkov"
+
+msgid "No subtitles available!"
+msgstr "®iadne titulky nie sú dostupné!"
+
+msgid "Not enough disk space to start recording!"
+msgstr "Málo volného miesta na nahrávanie!"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "Could not add timer"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "Pre nahrávanie nie je volné ¾iadne DVB zariadenie!"
+
+msgid "Pausing live video..."
+msgstr "Pozastavuje sa ¾ivé vysielanie ..."
+
+msgid "Delete timeshift recording?"
+msgstr "Vymaza» timeshift záznamy?"
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Jump: "
+msgstr "Skok: "
+
+msgid "No editing sequences defined!"
+msgstr "Neboli urèené sekvencie úprav!"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " aáäbcèdïeéfghiíjklåµmnòoóôpqràs¹t»uúvwxyýz¾0123456789-.,#~\\^$[]|()*+?{}/:%@&"
+
+msgid "CharMap$ 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabcáè2\tdefïéì3\tghií4\tjkl5\tmnoòó6\tpqrsø¹7\ttuv»úù8\twxyzý¾9"
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc"
+
+msgid "Button$Overwrite"
+msgstr "Prepísa»"
+
+msgid "Button$Insert"
+msgstr "Vlo¾i»"
+
+msgid "Plugin"
+msgstr "Modul"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Hore/Dole na novú pozíciu - Ok presune"
+
+msgid "Channel locked (recording)!"
+msgstr "Kanál je zamknutý (nahráva sa)!"
+
+msgid "Low disk space!"
+msgstr "Nedostatok miesta na disku!"
+
+msgid "Regenerating index file"
+msgstr "Obnova indexového súboru"
+
+msgid "Index file regeneration complete"
+msgstr "Obnova indexového súboru hotová"
+
+msgid "Index file regeneration failed!"
+msgstr "Obnova indexového súboru zlyhala!"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Vypnutie nie je mo¾né - chýba voµba '-s'!"
+
+msgid "Editing - shut down anyway?"
+msgstr "Zostriháva sa - aj tak vypnú»?"
+
+msgid "Transfering file - shut down anyway?"
+msgstr ""
+
+msgid "Recording - shut down anyway?"
+msgstr "Nahráva - aj tak vypnú»?"
+
+#, c-format
+msgid "Recording in %ld minutes, shut down anyway?"
+msgstr "Nahrávanie zaène za %ld minút - aj tak vypnú»?"
+
+msgid "shut down anyway?"
+msgstr "Urèite vypnú»?"
+
+#, c-format
+msgid "Plugin %s wakes up in %ld min, continue?"
+msgstr "Modul %s sa prebudí za %ld min., pokraèova»?"
+
+msgid "Editing - restart anyway?"
+msgstr "Upravuje sa - aj tak re¹tartova»?"
+
+msgid "Transfering file - restart anyway?"
+msgstr ""
+
+msgid "Recording - restart anyway?"
+msgstr "Nahráva - aj tak re¹tartova»?"
+
+msgid "restart anyway?"
+msgstr "Urèite re¹tartova»?"
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Volume "
+msgstr "Hlasitos»"
+
+msgid "Classic VDR"
+msgstr "Klasické VDR"
+
+msgid "DISK"
+msgstr "DISK"
+
+msgid "LOAD"
+msgstr "ZA«A®ENIE"
+
+msgid "TIMERS"
+msgstr "PLÁNY"
+
+msgid "DEVICES"
+msgstr "ZARIADENIA"
+
+msgid "LIVE"
+msgstr "NA®IVO"
+
+msgid "PLAY"
+msgstr "PREHRÁVA SA"
+
+msgid "ST:TNG Panels"
+msgstr "ST:TNG panely"
+
+#. TRANSLATORS: the first character of each weekday, beginning with monday
+msgid "MTWTFSS"
+msgstr "PUS©PSN"
+
+msgid "Database not available!"
+msgstr ""
+
+#. TRANSLATORS: abbreviated weekdays, beginning with monday (must all be 3 letters!)
+msgid "MonTueWedThuFriSatSun"
+msgstr "Po Ut St ©t Pi So Ne "
+
+msgid "Monday"
+msgstr "Pondelok"
+
+msgid "Tuesday"
+msgstr "Utorok"
+
+msgid "Wednesday"
+msgstr "Streda"
+
+msgid "Thursday"
+msgstr "©tvrtok"
+
+msgid "Friday"
+msgstr "Piatok"
+
+msgid "Saturday"
+msgstr "Sobota"
+
+msgid "Sunday"
+msgstr "Nedeµa"
+
+msgid "Upcoming recording!"
+msgstr "Onedlho zaène nahrávanie!"
+
+msgid "Pause live video?"
+msgstr "Preru¹i» ¾ivé vysielanie?"
+
+msgid "Recording started"
+msgstr "Zaèalo nahrávanie"
+
+msgid "VDR will shut down later - press Power to force"
+msgstr "VDR sa vypne neskor¹ie. - Vynútenie potvrdte klávesou Power"
+
+msgid "Press any key to cancel shutdown"
+msgstr "Ktorákoµvek klávesa zru¹í vypnutie"
+
+msgid "Switching primary DVB..."
+msgstr "Prepína hlavný DVB..."
+
+msgid "End recording"
+msgstr ""
+
+msgid "Editing process failed!"
+msgstr "Zostrihávanie zlyhalo!"
+
+msgid "Editing process finished"
+msgstr "Proces zostrihávania dokonèený"
+
+msgid "File transfer failed!"
+msgstr ""
+
+msgid "File transfer finished"
+msgstr ""
+
+msgid "Press any key to cancel restart"
+msgstr "ktorákoµvek  klávesa zru¹í re¹tart"
+
+#, c-format
+msgid "VDR will shut down in %s minutes"
+msgstr "VDR sa vypne za %s minút"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "free"
+msgstr "voµné"

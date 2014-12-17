@@ -1,0 +1,102 @@
+#!/bin/sh
+
+# shoutcast station download
+#
+# Version 2.2
+#
+# 2010-06-11: Rewritten for newxml.phtml  xml-output (RC)
+#             old html page does no longer exist
+# 2011-01-05: Changed for new API (Ryker)
+# 2011-01-05: Fixed bitrate and exclude aacPlus in search results for NetClient (AR)
+# 2011-01-20: Change URL for RB AVG to "advancedsearch" (Ryker)
+# 2012-02-17: Replace &amp; in xml text, fix retrieving w correct key
+#
+# Info:  mt = MIME type, audio/mpeg for MP3 and audio/aacp for aacPlus
+#
+
+exec > /tmp/scast.log 2>&1
+
+genre="$1"
+maxresults=100
+bitrate_RbMini=128
+Lfz=snJOOR4hv97beCTj
+
+
+if [ -f /etc/vdr/plugins/shoutcast/devid ] ; then
+    DevIdkey=$(cat /etc/vdr/plugins/shoutcast/devid)
+else
+    DevIdkey="$2"
+fi
+
+# Check sysconfig and globals
+. /etc/default/sysconfig
+. /etc/default/globals
+
+Cloak () {
+    echo $1 | tr a-zA-Z0-9 n-za-mS-Z0-9A-R
+}
+
+set -x
+
+#run the script in the background to avoid lock!
+(
+
+# radio stations ordered by contents :
+
+if RbMini ; then
+	#URL=http://api.shoutcast.com/station/advancedsearch?mt=audio/mpeg\&br=$bitrate_RbMini\&search=$genre\&limit=$maxresults\&f=xml\&k=$DevIdkey
+	URL=http://api.shoutcast.com/legacy/stationsearch?mt=audio/mpeg\&br=$bitrate_RbMini\&search=$genre\&limit=$maxresults\&f=xml\&k=`Cloak $Lfz`
+else
+	#URL=http://api.shoutcast.com/station/advancedsearch?search=$genre\&limit=$maxresults\&f=xml\&k=$DevIdkey
+	URL=http://api.shoutcast.com/legacy/stationsearch?search=$genre\&limit=$maxresults\&f=xml\&k=`Cloak $Lfz`
+fi
+
+	StationPrefix=http://yp.shoutcast.com/sbin/tunein-station.pls?k=`Cloak $Lfz`\&id=
+
+
+echo -n "Downloading $URL..."
+wget -q "$URL" -O /tmp/shoutcast.xml
+echo " done."
+
+if [ ! -s /tmp/shoutcast.xml ] ; then
+	smesgtl "Network error or shoutcast error"
+	exit 1
+fi
+
+
+stationcount=$(cat /tmp/shoutcast.xml | sed s,'<station','\n<station',g | grep '<station name' | wc -l)
+echo "$stationcount stations found"
+
+
+if [ $stationcount -gt 0 ]; then
+
+	#m3u "header"
+	echo "#EXTM3U" > /tmp/xine_internet_radio.m3u
+	# if shoutcast again forgets to send linefeeds, add this "sed" command
+	# after the "cat":
+	lffilter="sed s,'<station','\n<station',g |"
+	cat /tmp/shoutcast.xml | sed s,'<station','\n<station',g | \
+	sed s/" - a SHOUTcast.com member station"// | \
+	awk -F '"' -v stationprefix=$StationPrefix -v maxres=$(expr $maxresults + 3)  \
+        'NR <= 3{next} NR > maxres{exit} {print "#EXTINF:-1, " substr($2,1,42) " (" $10 ")" } \
+		{print stationprefix $6}' | \
+		iconv -f "WINDOWS-1252" -t "UTF-8" | sed s/"&amp;"/"\&"/g >> /tmp/xine_internet_radio.m3u
+
+	svdrpsend.sh PLUG xinemediaplayer PLAYM3U_SHOUTCAST /tmp/xine_internet_radio.m3u
+
+else
+	#no results from server
+	msg=`tl "No stations found for genre %s" | sed s/%s/$genre/`
+
+	#check if devId was valid
+	if  grep -q "Invalid devId" /tmp/shoutcast.xml ; then
+		msg=`tl "Invalid SHOUTcast key. Please set it in Setup"`
+	elif
+	    grep -q "Generic Server Error" /tmp/shoutcast.xml ; then
+		msg=`tl "SHOUTcast server returned error. Please try again"`
+	fi
+
+	smesg "$msg"
+	exit 1
+fi
+) 2>&1 &

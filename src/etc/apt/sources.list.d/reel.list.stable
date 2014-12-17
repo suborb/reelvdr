@@ -1,0 +1,5 @@
+#Reelbox software
+deb http://reelbox.org/software/rubuntu 710 stable stable-opt all
+
+# Old server path, just as a fallback
+deb http://reelbox.org/software/ubuntu/stable reel extras

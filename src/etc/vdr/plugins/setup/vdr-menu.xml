@@ -1,0 +1,54 @@
+<!--
+   ReelVDR Menu-Configuration File
+-->
+
+<menus>
+	<menu name="TV &amp; Radio"  info="DVB channel list, TV guide, Timer &amp; Search timer menus, Parental control">
+		<system name="Channel list" info="Overview of all TV and radio stations: Switch, manage and edit channels" />
+		<plugin name="epgsearch" info="Get information on TV programs and easily select broadcasts for recording" />
+		<plugin name="epgtimers" info="View, edit and manage recording timers" />
+		<plugin name="epgsearchonly" info="Find broadcasts with user defined search terms, i.e for recording TV series" />
+		<include name="menu_tv.*.inc" />
+	</menu>
+
+	<menu name="Music &amp; Pictures"  info="Music library, Picture library, Internet radio, Audio CD ripping">
+		<plugin name="xinemediaplayer" info="Play music and films from your collection" />
+		<!--plugin name="audioplayer" info="Play music, manage and copy music files" /-->
+		<plugin name="imageplayer" info="Watch pictures, manage and copy picture files" />
+		<plugin name="shoutcast" info="Listen to internet radio, manage and add radio stations" />
+		<plugin name="ripit" info="Copy an Audio CD to the music library"/>
+		<include name="menu_music.*.inc" />
+	</menu>
+
+	<menu name="Films &amp; DVD"  info="Movie library, TV recordings, Burn TV recordings, Video DVD ripping">
+		<plugin name="videoplayer" info="Watch movies, manage and copy movie files" />
+		<plugin name="extrecmenu" info="Watch TV recordings, cut, manage and copy TV recordings" />
+		<plugin name="undelete" info="Recover accidentally deleted TV recordings" />
+		<plugin name="burn" info="Burn TV recordings on CD or DVD" />
+		<plugin name="dvdswitch" info="Copy a Video-DVD to the movie library" />
+		<include name="menu_movies.*.inc" />
+	</menu>
+
+	<menu name="Internet &amp; Extras"  info="File Manager, Web browser, ReelBlog">
+		<plugin name="filebrowser" info="Copy, move, edit and delete files"/>
+		<plugin name="webbrowser" info="Surf the web with Firefox. / Show the Linux desktop." />
+		<!-- <plugin name="amarokstarter" /> -->
+		<plugin name="reelblog" info="Read news &amp; information on the ReelBox" />
+		<include name="menu_extras.*.inc" />
+	</menu>
+
+	<menu name="Additional Software"  info="Additional software provided by third party developers">
+		<include name="menu_opt.*.inc" />
+	</menu>
+
+	<plugin name="xvdr" info="switch to xbmc" />
+	<plugin name="mediad" info="Play the disk in the drive" />
+
+	<plugin name="bgprocess" info="Show currently active background processes" />
+<!--
+	<menu name="Extras" info="(?)">
+		<plugin name="games" info="(?)" />
+	</menu>
+-->
+</menus>
+

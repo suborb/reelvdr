@@ -1,0 +1,289 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-rbmini\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-02-04 10:16+0100\n"
+"PO-Revision-Date: 2009-04-20 15:53+0200\n"
+"Last-Translator: Andreas Ritter <ar@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "HDMI: %s      SCART: %s"
+msgstr ""
+
+msgid "Setup - Video"
+msgstr ""
+
+msgid "Setup - Audio"
+msgstr ""
+
+msgid "Keep these settings?"
+msgstr ""
+
+msgid "Using old settings"
+msgstr ""
+
+msgid "Audio"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Experts"
+msgstr ""
+
+msgid "HDMI settings"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Output"
+msgstr ""
+
+msgid "Aspect"
+msgstr ""
+
+msgid "Aspect ratio"
+msgstr ""
+
+msgid "SCART settings"
+msgstr ""
+
+msgid "Mpeg2 settings"
+msgstr ""
+
+msgid "Postprocessing"
+msgstr ""
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr ""
+
+msgid "Video"
+msgstr ""
+
+msgid "Audio settings"
+msgstr ""
+
+msgid "Analog offset"
+msgstr ""
+
+msgid "Dolby Digital offset"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "The adjustable range is 1/100 seconds."
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "TS"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Init"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Pause"
+msgstr ""
+
+msgid "Trick"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Mpg2"
+msgstr ""
+
+msgid "h264"
+msgstr ""
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Ntsc Jap"
+msgstr ""
+
+msgid "Ntsc 443"
+msgstr ""
+
+msgid "Pal B IT"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "Pal B Aus"
+msgstr ""
+
+msgid "Pal B NZ"
+msgstr ""
+
+msgid "Pal I"
+msgstr ""
+
+msgid "SECAM"
+msgstr ""
+
+msgid "Secam D"
+msgstr ""
+
+msgid "Pal D"
+msgstr ""
+
+msgid "Pal G"
+msgstr ""
+
+msgid "Pal H"
+msgstr ""
+
+msgid "Pal M"
+msgstr ""
+
+msgid "Pal 60"
+msgstr ""
+
+msgid "Pal N"
+msgstr ""
+
+msgid "Pal NC"
+msgstr ""
+
+msgid "Ntsc BT470"
+msgstr ""
+
+msgid "480p60"
+msgstr ""
+
+msgid "576p50"
+msgstr ""
+
+msgid "720p50"
+msgstr ""
+
+msgid "720p59"
+msgstr ""
+
+msgid "720p60"
+msgstr ""
+
+msgid "1080i50"
+msgstr ""
+
+msgid "1080i59"
+msgstr ""
+
+msgid "1080i60"
+msgstr ""
+
+msgid "1080p23"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p29"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "1:1"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "14:9"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "20:9"
+msgstr ""
+
+msgid "Fill to Screen"
+msgstr ""
+
+msgid "Crop to Fill"
+msgstr ""
+
+msgid "Fill to Aspect"
+msgstr ""
+
+msgid "NL X"
+msgstr ""
+
+msgid "NL Y"
+msgstr ""
+
+msgid "NL XY"
+msgstr ""
+
+msgid "DVI"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "CVBS DLY"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "YC"
+msgstr ""
+
+msgid "YPrPb"
+msgstr ""
+
+msgid "Deblock"
+msgstr ""
+
+msgid "Deblock & dering"
+msgstr ""

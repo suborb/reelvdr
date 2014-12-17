@@ -1,0 +1,1271 @@
+diff -ruN vdr-1.4.2/CONTRIBUTORS vdr-1.4.3/CONTRIBUTORS
+--- vdr-1.4.2/CONTRIBUTORS	2006-08-20 12:46:02.000000000 +0200
++++ vdr-1.4.3/CONTRIBUTORS	2006-09-16 14:14:06.000000000 +0200
+@@ -640,6 +640,8 @@
+  for reporting a problem in extracting APIVERSION with older versions of 'sed'
+  for fixing broken APIVERSION extraction line in 'newplugin'
+  for making VDR no longer stop removing empty directories if an error occurs
++ for reporting a bug in handling relative volume settings that unmute the audio in
++ the call to cStatus::MsgSetVolume()
+ 
+ Reinhard Walter Buchner <rw.buchner@freenet.de>
+  for adding some satellites to 'sources.conf'
+@@ -1004,6 +1006,8 @@
+  for reporting a bug in handling empty titles in cEvent::FixEpgBugs()
+  for suggesting to replace the "Really restart?" prompt in the call to
+  cPluginManager::Active() in menu.c to "restart anyway?"
++ for adding --remove-destination to the 'cp' command for binaries in the Makefiles of
++ the plugins
+ 
+ Ralf Klueber <ralf.klueber@vodafone.com>
+  for reporting a bug in cutting a recording if there is only a single editing mark
+@@ -1463,6 +1467,7 @@
+  for fixing getting the next active timer when shutting down
+  for reporting a problem with cPlugin::ConfigDirectory() in case a plugin calls it
+  from a separate thread
++ for reporting that an assignment in svdrp.c didn't use the cTimer::operator=())
+ 
+ Sven Kreiensen <svenk@kammer.uni-hannover.de>
+  for his help in keeping 'channels.conf.terr' up to date
+@@ -1737,6 +1742,9 @@
+  for fixing a typo in skins.h
+  for making cSkins::QueueMessage() called from a background thread with an empty
+  message clears all messages that have been previously queued by that thread
++ for reporting that the cTimer::operator=() messes up the cListObject's pointers
++ for reporting a memory leak in the cTimer::operator=() when using the 'aux' string
++ for fixing cTimer::operator=() in case a cTimer variable is assigned to itself
+ 
+ Philip Prindeville <philipp_subx@redfish-solutions.com>
+  for updates to 'sources.conf'
+@@ -1811,6 +1819,8 @@
+  have been several reports that it causes more problems than it solves
+  for suggesting to add --remove-destination to the 'cp' command for binaries in
+  the Makefile to avoid a crash in case a new version is installed on a running system
++ for fixing handling video directory updates in case the timestamp of the .update
++ file is in the future
+ 
+ Marcel Schaeben <mts280@gmx.de>
+  for his "Easy Input" patch
+@@ -1987,3 +1997,9 @@
+ Tomas Berglund <tomber@telia.com>
+  for reporting a problem with sticky PIDs in CAMs when switching between encrypted
+  channels on the same transponder
++
++Matthias Schwarzott <zzam@gentoo.org>
++ for suggesting to add LC_ALL to the checks for UTF-8 at startup
++
++Martin Ostermann <martin@familie-ostermann.de>
++ for fixing processing the PDCDescriptor in 'libsi' on big endian systems
+diff -ruN vdr-1.4.2/HISTORY vdr-1.4.3/HISTORY
+--- vdr-1.4.2/HISTORY	2006-08-27 10:42:31.000000000 +0200
++++ vdr-1.4.3/HISTORY	2006-09-23 15:57:19.000000000 +0200
+@@ -4895,3 +4895,38 @@
+   which made it prefer any device that's already receiving and doesn't require
+   detatching receivers. This change has caused some unwanted behavior, so further
+   testing is necessary.
++
++2006-09-03: Version 1.4.2-1
++
++- Added LC_ALL to the checks for UTF-8 at startup (suggested by Matthias Schwarzott).
++- Fixed the cTimer::operator=() so that it won't mess up the cListObject's pointers
++  (reported by Alexander Rieger).
++- Fixed a memory leak in the cTimer::operator=() when using the 'aux' string
++  (reported by Alexander Rieger).
++- Fixed processing the PDCDescriptor in 'libsi' on big endian systems (thanks to
++  Martin Ostermann).
++- Fixed handling relative volume settings that unmute the audio in the call to
++  cStatus::MsgSetVolume() (reported by Oliver Endriss).
++
++2006-09-09: Version 1.4.2-2
++
++- Fixed cTimer::operator=() in case a cTimer variable is assigned to itself (thanks
++  to Alexander Rieger).
++- Implemented a copy constructor for cTimer (thanks to Udo Richter for reporting that
++  an assignment in svdrp.c didn't use the cTimer::operator=()).
++
++2006-09-17: Version 1.4.2-3
++
++- Added --remove-destination to the 'cp' command for binaries in the Makefiles of
++  the plugins (thanks to Rolf Ahrenberg).
++- The 'skincurses' plugin now adjusts the size of the OSD to the size of the console
++  window.
++- Fixed deleting expired VPS timers (under certain conditions a timer could have been
++  deleted before it even started recording).
++- Updated the Hungarian language texts (thanks to Istvan Koenigsberger and Guido Josten).
++- Fixed handling video directory updates in case the timestamp of the .update file
++  is in the future (thanks to Petri Hintukainen).
++
++2006-09-23: Version 1.4.3
++
++- Official release.
+diff -ruN vdr-1.4.2/PLUGINS/src/hello/Makefile vdr-1.4.3/PLUGINS/src/hello/Makefile
+--- vdr-1.4.2/PLUGINS/src/hello/Makefile	2006-04-24 19:20:58.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/hello/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.14 2006/04/24 17:20:58 kls Exp $
++# $Id: Makefile 1.15 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -67,7 +67,7 @@
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/PLUGINS/src/osddemo/Makefile vdr-1.4.3/PLUGINS/src/osddemo/Makefile
+--- vdr-1.4.2/PLUGINS/src/osddemo/Makefile	2006-04-24 19:21:00.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/osddemo/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.8 2006/04/24 17:21:00 kls Exp $
++# $Id: Makefile 1.9 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -67,7 +67,7 @@
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/PLUGINS/src/servicedemo/Makefile vdr-1.4.3/PLUGINS/src/servicedemo/Makefile
+--- vdr-1.4.2/PLUGINS/src/servicedemo/Makefile	2006-06-24 11:09:54.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/servicedemo/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.7 2006/06/24 09:09:54 kls Exp $
++# $Id: Makefile 1.8 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -69,11 +69,11 @@
+ 
+ libvdr-$(PLUGIN1).so: $(PLUGIN1).o
+ 	$(CXX) $(CXXFLAGS) -shared $(PLUGIN1).o -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ libvdr-$(PLUGIN2).so: $(PLUGIN2).o
+ 	$(CXX) $(CXXFLAGS) -shared $(PLUGIN2).o -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/PLUGINS/src/skincurses/HISTORY vdr-1.4.3/PLUGINS/src/skincurses/HISTORY
+--- vdr-1.4.2/PLUGINS/src/skincurses/HISTORY	2006-06-03 16:31:33.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/skincurses/HISTORY	2006-09-10 16:25:11.000000000 +0200
+@@ -35,3 +35,7 @@
+ - Fixed handling tabbed item display.
+ - When the 'skincurses' plugin is loaded, it automatically sets the 'curses'
+   skin as the current one.
++
++2006-09-10: Version 0.0.8
++
++- The size of the OSD is now adjusted to the size of the console window.
+diff -ruN vdr-1.4.2/PLUGINS/src/skincurses/Makefile vdr-1.4.3/PLUGINS/src/skincurses/Makefile
+--- vdr-1.4.2/PLUGINS/src/skincurses/Makefile	2006-04-24 19:21:02.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/skincurses/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.6 2006/04/24 17:21:02 kls Exp $
++# $Id: Makefile 1.7 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -67,7 +67,7 @@
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) -lncurses -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/PLUGINS/src/skincurses/skincurses.c vdr-1.4.3/PLUGINS/src/skincurses/skincurses.c
+--- vdr-1.4.2/PLUGINS/src/skincurses/skincurses.c	2006-06-03 16:20:39.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/skincurses/skincurses.c	2006-09-10 16:23:55.000000000 +0200
+@@ -3,7 +3,7 @@
+  *
+  * See the README file for copyright information and how to reach the author.
+  *
+- * $Id: skincurses.c 1.10 2006/06/03 14:20:39 kls Exp $
++ * $Id: skincurses.c 1.11 2006/09/10 14:23:55 kls Exp $
+  */
+ 
+ #include <ncurses.h>
+@@ -11,7 +11,7 @@
+ #include <vdr/plugin.h>
+ #include <vdr/skins.h>
+ 
+-static const char *VERSION        = "0.0.7";
++static const char *VERSION        = "0.0.8";
+ static const char *DESCRIPTION    = "A text only skin";
+ static const char *MAINMENUENTRY  = NULL;
+ 
+@@ -53,8 +53,8 @@
+   clrRed
+   };
+ 
+-#define OsdWidth  50//XXX
+-#define OsdHeight 20//XXX
++static int OsdWidth = 50;
++static int OsdHeight = 20;
+ 
+ class cCursesOsd : public cOsd {
+ private:
+@@ -780,8 +780,13 @@
+ bool cPluginSkinCurses::Initialize(void)
+ {
+   // Initialize any background activities the plugin shall perform.
+-  initscr();
+-  return true;
++  WINDOW *w = initscr();
++  if (w) {
++     OsdWidth  = w->_maxx - w->_begx + 1;
++     OsdHeight = w->_maxy - w->_begy + 1;
++     return true;
++     }
++  return false;
+ }
+ 
+ bool cPluginSkinCurses::Start(void)
+diff -ruN vdr-1.4.2/PLUGINS/src/sky/Makefile vdr-1.4.3/PLUGINS/src/sky/Makefile
+--- vdr-1.4.2/PLUGINS/src/sky/Makefile	2006-04-24 19:21:03.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/sky/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.8 2006/04/24 17:21:03 kls Exp $
++# $Id: Makefile 1.9 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -67,7 +67,7 @@
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/PLUGINS/src/status/Makefile vdr-1.4.3/PLUGINS/src/status/Makefile
+--- vdr-1.4.2/PLUGINS/src/status/Makefile	2006-04-24 19:21:04.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/status/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.12 2006/04/24 17:21:04 kls Exp $
++# $Id: Makefile 1.13 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -67,7 +67,7 @@
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/PLUGINS/src/svdrpdemo/Makefile vdr-1.4.3/PLUGINS/src/svdrpdemo/Makefile
+--- vdr-1.4.2/PLUGINS/src/svdrpdemo/Makefile	2006-04-24 19:21:06.000000000 +0200
++++ vdr-1.4.3/PLUGINS/src/svdrpdemo/Makefile	2006-09-09 14:38:35.000000000 +0200
+@@ -1,7 +1,7 @@
+ #
+ # Makefile for a Video Disk Recorder plugin
+ #
+-# $Id: Makefile 1.6 2006/04/24 17:21:06 kls Exp $
++# $Id: Makefile 1.7 2006/09/09 12:38:35 kls Exp $
+ 
+ # The official name of this plugin.
+ # This name will be used in the '-P...' option of VDR to load the plugin.
+@@ -67,7 +67,7 @@
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	@cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -ruN vdr-1.4.2/config.h vdr-1.4.3/config.h
+--- vdr-1.4.2/config.h	2006-08-26 16:16:34.000000000 +0200
++++ vdr-1.4.3/config.h	2006-09-23 15:56:08.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: config.h 1.267 2006/08/26 14:16:34 kls Exp $
++ * $Id: config.h 1.271 2006/09/23 13:56:08 kls Exp $
+  */
+ 
+ #ifndef __CONFIG_H
+@@ -21,13 +21,13 @@
+ 
+ // VDR's own version number:
+ 
+-#define VDRVERSION  "1.4.2"
+-#define VDRVERSNUM   10402  // Version * 10000 + Major * 100 + Minor
++#define VDRVERSION  "1.4.3"
++#define VDRVERSNUM   10403  // Version * 10000 + Major * 100 + Minor
+ 
+ // The plugin API's version number:
+ 
+-#define APIVERSION  "1.4.2"
+-#define APIVERSNUM   10402  // Version * 10000 + Major * 100 + Minor
++#define APIVERSION  "1.4.3"
++#define APIVERSNUM   10403  // Version * 10000 + Major * 100 + Minor
+ 
+ // When loading plugins, VDR searches them by their APIVERSION, which
+ // may be smaller than VDRVERSION in case there have been no changes to
+diff -ruN vdr-1.4.2/device.c vdr-1.4.3/device.c
+--- vdr-1.4.2/device.c	2006-08-26 16:11:03.000000000 +0200
++++ vdr-1.4.3/device.c	2006-09-03 12:13:25.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: device.c 1.136 2006/08/26 14:11:03 kls Exp $
++ * $Id: device.c 1.137 2006/09/03 10:13:25 kls Exp $
+  */
+ 
+ #include "device.h"
+@@ -779,6 +779,7 @@
+   int OldVolume = volume;
+   volume = min(max(Absolute ? Volume : volume + Volume, 0), MAXVOLUME);
+   SetVolumeDevice(volume);
++  Absolute |= mute;
+   cStatus::MsgSetVolume(Absolute ? volume : volume - OldVolume, Absolute);
+   if (volume > 0) {
+      mute = false;
+diff -ruN vdr-1.4.2/i18n.c vdr-1.4.3/i18n.c
+--- vdr-1.4.2/i18n.c	2006-05-05 15:26:09.000000000 +0200
++++ vdr-1.4.3/i18n.c	2006-09-16 11:08:30.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: i18n.c 1.281 2006/05/05 13:26:09 kls Exp $
++ * $Id: i18n.c 1.282 2006/09/16 09:08:30 kls Exp $
+  *
+  * Translations provided by:
+  *
+@@ -20,7 +20,7 @@
+  * Greek       Dimitrios Dimitrakos <mail@dimitrios.de>
+  * Swedish     Tomas Prybil <tomas@prybil.se>, Jan Ekholm <chakie@infa.abo.fi>
+  * Romanian    Paul Lacatus <paul@campina.iiruc.ro>, Lucian Muresan <lucianm@users.sourceforge.net>
+- * Hungarian   Istvan Koenigsberger <istvnko@hotmail.com>, Guido Josten <guido.josten@t-online.de>
++ * Hungarian   Istvan & Silvia Koenigsberger <istvnko@hotmail.com>, Guido Josten <guido.josten@t-online.de>
+  * Catalanian  Marc Rovira Vall <tm05462@salleURL.edu>, Ramon Roca <ramon.roca@xcombo.com>, Jordi Vilà <jvila@tinet.org>
+  * Russian     Vyacheslav Dikonov <sdiconov@mail.ru>, Oleg Roitburd <oleg@roitburd.de>
+  * Croatian    Drazen Dupor <drazen.dupor@dupor.com>, Dino Ravnic <dino.ravnic@fer.hr>
+@@ -231,7 +231,7 @@
+     "×ñïíïğñïãñáììáôéóìïß",
+     "Timers",
+     "Timer-e",
+-    "Felvétel beprogramozása",
++    "Idözítö",
+     "Temporitzadors",
+     "ÂĞÙÜÕàë",
+     "Termini",
+@@ -275,7 +275,7 @@
+     "Ğëçñïöïñßåò EããñáöŞò",
+     "Inspelning",
+     "Detaliile înregistrãrii",
+-    "",// TODO
++    "Felvétel",
+     "",// TODO
+     "¸İäŞ Ş ×ĞßØáØ",
+     "",// TODO
+@@ -385,7 +385,7 @@
+     "Ôñïğïğïßçóç ÷ñïíïğñïãñáììáôéóìïı",
+     "Ändra timer",
+     "Modificare timer",
+-    "Felvétel beprogramozásának megváltoztatása",
++    "Idözítö megváltoztatása",
+     "Editar temporitzador",
+     "ÃáâĞİŞÒÚĞ âĞÙÜÕàĞ",
+     "Ureğivanje termina",
+@@ -429,7 +429,7 @@
+     "Ğëçñïöïñßåò",
+     "Info",
+     "Info",
+-    "",//TODO
++    "Információ",
+     "",//TODO
+     "¸İäŞ",
+     "Info",
+@@ -473,7 +473,7 @@
+     "",//TODO
+     "Den här sändningen - %s",
+     "Aceastã emisiune - %s",
+-    "",//TODO
++    "Ez az adás - %s",
+     "",//TODO
+     "ÍâĞ ßÕàÕÔĞçĞ - %s",
+     "",//TODO
+@@ -495,7 +495,7 @@
+     "",//TODO
+     "Den här sändningen - alla kanaler",
+     "Aceastã emisiune - toate canalele",
+-    "",//TODO
++    "Ez az adás - összes adó",
+     "",//TODO
+     "ÍâĞ ßÕàÕÔĞçĞ - ÒáÕ ÚĞİĞÛë",
+     "",//TODO
+@@ -517,7 +517,7 @@
+     "",//TODO
+     "Alla tillfällen - alla kanaler",
+     "Toate emisiunile - toate canalele",
+-    "",//TODO
++    "Az összes adás - az összes adó",
+     "",//TODO
+     "²áÕ ßÕàÕÔĞçØ - ÒáÕ ÚĞİĞÛë",
+     "",//TODO
+@@ -694,7 +694,7 @@
+     "",// TODO
+     "Timer",
+     "Timer",
+-    "",// TODO
++    "Idözítö",
+     "",// TODO
+     "ÂĞÙÜÕà",
+     "",// TODO
+@@ -738,7 +738,7 @@
+     "Ğëçñïöïñßåò",
+     "Info",
+     "Info",
+-    "",//TODO
++    "Információ",
+     "",//TODO
+     "¸İäŞ",
+     "Info",
+@@ -1090,7 +1090,7 @@
+     "ÓÜñùóç",
+     "Skanna",
+     "Cãutare canale",
+-    "",//TODO
++    "Adáskeresés",
+     "",//TODO
+     "ÁÚĞİØàŞÒĞâì",
+     "Pretra¾i",
+@@ -1112,7 +1112,7 @@
+     "¹÷ïò",
+     "Ljud",
+     "Sunet",
+-    "",// TODO
++    "Hang",
+     "",// TODO
+     "Ï×ëÚ",
+     "",// TODO
+@@ -1157,7 +1157,7 @@
+     "ÄéáãñáöŞ ÷ñïíïğñïãñáììáôéóìïı;?",
+     "Ta bort timern?",
+     "ªterg timer-ul?",
+-    "Felvétel beprogramozásának törlése?",
++    "Idözítö törlése?",
+     "Esborrar el temporitzador?",
+     "ÃÔĞÛØâì âĞÙÜÕà?",
+     "Obrisati termin?",
+@@ -1708,7 +1708,7 @@
+     "",//TODO
+     "Okodad",
+     "FTA (necriptat)",
+-    "",//TODO
++    "Kódolatlan",
+     "",//TODO
+     "FTA (İÕ×ĞÚŞÔØàŞÒĞİŞ)",
+     "",//TODO
+@@ -1730,7 +1730,7 @@
+     "",//TODO
+     "krypterad",
+     "criptat",
+-    "",//TODO
++    "Kódolt",
+     "",//TODO
+     "×ĞÚŞÔØàŞÒĞİŞ",
+     "",//TODO
+@@ -2061,7 +2061,7 @@
+     "VPS",
+     "VPS",
+     "VPS",
+-    "",// TODO
++    "VPS",
+     "",// TODO
+     "VPS ßŞßàĞÒÚĞ",
+     "VPS", // hrv
+@@ -2172,7 +2172,7 @@
+     "Ôï êáíÜëç ÷ñéóéìïğïéåßôáé áğü ÷ñïíïğñïãñáììáôéóìü!",
+     "Kanalen används av en timer!",
+     "Canalul este utilizat de un timer!",
+-    "Csatornát más használja!",
++    "Az adót az idözítö használja!",
+     "Canal en ús per un temporitzador!",
+     "ºĞİĞÛ ×Ğİïâ âĞÙÜÕàŞÜ!",
+     "Program je trenutno zauzet terminom za snimanje",
+@@ -2194,7 +2194,7 @@
+     "ÁëëáãŞ êáíáëéïı áäıíáôç!",
+     "Omöjligt att byta kanal!",
+     "Nu pot comuta canalul!",
+-    "Csatornát nem lehet átkapcsolni!",
++    "Az adót nem lehet elkapcsolni",
+     "No puc canviar de canal!",
+     "½ÕÒŞ×ÜŞÖİŞ ßÕàÕÚÛîçØâì ÚĞİĞÛ!",
+     "Ne mogu prebaciti program!",
+@@ -2304,7 +2304,7 @@
+     "",//TODO
+     "strax VPS inspelning...",
+     "Urmeazã o înregistrare VPS!",
+-    "",//TODO
++    "VPS-felvétel rögtön kezdödik!",
+     "",//TODO
+     "VPS-·ĞßØáì áÚŞàŞ İĞçİÕâáï",
+     "",//TODO
+@@ -2348,7 +2348,7 @@
+     "Ôï êáíÜëç äİí åßíáé äéáèİóéìï!",
+     "Kanalen är inte tillgänglig!",
+     "Canal indisponibil",
+-    "A csatorna nem elérhetö",
++    "Az adó nem elérhetö",
+     "Canal no disponible!",
+     "ºĞİĞÛ İÕÔŞáâãßÕİ!",
+     "Program nije dostupan!",
+@@ -2370,7 +2370,7 @@
+     "Ïé ñéèìıóåéò ôïí êáíáëéşí áëëõëïóõìğßğôïõí!",
+     "Kanalinställningarna är ej unika!",
+     "Parametrii canalului nu sunt univoci!",
+-    "A csatornabeállítások nem egyértelmüek",
++    "Az adóbeállítások nem egyértelmüek",
+     "Propietats del canal duplicades!",
+     "½ĞáâàŞÙÚØ ÚĞİĞÛĞ İÕ ãİØÚĞÛìİë!",
+     "Parametri programa nisu jednoznaèni!",
+@@ -2392,7 +2392,7 @@
+     "Ôï êáíÜëé åßíáé áğïó÷ïëéìİíï (Ãßíåôå åããñáöŞ)!",
+     "Kanalen är låst (inspelning pågår)!",
+     "Canal blocat (înregistrare)!",
+-    "Csatorna hozzáférhetetlen (felvétel)!",
++    "Az adó blokkolva (felvétel)!",
+     "Canal bloquejat (gravant)!",
+     "ºĞİĞÛ ×ĞÑÛŞÚØàŞÒĞİ (ØÔñâ ×ĞßØáì)!",
+     "Program blokiran (snimanje)!",
+@@ -2524,7 +2524,7 @@
+     "",//TODO
+     "Otillräcklingt diskutrymme för inspelning!",
+     "Insuficient spaşiul pe disc pentru înregistrare!",
+-    "",//TODO
++    "Nincs elegendö hely a felvételre",
+     "",//TODO
+     "½ÕÔŞáâĞâŞçİŞ ÜÕáâĞ İĞ ÔØáÚÕ ÔÛï İĞçĞÛĞ ×ĞßØáØ",
+     "",//TODO
+@@ -2568,7 +2568,7 @@
+     "",//TODO
+     "Öppnar CAM menyn...",
+     "Deschid meniul CAM...",
+-    "",//TODO
++    "A CAM-menü nyitás alatt...",
+     "",//TODO
+     "¾âÚàëÒĞî ÜÕİî ÜŞÔãÛï ãáÛŞÒİŞÓŞ ÔŞáâãßĞ (CAM)",
+     "",//TODO
+@@ -2612,7 +2612,7 @@
+     "",//TODO
+     "Återställer CAM ...",
+     "Se reseteazã CAM...",
+-    "",//TODO
++    "A CAM újra indul...",
+     "",//TODO
+     "¿ÕàÕÓàã×ÚĞ CAM...",
+     "",//TODO
+@@ -2678,7 +2678,7 @@
+     "",//TODO
+     "Mata in %d siffror!",
+     "Vã rog introduceşi %d cifre!",
+-    "",//TODO
++    "Üssön be %d számot!",
+     "",//TODO
+     "½ĞÖÜØâÕ %d æØäàë",
+     "",//TODO
+@@ -2700,7 +2700,7 @@
+     "Ìç äéáèİóéìïò Ş÷ïò",
+     "Ljud saknas!",
+     "Lipseºte sunetul!",
+-    "",//TODO
++    "Hang nem lehetséges!",
+     "",//TODO
+     "¾âáãâáâÒãÕâ ×ÒãÚ!",
+     "Audio nedostupan",
+@@ -2988,7 +2988,7 @@
+     "ÅğéöÜíåéá",
+     "Skin",
+     "Skin",
+-    "",// TODO
++    "Menü nézet",
+     "",// TODO
+     "ÁâØÛì",
+     "Povr¹ina",
+@@ -3010,7 +3010,7 @@
+     "Èİìá",
+     "Tema",
+     "Temã",
+-    "",// TODO
++    "Téma",
+     "",// TODO
+     "¿ĞÛØâàĞ",
+     "Tema",
+@@ -3032,7 +3032,7 @@
+     "ÁñéóôåñÜ",
+     "Vänster",
+     "Stânga",
+-    "",// TODO
++    "Balra",
+     "",// TODO
+     "¾âáâãß áÛÕÒĞ",
+     "Lijevo",
+@@ -3054,7 +3054,7 @@
+     "ÅğÜíù",
+     "Övre",
+     "Sus",
+-    "",// TODO
++    "Fent",
+     "",// TODO
+     "¾âáâãß áÒÕàåã",
+     "Gore",
+@@ -3142,7 +3142,7 @@
+     "×ñéóçìïğïßçóç ìéêñüí ãñáììáôïóåéñşí",
+     "Använd liten font",
+     "Utilizare fonturi mici",
+-    "",// TODO
++    "Kisbetüt használni",
+     "",// TODO
+     "¸áßŞÛì×ŞÒĞâì ÜÕÛÚØÙ èàØäâ",
+     "Koristi mala slova",
+@@ -3164,7 +3164,7 @@
+     "Ğïôİ",
+     "aldrig",
+     "niciodatã",
+-    "",// TODO
++    "soha",
+     "",// TODO
+     "İØÚŞÓÔĞ",
+     "nikada",
+@@ -3186,7 +3186,7 @@
+     "ÅîáñôÜôå áğü ôŞí åğéöÜíåéá",
+     "skin beroende",
+     "dep. de skin",
+-    "",// TODO
++    "Menü nézetétöl függöen",
+     "",// TODO
+     "áŞÓÛĞáİŞ âÕÜÕ",
+     "ovisno o povr¹ini",
+@@ -3208,7 +3208,7 @@
+     "ğÜíôá",
+     "alltid",
+     "întotdeauna",
+-    "",// TODO
++    "mindig",
+     "",// TODO
+     "ÒáÕÓÔĞ",
+     "uvijek",
+@@ -3230,7 +3230,7 @@
+     "Èİóç ğëçñïöïñßáò êáíáëéşí",
+     "Placering av kanalinformation",
+     "Pozişia informaşiilor despre canal",
+-    "Csatorna-Infó poziciója",
++    "Adásinformáció poziciója",
+     "Posició de la informació del canal",
+     "¿ŞÛŞÖÕİØÕ ŞÚİĞ ØİäŞàÜĞæØØ Ş ÚĞİĞÛÕ",
+     "Pozicija informacije o programu",
+@@ -3252,7 +3252,7 @@
+     "÷ñüíïò İíäåéêóçò ğëçñïöïñßùí êáíáëéïı óå (ä)",
+     "Kanal information (s)",
+     "Durata afiºãrii info-canal (s)",
+-    "",// TODO
++    "Adásinformáció feltüntetésének idötartama (s)",
+     "",// TODO
+     "¿ŞÚĞ× ØİäŞàÜĞæØØ Ş ÚĞİĞÛÕ (áÕÚ)",
+     "Vrijeme prikaza informacije o programu (s)",
+@@ -3274,7 +3274,7 @@
+     "Ğëçñïöïñßåò óôŞí áëëáãŞ êáíáëéïı",
+     "Information vid kanalbyte",
+     "Informaşii la comutarea canalului",
+-    "Infó a csatorna váltásánál",
++    "Információ az adó váltásánál",
+     "Informació del canvi de canal",
+     "¿ŞÚĞ×ëÒĞâì ØİäŞàÜĞæØî Ş ÚĞİĞÛÕ",
+     "Informacije kod promjene kanala",
+@@ -3296,7 +3296,7 @@
+     "", // TODO
+     "Timeout för kanalinformation",
+     "Durata afiºãrii informaşii canal",
+-    "", // TODO
++    "A lekérdezett adásinformáció bezárása",
+     "", // TODO
+     "¸İäŞàÜĞæØî Ş ÚĞİĞÛÕ ×ĞÚàëâì",
+     "", // TODO
+@@ -3340,7 +3340,7 @@
+     "Êıëéóç ãıñù-ãıñù",
+     "Rulla texten",
+     "Derulare circularã",
+-    "",// TODO
++    "Korlátlan léptetés",
+     "",// TODO
+     "ÆØÚÛØçÕáÚĞï ßàŞÚàãâÚĞ",
+     "S kraja skoèi na poèetak",
+@@ -3362,7 +3362,7 @@
+     "",// TODO
+     "Menyknappen stänger",
+     "Tasta 'Meniu' închide",
+-    "",// TODO
++    "A menü gomb zár",
+     "",// TODO
+     "ºİŞßÚã ¼Õİî ×ĞÚàëâì",
+     "",// TODO
+@@ -3406,7 +3406,7 @@
+     "×ñüíïò äéÜñêåéáò åîİôáóçò EPG óå şñåò",
+     "EPG sökning timeout",
+     "Interval achizişie EPG (h)",
+-    "Fennmaradt idö az EPG-g (h)",
++    "Fennmaradt idö az EPG-újításig (h)",
+     "Màxim d'Hores a cercar per la Guia",
+     "·ĞÔÕàÖÚĞ áÚĞİØàŞÒĞİØï âÕÛÕÓØÔĞ (ç)",
+     "Vrijeme do EPG pregleda (h)",
+@@ -3450,7 +3450,7 @@
+     "¸íäåéîç îåğåñáóìİíùí ğëçñïöïñéşí (ëåğôÜ)",
+     "Visa gammal information (min)",
+     "Date EPG expirate cel mult (min)",
+-    "",// TODO
++    "Régi EPG adatok megmutatása (perc)",
+     "",// TODO
+     "ÅàĞİÕİØÕ ãáâĞàÕÒèØå ÔĞİİëå (ÜØİ)",
+     "Prika¾i stare EPG podatke (min)",
+@@ -3516,7 +3516,7 @@
+     "Ğñïôåéíüìåíåò ãëşóóåò",
+     "Önskade språk",
+     "Limbi preferate",
+-    "",// TODO
++    "Kedvenc nyelvek",
+     "",// TODO
+     "¿àÕÔßŞçØâĞÕÜëÕ ï×ëÚØ (âÕÛÕÓØÔ)",
+     "Preferirani jezici",
+@@ -3538,7 +3538,7 @@
+     "Ğñïôåéíüìåíç ãëşóóá",
+     "Önskat språk",
+     "Limba preferatã",
+-    "",// TODO
++    "Kedvenc nyelv",
+     "",// TODO
+     "²ëÑàĞİ",
+     "Preferirani jezik",
+@@ -3692,7 +3692,7 @@
+     "×ñŞóç Ş÷ïõ Dolby Digital",
+     "Använd Dolby Digital",
+     "Sunet Dolby Digital",
+-    "",//TODO
++    "Dolby-Digital hangot használni",
+     "",//TODO
+     "²ÚÛîçØâì Dolby Digital",
+     "Koristi Dolby Digital",
+@@ -3714,7 +3714,7 @@
+     "Åíçìİñùóç êáíáëéşí",
+     "Uppdatera kanaler",
+     "Actualizare canale",
+-    "",// TODO
++    "Adók aktualizálása",
+     "",// TODO
+     "¾ÑİŞÒÛïâì İĞáâàŞÙÚØ ÚĞİĞÛŞÒ",
+     "Aktualiziraj programe",
+@@ -3736,7 +3736,7 @@
+     "ìüíï ïíüìáôá",
+     "bara namn",
+     "doar numele",
+-    "",// TODO
++    "kizárólag nevek",
+     "",// TODO
+     "âŞÛìÚŞ İĞ×ÒĞİØï",
+     "samo imena",
+@@ -3758,7 +3758,7 @@
+     "",// TODO
+     "bara PIDs",
+     "Numai PID-uri",
+-    "",// TODO
++    "kizárólag PID-k",
+     "",// TODO
+     "ÂŞÛìÚŞ PIDë",
+     "",// TODO
+@@ -3780,7 +3780,7 @@
+     "Ïíüìáôá êáß PIDs",
+     "namn och PID",
+     "nume si PID-uri",
+-    "",// TODO
++    "nevek és PID-k",
+     "",// TODO
+     "İĞ×ÒĞİØï Ø PIDë",
+     "imena i identifikatore (PIDs)",
+@@ -3802,7 +3802,7 @@
+     "ğñïóèŞêç íİùí êáíáëéşí",
+     "lägg till nya kanaler",
+     "adãugare canale noi",
+-    "",// TODO
++    "új adók hozzáadása",
+     "",// TODO
+     "İŞÒëÕ ÚĞİĞÛë",
+     "dodaj nove programe",
+@@ -3824,7 +3824,7 @@
+     "ğñïóèŞêç íİïõ áíáìåôáäüôç",
+     "lägg till nya transponders",
+     "adãugare transpondere noi",
+-    "",// TODO
++    "új transponder hozzáadása",
+     "",// TODO
+     "İŞÒ. âàĞİáßŞİÔÕàë",
+     "dodaj nove transpondere", // hrv TODO transponderi == odasiljaèi?
+@@ -3846,7 +3846,7 @@
+     "Ãëşóóåò Ş÷ïõ",
+     "Antal ljudspråk",
+     "Limbi sunet",
+-    "",//TODO
++    "Audio-nyelvek",
+     "",//TODO
+     "¿àÕÔßŞçØâĞÕÜëÕ ï×ëÚØ (×ÒãÚ)",
+     "Audio jezici",
+@@ -3868,7 +3868,7 @@
+     "Ãëşóóá Ş÷ïõ",
+     "Ljudspråk",
+     "Limba sunetului",
+-    "",//TODO
++    "Audio-nyelv",
+     "",//TODO
+     "²ëÑàĞİ",
+     "Audio jezik",
+@@ -4000,7 +4000,7 @@
+     "Ğñüóèåôïò ÷ñüíïò óôçí áñ÷Ş (ëåğôÜ)",
+     "Marginal för start (min)",
+     "Marjã la pornire (min)",
+-    "Idöeltolódás a kezdésnél (min)",
++    "Idöeltolódás a kezdésnél (perc)",
+     "Marge d'inici de gravació (min)",
+     "¾ßÕàÕÖÕİØÕ İĞçĞÛĞ ×ĞßØáØ (ÜØİ)",
+     "Rezerva na poèetku snimanja (min)",
+@@ -4022,7 +4022,7 @@
+     "Ğñüóèåôïò ÷ñüíïò óôü ôİëïò (ëåğôÜ)",
+     "Marginal för stopp (min)",
+     "Marjã la oprire (min)",
+-    "Idöeltolódás a befejezésnél",
++    "Idöeltolódás a befejezésnél (perc)",
+     "Marge de fi de gravació (min)",
+     "·ĞßĞ×ÔëÒĞİØÕ ŞáâĞİŞÒÚØ ×ĞßØáØ (ÜØİ)",
+     "Rezerva na kraju (min)",
+@@ -4176,7 +4176,7 @@
+     "×ñŞóç VPS",
+     "Använd VPS",
+     "Utilizeazã VPS",
+-    "",// TODO
++    "VPS-t használni",
+     "",// TODO
+     "¸áßŞÛì×ŞÒĞâì áØÓİĞÛë VPS",
+     "Koristi VPS",
+@@ -4198,7 +4198,7 @@
+     "Ğåñéèşñéï VPS (ä)",
+     "VPS marginal (s)",
+     "Marjã de timp la utilizare VPS (s)",
+-    "",// TODO
++    "Idöeltolódás VPS-nél (s)",
+     "",// TODO
+     "±ãäÕàİŞÕ ÒàÕÜï VPS (áÕÚ)",
+     "Vremenska rezerva kod VPS (s)",
+@@ -4264,7 +4264,7 @@
+     "ÄéÜñêåéá óôãìéáßáò åããñáöŞò (ëåğôÜ)",
+     "Direktinspelning längd (min)",
+     "Timpul de înregistare imediatã (min)",
+-    "Felvétel idötartama",
++    "Felvétel idötartama (perc)",
+     "Temps de gravació instantània (min)",
+     "´ÛØâÕÛìİŞáâì àãçİŞÙ ×ĞßØáØ (ÜØİ)",
+     "Trajanje direktnog snimanja (min)",
+@@ -4396,7 +4396,7 @@
+     "ÅëÜ÷éóôïò ÷ñÜíïò ğáñåìâïëŞò (ëåğôÜ)",
+     "Minsta händelse-pause (min)",
+     "Duratã minimã emisiuni (min)",
+-    "Min. esemény szünet (min)",
++    "Idözitések közötti idötartam (perc)",
+     "Temps mínim en pausa (min)",
+     "¼Øİ. ÒàÕÜï ŞÖØÔĞİØï áŞÑëâØï (ÜØİ)",
+     "Minimalno vrijeme pauze",
+@@ -4418,7 +4418,7 @@
+     "ÅëÜ÷éóôïò ÷ñüíïò áíáìïíŞò (ëåğôÜ)",
+     "Minsta användar-inaktivitet (min)",
+     "Durata minimã de inactivitate (min)",
+-    "Min. kezelési aktivitás (min)",
++    "VDR leáll használat nélkül (perc)",
+     "Temps mínim d'inactivitat (min)",
+     "¼Øİ. ÒàÕÜï ŞÖØÔĞİØï ÒÒŞÔĞ (ÜØİ)",
+     "Minimalno vrijeme neaktivnosti (min)",
+@@ -4440,7 +4440,7 @@
+     "SVDRP äéáêïğŞ (ä)",
+     "SVDRP Timeout (s)",
+     "Timeout SVDRP (sec)",
+-    "SVDRP Timeout (s)",
++    "SVDRP szétkapcsol használat nélkül(s)",
+     "SVDRP Timeout (s)",
+     "·ĞÔÕàÖÚĞ ŞÑàëÒĞ áŞÕÔ. SVDRP (áÕÚ)",
+     "SVDRP vrijeme neaktivnosti",
+@@ -4462,7 +4462,7 @@
+     "ÆÜğéíãê äéáêïğŞ (ä)",
+     "Zap timeout(s)",
+     "Interval zapping (s)",
+-    "",// TODO
++    "Adásváltás ideje (s)",
+     "",// TODO
+     "·ĞÔÕàÖÚĞ ßÕàÕÚÛîçÕİØï ÚĞİĞÛĞ (áÕÚ)",
+     "",// hrv TODO
+@@ -4484,7 +4484,7 @@
+     "",// TODO
+     "Kanal vid uppstart",
+     "Canalul de pornire",
+-    "",// TODO
++    "Adás a bekapcsolásnál",
+     "",// TODO
+     "ºĞİĞÛ ßàØ ÒÚÛîçÕİØØ",
+     "",// TODO
+@@ -4506,7 +4506,7 @@
+     "",// TODO
+     "Ljudstyrka vid uppstart",
+     "Volumul la pornire",
+-    "",// TODO
++    "Hangerö a bekapcsolásnál",
+     "",// TODO
+     "³àŞÜÚŞáâì ßàØ ÒÚÛîçÕİØØ",
+     "",// TODO
+@@ -4528,7 +4528,7 @@
+     "",// TODO
+     "som förut",
+     "ca mai înainte",
+-    "",// TODO
++    "ahogy az elöbb",
+     "",// TODO
+     "ÚĞÚ àĞİìèÕ",
+     "",// TODO
+@@ -5193,7 +5193,7 @@
+     "Ğëçñïöïñßåò",
+     "Info",
+     "Info",
+-    "",//TODO
++    "Információ",
+     "",//TODO
+     "¸İäŞ",
+     "Info",
+@@ -5347,7 +5347,7 @@
+     "",// TODO
+     "Nästa",
+     "Urmãtor",
+-    "",// TODO
++    "Elöre",
+     "",// TODO
+     "²ßÕàÕÔ",
+     "",// TODO
+@@ -5369,7 +5369,7 @@
+     "",// TODO
+     "Bakåt",
+     "Anterior",
+-    "",// TODO
++    "Vissza",
+     "",// TODO
+     "½Ğ×ĞÔ",
+     "",// TODO
+@@ -5457,7 +5457,7 @@
+     "",// TODO
+     "Förra kanalen",
+     "Canal anterior",
+-    "",// TODO
++    "Az elözö adás",
+     "",// TODO
+     "¿àÕÔëÔãéØÙ ÚĞİĞÛ",
+     "",// TODO
+@@ -5545,7 +5545,7 @@
+     "¹÷ïò",
+     "Ljud",
+     "Sunet",
+-    "",// TODO
++    "Hang",
+     "",// TODO
+     "Ï×ëÚ",
+     "",// TODO
+@@ -5766,7 +5766,7 @@
+     "Ôïğïèİôçóç: ",
+     "Hopp: ",
+     "Salt la: ",
+-    "Ugrás: ",
++    "Ugrás:",
+     "Salta a:",
+     "¿ÕàÕÙâØ: ",
+     "Skoèi: ",
+@@ -5788,7 +5788,7 @@
+     "¸íôáóç ",
+     "Volym ",
+     "Volum ",
+-    "Hangerö ",
++    "Hangerö",
+     "Volum ",
+     "³àŞÜÚŞáâì ",
+     "Glasnoæa ",
+@@ -5832,7 +5832,7 @@
+     " Ôİëïò åããáöŞò ",
+     " Avsluta inspelning ",
+     " Opreºte înregistrarea ",
+-    " Felvételt befejezni ",
++    " Felvételt befejezni",
+     " Aturar la gravació ",
+     " ¿àÕÚàĞâØâì ×ĞßØáì ",
+     " Prekini snimanje ",
+@@ -5986,7 +5986,7 @@
+     "",//TODO
+     "Inspelningen har startat",
+     "A început înregistrarea",
+-    "",//TODO
++    "A felvétel elinditva Nd",
+     "",//TODO
+     "·ĞßØáì İĞçĞâĞ",
+     "",//TODO
+@@ -6030,7 +6030,7 @@
+     "Áñ÷Ş óÜñùóç EPG",
+     "Påbörjar EPG skanning",
+     "Pornesc achizişia EPG",
+-    "",// TODO
++    "EPG adatok aktualizálása",
+     "",// TODO
+     "½ĞçØİĞî EPG-áÚĞİØàŞÒĞİØÕ",
+     "Poèinjem EPG-scan",
+@@ -6074,7 +6074,7 @@
+     "Êëáóéêü VDR",
+     "Klassisk VDR",
+     "VDR clasic",
+-    "",// TODO
++    "Klasszikus VDR",
+     "",// TODO
+     "ºÛĞááØçÕáÚØÙ",
+     "Klasièni VDR",
+@@ -6096,7 +6096,7 @@
+     "Ìïñöİò ST:TNG",
+     "ST:TNG konsol",
+     "Cons. ST:TNG",
+-    "",// TODO
++    "ST:TNG Konzol",
+     "",// TODO
+     "ST:TNG ßĞİÕÛØ",
+     "ST:TNG Konzole",
+@@ -6118,7 +6118,7 @@
+     "×ùñßò Ôßôëï",
+     "ingen titel",
+     "Fãrã titlu",
+-    "",// TODO
++    "név nélkül",
+     "",// TODO
+     "±Õ× İĞ×ÒĞİØï",
+     "Bez titla",
+diff -ruN vdr-1.4.2/libsi/headers.h vdr-1.4.3/libsi/headers.h
+--- vdr-1.4.2/libsi/headers.h	2006-05-28 16:25:30.000000000 +0200
++++ vdr-1.4.3/libsi/headers.h	2006-09-02 22:25:16.000000000 +0200
+@@ -10,7 +10,7 @@
+  *   the Free Software Foundation; either version 2 of the License, or     *
+  *   (at your option) any later version.                                   *
+  *                                                                         *
+- *   $Id: headers.h 1.7 2006/05/28 14:25:30 kls Exp $
++ *   $Id: headers.h 1.8 2006/09/02 20:25:16 kls Exp $
+  *                                                                         *
+  ***************************************************************************/
+ 
+@@ -1534,15 +1534,9 @@
+ struct descr_pdc {
+    u_char descriptor_tag                         :8;
+    u_char descriptor_length                      :8;
+-#if BYTE_ORDER == BIG_ENDIAN
+-   u_char pil2                                   :8;
+-   u_char pil1                                   :8;
+-   u_char pil0                                   :8;
+-#else
+    u_char pil0                                   :8;
+    u_char pil1                                   :8;
+    u_char pil2                                   :8;
+-#endif
+ };
+ 
+ /* 0x6A ac3_descriptor */
+diff -ruN vdr-1.4.2/newplugin vdr-1.4.3/newplugin
+--- vdr-1.4.2/newplugin	2006-06-24 11:15:17.000000000 +0200
++++ vdr-1.4.3/newplugin	2006-09-09 14:38:35.000000000 +0200
+@@ -12,7 +12,7 @@
+ # See the main source file 'vdr.c' for copyright information and
+ # how to reach the author.
+ #
+-# $Id: newplugin 1.29 2006/06/24 09:15:17 kls Exp $
++# $Id: newplugin 1.30 2006/09/09 12:38:35 kls Exp $
+ 
+ $PLUGIN_NAME = $ARGV[0] || die "Usage: newplugin <name>\n";
+ 
+@@ -124,7 +124,7 @@
+ 
+ libvdr-\$(PLUGIN).so: \$(OBJS)
+ 	\$(CXX) \$(CXXFLAGS) -shared \$(OBJS) -o \$\@
+-	\@cp \$\@ \$(LIBDIR)/\$\@.\$(APIVERSION)
++	\@cp --remove-destination \$\@ \$(LIBDIR)/\$\@.\$(APIVERSION)
+ 
+ dist: clean
+ 	\@-rm -rf \$(TMPDIR)/\$(ARCHIVE)
+diff -ruN vdr-1.4.2/recording.c vdr-1.4.3/recording.c
+--- vdr-1.4.2/recording.c	2006-07-30 12:23:46.000000000 +0200
++++ vdr-1.4.3/recording.c	2006-09-16 14:12:34.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: recording.c 1.149 2006/07/30 10:23:46 kls Exp $
++ * $Id: recording.c 1.150 2006/09/16 12:12:34 kls Exp $
+  */
+ 
+ #include "recording.h"
+@@ -947,7 +947,10 @@
+ 
+ bool cRecordings::NeedsUpdate(void)
+ {
+-  return lastUpdate < LastModifiedTime(UpdateFileName());
++  time_t lastModified = LastModifiedTime(UpdateFileName());
++  if (lastModified > time(NULL))
++     return false; // somebody's clock isn't running correctly
++  return lastUpdate < lastModified;
+ }
+ 
+ bool cRecordings::Update(bool Wait)
+diff -ruN vdr-1.4.2/timers.c vdr-1.4.3/timers.c
+--- vdr-1.4.2/timers.c	2006-08-05 14:03:36.000000000 +0200
++++ vdr-1.4.3/timers.c	2006-09-15 16:15:53.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: timers.c 1.62 2006/08/05 12:03:36 kls Exp $
++ * $Id: timers.c 1.65 2006/09/15 14:15:53 kls Exp $
+  */
+ 
+ #include "timers.h"
+@@ -83,6 +83,14 @@
+   event = NULL; // let SetEvent() be called to get a log message
+ }
+ 
++cTimer::cTimer(const cTimer &Timer)
++{
++  channel = NULL;
++  aux = NULL;
++  event = NULL;
++  *this = Timer;
++}
++
+ cTimer::~cTimer()
+ {
+   free(aux);
+@@ -90,11 +98,26 @@
+ 
+ cTimer& cTimer::operator= (const cTimer &Timer)
+ {
+-  memcpy(this, &Timer, sizeof(*this));
+-  if (aux)
+-     aux = strdup(aux);
+-  event = NULL;
+-  lastSetEvent = 0;
++  if (&Timer != this) {
++     startTime    = Timer.startTime;
++     stopTime     = Timer.stopTime;
++     lastSetEvent = 0;
++     recording    = Timer.recording;
++     pending      = Timer.pending;
++     inVpsMargin  = Timer.inVpsMargin;
++     flags        = Timer.flags;
++     channel      = Timer.channel;
++     day          = Timer.day;
++     weekdays     = Timer.weekdays;
++     start        = Timer.start;
++     stop         = Timer.stop;
++     priority     = Timer.priority;
++     lifetime     = Timer.lifetime;
++     strncpy(file, Timer.file, sizeof(file));
++     free(aux);
++     aux = Timer.aux ? strdup(Timer.aux) : NULL;
++     event = NULL;
++     }
+   return *this;
+ }
+ 
+@@ -415,13 +438,7 @@
+ 
+ bool cTimer::Expired(void) const
+ {
+-  if (IsSingleEvent() && !Recording() && StopTime() + EXPIRELATENCY <= time(NULL)) {
+-     if (HasFlags(tfVps) && event && event->Vps())
+-        return event->RunningStatus() == SI::RunningStatusNotRunning;
+-     else
+-        return true;
+-     }
+-  return false;
++  return IsSingleEvent() && !Recording() && StopTime() + EXPIRELATENCY <= time(NULL) && (!HasFlags(tfVps) || !event);
+ }
+ 
+ time_t cTimer::StartTime(void) const
+diff -ruN vdr-1.4.2/timers.h vdr-1.4.3/timers.h
+--- vdr-1.4.2/timers.h	2006-04-08 14:41:44.000000000 +0200
++++ vdr-1.4.3/timers.h	2006-09-04 19:07:39.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: timers.h 1.28 2006/04/08 12:41:44 kls Exp $
++ * $Id: timers.h 1.29 2006/09/04 17:07:39 kls Exp $
+  */
+ 
+ #ifndef __TIMERS_H
+@@ -44,6 +44,7 @@
+ public:
+   cTimer(bool Instant = false, bool Pause = false, cChannel *Channel = NULL);
+   cTimer(const cEvent *Event);
++  cTimer(const cTimer &Timer);
+   virtual ~cTimer();
+   cTimer& operator= (const cTimer &Timer);
+   virtual int Compare(const cListObject &ListObject) const;
+diff -ruN vdr-1.4.2/vdr.c vdr-1.4.3/vdr.c
+--- vdr-1.4.2/vdr.c	2006-08-05 12:46:38.000000000 +0200
++++ vdr-1.4.3/vdr.c	2006-09-01 14:57:44.000000000 +0200
+@@ -22,7 +22,7 @@
+  *
+  * The project's page is at http://www.cadsoft.de/vdr
+  *
+- * $Id: vdr.c 1.278 2006/08/05 10:46:38 kls Exp $
++ * $Id: vdr.c 1.279 2006/09/01 12:57:44 kls Exp $
+  */
+ 
+ #include <getopt.h>
+@@ -450,6 +450,7 @@
+   // Check for UTF-8 and exit if present - asprintf() will fail if it encounters 8 bit ASCII codes
+   char *LangEnv;
+   if ((LangEnv = getenv("LANG"))     != NULL && strcasestr(LangEnv, "utf") ||
++      (LangEnv = getenv("LC_ALL"))   != NULL && strcasestr(LangEnv, "utf") ||
+       (LangEnv = getenv("LC_CTYPE")) != NULL && strcasestr(LangEnv, "utf")) {
+      fprintf(stderr, "vdr: please turn off UTF-8 before starting VDR\n");
+      return 2;

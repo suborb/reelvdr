@@ -1,0 +1,88 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-05-30 16:11+0200\n"
+"PO-Revision-Date: 2009-06-17 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Media Player"
+msgstr "Reproductor de suports"
+
+msgid "Recordings"
+msgstr "Gravacions"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "Images"
+msgstr "Imatges"
+
+msgid "Videos"
+msgstr "Vídeos"
+
+msgid "My Music"
+msgstr "La meva Música"
+
+msgid "My Images"
+msgstr "Les meves Imatges"
+
+msgid "My Videos"
+msgstr "Els meus Vídeos"
+
+msgid "Browser"
+msgstr "Navegador"
+
+msgid "Rotor"
+msgstr "Motor"
+
+msgid "My Recordings"
+msgstr "Les meves Gravacions"
+
+msgid "Play CD/DVD"
+msgstr "Reprodueix CD/DVD"
+
+msgid "Internet radio"
+msgstr "Ràdio per internet"
+
+msgid "Play Ipod"
+msgstr "Reprodueix l'Ipod"
+
+msgid "Audio Player2"
+msgstr ""
+
+msgid "Music & media player"
+msgstr ""
+
+msgid "Audio Player"
+msgstr "Reproductor d'àudio"
+
+msgid "Music Library"
+msgstr "Biblioteca de Música"
+
+msgid "Image Player"
+msgstr "Reproductor d'Imatges"
+
+msgid "Image Library"
+msgstr "Biblioteca d'Imatges"
+
+msgid "MediaplayerDvd"
+msgstr "Reproductor de DVD"
+
+msgid "Video Library"
+msgstr "Biblioteca de Vídeos"
+
+msgid "Movie & media player"
+msgstr ""
+
+msgid "Movie Library"
+msgstr "Biblioteca de Pel·lícules"

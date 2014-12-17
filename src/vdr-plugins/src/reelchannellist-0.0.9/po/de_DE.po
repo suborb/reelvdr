@@ -1,0 +1,381 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-14 14:48+0100\n"
+"PO-Revision-Date: 2008-09-26 12:18+0200\n"
+"Last-Translator: Andreas Ritter <ar@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Current Transponder"
+msgstr "Aktueller Transponder"
+
+msgid "Favourites"
+msgstr "Favoriten"
+
+msgid "No favourite folders available"
+msgstr "Keine Favoriten vorhanden!"
+
+msgid "Info:"
+msgstr "Hinweis:"
+
+msgid "Please select 'all Channels' to add channels to your favorites."
+msgstr "Wählen Sie 'alle Kanäle' um Kanäle zu Ihren Favoriten hinzuzufügen."
+
+msgid "No channels in this bouquet"
+msgstr "Kein Kanal in diesem Bouquet"
+
+msgid "Channel List"
+msgstr "Kanalliste"
+
+msgid "Functions"
+msgstr "Funktionen"
+
+msgid "Switching to channel failed"
+msgstr "Auf diesen Kanal kann nicht umgeschaltet werden"
+
+msgid "Enter new favourites folder name"
+msgstr "Neuen Favoritenordner anlegen."
+
+msgid "Folder name"
+msgstr "Ordnername"
+
+msgid "Duplicate folder name. Please try another name."
+msgstr "Doppelter Ordnername. Bitte anderen Namen auswählen."
+
+msgid "Invalid folder name"
+msgstr "Falscher Ordnername"
+
+msgid "You have no favourite folders. Please create one before you can add the channel"
+msgstr "Sie haben keinen Favoritenordner. Bitte einen neuen anlegen um Kanäle einzufügen"
+
+#, c-format
+msgid "Select folder for %d channels"
+msgstr "Wählen Sie den Ordner für %d Kanäle"
+
+msgid "Create new folder"
+msgstr "Neuen Ordner anlegen"
+
+msgid "Select folder with 'Ok'"
+msgstr "Kanal hinzufügen mit 'Ok'"
+
+msgid "Channel added to favourites"
+msgstr "Kanal zu Favoriten hinzugefügt"
+
+msgid "Channel not added to favourites"
+msgstr "Kanal nicht zu Favoriten hinzugefügt"
+
+#, c-format
+msgid "For folder '%s' please choose one of the following options:"
+msgstr "Diese Funktionen stehen für den Ordner '%s' zur Verfügung:"
+
+#, c-format
+msgid "For channel '%s' please choose one of the following options:"
+msgstr "Diese Funktionen stehen für den Kanal '%s' zur Verfügung:"
+
+msgid "Rename folder"
+msgstr "Ordner umbenennen"
+
+msgid "Delete folder"
+msgstr "Ordner löschen"
+
+msgid "Move folder"
+msgstr "Ordner verschieben"
+
+msgid "CI-slot assignment for folder"
+msgstr "CI-Schacht zuweisen für Ordner"
+
+msgid "Move channel"
+msgstr "Kanal verschieben"
+
+msgid "Delete channel"
+msgstr "Kanal aus der Liste entfernen"
+
+msgid "CI-slot assignment for channel"
+msgstr "CI-Schacht zuweisen für Kanal"
+
+msgid "Delete channel from favourites?"
+msgstr "Kanal aus der Liste entfernen?"
+
+msgid "Channel deleted"
+msgstr "Kanal aus Liste entfernt"
+
+msgid "Deletion of channel failed"
+msgstr "Löschen des Kanals fehlgeschlagen"
+
+msgid "Delete cancelled"
+msgstr "Löschen abgebrochen"
+
+msgid "Delete folder and all its channels?"
+msgstr "Odner mit allen Favoriten Kanälen löschen?"
+
+msgid "Folder and its contents deleted"
+msgstr "Ordner sowie Favoriten Kanäle gelöscht"
+
+msgid "Deletion of folder failed"
+msgstr "Löschen des Ordners fehlgeschlagen"
+
+msgid "Rename favourites folder"
+msgstr "Favoritenordner umbenennen"
+
+msgid "New folder name"
+msgstr "Neuer Ordnername"
+
+msgid "Press right key to enter folder name and Ok to rename."
+msgstr "Drücken Sie die 'rechte' Navigationstaste um den Ordner umzubenennen."
+
+msgid "Renamed folder"
+msgstr "Ordner umbenennen"
+
+msgid "Rename failed"
+msgstr "Umbenennen fehlgeschlagen"
+
+msgid "Sort by number"
+msgstr "Sortiere nach Kanalnummer"
+
+msgid "Sort by channel name"
+msgstr "Sortiere nach Alphabet"
+
+msgid "Sort by provider name"
+msgstr "Sortiere nach Provider"
+
+msgid "Delete channels?"
+msgstr "Kanäle löschen?"
+
+msgid "Deletion cancelled"
+msgstr "Löschen abgebrochen"
+
+msgid "A selected channel has timer. Remove timer and try again."
+msgstr "Ein Timer verwendet einen gewählten Kanal. Löschen Sie den Timer und versuchen Sie es erneut."
+
+#, c-format
+msgid "Deleted %d Channels"
+msgstr "%d Kanäle gelöscht"
+
+msgid "Radio Only"
+msgstr "Radiosender"
+
+msgid "TV Only"
+msgstr "TV-Sender"
+
+msgid "Move to Fav"
+msgstr "zu Favoriten"
+
+msgid "Delete selected"
+msgstr "Auswahl löschen"
+
+msgid "Unknown mode"
+msgstr "Unbekannter Modus"
+
+msgid ""
+"No channels found.\n"
+"Press red key to list all channels."
+msgstr ""
+"Keine Kanäle gefunden.\n"
+"Drücken Sie die rote Taste um alle Kanäle aufzulisten."
+
+msgid "Select channels to delete"
+msgstr "Kanäle zum löschen auswählen"
+
+msgid "Select channels to add to Fav"
+msgstr "Kanäle für die Favoriten auwählen"
+
+msgid "All Channels"
+msgstr "Alle Kanäle"
+
+msgid "Select channels with Ok. Then blue key for options."
+msgstr "Kanäle mit Ok wählen. Dann blaue Taste für Optionen"
+
+msgid "Providers"
+msgstr "Provider"
+
+msgid "Add provider"
+msgstr "Provider"
+
+msgid "to favourites"
+msgstr "zu Favoriten"
+
+msgid "CI-slot assignment for provider"
+msgstr "CI-Schacht zuweisen für Provider"
+
+msgid "Provider added to favourites"
+msgstr "Provider zu Favoriten hinzugefügt"
+
+msgid "Error: Provider not added to favourites"
+msgstr "Fehler: Provider nicht zu Favoriten hinzugefügt!"
+
+msgid "Sources"
+msgstr "Bouquets"
+
+#, c-format
+msgid "Add the %d selected channels to favourites with the option below:"
+msgstr "Die gewählten %d Kanäle mit diesen Optionen zu den Favoriten hinzufügen:"
+
+msgid "Add multiple channels to Favourites"
+msgstr "Mehrere Kanäle zu den Favoriten hinzufügen"
+
+#, c-format
+msgid "Delete the %d selected channels:"
+msgstr "Die %d gewählten Kanäle löschen:"
+
+msgid "Delete channels"
+msgstr "Kanäle löschen"
+
+msgid "Edit selected channel"
+msgstr "Kanal bearbeiten"
+
+msgid "Add selected channel to Favourites"
+msgstr "Kanal zu Favoriten hinzufügen"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Search for channel"
+msgstr "Durchsuche Kanalliste"
+
+msgid "Enter string to search"
+msgstr "Bitte gewünschten Kanalnamen eingeben"
+
+msgid "Search for"
+msgstr "Suche nach"
+
+msgid "channel"
+msgstr "Kanal"
+
+msgid "bouquet"
+msgstr "Bouquet"
+
+msgid "provider"
+msgstr "Provider"
+
+msgid "Choose CI slot for"
+msgstr "Wähle CI-Schacht für"
+
+msgid "CI-slot for"
+msgstr "CI-Schacht für"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "Symbolrate"
+msgstr "Symbolrate"
+
+msgid "System-ID"
+msgstr "System-ID"
+
+msgid "CI-Slot"
+msgstr "CI-Slot"
+
+msgid "Button$New"
+msgstr "Neu"
+
+msgid "No CAM at"
+msgstr "Kein CI-Modul gefunden"
+
+msgid "New channels"
+msgstr "Neue Kanäle"
+
+msgid "Channels"
+msgstr "Kanäle"
+
+msgid "Unknown source"
+msgstr "Unbekannter Satellit"
+
+msgid "Unknown Provider"
+msgstr "Unbekannter Provider"
+
+msgid "Channel List: Move Channel"
+msgstr "Kanalliste: Kanal verschieben"
+
+msgid "Select a channel with OK key"
+msgstr "Markieren Sie einen Kanal mit Ok"
+
+msgid "Up/Down to move channel. Exit key removes selection."
+msgstr "Auf/Ab um den Kanal zu verschieben. Exit löscht die Auswahl."
+
+msgid "Channel Info"
+msgstr "Kanalinfo"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Ok key in TV Mode"
+msgstr "Ok-Taste im TV-Modus"
+
+#~ msgid "exit this menu with Exit"
+#~ msgstr "Dieses Menü mit Exit verlassen"
+
+#~ msgid "Select channels"
+#~ msgstr "Kanäle auswählen"
+
+#~ msgid "Move Channels"
+#~ msgstr "Kanäle verschieben"
+
+#~ msgid "Edit selected Channel"
+#~ msgstr "Kanal editieren"
+
+#~ msgid "Select folder for:"
+#~ msgstr "Wähle Zielordner für:"
+
+#~ msgid "Zapping in favourites list"
+#~ msgstr "Umschalten in der Favoriten Liste"
+
+#~ msgid "Current folder"
+#~ msgstr "Aktueller Ordner"
+
+#~ msgid "All folders"
+#~ msgstr "Alle Ordner"
+
+#~ msgid "For options press '?'"
+#~ msgstr "Für Optionen drücken Sie auf '?'"
+
+#~ msgid "upper slot"
+#~ msgstr "Oberer Schacht"
+
+#~ msgid "lower slot"
+#~ msgstr "Unterer Schacht"
+
+#~ msgid "Press right key to enter folder name and Ok to create new folder with given name."
+#~ msgstr "Um einen Ordner anzulegen drücken Sie die 'rechte' Navigationstaste."
+
+#~ msgid "Press right key to enter text and Ok to search"
+#~ msgstr "Drücke Navigations Taste 'rechts' zur Texteingabe"
+
+#~ msgid "Functions: Move favourites bouquet"
+#~ msgstr "Funktion: Favoriten Bouquet verschieben"
+
+#~ msgid "Functions: Move Channel"
+#~ msgstr "Funktion: Kanal verschieben"
+
+#~ msgid "Create new favourites folder"
+#~ msgstr "Neuen Favoriten Ordner anlegen"
+
+#~ msgid "Move selected favourites"
+#~ msgstr "Ausgewählte Favoriten verschieben"
+
+#~ msgid "Delete selected Favourites"
+#~ msgstr "Ausgewählte Favoriten löschen"
+
+#~ msgid "Functions: Create new Favourite folder"
+#~ msgstr "Funktion: Neuen Favoriten Ordner anlegen"
+
+#~ msgid "Functions: Select favourite folder"
+#~ msgstr "Funktion: Favoriten Ordner auswählen"
+
+#~ msgid "Functions: Channel list"
+#~ msgstr "Funktion: Kanalliste"
+
+#~ msgid "Functions: Favourites"
+#~ msgstr "Funktion: Favoriten"
+
+#~ msgid "Functions: search for channel"
+#~ msgstr "Funktion: Suche nach Kanal"

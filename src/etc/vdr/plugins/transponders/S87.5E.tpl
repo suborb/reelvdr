@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S87.5E
+2=ChinaSat 5A
+3=East
+4=87.5

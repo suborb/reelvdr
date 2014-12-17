@@ -1,0 +1,291 @@
+#!/bin/sh
+#
+# Loads hdplayer from host
+# starts/restarts hdctrld if neccessary
+#
+
+testing=false
+
+trap ReStart SIGHUP
+trap ReGet SIGUSR1
+trap Terminate SIGINT SIGPIPE SIGTERM SIGIO
+
+
+SYSCONFIG="/etc/default/sysconfig"
+CONFIG="/etc/default/hdplayer"
+
+# TODO: put this in sysconfig
+
+if $testing ; then
+	HOSTIP="reel1"
+	HDPLAYER="in.tftpd"
+	TFTPGET="busybox tftp -g"
+	hdpremote="/tftp-hpa.deb"
+	loglevel=3
+else
+	hdpremote="/hdplayer/hdplayer"
+	HOSTIP="192.168.99.130"
+	HDPLAYER="/tmp/hdplayer"
+	HDCTRLD="/sbin/hdctrld -s -d"
+	TFTPGET="tftp -g"
+	loglevel=1
+fi
+
+
+[ -r $SYSCONFIG ] && . $SYSCONFIG
+[ -r $CONFIG ] && . $CONFIG
+
+#
+# Global vars
+#
+SHUTDOWN_TIMEOUT=10
+
+MyName=`basename $0`
+
+PIDFILE="/var/run/${MyName}.pid"
+
+#
+# system functions
+#
+
+Syslog () {
+	logger -t $MyName -s "$1"
+}
+
+Log () {
+	if [ $1 -le $loglevel ] ; then
+		shift
+		#echo $* >&2
+		logger -t $MyName -s -- $* >&2
+	fi
+}
+
+Syntax () {
+cat << EOF
+Usage: $MyName [ -c|--console ] | [ -d|--daemon ] | [ -g|--get ] | [ -t|--test ]
+Description:
+     loads hdplayer from host and starts hdctrld
+
+Options:
+	-c|--console	Run in foreground (for debugging purposes i.e.)
+	-d|--daemon	Run as daemon in background
+	-g|--get	Just retrieve hdplayer from host and exit
+	-t|--test	Run tests (does nothing yet)
+
+	Send a SIGTERM (-1) to a running $MyName to restart hdplayer
+	Send a SIGUSR1 (-16) to retrieve hdplayer from host and start it
+
+EOF
+}
+
+#
+# program functions
+#
+
+GetPlayer () {
+	Syslog "retrieving hdplayer from host"
+	while ! $TFTPGET $HOSTIP -r $hdpremote -l $HDPLAYER 2>/dev/null ; do
+		sleep 1
+	done
+	Syslog "successfully gotten hdplayer from host"
+	if [ ! -x $HDPLAYER ]; then
+		chmod a+x $HDPLAYER
+	fi
+}
+
+
+MainLoop () {
+	[ -s $HDPLAYER ] || rm -f $HDPLAYER
+
+	if [ ! -f $HDPLAYER ] ; then
+		GetPlayer
+	fi
+
+	if [ ! -x $HDPLAYER ]; then
+		chmod a+x $HDPLAYER
+	fi
+
+	while true ; do
+		while CtrldRunning ; do
+			sleep 1
+		done
+		Syslog "hdctrld died. Restarting."
+		StartCtrld
+		sleep 1
+	done
+}
+
+
+CtrldRunning () {
+	if pidof hdctrld >/dev/null ; then
+		return 0
+	else
+		return 1
+	fi
+}
+
+
+PlayerRunning () {
+	if pidof hdplayer >/dev/null ; then
+		return 0
+	else
+		return 1
+	fi
+}
+
+
+ReGet () {
+#this ist beeing executed when the script receives a SIGUSR1
+	rm $HDPLAYER
+	GetPlayer
+	ReStart
+}
+
+
+ReStart () {
+#this is beeing executed when the script receives a SIGHUP
+	[ -r $SYSCONFIG ] && . $SYSCONFIG
+	StopPlayer
+	#no restart required, hdctrld does it.
+	#StartPlayer
+}
+
+
+Test () {
+	retval=0
+	echo -en "\tAre you root:\t\t"
+	if TestIfRoot ; then
+		echo "yes"
+	else
+		echo no
+		retval=1
+	fi
+
+	echo -en "\thdplayer running:\t"
+	if PlayerRunning; then echo -en "yes\tpid: "; pidof hdplayer ; else echo no; fi
+
+	echo -en "\thdplayermgr running:\t"
+	if [ -f /var/run/${MyName}.pid ]; then
+		echo -en "yes\tpid: "
+		cat /var/run/${MyName}.pid
+	else
+		echo no
+	fi
+
+	echo -en "\thdplayer present:\t"
+	if [ -f $HDPLAYER ]; then
+		if [ -s $HDPLAYER ]; then
+			if [ -x $HDPLAYER ]; then
+				echo "yes"
+			else
+				echo "yes, but not executable. (will be fixed on startup)"
+			fi
+		else
+			echo "yes, but size zero. trash."
+			retval=1
+		fi
+	else
+		echo "no (will be loaded on startup)"
+	fi
+
+	return $retval
+}
+
+
+TestIfRoot () {
+	return `id -u`
+}
+
+
+StartCtrld () {
+	Syslog "Starting hdctrld"
+	$HDCTRLD >/dev/null 2>&1 &
+}
+
+
+StartPlayer () {
+	Syslog "Starting hdplayer"
+	$HDPLAYER >/dev/null 2>&1 &
+}
+
+
+StopPlayer () {
+	Syslog "Stopping hdplayer"
+	pid=`pidof $HDPLAYER`
+	#pid=`ps | grep hdplayer | cut -f 1 -d" "`
+	count=0
+	while PlayerRunning ; do
+		if [ $count -lt 5 ]; then
+			let $((count++))
+			kill $pid
+			sleep 1
+		else
+			kill -9 $pid
+			break
+		fi
+	done
+}
+
+
+Terminate () {
+#this is beeing executed when the script receives a SIGTERM or SIGKILL
+#i.e. from the init system on system shutdown
+	# do we need to do anything here?
+	Log 1 "Terminating $MyName. Warning: $HDPLAYER is not terminated."
+	rm $PIDFILE
+	exit 0
+}
+
+
+#
+# Main
+#
+
+
+if [ $# = 0 ]; then
+	set -- --console
+fi
+
+
+case $1 in
+	-t|--test)
+		Test
+		shift
+		;;
+	-d|--daemon)
+		if [ `id -u` != 0 ]; then
+			echo "You are not root. Go away."
+			[ testing ] || exit 1
+		fi
+		if $testing ; then
+			set -x
+		fi
+		MainLoop > /dev/null 2>&1 &
+		echo $! > $PIDFILE
+		;;
+	-c|--console)
+		if [ `id -u` != 0 ]; then
+			echo "You are not root. Go away."
+			[ testing ] || exit 1
+		fi
+		if $testing ; then
+			set -x
+		fi
+		echo $$ > $PIDFILE
+		MainLoop
+		;;
+	-g|--get)
+		[ -f $HDPLAYER ] && rm -r $HDPLAYER
+		GetPlayer
+		;;
+	-h|--help)
+		Syntax
+		;;
+	*)
+		echo "Unknown option $1"
+		Syntax
+		;;
+esac
+
+Log 3 end of main
+exit 0

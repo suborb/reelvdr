@@ -1,0 +1,254 @@
+===================================
+VDR Plugin 'femon' Revision History
+===================================
+
+2004-02-15: Version 0.0.1
+
+- Initial revision.
+
+2004-02-23: Version 0.0.1b
+
+- Fixed cThread initialization to work under vdr-1.2.6.
+
+2004-02-26: Version 0.0.2
+
+- Added preliminary video (VPID) and audio (APID1) bitrate calculations.
+
+2004-02-27: Version 0.0.2b
+
+- Some minor cosmetic changes.
+
+2004-02-28: Version 0.0.2c
+
+- Translation only update:
+  Fixed 'Deutsch' (Thanks to Olaf Henkel @ VDRPortal).
+  Added 'Italiano' (Thanks to Sean Carlos).
+
+2004-03-03: Version 0.0.3
+
+- Redesigned the user interface.
+- Transponder information is now available in advanced display mode:
+  Press 'OK' key to switch between the simple and the advanced display mode.
+- Moved bitrate calculation to it's own thread for improved accurancy.
+
+2004-03-07: Version 0.0.3a
+
+- Fixed frequency, guard and bandwidth units in transponder information.
+- Added Apid2, Dpid1, Dpid2 information.
+- Added option to write signal information into system log.
+
+2004-03-16: Version 0.0.3b
+
+- Fixed channel toggling with '0' key.
+- Bitrate calculation thread is now canceled immediately to speed up channel switching.
+
+2004-04-04: Version 0.0.3c
+
+- Fixed minor bitrate calculation errors.
+- Added russian translation (Thanks to Vyacheslav Dikonov).
+
+2004-05-31: Version 0.0.4
+
+- Backported "stream information" feature (from version 0.1.1).
+
+2004-06-06: Version 0.0.5
+
+- Backported changes and fixes from version 0.1.2.
+
+2004-06-11: Version 0.0.6
+
+- Backported the "AC3 Stream Information" feature from version 0.1.3.
+
+2004-09-11: Version 0.0.7
+
+-  Backported changes and fixes from version 0.1.6.
+
+===================================
+VDR Plugin 'femon' Revision History
+===================================
+
+2004-05-18: Version 0.1.0
+
+- Updated for vdr-1.3.7 and removed compability with older versions.
+
+2004-05-30: Version 0.1.1
+
+- Added "Stream Information" display mode.
+  Toggle between different modes with 'OK' key:
+  .-> basic -> transponder -> stream -.
+  `-----------------------------------´
+- Added missing german translations (Thanks to Peter Marquardt).
+
+2004-06-06: Version 0.1.2
+
+- Fixed the channel switch bug (reported by Stefan Lucke).
+- Nid/Tid/Rid are now included in translations.
+- Added video format and aspect ratio symbols into status window.
+
+2004-06-11: Version 0.1.3
+
+- Added "AC-3 Stream Information" display mode (Thanks to Lothar Englisch).
+
+2004-06-24: Version 0.1.4
+
+- Added some new symbols and beautified the old ones.
+- Added audio track selection feature.
+- Added preliminary device switching feature (disabled at the moment).
+
+2004-08-18: Version 0.1.5
+
+- Fixed OSDSTATUSWIN_XC define.
+- Added preliminary NTSC support (make NTSC_SYSTEM=1 plugins).
+- Fixed "Setup/OSD/Use Small Fonts" bug (Thanks to Winni for reporting this one).
+- Added patches directory: CA system names by Lauri Tischler.
+
+2004-09-11: Version 0.1.6
+
+- Yet Another Minor Release.
+- Integrated the CA system names patch: "Setup / Show CA System".
+
+2004-11-28: Version 0.1.7
+
+- Updated for vdr-1.3.17.
+- Fixed receiver related crash (Thanks to Marco Schluessler).
+
+2005-01-15: Version 0.7.7
+
+- Updated for vdr-1.3.18.
+- Added DEBUG mode (make DEBUG=1 plugins).
+- OSD height is now user configurable.
+- Added audio channel selection into Yellow key.
+
+2005-01-23: Version 0.7.9
+
+- Some minor cosmetic fixes.
+
+2005-01-23: Version 0.8.0
+
+- Updated for vdr-1.3.19.
+
+2005-01-24: Version 0.8.1
+
+- Added Estonian translations (Thanks to Arthur Konovalov).
+
+2005-02-24: Version 0.8.5
+
+- Updated for vdr-1.3.21.
+- Minor modification for DEBUG mode.
+- Added preliminary support for themes and some GUI tweaks.
+- Added horizontal offset setup option.
+
+2005-02-26: Version 0.8.6
+
+- Horizontal offset setup option should be functional now.
+
+2005-04-01: Version 0.8.7
+
+- Default make target is now all.
+- Fixed the access rights of symbols subdirectory (Thanks to Harri Kukkonen).
+- Added a new theme: Moronimo (Thanks to Morone).
+
+2005-04-02: Version 0.8.8
+
+- Cleaned up finnish translations (Thanks to Ville Skyttä).
+
+2005-04-04: Version 0.8.9
+
+- Updated Estonian translations (Thanks to Arthur Konovalov).
+- Added the missing german translations (Thanks to #vdr-portal).
+
+2005-05-20: Version 0.9.0
+
+- Renamed compiling switches ('DEBUG' to 'FEMON_DEBUG' and 'NTSC_SYSTEM' to 'FEMON_NTSC').
+- Enabled preliminary support for the device switching.
+
+2005-07-23: Version 0.9.1
+
+- Fixed AC3-info flickering (Thanks to Pasi Juppo for reporting this one).
+- Added "Analog" type CA system.
+- Plugin is now stripped by default.
+
+2005-08-15: Version 0.9.2
+
+- Threads updated for vdr-1.3.29.
+
+2005-08-28: Version 0.9.3
+
+- Updated for vdr-1.3.31.
+- Added preliminary svdrp and service support.
+
+2005-10-04: Version 0.9.4
+
+- Updated for vdr-1.3.34.
+- Added Enigma theme (Thanks to Rolf Hoverath).
+- Added EgalsTry theme (Thanks to Uwe Hanke).
+- Added option to disable rounded corners.
+
+2005-11-13: Version 0.9.5
+
+- Updated for vdr-1.3.36.
+- Added french translation (Thanks to Nicolas Huillard).
+- Enabled bitrate commands via SVDRP.
+- Added new SVDRP commands.
+- Modified femon service without incrementing version number.
+- Added "Duotone" theme for 2bpp on screen displays.
+- Fixed crash bug in femonreceiver.
+- Fixed setup page bug (Thanks to Thomas Günther for reporting this one).
+
+2006-01-25: Version 0.9.6
+
+- Updated for vdr-1.3.40.
+- Fixed a translation bug (Thanks to Antti Hartikainen).
+- Fixed AC3 header parsing bug (Thanks to Axel Katzur for reporting this one).
+- Fixed EgalsTry theme (Thanks to Uwe Hanke).
+
+2006-02-06: Version 0.9.7
+
+- Updated for vdr-1.3.42.
+- Added "SilverGreen" theme (Thanks to Rififi77 @ VDRPortal).
+
+2006-03-08: Version 0.9.8
+
+- Updated for vdr-1.3.44.
+- Minor Makefile changes.
+- Made all symbol data 'const'.
+- Added spanish translation (Thanks to Luis Palacios).
+
+2006-04-20: Version 0.9.9
+
+- Updated for vdr-1.3.47.
+
+2006-04-23: Version 0.9.10
+
+- Added STRIP option for Makefile (Thanks to Ville Skyttä).
+- Modified APIVERSION code in Makefile.
+
+2006-04-30: Version 1.0.0
+
+- Updated for vdr-1.4.0.
+- Modified APIVERSION code in Makefile.
+- Updated german translation (Thanks to Andreas Brachold).
+
+2006-06-06: Version 1.0.1
+
+- Fixed device switching priority (Thanks to Andreas Brugger).
+- Fixed device switching back to the primary device.
+
+2006-09-17: Version 1.1.0
+
+- Added support for svdrpservice plugin (Thanks to Frank Schmirler).
+- Added INFO SVDRP command (partially based on patch by Herbert Pötzl).
+- Removed system log option - use SVDRP instead.
+- Added --remove-destination to the 'cp' command in Makefile.
+
+2007-01-08: Version 1.1.1
+
+- Updated for vdr-1.5.0.
+
+2007-05-01: Version 1.1.2
+
+- Fixed opening while replaying (Thanks to Antti Seppälä for reporting this one).
+
+2007-05-15: Version 1.1.3
+
+- Fixed a race condition in cFemonReceiver (Thanks to Reinhard Nissl).

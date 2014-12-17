@@ -1,0 +1,29 @@
+diff -Nur vdr-1.3.21/vdr.c vdr-1.3.21-reel/vdr.c
+--- vdr-1.3.21/vdr.c    2005-07-10 17:29:04.000000000 +0200
++++ vdr-1.3.21-reel/vdr.c       2005-07-09 01:48:54.000000000 +0200
+@@ -695,11 +695,13 @@
+             Menu = new cMenuMain(cControl::Control(), function);\
+             Temp = NULL;\
+             key = kNone; // nobody else needs to see this key
+-          case kSchedule:   DirectMainFunction(osSchedule); break;
++          // case kSchedule:   DirectMainFunction(osSchedule); break;
+           case kChannels:   DirectMainFunction(osChannels); break;
+           case kTimers:     DirectMainFunction(osTimers); break;
+           case kRecordings: DirectMainFunction(osRecordings); break;
+-          case kSetup:      DirectMainFunction(osSetup); break;
++          case kSetup:      cRemote::PutMacro(key); break;
++               //PluginManager.GetPlugin("setup"); break;
++               //DirectMainFunction(osSetup); break;
+           case kCommands:   DirectMainFunction(osCommands); break;
+           case kUser1 ... kUser9: cRemote::PutMacro(key); key = kNone; break;
+           case k_Plugin:    DirectMainFunction(osPlugin, cRemote::GetPlugin()); break;
+@@ -867,7 +869,8 @@
+                   cDevice::SwitchChannel(NORMALKEY(key) == kUp ? 1 : -1);
+                   break;
+              // Viewing Control:
+-             case kOk:   LastChannel = -1; break; // forces channel display
++             case kOk:   DirectMainFunction(osChannels); break;
++            case kSchedule:   LastChannel = -1; break; // forces channel display
+              // Key macros:
+              case kRed:
+              case kGreen:

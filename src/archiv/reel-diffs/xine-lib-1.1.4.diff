@@ -1,0 +1,24 @@
+diff -Nru xine-lib-1.1.4-org/src/xine-engine/audio_out.h xine-lib-1.1.4/src/xine-engine/audio_out.h
+--- xine-lib-1.1.4-org/src/xine-engine/audio_out.h	2007-07-26 17:12:13.888427638 +0200
++++ xine-lib-1.1.4/src/xine-engine/audio_out.h	2007-07-26 17:20:41.364516263 +0200
+@@ -336,7 +336,7 @@
+ #define AO_CTRL_FLUSH_BUFFERS	2      
+ 
+ /* above that value audio frames are discarded */
+-#define AO_MAX_GAP              15000
++#define AO_MAX_GAP              150000
+ 
+ #ifdef __cplusplus
+ }
+diff -Nru xine-lib-1.1.4-org/src/xine-engine/xine.c xine-lib-1.1.4/src/xine-engine/xine.c
+--- xine-lib-1.1.4-org/src/xine-engine/xine.c	2007-07-26 17:12:13.900428585 +0200
++++ xine-lib-1.1.4/src/xine-engine/xine.c	2007-07-26 17:21:07.382571592 +0200
+@@ -1261,7 +1261,7 @@
+   /* Wait until the first frame produced is displayed
+    * see video_out.c
+    */
+-  wait_first_frame (stream);
++  //wait_first_frame (stream);
+   
+   xprintf (stream->xine, XINE_VERBOSITY_DEBUG, "play_internal ...done\n");
+ 

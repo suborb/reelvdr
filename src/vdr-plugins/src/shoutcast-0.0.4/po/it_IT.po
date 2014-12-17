@@ -1,0 +1,150 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2009-06-21 00:17+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Internet Radio"
+msgstr "Internet Radio"
+
+msgid "My Radio Stations"
+msgstr "Le mie stazioni radio"
+
+msgid "Getting playlist for Genre: "
+msgstr "Playlist per genere:"
+
+msgid "Internet Radio - Add New Server"
+msgstr "Internet radio - Agg. nuovo server"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Internet radio - Mod. info emittente"
+
+msgid "New Station"
+msgstr "Nuova emittente"
+
+msgid "Station Name"
+msgstr "Nome emittente"
+
+msgid "Station Url"
+msgstr "URL emittente"
+
+msgid "Save"
+msgstr "Salvare"
+
+msgid "No URL entered!"
+msgstr "URL non inserita!"
+
+msgid "Saved"
+msgstr "Salvato"
+
+msgid "Could not be saved!"
+msgstr "Impossibile salvare!"
+
+msgid "Already present"
+msgstr "Già presente"
+
+msgid "Couldnot save changes"
+msgstr "Impossibile salvare le modifiche"
+
+msgid "Check URL: could not open radio-station"
+msgstr "Verificare URL: impossibile aprire la stazione radio"
+
+msgid "Please wait: opening radio-station"
+msgstr "Apertura stazione radio in corso. Attendere..."
+
+#, fuzzy
+msgid "Internet Radio Functions"
+msgstr "Funzione Internet-Radio"
+
+msgid "1  Add New Radio Station"
+msgstr "1  Aggiungere nuova emittente"
+
+msgid "2  Edit current Radio Station"
+msgstr "2  Modificare emittente corrente"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3  Rimuovere emittente corrente"
+
+msgid "Selected Radio Station:"
+msgstr "Emittente radio selezionata: "
+
+msgid "Could not save to disk"
+msgstr "Impossibile salvare su disco"
+
+msgid "Deletion failed"
+msgstr "Rimozione fallita!"
+
+msgid "Internet Radio: My Stations"
+msgstr "Internet Radio: le mie emittenti"
+
+msgid "Button$Functions"
+msgstr "Funzione"
+
+msgid "No Radio Stations found."
+msgstr "Nessuna emittente radio trovata!"
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please use 'Function' to add a station."
+msgstr ""
+
+msgid "Your SHOUTcast is active."
+msgstr ""
+
+msgid "Your SHOUTcast DevID is"
+msgstr ""
+
+msgid "Reset DevID"
+msgstr ""
+
+msgid "Welcome to Internetradio setup"
+msgstr ""
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr ""
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr ""
+
+msgid "Enter DevID"
+msgstr ""
+
+msgid "Show this page again"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr ""
+
+msgid "Internet Radio Setup"
+msgstr ""
+
+msgid "Radio station added to favorites"
+msgstr ""
+
+#~ msgid "Please use 'Function' to add"
+#~ msgstr "Utilizzare \"Funzioni\" per aggiungere"
+
+#~ msgid "a station"
+#~ msgstr "un'emittente"

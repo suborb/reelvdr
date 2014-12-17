@@ -1,0 +1,167 @@
+.TH fbshot 1 "(C) 2000 Stephan Beyer, GPL"
+.SH NAME
+\fBfbshot\fP - takes screenshots from your framebuffer device
+.SH SYNOPSIS
+.B fbshot [options] filename
+.SH DESCRIPTION
+.B fbshot
+reads your \fB24 or 32-bit\fP framebuffer device and saves a \fBPNG\fP image
+file. You can use it for making screenshots of your framebuffer 
+application or of your text or (n)curses applications (just
+for fun). You can also use it to show somebody (who lives far away) 
+your crazy framebuffer boot logo ;-) You may also use your shots in
+presentations or anything. I think this program isn't for nothing.
+Send \fBfeedback\fP for more suggestions to use it!
+.SH OPTIONS
+.TP
+.B -h
+print usage informations
+.TP
+.B -c console
+specifies which \fBconsole\fP (or virtual terminal - like other 
+people call this feature) to grab. Sometimes this changing is 
+faster then the framebuffer is refreshed (especially when grabbing
+framebuffer apps). If so, you should \fBuse -C console\fP ... This
+waits some time before grabbing. You can't use \fB-s\fP in this case.
+.TP
+.B -d device
+specifies which framebuffer device you want to read. If 
+you do not use this option, it takes the value from the 
+\fBFRAMEBUFFER\fP environment variable. If no FRAMEBUFFER 
+environment variable is given or if its value is \fBNULL\fP, the
+DEFAULT_FB is taken. (see source code) If you got the official 
+binary \fB.deb\fP package, this value is \fB/dev/fb0\fP ... Of 
+course, if you received a \fB.rpm\fP, it is the same. And if you
+take a look into the binary \fBELF\fP file you can still change
+this standard.
+.TP
+.B -g
+saves in \fBgrayscale\fP... 
+.TP
+.B -i
+turns \fBoff\fP interlacing. If you do not want \fBADAM7 interlacing\fP, 
+you should use the \fB-i\fP option.
+.TP
+.B -s seconds
+specifies how many seconds to wait before grabbing. \fBfbshot\fP
+does not lock console switching, so you can switch it while 
+waiting and so you can use this feature if -c doesn't work 
+as normal user and can't log in as root (see BUGS).
+.SH BEEPS
+Beeps tell you progress. First beep means "Yawn, why do you wake 
+me?! Ok, ok, I start grabbing now...", second would say "Hey, cool,
+grabbing the framebuffer was fine, now I gonna write a PNG file."
+This can take some time, because the PNG file get compressed very 
+high. Third beep means "So, here you got your PNG file, and now let
+me sleep!"...
+.SH WHY 32-BIT
+Well, this is the only color depth which works correctly at my machine. I made
+a switch(bits) within the \fBWrite_PNG\fP function, so you may add bit_depths
+and color_types easily. I am not able to test such things, so I didn't want to 
+code any stuff. But you may - \fBplease\fP do it, do it, do it! And then
+send me patches. I will implement them (into the original) as soon as possible.
+Although I cannot test it, I added \fB24-bit capability\fP, because I am sure it 
+works. So please mail me if you are able to test it.
+.SH WHY PNG
+Reasons why I chose PNG for output format:
+
+PNG is small, does everything I or you need for a screenshot. PNG is web 
+standard. JPEG or GIF are web standard, too, but both JPEG and GIF are limited.
+And libjpeg isn't working at my machine :-) and I needn't choose between libgif
+or libungif or between some related full-featured graphic libs (libLUG, 
+libMagick). But please notice: in some Netscape versions Netscape has some problems
+with PNG when calling directly. It displays them \fBsmaller\fP, and with \fBblack 
+bars\fP left and right. Within a HTML page there are \fBno\fP problems I know.
+.SH BUGS
+\fB-c\fP option does not work as non-root. But I do not want to setuid root
+the binary, because this is a \fBsecurity hazard\fP. And I do not like such
+hazards! Maybe it works with your kernel. Please mail me (with kernel version),
+if so. If you are root, it should change to the console you specified two 
+times (which is \fBnot\fP a bug).
+.SH TODO
+Nice, if some coders would help me, but the following is \fBmy task\fP, no 
+other people should code that:
+.nf
+
+    * a preview function, which generates a 
+	downscaled 100x75 picture
+
+.fi
+Not even think of that!!!! Or you get onto the deadkiss list of my personal 
+mafia ;-)
+But, of course, you may do something:
+.nf
+
+    * port it to and test it on other color depths!!!
+    * make options to specify compression (I think, that's not important)
+    * remove bugs and make bugs (but only unintentionly!)
+    * send me mail (suggestions, tips, critics)...
+.fi
+.SH AUTHOR
+If you have any comments, patches, questions, critics, tips or anything 
+else (well, feedback) to \fBfbshot\fP, send it to 
+
+    \fBStephan Beyer <fbshot@s-beyer.de>\fP
+
+.SH GETTING NEW VERSIONS
+You may visit my homepage for newer versions of fbshot:
+
+    \fBhttp://www.copyleft.de/~sbeyer\fP
+    \fBftp://www.copyleft.de/pub/project/fbshot\fP
+
+if you are not able to remind this short url, you can also try
+
+    \fBhttp://www.s-beyer.de\fP
+
+for a shorter-written redirect, which adds an advertising banner 
+window if you enabled JavaScript in your browser. :-)
+You should be able to download \fBtar.gz\fPed source codes, binary 
+\fB.deb\fPs, alien-mutated \fB.rpm\fPs and \fBdiff\fPed patches. I 
+hope you decide for the source codes, because I want some people who
+code new features on that. Thanks...
+.SH THANKS TO
+Thanks to \fBGlenn Randers-Pehrson\fP <randeg@alum.rpi.edu> who helped
+me with some basic libPNG things.
+I also have to thank \fBElliot Lee\fP <sopwith@redhat.com> who sent 
+me code for converting 8bpp to 24bpp, although this didn't work at my 
+machine. I also didn't implement it into the program, but the code contains 
+it...
+Also thanks to \fBFrank Kaefer\fP <fbshot@sta.to> who I met at #linux.de 
+in IRCnet. Caused by him I noticed, that fbshot had a real heavy bug in 
+its first two versions.
+\fBliff\fP I also met at IRCnet, channel #c. He helped me with some basic 
+bit operation stuff. Also thanks to him. 
+Thanks, of course, to everyone who downloaded this program, too. If you send 
+me mail I'll call you here (if you want). 
+So thanks to 
+\fBBrad Douglas\fP <brad@neruo.com>, 
+\fBEdmund Haworth\fP <oliver.legion@bigfoot.com>, 
+\fBElliot Lee\fP <sopwith@redhat.com>, 
+\fBFrank Kaefer\fP <fbshot@sta.to> 
+\fBGlenn Randers-Pehrson\fP <randeg@alum.rpi.edu>, 
+\fB<imaginate@elektromensch.de>\fP, 
+and you? mail me if you want to be called here. 
+You may tell me Realname and e-mail and what you are thinking of this program, 
+send me patches, comments, questions - what you want...
+.SH COPYLEFT
+Copyleft (C) 2000 \fBStephan Beyer\fP <fbshot@s-beyer.de>
+.P
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+.P
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+.P
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+.SH Some last shouts...
+BURN ALL GIFS! SAVE MAN-PAGES! HELP GNU AND THE FREE SOFTWARE FOUNDATION! 
+BURN PROPRIETARIES! DONATE (NOT TO ME, TO POOR PEOPLE WHO
+REALLY NEED THAT)! SEND ME FEEDBACK! DEBIAN IS COMING! METAL! METAL! METAL! 
+DO NOT JOIN SCIENTOLOGY! MAKE FREE SOFTWARE! DON'T GIVE AIDS ANY CHANCE!!! NO 
+SOFTWARE PATENTS! NO RESTRICTIONS! MAIL ME! I think that is enough. Bye...

@@ -1,0 +1,2214 @@
+# VDR language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Drazen Dupor <drazen.dupor@dupor.com>, 2004, 2005
+# Dino Ravnic <dino.ravnic@fer.hr>, 2004
+# Adrian Caval <anrxc@sysphere.org>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 13:00+0100\n"
+"PO-Revision-Date: 2008-03-17 19:00+0100\n"
+"Last-Translator: Adrian Caval <anrxc@sysphere.org>\n"
+"Language-Team: Croatian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "New Channels"
+msgstr "Programi"
+
+msgid "Favorites"
+msgstr ""
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Neispravan Program ***"
+
+msgid "Channel not available!"
+msgstr "Program nije dostupan!"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Nemoguće započeti Prijenos!!"
+
+msgid "Starting EPG scan"
+msgstr "Počinjem EPG pretragu"
+
+msgid "No title"
+msgstr "Bez naziva"
+
+#, fuzzy
+msgid "No help available"
+msgstr "Audio nedostupan"
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Hrvatski"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "hrv"
+
+#. TRANSLATORS:
+#. / Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+#, fuzzy
+msgid "Timer Manager"
+msgstr "Tajmeri"
+
+#, fuzzy
+msgid "Search-Timer Manager"
+msgstr "Tajmeri"
+
+msgid "Parental Control"
+msgstr ""
+
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr ""
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr ""
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr ""
+
+msgid "View, edit and manage recording timers"
+msgstr ""
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr ""
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio"
+msgstr ""
+
+msgid "Play music, manage and copy music files"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr ""
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr ""
+
+msgid "Copy an Audio CD to the music library"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Audio"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Rezerva na početku snimanja (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Rezerva na kraju (min)"
+
+#, fuzzy
+msgid "Undelete Recordings"
+msgstr "Obrisati snimku?"
+
+msgid "New folder"
+msgstr ""
+
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr ""
+
+#, fuzzy
+msgid "Movie library, TV recordings"
+msgstr "Zaustaviti snimanje?"
+
+msgid "Watch movies, manage and copy movie files"
+msgstr ""
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr ""
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr ""
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr ""
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr ""
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Obrisati snimku?"
+
+msgid "Playlist"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist actions"
+msgstr "Polarizacija"
+
+#, fuzzy
+msgid "Playlist Commands"
+msgstr "Naredbe"
+
+msgid "Filebrowser Commands"
+msgstr ""
+
+#, fuzzy
+msgid "Save playlist as"
+msgstr "Polarizacija"
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "File Manager, Web browser, ReelBlog"
+msgstr ""
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr ""
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr ""
+
+msgid "Read news & information on the ReelBox"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Additional Software"
+msgid "Additional Software"
+msgstr ""
+
+msgid "Magazine EPG"
+msgstr ""
+
+msgid "Additional software provided by third party developers"
+msgstr ""
+
+#. TRANSLATORS:
+#. / More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr ""
+
+msgid "Show currently active background processes"
+msgstr ""
+
+msgid "Format a DVD-RW"
+msgstr ""
+
+msgid "Directory browser"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Special Menus that have a bar at the left
+msgid "My Pictures"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "My DVDs"
+msgstr ""
+
+#, fuzzy
+msgid "EPG Commands: "
+msgstr "Naredbe"
+
+#, fuzzy
+msgid "Search actions"
+msgstr "Tajmeri"
+
+#, fuzzy
+msgid "Search entries"
+msgstr "Tajmeri"
+
+#, fuzzy
+msgid "Search templates"
+msgstr "Tajmeri"
+
+#, fuzzy
+msgid "Edit search"
+msgstr "Uređivanje tajmera"
+
+msgid "Edit timer"
+msgstr "Uređivanje tajmera"
+
+msgid "Edit blacklist"
+msgstr ""
+
+#, fuzzy
+msgid "Edit template"
+msgstr "Uređivanje tajmera"
+
+msgid "Edit user-defined days of week"
+msgstr ""
+
+#, fuzzy
+msgid "found recordings"
+msgstr "Snimanje"
+
+#, fuzzy
+msgid "Select directory"
+msgstr "Obrisati snimku?"
+
+msgid "Timer conflicts -"
+msgstr ""
+
+msgid "Title$Childlock"
+msgstr ""
+
+#, fuzzy
+msgid "Games"
+msgstr "Naziv"
+
+msgid "Multifeed Options"
+msgstr ""
+
+#, fuzzy
+msgid "Move recording"
+msgstr "Zaustaviti snimanje?"
+
+msgid "Select Reelblog item"
+msgstr ""
+
+#, fuzzy
+msgid "SleepTimer"
+msgstr "Tajmeri"
+
+#, fuzzy
+msgid "Rename entry"
+msgstr "samo imena"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Obrisati snimku?"
+
+msgid "Choose action"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Setup Menus with "Setup"-bar on the left
+msgid "Setup"
+msgstr "Postavke"
+
+msgid "Software Update"
+msgstr ""
+
+#, fuzzy
+msgid "Channel Lists"
+msgstr "Programi"
+
+msgid "Channel lists functions"
+msgstr ""
+
+#, fuzzy
+msgid "Channelscan"
+msgstr "Programi"
+
+msgid "Installation Wizard"
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+#, fuzzy
+msgid "Remote Control / Automation"
+msgstr "Učenje rasporeda tipki daljinskog upravljača"
+
+#, fuzzy
+msgid "MultiRoom Setup"
+msgstr "Postavke"
+
+#, fuzzy
+msgid "MultiRoom - Error!"
+msgstr "Postavke"
+
+#, fuzzy
+msgid "Basic Settings"
+msgstr "hrv"
+
+#, fuzzy
+msgid "Network Settings"
+msgstr "Detalji snimanja"
+
+msgid "EPG Services"
+msgstr ""
+
+#, fuzzy
+msgid "Reception Settings"
+msgstr "Detalji snimanja"
+
+#, fuzzy
+msgid "Network"
+msgstr "hrv"
+
+#, fuzzy
+msgid "Global Settings"
+msgstr "hrv"
+
+#, fuzzy
+msgid "UMTS Settings"
+msgstr "hrv"
+
+msgid "Dynamic DNS"
+msgstr ""
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr ""
+
+msgid "Windows Network Connection"
+msgstr ""
+
+msgid "NFS Client"
+msgstr ""
+
+msgid "Video Recorder "
+msgstr ""
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr ""
+
+msgid "Setup - Audio/Video"
+msgstr ""
+
+msgid "Timezone & clock"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+#, fuzzy
+msgid "Antenna settings"
+msgstr "Detalji snimanja"
+
+#, fuzzy
+msgid "Rotor Setup"
+msgstr "Postavke"
+
+#, fuzzy
+msgid "Language Settings"
+msgstr "hrv"
+
+#, fuzzy
+msgid "Timezone"
+msgstr "Detalji snimanja"
+
+#, fuzzy
+msgid "Timezone Settings"
+msgstr "hrv"
+
+msgid "Front Panel"
+msgstr ""
+
+msgid "TVTV Service"
+msgstr ""
+
+msgid "International EPG"
+msgstr ""
+
+msgid "Energy Options"
+msgstr ""
+
+msgid "Factory defaults"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "Izlaz u slučaju nužde"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr "Početni kanal"
+
+#, fuzzy
+msgid "Option$Quick"
+msgstr "Nedjelja"
+
+#. TRANSLATORS:
+#. / Recording Commands
+msgid "Mark Commercials"
+msgstr ""
+
+msgid "Add Child Lock"
+msgstr ""
+
+msgid "Remove Child Lock"
+msgstr ""
+
+#, fuzzy
+msgid "Change title"
+msgstr "Program"
+
+msgid "Mark as New"
+msgstr ""
+
+msgid "Remove Archive Mark"
+msgstr ""
+
+msgid "Remove Crop Mark"
+msgstr ""
+
+msgid "Remove Archived Recording"
+msgstr ""
+
+#, fuzzy
+msgid "Restore Archived Recording"
+msgstr "Obrisati snimku?"
+
+msgid "Convert to MPEG (TS)"
+msgstr ""
+
+msgid "Directory Selector:"
+msgstr ""
+
+#, fuzzy
+msgid "Select Media"
+msgstr "Obrisati snimku?"
+
+#, fuzzy
+msgid "Directory commands"
+msgstr "Naredbe za snimanje"
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "No CI-Module"
+msgstr ""
+
+#, fuzzy
+msgid "Edit Channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "Customize Bouquets"
+msgstr "Obrisati tajmer?"
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Faza 1: detektiranje kôda daljinskog upravljača"
+
+msgid "Press any key on the RC unit"
+msgstr "Pritisnite jednu tipku na daljinskom upravljaču"
+
+msgid "RC code detected!"
+msgstr "Kôd daljinskog upravljača je prepoznat!"
+
+msgid "Do not press any key..."
+msgstr "Ne pritišćite tipke..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Faza 2: Učenje posebnih kôdova"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Pritisnite tipku za '%s'"
+
+msgid "Press 'Up' to confirm"
+msgstr "Pritisnite 'Gore' za potvrdu"
+
+msgid "Press 'Down' to continue"
+msgstr "Pritisnite 'Dolje' za nastavak"
+
+msgid "(press 'Up' to go back)"
+msgstr "(pritisnite 'Gore' za nazad)"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(pritisnite 'Dolje' za kraj)"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "pritisnite 'Izbornik' da preskočite ovu tipku"
+
+msgid "Learning Remote Control Keys"
+msgstr "Učenje rasporeda tipki daljinskog upravljača"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Faza 3: Spremanje kôdova tipki"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "'Gore' za potvrdu, 'Dolje' za prekid"
+
+msgid "Key$Up"
+msgstr "Gore"
+
+msgid "Key$Down"
+msgstr "Dolje"
+
+msgid "Key$Menu"
+msgstr "Izbornik"
+
+msgid "Key$Ok"
+msgstr "Ok"
+
+msgid "Key$Back"
+msgstr "Nazad"
+
+msgid "Key$Left"
+msgstr "Lijevo"
+
+msgid "Key$Right"
+msgstr "Desno"
+
+msgid "Key$Red"
+msgstr "Crveno"
+
+msgid "Key$Green"
+msgstr "Zeleno"
+
+msgid "Key$Yellow"
+msgstr "Žuto"
+
+msgid "Key$Blue"
+msgstr "Plavo"
+
+msgid "Key$Play"
+msgstr "Start"
+
+msgid "Key$Pause"
+msgstr "Pauza"
+
+msgid "Key$Stop"
+msgstr "Stop"
+
+#, fuzzy
+msgid "Key$Eject"
+msgstr "Lijevo"
+
+msgid "Key$Record"
+msgstr "Snimaj"
+
+msgid "Key$FastFwd"
+msgstr "Naprijed"
+
+msgid "Key$FastRew"
+msgstr "Nazad"
+
+msgid "Key$Next"
+msgstr "Sljedeće"
+
+msgid "Key$Prev"
+msgstr "Prethodno"
+
+msgid "Key$Power"
+msgstr "Power"
+
+msgid "Key$Channel+"
+msgstr "Program+"
+
+msgid "Key$Channel-"
+msgstr "Program-"
+
+msgid "Key$PrevChannel"
+msgstr "PrethodniKanal"
+
+msgid "Key$Volume+"
+msgstr "Glasnije"
+
+msgid "Key$Volume-"
+msgstr "Tiše"
+
+msgid "Key$Mute"
+msgstr "Bez zvuka"
+
+msgid "Key$Audio"
+msgstr "Audio"
+
+msgid "Key$Subtitles"
+msgstr "Titlovi"
+
+#, fuzzy
+msgid "Key$Aspect"
+msgstr "Lijevo"
+
+msgid "Key$Schedule"
+msgstr "Raspored"
+
+msgid "Key$Channels"
+msgstr "Programi"
+
+msgid "Key$Timers"
+msgstr "Tajmeri"
+
+#, fuzzy
+msgid "Key$Search"
+msgstr "Nazad"
+
+msgid "Key$Recordings"
+msgstr "Snimke"
+
+msgid "Key$Setup"
+msgstr "Postavke"
+
+msgid "Key$Commands"
+msgstr "Naredbe"
+
+#, fuzzy
+msgid "Key$Greater"
+msgstr "Zeleno"
+
+#, fuzzy
+msgid "Key$Less"
+msgstr "Lijevo"
+
+#, fuzzy
+msgid "Key$2digit"
+msgstr "Desno"
+
+#, fuzzy
+msgid "Key$DVD"
+msgstr "Dolje"
+
+#, fuzzy
+msgid "Key$DVB"
+msgstr "Dolje"
+
+#, fuzzy
+msgid "Key$PVR"
+msgstr "Crveno"
+
+#, fuzzy
+msgid "Key$Reel"
+msgstr "Crveno"
+
+#, fuzzy
+msgid "Key$TT"
+msgstr "Gore"
+
+#, fuzzy
+msgid "Key$PiP"
+msgstr "Start"
+
+msgid "Key$User1"
+msgstr "Korisnik1"
+
+msgid "Key$User2"
+msgstr "Korisnik2"
+
+msgid "Key$User3"
+msgstr "Korisnik3"
+
+msgid "Key$User4"
+msgstr "Korisnik4"
+
+msgid "Key$User5"
+msgstr "Korisnik5"
+
+msgid "Key$User6"
+msgstr "Korisnik6"
+
+msgid "Key$User7"
+msgstr "Korisnik7"
+
+msgid "Key$User8"
+msgstr "Korisnik8"
+
+msgid "Key$User9"
+msgstr "Korisnik9"
+
+msgid "Key$Info"
+msgstr "Info"
+
+#, fuzzy
+msgid "Key$Help"
+msgstr "Gore"
+
+msgid "Timeshift mode"
+msgstr ""
+
+msgid "Recording started"
+msgstr "Snimanje započelo"
+
+msgid "Free To Air"
+msgstr "Slobodno"
+
+msgid "no"
+msgstr "ne"
+
+msgid "internal CAM"
+msgstr ""
+
+msgid "No CI at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "encrypted"
+msgstr "kriptirano"
+
+msgid "Rotor - shared LNB"
+msgstr ""
+
+msgid "auto"
+msgstr "automatski"
+
+msgid "Edit channel"
+msgstr "Uređivanje programa"
+
+msgid "New"
+msgstr ""
+
+msgid "Name"
+msgstr "Naziv"
+
+msgid "Source"
+msgstr "Izvor"
+
+msgid "Frequency"
+msgstr "Frekvencija"
+
+msgid "Polarization"
+msgstr "Polarizacija"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "none"
+msgstr "ništa"
+
+msgid "CoderateL"
+msgstr "CoderateL"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid1"
+msgstr "Apid1"
+
+msgid "Apid2"
+msgstr "Apid2"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Modulation"
+msgstr "Modulacija"
+
+msgid "Bandwidth"
+msgstr "Propusnost"
+
+msgid "Transmission"
+msgstr "Prijenos"
+
+msgid "Guard"
+msgstr "Zaštita"
+
+msgid "Hierarchy"
+msgstr "Hijerarhija"
+
+#, fuzzy
+msgid "Rolloff"
+msgstr "isključi"
+
+msgid "Button$New"
+msgstr "Novi"
+
+msgid "Channel settings are not unique!"
+msgstr "Postavke programa nisu jedinstvene!"
+
+#, fuzzy
+msgid "channellist"
+msgstr "Programi"
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+#, fuzzy
+msgid "Channellist: set filters"
+msgstr "Programi"
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+#, fuzzy
+msgid "All channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "Only TV channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "Only radio channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "non encrypted channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Pozicija informacija o programu"
+
+#, fuzzy
+msgid "non encrypted TV channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "encrypted radio channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "HD channels"
+msgstr "Uređivanje programa"
+
+msgid "Channels"
+msgstr "Programi"
+
+msgid "Button$Edit"
+msgstr "Promijeni"
+
+msgid "Button$Delete"
+msgstr "Obriši"
+
+msgid "Button$Mark"
+msgstr "Označi"
+
+msgid "Channel is being used by a timer!"
+msgstr "Program je trenutno zauzet tajmerom!"
+
+msgid "Delete channel?"
+msgstr "Obrisati program?"
+
+msgid "Edit Bouquet"
+msgstr ""
+
+msgid "Add Bouquet"
+msgstr ""
+
+msgid "CI-Slot for this Bouquet"
+msgstr ""
+
+#, fuzzy
+msgid "Note:"
+msgstr "Bez naziva"
+
+msgid "Select CI-Slot for current Bouquet."
+msgstr ""
+
+msgid "Bouquets"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Customize"
+msgstr "Pauza"
+
+msgid "Move"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Obriši"
+
+#, fuzzy
+msgid "Delete Bouquet?"
+msgstr "Obrisati tajmer?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Gore/Dolje na novu poziciju - OK za potvdru"
+
+#, fuzzy
+msgid "Select channels with OK"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "Customize channels: "
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "free radio channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "radio channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "encrypted TV channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "free TV channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "TV channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "encrypted channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "free channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "non HD channels"
+msgstr "Uređivanje programa"
+
+#, fuzzy
+msgid "all channels"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "Select channels with blue key"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "Channel deleted"
+msgstr "Programi"
+
+#, fuzzy
+msgid "Delete channels?"
+msgstr "Obrisati program?"
+
+#, fuzzy
+msgid "Channels deleted"
+msgstr "Programi"
+
+#, fuzzy
+msgid "Channels have been moved"
+msgstr "Programi"
+
+msgid "Add to Favorites?"
+msgstr ""
+
+msgid "Button$Insert"
+msgstr "Umetni"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Gore/Dolje na novu poziciju - OK za potvdru"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Gore/Dolje na novu poziciju - OK za potvdru"
+
+msgid "Help"
+msgstr ""
+
+msgid "Already first help item"
+msgstr ""
+
+msgid "Already last help item"
+msgstr ""
+
+msgid "low"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "high"
+msgstr ""
+
+msgid "Active"
+msgstr "Aktivan"
+
+msgid "Channel"
+msgstr "Program"
+
+msgid "Day"
+msgstr "Dan"
+
+msgid "Start"
+msgstr "Početak"
+
+msgid "Stop"
+msgstr "Kraj"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Lifetime"
+msgstr "Trajanje"
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Child protection"
+msgstr ""
+
+msgid "yes"
+msgstr "da"
+
+msgid "File"
+msgstr "Datoteka"
+
+msgid "First day"
+msgstr "Prvi dan"
+
+#, fuzzy
+msgid "Could not add timer"
+msgstr "Obrisati tajmer?"
+
+msgid "Timers"
+msgstr "Tajmeri"
+
+msgid "Button$On/Off"
+msgstr "De/Aktiviraj"
+
+msgid "Button$Info"
+msgstr "Info"
+
+msgid "Delete timer?"
+msgstr "Obrisati tajmer?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Tajmer još snima - zaista obrisati?"
+
+#, fuzzy
+msgid "Could not delete timer"
+msgstr "Obrisati tajmer?"
+
+msgid "Event"
+msgstr "Emisija"
+
+msgid "Button$Timer"
+msgstr "Tajmer"
+
+msgid "Button$Record"
+msgstr "Snimi"
+
+msgid "Button$Switch"
+msgstr "Prebaci"
+
+#, fuzzy
+msgid "ActiveEvent"
+msgstr "Aktivan"
+
+msgid "What's on now?"
+msgstr "Što je trenutno na programu?"
+
+msgid "What's on next?"
+msgstr "Što slijedi?"
+
+msgid "Button$Next"
+msgstr "Slijedi"
+
+msgid "Button$Now"
+msgstr "Trenutno"
+
+msgid "Button$Schedule"
+msgstr "Raspored"
+
+msgid "Can't switch channel!"
+msgstr "Nemoguće prebaciti program!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Raspored - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr "Ovaj događaj - %s"
+
+msgid "This event - all channels"
+msgstr "Ovaj događaj - svi kanali"
+
+msgid "All events - all channels"
+msgstr "Svi događaji - svi kanali"
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "Molim unesite %d znamenki!"
+
+msgid "Recording info"
+msgstr "Detalji snimanja"
+
+msgid "Button$Play"
+msgstr "Start"
+
+msgid "Button$Rewind"
+msgstr "Na početak"
+
+msgid "Scale Picture"
+msgstr ""
+
+msgid "Recordings"
+msgstr "Snimke"
+
+msgid "Button$Open"
+msgstr "Otvori"
+
+msgid "Commands"
+msgstr "Naredbe"
+
+msgid "Error while accessing recording!"
+msgstr "Greška pri pristupanju snimke!"
+
+msgid "Delete recording?"
+msgstr "Obrisati snimku?"
+
+msgid "Error while deleting recording!"
+msgstr "Greška pri brisanju snimke!"
+
+msgid "Recording commands"
+msgstr "Naredbe za snimanje"
+
+#, fuzzy
+msgid "OSD & Language"
+msgstr "Jezik"
+
+msgid "never"
+msgstr "nikada"
+
+msgid "skin dependent"
+msgstr "ovisno o površini"
+
+msgid "always"
+msgstr "uvijek"
+
+msgid "User defined"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "FontSize$Normal"
+msgstr ""
+
+msgid "Setup.OSD$Language"
+msgstr "Jezik"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "Prikaži titlove"
+
+#, fuzzy
+msgid "Setup.OSD$OSD color"
+msgstr "Površina"
+
+#, fuzzy
+msgid "Setup.OSD$OSD Font Size"
+msgstr "Maleni font"
+
+#, fuzzy
+msgid "Setup.OSD$OSD font size (pixel)"
+msgstr "Veličina malenog fonta (piksel)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Koristi mala slova"
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Listaj po stranicama"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "S kraja skoči na početak"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "Vrijeme prikaza informacije o programu (s)"
+
+#, fuzzy
+msgid "Setup.OSD$Show expert menu options"
+msgstr "Koristi mala slova"
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr "Tema"
+
+#, fuzzy
+msgid "channelinfo"
+msgstr "Program"
+
+#, fuzzy
+msgid "Standard"
+msgstr "Nedjelja"
+
+#, fuzzy
+msgid "Setup.OSD$  Program +/- keys"
+msgstr "Vrijeme prikaza informacije o programu (s)"
+
+#, fuzzy
+msgid "Channell./Bouquets"
+msgstr "Programi"
+
+msgid "Expertmenu"
+msgstr ""
+
+msgid "OSD - Expertmenu"
+msgstr ""
+
+msgid "Setup.OSD$Skin"
+msgstr "Površina"
+
+#, fuzzy
+msgid "Setup.OSD$OSD font name"
+msgstr "Maleni font"
+
+#, fuzzy
+msgid "Setup.OSD$Small font name"
+msgstr "Maleni font"
+
+#, fuzzy
+msgid "Setup.OSD$Fixed font name"
+msgstr "Nepromjenjiv font"
+
+msgid "Setup.OSD$Small font size (pixel)"
+msgstr "Veličina malenog fonta (piksel)"
+
+msgid "Setup.OSD$Fixed font size (pixel)"
+msgstr "Veličina nepromjenjivog fonta (piksel)"
+
+msgid "Setup.OSD$Left"
+msgstr "Lijevo"
+
+msgid "Setup.OSD$Top"
+msgstr "Gore"
+
+msgid "Setup.OSD$Width"
+msgstr "Širina"
+
+msgid "Setup.OSD$Height"
+msgstr "Visina"
+
+#, fuzzy
+msgid "Setup.OSD$Random menu placement"
+msgstr "Gore"
+
+#, fuzzy
+msgid "Setup.OSD$Optional languages"
+msgstr "Audio jezici"
+
+#, fuzzy
+msgid "Setup.OSD$ Optional language"
+msgstr "Jezik"
+
+msgid "EPG"
+msgstr "EPG (elektronski programski vodič)"
+
+msgid "Button$Scan"
+msgstr "Pretraži"
+
+#, fuzzy
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "Jezici titla"
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "Jezik titla"
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "Pomak titla"
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "Transparentnost titla"
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "Transparentnost pozadine titla"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Koristi Dolby Digital"
+
+msgid " Delay ac3 (10ms)"
+msgstr ""
+
+msgid " Prefer ac3 over HDMI"
+msgstr ""
+
+msgid "Delay Stereo (10ms)"
+msgstr ""
+
+msgid "Dish settings"
+msgstr ""
+
+msgid "DiSEqC disabled"
+msgstr ""
+
+msgid "Different Setups"
+msgstr ""
+
+#, fuzzy
+msgid "Tuner"
+msgstr "nikada"
+
+msgid "DiSEqC Type"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "   LNB Type"
+msgstr ""
+
+msgid "Delay (ms)"
+msgstr ""
+
+msgid "Number of LNBs"
+msgstr ""
+
+#, fuzzy
+msgid "Repeat"
+msgstr "Reprodukcija"
+
+msgid "Rotor on tuner"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Expert"
+msgstr ""
+
+msgid "Rotor Settings"
+msgstr ""
+
+msgid "Sat positions must be unique!"
+msgstr ""
+
+msgid "Overwrite DiSEqC.conf?"
+msgstr ""
+
+#, fuzzy
+msgid "Changes done"
+msgstr "Program"
+
+msgid "Init"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "--OFF--"
+msgstr ""
+
+msgid "Common Interface"
+msgstr ""
+
+#, fuzzy
+msgid "Reset"
+msgstr "Restart sistema"
+
+#, fuzzy
+msgid "On/Off"
+msgstr "De/Aktiviraj"
+
+msgid "Opening CAM menu..."
+msgstr "Otvaram CAM izbornik..."
+
+msgid "Can't open CAM menu!"
+msgstr "Otvaranje CAM izbornika neuspješno!"
+
+#, fuzzy
+msgid "Resetting CAM..."
+msgstr "Otvaram CAM izbornik..."
+
+#, fuzzy
+msgid "CAM has been reset"
+msgstr "Ponovno pokreni CAM"
+
+msgid "Can't reset CAM!"
+msgstr "Ponovno pokretanje CAM-a neuspješno!"
+
+msgid "Recording"
+msgstr "Snimanje"
+
+#, fuzzy
+msgid "Setup.Recording$Timer Buffer at Start (min)"
+msgstr "Rezerva na početku snimanja (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Timer Buffer at End (min)"
+msgstr "Rezerva na kraju (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Default Priority"
+msgstr "Zadani prioritet"
+
+#, fuzzy
+msgid "Setup.Recording$Default Recording Lifetime"
+msgstr "Zadano trajanje (d)"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "Koristi VPS"
+
+#, fuzzy
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr "Označi direktno snimanje"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr "Trajanje direktnog snimanja (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr "Označi direktno snimanje"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr "Označi direktno snimanje"
+
+#, fuzzy
+msgid "Setup.Recording$Mark Blocks after Recording"
+msgstr "Označi direktno snimanje"
+
+msgid "Replay"
+msgstr "Reprodukcija"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Višestruke brzine prikaza"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Prikaži način prikazivanja"
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "intelligent"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr "ID nastavka"
+
+#, fuzzy
+msgid "Setup.Replay$Resume play after jump"
+msgstr "ID nastavka"
+
+msgid "off"
+msgstr "isključi"
+
+msgid "update"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "at the end"
+msgstr ""
+
+msgid "to bouquets"
+msgstr ""
+
+msgid "Background Services"
+msgstr ""
+
+msgid "Request"
+msgstr ""
+
+#, fuzzy
+msgid "Standby"
+msgstr "Nedjelja"
+
+msgid "Power off"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Scan EPG"
+msgstr "Pretraži"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "Zap istječe (s)"
+
+#, fuzzy
+msgid "Setup.DVB$Autom. update channels"
+msgstr "Aktualiziraj programe"
+
+msgid "  Update mode"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "Početni kanal"
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "kao prethodno"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Initial volume (%)"
+msgstr "Početna jačina zvuka"
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Vrijeme do EPG pregleda (h)"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr "Zap istječe (s)"
+
+msgid "Permanent Timeshift"
+msgstr ""
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr ""
+
+#, fuzzy
+msgid "Info:"
+msgstr "Info"
+
+msgid "Permanent Timeshift has been disabled."
+msgstr ""
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+#, fuzzy
+msgid "System Settings"
+msgstr "hrv"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Ovaj dodatak nema parametara!"
+
+msgid "Title$Setup"
+msgstr "Postavke"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "OSD"
+msgstr "OSD"
+
+msgid "DVB"
+msgstr "DVB"
+
+#, fuzzy
+msgid "CICAM"
+msgstr "CAM"
+
+#, fuzzy
+msgid "Recording settings"
+msgstr "Detalji snimanja"
+
+msgid "Replay settings"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr "Raznovrsno"
+
+msgid "Plugins"
+msgstr "Dodaci"
+
+msgid "Restart"
+msgstr "Restart sistema"
+
+msgid "Really restart?"
+msgstr "Zaista ponovo pokrenuti?"
+
+msgid "Recording - restart anyway?"
+msgstr "Snimanje je u tijeku - ponovno pokreni unatoč?"
+
+msgid "restart anyway?"
+msgstr "ponovno pokreni unatoč?"
+
+msgid " Stop recording "
+msgstr " Prekini snimanje "
+
+#, fuzzy
+msgid "Channel list"
+msgstr "Programi"
+
+#, fuzzy
+msgid "Title$Menu"
+msgstr "Izbornik"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "free"
+msgstr "slobodno"
+
+#, fuzzy
+msgid "Title$Main Menu"
+msgstr "Izbornik"
+
+msgid " Stop replaying"
+msgstr " Prekini reprodukciju"
+
+#, fuzzy
+msgid "Button$Recordings"
+msgstr "Snimi"
+
+#, fuzzy
+msgid "Button$Multifeed"
+msgstr "Obriši"
+
+msgid " Cancel editing"
+msgstr " Prekini uređivanje"
+
+msgid "Stop recording?"
+msgstr "Zaustaviti snimanje?"
+
+msgid "Cancel editing?"
+msgstr "Otkazati uređivanje?"
+
+msgid "Button$Audio"
+msgstr "Audio"
+
+msgid "No audio available!"
+msgstr "Audio nedostupan"
+
+msgid "No subtitles"
+msgstr "Bez titlova"
+
+msgid "Button$Subtitles"
+msgstr "Titlovi"
+
+msgid "No subtitles available!"
+msgstr "Titlovi nisu dostupni!"
+
+msgid "Not enough disk space to start recording!"
+msgstr "Nema dovoljno praznog prostora za snimanje!"
+
+msgid "recording already running - Start another?"
+msgstr ""
+
+#, fuzzy
+msgid "A recording is already active!"
+msgstr "Uređivanje je već u tijeku!!"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "Nema slobodnog DVB uređaja za snimanje!"
+
+msgid "Pausing live video..."
+msgstr "Zaustavljanje izravnog prijenosa..."
+
+msgid "Jump: "
+msgstr "Skoči: "
+
+msgid "No editing marks defined!"
+msgstr "Nijedna točka rezanja nije određena!"
+
+msgid "Can't start editing process!"
+msgstr "Ne mogu započeti uređivanje!"
+
+msgid "Editing process started"
+msgstr "Uređivanje započelo"
+
+msgid "Editing process already active!"
+msgstr "Uređivanje je već u tijeku!!"
+
+msgid "Power Off ReelBox"
+msgstr ""
+
+#, fuzzy
+msgid "Recording - Activating QuickStandby"
+msgstr "Snimanje je u tijeku - ponovno pokreni unatoč?"
+
+msgid "Activating QuickStandby"
+msgstr ""
+
+#, fuzzy
+msgid "Running Process - Activating QuickStandby"
+msgstr "Snimanje je u tijeku - ponovno pokreni unatoč?"
+
+#, fuzzy
+msgid "Quick Standby"
+msgstr "Nedjelja"
+
+msgid "Reboot"
+msgstr ""
+
+#, fuzzy
+msgid "Set Sleeptimer"
+msgstr "Tajmeri"
+
+msgid "Pause Live-TV"
+msgstr ""
+
+msgid "Activating standby"
+msgstr ""
+
+msgid "Activating deep standby"
+msgstr ""
+
+#, fuzzy
+msgid "Activating quick standby"
+msgstr "Snimanje je u tijeku - ponovno pokreni unatoč?"
+
+msgid "Activating reboot"
+msgstr ""
+
+msgid "Recording - shut down anyway?"
+msgstr "Snimanje traje - isključiti unatoč?"
+
+#, fuzzy
+msgid "A recording starts soon, shut down anyway?"
+msgstr "Snimanje traje - isključiti unatoč?"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " abcčćdđefghijklmnopqrsštuvwxyzž0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabcčć2\tdđef3\tghi4\tjkl5\tmno6\tpqrsš7\ttuv8\twxyzž9"
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc"
+
+msgid "Button$Overwrite"
+msgstr "Prepiši"
+
+msgid "Please select"
+msgstr ""
+
+msgid "Main Menu"
+msgstr ""
+
+msgid "Channel locked (recording)!"
+msgstr "Program zaključan (snimanje)!"
+
+msgid "can't record - check your configuration"
+msgstr ""
+
+msgid "Low disk space!"
+msgstr "Malo prostora na disku!"
+
+msgid "Recording-file already exists!"
+msgstr ""
+
+#, fuzzy
+msgid "Teletext not available!"
+msgstr "Program nije dostupan!"
+
+#, fuzzy
+msgid "PiP not available!"
+msgstr "Program nije dostupan!"
+
+msgid "Volume "
+msgstr "Glasnoća "
+
+msgid "Classic VDR"
+msgstr "Klasični VDR"
+
+msgid "ST:TNG Panels"
+msgstr "ST:TNG Panele"
+
+msgid "MTWTFSS"
+msgstr "PUSČPSN"
+
+#, fuzzy
+msgid "Database not available!"
+msgstr "Program nije dostupan!"
+
+msgid "MonTueWedThuFriSatSun"
+msgstr "PonUtoSriČetPetSubNed"
+
+msgid "Monday"
+msgstr "Ponedjeljak"
+
+msgid "Tuesday"
+msgstr "Utorak"
+
+msgid "Wednesday"
+msgstr "Srijeda"
+
+msgid "Thursday"
+msgstr "Četvrtak"
+
+msgid "Friday"
+msgstr "Petak"
+
+msgid "Saturday"
+msgstr "Subota"
+
+msgid "Sunday"
+msgstr "Nedjelja"
+
+msgid "ejecting media"
+msgstr ""
+
+#, fuzzy
+msgid "Upcoming VPS recording!"
+msgstr "Obnovljena snimka!"
+
+#, fuzzy
+msgid "Timeshift is not available!"
+msgstr "Titlovi nisu dostupni!"
+
+#, fuzzy
+msgid "No free tuner to record!"
+msgstr "Nema slobodnog DVB uređaja za snimanje!"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Gašenje nemoguće - nedostaje opcija '-s'!"
+
+msgid "Switching primary DVB..."
+msgstr "Prebacivanje primarnog DVB uređaja..."
+
+#, fuzzy
+msgid "End recording"
+msgstr "Snimanje"
+
+msgid "Editing process failed!"
+msgstr "Rezanje neuspješno!"
+
+msgid "Editing process finished"
+msgstr "Rezanje završeno"
+
+msgid "Switching to server-mode"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Back"
+#~ msgstr "Nazad"
+
+#, fuzzy
+#~ msgid "Next"
+#~ msgstr "Sljedeće"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Nedjelja"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Skin color"
+#~ msgstr "Površina"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Ok shows"
+#~ msgstr "Gore"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Channel +/- keys"
+#~ msgstr "Vrijeme prikaza informacije o programu (s)"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Switch Channels in EPG"
+#~ msgstr "Vrijeme prikaza informacije o programu (s)"
+
+#~ msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+#~ msgstr "Minimalno vrijeme neaktivnosti (min)"
+
+#, fuzzy
+#~ msgid "An instant recording is already runnig!"
+#~ msgstr "Uređivanje je već u tijeku!!"
+
+#, fuzzy
+#~ msgid "Select bouquet with OK"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "Channels sucessfully moved"
+#~ msgstr "Programi"
+
+#, fuzzy
+#~ msgid "Only video channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "Only non decrypted channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "Only non decrypted video channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "Only decrypted radio channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "non encrypted radio channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "encrypted video channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "non encrypted video channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "video channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "Only non encrypted channels"
+#~ msgstr "Obrisati program?"
+
+#, fuzzy
+#~ msgid "Only non encrypted TV channels"
+#~ msgstr "Obrisati program?"
+
+#~ msgid "shut down anyway?"
+#~ msgstr "svejedno isključiti?"
+
+#~ msgid "Recording in %ld minutes, shut down anyway?"
+#~ msgstr "Snimanje za %ld minuta - isključiti unatoč?"
+
+#~ msgid "Setup.OSD$Theme"
+#~ msgstr "Tema"
+
+#~ msgid "Setup.OSD$Anti-alias"
+#~ msgstr "Anti-alias"
+
+#~ msgid "Setup.Miscellaneous$Min. event timeout (min)"
+#~ msgstr "Minimalno vrijeme pauze"
+
+#~ msgid "Setup.Recording$Split edited files"
+#~ msgstr "Podijeli uređene datoteke"
+
+#~ msgid "Dpid1"
+#~ msgstr "Dpid1"
+
+#~ msgid "Dpid2"
+#~ msgstr "Dpid2"
+
+#~ msgid "Spid1"
+#~ msgstr "Spid1"
+
+#~ msgid "Spid2"
+#~ msgstr "Spid2"
+
+#~ msgid "CA"
+#~ msgstr "Kodiranje (CA)"
+
+#~ msgid "Inversion"
+#~ msgstr "Inverzija"
+
+#~ msgid "CAM not responding!"
+#~ msgstr "CAM ne odgovara!"
+
+#~ msgid "Setup.OSD$Message time (s)"
+#~ msgstr "Vrijeme prikaza poruka (s)"
+
+#~ msgid "Setup.OSD$Default font"
+#~ msgstr "Zadani font"
+
+#~ msgid "Setup.OSD$Default font size (pixel)"
+#~ msgstr "Veličina zadanog fonta (piksel)"
+
+#~ msgid "bottom"
+#~ msgstr "dno"
+
+#~ msgid "top"
+#~ msgstr "vrh"
+
+#~ msgid "Setup.OSD$Info on channel switch"
+#~ msgstr "Informacije kod promjene kanala"
+
+#~ msgid "Setup.OSD$Timeout requested channel info"
+#~ msgstr "Trenutak prikaza informacije o kanalu"
+
+#~ msgid "Setup.OSD$Menu key closes"
+#~ msgstr "Tipka Izbornik zatvara"
+
+#~ msgid "Setup.OSD$Recording directories"
+#~ msgstr "Imenik za snimke"
+
+#~ msgid "Setup.EPG$EPG bugfix level"
+#~ msgstr "Razina popravka EPG grešaka"
+
+#~ msgid "Setup.EPG$EPG linger time (min)"
+#~ msgstr "Vrijeme EPG zadržavanja (min)"
+
+#~ msgid "Setup.EPG$Set system time"
+#~ msgstr "Podesi sistemsko vrijeme"
+
+#~ msgid "Setup.EPG$Use time from transponder"
+#~ msgstr "Koristi vrijeme sa transpondera"
+
+#~ msgid "Setup.EPG$Preferred languages"
+#~ msgstr "Preferirani jezici"
+
+#~ msgid "Setup.EPG$Preferred language"
+#~ msgstr "Preferirani jezik"
+
+#~ msgid "pan&scan"
+#~ msgstr "proširi I ispitaj"
+
+#~ msgid "letterbox"
+#~ msgstr "pravokutnik"
+
+#~ msgid "center cut out"
+#~ msgstr "izreži sredinu"
+
+#~ msgid "PIDs only"
+#~ msgstr "Samo PID-ovi"
+
+#~ msgid "names and PIDs"
+#~ msgstr "imena i identifikatori (PIDs)"
+
+#~ msgid "add new transponders"
+#~ msgstr "dodaj nove transpondere"
+
+#~ msgid "Setup.DVB$Primary DVB interface"
+#~ msgstr "Primarni DVB uređaj"
+
+#~ msgid "Setup.DVB$Video format"
+#~ msgstr "Video format"
+
+#~ msgid "Setup.DVB$Video display format"
+#~ msgstr "Format video prikaza"
+
+#~ msgid "Setup.DVB$Audio language"
+#~ msgstr "Audio jezik"
+
+#~ msgid "Setup.LNB$Use DiSEqC"
+#~ msgstr "Koristi DiSEqC"
+
+#~ msgid "Setup.LNB$SLOF (MHz)"
+#~ msgstr "Frekv. preklopa SLOF (MHz)"
+
+#~ msgid "Setup.LNB$Low LNB frequency (MHz)"
+#~ msgstr "Donja LNB frekv. (MHz)"
+
+#~ msgid "Setup.LNB$High LNB frequency (MHz)"
+#~ msgstr "Gornja LNB frekv. (MHz)"
+
+#~ msgid "CAM present"
+#~ msgstr "CAM prisutan"
+
+#~ msgid "CAM ready"
+#~ msgstr "CAM spreman"
+
+#~ msgid "Button$Menu"
+#~ msgstr "Izbornik"
+
+#~ msgid "Button$Reset"
+#~ msgstr "Ponovno pokreni"
+
+#~ msgid "CAM is in use - really reset?"
+#~ msgstr "CAM se koristi - ponovno pokrenuti unatoč?"
+
+#~ msgid "Setup.Recording$Primary limit"
+#~ msgstr "Standardno ograničenje"
+
+#~ msgid "Setup.Recording$Pause priority"
+#~ msgstr "Prioritet pauze"
+
+#~ msgid "Setup.Recording$Pause lifetime (d)"
+#~ msgstr "Trajanje pauze (d)"
+
+#~ msgid "Setup.Recording$Use episode name"
+#~ msgstr "Koristi ime epizode"
+
+#~ msgid "Setup.Recording$VPS margin (s)"
+#~ msgstr "Vremenska rezerva kod VPS (s)"
+
+#~ msgid "Setup.Recording$Name instant recording"
+#~ msgstr "Imenuj direktno snimanje"
+
+#~ msgid "Setup.Recording$Max. video file size (MB)"
+#~ msgstr "Maksimalna veličina datoteke (MB)"
+
+#~ msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+#~ msgstr "SVDRP vrijeme neaktivnosti"
+
+#~ msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+#~ msgstr "Upis kanala istječe (ms)"
+
+#~ msgid "Schedule"
+#~ msgstr "Raspored"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"
+
+#~ msgid "Button$Stop"
+#~ msgstr "Stop"
+
+#~ msgid "Button$Resume"
+#~ msgstr "Nastavi"
+
+#~ msgid "Plugin"
+#~ msgstr "Dodatak"
+
+#~ msgid "Editing - shut down anyway?"
+#~ msgstr "Uređivanje u tijeku - isključiti unatoč?"
+
+#~ msgid "Plugin %s wakes up in %ld min, continue?"
+#~ msgstr "Dodatak %s se budi u %ld min, nastavi?"
+
+#~ msgid "Editing - restart anyway?"
+#~ msgstr "Uređivanje u tijeku - ponovno pokreni unatoč?"
+
+#~ msgid "VDR will shut down later - press Power to force"
+#~ msgstr "VDR će se isključiti kasnije - pritisnite Power za prisilno isključenje"
+
+#~ msgid "Press any key to cancel shutdown"
+#~ msgstr "Pritisnite tipku za prekid isključivanja"
+
+#~ msgid "Press any key to cancel restart"
+#~ msgstr "Pritisnite jednu tipku za poništenje ponovnog podizanja"
+
+#~ msgid "VDR will shut down in %s minutes"
+#~ msgstr "VDR će se isključiti za %s minuta"

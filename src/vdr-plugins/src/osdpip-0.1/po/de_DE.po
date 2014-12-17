@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-osdpip 0.1\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-04-04 15:47+0200\n"
+"PO-Revision-Date: 2008-12-17 15:45+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Cannot swap HD/radio channels"
+msgstr "Funktion nicht möglich"
+
+msgid "Cannot swap this channel"
+msgstr "Funktion nicht möglich"
+
+msgid "Pip channel not available!"
+msgstr "Kanal nicht verfügbar für PiP"
+
+msgid "Cannot show HD/radio channels in PiP"
+msgstr "Kann HD/radio-Kanal nicht als PiP anzeigen"
+
+msgid "Cannot show this channel in PiP"
+msgstr "Kann diesen Kanal nicht als PiP anzeigen"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Ungültiger Kanal ***"
+
+msgid "Picture-in-Picture"
+msgstr "Bild-in-Bild"
+
+msgid "channel only"
+msgstr "nur Kanal"
+
+msgid "simple"
+msgstr "einfach"
+
+msgid "complete"
+msgstr "vollständig"
+
+msgid "top left"
+msgstr "oben links"
+
+msgid "top right"
+msgstr "oben rechts"
+
+msgid "bottom left"
+msgstr "unten links"
+
+msgid "bottom right"
+msgstr "unten rechts"
+
+msgid "Show info window"
+msgstr "Info-Fenster anzeigen"
+
+msgid "Pip position"
+msgstr "Position PiP-Fenster"
+
+#~ msgid "no"
+#~ msgstr "nein"
+
+#~ msgid "Normal mode"
+#~ msgstr "Normaler Modus"
+
+#~ msgid "Move mode"
+#~ msgstr "Verschiebe-Modus"
+
+#~ msgid "Info window position"
+#~ msgstr "Position Info-Fenster"

@@ -1,0 +1,98 @@
+diff -Nur vdr-1.3.34-pl13/vdr.c vdr-1.3.34/vdr.c
+--- vdr-1.3.34-pl13/vdr.c	2005-10-05 13:57:19.000000000 +0200
++++ vdr-1.3.34/vdr.c	2005-10-05 13:59:25.000000000 +0200
+@@ -121,6 +121,8 @@
+   int WatchdogTimeout = DEFAULTWATCHDOG;
+   const char *Terminal = NULL;
+   const char *Shutdown = NULL;
++  bool TimerWakeup = false; 
++  bool AutoShutdown = false;
+ 
+   bool UseKbd = true;
+   const char *LircDevice = NULL;
+@@ -159,6 +161,7 @@
+       { "record",   required_argument, NULL, 'r' },
+       { "shutdown", required_argument, NULL, 's' },
+       { "terminal", required_argument, NULL, 't' },
++      { "timerwakeup", no_argument,    NULL, 'T' },
+       { "version",  no_argument,       NULL, 'V' },
+       { "vfat",     no_argument,       NULL, 'v' | 0x100 },
+       { "video",    required_argument, NULL, 'v' },
+@@ -167,7 +170,7 @@
+     };
+ 
+   int c;
+-  while ((c = getopt_long(argc, argv, "a:c:dD:E:hk:l:L:mp:P:r:s:t:v:Vw:", long_options, NULL)) != -1) {
++  while ((c = getopt_long(argc, argv, "a:c:dD:E:hk:l:L:mp:P:r:s:t:Tv:Vw:", long_options, NULL)) != -1) {
+         switch (c) {
+           case 'a': AudioCommand = optarg;
+                     break;
+@@ -253,6 +256,8 @@
+                        return 2;
+                        }
+                     break;
++          case 'T': TimerWakeup = true;
++                    break;
+           case 'V': DisplayVersion = true;
+                     break;
+           case 'v' | 0x100:
+@@ -424,6 +429,7 @@
+   int LastTimerChannel = -1;
+   int PreviousChannel[2] = { 1, 1 };
+   int PreviousChannelIndex = 0;
++  time_t vdrStartTime = time(NULL);
+   time_t LastChannelChanged = time(NULL);
+   time_t LastActivity = 0;
+   time_t LastCamMenu = 0;
+@@ -668,6 +674,14 @@
+         if (time(NULL) - LastChannelChanged >= Setup.ZapTimeout && LastChannel != PreviousChannel[0] && LastChannel != PreviousChannel[1])
+            PreviousChannel[PreviousChannelIndex ^= 1] = LastChannel;
+         // Timers and Recordings:
++        if (TimerWakeup && Shutdown && time(NULL) - vdrStartTime > SHUTDOWNWAIT) { 
++           if (LastActivity == 0) {
++               LastActivity = 1;
++               AutoShutdown = true;
++           }
++           else if (LastActivity != 1)
++               AutoShutdown = false;
++           }
+         if (!Timers.BeingEdited()) {
+            // Delete expired timers:
+            Timers.DeleteExpired();
+@@ -985,7 +999,7 @@
+                  Skins.Message(mtInfo, tr("Editing process finished"));
+               }
+            }
+-        if (!Interact && ((!cRecordControls::Active() && !cCutter::Active() && (!Interface->HasSVDRPConnection() || UserShutdown)) || ForceShutdown)) {
++        if (!Interact && ((!cRecordControls::Active() && !cCutter::Active() && (!Interface->HasSVDRPConnection() || UserShutdown || AutoShutdown)) || ForceShutdown)) {
+            time_t Now = time(NULL);
+            if (Now - LastActivity > ACTIVITYTIMEOUT) {
+               // Shutdown:
+@@ -1003,7 +1017,7 @@
+                     else
+                        LastActivity = 1;
+                     }
+-                 if (UserShutdown && Next && Delta <= Setup.MinEventTimeout * 60 && !ForceShutdown) {
++                 if (UserShutdown && Next && Delta <= Setup.MinEventTimeout * 60 && !ForceShutdown && !AutoShutdown) {
+                     char *buf;
+                     asprintf(&buf, tr("Recording in %d minutes, shut down anyway?"), Delta / 60);
+                     if (Interface->Confirm(buf))
+@@ -1012,8 +1026,9 @@
+                        UserShutdown = false;
+                     free(buf);
+                     }
+-                 if (!Next || Delta > Setup.MinEventTimeout * 60 || ForceShutdown) {
++                 if (!Next || Delta > Setup.MinEventTimeout * 60 || ForceShutdown || (AutoShutdown && Delta > Setup.MinEventTimeout * 60)) {
+                     ForceShutdown = false;
++                    AutoShutdown = false;
+                     if (timer)
+                        dsyslog("next timer event at %s", *TimeToString(Next));
+                     if (WatchdogTimeout > 0)
+@@ -1028,6 +1043,7 @@
+                        isyslog("executing '%s'", cmd);
+                        SystemExec(cmd);
+                        free(cmd);
++                       Interrupted=1; // GA
+                        }
+                     else if (WatchdogTimeout > 0) {
+                        alarm(WatchdogTimeout);

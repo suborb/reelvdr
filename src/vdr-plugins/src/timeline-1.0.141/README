@@ -1,0 +1,78 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Jürgen Schmitz <js@js-home.org>
+
+Project's homepage:          http://www.js-home.org/vdr
+
+Latest version available at: http://www.js-home.org/vdr
+
+See the file COPYING for license information.
+
+Description:
+
+Shows a timeline of all programmed timers per day and informs
+you of timer conflicts:
+
+- record transmissions at the same time
+
+and
+
+- transmissions are on different channels (on different frequencies)
+
+and
+
+- there are not enough input devices
+
+Here is an example:
+
+You want to record something on ARD at 18:30 (til 20:00) and on ZDF at 19:00.
+If you only have one DVB card this will result in a conflict because ARD
+and ZDF use different cable frequencies. But if you record something
+from the same frequencies or have more than one DVB card there is no
+conflict.
+
+Usage:
+
+Add the plugin with "-Ptimeline" when starting VDR and go to "Timeline"
+in the main menu of VDR.
+
+Use the cursor left and right keys to scroll the timeline to different
+days, use cursor up down to scroll the conflict list (if there is one).
+
+The number keys show the numbered timers (yellow bars) in detail below
+the timeline.
+
+The timeline starts on the first day with a timer set.
+
+If repeating timers conflict with other repeating timers an extra message
+is shows.
+
+Options:
+
+ignore primary interface - if set to "yes" priority of primary dvb device
+                           is ignored
+
+Requirements:
+
+ElchiAIO patches (or similar) with a small OSD font (fontOsd2) must be
+installed on vdr 1.2.
+
+Optional: TV-OnScreen plugin
+
+
+Warning:
+
+Do not modify the timers when timeline plugins is running (eg. with vdradmin).
+Timeline won't see this and handle with wrong pointers, so first leave
+timeline plugin.
+
+
+TODO:
+
+Wait for no bug reports and go to version 1.0.
+
+
+Thanks:
+
+to Sascha Volkenandt for vdr 1.3 patches
+to Emil Näpflein for idea of primary interface support

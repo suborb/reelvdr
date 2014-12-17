@@ -1,0 +1,2171 @@
+# VDR language source file.
+# Copyright (C) 2013 Klaus Schmidinger <vdr@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003, 2005
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Carel Willemse <carel@nekanali.nl>, 2008, 2013
+# Johan Schuring <johan.schuring@vetteblei.nl>, 2008
+# Cedric Dewijs <cedric.dewijs@telfort.nl>, 2013
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 2.0.0\n"
+"Report-Msgid-Bugs-To: <vdr-bugs@tvdr.de>\n"
+"POT-Creation-Date: 2013-05-11 15:59+0200\n"
+"PO-Revision-Date: 2008-02-26 17:20+0100\n"
+"Last-Translator: Cedric Dewijs <cedric.dewijs@telfort.nl>\n"
+"Language-Team: Dutch <vdr@linuxtv.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Ongeldig kanaal ***"
+
+msgid "File already exists - overwrite?"
+msgstr ""
+
+msgid "Channel not available!"
+msgstr "Kanaal niet beschikbaar"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Kan Transfer-Mode niet starten"
+
+msgid "off"
+msgstr "uit"
+
+msgid "on"
+msgstr "aan"
+
+msgid "auto"
+msgstr "auto"
+
+msgid "none"
+msgstr "geen"
+
+msgid "Polarization"
+msgstr "Polarisatie"
+
+msgid "System"
+msgstr "Systeem"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "Inversion"
+msgstr "Inversion"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "CoderateL"
+msgstr "CoderateL"
+
+msgid "Modulation"
+msgstr "Modulatie"
+
+msgid "Bandwidth"
+msgstr "Bandbreedte"
+
+msgid "Transmission"
+msgstr "Transmissie"
+
+msgid "Guard"
+msgstr "Guard"
+
+msgid "Hierarchy"
+msgstr "Hierarchie"
+
+msgid "Rolloff"
+msgstr "Rolloff"
+
+msgid "StreamId"
+msgstr "StreamId"
+
+msgid "Starting EPG scan"
+msgstr "Bezig met starten EPG scan"
+
+msgid "Content$Movie/Drama"
+msgstr "Film/Drama"
+
+msgid "Content$Detective/Thriller"
+msgstr "Detective/Thriller"
+
+msgid "Content$Adventure/Western/War"
+msgstr "Avontuur/Western/Oorlog"
+
+msgid "Content$Science Fiction/Fantasy/Horror"
+msgstr "Science Fiction/Fantasie/Horror"
+
+msgid "Content$Comedy"
+msgstr "Comedie"
+
+msgid "Content$Soap/Melodrama/Folkloric"
+msgstr "Soap/Melodrama/Folklore"
+
+msgid "Content$Romance"
+msgstr "Romantisch"
+
+msgid "Content$Serious/Classical/Religious/Historical Movie/Drama"
+msgstr "Verdieping/Klassiek/Religieus/Historische film/Drama"
+
+msgid "Content$Adult Movie/Drama"
+msgstr "Volwassenen/Drama"
+
+msgid "Content$News/Current Affairs"
+msgstr "Nieuws/Laatste nieuws"
+
+msgid "Content$News/Weather Report"
+msgstr "Nieuws/Weersverwachting"
+
+msgid "Content$News Magazine"
+msgstr "Nieuwsbulletin"
+
+msgid "Content$Documentary"
+msgstr "Documentaire"
+
+msgid "Content$Discussion/Inverview/Debate"
+msgstr "Discussie/Interview/Debat"
+
+msgid "Content$Show/Game Show"
+msgstr "Show/Gameshow"
+
+msgid "Content$Game Show/Quiz/Contest"
+msgstr "Gameshow/Quiz/Wedstrijd"
+
+msgid "Content$Variety Show"
+msgstr "Variëteitenprogramma"
+
+msgid "Content$Talk Show"
+msgstr "Praatprogramma"
+
+msgid "Content$Sports"
+msgstr "Sportprogramma"
+
+msgid "Content$Special Event"
+msgstr "Speciale uitzending"
+
+msgid "Content$Sport Magazine"
+msgstr "Sportmagazine"
+
+msgid "Content$Football/Soccer"
+msgstr "Voetbal/Soccer"
+
+msgid "Content$Tennis/Squash"
+msgstr "Tennis/Squash"
+
+msgid "Content$Team Sports"
+msgstr "Teamsporten"
+
+msgid "Content$Athletics"
+msgstr "Athletiek"
+
+msgid "Content$Motor Sport"
+msgstr "Motorsport"
+
+msgid "Content$Water Sport"
+msgstr "Watersport"
+
+msgid "Content$Winter Sports"
+msgstr "Wintersport"
+
+msgid "Content$Equestrian"
+msgstr "Equestrian"
+
+msgid "Content$Martial Sports"
+msgstr "Vechtsport"
+
+msgid "Content$Children's/Youth Programme"
+msgstr "Kinderprogramma/Jongerenprogramma"
+
+msgid "Content$Pre-school Children's Programme"
+msgstr "Kleuter TV"
+
+msgid "Content$Entertainment Programme for 6 to 14"
+msgstr "Kinderprogramma voor 6 tot 14 jarigen"
+
+msgid "Content$Entertainment Programme for 10 to 16"
+msgstr "Kinderprogramma voor 10 tot 16 jarigen"
+
+msgid "Content$Informational/Educational/School Programme"
+msgstr "School TV"
+
+msgid "Content$Cartoons/Puppets"
+msgstr "Cartoons/Tekenfilms"
+
+msgid "Content$Music/Ballet/Dance"
+msgstr "Muziek/Ballet/Dans"
+
+msgid "Content$Rock/Pop"
+msgstr "Rock/Pop"
+
+msgid "Content$Serious/Classical Music"
+msgstr "Serieuze muziek/Klassieke muziek"
+
+msgid "Content$Folk/Tradional Music"
+msgstr "Folk/Traditionele muziek"
+
+msgid "Content$Jazz"
+msgstr "Jazz"
+
+msgid "Content$Musical/Opera"
+msgstr "Musical/Opera"
+
+msgid "Content$Ballet"
+msgstr "Ballet"
+
+msgid "Content$Arts/Culture"
+msgstr "Kunst/Cultuur"
+
+msgid "Content$Performing Arts"
+msgstr "Toneel"
+
+msgid "Content$Fine Arts"
+msgstr "Kleinkunst"
+
+msgid "Content$Religion"
+msgstr "Religie"
+
+msgid "Content$Popular Culture/Traditional Arts"
+msgstr "Populaire cultuur/Traditionele kunst"
+
+msgid "Content$Literature"
+msgstr "Literatuur"
+
+msgid "Content$Film/Cinema"
+msgstr "Film/Bioscoop"
+
+msgid "Content$Experimental Film/Video"
+msgstr "Experimentele film/Video"
+
+msgid "Content$Broadcasting/Press"
+msgstr "Nieuwsfeed/Pers"
+
+msgid "Content$New Media"
+msgstr "Nieuwe media"
+
+msgid "Content$Arts/Culture Magazine"
+msgstr "Kunst/Cultureel magazine"
+
+msgid "Content$Fashion"
+msgstr "Mode"
+
+msgid "Content$Social/Political/Economics"
+msgstr "Sociaal/Politiek/Economie"
+
+msgid "Content$Magazine/Report/Documentary"
+msgstr "Magazine/Bericht/Documentaire"
+
+msgid "Content$Economics/Social Advisory"
+msgstr "Economie/Sociaal advies"
+
+msgid "Content$Remarkable People"
+msgstr "Bekende mensen"
+
+msgid "Content$Education/Science/Factual"
+msgstr "Onderwijs/Wetenschap/Faculteit"
+
+msgid "Content$Nature/Animals/Environment"
+msgstr "Natuur/Dierenrijk/Milieu"
+
+msgid "Content$Technology/Natural Sciences"
+msgstr "Technologie/Biologie"
+
+msgid "Content$Medicine/Physiology/Psychology"
+msgstr "Pharmacie/Physiologie/Psychologie"
+
+msgid "Content$Foreign Countries/Expeditions"
+msgstr "Buitenland/Expedities"
+
+msgid "Content$Social/Spiritual Sciences"
+msgstr "Sociale/Spiritualiteit"
+
+msgid "Content$Further Education"
+msgstr "Verdiepend onderwijs"
+
+msgid "Content$Languages"
+msgstr "Talen"
+
+msgid "Content$Leisure/Hobbies"
+msgstr "Vrije tijd/Hobbies"
+
+msgid "Content$Tourism/Travel"
+msgstr "Toerisme/Reizen"
+
+msgid "Content$Handicraft"
+msgstr "Handenarbeid"
+
+msgid "Content$Motoring"
+msgstr "Motoren"
+
+msgid "Content$Fitness & Health"
+msgstr "Fitness & Gezondheid"
+
+msgid "Content$Cooking"
+msgstr "Koken"
+
+msgid "Content$Advertisement/Shopping"
+msgstr "Reclame/Winkelen"
+
+msgid "Content$Gardening"
+msgstr "Tuinieren"
+
+msgid "Content$Original Language"
+msgstr "Oorspronkelijke taal"
+
+msgid "Content$Black & White"
+msgstr "Zwart-wit"
+
+msgid "Content$Unpublished"
+msgstr "Ongepubliceerd"
+
+msgid "Content$Live Broadcast"
+msgstr "Live uitzending"
+
+#, c-format
+msgid "ParentalRating$from %d"
+msgstr "from %d"
+
+msgid "No title"
+msgstr "Geen titel"
+
+msgid "Help"
+msgstr ""
+
+msgid "No help available"
+msgstr ""
+
+msgid "Already first help item"
+msgstr ""
+
+msgid "Already last help item"
+msgstr ""
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Nederlands"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "dut"
+
+#. TRANSLATORS:
+#. Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+msgid "Timer Manager"
+msgstr ""
+
+msgid "Search-Timer Manager"
+msgstr ""
+
+msgid "Parental Control"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "TV & Radio"
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr ""
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr ""
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr ""
+
+msgid "View, edit and manage recording timers"
+msgstr ""
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr ""
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "Music & Pictures"
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio"
+msgstr ""
+
+msgid "Play music, manage and copy music files"
+msgstr ""
+
+msgid "Play music and films from your collection"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr ""
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr ""
+
+msgid "Copy an Audio CD to the music library"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+#. TRANSLATORS:
+#. Tooltips Menu "Films & DVD"
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr ""
+
+msgid "Movie library, TV recordings"
+msgstr ""
+
+msgid "Watch movies, manage and copy movie files"
+msgstr ""
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr ""
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr ""
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr ""
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI epgsearch
+msgid "Button$Functions"
+msgstr ""
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr ""
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI extrecmenu
+msgid "Undelete Recordings"
+msgstr ""
+
+msgid "Recording commands"
+msgstr "Opname commando's"
+
+#. TRANSLATORS:
+#. PI undelete
+#. PI burn
+msgid "Write DVD - Job"
+msgstr ""
+
+msgid "Write DVD - Job options"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI dvdswitch
+msgid "New folder"
+msgstr "Nieuwe map"
+
+#. TRANSLATORS:
+#. Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr ""
+
+#. TRANSLATORS:
+#. Tooltips Menu "Internet & Extras"
+msgid "File Manager, Web browser, ReelBlog"
+msgstr ""
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr ""
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr ""
+
+msgid "Read news & information on the ReelBox"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI Filebrowser
+msgid "Filebrowser"
+msgstr ""
+
+msgid "Create directory"
+msgstr ""
+
+msgid "Playlist"
+msgstr ""
+
+msgid "Playlist actions"
+msgstr ""
+
+msgid "Playlist Commands"
+msgstr ""
+
+msgid "Filebrowser Commands"
+msgstr ""
+
+msgid "Copy playlist"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Additional Software"
+msgid "Additional Software"
+msgstr ""
+
+msgid "Magazine EPG"
+msgstr ""
+
+msgid "Additional software provided by third party developers"
+msgstr ""
+
+#. TRANSLATORS:
+#. More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr ""
+
+msgid "Show currently active background processes"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu Media Manager
+msgid "Format a DVD-RW"
+msgstr ""
+
+msgid "Directory browser"
+msgstr ""
+
+#. TRANSLATORS:
+#. Special Menus that have a banner at the left
+msgid "My Pictures"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "My DVDs"
+msgstr ""
+
+msgid "EPG Commands: "
+msgstr ""
+
+msgid "Search actions"
+msgstr ""
+
+msgid "Search entries"
+msgstr ""
+
+msgid "Search templates"
+msgstr ""
+
+msgid "Edit search"
+msgstr ""
+
+msgid "Edit timer"
+msgstr "Timer veranderen"
+
+msgid "Edit blacklist"
+msgstr ""
+
+msgid "Edit template"
+msgstr ""
+
+msgid "Edit user-defined days of week"
+msgstr ""
+
+msgid "found recordings"
+msgstr ""
+
+msgid "Select directory"
+msgstr ""
+
+msgid "Timer conflicts -"
+msgstr ""
+
+msgid "Title$Childlock"
+msgstr ""
+
+msgid "Games"
+msgstr ""
+
+msgid "Multifeed Options"
+msgstr ""
+
+msgid "Move recording"
+msgstr ""
+
+msgid "Select Reelblog item"
+msgstr ""
+
+msgid "SleepTimer"
+msgstr ""
+
+msgid "Rename entry"
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Choose action"
+msgstr ""
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid "Channel List:"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup Menus with "Setup"-banner on the left
+msgid "Title$Setup"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Settings: System Settings"
+msgstr ""
+
+msgid "Software Update"
+msgstr ""
+
+msgid "Channel Lists"
+msgstr ""
+
+msgid "Channel lists functions"
+msgstr ""
+
+msgid "Channelscan"
+msgstr ""
+
+msgid "Installation Wizard"
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+msgid "Remote Control / Automation"
+msgstr ""
+
+msgid "MultiRoom Setup"
+msgstr ""
+
+msgid "MultiRoom - Error!"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "EPG Services"
+msgstr ""
+
+msgid "Reception Settings"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "Global Settings"
+msgstr ""
+
+msgid "UMTS Settings"
+msgstr ""
+
+msgid "Dynamic DNS"
+msgstr ""
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr ""
+
+msgid "Windows Network Connection"
+msgstr ""
+
+msgid "NFS Client"
+msgstr ""
+
+msgid "Video Recorder "
+msgstr ""
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr ""
+
+msgid "Setup - Audio/Video"
+msgstr ""
+
+msgid "Timezone & clock"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr ""
+
+msgid "Rotor Setup"
+msgstr ""
+
+msgid "Streaming Clients"
+msgstr ""
+
+msgid "Language Settings"
+msgstr ""
+
+msgid "Timezone"
+msgstr ""
+
+msgid "Timezone Settings"
+msgstr ""
+
+msgid "Front Panel"
+msgstr ""
+
+msgid "TVTV Service"
+msgstr ""
+
+msgid "International EPG"
+msgstr ""
+
+msgid "Energy Options"
+msgstr ""
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr ""
+
+msgid "Option$Quick"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup OSD and Language
+msgid "Setup.OSD$OSD Font Size"
+msgstr ""
+
+msgid "FontSize$Normal"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "User defined"
+msgstr ""
+
+#. TRANSLATORS:
+#. Recording Commands
+msgid "Mark Commercials"
+msgstr ""
+
+msgid "Add Child Lock"
+msgstr ""
+
+msgid "Remove Child Lock"
+msgstr ""
+
+msgid "Change title"
+msgstr ""
+
+msgid "Mark as New"
+msgstr ""
+
+msgid "Remove Archive Mark"
+msgstr ""
+
+msgid "Remove Crop Mark"
+msgstr ""
+
+msgid "Remove Archived Recording"
+msgstr ""
+
+msgid "Restore Archived Recording"
+msgstr ""
+
+msgid "Convert to MPEG (TS)"
+msgstr ""
+
+msgid "Directory Selector:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+msgid "Directory commands"
+msgstr ""
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "Generate preview"
+msgstr ""
+
+msgid "Remove preview"
+msgstr ""
+
+msgid "Compress recording"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI MCLI
+msgid "No CI-Module"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+#. TRANSLATORS:
+#. Channels/Bouquets
+msgid "Edit Channels"
+msgstr ""
+
+msgid "Customize Bouquets"
+msgstr ""
+
+msgid "Channellist: set filters"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI CHANNELLIST
+msgid "All Channels"
+msgstr ""
+
+msgid "Functions: Favourites"
+msgstr ""
+
+msgid "Functions: Channel list"
+msgstr ""
+
+msgid "Functions: Select favourite folder"
+msgstr ""
+
+msgid "Functions: search for channel"
+msgstr ""
+
+msgid "Functions: Create new Favourite folder"
+msgstr ""
+
+msgid "Functions: Rename favourite folder"
+msgstr ""
+
+msgid "Functions: Select "
+msgstr ""
+
+msgid "Functions: search "
+msgstr ""
+
+msgid "Functions: Create "
+msgstr ""
+
+msgid "Functions: Rename "
+msgstr ""
+
+msgid "Functions: Channel "
+msgstr ""
+
+msgid "Functions: Move Channel"
+msgstr ""
+
+msgid "Sources"
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "Music Browser"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Fase 1: detecteren type afstandsbediening"
+
+msgid "Press any key on the RC unit"
+msgstr "Druk op een willekeurige knop"
+
+msgid "RC code detected!"
+msgstr "Afstandsbediening code herkend!"
+
+msgid "Do not press any key..."
+msgstr "Druk niet op een knop..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Fase 2: Leren specifieke toets-codes"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Druk knop voor '%s'"
+
+msgid "Press 'Up' to confirm"
+msgstr "Druk 'Omhoog' om te bevestigen"
+
+msgid "Press 'Down' to continue"
+msgstr "Druk 'Omlaag' om verder te gaan"
+
+msgid "(press 'Up' to go back)"
+msgstr "(druk 'Omhoog' om terug te gaan)"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(Druk 'Omlaag' om te beeindigen)"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "Druk 'Menu' om deze toets over te slaan"
+
+msgid "Learning Remote Control Keys"
+msgstr "Leren toetsen afstandsbediening"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Fase 3: Opslaan toets codes"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "'Omhoog' te bewaren, 'Omlaag' voor annuleren"
+
+msgid "Key$Up"
+msgstr "Omhoog"
+
+msgid "Key$Down"
+msgstr "Omlaag"
+
+msgid "Key$Menu"
+msgstr "Menu"
+
+msgid "Key$Ok"
+msgstr "Ok"
+
+msgid "Key$Back"
+msgstr "Terug"
+
+msgid "Key$Left"
+msgstr "Links"
+
+msgid "Key$Right"
+msgstr "Rechts"
+
+msgid "Key$Red"
+msgstr "Rood"
+
+msgid "Key$Green"
+msgstr "Groen"
+
+msgid "Key$Yellow"
+msgstr "Geel"
+
+msgid "Key$Blue"
+msgstr "Blauw"
+
+msgid "Key$Info"
+msgstr "Info"
+
+msgid "Key$Play/Pause"
+msgstr "Weergeven/Pauze"
+
+msgid "Key$Play"
+msgstr "Weergeven"
+
+msgid "Key$Pause"
+msgstr "Pauze"
+
+msgid "Key$Stop"
+msgstr "Stop"
+
+msgid "Key$Record"
+msgstr "Opnemen"
+
+msgid "Key$FastFwd"
+msgstr "Vooruitspoelen"
+
+msgid "Key$FastRew"
+msgstr "Terugspoelen"
+
+msgid "Key$Next"
+msgstr "Volgende"
+
+msgid "Key$Prev"
+msgstr "Vorige"
+
+msgid "Key$Power"
+msgstr "Uitschakelen"
+
+msgid "Key$Channel+"
+msgstr "Kanaal+"
+
+msgid "Key$Channel-"
+msgstr "Kanaal-"
+
+msgid "Key$PrevChannel"
+msgstr "VorigKanaal"
+
+msgid "Key$Volume+"
+msgstr "Volume+"
+
+msgid "Key$Volume-"
+msgstr "Volume-"
+
+msgid "Key$Mute"
+msgstr "Geluid onderbreken"
+
+msgid "Key$Audio"
+msgstr "Audio"
+
+msgid "Key$Subtitles"
+msgstr "Ondertiteling"
+
+msgid "Key$Schedule"
+msgstr "Programmagids"
+
+msgid "Key$Channels"
+msgstr "Kanalen"
+
+msgid "Key$Timers"
+msgstr "Timers"
+
+msgid "Key$Recordings"
+msgstr "Opnames"
+
+msgid "Key$Setup"
+msgstr "Instellingen"
+
+msgid "Key$Commands"
+msgstr "Commando's"
+
+msgid "Key$Greater"
+msgstr ""
+
+msgid "Key$Less"
+msgstr ""
+
+msgid "Key$2digit"
+msgstr ""
+
+msgid "Key$DVD"
+msgstr ""
+
+msgid "Key$DVB"
+msgstr ""
+
+msgid "Key$PVR"
+msgstr ""
+
+msgid "Key$Reel"
+msgstr ""
+
+msgid "Key$TT"
+msgstr ""
+
+msgid "Key$PiP"
+msgstr ""
+
+msgid "Key$Help"
+msgstr ""
+
+msgid "Key$Eject"
+msgstr ""
+
+msgid "Key$Aspect"
+msgstr ""
+
+msgid "Key$Search"
+msgstr ""
+
+msgid "Key$Searchtimers"
+msgstr ""
+
+msgid "Key$Internet"
+msgstr ""
+
+msgid "Key$Guide"
+msgstr ""
+
+msgid "Key$Multimedia"
+msgstr ""
+
+msgid "Key$Radio"
+msgstr ""
+
+msgid "Key$Heart"
+msgstr ""
+
+msgid "Key$Favourites"
+msgstr ""
+
+msgid "Key$AddFavorite"
+msgstr ""
+
+msgid "Key$User0"
+msgstr "Gebruiker0"
+
+msgid "Key$User1"
+msgstr "Gebruiker1"
+
+msgid "Key$User2"
+msgstr "Gebruiker2"
+
+msgid "Key$User3"
+msgstr "Gebruiker3"
+
+msgid "Key$User4"
+msgstr "Gebruiker4"
+
+msgid "Key$User5"
+msgstr "Gebruiker5"
+
+msgid "Key$User6"
+msgstr "Gebruiker6"
+
+msgid "Key$User7"
+msgstr "Gebruiker7"
+
+msgid "Key$User8"
+msgstr "Gebruiker8"
+
+msgid "Key$User9"
+msgstr "Gebruiker9"
+
+msgid "Free To Air"
+msgstr "Vrij te ontvangen"
+
+msgid "encrypted"
+msgstr "gecodeerd"
+
+msgid "Edit channel"
+msgstr "Kanaal aanpassen"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "Frequency"
+msgstr "Frequentie"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid1"
+msgstr "Apid1"
+
+msgid "Apid2"
+msgstr "Apid2"
+
+msgid "Dpid1"
+msgstr "Dpid1"
+
+msgid "Dpid2"
+msgstr "Dpid2"
+
+msgid "Spid1"
+msgstr "Spid1"
+
+msgid "Spid2"
+msgstr "Spid2"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "CA"
+msgstr "CA"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Channel settings are not unique!"
+msgstr "Kanaalinstellingen zijn niet uniek!"
+
+msgid "Channels"
+msgstr "Kanalen"
+
+msgid "Button$Edit"
+msgstr "Verander"
+
+msgid "Button$New"
+msgstr "Nieuw"
+
+msgid "Button$Delete"
+msgstr "Verwijder"
+
+msgid "Button$Mark"
+msgstr "Verplaats"
+
+msgid "Channel is being used by a timer!"
+msgstr "Kanaal wordt gebruikt door een timer!"
+
+msgid "Delete channel?"
+msgstr "Kanaal verwijderen?"
+
+msgid "Edit folder"
+msgstr "Bewerk map"
+
+msgid "Sub folder"
+msgstr "Submap"
+
+msgid "Folder name already exists!"
+msgstr "Map bestaat al"
+
+#, c-format
+msgid "Folder name must not contain '%c'!"
+msgstr "Map mag geen karakter '%c' bevatten!"
+
+msgid "Button$Select"
+msgstr "Kies"
+
+msgid "Delete folder and all sub folders?"
+msgstr "Map en alle submappen verwijderen?"
+
+msgid "Delete folder?"
+msgstr "Map verwijderen?"
+
+msgid "Active"
+msgstr "Actief"
+
+msgid "Channel"
+msgstr "Kanaal"
+
+msgid "Day"
+msgstr "Dag"
+
+msgid "Start"
+msgstr "Begin"
+
+msgid "Stop"
+msgstr "Einde"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Prioriteit"
+
+msgid "Lifetime"
+msgstr "Bewaarduur"
+
+msgid "Childlock"
+msgstr ""
+
+msgid "yes"
+msgstr "ja"
+
+msgid "no"
+msgstr "nee"
+
+msgid "File"
+msgstr "Bestandnaam"
+
+msgid "Button$Folder"
+msgstr "Map"
+
+msgid "Button$Single"
+msgstr "Eenmalig"
+
+msgid "Button$Repeating"
+msgstr "Herhalen"
+
+msgid "First day"
+msgstr "Eerste dag"
+
+msgid "Select folder"
+msgstr "Kies map"
+
+msgid "Timers"
+msgstr "Timers"
+
+msgid "Button$On/Off"
+msgstr "Aan/Uit"
+
+msgid "Button$Info"
+msgstr "Info"
+
+msgid "Delete timer?"
+msgstr "Timer verwijderen?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Timer neemt nog op - toch verwijderen?"
+
+msgid "Event"
+msgstr "Uitzending"
+
+msgid "Button$Timer"
+msgstr "Timer"
+
+msgid "Button$Record"
+msgstr "Opnemen"
+
+msgid "Button$Switch"
+msgstr "Selecteer"
+
+msgid "What's on now?"
+msgstr "Wat is er nu?"
+
+msgid "What's on next?"
+msgstr "Wat komt er hierna?"
+
+msgid "Button$Next"
+msgstr "Hierna"
+
+msgid "Button$Now"
+msgstr "Nu"
+
+msgid "Button$Schedule"
+msgstr "Programmagids"
+
+msgid "Can't switch channel!"
+msgstr "Kan geen kanaal wisselen!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Programma - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr "Deze uitzending - %s"
+
+msgid "This event - all channels"
+msgstr "Deze uitzending - alle kanalen"
+
+msgid "All events - all channels"
+msgstr "Alle uitzendingen - alle kanalen"
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "Vul %d cijfers in!"
+
+msgid "CAM not responding!"
+msgstr "CAM reageert niet!"
+
+msgid "Recording info"
+msgstr "Opname info"
+
+msgid "Button$Play"
+msgstr "Afspelen"
+
+msgid "Button$Rewind"
+msgstr "Naar begin"
+
+msgid "Edit recording"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Length"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "TS"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Delete marks information?"
+msgstr ""
+
+msgid "Delete resume information?"
+msgstr ""
+
+msgid "Button$Cut"
+msgstr ""
+
+msgid "Button$Copy"
+msgstr ""
+
+msgid "Button$Rename/Move"
+msgstr ""
+
+msgid "No editing marks defined!"
+msgstr "Geen bewerkingsmarkeringen gedefinieerd!"
+
+msgid "Can't start editing process!"
+msgstr "Kan niet beginnen met bewerken!"
+
+msgid "Editing process started"
+msgstr "Bewerken is gestart"
+
+msgid "Editing process already active!"
+msgstr "Bewerken is al actief!"
+
+msgid "File transfer started"
+msgstr ""
+
+msgid "Can't start file transfer!"
+msgstr ""
+
+msgid "File transfer already active!"
+msgstr ""
+
+msgid "Recordings"
+msgstr "Opnames"
+
+msgid "Button$Open"
+msgstr "Openen"
+
+msgid "Commands"
+msgstr "Commando's"
+
+msgid "Delete recording?"
+msgstr "Opname verwijderen?"
+
+msgid "Recording is being edited - really delete?"
+msgstr "Opname wordt bewerkt - werkelijk verwijderen?"
+
+msgid "Error while deleting recording!"
+msgstr "Fout bij verwijderen opname!"
+
+msgid "never"
+msgstr "nooit"
+
+msgid "skin dependent"
+msgstr "skin afhankelijk"
+
+msgid "always"
+msgstr "altijd"
+
+msgid "OSD"
+msgstr "OSD"
+
+msgid "Setup.OSD$Language"
+msgstr "Taal"
+
+msgid "Setup.OSD$Skin"
+msgstr "Skin"
+
+msgid "Setup.OSD$Theme"
+msgstr "Thema"
+
+msgid "Setup.OSD$WarEagle icons"
+msgstr ""
+
+msgid "Setup.OSD$Left (%)"
+msgstr "Links (%)"
+
+msgid "Setup.OSD$Top (%)"
+msgstr "Boven (%)"
+
+msgid "Setup.OSD$Width (%)"
+msgstr "Breedte (%)"
+
+msgid "Setup.OSD$Height (%)"
+msgstr "Hoogte (%)"
+
+msgid "Setup.OSD$Message time (s)"
+msgstr "Weergave duur van berichten (s)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Klein lettertype gebruiken"
+
+msgid "Setup.OSD$Anti-alias"
+msgstr "Anti-alias"
+
+msgid "Setup.OSD$Default font"
+msgstr "Standaard lettertype"
+
+msgid "Setup.OSD$Small font"
+msgstr "Kleine lettertype"
+
+msgid "Setup.OSD$Fixed font"
+msgstr "Letter met vaste breedte"
+
+msgid "Setup.OSD$Default font size (%)"
+msgstr "Afmetingen standaard lettertype (%)"
+
+msgid "Setup.OSD$Small font size (%)"
+msgstr "Afmetingen klein lettertype (%)"
+
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr "Afmetingen lettertype met vaste breedte (%)"
+
+msgid "Setup.OSD$Channel info position"
+msgstr "Kanaal info positie"
+
+msgid "bottom"
+msgstr "onder"
+
+msgid "top"
+msgstr "boven"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "Duur tonen kanaal-informatie (s)"
+
+msgid "Setup.OSD$Info on channel switch"
+msgstr "Kanaal info tonen"
+
+msgid "Setup.OSD$Timeout requested channel info"
+msgstr "Tijdsduur opgevraagde kanaalinfo."
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Scrollen per pagina"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "Rondom scrollen"
+
+msgid "Setup.OSD$Menu key closes"
+msgstr "Menu toets sluit ook af"
+
+msgid "Setup.OSD$Recording directories"
+msgstr "Opname mappen"
+
+msgid "Setup.OSD$Folders in timer menu"
+msgstr "Mappen in timermenu"
+
+msgid "Setup.OSD$Always sort folders first"
+msgstr "Altijd mappen eerst sorteren"
+
+msgid "Setup.OSD$Number keys for characters"
+msgstr "Nummertoetsen voor karakters"
+
+msgid "Setup.OSD$Color key 0"
+msgstr "Gekleurde toets 0"
+
+msgid "Setup.OSD$Color key 1"
+msgstr "Gekleurde toets 1"
+
+msgid "Setup.OSD$Color key 2"
+msgstr "Gekleurde toets 2"
+
+msgid "Setup.OSD$Color key 3"
+msgstr "Gekleurde toets 3"
+
+msgid "EPG"
+msgstr "EPG"
+
+msgid "Button$Scan"
+msgstr "Scan"
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "EPG-scan Timeout (h)"
+
+msgid "Setup.EPG$EPG bugfix level"
+msgstr "EPG foutcorrectieniveau"
+
+msgid "Setup.EPG$EPG linger time (min)"
+msgstr "Oude EPG data tonen (min)"
+
+msgid "Setup.EPG$Set system time"
+msgstr "Systeem klok instellen"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "Gebruik transponder tijd voor systeem"
+
+#. TRANSLATORS: note the plural!
+msgid "Setup.EPG$Preferred languages"
+msgstr "Voorkeurstalen"
+
+#. TRANSLATORS: note the singular!
+msgid "Setup.EPG$Preferred language"
+msgstr "Voorkeurstaal"
+
+msgid "pan&scan"
+msgstr "pan&scan"
+
+msgid "letterbox"
+msgstr "letterbox"
+
+msgid "center cut out"
+msgstr "center cut out"
+
+msgid "names only"
+msgstr "alleen namen"
+
+msgid "PIDs only"
+msgstr "alleen PIDs"
+
+msgid "names and PIDs"
+msgstr "namen en PIDs"
+
+msgid "add new channels"
+msgstr "nieuwe kanalen toevoegen"
+
+msgid "add new transponders"
+msgstr "nieuwe transponders toevoegen"
+
+msgid "DVB"
+msgstr "DVB"
+
+msgid "Button$Audio"
+msgstr "Audio"
+
+msgid "Button$Subtitles"
+msgstr "Ondertiteling"
+
+msgid "Setup.DVB$Primary DVB interface"
+msgstr "Eerste DVB kaart"
+
+msgid "Setup.DVB$Standard compliance"
+msgstr "Standaard functionaliteit"
+
+msgid "Setup.DVB$Video format"
+msgstr "Videoformaat"
+
+msgid "Setup.DVB$Video display format"
+msgstr "Video display formaat"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Dolby Digital gebruiken"
+
+msgid "Setup.DVB$Update channels"
+msgstr "Kanalen actualiseren"
+
+msgid "Setup.DVB$Audio languages"
+msgstr "Audio talen"
+
+msgid "Setup.DVB$Audio language"
+msgstr "Audio taal"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "Toon ondertiteling"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "Talen ondertiteling"
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "Taal ondertiteling"
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "Positie ondertiteling"
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "Transparantie voorgrond ondertiteling"
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "Transparantie achtergrond ondertiteling"
+
+msgid "Setup.DVB$Enable teletext support"
+msgstr ""
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "Setup.LNB$Use DiSEqC"
+msgstr "DiSEqC gebruiken"
+
+msgid "Setup.LNB$SLOF (MHz)"
+msgstr "SLOF (MHz)"
+
+msgid "Setup.LNB$Low LNB frequency (MHz)"
+msgstr "Laagste LNB frequentie (MHz)"
+
+msgid "Setup.LNB$High LNB frequency (MHz)"
+msgstr "Hoogste LNB frequentie (MHz)"
+
+#, c-format
+msgid "Setup.LNB$Device %d connected to sat cable"
+msgstr "Apparaat %d verbionden met sat. kabel"
+
+msgid "Setup.LNB$own"
+msgstr "eigen"
+
+msgid "CAM reset"
+msgstr "CAM herstarten"
+
+msgid "CAM present"
+msgstr "CAM aanwezig"
+
+msgid "CAM ready"
+msgstr "CAM gereed"
+
+msgid "CAM"
+msgstr "CAM"
+
+msgid "Button$Menu"
+msgstr "Menu"
+
+msgid "Button$Reset"
+msgstr "Herstart"
+
+msgid "Opening CAM menu..."
+msgstr "CAM-menu wordt geopend..."
+
+msgid "Can't open CAM menu!"
+msgstr "Kan CAM-menu niet openen!"
+
+msgid "CAM is in use - really reset?"
+msgstr "CAM wordt gebruikt - werkelijk herstarten?"
+
+msgid "Can't reset CAM!"
+msgstr "Kan CAM niet herstarten!"
+
+msgid "do not pause live video"
+msgstr "live video niet pauzeren"
+
+msgid "confirm pause live video"
+msgstr "bevestig pauzeren live video"
+
+msgid "pause live video"
+msgstr "pauzeer live video"
+
+msgid "confirm"
+msgstr "bevestig"
+
+msgid "Recording"
+msgstr "Opname"
+
+msgid "Setup.Recording$Margin at start (min)"
+msgstr "Tijd marge begin (min)"
+
+msgid "Setup.Recording$Margin at stop (min)"
+msgstr "Tijd marge eind (min)"
+
+msgid "Setup.Recording$Default priority"
+msgstr "Standaard prioriteit"
+
+msgid "Setup.Recording$Default lifetime (d)"
+msgstr "Standaard levensduur (d)"
+
+msgid "Setup.Recording$Pause key handling"
+msgstr "Gedrag pauze toets"
+
+msgid "Setup.Recording$Pause priority"
+msgstr "Pauze prioriteit"
+
+msgid "Setup.Recording$Pause lifetime (d)"
+msgstr "Pauze levensduur (d)"
+
+msgid "Setup.Recording$Use episode name"
+msgstr "Gebruik episode naam"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "VPS gebruiken"
+
+msgid "Setup.Recording$VPS margin (s)"
+msgstr "Marge VPS (s)"
+
+msgid "Setup.Recording$Mark instant recording"
+msgstr "Direkte opnamen markeren"
+
+msgid "Setup.Recording$Name instant recording"
+msgstr "Naam direkt-opname"
+
+msgid "Setup.Recording$Instant rec. time (min)"
+msgstr "Duur van de directe opname (min)"
+
+msgid "Setup.Recording$present event"
+msgstr "huidige aflevering"
+
+msgid "Setup.Recording$Max. video file size (MB)"
+msgstr "Maximale omvang video file (MB)"
+
+msgid "Setup.Recording$Split edited files"
+msgstr "Bewerkte files opdelen"
+
+msgid "Setup.Recording$Delete timeshift recording"
+msgstr "Verwijder time-shift opname"
+
+msgid "Replay"
+msgstr "Afspelen"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Multi-speed mode"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Weergave mode aangeven"
+
+msgid "Setup.Replay$Show remaining time"
+msgstr "Toon resterende tijd"
+
+msgid "Setup.Replay$Progress display time (s)"
+msgstr "Verlopen tijd tijd (s)"
+
+msgid "Setup.Replay$Pause replay when setting mark"
+msgstr "Pauzeer wanneer markering wordt geplaatst"
+
+msgid "Setup.Replay$Resume ID"
+msgstr "Hervattings ID"
+
+msgid "Setup.Replay$Jump&Play"
+msgstr ""
+
+msgid "Setup.Replay$Play&Jump"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds Slow"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds (Repeat)"
+msgstr ""
+
+msgid "Setup.Replay$Pause at last mark"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr "Overig"
+
+msgid "Setup.Miscellaneous$Min. event timeout (min)"
+msgstr "Minimale event time-out (min)"
+
+msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+msgstr "Minimum gebruikers inactiviteit (min)"
+
+msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+msgstr "SVDRP Timeout (s)"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "Zap timeout (s)"
+
+msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+msgstr "Tijdsduur kanaalinvoer (ms)"
+
+msgid "Setup.Miscellaneous$Remote control repeat delay (ms)"
+msgstr "Afstandbediening herhalingsvertraging (ms)"
+
+msgid "Setup.Miscellaneous$Remote control repeat delta (ms)"
+msgstr "Afstandbediening herhalingsinterval (ms)"
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "Opstartkanaal"
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "zoals eerder"
+
+msgid "Setup.Miscellaneous$Initial volume"
+msgstr "Opstartvolume"
+
+msgid "Setup.Miscellaneous$Channels wrap"
+msgstr "Doorscrollen kanalenlijst"
+
+msgid "Setup.Miscellaneous$Show channel names with source"
+msgstr "Toon kanaalnamen met bron"
+
+msgid "Setup.Miscellaneous$Emergency exit"
+msgstr "Nooduitgang"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Deze plugin heeft geen instelparameters"
+
+msgid "Setup"
+msgstr "Instellingen"
+
+msgid "Restart"
+msgstr "Herstart"
+
+msgid "Really restart?"
+msgstr "Werkelijk opnieuw starten?"
+
+#. TRANSLATORS: note the leading and trailing blanks!
+msgid " Stop recording "
+msgstr " Stop opnemen "
+
+msgid "Schedule"
+msgstr "Programmagids"
+
+msgid "VDR"
+msgstr ""
+
+#. TRANSLATORS: note the leading blank!
+msgid " Stop replaying"
+msgstr " Stop afspelen"
+
+msgid "Button$Pause"
+msgstr "Pauze"
+
+msgid "Button$Stop"
+msgstr "Eindigen"
+
+msgid "Button$Resume"
+msgstr "Hervat"
+
+#. TRANSLATORS: note the leading blank!
+msgid " Cancel editing"
+msgstr " Bewerken afbreken"
+
+#. TRANSLATORS: note the leading blank!
+msgid " Cancel file transfer"
+msgstr ""
+
+msgid "Stop recording?"
+msgstr "Opname stoppen?"
+
+msgid "Cancel editing?"
+msgstr "Bewerken afbreken?"
+
+msgid "Cancel file transfer?"
+msgstr ""
+
+msgid "No audio available!"
+msgstr "Geen audio beschikbaar!"
+
+msgid "No subtitles"
+msgstr "Geen ondertiteling"
+
+msgid "No subtitles available!"
+msgstr "Geen ondertiteling beschikbaar"
+
+msgid "Not enough disk space to start recording!"
+msgstr "Onvoldoende hardeschijfruimte voor deze opname!"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "Could not add timer"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "Geen vrije DVB kaart om op te nemen!"
+
+msgid "Pausing live video..."
+msgstr "Pauzeren live uitzending..."
+
+msgid "Delete timeshift recording?"
+msgstr "Verwijder timeshift opname?"
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Jump: "
+msgstr "Springen: "
+
+msgid "No editing sequences defined!"
+msgstr "Geen opeenvolgende bewerkingen aanwezig!"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " abcdefghijklmnopqrstuvwxyz0123456789-.,#~\\^$[]|()*+?{}/:%@&"
+
+msgid "CharMap$ 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc"
+
+msgid "Button$Overwrite"
+msgstr "Overschrijven"
+
+msgid "Button$Insert"
+msgstr "Invoegen"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Gebruik Omhoog/Omlaag - daarna Ok"
+
+msgid "Channel locked (recording)!"
+msgstr "Kanaal geblokkeerd (neemt op)!"
+
+msgid "Low disk space!"
+msgstr "Hardeschijf bijna vol!"
+
+msgid "Regenerating index file"
+msgstr "Indexbestand wordt geregenereerd"
+
+msgid "Index file regeneration complete"
+msgstr "Regenaratie indexbestand gereed"
+
+msgid "Index file regeneration failed!"
+msgstr "Regeneratie indexbestand mislukt!"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Shutdown onmogelijk - Optie '-s' ontbreekt!"
+
+msgid "Editing - shut down anyway?"
+msgstr "Bewerken aktief - toch uitschakelen?"
+
+msgid "Transfering file - shut down anyway?"
+msgstr ""
+
+msgid "Recording - shut down anyway?"
+msgstr "Opname loopt - toch uitschakelen?"
+
+#, c-format
+msgid "Recording in %ld minutes, shut down anyway?"
+msgstr "Opname in %ld minuten - toch uitschakelen?"
+
+msgid "shut down anyway?"
+msgstr "toch uitschakelen?"
+
+#, c-format
+msgid "Plugin %s wakes up in %ld min, continue?"
+msgstr "Plugin %s wordt binnen %ld min. aktief, doorgaan?"
+
+msgid "Editing - restart anyway?"
+msgstr "Bewerken aktief - toch herstarten?"
+
+msgid "Transfering file - restart anyway?"
+msgstr ""
+
+msgid "Recording - restart anyway?"
+msgstr "Opname loopt - toch opnieuw starten?"
+
+msgid "restart anyway?"
+msgstr "toch opnieuw starten?"
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Volume "
+msgstr "Volume "
+
+msgid "Classic VDR"
+msgstr "VDR Klassiek"
+
+msgid "DISK"
+msgstr "SCHIJF"
+
+msgid "LOAD"
+msgstr "LAADT"
+
+msgid "TIMERS"
+msgstr "TIMERS"
+
+msgid "DEVICES"
+msgstr "APPARATEN"
+
+msgid "LIVE"
+msgstr "LIVE"
+
+msgid "PLAY"
+msgstr "AFSPELEN"
+
+msgid "ST:TNG Panels"
+msgstr "ST:TNG Consoles"
+
+#. TRANSLATORS: the first character of each weekday, beginning with monday
+msgid "MTWTFSS"
+msgstr "MDWDVZZ"
+
+msgid "Database not available!"
+msgstr ""
+
+#. TRANSLATORS: abbreviated weekdays, beginning with monday (must all be 3 letters!)
+msgid "MonTueWedThuFriSatSun"
+msgstr "MaaDinWoeDonVryZatZon"
+
+msgid "Monday"
+msgstr "Maandag"
+
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+msgid "Wednesday"
+msgstr "Woensdag"
+
+msgid "Thursday"
+msgstr "Donderdag"
+
+msgid "Friday"
+msgstr "Vrijdag"
+
+msgid "Saturday"
+msgstr "Zaterdag"
+
+msgid "Sunday"
+msgstr "Zondag"
+
+msgid "Upcoming recording!"
+msgstr "Opname start binnenkort!"
+
+msgid "Pause live video?"
+msgstr "Pauzeer live video?"
+
+msgid "Recording started"
+msgstr "Opname is gestart!"
+
+msgid "VDR will shut down later - press Power to force"
+msgstr "VDR zal later uitschakelen - Druk 'Power' om te forceren"
+
+msgid "Press any key to cancel shutdown"
+msgstr "Druk een toets om shutdown af te breken"
+
+msgid "Switching primary DVB..."
+msgstr "Eerste DVB-kaart wordt omgeschakeld..."
+
+msgid "End recording"
+msgstr ""
+
+msgid "Editing process failed!"
+msgstr "Bewerken is mislukt!"
+
+msgid "Editing process finished"
+msgstr "Bewerken is klaar"
+
+msgid "File transfer failed!"
+msgstr ""
+
+msgid "File transfer finished"
+msgstr ""
+
+msgid "Press any key to cancel restart"
+msgstr "Druk een willekeurige toets om herstarten af te breken"
+
+#, c-format
+msgid "VDR will shut down in %s minutes"
+msgstr "VDR zal na %s minuten uitschakelen"
+
+msgid "Disk"
+msgstr "Schijf"
+
+msgid "free"
+msgstr "vrij"

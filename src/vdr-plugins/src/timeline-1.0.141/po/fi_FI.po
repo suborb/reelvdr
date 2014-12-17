@@ -1,0 +1,52 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-timeline\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:44+0200\n"
+"PO-Revision-Date: 2008-09-29 10:50+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Prio"
+msgstr "prioriteetti"
+
+msgid "Conflict on"
+msgstr "Päällekkäisyys"
+
+msgid "same input device"
+msgstr "sama vastaanotin"
+
+msgid "Repeating conflict on"
+msgstr "Toistuva päällekkäisyys"
+
+msgid "No conflicts"
+msgstr "Ei päällekkäisyyksiä"
+
+msgid "Cursor up/down/left/right+Nums"
+msgstr "Ylös/Alas/Vasen/Oikea/Numeronäppäimet"
+
+msgid "(today)"
+msgstr "(tänään)"
+
+msgid "Timeline"
+msgstr ""
+
+msgid "Ignore primary interface"
+msgstr "Jätä päävastaanotin huomioimatta"
+
+msgid "Show timer overview and collisions"
+msgstr ""
+
+msgid "Timer Timeline"
+msgstr ""

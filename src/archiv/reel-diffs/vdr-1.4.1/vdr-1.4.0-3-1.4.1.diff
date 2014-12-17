@@ -1,0 +1,101 @@
+diff -u vdr-1.4.0-3/config.h vdr-1.4.1/config.h
+--- vdr-1.4.0-3/config.h	2006-06-11 13:40:40.760782000 +0200
++++ vdr-1.4.1/config.h	2006-06-11 13:40:16.071239000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: config.h 1.259 2006/05/28 15:04:08 kls Exp $
++ * $Id: config.h 1.260 2006/06/11 08:57:35 kls Exp $
+  */
+ 
+ #ifndef __CONFIG_H
+@@ -21,8 +21,8 @@
+ 
+ // VDR's own version number:
+ 
+-#define VDRVERSION  "1.4.0-3"
+-#define VDRVERSNUM   10400  // Version * 10000 + Major * 100 + Minor
++#define VDRVERSION  "1.4.1"
++#define VDRVERSNUM   10401  // Version * 10000 + Major * 100 + Minor
+ 
+ // The plugin API's version number:
+ 
+diff -u vdr-1.4.0-3/CONTRIBUTORS vdr-1.4.1/CONTRIBUTORS
+--- vdr-1.4.0-3/CONTRIBUTORS	2006-06-11 13:40:40.744781000 +0200
++++ vdr-1.4.1/CONTRIBUTORS	2006-06-11 13:40:16.047237500 +0200
+@@ -573,6 +573,7 @@
+  message is being displayed didn't work
+  for reporting a problem with the "Press any key on the RC unit" step when learning
+  LIRC remote control codes
++ for suggesting to reduce the logging for the SVDRP GRAB command
+ 
+ Jeremy Hall <jhall@UU.NET>
+  for fixing an incomplete initialization of the filter parameters in eit.c
+diff -u vdr-1.4.0-3/dvbdevice.c vdr-1.4.1/dvbdevice.c
+--- vdr-1.4.0-3/dvbdevice.c	2006-06-11 13:40:40.764782250 +0200
++++ vdr-1.4.1/dvbdevice.c	2006-06-11 13:40:16.075239250 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: dvbdevice.c 1.158 2006/05/28 15:05:03 kls Exp $
++ * $Id: dvbdevice.c 1.159 2006/06/11 09:03:55 kls Exp $
+  */
+ 
+ #include "dvbdevice.h"
+@@ -570,7 +570,7 @@
+                  if (Quality < 0)
+                     Quality = 100;
+ 
+-                 isyslog("grabbing to %s %d %d %d", Jpeg ? "JPEG" : "PNM", Quality, vm.width, vm.height);
++                 dsyslog("grabbing to %s %d %d %d", Jpeg ? "JPEG" : "PNM", Quality, vm.width, vm.height);
+                  if (Jpeg) {
+                     // convert to JPEG:
+                     result = RgbToJpeg(mem, vm.width, vm.height, Size, Quality);
+diff -u vdr-1.4.0-3/HISTORY vdr-1.4.1/HISTORY
+--- vdr-1.4.0-3/HISTORY	2006-06-11 13:40:40.752781500 +0200
++++ vdr-1.4.1/HISTORY	2006-06-11 13:40:16.059238250 +0200
+@@ -4753,7 +4753,7 @@
+ - Removed all the compatibility '#if APIVERSNUM...' stuff and instead increased
+   the API version number - plugins will have to be recompiled.
+ - Removed the call to pthread_setschedparam(childTid, SCHED_RR, 0) in thread.c,
+-  because it caused a compiler warning with g++ 4.1.1 (reported by Ville Skyttä).
++  because it caused a compiler warning with post-2.4 glibc (reported by Ville Skyttä).
+   Since the third parameter has to be non-null to have any effect, the call was
+   presumably a NOP, anyway.
+ - Fixed the 'clean-plugins' target in the Makefile to also remove additional
+@@ -4776,3 +4776,9 @@
+ - Now switching to non-VPS timers' channels 60 seconds before the timer starts
+   (if a free device is available), to allow for the updating of EPG data and CA
+   descriptors before the actual recording starts.
++
++2006-06-11: Version 1.4.1
++
++- Changed the log messages when grabbing an image from 'isyslog()' to 'dsyslog()'
++  so that they can be suppressed in normal operation mode to avoid clogging the
++  log file in case this function is used frequently (suggested by Helmut Auer).
+Common subdirectories: vdr-1.4.0-3/libsi and vdr-1.4.1/libsi
+Common subdirectories: vdr-1.4.0-3/PLUGINS and vdr-1.4.1/PLUGINS
+diff -u vdr-1.4.0-3/svdrp.c vdr-1.4.1/svdrp.c
+--- vdr-1.4.0-3/svdrp.c	2006-06-11 13:40:40.784783500 +0200
++++ vdr-1.4.1/svdrp.c	2006-06-11 13:40:16.127242500 +0200
+@@ -10,7 +10,7 @@
+  * and interact with the Video Disk Recorder - or write a full featured
+  * graphical interface that sits on top of an SVDRP connection.
+  *
+- * $Id: svdrp.c 1.96 2006/06/03 09:17:17 kls Exp $
++ * $Id: svdrp.c 1.97 2006/06/11 09:04:36 kls Exp $
+  */
+ 
+ #include "svdrp.h"
+@@ -779,7 +779,7 @@
+            int fd = open(FileName, O_WRONLY | O_CREAT | O_NOFOLLOW | O_TRUNC, DEFFILEMODE);
+            if (fd >= 0) {
+               if (safe_write(fd, Image, ImageSize) == ImageSize) {
+-                 isyslog("grabbed image to %s", FileName);
++                 dsyslog("grabbed image to %s", FileName);
+                  Reply(250, "Grabbed image %s", Option);
+                  }
+               else {
+Common subdirectories: vdr-1.4.0-3/symbols and vdr-1.4.1/symbols

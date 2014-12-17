@@ -1,0 +1,2 @@
+// always clean old packages
+APT::Clean-Installed "true";

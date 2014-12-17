@@ -1,0 +1,527 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netcv\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-06-15 17:07+0200\n"
+"PO-Revision-Date: 2011-09-07 18:02+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "empty"
+msgstr "leeg"
+
+msgid "DiSEqC list"
+msgstr "DiSEqC lijst"
+
+msgid "Restarting NetCeiver..."
+msgstr "De NetCeiver wordt opnieuw gestart..."
+
+msgid "Restarting VDR..."
+msgstr "Herstart VDR..."
+
+msgid "Please wait..."
+msgstr "Even wachten aub"
+
+msgid "Reloading diseqc.conf failed!"
+msgstr "Vernieuwen diseqc.conf mislukt"
+
+msgid "Settings stored"
+msgstr "Instellingen zijn opgeslagen"
+
+msgid "Reloading channels.conf failed"
+msgstr "Herladen van channels.conf mislukt"
+
+msgid "Reloading diseqc.conf failed"
+msgstr "Herladen van diseqc.conf mislukt"
+
+msgid "Error: Store failed! Error Number: "
+msgstr "Fout: Opslaan mislukt! Foutcode is: "
+
+msgid "Error: Only 4 LNBs per cascade is allowed!"
+msgstr "Fout: Slechts 4 LNB's per cascade toegestaan!"
+
+msgid "Error: Every DiSEqC list must have a name!"
+msgstr "Fout: Elke DiSEqC lijst moet een naam hebben!"
+
+msgid "Error: Duplicate DiSEqC list name is not allowed!"
+msgstr "Fout: DiSEqC lijst met dezelfde naam is niet toegestaan!"
+
+msgid "Error: Every tuner must have a valid DiSEqC list!"
+msgstr "Fout: Elke tuner moet een geldige DiSEqC lijst hebben!"
+
+msgid "Error: At least 1 tuner must be enabled!"
+msgstr "Fout: Minstens 1 tuner moet worden ingeschakeld"
+
+msgid "Unknown Error: "
+msgstr "Onbekende fout: "
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC uitgeschakeld"
+
+msgid "Diseqc$Source"
+msgstr "Satelliet"
+
+msgid "LNB Type"
+msgstr "LNB Type"
+
+msgid "DiSEqC Mini"
+msgstr "Mini DiSEqC"
+
+msgid "Number of LNBs"
+msgstr "Aantal LNBs"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Single Cable Router"
+msgstr "Enkele kabel router"
+
+msgid "Unique Slot Nr."
+msgstr "Uniek slotnummer"
+
+msgid "Downlink freq. (MHz)"
+msgstr "Downlink freq. (MHz)"
+
+msgid "PIN (optional)"
+msgstr "PIN (optioneel)"
+
+msgid "No pin"
+msgstr "Geen pin"
+
+msgid "DiSEqC 1.0"
+msgstr "DiSEqC 1.0"
+
+msgid "DiSEqC 1.1"
+msgstr "DiSEqC 1.1"
+
+msgid "Multiswitch"
+msgstr "Multiswitch"
+
+msgid "Cascade"
+msgstr "Cascade"
+
+msgid "DiSEqC 1.2"
+msgstr "DiSEqC 1.2"
+
+msgid "Number of sources"
+msgstr "Aantal satellieten"
+
+msgid "Rotor (GotoX)"
+msgstr "Rotor (GotoX)"
+
+msgid "off"
+msgstr "uit"
+
+msgid "fine"
+msgstr "fijn"
+
+msgid "coarse"
+msgstr "grof"
+
+msgid "maximum"
+msgstr "maximaal"
+
+msgid "Min Position"
+msgstr "Min positie"
+
+msgid "East"
+msgstr "Oost"
+
+msgid "West"
+msgstr "West"
+
+msgid "Max Position"
+msgstr "Max positie"
+
+msgid "Longitude"
+msgstr "Lengtegraad"
+
+msgid "Latitude"
+msgstr "Breedtegraad"
+
+msgid "North"
+msgstr "Noord"
+
+msgid "South"
+msgstr "Zuid"
+
+msgid "Autofocus"
+msgstr "Autofocus"
+
+msgid "DisiCon 4"
+msgstr "DisiCon 4"
+
+msgid "DiSEqC mode:"
+msgstr "DiSEqC modus:"
+
+msgid "no"
+msgstr "nee"
+
+msgid "yes"
+msgstr "ja"
+
+msgid " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr "0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Antenna settings"
+msgstr "Schotel instellingen"
+
+msgid "NetCeiver Firmwareupdate is running!"
+msgstr "Bezig met NetCeiver firmware update"
+
+msgid "No NetCeiver found!"
+msgstr "Geen NetCeiver gevonden"
+
+msgid "Creating directory tmp failed!"
+msgstr "Maken van tmp directory mislukt"
+
+msgid "Retrieving information about tuners failed!"
+msgstr "Ophalen van tunerinformatie is mislukt!"
+
+msgid "Getting network interface failed!"
+msgstr "Verkrijgen van netwerk-interface is mislukt"
+
+msgid "sec"
+msgstr "sec"
+
+msgid "min"
+msgstr "min"
+
+msgid "h"
+msgstr "h"
+
+msgid "d"
+msgstr "d"
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DiSEqC settings"
+msgstr "DiSEqC instellingen"
+
+msgid "NetCeiver is being updated."
+msgstr "NetCeiver update is bezig."
+
+msgid "Try again later."
+msgstr "Probeer later opnieuw."
+
+msgid "Error!"
+msgstr "Fout!"
+
+msgid "Failed to open directory "
+msgstr "Directory openen is mislukt "
+
+msgid "No file found in "
+msgstr "Geen bestand gevonden in "
+
+msgid "Please select a setting for upload: "
+msgstr "Selecteer een instelling voor uploaden: "
+
+msgid "Finished!"
+msgstr "Klaar!"
+
+msgid "Uploading failed!"
+msgstr "Upload mislukt!"
+
+msgid "Current"
+msgstr "Huidige"
+
+msgid "NetCeiver diagnostics"
+msgstr "NetCeiver diagnostiek"
+
+msgid "Alive"
+msgstr "Aktief"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "Tuners"
+msgstr "Tuners"
+
+msgid "OS"
+msgstr "OS"
+
+msgid "App"
+msgstr "App"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Hardware"
+msgstr "Hardware"
+
+msgid "Serial"
+msgstr "Serienummer"
+
+msgid "System uptime"
+msgstr "Systeem uptime"
+
+msgid "Process uptime"
+msgstr "Proces uptime"
+
+msgid "Dish settings"
+msgstr "Schotel instellingen"
+
+msgid "State"
+msgstr "Status"
+
+msgid "Slot"
+msgstr "Slot"
+
+msgid "Chip"
+msgstr "Chip"
+
+msgid "Used"
+msgstr "Gebruikt"
+
+msgid "Lock"
+msgstr "Vergrendel"
+
+msgid "Frequency"
+msgstr "Frequentie"
+
+msgid "Strenght"
+msgstr "Sterkte"
+
+msgid "SNR"
+msgstr "SNR"
+
+msgid "BER"
+msgstr "BER"
+
+msgid "UNC"
+msgstr "UNC"
+
+msgid "electric$Current"
+msgstr "Stroom"
+
+msgid "Power save mode"
+msgstr "Stroom bespaar modus"
+
+msgid "Couldn't create tmp-path!"
+msgstr "Kan tmp-pad niet maken!"
+
+msgid "Internal Error! Sorry!"
+msgstr "Sorry! Interne fout!"
+
+msgid "Loading data from NetCeiver failed!"
+msgstr "Ophalen van de data uit de Netceiver mislukt!"
+
+msgid "Please check the Connection to NetCeiver!"
+msgstr "Controleer de verbinding naar NetCeiver!"
+
+msgid "Number of Tuners"
+msgstr "Aantal tuners"
+
+msgid "Please choose the satellites you can receive:"
+msgstr "Kies de satellieten die u kunt ontvangen"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Skip"
+msgstr "Overslaan"
+
+msgid "Static antenna"
+msgstr "Statische antenne"
+
+msgid "Single Cable System"
+msgstr "Enkel kabel systeem"
+
+msgid "Rotor antenna"
+msgstr "Rotor antenne"
+
+msgid "Updating... please wait!"
+msgstr "Updaten - moment aub!"
+
+msgid "Satellite"
+msgstr "Satelliet"
+
+msgid "Cable"
+msgstr "Kabel"
+
+msgid "Terrestrial"
+msgstr "Terrestrial"
+
+msgid "on"
+msgstr "aan"
+
+msgid "Antenna type"
+msgstr "Antenne type"
+
+msgid "Rotor"
+msgstr "Rotor"
+
+msgid "Experts"
+msgstr "Uitgebreid"
+
+msgid "Unknown Error! Sorry!"
+msgstr "Sorry! Onbekende fout!"
+
+msgid "Internal Error: DiSEqC not working"
+msgstr "Interne fout: DiSEqC werkt niet"
+
+msgid "Internal Error: Loading netceiver.conf failed"
+msgstr "Interne fout : ophalen van de netceiver.conf mislukt"
+
+msgid "Save changes?"
+msgstr "Wijzigingen opslaan?"
+
+msgid "No netcvrotor-Plugin found!"
+msgstr "Geen netcvrotor-plugin gevonden!"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Multi-Transponder-Decryption is"
+msgstr "Multitransponder decodering is"
+
+msgid "impossible because of mixed CAMs"
+msgstr "niet mogelijk met verschillende CAM's"
+
+msgid "Multi-Transponder"
+msgstr "Multitransponder"
+
+msgid "Signal (strength/snr)"
+msgstr "Signaal (sterkte/snr)"
+
+msgid "Signal (ber/unc)"
+msgstr "Signaal (ber/unc)"
+
+msgid "Update firmware"
+msgstr "Firmware updaten"
+
+msgid "Load"
+msgstr "Laden"
+
+msgid "Clear"
+msgstr "Wissen"
+
+msgid "Add DiSEqC list"
+msgstr "Voeg DiSEqC lijst toe"
+
+msgid "disable"
+msgstr "niet geactiveerd"
+
+msgid "enable"
+msgstr "geactiveerd"
+
+msgid "No tmp files available."
+msgstr "Geen tmp bestanden beschikbaar."
+
+msgid "Update progress: "
+msgstr "Update vooruitgang: "
+
+msgid "Information"
+msgstr "Informatie"
+
+msgid "CAM settings"
+msgstr "CAM instellingen"
+
+msgid "Tuner settings"
+msgstr "Tuner Instellingen"
+
+msgid "CAM"
+msgstr "CAM"
+
+msgid "not selected"
+msgstr "niet geselecteerd"
+
+msgid "Setting loaded"
+msgstr "Setting geladen"
+
+msgid "Loading failed! (Error: "
+msgstr "Laden mislukt! (fout:"
+
+msgid "Update finished"
+msgstr "Update gereed"
+
+msgid "Priority"
+msgstr "Prioriteit"
+
+msgid "normal"
+msgstr "normaal"
+
+msgid "disabled"
+msgstr "uitgeschakeld"
+
+msgid "NetCeiver update available. Do you want to update?"
+msgstr "NetCeiver update beschikbaar. Wilt U updaten?"
+
+msgid "NetCeiver firmware update"
+msgstr "NetCeiver firmware update"
+
+msgid "There is a new firmware version for the NetCeiver available!"
+msgstr "Nieuwe firmware versie voor NetCeiver beschikbaar!"
+
+msgid "Current version:"
+msgstr "Huidige versie:"
+
+msgid "New version:"
+msgstr "Nieuwe versie:"
+
+msgid "If you want to use CA-modules, it is absolutely required to perform this update right now."
+msgstr "Indien u CI modules wilt gaan gebruiken is het noodzakelijk deze update direct uit te voeren."
+
+msgid "Do you want to update the NetCeiver firmware now?"
+msgstr "Wilt u de Netciever firmware nu updaten?"
+
+msgid "Caution:"
+msgstr "Voorzichtig:"
+
+msgid "Current recordings will be interrupted for a few minutes."
+msgstr "Eventuele lopende opnames worden een paar minuten onderbroken."
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Update failed!"
+msgstr "Update mislukt!"
+
+msgid "internal error!"
+msgstr "Intere fout!"
+
+#~ msgid "Button$ABC/abc"
+#~ msgstr "ABC/abc"
+
+#~ msgid "Button$Overwrite"
+#~ msgstr "Overschrijven"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Verwijderen"
+
+#~ msgid "Delete"
+#~ msgstr "Verwijderen"
+
+#, fuzzy
+#~ msgid "Normal"
+#~ msgstr "normaal"
+
+#~ msgid "Current power"
+#~ msgstr "Huidige sterkte"
+
+#~ msgid "No DiSEqC-Settings available!"
+#~ msgstr "Geen DiSEqC-instellingen beschikbaar!"
+
+#~ msgid "No Netceiver found!"
+#~ msgstr "Geen Netciever gevonden!"

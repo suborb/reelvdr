@@ -1,0 +1,414 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <<vdr@smue.org>>\n"
+"POT-Creation-Date: 2008-08-12 12:23+0200\n"
+"PO-Revision-Date: 2008-04-09 10:59+0200\n"
+"Last-Translator: Klaus Schmidinger <kls@cadsoft.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Archive recordings"
+msgstr "TV-Aufnahmen brennen"
+
+msgid "iso8859-15"
+msgstr ""
+
+msgid "Burn job active"
+msgstr "Brennjob läuft"
+
+msgid "Please enter the burn plugin"
+msgstr "Bitte Brenn-Plugin aufrufen"
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Bitte legen Sie eine leere DVD ein und drücken Sie Ok"
+
+msgid "Job still active - really cancel?"
+msgstr "Auftrag noch aktiv - wirklich beenden?"
+
+msgid "DVD with menus"
+msgstr "DVD mit Menüs"
+
+msgid "DVD without menus"
+msgstr "DVD ohne Menüs"
+
+msgid "Archive disk"
+msgstr "Archiv-Disk"
+
+msgid "Create ISO only"
+msgstr "Nur Abbild erzeugen"
+
+msgid "Write to Disc"
+msgstr "Nur brennen"
+
+msgid "Create ISO and write"
+msgstr "Abbild erzeugen und brennen"
+
+msgid "No chapters"
+msgstr "Keine Kapitel"
+
+msgid "Use editing marks"
+msgstr "Schnittmarken benutzen"
+
+msgid "Every 5 minutes"
+msgstr "Jede 5 Minuten"
+
+msgid "Every 10 minutes"
+msgstr "Jede 10 Minuten"
+
+msgid "Every 15 minutes"
+msgstr "Jede viertel Stunde"
+
+msgid "Every 30 minutes"
+msgstr "Jede halbe Stunde"
+
+msgid "Every hour"
+msgstr "Jede Stunde"
+
+msgid "CD-R"
+msgstr "CD-R"
+
+msgid "Single Layer"
+msgstr "Single Layer"
+
+msgid "Double Layer"
+msgstr "Double Layer"
+
+msgid "BlueRay"
+msgstr ""
+
+msgid "none"
+msgstr "keiner"
+
+msgid "CD-R (700MB)"
+msgstr ""
+
+msgid "DVD (4.7GB)"
+msgstr ""
+
+msgid "DVD-DL (8.5GB)"
+msgstr ""
+
+msgid "BlueRay (25GB)"
+msgstr ""
+
+msgid "BlueRay (50GB)"
+msgstr ""
+
+msgid "VDRSync"
+msgstr "VDRSync"
+
+msgid "ProjectX"
+msgstr "ProjectX"
+
+msgid "Replex"
+msgstr "Replex"
+
+msgid "M2VRequantizer"
+msgstr "M2VRequantizer"
+
+msgid "Transcode"
+msgstr "Transcode"
+
+msgid "Don't requant"
+msgstr "Nie verkleinern"
+
+msgid "Couldn't convert character sets!"
+msgstr ""
+
+msgid "Couldn't open image file!"
+msgstr ""
+
+msgid "Couldn't create new image!"
+msgstr ""
+
+msgid "Couldn't render menu images!"
+msgstr ""
+
+msgid "Couldn't save image file!"
+msgstr ""
+
+msgid "Recording too big for disc type!"
+msgstr "Aufnahme zu groß für Disk-Typ!"
+
+msgid "Disc too big for disc type!"
+msgstr "Disc zu groß für diese Art!"
+
+msgid "A job failed!"
+msgstr "Ein Auftrag ist fehlgeschlagen!"
+
+msgid "A job was finished successfully."
+msgstr "Ein Auftrag war erfolgreich."
+
+msgid "Recordings"
+msgstr "TV-Aufnahmen"
+
+msgid "Burn"
+msgstr "Brennen"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Move down"
+msgstr "Nach unten"
+
+msgid "Track$Off"
+msgstr "Aus"
+
+msgid "Track$On"
+msgstr "An"
+
+msgid "Language code"
+msgstr "Sprachkennung"
+
+msgid "Choose title"
+msgstr "Wähle Titel"
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "TV-Aufnahmen: %1$d, Gesamtgröße: %2$.1f MB"
+
+msgid "No recordings marked for burning"
+msgstr "Keine TV-Aufnahmen zum Brennen markiert"
+
+msgid "Write DVD"
+msgstr "DVD brennen"
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr "Empfohlener Rohling: %s"
+
+msgid "Only archive disk possible"
+msgstr "Nur Archiv-Disk möglich"
+
+msgid "Mark"
+msgstr "Markieren"
+
+msgid "Analyzing recording..."
+msgstr "Aufzeichnung wird analysiert..."
+
+msgid "Job"
+msgstr "Auftrag"
+
+msgid "DVD title"
+msgstr "Titel der DVD"
+
+msgid "Archive-ID"
+msgstr "Archiv-ID"
+
+msgid "Options"
+msgstr "Optionen"
+
+msgid "No recordings marked"
+msgstr "Keine TV-Aufnahmen markiert"
+
+msgid "Button$Start"
+msgstr "Starten"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "No video track selected!"
+msgstr "Keine Videospur ausgewählt!"
+
+msgid "No audio track selected!"
+msgstr "Keine Tonspur ausgewählt!"
+
+msgid "Not enough free disk space!"
+msgstr "Nicht genug Plattenplatz!"
+
+msgid "Remove recording from list?"
+msgstr "Aufzeichnung aus Liste entfernen?"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Auftrag aktiv (Schreibe: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Auftrag aktiv - (Konvertiere: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Auftrag aktiv (Schreibe Disk)"
+
+msgid "Job active (Converting)"
+msgstr "Konvertierung aktiv - bitte warten"
+
+msgid "No active or waiting jobs present"
+msgstr "Keine aktiven oder wartenden Brennvorgänge vorhanden"
+
+msgid "Canceled jobs"
+msgstr "Abgebrochene Aufträge"
+
+msgid "Erroneous jobs"
+msgstr "Fehlerhafte Aufträge"
+
+msgid "Restart"
+msgstr "Überarbeiten"
+
+msgid "Retry"
+msgstr "Wiederholen"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Replace current job?"
+msgstr "Gegenwärtigen Auftrag ersetzen?"
+
+msgid "Remove job from list?"
+msgstr "Auftrag aus Liste entfernen?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Gesamtgröße: %1$.1f MB %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(würden geschrumpft)"
+
+msgid "Aspect ratio"
+msgstr "Seitenverhältnis"
+
+msgid "Previous page"
+msgstr "Vorherige Seite"
+
+msgid "Next page"
+msgstr "Nächste Seite"
+
+msgid "Play movie"
+msgstr "Film abspielen"
+
+msgid "Back"
+msgstr "zurück"
+
+msgid "Couldn't read index"
+msgstr "Konnte Index nicht lesen"
+
+msgid "Couldn't browse recording"
+msgstr "Konnte Aufzeichnung nicht durchsuchen"
+
+msgid "analog"
+msgstr "analog"
+
+msgid "dolby"
+msgstr "dolby"
+
+msgid "Couldn't read marks"
+msgstr "Konnte Marken nicht lesen"
+
+msgid "Recording is too short"
+msgstr "Aufzeichnung ist zu kurz"
+
+msgid "Target"
+msgstr "Ziel"
+
+msgid "Burn speed"
+msgstr "Brenngeschwindigkeit"
+
+msgid "unlimited"
+msgstr "unbegrenzt"
+
+msgid "Process priority"
+msgstr "Prozess Priorität"
+
+msgid "Disk type"
+msgstr "Art der DVD"
+
+msgid "DMH-archive"
+msgstr "DMH-Archiv"
+
+msgid "Skin"
+msgstr "Aussehen"
+
+msgid "Chapters"
+msgstr "Kapitel"
+
+msgid "Cut"
+msgstr "Schneiden"
+
+msgid "Skip empty titlemenu"
+msgstr "Leeres Titelmenü überspringen"
+
+msgid "Skip short mainmenu"
+msgstr "Kurzes Hauptmenü überspringen"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Allgemeine Einstellungen -----------------------------------------"
+
+msgid "Remove path component"
+msgstr "Pfad abschneiden"
+
+msgid "Eject disc after burn"
+msgstr "Disk nach Brennen auswerfen"
+
+msgid "Demux using"
+msgstr "Demultiplexer"
+
+msgid "Requant using"
+msgstr "Verkleinern mit"
+
+msgid "Preserve logfiles"
+msgstr "Logfiles behalten"
+
+msgid "Spare language code"
+msgstr "Ersatzsprachkennung"
+
+msgid "Status in main menu"
+msgstr "Status im Hauptmenü"
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Standard Job-Einstellungen ---------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Jobmenü-Einstellungen --------------------------------------------"
+
+msgid "Offer disk type"
+msgstr "Art der DVD anbieten"
+
+msgid "Offer chapters"
+msgstr "Kapitel anbieten"
+
+msgid "Offer target"
+msgstr "Ziel anbieten"
+
+msgid "Offer burn speed"
+msgstr "Brenngeschwindigkeit anbieten"
+
+msgid "Offer process prio"
+msgstr "Prozesspriorität anbieten"
+
+msgid "Offer cutting"
+msgstr "Schneiden anbieten"
+
+msgid "Offer DMH-archive"
+msgstr "DMH-Archiv anbieten"
+
+msgid "Offer skip titlemenu"
+msgstr "Titelmenü überspringen anbieten"
+
+msgid "Offer skip mainmenu"
+msgstr "Hauptmenü überspringen anbieten"
+
+msgid "Job options"
+msgstr "Optionen"
+
+msgid "Default"
+msgstr "Vorgabe"
+
+msgid "Video track"
+msgstr "Videospur"
+
+msgid "Audio track"
+msgstr "Tonspur"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#~ msgid "Versatile convert-and-burn plugin"
+#~ msgstr "Universelles Umwandlungs- und Brennplugin"

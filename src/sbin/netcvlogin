@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# Login to Netvceiver
+#
+
+. /etc/default/sysconfig
+
+if [ "$NC_BRIDGE" = "yes" ]; then
+    DEV="br0"
+else
+    DEV="eth0"
+fi
+
+NETCV_IP=`netcvupdate -l | awk '{print $1}'`
+
+telnet $NETCV_IP%$DEV
+

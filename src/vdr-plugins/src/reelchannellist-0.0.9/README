@@ -1,0 +1,73 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                 Sundararaj <sundararaj.reel@googlemail.com>
+
+Project's homepage:          URL
+
+Latest version available at: 
+     svn://reelbox.org/testing/src/vdr-plugins/reelchannellist 
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+See the file COPYING for more information.
+
+Description:
+   Displays vdr's channel list (with current event when possible).
+   Allows for filtering of channels by 'Providers', and Source/satellite.
+
+   Provides a seperate favourites list, that is independent of vdr's channel list.
+
+
+
+The above four are the "main" windows of this plugin.
+"All Channels", "Sources", "Favourites", "Providers"
+
+
+"All Channels" menu: 
+    Simply lists all channels in vdr's list (channels.conf) excluding channels that are group separators.
+
+
+"Sources" menu:
+    list all sources found in vdr's channel list 
+    filtering channel list with one of those source
+    also provides a filter for channels from the current transponder
+
+
+"Favourites" menu:
+    all channel entries in Favourites are "inside" bouquets
+    One bouquet contains 0 or more unique channels from vdr's channel list
+    One vdr's channel maybe present in more than one fav. bouquet
+       therefore, fav. list may contain duplicate channels 
+       (but not inside one bouquet)
+
+
+"Providers" menu:
+    lists all channel providers found in vdr's channel list
+    filtering of channel list with one of the providers
+
+
+
+Favourites:
+   add one channel from vdr's channel list to one of favourites's folders
+     (within one folder all channels are unique)
+   add one provider into favourites list
+     (as a folder that cannot be renamed)
+   add one source/satellite into favourites list
+     (as a folder that cannot be renamed)
+
+   Delete a folder
+   Rename a folder
+   Delete a channel
+
+   Move a folder
+   Move a channel within its folder
+
+
+Active Channel list
+   Active Channel list assumes the user wants to zap through a restricted channel list.
+   The restriction is the same as the active channel filters, ie the present view of channellist.
+   Restriction maybe applied to just the favourites list or to vdr's channellist.
+   
+   

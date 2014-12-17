@@ -1,0 +1,2168 @@
+# ReelVDR setup plugin
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-setup\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-01-10 10:51+0100\n"
+"PO-Revision-Date: 2009-03-08 18:27+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team: Czech <LL@li.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Request"
+msgstr ""
+
+msgid "Automatic power saving"
+msgstr ""
+
+msgid "inactive"
+msgstr ""
+
+msgid "active"
+msgstr ""
+
+msgid " Standby after (min)"
+msgstr ""
+
+msgid " Poweroff after (min)"
+msgstr ""
+
+msgid "immediately"
+msgstr ""
+
+msgid "Warning:"
+msgstr ""
+
+msgid "Will cause problems with the MultiRoom-System when Clients are active and try to access the ReelBox. "
+msgstr ""
+
+msgid "Therefore, do not turn off the ReelBox."
+msgstr ""
+
+msgid "Should therefore remain on 'Quick'."
+msgstr ""
+
+#, fuzzy
+msgid "Standard (ext3)"
+msgstr "Standardní"
+
+#, fuzzy
+msgid "Recording (jfs)"
+msgstr "Nahrávky"
+
+#, fuzzy
+msgid "Recording (xfs)"
+msgstr "Nahrávky"
+
+msgid "Windows Compatible (vFat)"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Confirm formatting"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "Device:"
+msgstr ""
+
+msgid "Free space:"
+msgstr ""
+
+msgid "Partition size:"
+msgstr ""
+
+msgid "Filesystem:"
+msgstr ""
+
+#, c-format
+msgid "Formatting will destroy all data on \"%s\"!"
+msgstr ""
+
+msgid "Press 'Red' to start formatting now or 'Exit' to cancel formatting."
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Select Filesystem Type"
+msgstr ""
+
+msgid "Filesystem"
+msgstr ""
+
+msgid "Please select the filesystem according to the porpuse of the device."
+msgstr ""
+
+msgid "Press 'Ok' to continue or 'Exit' to cancel now."
+msgstr ""
+
+msgid "Starting format in 3 seconds"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting in progress, please wait..."
+msgstr "Ukládání nastavení, počkejte prosím..."
+
+msgid "Formatting completed successfully."
+msgstr ""
+
+msgid "Error: formatting failed"
+msgstr ""
+
+msgid "Unable to format. Missing command"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting started"
+msgstr "Nastavení uloženo"
+
+#, fuzzy
+msgid "Canceled"
+msgstr "povoleno"
+
+msgid "TV & Radio"
+msgstr ""
+
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Internet & Extras"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+msgid "Additional Software"
+msgstr ""
+
+msgid "Installation"
+msgstr "Instalace"
+
+msgid "Basic Settings"
+msgstr "Základní nastavení"
+
+msgid "Video Recorder "
+msgstr "Videorekordér"
+
+msgid "Background Services"
+msgstr "Služby na pozadí"
+
+msgid "System Settings"
+msgstr "Nastavení systému"
+
+msgid "Video Settings"
+msgstr "Nastavení obrazu"
+
+msgid "Audio Settings"
+msgstr "Nastavení zvuku"
+
+msgid "Reception Settings"
+msgstr "Nastavení příjmu"
+
+msgid "OSD & Language"
+msgstr "OSD a jazyk"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Timezone & Clock"
+msgstr "Časové pásmo a hodiny"
+
+msgid "EPG Services"
+msgstr "Služby EPG"
+
+msgid "International EPG"
+msgstr "Mezinárodní EPG"
+
+msgid "Energy Options"
+msgstr "Možnosti napájení"
+
+msgid "Reset to factory defaults"
+msgstr ""
+
+msgid "Edit Channels"
+msgstr "Upravit kanály"
+
+msgid "TVTV Service"
+msgstr "Služba TVTV"
+
+msgid "Network Settings"
+msgstr "Nastavení sítě"
+
+msgid "UMTS Settings"
+msgstr "Nastavení UMTS"
+
+msgid "Enable UMTS to connect your ReelBox to the"
+msgstr ""
+
+msgid "internet using UMTS connection."
+msgstr ""
+
+msgid "Enable UMTS"
+msgstr "Povolit UMTS"
+
+msgid "UMTS Provider"
+msgstr "Poskytovatel UMTS"
+
+msgid "Common Interfaces"
+msgstr "Běžná rozhraní"
+
+msgid "Energy Saving Mode"
+msgstr "Úsporný režim"
+
+msgid " Activate after (h)"
+msgstr " Doba aktivace (hod.)"
+
+msgid "Eject Media on Shutdown"
+msgstr "Při vypnutí vysunout médium"
+
+msgid "Channel Lists"
+msgstr "Seznamy kanálů"
+
+msgid "Global Settings"
+msgstr "Globální nastavení"
+
+msgid "Hostname"
+msgstr "Název hostitele"
+
+msgid "Domain"
+msgstr "Doména"
+
+msgid "Gateway"
+msgstr "Brána"
+
+msgid "Nameserver"
+msgstr "Názvový server"
+
+msgid "Use Proxy"
+msgstr "Používat proxy"
+
+msgid "Streaming Clients"
+msgstr ""
+
+msgid "Setup type of external streaming devices and stream quality"
+msgstr ""
+
+msgid "You can select between 'Tablet' for"
+msgstr ""
+
+msgid "Tablet / Smartphone devices or 'TS' for"
+msgstr ""
+
+msgid "default settings *Standard to stream"
+msgstr ""
+
+msgid "LiveTV to your device."
+msgstr ""
+
+msgid "Stream Type"
+msgstr ""
+
+msgid "Client Speed"
+msgstr ""
+
+msgid "Select client connection type for best stream"
+msgstr ""
+
+msgid "quality"
+msgstr ""
+
+#, fuzzy
+msgid "Ethernet Settings"
+msgstr "Rozšířené nastavení"
+
+#, fuzzy
+msgid "Enable Ethernet"
+msgstr "Povolit Ethernet 1"
+
+msgid "Enable Ethernet 1"
+msgstr "Povolit Ethernet 1"
+
+msgid "Enable Ethernet 2"
+msgstr "Povolit Ethernet 2"
+
+msgid " Use DHCP"
+msgstr " Používat DHCP"
+
+msgid " IP Address"
+msgstr " IP adresa"
+
+msgid " Network mask"
+msgstr " Maska sítě"
+
+msgid "NetCeiver bridge"
+msgstr "Most netceiveru"
+
+msgid "Enable Wake-on-LAN"
+msgstr "Povolit Wake-on-LAN"
+
+#, fuzzy
+msgid "Wakeup ReelBox Avantgarde on startup"
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+msgid "Export Harddisk for Windows"
+msgstr "Export. pev. disk pro Windows"
+
+msgid "Workgroup"
+msgstr "Pracovní skupina"
+
+msgid "Enable UPnP service"
+msgstr "Povolit službu UPnP"
+
+msgid "Use Windows Client"
+msgstr "Používat klienta Windows"
+
+msgid "Windows Network Connection"
+msgstr "Připojení k síti Windows"
+
+msgid "Windows Server"
+msgstr "Server Windows"
+
+msgid "Sharename"
+msgstr "Název sdílené položky"
+
+msgid "DVD archive directory"
+msgstr "Adresář archivu DVD"
+
+msgid "Use NFS Client"
+msgstr "Používat klienta NFS"
+
+msgid "NFS Client"
+msgstr "Klient NFS"
+
+msgid "Expert Settings"
+msgstr "Rozšířené nastavení"
+
+msgid "Host/IP"
+msgstr "Hostitel/IP adresa"
+
+msgid "Allow writing"
+msgstr "Povolit zápis"
+
+msgid "Use locking"
+msgstr "Používat zamykání"
+
+msgid "Buffersize"
+msgstr "Velikost vyrovnávací paměti"
+
+msgid "Mark Blocks after Recording"
+msgstr "Označit bloky po nahrání"
+
+msgid "Playback Settings"
+msgstr "Nastavení přehrávání"
+
+msgid "Harddisk/Media device"
+msgstr "Pevný disk/mediální zař."
+
+msgid "Channel Scan"
+msgstr "Hledání kanálů"
+
+msgid "Installation Wizard"
+msgstr "Průvodce instalací"
+
+msgid "Use tvtv service"
+msgstr "Používat službu TVTV"
+
+msgid "GnuDIP service"
+msgstr "Služba GnuDIP"
+
+msgid "DynDNS service"
+msgstr "Služba DynDNS"
+
+msgid "Use GnuDIP service"
+msgstr "Používat službu GnuDIP"
+
+msgid "Use DynDNS service"
+msgstr "Používat službu DynDNS"
+
+msgid "DynDNS hostname"
+msgstr "Název hostitele DynDNS"
+
+msgid "Recording settings"
+msgstr "Nastavení nahrávání"
+
+msgid "LEDs while operating"
+msgstr "Indikátory za provozu"
+
+msgid "LEDs in Standby"
+msgstr "Indikátory v pohotovostním režimu"
+
+#, fuzzy
+msgid "Turn off LEDs in Standby"
+msgstr "Indikátory v pohotovostním režimu"
+
+msgid "Color"
+msgstr "Barva"
+
+msgid "Front Panel"
+msgstr "Přední panel"
+
+msgid "Brightness"
+msgstr "Jas"
+
+msgid "Brightness Status LEDs"
+msgstr "Jas indikátorů"
+
+msgid "Display Brightness"
+msgstr "Jas displeje"
+
+msgid "LC Display Type"
+msgstr "LC Display Type"
+
+msgid "Black Series"
+msgstr "Černý"
+
+msgid "External Reel Display Module"
+msgstr ""
+
+msgid "off"
+msgstr "vypnuto"
+
+msgid "blue"
+msgstr "modrá"
+
+msgid "red"
+msgstr "červená"
+
+msgid "min"
+msgstr "min."
+
+msgid "low"
+msgstr "nízký"
+
+msgid "med"
+msgstr "střední"
+
+msgid "high"
+msgstr "vysoký"
+
+msgid "max"
+msgstr "max."
+
+msgid "Update from CD/DVD"
+msgstr "Aktualizovat z CD/DVD"
+
+msgid "Software update"
+msgstr "Aktualizace softwaru"
+
+msgid "Software Update"
+msgstr "Aktualizace softwaru"
+
+msgid "Update-check on system start"
+msgstr "Zjišťovat aktualizace při spuštění"
+
+msgid "Manual Network Connections"
+msgstr "Ruční připojení k síti"
+
+msgid "Dynamic DNS"
+msgstr "Dynamická služba DNS"
+
+msgid "Remote Control / Automation"
+msgstr "Dálkové ovl./automatizace"
+
+msgid "Enable Control via RS232"
+msgstr "Povolit ovládání přes RS232"
+
+msgid "  Port speed (baud)"
+msgstr ""
+
+msgid "default (115.200)"
+msgstr ""
+
+msgid "Enable Control via UDP"
+msgstr "Povolit ovládání přes UDP"
+
+msgid "UDP Port"
+msgstr "Port UDP"
+
+msgid "Disable Bluetooth Support"
+msgstr "Zakázat podporu Bluetooth"
+
+msgid "Software Update and Installation, Serial Remote control"
+msgstr "Aktualizace a instalace softwaru, dálkové ovládání přes sériový port"
+
+msgid "Update the ReelBox software by Internet"
+msgstr "Aktualizovat software zařízení ReelBox z Internetu"
+
+msgid "Install additional features"
+msgstr "Instalovat další funkce"
+
+msgid "Basic settings in just a few steps"
+msgstr "Základní nastavení jen v několika krocích"
+
+msgid "Remote control through serial port or network"
+msgstr "Dálkové ovládání prostřednictvím sériového portu nebo sítě"
+
+msgid "Set up the Reel MultiRoom"
+msgstr ""
+
+msgid "Video and Audio Settings, OSD, Timezone, Front panel, Energy options"
+msgstr "Nastavení obrazu a zvuku, OSD, časové pásmo, přední panel, napájení"
+
+msgid "Adjust automatic standby and poweroff"
+msgstr ""
+
+msgid "Video output, Resolution, Screen format etc."
+msgstr "Obrazový výstup, rozlišení, formát obrazovky atd."
+
+msgid "Audio output and format, Audio/Video delay etc."
+msgstr "Výstup a formát zvuku, zpoždění obrazu/zvuku atd."
+
+msgid "Picture adjustments: Brightness, Contrast, Gamma"
+msgstr "Nastavení obrazu: jas, kontrast, gamma"
+
+msgid "Set your language and on-screen-display options"
+msgstr "Nastavení jazyka a možností zobrazení OSD"
+
+msgid "Time zone and source for automatic setting of system time"
+msgstr "Časové pásmo a zdroj automatického nastavení systémového času"
+
+msgid "LED color and brightness, LCD brightness"
+msgstr "Barva a jas indikátorů, jas displeje"
+
+msgid "Adjust Energy saving options"
+msgstr "Nastavení možností úspory energie"
+
+msgid "Set up local Network and Internet, connect Network storage"
+msgstr "Nastavení místní sítě a Internetu, připojení síťového úložiště"
+
+msgid "Setup Wireless network: SSID, Encryption etc."
+msgstr "Nastavení bezdrátové sítě: SSID, šifrování atd."
+
+msgid "Set up LAN ports, DHCP/IP settings"
+msgstr "Nastavení portů sítě LAN a parametrů DHCP/IP"
+
+msgid "Host name, Domain, Gateway, Proxy, Wake-on-LAN, Dynamic DNS Services"
+msgstr "Název hostitele, doména, brána, proxy, Wake-on-LAN, dynamické DNS"
+
+msgid "Search and administer network shares"
+msgstr "Vyhledávání a správa síťových sdílených položek"
+
+msgid "Setup UMTS dial-up network connection"
+msgstr "Nastavení telefonického připojení k síti UMTS"
+
+msgid "Settings for Timeshift, Recordings, Playback, Media storage"
+msgstr "Nastavení časového posunu, nahrávek, přehrávání, úložiště médií"
+
+msgid "Settings for Timeshift"
+msgstr "Nastavení časového posunu"
+
+msgid "Lead in & out time, VPS, Automatic marking of ads, Audio tracks"
+msgstr "Časová rezerva, VPS, automatické označování reklam, zvukové stopy"
+
+msgid "Playback options for TV recordings"
+msgstr "Možnosti přehrávání televizních nahrávek"
+
+msgid "Set up drive for Media files and Recordings"
+msgstr "Nastavení jednotky pro mediální soubory a nahrávky"
+
+msgid "Configure background services and tasks"
+msgstr "Konfigurace služeb a úloh na pozadí"
+
+msgid "Channel scan & lists, DiSEqC settings, Common Interface, Signal information"
+msgstr "Hledání a seznamy kanálů, nastavení DiSEqC, běžné rozhraní, inf. o signálu"
+
+#, fuzzy
+msgid "Channel lists, DiSEqC settings, Signal information"
+msgstr "Hledání a seznamy kanálů, nastavení DiSEqC, běžné rozhraní, inf. o signálu"
+
+msgid "Automatic or manual channel scan"
+msgstr "Automatické nebo ruční hledání kanálů"
+
+msgid "Choose a preconfigured channel list"
+msgstr "Výběr předkonfigurovaného seznamu kanálů"
+
+msgid "Receiveable satellite positions, Number of active tuners / LNBs"
+msgstr "Přijímatelné pozice satelitů, počet aktivních tunerů / LNB"
+
+msgid "Test and adjust your rotor"
+msgstr "Test a nastavení rotoru"
+
+msgid "Overview and configuration of Common Interface modules"
+msgstr "Přehled a konfigurace modulů běžného rozhraní"
+
+msgid "Details on Signal strength & quality, Video & audio bit rates etc."
+msgstr "Podrobnosti o síle a kvalitě signálu, přenosové rych. obrazu a zvuku atd."
+
+msgid "Advanced setup for system programs"
+msgstr "Rozšířené nastavení systémových programů"
+
+msgid "Information on Hardware, Network and System health"
+msgstr "Informace o hardwaru, síti a stavu systému"
+
+msgid "Settings needed to serve Reel NetClients"
+msgstr ""
+
+#, fuzzy
+msgid "Enable NetCeiver bridge"
+msgstr "Most netceiveru"
+
+#, fuzzy
+msgid " Bridge NetCeiver to"
+msgstr "Netceiver"
+
+msgid "Use VLAN for NetCeiver"
+msgstr ""
+
+msgid " VLAN ID"
+msgstr ""
+
+msgid "Prepare harddisk for use in the ReelBox"
+msgstr ""
+
+msgid "Can cause problems when MultiRoom"
+msgstr ""
+
+msgid "is on and should not be activated."
+msgstr ""
+
+msgid "Free To Air"
+msgstr ""
+
+msgid "no"
+msgstr "ne"
+
+msgid "internal CAM"
+msgstr ""
+
+msgid "No CI at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "encrypted"
+msgstr ""
+
+msgid "Setup.OSD$Language"
+msgstr ""
+
+msgid "Setup.OSD$Optional languages"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "Setup.OSD$ Optional language"
+msgstr ""
+
+msgid "Permanent Timeshift"
+msgstr ""
+
+#, fuzzy
+msgid "Info:"
+msgstr "Do"
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr ""
+
+msgid "Channel list"
+msgstr ""
+
+msgid "Title$Menu"
+msgstr ""
+
+msgid "Disk"
+msgstr ""
+
+msgid "free"
+msgstr ""
+
+msgid "Title$Main Menu"
+msgstr ""
+
+msgid " Stop replaying"
+msgstr ""
+
+msgid "Button$Recordings"
+msgstr ""
+
+msgid "EPG"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Button$Multifeed"
+msgstr ""
+
+msgid " Cancel editing"
+msgstr ""
+
+msgid "Functions"
+msgstr "Funkce"
+
+msgid "Stop recording?"
+msgstr ""
+
+msgid "Cancel editing?"
+msgstr ""
+
+msgid "yes"
+msgstr "ano"
+
+msgid "channelinfo"
+msgstr ""
+
+msgid "Standard"
+msgstr "Standardní"
+
+msgid "Favourites"
+msgstr ""
+
+msgid "Favourit folders"
+msgstr ""
+
+msgid "channellist"
+msgstr ""
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+msgid "Setup.OSD$OSD color"
+msgstr ""
+
+msgid "Setup.OSD$Default font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Random menu placement"
+msgstr ""
+
+msgid "Setup.OSD$Show preview videos"
+msgstr ""
+
+msgid "Setup.OSD$Show expert menu options"
+msgstr ""
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr ""
+
+msgid "Setup.OSD$  Program +/- keys"
+msgstr ""
+
+msgid "Channell./Bouquets"
+msgstr ""
+
+msgid "Expertmenu"
+msgstr ""
+
+msgid "OSD Settings - Expert options"
+msgstr ""
+
+msgid "Setup.OSD$Default font"
+msgstr ""
+
+msgid "Setup.OSD$Small font"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font"
+msgstr ""
+
+msgid "Setup.OSD$Small font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Use small font"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr ""
+
+msgid "Setup.Recording$Mark Commercials after Recording"
+msgstr ""
+
+msgid "Setup.Recording$  Prefer new 'markad'"
+msgstr ""
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "at the end"
+msgstr ""
+
+msgid "to bouquets"
+msgstr ""
+
+msgid "permanent"
+msgstr ""
+
+msgid "daily"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Initial Volume (%)"
+msgstr ""
+
+msgid "EPG$  Last channel for EPG scan"
+msgstr ""
+
+msgid "EPG$  Start new scan after"
+msgstr ""
+
+msgid "EPG$  Max concurrent transponders"
+msgstr ""
+
+msgid "EPG$  Max busy devices"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr ""
+
+msgid "Button$Scan EPG"
+msgstr ""
+
+msgid "EPG scan started in background"
+msgstr ""
+
+msgid "With Permanent Timeshift you can pause a running broadcast and proceed it later on."
+msgstr ""
+
+msgid "Permanent Timeshift has been disabled."
+msgstr ""
+
+msgid "This plugin has no setup parameters!"
+msgstr ""
+
+msgid "System Information"
+msgstr "Systémové informace"
+
+msgid "Network"
+msgstr "Síť"
+
+msgid "Signal"
+msgstr "Signál"
+
+msgid "Unknown device"
+msgstr ""
+
+msgid "Device Type:"
+msgstr "Typ zařízení:"
+
+msgid "Software Version:"
+msgstr "Verze softwaru:"
+
+msgid "Software date:"
+msgstr "Datum softwaru:"
+
+#, fuzzy
+msgid "Stand-alone"
+msgstr "Samostatný"
+
+#, fuzzy
+msgid "Client"
+msgstr "Klient"
+
+msgid "Server"
+msgstr "Server"
+
+#, fuzzy
+msgid "Hotel"
+msgstr "Hotelový režim"
+
+msgid "(MultiRoom inactive)"
+msgstr ""
+
+msgid "MultiRoom Mode:"
+msgstr ""
+
+msgid "Tuner Slot 1:"
+msgstr "Slot tuneru 1:"
+
+msgid "Tuner Slot 2:"
+msgstr "Slot tuneru 2:"
+
+#, c-format
+msgid "Tuners Slot %d:"
+msgstr "Slot tuneru %d:"
+
+msgid "Unconfigured"
+msgstr ""
+
+msgid "RAM:"
+msgstr "Paměť RAM:"
+
+#, fuzzy
+msgid "Recording capacity"
+msgstr "Jen nahrávání"
+
+msgid "Free"
+msgstr "volných"
+
+#, c-format
+msgid "Drive %d:"
+msgstr "Jednotka %d:"
+
+msgid "installed"
+msgstr "nainstalováno"
+
+msgid "not installed"
+msgstr "nenainstalováno"
+
+msgid "CPU Temperature:"
+msgstr "Teplota CPU:"
+
+msgid "Mainboard Temp.:"
+msgstr "Tepl. zákl. desky:"
+
+msgid "Details"
+msgstr ""
+
+msgid "Windows workgroup:"
+msgstr "Skupina Windows:"
+
+msgid "Hostname:"
+msgstr "Název hostitele:"
+
+msgid "Interface Name:"
+msgstr "Název rozhraní:"
+
+#, fuzzy
+msgid "   IP Address:"
+msgstr "   IP adresa:"
+
+#, fuzzy
+msgid "   Network mask:"
+msgstr "   Maska sítě:"
+
+#, fuzzy
+msgid "   IPv6 Address:"
+msgstr "   IP adresa:"
+
+msgid "   Hardware Address:"
+msgstr "   Hardwarová adresa:"
+
+msgid "Online connectivity:"
+msgstr ""
+
+#, fuzzy
+msgid "checking"
+msgstr "Používat zamykání"
+
+msgid "online"
+msgstr "online"
+
+msgid "DNS failure"
+msgstr ""
+
+#, fuzzy
+msgid "routing failure"
+msgstr "Připojení zařízení se nezdařilo"
+
+msgid "failure"
+msgstr ""
+
+msgid "enabled"
+msgstr "povoleno"
+
+msgid "disabled"
+msgstr "zakázáno"
+
+msgid "samba not installed!"
+msgstr "Systém Samba není nainstalován!"
+
+msgid "not set"
+msgstr "nenastaveno"
+
+#, fuzzy
+msgid "Do you want store recordings here?"
+msgstr "Chcete používat účet Guest?"
+
+msgid "Permament timeshift disabled!"
+msgstr "Trvalý časový posun je zakázán!"
+
+msgid "Settings stored"
+msgstr "Nastavení uloženo"
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Really reset?"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Use the red button to reset to factory defaults."
+msgstr ""
+
+msgid "All settings will be lost!"
+msgstr ""
+
+msgid "Resetting ReelBox to factory defaults..."
+msgstr ""
+
+#, fuzzy
+msgid "Rebooting..."
+msgstr "Restartování!"
+
+msgid "MultiRoom - Error!"
+msgstr ""
+
+msgid "Delete Menu?"
+msgstr "Odstranit nabídku?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Nahoru/dolů - nové umístění, OK - přesunout"
+
+msgid "Into"
+msgstr "Do"
+
+msgid "Before"
+msgstr "Před"
+
+msgid "After"
+msgstr "Za"
+
+msgid "Create"
+msgstr "Vytvořit"
+
+msgid "Edit"
+msgstr "Upravit"
+
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "Move"
+msgstr "Přesunout"
+
+msgid "Broadcast"
+msgstr "Vysílání"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "Please select your timezone"
+msgstr "Vyberte časové pásmo"
+
+msgid "Area"
+msgstr "Oblast"
+
+msgid "City/Region"
+msgstr "Město/region"
+
+msgid "Setup.EPG$Set system time by"
+msgstr "Nastavení systémového času"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "Použít čas z transpondéru"
+
+#, fuzzy
+msgid "Setting changes - please wait..."
+msgstr "Nastavování změn - počkejte prosím"
+
+msgid "Error - changes unsuccessful"
+msgstr "Chyba - změny nebyly úspěšně provedeny"
+
+msgid "Changes done"
+msgstr "Změny provedeny"
+
+msgid "on"
+msgstr "zapnuto"
+
+msgid "Help"
+msgstr "Nápověda"
+
+msgid "No help available"
+msgstr "Nápověda není k dispozici."
+
+msgid "Configuration error"
+msgstr "Chyba konfigurace"
+
+msgid "Media Device"
+msgstr "Mediální zařízení"
+
+msgid "Wireless LAN"
+msgstr "Bezdrátová síť LAN"
+
+msgid "No wlan device found!"
+msgstr "Zařízení WLAN nebylo nalezeno!"
+
+msgid "Network Drives"
+msgstr "Síťové jednotky"
+
+msgid "Database is being initialized, retry later please!"
+msgstr ""
+
+msgid "Database Setup"
+msgstr ""
+
+msgid "Menu Edit"
+msgstr "Upravit nabídku"
+
+msgid "Please stop recording and retry"
+msgstr ""
+
+msgid "Title$Setup"
+msgstr "Nastavení"
+
+msgid "Error in configuration files"
+msgstr "Chyba v konfiguračních souborech"
+
+msgid "Wrong PIN entered"
+msgstr "Byl zadán nesprávný kód PIN"
+
+msgid "Plugins Enable / Disable"
+msgstr "Povolit či zakázat moduly"
+
+msgid "Loading external plugins"
+msgstr "Načítání externích modulů"
+
+msgid "protected"
+msgstr "chráněno"
+
+msgid "Plugin-Parameter"
+msgstr "Parametr modulu"
+
+msgid "Plugin"
+msgstr "Modul"
+
+msgid " abcdefghijklmnopqrstuvwxyz0123456789-.!/"
+msgstr " abcdefghijklmnopqrstuvwxyz0123456789-.!/"
+
+msgid "change menu name"
+msgstr "změnit název nabídky"
+
+msgid "MultiRoom Setup"
+msgstr ""
+
+msgid "MultiRoom Setup (Expert)"
+msgstr ""
+
+msgid "MultiRoom Setup (Tuner)"
+msgstr ""
+
+msgid "MultiRoom-System"
+msgstr ""
+
+msgid "MultiRoom Mode"
+msgstr ""
+
+msgid "In Server Mode your recordings and NetCeiver/tuners are available to all clients on the network"
+msgstr ""
+
+msgid "MultiRoom option not available. Plugin is missing."
+msgstr ""
+
+msgid "Please press OK to continue"
+msgstr ""
+
+msgid "TV-Output on Avantgarde"
+msgstr ""
+
+msgid "Number of NetClients"
+msgstr ""
+
+msgid "Connection via"
+msgstr ""
+
+#, fuzzy
+msgid "Bridge NetCeiver to"
+msgstr "Netceiver"
+
+msgid "Use VLAN"
+msgstr ""
+
+msgid "VLAN ID"
+msgstr ""
+
+#, fuzzy
+msgid "NetClient-Mode"
+msgstr "Klient"
+
+msgid "Receiver-Type"
+msgstr ""
+
+#, fuzzy
+msgid "Stream-Server"
+msgstr "Síťový server"
+
+#, fuzzy
+msgid "Recording-Server"
+msgstr "Nahrávky"
+
+#, fuzzy
+msgid "Error: Database Server is not installed!"
+msgstr "nenainstalováno"
+
+#, fuzzy
+msgid "Error: Database vdr doesn't exist!"
+msgstr "nenainstalováno"
+
+msgid "Error: my.cnf is not set properly! (bind-address wrong)"
+msgstr ""
+
+msgid "Error: Connection to database failed!"
+msgstr ""
+
+msgid "Error: Cannot login with reeluser!"
+msgstr ""
+
+msgid ""
+"Error: MySQL-Server is not installed.\n"
+"\n"
+"Please press \"Fix it\" to install MySQL-Server. It may take some minutes."
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"\n"
+"Please press \"Fix it\" to initialize the database."
+msgstr ""
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"Access will be possible from this box but not from others in the network. \n"
+"\n"
+"Please press \"Fix it\" to make database accessible from network."
+msgstr ""
+
+msgid "Error: Connection to DB failed. Check if mysqld is running"
+msgstr ""
+
+msgid ""
+"Error: Cannot login with reeluser to mysql.\n"
+"\n"
+"Please press \"Fix it\" to create account reeluser."
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"\n"
+"Please press \"Fix it\" to create missing tables."
+msgstr ""
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"\n"
+"Please press \"Fix it\" to set permissions for reeluser."
+msgstr ""
+
+msgid ""
+"Error: An unknown error occured.\n"
+"Try to reset Database."
+msgstr ""
+
+msgid "Fix it"
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Počkejte prosím..."
+
+msgid "MySQL-Server successfully installed."
+msgstr ""
+
+msgid "Couldn't install MySQL-Server!"
+msgstr ""
+
+#, fuzzy
+msgid "Database successfully created."
+msgstr "Nastavení WLAN bylo úspěšně uloženo."
+
+msgid "Couldn't create Database!"
+msgstr ""
+
+#, fuzzy
+msgid "Database successfully configured."
+msgstr "Nastavení WLAN bylo úspěšně uloženo."
+
+msgid "Couldn't configure Database!"
+msgstr ""
+
+#, fuzzy
+msgid "Account reeluser successfully created."
+msgstr "Nastavení WLAN bylo úspěšně uloženo."
+
+msgid "Couldn't create reeluser account!"
+msgstr ""
+
+#, fuzzy
+msgid "Missing tables successfully created."
+msgstr "Nastavení WLAN bylo úspěšně uloženo."
+
+msgid "Couldn't create missing tables!"
+msgstr ""
+
+msgid "Error: Initializing database failed!"
+msgstr ""
+
+msgid "Error: Connecting database failed!"
+msgstr ""
+
+msgid "Error: Clearing database failed!"
+msgstr ""
+
+#, fuzzy
+msgid "Changes saved"
+msgstr "Změny provedeny"
+
+#, fuzzy
+msgid "direct"
+msgstr "Upravit"
+
+#, fuzzy
+msgid "network"
+msgstr "Síť"
+
+msgid "Tuner"
+msgstr ""
+
+msgid "Expert"
+msgstr "Rozšířené"
+
+msgid "x Satellite "
+msgstr ""
+
+msgid "x Terrestrial "
+msgstr ""
+
+msgid "x Cable "
+msgstr ""
+
+msgid "Available tuners in MultiRoom Network"
+msgstr ""
+
+msgid ""
+"Error: MySQL-Server is not installed.\n"
+"Disable MultiRoom, then enable it again to try the install again. Or try installing the package 'mysql-server' manually"
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"Disable MultiRoom, then enable it again to try to initialize the database again. "
+msgstr ""
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"Access will be possible from this box but not from others in the network. Change 'bind-address' in /etc/mysql/my.cnf."
+msgstr ""
+
+msgid "Error: Cannot login with reeluser to mysql. Try re-installing mysql-server."
+msgstr ""
+
+msgid ""
+"Error: An unknown error occured.\n"
+"Disable MultiRoom, manually deinstall mysql-server, then enable MultiRoom again."
+msgstr ""
+
+msgid "Using mixed tuner types with NetClients is not"
+msgstr ""
+
+msgid "yet supported."
+msgstr ""
+
+msgid "Enable the MultiRoom-System to connect NetClients in the network with your ReelBox Avantgarde and to provide TV-signals to the NetClients."
+msgstr ""
+
+msgid "TV-Programs are now available in your network. Please configure your network components according to the installation guide."
+msgstr ""
+
+msgid "MultiRoom setup will now be completed if you confirm the settings with 'Ok'. You can then continue with the installation of the NetClients."
+msgstr ""
+
+msgid "Caution: For this configuration there are not"
+msgstr ""
+
+msgid "enough tuners available for LiveTV and recording."
+msgstr ""
+
+msgid "simultaneously."
+msgstr ""
+
+msgid "TV-Output will be disabled after 5 minutes. All tuners are exclusively available to NetClients."
+msgstr ""
+
+msgid "enough tuners for providing"
+msgstr ""
+
+msgid "TV-Signals for all NetClients simultaneously."
+msgstr ""
+
+msgid "Caution: In the selected configuration there are"
+msgstr ""
+
+msgid "not enough tuners available to be able to provide"
+msgstr ""
+
+msgid "TV-signals to all NetClients at the same time."
+msgstr ""
+
+msgid "Please extend the number of tuners to be able"
+msgstr ""
+
+msgid "to use all NetClients simultaneously."
+msgstr ""
+
+#, fuzzy
+msgid "Using this configuration i.e. one of"
+msgstr "Chyba v konfiguračních souborech"
+
+msgid "these actions is possible:"
+msgstr ""
+
+msgid "1x TV-Recording through NetClient or"
+msgstr ""
+
+msgid "1x Live-TV through NetClient"
+msgstr ""
+
+msgid "Using this configuration these simultanous"
+msgstr ""
+
+msgid "actions are possible:"
+msgstr ""
+
+#, fuzzy
+msgid "TV-Recordings through NetClients"
+msgstr "Nastavení nahrávání"
+
+#, fuzzy
+msgid " or Avantgarde"
+msgstr "Žádný síťový server/Avantgarde"
+
+msgid "Live-TV through NetClients"
+msgstr ""
+
+msgid "NetworkConnectPlur$Please connect your NetClients with the network switch."
+msgstr ""
+
+msgid "NetworkConnectSing$Please connect your NetClient with the network switch."
+msgstr ""
+
+#, c-format
+msgid "DirectConnect$Please connect your NetClient to the port labeled \"Ethernet %i\"."
+msgstr ""
+
+msgid "Number of tuners assigned locally:"
+msgstr ""
+
+msgid "Satellite (DVB-S)"
+msgstr ""
+
+msgid "Satellite (DVB-S2)"
+msgstr ""
+
+#, fuzzy
+msgid "Cable"
+msgstr "povoleno"
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid "Tuners available for the whole MultiRoom-System:"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid ""
+"bridge_on$TV-data is now available in the network for the NetClients.\n"
+"Please note that you also have to enable VLAN and configure the switches inside your network if you experience problems with your network."
+msgstr ""
+
+msgid ""
+"bridge_off$Activate the network bridge to provide TV-signals to your home network.\n"
+"Warning: As soon as you activate the bridge, network components like WLAN routers will possibly not work correct any longer. Thus also enable VLAN and configure your switches according to the installation guide."
+msgstr ""
+
+msgid "Dummytext$"
+msgstr ""
+
+msgid "vlan_on$VLAN ist now active. You can now set up your network switches."
+msgstr ""
+
+msgid ""
+"vlan_off$VLANs are used to separate the network traffic into multiple virtual Networks. With this option you can limit the traffic of the NetCeiver to one VLAN.\n"
+"To reasonably use VLANs you also need VLAN capable switches. You can receive preconfigured switches for the Reel MultiRoom System at your local dealer."
+msgstr ""
+
+msgid "bridge_id$Each VLAN is referenced by its own unique ID. It is recommended to use the ID '2' for NetCeiver and NetClients."
+msgstr ""
+
+msgid "Number of tuners to use on your Avantgarde:"
+msgstr ""
+
+#, fuzzy
+msgid "Not available!"
+msgstr "Nápověda není k dispozici."
+
+#, fuzzy
+msgid "No Avantgarde"
+msgstr "Žádný síťový server/Avantgarde"
+
+msgid "Search"
+msgstr "Hledat"
+
+msgid "MultiRoom is inactive."
+msgstr ""
+
+msgid "Connection to ReelBox Avantgarde is disabled. Recording will be done locally."
+msgstr ""
+
+msgid "MultiRoom is disabled and no harddisk was found - only LiveTV is available!"
+msgstr ""
+
+#, fuzzy
+msgid "Recording and timeshift are disabled."
+msgstr "Trvalý časový posun je zakázán!"
+
+msgid "MultiRoom is active. Recording will be done by the ReelBox Avantgarde."
+msgstr ""
+
+msgid ""
+"Error: The ReelBox Avantgarde is not accessible now.\n"
+"Possible reasons are: network hardware error, wrong network settings, Avantgarde is off.\n"
+"Please check the system settings and the network or select a different recording server."
+msgstr ""
+
+msgid "If confirm now, MultiRoom will be deactivated."
+msgstr ""
+
+msgid "Connection to the ReelBox Avantgarde will be disabled. Recording will be done locally."
+msgstr ""
+
+msgid "If confirm now, MultiRoom will be disabled. No harddisk was found - only LiveTV will be available."
+msgstr ""
+
+#, fuzzy
+msgid "Recording and timeshift will be disabled."
+msgstr "Trvalý časový posun je zakázán!"
+
+msgid "If confirm now, MultiRoom will be activated. Recording will be done by the ReelBox Avantgarde."
+msgstr ""
+
+#, fuzzy, c-format
+msgid "The ReelBox Avantgarde with the IP address \"%s\" will be used for MultiRoom services."
+msgstr "Vyberte síťový server/Avantgarde:"
+
+#, fuzzy
+msgid "Please select a ReelBox Avantgarde."
+msgstr "Vyberte síťový server/Avantgarde:"
+
+msgid "DummyText RECEIVER_TYPE_TEXT MCLI$"
+msgstr ""
+
+msgid "DummyText RECEIVER_TYPE_TEXT Streamdev$"
+msgstr ""
+
+msgid "Error!"
+msgstr ""
+
+msgid "Please check the network settings and the network connection else please search in network."
+msgstr ""
+
+msgid "Initializing database..."
+msgstr ""
+
+msgid "Save changes?"
+msgstr ""
+
+#, fuzzy
+msgid "Storing settings - please wait..."
+msgstr "Ukládání nastavení, počkejte prosím..."
+
+msgid "Invalid settings: Client without Server!"
+msgstr "Neplatné nastavení: klient bez serveru!"
+
+msgid "Some Timer is being edited, cannot save settings."
+msgstr ""
+
+msgid "Internet connection not available!"
+msgstr ""
+
+#, fuzzy
+msgid "Saving Settings..."
+msgstr "Nastavení systému"
+
+#, fuzzy
+msgid "Restarting network..."
+msgstr "Znovu prohledat síť"
+
+msgid "Database status"
+msgstr ""
+
+msgid "Clear Database"
+msgstr ""
+
+msgid "Clear Table ..."
+msgstr ""
+
+msgid "Change Database Password ..."
+msgstr ""
+
+msgid "Local IP-Address unknown!"
+msgstr ""
+
+msgid "MultiRoom (inactive)"
+msgstr ""
+
+#, fuzzy
+msgid "Error: Connection to ReelBox Avantgarde failed!"
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+#, fuzzy
+msgid "Wakeup Avantgarde"
+msgstr "Žádný síťový server/Avantgarde"
+
+#, fuzzy
+msgid "Please enter the number of tuners to use:"
+msgstr "Zadejte šifrovací klíč"
+
+msgid "Error! Something went wrong in the Avahi-Plugin!"
+msgstr ""
+
+msgid "Selection"
+msgstr ""
+
+#, fuzzy
+msgid "search"
+msgstr "Hledat"
+
+#, fuzzy
+msgid "Following ReelBox Avantgarde is found in network."
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+#, fuzzy
+msgid "Following ReelBox Avantgarde are found in network."
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+#, fuzzy
+msgid "Please select a ReelBox Avantgarde for MultiRoom services:"
+msgstr "Vyberte síťový server/Avantgarde:"
+
+#, fuzzy
+msgid "Note:"
+msgstr "Hotelový režim"
+
+#, fuzzy
+msgid "No ReelBox Avantgarde found in network."
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+msgid "Rescan"
+msgstr "Znovu prohledat"
+
+#, fuzzy, c-format
+msgid "The ReelBox Avantgarde (%s) which is currently configured as MultiRoom Server was not found on the network."
+msgstr "Vyberte síťový server/Avantgarde:"
+
+msgid "If your ReelBox Avantgarde is configured to use DHCP, we strongly recommend using fixed IP addresses."
+msgstr ""
+
+#, fuzzy
+msgid "No ReelBox Avantgarde is currently configured."
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+#, fuzzy
+msgid "Search for ReelBox Avantgarde on the network"
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+msgid "Continue with MultiRoom deactivated"
+msgstr ""
+
+msgid "Please test:"
+msgstr ""
+
+#, fuzzy
+msgid "Please select a share:"
+msgstr "Vyberte síťový server/Avantgarde:"
+
+msgid "Please press OK to store settings."
+msgstr ""
+
+msgid "AllowedCharsNetShares$ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_-.,#~^$+@{}"
+msgstr ""
+
+msgid "Currently no active connections"
+msgstr "Nejsou k dispozici žádná aktivní připojení."
+
+msgid "Do you want to use Network Shares? Press OK."
+msgstr "Chcete používat síťové sdílené položky? Stiskněte tlačítko OK."
+
+msgid "Button$Disable"
+msgstr "Zakázat"
+
+msgid "Button$Enable"
+msgstr "Povolit"
+
+msgid "Do you want to remove the connection?"
+msgstr "Chcete tuto sdílenou položku odebrat?"
+
+msgid "Recording won't be possible on this share. Continue?"
+msgstr ""
+
+msgid "Scanning..."
+msgstr "Prohledávání..."
+
+msgid "Scanning complete."
+msgstr "Prohledávání bylo dokončeno."
+
+msgid "Scanning failed!"
+msgstr "Prohledávání se nezdařilo!"
+
+msgid "Found shares:"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "Host"
+msgstr "Hostitel"
+
+msgid "Share name"
+msgstr "Název sdílené položky"
+
+msgid "Share Number"
+msgstr "Číslo sdílené položky"
+
+msgid "Display name"
+msgstr "Zobrazovaný název"
+
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Pictures"
+msgstr "Obrázky"
+
+msgid "Music"
+msgstr "Hudba"
+
+msgid "Videos"
+msgstr "Videa"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "Do you want to use the guest account?"
+msgstr "Chcete používat účet Guest?"
+
+msgid "NFS Version"
+msgstr "Verze NFS"
+
+msgid "Protocol"
+msgstr "Protokol"
+
+msgid "Block size"
+msgstr "Velikost bloku"
+
+msgid "hard/soft"
+msgstr "HW/SW"
+
+msgid "soft"
+msgstr "SW"
+
+msgid "hard"
+msgstr "HW"
+
+msgid "Lock"
+msgstr "Zámek"
+
+msgid "Read/Write"
+msgstr "Čtení/zápis"
+
+msgid "Readonly"
+msgstr "Jen čtení"
+
+msgid "Read&Write"
+msgstr "Čtení a zápis"
+
+msgid "Please enter Username & Password,"
+msgstr "Zadejte uživatelské jméno a heslo"
+
+msgid "which is needed for browsing the shares."
+msgstr "požadované k procházení sdílených položek."
+
+msgid "Please enter username & password!"
+msgstr "Zadejte uživatelské jméno a heslo!"
+
+msgid "Please select the device for storing your media files:"
+msgstr "Vyberte zařízení pro ukládání mediálních souborů:"
+
+msgid "Drive\tDevice\t\tSize\tFree\tType"
+msgstr ""
+
+#, fuzzy
+msgid "Recording"
+msgstr "Nahrávky"
+
+msgid "All media"
+msgstr ""
+
+msgid "(removable)"
+msgstr "(vyjímatelné)"
+
+msgid "MultiRoom Server"
+msgstr ""
+
+#, fuzzy
+msgid "Note: MultiRoom will be disabled."
+msgstr "Trvalý časový posun je zakázán!"
+
+msgid "Unmount"
+msgstr ""
+
+msgid "Mount"
+msgstr ""
+
+msgid "timeshift off"
+msgstr "čas.pos.vyp"
+
+msgid "timeshift on"
+msgstr "čas.pos.zap"
+
+msgid "Resize partition"
+msgstr "Změnit velikost oddílu"
+
+msgid "Rebooting!"
+msgstr "Restartování!"
+
+msgid "Unable to mount. Missing command"
+msgstr ""
+
+msgid "unmounting"
+msgstr ""
+
+msgid "mounting"
+msgstr ""
+
+msgid "Warning, recording is running!"
+msgstr "Upozornění: Probíhá nahrávání!"
+
+msgid "Mounting device failed"
+msgstr "Připojení zařízení se nezdařilo"
+
+msgid "Warning, device may be to small for recordings!"
+msgstr "Upozornění: Zařízení může být pro nahrávky příliš malé!"
+
+msgid "Warning, few space is left on this device!"
+msgstr "Upozornění: Na tomto zařízení zbývá málo volného místa!"
+
+#, fuzzy
+msgid "Resize partition now?"
+msgstr "Změnit velikost oddílu"
+
+#, fuzzy
+msgid "Resizing - please wait..."
+msgstr "Změna velikosti... počkejte prosím!"
+
+#, fuzzy
+msgid "Do you want to reboot the ReelBox now?"
+msgstr "Chcete tuto sdílenou položku odebrat?"
+
+msgid "Resizing failed!"
+msgstr "Změna velikosti se nezdařila!"
+
+msgid "Warning, device may be too small for recording!"
+msgstr "Upozornění: Zařízení může být pro nahrávky příliš malé!"
+
+msgid "Load settings, please wait..."
+msgstr "Načítání nastavení, počkejte prosím..."
+
+msgid "Scanning networks, please wait..."
+msgstr "Prohledávání sítí, počkejte prosím..."
+
+#, fuzzy
+msgid "Following hardware was found."
+msgstr "Síťový server/Avantgarde nebyl nalezen!"
+
+#, fuzzy
+msgid "Please choose a WLAN device:"
+msgstr "Zvolte zařízení WLAN"
+
+msgid "Rescan WLAN"
+msgstr "Znovu prohledat WLAN"
+
+msgid "Skip"
+msgstr ""
+
+msgid "Device"
+msgstr "Zařízení"
+
+msgid "Interface"
+msgstr "Rozhraní"
+
+msgid "Sorry, no WLAN networks found. Check the antenna, check WLAN settings and try to search again."
+msgstr ""
+
+msgid "Following WLAN networks are found."
+msgstr ""
+
+#, fuzzy
+msgid "Please choose a WLAN network:"
+msgstr "Zvolte síť WLAN"
+
+msgid "Name"
+msgstr ""
+
+#, fuzzy
+msgid "Network:"
+msgstr "Síť"
+
+msgid "(E)SSID"
+msgstr "(E)SSID"
+
+#, fuzzy
+msgid "Security:"
+msgstr "Zabezpečení"
+
+msgid "Type"
+msgstr ""
+
+msgid "WEP-Key"
+msgstr "Klíč WEP"
+
+msgid "WPA-Key"
+msgstr "Klíč WPA"
+
+msgid "WPA2-Key"
+msgstr "Klíč WPA2"
+
+msgid "WLAN settings successfully stored"
+msgstr "Nastavení WLAN bylo úspěšně uloženo."
+
+msgid "Security"
+msgstr "Zabezpečení"
+
+msgid "IP Address"
+msgstr " IP adresa"
+
+msgid "Subnet"
+msgstr "Podsíť"
+
+msgid ""
+"Please press OK to store the settings now.\n"
+"\n"
+"You can also manually set an IP address here."
+msgstr ""
+
+msgid "Running DHCP, please wait..."
+msgstr "Spouštění služby DHCP, počkejte prosím..."
+
+msgid "Retrieving IP from DHCP failed!"
+msgstr "Načtení IP adresy ze serveru DHCP se nezdařilo!"
+
+msgid "Storing settings, please wait..."
+msgstr "Ukládání nastavení, počkejte prosím..."
+
+msgid "Keylength must be at least 10 chars!"
+msgstr "Klíč musí obsahovat nejméně 10 znaků!"
+
+msgid "Keylength must be at least 8 chars!"
+msgstr "Klíč musí obsahovat nejméně 8 znaků!"
+
+msgid "Authentication failed"
+msgstr "Ověření se nezdařilo"
+
+msgid "Please enter SSID!"
+msgstr "Zadejte název SSID!"
+
+msgid "Store settings?"
+msgstr "Uložit nastavení?"
+
+msgid "Wireless LAN: Functions"
+msgstr "Bezdrátová síť LAN: Funkce"
+
+msgid "Retrieve DHCP"
+msgstr "Načíst DHCP"
+
+msgid "Reset WLAN settings"
+msgstr "Obnovit nastavení WLAN"
+
+msgid "Turn WLAN off"
+msgstr "Vypnout WLAN"
+
+msgid "Open"
+msgstr "Otevřené"
+
+#, fuzzy
+#~ msgid "Active tuners"
+#~ msgstr " Doba aktivace (hod.)"
+
+#~ msgid "Load EPG"
+#~ msgstr "Načíst EPG"
+
+#~ msgid "Enable WLAN"
+#~ msgstr "Povolit WLAN"
+
+#~ msgid "System Help"
+#~ msgstr "Nápověda k systému"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_"
+
+#~ msgid "Permanent timeshift"
+#~ msgstr "Trvalý časový posun"
+
+#, fuzzy
+#~ msgid "Drive\t\tDevice\tSize\tFree\tType"
+#~ msgstr "Jednotka\t\tZaříz.\tVelikost\tVolné m.\tMédia"
+
+#, fuzzy
+#~ msgid "Energy savings mode"
+#~ msgstr "Úsporný režim"
+
+#, fuzzy
+#~ msgid " Automatic Standby after (min)"
+#~ msgstr " Doba aktivace (hod.)"
+
+#, fuzzy
+#~ msgid " Automatic Poweroff after (min)"
+#~ msgstr " Doba aktivace (hod.)"
+
+#, fuzzy
+#~ msgid "Device Name:"
+#~ msgstr "Typ zařízení:"
+
+#, fuzzy
+#~ msgid "directly"
+#~ msgstr "Upravit"
+
+#, fuzzy
+#~ msgid "Reset Settings"
+#~ msgstr "Nastavení příjmu"
+
+#, fuzzy
+#~ msgid "Resetting..."
+#~ msgstr "Uložit nastavení?"
+
+#~ msgid "Please enter encryption key"
+#~ msgstr "Zadejte šifrovací klíč"
+
+#, fuzzy
+#~ msgid "Energy Saving Mode is not"
+#~ msgstr "Úsporný režim"
+
+#~ msgid "Recording only"
+#~ msgstr "Jen nahrávání"
+
+#~ msgid "All"
+#~ msgstr "Vše"
+
+#~ msgid "Only Recording"
+#~ msgstr "Jen nahrávání"
+
+#, fuzzy
+#~ msgid "Attention:"
+#~ msgstr "Extension HD:"
+
+#, fuzzy
+#~ msgid "Storing settings... please wait."
+#~ msgstr "Ukládání nastavení, počkejte prosím..."
+
+#~ msgid "Please wait!"
+#~ msgstr "Počkejte prosím..."
+
+#~ msgid "Please wait"
+#~ msgstr "Počkejte prosím"
+
+#~ msgid "Rescan network"
+#~ msgstr "Znovu prohledat síť"
+
+#, fuzzy
+#~ msgid "DUMMYTEXT_Database vdr doesn't exist$"
+#~ msgstr "nenainstalováno"
+
+#, fuzzy
+#~ msgid "Changes saved (100%)"
+#~ msgstr "Změny provedeny"
+
+#, fuzzy
+#~ msgid "Checking online connection, please wait..."
+#~ msgstr "Prohledávání sítí, počkejte prosím..."
+
+#~ msgid "not online (routing failed)"
+#~ msgstr "offline (chyba směrování)"
+
+#~ msgid "not online (dns failed)"
+#~ msgstr "offline (chyba DNS)"
+
+#~ msgid "Resize and then reboot?"
+#~ msgstr "Změnit velikost a restartovat?"
+
+#, fuzzy
+#~ msgid "Network plural$"
+#~ msgstr "Síť"
+
+#, fuzzy
+#~ msgid "Network singular$"
+#~ msgstr "Nastavení sítě"
+
+#~ msgid "NetCeiver"
+#~ msgstr "Netceiver"
+
+#~ msgid "Loading recordings failed!"
+#~ msgstr "Načtení nahrávek se nezdařilo!"
+
+#, fuzzy
+#~ msgid "Bridge = on"
+#~ msgstr "Netceiver"
+
+#, fuzzy
+#~ msgid "VLAN off"
+#~ msgstr "Vypnout WLAN"
+
+#~ msgid "NetLink"
+#~ msgstr "NetLink"
+
+#~ msgid "Mode"
+#~ msgstr "Režim"
+
+#~ msgid "NetLink: NetServer"
+#~ msgstr "NetLink: síťový server"

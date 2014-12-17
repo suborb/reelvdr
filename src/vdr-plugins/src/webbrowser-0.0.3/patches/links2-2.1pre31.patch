@@ -1,0 +1,64 @@
+diff -uNr links-2.1pre31/default.c links-2.1pre31.patched/default.c
+--- links-2.1pre31/default.c	2007-10-24 18:19:29.000000000 +0200
++++ links-2.1pre31.patched/default.c	2007-12-11 15:04:15.387414993 +0100
+@@ -1409,6 +1409,9 @@
+ int screen_width = 80;
+ int dump_codepage = -1;
+ 
++int transparency=240;
++int margin_x=20;
++int margin_y=20;
+ int max_format_cache_entries = 5;
+ long memory_cache_size = 1048576;
+ long image_cache_size = 1048576;
+@@ -1551,6 +1554,9 @@
+ 	{1, NULL, prog_rd, prog_wr, 0, 0, &mms_prog, "mms", NULL},
+ 	{1, NULL, block_rd, block_wr, 0, 0, NULL, "imageblock", NULL},
+ 	{1, NULL, dp_rd, dp_wr, 0, 0, NULL, "video_driver", NULL},
++        {1, gen_cmd, num_rd, num_wr, 1, 255, &transparency, NULL, "transparency"},
++        {1, gen_cmd, num_rd, num_wr, 1, 255, &margin_x, NULL, "margin_x"},
++        {1, gen_cmd, num_rd, num_wr, 1, 255, &margin_y, NULL, "margin_y"},
+ 	{0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL},
+ };
+ 
+diff -uNr links-2.1pre31/directfb.c links-2.1pre31.patched/directfb.c
+--- links-2.1pre31/directfb.c	2006-11-22 21:55:03.000000000 +0100
++++ links-2.1pre31.patched/directfb.c	2007-12-11 14:58:40.868351838 +0100
+@@ -32,8 +32,10 @@
+ #include "directfb_cursors.h"
+ 
+ 
+-#define FOCUSED_OPACITY    0xFF
+-#define UNFOCUSED_OPACITY  0xC0
++//#define FOCUSED_OPACITY    0xDF
++#define FOCUSED_OPACITY transparency
++//#define UNFOCUSED_OPACITY  0xC0
++#define UNFOCUSED_OPACITY ((transparency-63 > 0) ? transparency-63 : 0)
+ 
+ #define DIRECTFB_HASH_TABLE_SIZE  23
+ struct graphics_device **directfb_hash_table[DIRECTFB_HASH_TABLE_SIZE];
+@@ -71,6 +73,9 @@
+ static void directfb_remove_from_table (struct graphics_device *gd);
+ static struct graphics_device * directfb_lookup_in_table (DFBWindowID  id);
+ 
++extern int transparency;
++extern int margin_x;
++extern int margin_y;
+ 
+ static unsigned char *
+ directfb_fb_init_driver (unsigned char *param, unsigned char *display)
+@@ -146,10 +151,10 @@
+     return NULL;
+ 
+   desc.flags  = DWDESC_WIDTH | DWDESC_HEIGHT | DWDESC_POSX | DWDESC_POSY;
+-  desc.width  = directfb_driver.x;
+-  desc.height = directfb_driver.y;
+-  desc.posx   = 0;
+-  desc.posy   = 0;
++  desc.width  = directfb_driver.x - 2*margin_x; //TB
++  desc.height = directfb_driver.y - 2*margin_y; //TB
++  desc.posx   = margin_x; //TB = 0;
++  desc.posy   = margin_y; //TB = 0;
+ 
+   if (layer->CreateWindow (layer, &desc, &window) != DFB_OK)
+     return NULL;

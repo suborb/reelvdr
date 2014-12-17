@@ -1,0 +1,130 @@
+diff -Nur vdr-1.3.21/libsi/Makefile vdr-1.3.21-reel/libsi/Makefile
+--- vdr-1.3.21/libsi/Makefile	2004-10-16 15:31:50.000000000 +0200
++++ vdr-1.3.21-reel/libsi/Makefile	2005-06-20 22:19:12.000000000 +0200
+@@ -11,6 +11,10 @@
+ ARFLAGS = ru
+ RANLIB = ranlib
+ 
++-include ../Make.config.64
++
++### GA
++CXXFLAGS += -funroll-loops
+ ### The directory environment:
+ 
+ INCLUDES +=
+diff -Nur vdr-1.3.21/Make.config vdr-1.3.21-reel/Make.config
+--- vdr-1.3.21/Make.config	2005-07-10 15:01:35.000000000 +0200
++++ vdr-1.3.21-reel/Make.config	1970-01-01 01:00:00.000000000 +0100
+@@ -0,0 +1,27 @@
++#
++# User defined Makefile options for the Video Disk Recorder
++#
++# Copy this file to 'Make.config' and change the parameters as necessary.
++#
++# See the main source file 'vdr.c' for copyright information and
++# how to reach the author.
++#
++# $Id: Make.config.template 1.4 2005/05/14 10:32:33 kls Exp $
++
++### The C compiler and options:
++
++CC       = ccache gcc
++CFLAGS   = -O2
++
++CXX      = ccache c++
++CXXFLAGS = -fPIC -g -O2 -Wall -Woverloaded-virtual
++
++### The directory environment:
++
++DVBDIR   = /usr/include/dvb
++MANDIR   = /usr/local/man
++BINDIR   = /usr/local/bin
++
++PLUGINDIR= ../vdr-plugins
++PLUGINLIBDIR= /usr/local/lib/vdr
++VIDEODIR = /export/vdr
+diff -Nur vdr-1.3.21/Makefile vdr-1.3.21-reel/Makefile
+--- vdr-1.3.21/Makefile	2005-07-10 15:00:22.000000000 +0200
++++ vdr-1.3.21-reel/Makefile	2005-07-07 23:40:52.000000000 +0200
+@@ -4,20 +4,22 @@
+ # See the main source file 'vdr.c' for copyright information and
+ # how to reach the author.
+ #
+-# $Id: Makefile 1.74 2005/02/13 10:13:45 kls Exp $
++# $Id: Makefile 1.75 2005/05/14 10:32:13 kls Exp $
+ 
+ .DELETE_ON_ERROR:
+ 
+-CC       ?= gcc
++CC       ?= ccache gcc
+ CFLAGS   ?= -O2
+ 
+-CXX      ?= g++
+-CXXFLAGS ?= -g -O2 -Wall -Woverloaded-virtual
++CXX      ?= ccache g++
++CXXFLAGS ?= -fPIC -g -O2 -Wall -Woverloaded-virtual
+ 
+ DVBDIR   = ../DVB
+ LSIDIR   = ./libsi
+ MANDIR   = /usr/local/man
+ BINDIR   = /usr/local/bin
++LIBS     = -ljpeg -lpthread -ldl
++INCLUDES =
+ 
+ PLUGINDIR= ./PLUGINS
+ PLUGINLIBDIR= $(PLUGINDIR)/lib
+@@ -29,7 +31,7 @@
+ 
+ -include Make.config
+ 
+-INCLUDES = -I$(DVBDIR)/include
++INCLUDES += -I$(DVBDIR)/include
+ 
+ SILIB    = $(LSIDIR)/libsi.a
+ 
+@@ -40,6 +42,9 @@
+        skinclassic.o skins.o skinsttng.o sources.o spu.o status.o svdrp.o themes.o thread.o\
+        timers.o tools.o transfer.o vdr.o videodir.o
+ 
++# Reelbox Interface
++OBJS += reelboxbase.o
++
+ # SUBMENU + TinyXML
+ OBJS += tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o submenu.o
+ 
+@@ -109,7 +114,7 @@
+ # The main program:
+ 
+ vdr: $(OBJS) $(SILIB)
+-	$(CXX) $(CXXFLAGS) -rdynamic $(OBJS) $(NCURSESLIB) -ljpeg -lpthread -ldl $(LIBDIRS) $(SILIB) -o vdr
++	$(CXX) $(CXXFLAGS) -rdynamic $(OBJS) $(NCURSESLIB) $(LIBS) $(LIBDIRS) $(SILIB) -o vdr
+ 
+ # The font files:
+ 
+@@ -178,13 +183,19 @@
+ # Install the files:
+ 
+ install:
+-	@cp vdr runvdr $(BINDIR)
+-	@gzip -c vdr.1 > $(MANDIR)/man1/vdr.1.gz
+-	@gzip -c vdr.5 > $(MANDIR)/man5/vdr.5.gz
+-	@if [ ! -d $(VIDEODIR) ]; then\
+-            mkdir $(VIDEODIR);\
+-            cp *.conf $(VIDEODIR);\
+-            fi
++	install -s vdr $(BINDIR)
++	#@cp vdr runvdr $(BINDIR)
++	gzip -c vdr.1 > $(MANDIR)/man1/vdr.1.gz
++	gzip -c vdr.5 > $(MANDIR)/man5/vdr.5.gz
++	#@if [ ! -d $(VIDEODIR) ]; then\
++	#    mkdir $(VIDEODIR);\
++	#    cp *.conf $(VIDEODIR);\
++	#    fi
++
++plugins-install: plugins
++	install -s $(PLUGINDIR)/lib/* $(PLUGINLIBDIR)
++
++install-all: install plugins-install
+ 
+ # Source documentation:
+ 

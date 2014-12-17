@@ -1,0 +1,290 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-reelbox\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-09 12:08+0200\n"
+"PO-Revision-Date: 2009-03-03 16:36+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "brightness"
+msgstr "Stralucire"
+
+msgid "contrast"
+msgstr "contrast"
+
+msgid "colour"
+msgstr "culoare"
+
+msgid "sharpness"
+msgstr "claritate"
+
+msgid "gamma cor."
+msgstr "corectie gamma"
+
+msgid "flicker"
+msgstr "licărire"
+
+msgid "Reset to default"
+msgstr "Revenire la initial"
+
+msgid "Picture Settings"
+msgstr "Setari imagine"
+
+msgid "Fill to Screen"
+msgstr "Umple ecran"
+
+msgid "Fill to Aspect"
+msgstr "Umple Aspect"
+
+msgid "Crop to Fill"
+msgstr "Taie pentru a incapea"
+
+msgid "Setup - Video"
+msgstr "Setup - Video"
+
+msgid "SDTV only"
+msgstr "numai SDTV (Standard Tv)"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Off"
+msgstr "Oprit"
+
+msgid "Progressive"
+msgstr "Progresiv"
+
+msgid "Interlaced"
+msgstr "Intretesut"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "Media resolution"
+msgstr "Rezolutie"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Always on"
+msgstr "Intotdeauna pornit"
+
+msgid "Always off"
+msgstr "Intotdeauna oprit"
+
+msgid "On"
+msgstr "Pornit"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "SCART"
+msgstr "SCART"
+
+msgid "Mini-DIN"
+msgstr "Mini-DIN"
+
+msgid "Analog+digital"
+msgstr "Analog+digital"
+
+msgid "Experts"
+msgstr "Expert"
+
+msgid "Video Settings"
+msgstr "Setari Video"
+
+msgid "Use extension HD"
+msgstr "Foloseste extensia HD"
+
+msgid "Output"
+msgstr "Iesire"
+
+msgid "Analog Output"
+msgstr "Iesire Analog"
+
+msgid "Analog Port"
+msgstr "Port Analog "
+
+msgid "Secondary Output"
+msgstr "Iesire secundara"
+
+msgid "Switching Voltage"
+msgstr "Voltaj comutare"
+
+msgid "Display Type"
+msgstr "Tip Display"
+
+msgid "Aspect Ratio"
+msgstr "Ratie Aspect"
+
+msgid "Resolution"
+msgstr "Rezolutie"
+
+msgid "Refresh Rate"
+msgstr "Rata reimprospatare"
+
+msgid "Progressive/Interlaced"
+msgstr "Progresiv/Intretesut"
+
+msgid "Deinterlacer for SDTV"
+msgstr "Deintretesere pentru SDTV"
+
+msgid "Dot by Dot"
+msgstr "Punct cu Punct"
+
+msgid "Resolution change"
+msgstr "Schimba rezolutie"
+
+msgid "OSD scaling"
+msgstr "Scalare OSD"
+
+msgid "Overscan"
+msgstr "Suprascanare"
+
+msgid "Mode"
+msgstr "Mod"
+
+msgid "Output mode"
+msgstr "Mod iesire"
+
+msgid "Anamorphic+WSS"
+msgstr "Anamorfic+WSS"
+
+msgid "Anamorphic"
+msgstr "Anamorphic"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Control Ratie Aspect"
+
+msgid "Auto PAL50/PAL60"
+msgstr "Auto PAL50/PAL60"
+
+msgid "PAL50 only"
+msgstr "numai PAL50"
+
+msgid "NTSC only"
+msgstr "numai NTSC"
+
+msgid "Norm/Framerate"
+msgstr "Norma/Rata de cadre"
+
+msgid "At Startup"
+msgstr "La Pornire"
+
+msgid "Scart Voltage"
+msgstr "Voltaj scart"
+
+msgid "Auto 75Hz+60Hz (VESA)"
+msgstr "Auto 75Hz+60Hz (VESA)"
+
+msgid "Auto 50Hz+60Hz (NON-VESA!)"
+msgstr "Auto 50Hz+60Hz (NON-VESA!)"
+
+msgid "Auto 67Hz+60Hz (NON-VESA!)"
+msgstr "Auto 67Hz+60Hz (NON-VESA!)"
+
+msgid "50Hz Only (NON-VESA!)"
+msgstr "numai 50Hz  (NON-VESA!)"
+
+msgid "60Hz Only (VESA)"
+msgstr "numai  60Hz (VESA)"
+
+msgid "67Hz Only (NON-VESA!)"
+msgstr "numai 67Hz  (NON-VESA!)"
+
+msgid "75Hz Only (VESA)"
+msgstr "numai 75Hz (VESA)"
+
+msgid "Framerate"
+msgstr "Rata de cadre"
+
+msgid "no"
+msgstr "NU"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "Upscaling for SDTV"
+msgstr "Upscalare pentru SDTV"
+
+msgid "Setup - Audio"
+msgstr "Setari - Audio"
+
+msgid "Audio Settings"
+msgstr "Setari Audio"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Foloseste Dolby Digital"
+
+#, fuzzy
+msgid " Output Dolby D/dts on"
+msgstr " Iesire DD/dts pornita"
+
+msgid "S/P-DIF"
+msgstr "S/P-DIF"
+
+msgid " Output as"
+msgstr " Iesire ca"
+
+msgid "Stereo (PCM)"
+msgstr "Stereo (PCM)"
+
+#, fuzzy
+msgid "bitstream (Dolby D)"
+msgstr "bitstream (AC3)"
+
+msgid "Soundcard"
+msgstr "Placa sunet"
+
+msgid " Delay (1/100s)"
+msgstr ""
+
+msgid "Analog Audio on"
+msgstr "Audio Analag pornit"
+
+msgid "TRS (3.5mm phone jack)"
+msgstr "TRS (3.5mm mufa casti)"
+
+msgid "HDMI/SCART/RCA jack"
+msgstr "HDMI/SCART/RCA jack"
+
+msgid "Analog Mix"
+msgstr "Mix Analog"
+
+msgid "Restart ReelBox now? Please wait 2 minutes!"
+msgstr "Repornesc ReelBox acum ? Va rog asteptati 2 minute !"
+
+#~ msgid "Reel"
+#~ msgstr "Reel"
+
+#~ msgid "Reel Lite"
+#~ msgstr "Reel Lite"
+
+#, fuzzy
+#~ msgid " Delay Dolby D/dts"
+#~ msgstr " Intarziere DD/dts"
+
+#~ msgid "Delay Stereo"
+#~ msgstr "Intarziere Stereo"

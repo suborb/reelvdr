@@ -1,0 +1,105 @@
+diff -Nur vdr-1.4.0-pl8/vdr.c vdr-1.4.0/vdr.c
+--- vdr-1.4.0-pl8/vdr.c	2006-06-07 15:04:35.000000000 +0200
++++ vdr-1.4.0/vdr.c	2006-06-07 16:43:31.000000000 +0200
+@@ -188,6 +188,8 @@
+   int WatchdogTimeout = DEFAULTWATCHDOG;
+   const char *Terminal = NULL;
+   const char *Shutdown = NULL;
++  bool TimerWakeup = false; 
++  bool AutoShutdown = false;
+ 
+   bool UseKbd = true;
+   const char *LircDevice = NULL;
+@@ -230,6 +232,7 @@
+       { "record",   required_argument, NULL, 'r' },
+       { "shutdown", required_argument, NULL, 's' },
+       { "terminal", required_argument, NULL, 't' },
++      { "timerwakeup", no_argument,    NULL, 'T' },
+       { "user",     required_argument, NULL, 'u' },
+       { "version",  no_argument,       NULL, 'V' },
+       { "vfat",     no_argument,       NULL, 'v' | 0x100 },
+@@ -239,7 +242,7 @@
+     };
+ 
+   int c;
+-  while ((c = getopt_long(argc, argv, "a:c:dD:E:g:hk:l:L:mp:P:r:s:t:u:v:Vw:", long_options, NULL)) != -1) {
++  while ((c = getopt_long(argc, argv, "a:c:dD:E:g:hk:l:L:mp:P:r:s:t:Tu:v:Vw:", long_options, NULL)) != -1) {
+         switch (c) {
+           case 'a': AudioCommand = optarg;
+                     break;
+@@ -330,6 +333,8 @@
+           case 'u': if (*optarg)
+                        VdrUser = optarg;
+                     break;
++          case 'T': TimerWakeup = true;
++                    break;
+           case 'V': DisplayVersion = true;
+                     break;
+           case 'v' | 0x100:
+@@ -521,6 +526,7 @@
+   int LastTimerChannel = -1;
+   int PreviousChannel[2] = { 1, 1 };
+   int PreviousChannelIndex = 0;
++  time_t vdrStartTime = time(NULL);
+   time_t LastChannelChanged = time(NULL);
+   time_t LastActivity = 0;
+   time_t LastCamMenu = 0;
+@@ -772,6 +778,14 @@
+         if (time(NULL) - LastChannelChanged >= Setup.ZapTimeout && LastChannel != PreviousChannel[PreviousChannelIndex])
+            PreviousChannel[PreviousChannelIndex ^= 1] = LastChannel;
+         // Timers and Recordings:
++        if (TimerWakeup && Shutdown && time(NULL) - vdrStartTime > SHUTDOWNWAIT) { 
++           if (LastActivity == 0) {
++               LastActivity = 1;
++               AutoShutdown = true;
++           }
++           else if (LastActivity != 1)
++               AutoShutdown = false;
++           }
+         if (!Timers.BeingEdited()) {
+            // Assign events to timers:
+            Timers.SetEvents();
+@@ -1037,7 +1051,7 @@
+                cTimer *timer = Timers.GetNextActiveTimer();
+                time_t Next  = timer ? timer->StartTime() : 0;
+                time_t Delta = timer ? Next - time(NULL) : 0;
+-               if (Next && Delta <= Setup.MinEventTimeout * 60) {
++               if (Next && Delta <= Setup.MinEventTimeout * 60 && !AutoShutdown) {
+                   char *buf;
+                   asprintf(&buf, tr("Recording in %ld minutes, shut down anyway?"), Delta / 60);
+                   bool confirm = Interface->Confirm(buf);
+@@ -1167,7 +1181,7 @@
+                  Skins.Message(mtInfo, tr("Editing process finished"));
+               }
+            }
+-        if (!Interact && ((!cRecordControls::Active() && !cCutter::Active() && !cPluginManager::Active() && (!Interface->HasSVDRPConnection() || UserShutdown)) || ForceShutdown)) {
++        if (!Interact && ((!cRecordControls::Active() && !cCutter::Active() && !cPluginManager::Active() && (!Interface->HasSVDRPConnection() || UserShutdown || AutoShutdown)) || ForceShutdown)) {
+            time_t Now = time(NULL);
+            if (Now - LastActivity > ACTIVITYTIMEOUT) {
+               // Shutdown:
+@@ -1185,13 +1199,14 @@
+                     else
+                        LastActivity = 1;
+                     }
+-                 if (!Next || Delta > Setup.MinEventTimeout * 60 || ForceShutdown) {
++                 if (!Next || Delta > Setup.MinEventTimeout * 60 || ForceShutdown || (AutoShutdown && Delta > Setup.MinEventTimeout * 60)) {
+                     ForceShutdown = false;
++                    AutoShutdown = false;
+                     if (timer)
+                        dsyslog("next timer event at %s", *TimeToString(Next));
+                     if (WatchdogTimeout > 0)
+                        signal(SIGALRM, SIG_IGN);
+-                    if (Interface->Confirm(tr("Press any key to cancel shutdown"), UserShutdown ? 5 : SHUTDOWNWAIT, true)) {
++                    if (Interface->Confirm(tr("Press any key to cancel shutdown"), UserShutdown ? 1 : SHUTDOWNWAIT, true)) {
+                        cControl::Shutdown();
+                        int Channel = timer ? timer->Channel()->Number() : 0;
+                        const char *File = timer ? timer->File() : "";
+@@ -1202,6 +1217,8 @@
+                        isyslog("executing '%s'", cmd);
+                        SystemExec(cmd);
+                        free(cmd);
++                       //UserShutdownActive = true; //by kh
++                       Interrupted=1; // GA
+                        LastActivity = time(NULL) - Setup.MinUserInactivity * 60 + SHUTDOWNRETRY; // try again later
+                        }
+                     else {

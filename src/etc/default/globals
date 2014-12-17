@@ -1,0 +1,108 @@
+#!/bin/sh
+# Reelbox global definitions
+#
+# (C) 2006 by Reel Multimedia AG http://www.reelbox.org
+# Author: RollerCoaster@reel-multimedia.com
+# Licence: GPL2
+# History: 20060428 initial re(e)lease
+#
+# this is not a script that is executed any time, but for inclusion in
+# scripts to not having to define anything again and again
+
+MyName=`basename $0`
+SETUPCONF=/etc/vdr/setup.conf
+loglevel=3
+
+Syslog () {
+	logger -t $MyName -s "$1"
+}
+
+Log () {
+	if [ $1 -le $loglevel ] ; then
+		shift
+		#echo $* >&2
+		logger -t $MyName -s -- $* >&2
+	fi
+}
+
+AddLocales()
+{
+	#find local in available-locales list
+	locale -a | grep $1 2>&1 > /dev/null;
+	if [ $? -ne 0 ]; then
+		#echo $1 "locale not found. Adding..."
+		#locale-gen $1.UTF-8 #generate only the missing locale
+		localedef --no-archive -f UTF-8 -i $1 $1.UTF-8
+	fi
+}
+
+LANGUAGE=`grep "^OSDLanguage" "$SETUPCONF" | cut -f2 -d= | tr -d " "`
+LANGFILE=/etc/reel/`basename $0`.i18n
+#set -x
+
+case $LANGUAGE in
+	0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21)
+		echo "Your language is not configured properly. Please go to 'Language settings' and select one."
+		LANG=en_US.UTF-8
+		;;
+	??_??)
+		LANG=$LANGUAGE.UTF-8
+		AddLocales $LANGUAGE
+		;;
+	*)
+		Syslog "language $LANGUAGE not supported"
+		LANG=en_US.UTF-8
+		;;
+esac
+export LANG
+
+
+#translate a text
+tl () {
+	gettext reel "$1"
+}
+
+
+#send a message via svdrp and translate it before
+smesg () {
+	    svdrpsend.sh  mesg "$1"
+}
+
+smesgtl () {
+	    svdrpsend.sh  "mesg `tl "$1"`"
+}
+
+secho () {
+	    echo  "`tl "$1"`"
+}
+
+export PATH=$PATH:/usr/sbin:/sbin
+
+# find out if this is a RB Lite (look for PCI-id of BSP)
+RbLite () {
+	grep -q 12d51000 /proc/bus/pci/devices
+}
+
+RbMini () {
+        grep -q 14f12450 /proc/bus/pci/devices
+}
+
+RbAvg () {
+        grep -q 808627a0 /proc/bus/pci/devices || grep -q 10027910 /proc/bus/pci/devices
+}
+
+RbIce () {
+        grep -q 80860709 /proc/bus/pci/devices
+}
+
+VdrRunning () {
+	#returns:
+	# 1=no, 0=running, 2=in shutdown (FIXME: needs changes to reelvdr!)
+	if [ -f /tmp/vdr.standby ] ; then
+		#Log 3 VdrRunning: no
+		return 1
+	else
+		#Log 3 VdrRunning: yes
+		return 0
+	fi
+}

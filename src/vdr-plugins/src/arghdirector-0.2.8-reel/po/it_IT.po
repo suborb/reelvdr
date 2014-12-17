@@ -1,0 +1,63 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-arghdirector\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-03 10:12+0200\n"
+"PO-Revision-Date: 2009-06-20 14:07+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Multifeed Options"
+msgstr "Opzioni Multifeed"
+
+msgid "Portal Mode"
+msgstr "Modalità portale"
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Sì"
+
+msgid "Display info on channel change"
+msgstr "Mostrare info su cambio canale"
+
+msgid "Display EPG information"
+msgstr "Mostrare info EPG"
+
+msgid "Show plugin again on button"
+msgstr "Mostrare di nuovo il plugin sul pulsante"
+
+msgid "Swap up and down"
+msgstr "Invertire Sù - Giù"
+
+msgid "Show old director OSD"
+msgstr "Mostrare il vecchio director OSD"
+
+msgid "No EPG available"
+msgstr "Nessun EPG disponibile!"
+
+msgid "No Multifeed options"
+msgstr "Nessuna opzione Multifeed"
+
+msgid "plugin to use the multifeed option"
+msgstr "Plugin per utilizzare l'opzione Multifeed"
+
+msgid "Multifeed Options "
+msgstr "Opzioni Multifeed"
+

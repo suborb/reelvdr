@@ -1,0 +1,142 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediad\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-07-03 10:54+0200\n"
+"PO-Revision-Date: 2011-09-07 18:00+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "autoplays identified media"
+msgstr "Automatisch afspelen gedetecteerde media"
+
+msgid "Play Disk"
+msgstr "Disk afspelen"
+
+msgid "Play Medium"
+msgstr "Mediaspeler"
+
+msgid "Identifying Disc"
+msgstr "Identificeer disc"
+
+msgid "Choose action"
+msgstr "Kies een actie"
+
+msgid "Couldn't read disc!"
+msgstr "Kan de disk niet lezen"
+
+msgid "Start of"
+msgstr "Begin vanaf"
+
+msgid "Missing appropriate PlugIn!"
+msgstr "Mis de juiste plugin"
+
+msgid "Play recordings"
+msgstr "Opnames afspelen"
+
+msgid "Show archive"
+msgstr "Toon archief"
+
+msgid "Play video CD"
+msgstr "Video CD afspelen"
+
+msgid "Play music"
+msgstr "Muziek afspelen"
+
+msgid "Archive audio CD"
+msgstr "Audio cd archief"
+
+msgid "Play multimedia"
+msgstr "Mutimedia afspelen"
+
+msgid "Play DVD"
+msgstr "DVD afspelen"
+
+msgid "Play photo CD"
+msgstr "Photo CD afspelen"
+
+msgid "Play audio CD"
+msgstr "Audio CD afspelen"
+
+msgid "Burn recordings"
+msgstr "Brand opnames"
+
+msgid "Copy DVD"
+msgstr "DVD kopieren"
+
+msgid "Browse data"
+msgstr "Bladeren door data"
+
+msgid "Play video"
+msgstr "DVD afspelen"
+
+msgid "Play video DVD"
+msgstr "DVD video afspelen"
+
+msgid "Wrong dmh-archive-dvd structure!"
+msgstr "Verkeerde dmh-archief-dvd-structuur"
+
+msgid "Drive not present in mplayersources.conf!"
+msgstr "Drive niet in mplayersources.conf gedefinieerd"
+
+msgid "Drive not present in mp3sources.conf!"
+msgstr "Drive niet in mp3sources.conf gedefinieerd"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Video DVD"
+msgstr "DVD Video"
+
+msgid "SVCD"
+msgstr "SVCD"
+
+msgid "blank disc"
+msgstr "lege disc"
+
+msgid "unknown"
+msgstr "onbekend"
+
+msgid "Select device"
+msgstr "Kies apparaat"
+
+msgid "ask each time"
+msgstr "Elke keer vragen"
+
+msgid "AutoStart"
+msgstr "Automatisch starten"
+
+msgid "Request for DVD action"
+msgstr "Verzoek om Dvd actie"
+
+msgid "Request for CD action"
+msgstr "Verzoek om CD actie"
+
+msgid "Recordings"
+msgstr "Opnames"
+
+#~ msgid "no"
+#~ msgstr "nee"
+
+#~ msgid "yes"
+#~ msgstr "Ja"
+
+#~ msgid "RequestDvdAction"
+#~ msgstr "Verzoek Dvd actie"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"

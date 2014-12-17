@@ -1,0 +1,361 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-radio\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 11:01+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "unknown program type"
+msgstr "tipus de programa desconegut"
+
+msgid "News"
+msgstr "Notícies"
+
+msgid "Current affairs"
+msgstr "Actualitat"
+
+msgid "Information"
+msgstr "Informació"
+
+msgid "Sport"
+msgstr "Esports"
+
+msgid "Education"
+msgstr "Educació"
+
+msgid "Drama"
+msgstr "Teatre"
+
+msgid "Culture"
+msgstr "Cultura"
+
+msgid "Science"
+msgstr "Ciència"
+
+msgid "Varied"
+msgstr "Varietats"
+
+msgid "Pop music"
+msgstr "Música POP"
+
+msgid "Rock music"
+msgstr "Música Rock"
+
+msgid "M.O.R. music"
+msgstr "Música M.O.R."
+
+msgid "Light classical"
+msgstr "Música clàssica light"
+
+msgid "Serious classical"
+msgstr "Música clàssica"
+
+msgid "Other music"
+msgstr "Altra música"
+
+msgid "Alarm"
+msgstr "Alarma"
+
+msgid "ext. Info"
+msgstr ""
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radiotext"
+
+msgid "  [waiting ...]"
+msgstr "  [en espera ...]"
+
+msgid "Title :"
+msgstr ""
+
+msgid "Artist :"
+msgstr "Intèrpret :"
+
+msgid "Records"
+msgstr "Gravacions"
+
+msgid "with <0>"
+msgstr "amb <0>"
+
+msgid "Rass-Image(s) saved from Archiv "
+msgstr ""
+
+msgid "Rass-Image(s) saved from Gallery"
+msgstr ""
+
+msgid "Rass-Image saved"
+msgstr ""
+
+msgid "Rass-Image failed"
+msgstr ""
+
+msgid "Playlist"
+msgstr "Llista de reproducció"
+
+msgid "Sports"
+msgstr "Esports"
+
+msgid "Lottery"
+msgstr "Loteries"
+
+msgid "Weather"
+msgstr "El Temps"
+
+msgid "Stockmarket"
+msgstr "La Borsa"
+
+msgid "Other"
+msgstr "Altres"
+
+msgid "extra Info  since"
+msgstr ""
+
+msgid "RTplus Memory  since"
+msgstr "Memoria RTplus fins a"
+
+msgid "Programme"
+msgstr "Programa"
+
+msgid "Stat.Short"
+msgstr ""
+
+msgid "Station"
+msgstr "Emissora"
+
+msgid "Now"
+msgstr "Ara"
+
+msgid "...Part"
+msgstr "...Part"
+
+msgid "Next"
+msgstr "Següent"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Edit.Staff"
+msgstr "Edita Staff"
+
+msgid "Homepage"
+msgstr "Pàgina inicial"
+
+msgid "Interactivity"
+msgstr "Interactivitat"
+
+msgid "Phone-Hotline"
+msgstr "Telèfon de contacte"
+
+msgid "Phone-Studio"
+msgstr "Telèfon de l'Estudi"
+
+msgid "SMS-Studio"
+msgstr ""
+
+msgid "Email-Hotline"
+msgstr "e-mail de contacte"
+
+msgid "Email-Studio"
+msgstr "e-mail de l'Estudi"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "NewsLocal"
+msgstr "Informació local"
+
+msgid "DateTime"
+msgstr "Data Hora"
+
+msgid "Traffic"
+msgstr "Tràfic"
+
+msgid "Advertising"
+msgstr "Publicitat"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Exit"
+msgstr "Sortida"
+
+msgid "Info-File saved"
+msgstr ""
+
+msgid "RTplus-File saved"
+msgstr "Fitxer RTplus desat"
+
+msgid "last seen Radiotext"
+msgstr "darrer Radiotext llegit"
+
+msgid "Time"
+msgstr "Hora"
+
+msgid "Title"
+msgstr "Títol"
+
+msgid "Artist"
+msgstr "Intèrpret"
+
+msgid "Refresh Off"
+msgstr "No actualitzar"
+
+msgid "Refresh On"
+msgstr "Actualitzar"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Radiochannels RDS-Text"
+msgstr ""
+
+msgid "RDS-Radiotext"
+msgstr ""
+
+msgid "Off"
+msgstr "Off"
+
+msgid "only Text"
+msgstr "només Text"
+
+msgid "Text+TagInfo"
+msgstr "Text i Etiqueta"
+
+msgid "only, if some"
+msgstr "només, si n'hi ha algun"
+
+msgid "always"
+msgstr "sempre"
+
+msgid "Top"
+msgstr "A dalt"
+
+msgid "Bottom"
+msgstr "a baix"
+
+msgid "latest at Top"
+msgstr "El darrer a dalt"
+
+msgid "latest at Bottom"
+msgstr "El darrer a baix"
+
+msgid "Black"
+msgstr "Negre"
+
+msgid "White"
+msgstr "Blanc"
+
+msgid "Red"
+msgstr "Vermell"
+
+msgid "Green"
+msgstr "Verd"
+
+msgid "Yellow"
+msgstr "Groc"
+
+msgid "Magenta"
+msgstr "Magenta"
+
+msgid "Blue"
+msgstr "Blau"
+
+msgid "Cyan"
+msgstr "Cian"
+
+msgid "Transparent"
+msgstr "Transparent"
+
+msgid "about MainMenu"
+msgstr "sobre el Menú Principal"
+
+msgid "Automatic"
+msgstr "Automàtic"
+
+msgid "only Taginfo"
+msgstr "només Etiqueta"
+
+msgid "Rass only"
+msgstr ""
+
+msgid "Rass+Text mixed"
+msgstr ""
+
+msgid "Activate"
+msgstr "Activa"
+
+msgid "Use StillPicture-Function"
+msgstr ""
+
+msgid "Hide MainMenuEntry"
+msgstr ""
+
+msgid "RDSText Function"
+msgstr "Funció RDSText"
+
+msgid "RDSText OSD-Position"
+msgstr "Posició OSD de l'RDSText"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "Títol OSD de l'RDSText"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "Files (1-5) OSD de l'RDSText"
+
+msgid "RDSText OSD-Scrollmode"
+msgstr ""
+
+msgid "RDSText OSD-Taginfo"
+msgstr ""
+
+msgid "RDSText OSD-Skincolors used"
+msgstr ""
+
+msgid "RDSText OSD-Backgr.Color"
+msgstr ""
+
+msgid "RDSText OSD-Backgr.Transp."
+msgstr ""
+
+msgid "RDSText OSD-Foregr.Color"
+msgstr ""
+
+msgid "RDSText OSD-Timeout (0-1440 min)"
+msgstr ""
+
+msgid "RDSText OSD-Display"
+msgstr ""
+
+msgid "RDSText StatusMsg (lcdproc & co)"
+msgstr ""
+
+msgid "RDSText Rass-Function"
+msgstr ""
+
+msgid "External Info-Request by Internet"
+msgstr ""
+
+msgid "External Info-Request"
+msgstr ""
+
+#~ msgid "RaSS only"
+#~ msgstr "només RaSS"
+
+#~ msgid "RaSS+Text mixed"
+#~ msgstr "RaSS i Text"
+
+#~ msgid "Title  :"
+#~ msgstr "Títol  :"

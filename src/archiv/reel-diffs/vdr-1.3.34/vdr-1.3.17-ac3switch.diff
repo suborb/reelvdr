@@ -1,0 +1,87 @@
+--- vdr-1.3.17/i18n.c	2004-11-20 12:23:58.000000000 +0100
++++ vdr-1.3.17-ac3/i18n.c	2004-12-07 20:50:38.053980471 +0100
+@@ -3178,6 +3178,23 @@
+     "lisa uued transponderid",
+     "tilf. ny transp.",
+   },
++  { "Setup.DVB$Force transfermode (LiveAC3)",
++    "Transfermode erzwingen (LiveAC3)",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "Pakota siirtotila (LiveAC3)",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++  },
+   { "Setup.LNB$SLOF (MHz)",
+     "SLOF (MHz)",
+     "Frekvenca preklopa (MHz)",
+--- vdr-1.3.17/config.h	2004-11-16 17:57:43.000000000 +0100
++++ vdr-1.3.17-ac3/config.h	2004-12-07 20:54:39.626982042 +0100
+@@ -238,6 +238,7 @@
+   int RecordingDirs;
+   int VideoFormat;
+   int UpdateChannels;
++  int LiveMultichannelAudio;
+   int RecordDolbyDigital;
+   int ChannelInfoPos;
+   int OSDLeft, OSDTop, OSDWidth, OSDHeight;
+--- vdr-1.3.17/transfer.c	2004-12-07 22:28:26.484337419 +0100
++++ vdr-1.3.17-ac3/transfer.c	2004-12-07 21:12:53.470541087 +0100
+@@ -23,7 +23,7 @@
+   canToggleAudioTrack = false;
+   audioTrack = 0xC0;
+   active = false;
+-  if (DPid1 || DPid2)
++  if ((DPid1 || DPid2) && Setup.LiveMultichannelAudio)
+      HasDolby = true;
+   else
+      HasDolby = false;
+@@ -157,7 +157,7 @@
+          int l = b[i + 4] * 256 + b[i + 5] + 6;
+          switch (c) {
+            case 0xBD: // dolby
+-                HasDolby = true;
++                if ( Setup.LiveMultichannelAudio ) HasDolby = true;
+                 break;
+            case 0xC0 ... 0xC1: // audio
+                 if (c == 0xC1)
+--- vdr-1.3.17/menu.c	2004-11-20 11:49:17.000000000 +0100
++++ vdr-1.3.17-ac3/menu.c	2004-12-07 21:13:26.473355440 +0100
+@@ -1928,6 +1928,7 @@
+   SetSection(tr("DVB"));
+   Add(new cMenuEditIntItem( tr("Setup.DVB$Primary DVB interface"), &data.PrimaryDVB, 1, cDevice::NumDevices()));
+   Add(new cMenuEditBoolItem(tr("Setup.DVB$Video format"),          &data.VideoFormat, "4:3", "16:9"));
++  Add(new cMenuEditBoolItem(tr("Setup.DVB$Force transfermode (LiveAC3)"), &data.LiveMultichannelAudio));
+   Add(new cMenuEditStraItem(tr("Setup.DVB$Update channels"),       &data.UpdateChannels, 5, updateChannelsTexts));
+ }
+ 
+--- vdr-1.3.17/config.c	2004-10-31 17:17:39.000000000 +0100
++++ vdr-1.3.17-ac3/config.c	2004-12-07 21:14:29.491182018 +0100
+@@ -281,6 +281,7 @@
+   VideoFormat = 0;
+   UpdateChannels = 4;
+   RecordDolbyDigital = 1;
++  LiveMultichannelAudio = 0;
+   ChannelInfoPos = 0;
+   OSDLeft = 54;
+   OSDTop = 45;
+--- vdr-1.3.17/dvbplayer.c	2004-12-07 22:28:26.481337618 +0100
++++ vdr-1.3.17-ac3/dvbplayer.c	2004-12-07 22:27:18.658829236 +0100
+@@ -323,7 +323,7 @@
+          int l = b[i + 4] * 256 + b[i + 5] + 6;
+          switch (c) {
+            case 0xBD: // dolby
+-                HasDolby = true;
++                if (Setup.LiveMultichannelAudio ) HasDolby = true;
+                 break;
+            case 0xC0 ... 0xC1: // audio
+                 if (c == 0xC1)

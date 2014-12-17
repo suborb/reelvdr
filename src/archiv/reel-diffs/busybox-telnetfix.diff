@@ -1,0 +1,42 @@
+--- busybox-1.00/networking/telnet.c.org	2004-09-14 19:24:58.000000000 +0200
++++ busybox-1.00/networking/telnet.c	2005-08-06 18:14:13.000000000 +0200
+@@ -101,6 +101,7 @@
+ 	short	iaclen; /* could even use byte */
+ 	struct termios termios_def;
+ 	struct termios termios_raw;
++	char    do_termios;
+ } G;
+ 
+ #define xUSE_GLOBALVAR_PTR /* xUSE... -> don't use :D (makes smaller code) */
+@@ -616,12 +617,12 @@
+ 
+ static void rawmode(void)
+ {
+-	tcsetattr(0, TCSADRAIN, &G.termios_raw);
++	if (G.do_termios) tcsetattr(0, TCSADRAIN, &G.termios_raw);
+ }
+ 
+ static void cookmode(void)
+ {
+-	tcsetattr(0, TCSADRAIN, &G.termios_def);
++	 if (G.do_termios) tcsetattr(0, TCSADRAIN, &G.termios_def);
+ }
+ 
+ extern int telnet_main(int argc, char** argv)
+@@ -649,11 +650,12 @@
+ 
+ 	memset(&G, 0, sizeof G);
+ 
+-	if (tcgetattr(0, &G.termios_def) < 0)
+-		exit(1);
++	    if (tcgetattr(0, &G.termios_def) >= 0) {
++            G.do_termios = 1;
+ 
+-	G.termios_raw = G.termios_def;
+-	cfmakeraw(&G.termios_raw);
++	          G.termios_raw = G.termios_def;
++               cfmakeraw(&G.termios_raw);
++       }
+ 
+ 	if (argc < 2)
+ 		bb_show_usage();

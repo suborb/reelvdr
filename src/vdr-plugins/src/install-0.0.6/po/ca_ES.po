@@ -1,0 +1,783 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - ReelBox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-install\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-06-26 09:59+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: ReelBox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "The ReelBox installation wizard"
+msgstr "Instal·lació guiada de la ReelBox"
+
+msgid "The channellist could not be installed automatically from the ReelBox Avantgarde."
+msgstr "La llista de canals no pot ser instal·lada automàticament des de la Reelbox Avantgarde."
+
+msgid "Channellist"
+msgstr "Llista de canals"
+
+msgid "Channelscan"
+msgstr "Escaneig de canals"
+
+msgid "We shall now scan for channels."
+msgstr "A continuació s'iniciarà l'escaneig de canals."
+
+msgid "This will take a few minutes."
+msgstr "L'operació es completarà en uns minuts."
+
+msgid "Press OK to continue"
+msgstr "Premeu OK per a continuar"
+
+msgid "MultiRoom"
+msgstr "MultiRoom"
+
+msgid "Scanning for ReelBox MultiRoom server on network. Please wait..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Si us plau, espereu..."
+
+msgid "The MultiRoom system is already active."
+msgstr "El sistema MultiRoom està actiu."
+
+msgid "The MultiRoom system cannot be activated."
+msgstr "El sistema MultiRoom no es pot activar."
+
+msgid "This ReelBox Avantgarde is currently configured as recording server:"
+msgstr "Aquesta ReelBox Avantgarde està configurada com a servidor:"
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server (the first one was used up to now):"
+msgstr "S'ha trobat aquesta ReelBox Avantgarde a la xarxa i s'utilitzarà com a servidor:"
+
+msgid "\tDisable MultiRoom"
+msgstr "\tDesactiva MultiRoom"
+
+msgid "Note:"
+msgstr "Nota:"
+
+msgid "* MultiRoom is not enabled!"
+msgstr "* MultiRoom no està activat!"
+
+msgid "This ReelBox Avantgarde is found, but has MultiRoom disabled, so cannot be used as recording server:"
+msgstr "S'ha trobat aquesta ReelBox Avantgarde que no es pot utilitzar com a servidor perquè té MultiRoom desactivat:"
+
+msgid "This ReelBox Avantgarde is found and will be used as recording server:"
+msgstr "S'ha trobat aquesta ReelBox Avantgarde i s'utilitzarà com a servidor:"
+
+msgid "\tLeave MultiRoom unconfigured"
+msgstr "\tDeixa MultiRoom sense configurar"
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server."
+msgstr "S'han trobat aquestes ReelBox Avantgarde a la xarxa i es poden utilitzar com a servidor."
+
+msgid "Please select one of them:"
+msgstr "Si us plau, seleccioneu-ne una:"
+
+#, fuzzy
+msgid "No ReelBox Avantgarde was found in the network."
+msgstr "No s'ha trobat cap ReelBox Avantgarde a la xarxa."
+
+msgid "If you own an Avantgarde, turn it on and activate the MultiRoom System in Setup/Installation/MultiRoom."
+msgstr "Si tens una Avantgarde, engega-la i activa el sistema MultiRoom a Setup/Instal·lació/Configuració MultiRoom."
+
+msgid "Rescan"
+msgstr "Torna a escanejar"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Skip"
+msgstr "Omet"
+
+msgid "Setting changes - please wait"
+msgstr "S'estan desant els canvis - si us plau, espereu"
+
+msgid "Storing failed! (UUID is missing)"
+msgstr "S'ha produït un error en desar la configuració! (UUID no és present)"
+
+msgid "Settings stored"
+msgstr "S'ha desat la configuració"
+
+msgid "Reception"
+msgstr "Sintonització"
+
+msgid "No internal NetCeiver found. Searching network. Please wait..."
+msgstr ""
+
+msgid "Searching for internal NetCeiver..."
+msgstr ""
+
+#, c-format
+msgid "Searching for NetCeiver in VLAN %d"
+msgstr ""
+
+msgid "Internal NetCeiver found"
+msgstr ""
+
+msgid "NetCeiver found in VLAN"
+msgstr ""
+
+msgid "System error!"
+msgstr "S'ha produït un error de sistema!"
+
+msgid "No NetCeiver found!"
+msgstr "No s'ha trobat el NetCeiver!"
+
+msgid "Please check if the system cable is connected properly."
+msgstr "Si us plau, comproveu que el cable de sistema està connectat."
+
+msgid "Harddisk"
+msgstr "Disc dur"
+
+msgid "Internal harddisk found."
+msgstr ""
+
+msgid "Press OK to format now, otherwise the yellow buttown 'skip'."
+msgstr ""
+
+msgid ""
+"If this is the first usage of the harddisk, it must be formatted now. Formatting will DELETE ALL data on the harddisk.\n"
+" If you have used this harddisk before, you could skip this step."
+msgstr ""
+"Si utilitzeu per primera vegada el disc dur, cal que li'n doneu format. La formatació SUPRIMIRÀ TOT el contingut del disc.\n"
+" Podeu ometre aquest pas si el disc dur ha estat utilitzat abans."
+
+#, c-format
+msgid "The disk '%s' was already used before and may contain recordings and multimedia files."
+msgstr ""
+
+msgid "Do you want to mount it and use it as a device for your media files?"
+msgstr ""
+
+msgid "\tYes, mount it, preserve all recordings"
+msgstr ""
+
+msgid "\tNo, do not use the harddisk at all"
+msgstr ""
+
+msgid "You should mount this disk now if you want to use it for permanent timeshift even if you are not going to use it for your media files."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' is already in use for media files."
+msgstr ""
+
+msgid "No action needs to be taken."
+msgstr ""
+
+msgid "Press red key, if you want to format this harddisk:"
+msgstr "Premeu el botó vermell si voleu donar format al disc dur."
+
+msgid "CAUTION:"
+msgstr "PRECAUCIÓ:"
+
+msgid "If you choose to format, ALL data on the internal harddisk will be deleted!"
+msgstr "Si trieu donar format al disc, TOT el seu contingut es suprimirà!"
+
+msgid "Format"
+msgstr "Formata"
+
+msgid "Formatting in progress"
+msgstr "S'està donant format al disc"
+
+msgid "Formatting"
+msgstr "S'està donant format"
+
+msgid "Formatting in progress."
+msgstr "S'està donant format al disc."
+
+msgid "Please wait ..."
+msgstr "Si us plau, espereu ..."
+
+msgid "Time elapsed"
+msgstr "Temps transcorregut"
+
+msgid "Formatting complete"
+msgstr "La formatació s'ha completat"
+
+msgid "Formatting was successful."
+msgstr "La formatació s'ha completat amb èxit."
+
+msgid "The harddisk is now prepared for recording."
+msgstr "El disc dur és a punt per gravar."
+
+msgid "Press 'Next' to proceed with the installation."
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Not Formatting!"
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "Formatting failed!"
+msgstr ""
+
+msgid "Formating failed!"
+msgstr "S'ha produït un error en formatar el disc!"
+
+msgid "Mounting harddisk ..."
+msgstr ""
+
+msgid "Please select the target for your recordings:"
+msgstr "Si us plau, seleccioneu la destinació de les vostres gravacions:"
+
+msgid " I want to store my recordings ..."
+msgstr " Voleu desar les gravacions..."
+
+msgid " - on the local harddisk of this NetClient."
+msgstr " - al disc dur del NetClient."
+
+msgid " - on the harddisk of the ReelBox Avantgarde."
+msgstr " - al disc dur de la ReelBox Avantgarde."
+
+msgid "Error"
+msgstr "S'ha produït un error"
+
+msgid "No Harddisk found."
+msgstr "No s'ha trobat el disc dur."
+
+msgid "Recording is not possible."
+msgstr "No és possible realitzar la gravació."
+
+msgid "Handling"
+msgstr "S'està gestionant"
+
+msgid "Please select a language"
+msgstr "Si us plau, seleccioneu l'idioma"
+
+msgid "Please select a language and timezone"
+msgstr "Si us plau, seleccioneu l'idioma i la zona horària"
+
+msgid "Setup.OSD$Language"
+msgstr "Idioma"
+
+msgid "City/Region"
+msgstr "Ciutat/País"
+
+msgid "Please select the prefered language using the"
+msgstr "Si us plau, seleccioneu l'idioma per defecte amb"
+
+msgid "cursor keys on the remote control."
+msgstr "les tecles de cursor al comandament."
+
+msgid "Then press OK to continue."
+msgstr "Premeu OK per continuar."
+
+msgid "Done"
+msgstr "Fet"
+
+msgid "Congratulations."
+msgstr "Felicitats."
+
+msgid "All required settings for the initial operation have"
+msgstr "Tots els paràmetres inicials per configurar l'equip"
+
+msgid "been saved."
+msgstr "han estat desats."
+
+msgid "Reel Multimedia wishes you a lot of fun with"
+msgstr "Reel Multimedia desitja que us ho passeu bé amb"
+
+msgid "your NetClient."
+msgstr "el vostre NetClient"
+
+msgid "your ReelBox."
+msgstr "la vostra ReelBox."
+
+msgid "The Install prodecure wasn't completed"
+msgstr "El procés d'instal·lació no ha finalitzat"
+
+msgid "successfully."
+msgstr "amb èxit."
+
+msgid "End"
+msgstr "Final"
+
+#, c-format
+msgid "Reception check... %d%%"
+msgstr ""
+
+msgid "In this step you can configure the Reel MultiRoom system."
+msgstr ""
+
+msgid "Enable MultiRoom"
+msgstr ""
+
+msgid "Use this Reelbox as recording server?"
+msgstr ""
+
+msgid "No. of Clients in the network"
+msgstr ""
+
+msgid "Scan for MultiRoom server now"
+msgstr ""
+
+#, c-format
+msgid "Configuring as server: %d%%"
+msgstr ""
+
+msgid "Network"
+msgstr "Xarxa"
+
+msgid "Changes done"
+msgstr "S'han desat els canvis"
+
+msgid "Network (WLAN)"
+msgstr ""
+
+msgid "setup plugin missing: cannot configure WLAN"
+msgstr ""
+
+msgid "Network disabled"
+msgstr "Xarxa desactivada"
+
+msgid "Do you want to enable the network?"
+msgstr "Activar la xarxa?"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "No"
+msgstr "No"
+
+msgid "Do you want to set up the network now?"
+msgstr "Configurar la xarxa?"
+
+msgid "Disable Network"
+msgstr "Desactiva la xarxa"
+
+msgid "These settings are retrieved by DHCP:"
+msgstr "Aquests paràmetres s'han obtingut des de DHCP:"
+
+msgid "IP Address"
+msgstr "Adreça IP"
+
+msgid "Network mask"
+msgstr "Màscara de Xarxa"
+
+msgid "Gateway"
+msgstr "Passarel·la"
+
+msgid "Nameserver"
+msgstr "Nom del servidor"
+
+msgid "Current settings:"
+msgstr "Configuració actual:"
+
+msgid "Do you want to use these settings?"
+msgstr "Utilitzar aquesta configuració?"
+
+msgid "Yes, store"
+msgstr ""
+
+msgid "No, configure network manually"
+msgstr "No, configura la xarxa manualment"
+
+msgid "No, configure WiFi"
+msgstr ""
+
+msgid "Manual network setting"
+msgstr "Configuració manual de la xarxa"
+
+msgid "Use DHCP"
+msgstr "Utilitza DHCP"
+
+msgid "no"
+msgstr "no"
+
+msgid "yes"
+msgstr "sí"
+
+msgid "Hostname"
+msgstr "Nom del Host"
+
+msgid "Domain"
+msgstr "Domini"
+
+msgid "Software"
+msgstr "Programari"
+
+msgid "Connection"
+msgstr "Connexió"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Progressive"
+msgstr "Progressiu"
+
+msgid "Interlaced"
+msgstr "Entrellaçat"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "On"
+msgstr "On"
+
+msgid "Component"
+msgstr "Components"
+
+msgid "Select a video mode for your screen"
+msgstr "Seleccioneu un mode de vídeo per a la pantalla"
+
+msgid "TV connected by"
+msgstr "TV connectada per"
+
+msgid "Display Type"
+msgstr "Tipus de visualització"
+
+msgid "Digital Output"
+msgstr "Sortida Digital"
+
+msgid "Analog Output"
+msgstr "Sortida Analògica"
+
+msgid "Analog Port"
+msgstr "Port analògic"
+
+msgid "fill to screen"
+msgstr "ajusta a la pantalla"
+
+msgid "fill to aspect"
+msgstr "ajusta segons l'aspecte"
+
+msgid "crop to fill"
+msgstr "retalla per ajustar"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Ctrl. relació d'aspecte"
+
+msgid "Resolution"
+msgstr "Resolució"
+
+msgid "Norm/Framerate"
+msgstr "Norma/Imatges per segon"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressiu/Entrellaçat"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Expert"
+msgstr "Avançat"
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Error: no menu got from reelice plugin"
+msgstr ""
+
+msgid "reelice plugin not found"
+msgstr ""
+
+msgid "Keep these settings?"
+msgstr "Utilitzar aquesta configuració?"
+
+msgid "Using old settings"
+msgstr "S'està utilitzant la configuració anterior"
+
+msgid "HDMI settings"
+msgstr "Configuració HDMI"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output"
+msgstr "Sortida"
+
+msgid "Aspect"
+msgstr "Aspecte"
+
+msgid "Aspect ratio"
+msgstr "Relació d'aspecte"
+
+msgid "SCART settings"
+msgstr "Configuració Euroconnector"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr "Confirmeu els canvis a 'Mode' o 'Sortida'. Si la nova configuració no està suportada, espereu 20 segons o premeu Exit per cancel·lar els canvis."
+
+msgid "samba not installed!"
+msgstr "samba no està instal·lat!"
+
+msgid "not set"
+msgstr "no definit"
+
+msgid "Installation Wizard"
+msgstr "Instal·lació Guiada"
+
+msgid "None"
+msgstr "Cap"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Desconegut"
+
+msgid "Init"
+msgstr "Inicia"
+
+msgid "Play"
+msgstr "Reprodueix"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Trick"
+msgstr "Salta"
+
+msgid "Stereo"
+msgstr "Estèreo"
+
+msgid "Left"
+msgstr "Esquerra"
+
+msgid "Right"
+msgstr "Dreta"
+
+msgid "Mpg2"
+msgstr "Mpg2"
+
+msgid "h264"
+msgstr "h264"
+
+msgid "jpeg"
+msgstr "jpeg"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "Ntsc Jap"
+
+msgid "Ntsc 443"
+msgstr "Ntsc 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "SECAM"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "Ntsc BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr "1080p23"
+
+msgid "1080p24"
+msgstr "1080p24"
+
+msgid "1080p25"
+msgstr "1080p25"
+
+msgid "1080p29"
+msgstr "1080p29"
+
+msgid "1080p30"
+msgstr "1080p30"
+
+msgid "Source"
+msgstr "Origen"
+
+msgid "1:1"
+msgstr "1:1"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "14:9"
+msgstr "14:9"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "20:9"
+msgstr "20:9"
+
+msgid "Fill to Screen"
+msgstr "Ajusta a la pantalla"
+
+msgid "Crop to Fill"
+msgstr "Retalla per ajustar"
+
+msgid "Fill to Aspect"
+msgstr "Ajusta segons l'aspecte"
+
+msgid "NL X"
+msgstr "NL X"
+
+msgid "NL Y"
+msgstr "NL Y"
+
+msgid "NL XY"
+msgstr "NL XY"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr "Tot"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YPrPb"
+
+msgid "Deblock"
+msgstr "Deblock"
+
+msgid "Deblock & dering"
+msgstr "Deblock i dering"
+
+#~ msgid "of"
+#~ msgstr "de"
+
+#~ msgid "Internal harddisk found. Do you want to format it now?"
+#~ msgstr "S'ha trobat el disc dur intern. Voleu donar-li format?"
+
+#~ msgid "If yes, please press OK to format, otherwise the yellow buttown 'skip'."
+#~ msgstr "Si és així, premeu OK per formatar. Amb el botó groc podeu 'ometre' la formatació."
+
+#~ msgid "Please wait!"
+#~ msgstr "Si us plau, espereu!"
+
+#~ msgid "Storing settings. Please wait..."
+#~ msgstr "S'està desant la configuració. Si us plau, espereu..."
+
+#~ msgid "Do you want to keep these settings?"
+#~ msgstr "Voleu utilitzar aquesta configuració?"
+
+#~ msgid "Do you want to enable the Reel MultiRoom system?"
+#~ msgstr "Voleu activar el sistema Reel MultiRoom?"
+
+#~ msgid ""
+#~ "Disables the MultiRoom-System.\n"
+#~ "Please press 'OK' to store the setting."
+#~ msgstr ""
+#~ "Desactiva el sistema MultiRoom.\n"
+#~ "Si us plau, premeu 'OK' per desar la configuració."
+
+#~ msgid "Enables the MultiRoom-System to connect the NetClient with your ReelBox Avantgarde in the network."
+#~ msgstr "Activa el sistema MultiRoom per connectar en xarxa el NetClient amb la ReelBox Avantgarde."
+
+#~ msgid "No ReelBox Avantgarde was found on the network!"
+#~ msgstr "No s'ha trobat cap ReelBox Avantgarde a la xarxa!"
+
+#~ msgid "Please check the network settings or disable MultiRoom."
+#~ msgstr "Si us plau, comproveu la configuració de la xarxa o desactiveu MultiRoom."
+
+#~ msgid "If you want to format now, press the red key."
+#~ msgstr "Si voleu donar format al disc, premeu la tecla vermella."
+
+#~ msgid "Formatting harddisk. Please wait..."
+#~ msgstr "S'està formatant el disc. Si us plau, espereu..."
+
+#~ msgid "builtin Harddisk."
+#~ msgstr "Disc dur intern."
+
+#~ msgid "for recording."
+#~ msgstr "per enregistrar."
+
+#~ msgid "ReelBox Avantgarde found in network."
+#~ msgstr "S'ha trobat la ReelBox Avantgarde a la xarxa."
+
+#~ msgid "Scanning Network..."
+#~ msgstr "S'està escanejant la xarxa..."
+
+#~ msgid "Watching TV is not available"
+#~ msgstr "La senyal de TV no està disponible"

@@ -1,0 +1,73 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-osdteletext\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-04 10:05+0200\n"
+"PO-Revision-Date: 2009-03-04 13:18+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel (press OK): "
+msgstr "Kanál (stiskněte OK): "
+
+msgid "Page"
+msgstr "Strana"
+
+msgid "not found"
+msgstr "nenalezeno"
+
+msgid "Teletext"
+msgstr "Videotext"
+
+msgid "Red key"
+msgstr "Červené tlačítko"
+
+msgid "Green key"
+msgstr "Zelené tlačítko"
+
+msgid "Yellow key"
+msgstr "Žluté tlačítko"
+
+msgid "Blue key"
+msgstr "Modré tlačítko"
+
+msgid "Zoom"
+msgstr "Přiblížení"
+
+msgid "Half page"
+msgstr "Poloviční strana"
+
+msgid "Change channel"
+msgstr "Změnit kanál"
+
+msgid "Switch background"
+msgstr "Přepnout pozadí"
+
+msgid "Jump to..."
+msgstr "Přejít na..."
+
+msgid "Background transparency"
+msgstr "Průhlednost pozadí"
+
+msgid "Show clock"
+msgstr "Zobrazit hodiny"
+
+msgid "Auto-update pages"
+msgstr "Automaticky aktualizovat strany"
+
+msgid "OSD height"
+msgstr "Výška OSD"
+
+msgid "OSD width"
+msgstr "Šířka OSD"
+
+msgid "  Page number"
+msgstr "  Číslo strany"

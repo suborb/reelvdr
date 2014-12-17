@@ -1,0 +1,57 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreel3\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-01-12 11:37+0100\n"
+"PO-Revision-Date: 2011-01-01 13:59+0100\n"
+"Last-Translator: Dutch ReelBox4all team <tech@reelbox4all.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Cutting"
+msgstr "Snijden"
+
+msgid "Collects and lists background processes and their status"
+msgstr "Verzamel achtergrond processen en hun status in een lijst"
+
+msgid "Activity"
+msgstr "Aktiviteit"
+
+#, c-format
+msgid "%d background process (%d%%)"
+msgstr "%d achtergrond proces (%d%%)"
+
+msgid "Background processes"
+msgstr "Achtergrond processen"
+
+msgid " No process completed"
+msgstr " Geen proces afgerond"
+
+msgid "Completed processes"
+msgstr "Afgeronde processen"
+
+msgid "Clear list"
+msgstr "Wis lijst"
+
+msgid "Running"
+msgstr "Aktief"
+
+msgid " No background process running"
+msgstr " Geen achtergrond proces aktief"
+
+msgid "Running processes"
+msgstr "Aktieve processen"
+
+msgid "Completed"
+msgstr "Gereed"
+

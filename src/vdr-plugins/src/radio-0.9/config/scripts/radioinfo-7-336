@@ -1,0 +1,27 @@
+#!/bin/bash
+# sunshione live Playlist
+# $1 = outfile
+
+### Variabel
+Name="sunshine live [www.sunshine-live.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.sunshine-live.de/index.php?id=15"
+
+# Artist/Title
+artist=`grep -A19 'sunshine live - playlist' /tmp/playlist`
+artist=${artist/*$'class="artist">'/}; artist=${artist/$'<'\/'td>'*/}
+title=`grep -A18 'sunshine live - playlist' /tmp/playlist`
+title=${title/*$'class="title">'/}; title=${title/$'<'\/'td>'*/}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

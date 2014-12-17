@@ -1,0 +1,282 @@
+# VDR-plugin "bouquets" language source file.
+# Copyright (C) 2010 Reel Multimedia GmbH <info@reel-multimedia.com>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bouquets 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-01-22 02:29+0100\n"
+"PO-Revision-Date: 2007-11-25 15:19+0200\n"
+"Last-Translator: none <reelbox-devel@mailings.reelbox.org>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Select channels with OK"
+msgstr "Wählen Sie mit OK gewünschte Kanäle aus"
+
+msgid "Customize channels: "
+msgstr "Kanäle bearbeiten: "
+
+msgid "Favorites: "
+msgstr "Favoriten: "
+
+msgid "encrypted radio channels"
+msgstr "Nur verschlüsselte Radiokanäle"
+
+msgid "free radio channels"
+msgstr "freie Radiokanäle"
+
+msgid "radio channels"
+msgstr "Radiokanäle"
+
+msgid "encrypted TV channels"
+msgstr "Pay-TV TV-Kanäle"
+
+msgid "free TV channels"
+msgstr "freie TV-Kanäle"
+
+msgid "TV channels"
+msgstr "TV-Kanäle"
+
+msgid "encrypted channels"
+msgstr "Alle Pay-TV Kanäle incl. Radio"
+
+msgid "free channels"
+msgstr "Free-to-Air Kanäle"
+
+msgid "HD channels"
+msgstr "HD Kanäle"
+
+msgid "non HD channels"
+msgstr "Keine HD Kanäle"
+
+msgid "all channels"
+msgstr "Alle Kanäle"
+
+msgid "Select channels with blue key"
+msgstr "Wählen Sie gewünschte Kanäle mit der blauen Taste"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Auf/Ab für neue Position - dann OK"
+
+msgid "Channel is being used by a timer!"
+msgstr "Kanal wird von einem Timer benutzt!"
+
+msgid "Delete channel?"
+msgstr "Kanal löschen?"
+
+msgid "Channel deleted"
+msgstr "Kanal wurde gelöscht"
+
+msgid "Delete channels?"
+msgstr "Ausgewählte Kanäle löschen?"
+
+msgid "Channels deleted"
+msgstr "Kanäle wurden gelöscht"
+
+msgid "Channels have been moved"
+msgstr "Kanäle wurden verschoben"
+
+msgid "Favorites"
+msgstr "Favoriten"
+
+msgid "Add to Favorites?"
+msgstr "Zu Favoriten hinzufügen?"
+
+msgid "Button$New"
+msgstr "Neu"
+
+msgid "Bouquets"
+msgstr "Bouquets"
+
+msgid "Key$Previous"
+msgstr "Vorige"
+
+msgid "Key$Next"
+msgstr "Nächste"
+
+msgid "Button$Customize"
+msgstr "Bearbeiten"
+
+msgid "Move"
+msgstr "Verschieben"
+
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Mit Auf/Ab an neue Position bewegen - dann 'Einfügen' drücken"
+
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Mit Auf/Ab an neue Position bewegen - dann 'OK' drücken"
+
+msgid "Channels"
+msgstr "Kanäle"
+
+msgid "Customize Bouquets"
+msgstr "Bouquets bearbeiten"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "Delete Bouquet?"
+msgstr "Bouquet löschen?"
+
+msgid "Edit Bouquet"
+msgstr "Bouquet editieren"
+
+msgid "Add Bouquet"
+msgstr "Bouquet hinzufügen"
+
+msgid "CI-Slot for this Bouquet"
+msgstr "CI-Schacht für dieses Bouquet"
+
+msgid "Bouquet starts with number"
+msgstr "Bouquet startet mit Nummer"
+
+msgid "Note:"
+msgstr "Hinweis:"
+
+msgid "Select CI-Slot for this Bouquet."
+msgstr "Wählen Sie den CI-Schacht für dieses Bouquet"
+
+msgid "Select channelnumber for first channel inside this bouquet"
+msgstr "Vergeben Sie die Kanalnummer für den ersten Kanal in diesem Bouquet"
+
+msgid "Symbolrate"
+msgstr "Symbolrate"
+
+msgid "System-ID"
+msgstr "System-ID"
+
+msgid "CI-Slot"
+msgstr "CI-Schacht"
+
+msgid "No CAM at"
+msgstr ""
+
+msgid "upper slot"
+msgstr "oberer Schacht"
+
+msgid "lower slot"
+msgstr "unterer Schacht"
+
+msgid "channellist"
+msgstr "Kanalliste"
+
+msgid "current bouquet"
+msgstr "aktuell. Bouquet"
+
+msgid "bouquet list"
+msgstr "Bouqetliste"
+
+msgid "Channellist: set filters"
+msgstr "Kanalliste: Filter setzen"
+
+msgid "Please select the content of the channellist"
+msgstr "Hier können Sie den Inhalt der Kanalliste wählen"
+
+msgid "All channels"
+msgstr "Alle Kanäle"
+
+msgid "Only TV channels"
+msgstr "Nur TV-Kanäle"
+
+msgid "Only radio channels"
+msgstr "Nur Radiokanäle"
+
+msgid "non encrypted channels"
+msgstr "Nur Free-to-Air Kanäle"
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Kanalliste startet mit"
+
+msgid "non encrypted TV channels"
+msgstr "Nur Free-to-Air TV-Kanäle"
+
+msgid "Channellist"
+msgstr "Kanalliste"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Channel settings are not unique!"
+#~ msgstr "Kanaleinstellungen sind nicht eindeutig!"
+
+#~ msgid "Delete"
+#~ msgstr "Löschen"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Editieren"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Löschen"
+
+#~ msgid "Button$Mark"
+#~ msgstr "Markieren"
+
+#~ msgid "Key$Back"
+#~ msgstr "Zurück"
+
+#~ msgid "Button$Insert"
+#~ msgstr "Einfügen"
+
+#~ msgid "Edit channel"
+#~ msgstr "Kanal editieren"
+
+#~ msgid "Source"
+#~ msgstr "Quelle"
+
+#~ msgid "Frequency"
+#~ msgstr "Frequenz"
+
+#~ msgid "Polarization"
+#~ msgstr "Polarisation"
+
+#~ msgid "Srate"
+#~ msgstr "Srate"
+
+#~ msgid "CoderateH"
+#~ msgstr "CoderateH"
+
+#~ msgid "none"
+#~ msgstr "keine"
+
+#~ msgid "CoderateL"
+#~ msgstr "CoderateL"
+
+#~ msgid "Vpid"
+#~ msgstr "Vpid"
+
+#~ msgid "Ppid"
+#~ msgstr "Ppid"
+
+#~ msgid "Apid1"
+#~ msgstr "Apid1"
+
+#~ msgid "Apid2"
+#~ msgstr "Apid2"
+
+#~ msgid "Tpid"
+#~ msgstr "Tpid"
+
+#~ msgid "Sid"
+#~ msgstr "Sid"
+
+#~ msgid "Modulation"
+#~ msgstr "Modulation"
+
+#~ msgid "Bandwidth"
+#~ msgstr "Bandbreite"
+
+#~ msgid "Transmission"
+#~ msgstr "Transmission"
+
+#~ msgid "Guard"
+#~ msgstr "Guard"
+
+#~ msgid "Hierarchy"
+#~ msgstr "Hierarchie"
+
+#~ msgid "Rolloff"
+#~ msgstr "Rolloff"

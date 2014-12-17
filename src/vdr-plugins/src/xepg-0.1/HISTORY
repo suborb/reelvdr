@@ -1,0 +1,12 @@
+VDR Plugin 'xmlepg2vdr' Revision History
+----------------------------------------
+
+2007-11-30: Version 0.0.1
+
+- Initial revision.
+  1. Downloads EPG data from bleb.org in XML format.
+  2. Uses libcurl for downloading.
+  3. Channel schedules are updated forcibly (ie. the downloaded data is considered more accurate than the existing EPG data in VDR)
+  4. Uses url.list in cPlugins::ConfigDirectory("xmlrpg2vdr") directory.
+  5. See URLREADME for the format of url.list
+  6. Uses /tmp for storing downloaded EPG data. (Each URL has a seperate data file, also overwritten everytime download starts)

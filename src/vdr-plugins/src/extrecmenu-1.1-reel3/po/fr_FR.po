@@ -1,0 +1,574 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2008-10-01 14:50+0200\n"
+"Last-Translator: Nicolas Huillard <nhuillard@e-dition.fr>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr "Tous les enregistrements"
+
+msgid "last 30 days"
+msgstr "30 derniers jours"
+
+msgid "Both SD and HD"
+msgstr "SD et HD"
+
+msgid "SD only"
+msgstr "SD uniq."
+
+msgid "HD Only"
+msgstr "HD uniq."
+
+msgid "Search Recordings"
+msgstr "Rechercher des enregistrements"
+
+msgid "Recording Name"
+msgstr "Nom de l'enregistrement"
+
+msgid "Time"
+msgstr "Durée"
+
+msgid "Filter by"
+msgstr "Filtre par"
+
+msgid "Select a recording to play"
+msgstr "Sélectionner un enregistrement à lire"
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+"Aucun enregistrements trouvés.\n"
+"Modifier vos recherches et réessayer."
+
+msgid "New Search"
+msgstr "Nouvelle recherche"
+
+#, fuzzy
+msgid "Delete"
+msgstr "Effacer"
+
+msgid "Delete recording?"
+msgstr "Effacer l'enregistrement?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr "Enregistrement en cours, le stopper et l'effacer?"
+
+msgid "Unable to delete recording"
+msgstr "Impossible de supprimer l'enregistrement"
+
+msgid "Directory Selector"
+msgstr "Sélectionner le dossier"
+
+msgid "up"
+msgstr ""
+
+#, fuzzy
+msgid "Cancel"
+msgstr "Interrompre"
+
+msgid "Move"
+msgstr "Déplacer"
+
+msgid "Rec Dir"
+msgstr "Dossier. d'enreg."
+
+msgid "Button$Create"
+msgstr "Créer"
+
+msgid "Cannot move into its own sub folder"
+msgstr "Impossible de déplacer dans son propre sous-dossier"
+
+msgid "Cannot write into directory"
+msgstr "Impossible d'écrire dans le dossier"
+
+msgid "Moving Recording"
+msgstr "Déplacement de l'enregistrement en cours"
+
+msgid "Moving Directories"
+msgstr "Déplacement des dossiers"
+
+msgid "Move failed. Not enough free space"
+msgstr "Le déplacement a échoué. Espace disque insuffisant"
+
+#, fuzzy
+msgid "Copying started"
+msgstr "Triage"
+
+msgid "Cannot copy into its own sub folder"
+msgstr "Impossible de copier dans son propre sous-dossier"
+
+msgid "Copy failed. Not enough free space"
+msgstr "Impossible de copier. Espace disque insuffisant"
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Créer un dossier"
+
+msgid "New"
+msgstr "Nouveau"
+
+msgid "To create a new directory press 'OK':"
+msgstr "Pour créer un nouveau dossier appuyez 'OK':"
+
+msgid "Directory Name"
+msgstr "Nom du dossier"
+
+msgid "Note:"
+msgstr "Note:"
+
+msgid "Directory will only be shown with"
+msgstr "Le dossier ne sera visible qu'avec"
+
+#, fuzzy
+msgid "recordings inside."
+msgstr "Afficher la date d'enregistrement"
+
+#, fuzzy
+msgid "Created"
+msgstr "Créé"
+
+msgid "Failed"
+msgstr "Echoué"
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr "Disque dur interne"
+
+msgid "External Media"
+msgstr "Média externe"
+
+msgid "Please select the drive where to move the recording:"
+msgstr "Sélectionnez svp le lecteur de destination pour déplacer l'enregistrement"
+
+msgid "Select Media"
+msgstr "Sélectionnez le média"
+
+msgid "Could not open media"
+msgstr "Impossible de lire le média"
+
+msgid "Search"
+msgstr "Recherche"
+
+msgid "Change title"
+msgstr "Changer le titre"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Episode"
+msgstr ""
+
+msgid "Invalid title!"
+msgstr "Titre non valide!"
+
+msgid "Invalid episode!"
+msgstr "Episode non valide!"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Renommer un dossier"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Invalid filename!"
+msgstr "Nom de fichiers non valide'"
+
+msgid "Creating directories failed!"
+msgstr "La création des dossier a échoué"
+
+msgid "New folder"
+msgstr "Nouveau dossier"
+
+msgid "Button$Cancel"
+msgstr "Interrompre"
+
+msgid "Button$Move"
+msgstr "Déplacer"
+
+msgid "Move recording"
+msgstr "Déplacer l'enregistrement"
+
+msgid "[base dir]"
+msgstr "[Dossier racine]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "Système de fichier cible rempli - essayer tout de même?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "Déplacer dans le propre sous-dossier n'est pas possible!"
+
+msgid "Can't get filesystem information"
+msgstr "Impossible de déterminer les informations du système de fichiers"
+
+msgid "Details"
+msgstr "Détails"
+
+msgid "low"
+msgstr "basse"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "haute"
+
+msgid "Priority"
+msgstr "Priorité"
+
+msgid "Lifetime"
+msgstr "Durée de vie"
+
+msgid "unlimited"
+msgstr "sans limite"
+
+msgid "Info:"
+msgstr "Info:"
+
+msgid "In this menu you can adjust the point in time"
+msgstr ""
+
+msgid "a recording gets deleted automatically."
+msgstr ""
+
+msgid "Recording info"
+msgstr "Informations sur l'enregistrement"
+
+msgid "Button$Play"
+msgstr "Lire"
+
+msgid "Button$Rewind"
+msgstr "Début"
+
+msgid "Large picture"
+msgstr "Grande image"
+
+msgid "Path"
+msgstr "Chemin"
+
+msgid "Channel"
+msgstr "Chaîne"
+
+msgid "Size"
+msgstr "Taille"
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "Ouvrir les enregistrements"
+
+msgid "Error while mounting DVD!"
+msgstr "Erreur lors du montage du DVD!"
+
+msgid "Recordings"
+msgstr "Enregistrements"
+
+msgid "free"
+msgstr "restant"
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Fonctions"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Last recording"
+msgstr "Dernier enregistrement"
+
+msgid "Error while accessing recording!"
+msgstr "Erreur lors de l'accès à l'enregistrement"
+
+msgid "PIN code: "
+msgstr "Code PIN:"
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Mettez le DVD %s dans le lecteur"
+
+msgid "DVD plugin is not installed!"
+msgstr "Le plugin DVD n'est pas installé!"
+
+msgid "No DVD in drive!"
+msgstr "Pas de DVD dans le lecteur!"
+
+msgid "Recording not found on DVD!"
+msgstr "Il n'y a pas d'enregistrement sur le DVD!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "Erreur lors de la création des racourcis [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "Erreur sudo ou mount --bind / umount (Systeme VFAT)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "Impossible de trouver le script 'dvdarchive.sh'!"
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Créer"
+
+msgid "Timer still recording - really delete?"
+msgstr "Enregistrement en cours - vraiment effacer?"
+
+msgid "Error while deleting recording!"
+msgstr "Erreur lors de le suppression de l'enregistrement"
+
+msgid "Recording commands"
+msgstr "Commandes d'enregistrement"
+
+msgid "Sort by date"
+msgstr "Tri par date"
+
+msgid "Sort by name"
+msgstr "Tri par nom"
+
+msgid "Show title"
+msgstr "Montrer le titre"
+
+msgid "Show directory name"
+msgstr "Montrer le nom du dossier"
+
+msgid "Invalid PIN"
+msgstr "Code PIN incorrect"
+
+msgid "PIN Aborted"
+msgstr "Code PIN abandonné"
+
+msgid "Cancel moving?"
+msgstr "Interrompre le déplacement?"
+
+#, fuzzy
+msgid "Cancel editing?"
+msgstr "Interrompre le déplacement?"
+
+msgid "ascending"
+msgstr "montant"
+
+msgid "descending"
+msgstr "descendant"
+
+msgid "Show recording date"
+msgstr "Afficher la date d'enregistrement"
+
+msgid "Show recording time"
+msgstr "Afficher l'heure d'enregistrement"
+
+msgid "Show recording length"
+msgstr "Afficher la longeur de l'enregistrement"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Afficher le nombre de nouveaux enregistrements dans les dossiers"
+
+msgid "Show alternative to new marker"
+msgstr "Afficher les nouveaux symbols alternatifs"
+
+msgid "Show free disk space for each file system"
+msgstr "Afficher la place libre de chaque partition"
+
+msgid "Sorting"
+msgstr "Tri"
+
+msgid "Hide main menu entry"
+msgstr "Cacher l'entrée dans le menu principal"
+
+msgid "Replace original recordings menu"
+msgstr "Remplacer le menu original Enregistrement"
+
+#, fuzzy
+msgid "Jump to last played recording"
+msgstr "Retour au dernier enregistrement lu"
+
+#, fuzzy
+msgid "Show recordings menu after playback"
+msgstr "Afficher la date d'enregistrement"
+
+msgid "Patch font"
+msgstr "Patch des police"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+#, fuzzy
+msgid "Limit bandwidth when moving recordings"
+msgstr "Limiter la bande passante lors du déplacement"
+
+msgid "Use cutter queue"
+msgstr ""
+
+msgid "Undelete Recordings"
+msgstr "Restaurer des enregistrements"
+
+msgid "No recordings to undelete!"
+msgstr "Aucun enregistrement à restaurer"
+
+msgid "Button$Remove"
+msgstr "Enlever"
+
+msgid "Button$Undelete"
+msgstr "Restaurer"
+
+msgid "Remove recording from disk?"
+msgstr "Effacer l'enregistrement du disque?"
+
+msgid "Removing recording ..."
+msgstr "Suppression de l'enregistrement..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Désolé, la restauration a échoué"
+
+msgid "Button$Back"
+msgstr "Retour"
+
+#, fuzzy
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "Afficher le nombre de nouveaux enregistrements dans les dossiers"
+
+#, fuzzy
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Enregistrement ajouté à la file d'attente de découpe"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr "Impossible de monter des enregistrements sur NetCeiver sans un serveur Avantgarde"
+
+msgid "Recording already in cutter queue!"
+msgstr "L'enregistrement est déjà dans la queue d'attente découpe!"
+
+msgid "No editing marks defined!"
+msgstr "Aucune marques de défini!"
+
+msgid "Added recording to cutter queue"
+msgstr "Enregistrement ajouté à la file d'attente de découpe"
+
+msgid "Not enough space on harddisk!"
+msgstr "Espace disque insuffisant"
+
+msgid "Rename/Move failed!"
+msgstr "Renommer/déplacer à échoué!"
+
+msgid "Cutter queue not empty"
+msgstr "File d'attente découpe n'est pas vide"
+
+msgid "Move recordings in progress"
+msgstr "Des enregistrements sont en déplacement"
+
+msgid "Can't start editing process!"
+msgstr "Impossible de lancer le montage"
+
+msgid "Cutting"
+msgstr "Montage en cours"
+
+#, fuzzy
+msgid "Moving"
+msgstr "Triage"
+
+msgid "started"
+msgstr "démarré"
+
+#, fuzzy
+msgid "Cancelled"
+msgstr "Interrompre"
+
+#, fuzzy
+msgid "Completed"
+msgstr "Créer"
+
+#, fuzzy
+msgid "Copying"
+msgstr "Triage"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "Afiicher la date d'enregistrement"
+
+msgid "Copy failed!"
+msgstr "La copie a échoué"
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "Cette version d'extrecmenu ne supporte pas ce service"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "ExtRecMenu n'existe pas!"
+
+#, fuzzy
+msgid "Extended recordings menu"
+msgstr "Remplacer le nenu original Enregistrement"
+
+msgid "Rename"
+msgstr "Renommer"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "Afiicher la date d'enregistrement"
+
+msgid "Mark as new"
+msgstr "Marquer comme nouveau"
+
+#~ msgid "Button$Open"
+#~ msgstr "Ouvrir"
+
+#, fuzzy
+#~ msgid "moving recording"
+#~ msgstr "Afiicher la date d'enregistrement"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Créer"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Détails"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Éditer"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Renommer"
+
+#, fuzzy
+#~ msgid "Create"
+#~ msgstr "Créer"
+
+#~ msgid "Button$Commands"
+#~ msgstr "Commande"
+
+#~ msgid "Use VDR's recording info menu"
+#~ msgstr "Utiliser le menu info enregistrement de VDR"
+
+#~ msgid "Call plugin after playback"
+#~ msgstr "Après la lecture démarer le plugin"

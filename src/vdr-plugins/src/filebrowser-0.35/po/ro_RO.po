@@ -1,0 +1,431 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-filebrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-17 11:51+0200\n"
+"PO-Revision-Date: 2009-03-03 17:10+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Cannot open file"
+msgstr "Nu pot deschide fisier"
+
+msgid "Title"
+msgstr "Titlu"
+
+msgid "Artist"
+msgstr "Artist"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Gen"
+
+msgid "Comment"
+msgstr "Comentarii"
+
+msgid "Year"
+msgstr "An"
+
+msgid "Track"
+msgstr "Pista"
+
+msgid "Length"
+msgstr "Lungime"
+
+msgid "min"
+msgstr "minute"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Rata Sample-uri"
+
+msgid "ID3$Channels"
+msgstr "Canale"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-Layer"
+
+msgid "Copyrighted"
+msgstr "Copyrighted"
+
+msgid "Protected"
+msgstr "Protejat"
+
+msgid "Minimal bitrate"
+msgstr "Bitrate minim"
+
+msgid "Maximal bitrate"
+msgstr "Bitrate maxim"
+
+msgid "Nominal bitrate"
+msgstr "Bitrate nominal"
+
+msgid "File size"
+msgstr "Dimensiune fisier"
+
+msgid "Last Modified"
+msgstr "Ultima modificare"
+
+msgid "please wait ..."
+msgstr "va rog asteptati..."
+
+msgid "Language packet sucessfully installed"
+msgstr "Pachetul Lingvistic instalat cu succes"
+
+msgid "Language packet installation failed"
+msgstr "Pachetul Lingvistic nu s-a putut instala"
+
+msgid "Hard Drive"
+msgstr "Hard-Disc"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "My Music"
+msgstr "Muzica mea"
+
+#, fuzzy
+msgid "My Pictures"
+msgstr "Fisierele mele video"
+
+msgid "My Videos"
+msgstr "Fisierele mele video"
+
+msgid "My Recordings"
+msgstr "Inregistrarile mele"
+
+msgid "My DVDs"
+msgstr "DVD-urile mele"
+
+msgid "Cannot mount media"
+msgstr "Nu pot sa montez media"
+
+msgid "Access denied!"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr "Introdu in lista de redare"
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Copy playlist into"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr "Salveaza playlist ca"
+
+msgid "File informations"
+msgstr "Informatii fisier"
+
+msgid "Attributes from:"
+msgstr "Atribute de la:"
+
+msgid "Playlist: "
+msgstr "Playlist: "
+
+msgid "Delete entry"
+msgstr "Sterge intrare"
+
+msgid "Close playlist"
+msgstr "Inchide playlist"
+
+msgid "Save playlist"
+msgstr "Salveaza playlist"
+
+msgid "Copy playlist to CD"
+msgstr "Copiaza playlist pe CD"
+
+msgid "Playlist Commands"
+msgstr "Comenzi playlist"
+
+msgid "Entry already exists"
+msgstr "Intrarea exista deja"
+
+msgid "Change the name and then press 'OK'"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist name"
+msgstr "Playlist: "
+
+msgid "Options for image viewer"
+msgstr "Optiuni pentru vizualizatorul de imagini"
+
+msgid "Display image file names"
+msgstr "Afiseaza nume imagini"
+
+msgid "no"
+msgstr "nu"
+
+msgid "yes"
+msgstr "da"
+
+msgid "Slide show"
+msgstr "Prezentare"
+
+msgid "Random choice"
+msgstr "Alege la intamplare"
+
+msgid "Cyclic display"
+msgstr "Afisare ciclica"
+
+msgid "Switch time (s)"
+msgstr "Timpul comutare (s)"
+
+msgid "Clear cache"
+msgstr "Goleste cache"
+
+msgid "Cache cleared"
+msgstr "Cache golit"
+
+msgid " ...opening file"
+msgstr "...deschid fisier"
+
+msgid "Cannot open file:"
+msgstr "Nu pot deschide fisierul:"
+
+msgid "No more images"
+msgstr ""
+
+msgid "Slide show started"
+msgstr "Prezentare pornita "
+
+msgid "Slide show halted"
+msgstr "Prezentare oprita"
+
+msgid "Standard play mode"
+msgstr ""
+
+#, fuzzy
+msgid "Random play mode"
+msgstr "Alege la intamplare"
+
+msgid "Copying"
+msgstr "Copiez"
+
+msgid "Multiple files"
+msgstr "Fisiere multiple"
+
+msgid "packet sucessfully installed"
+msgstr "Pachet instalat cu succes"
+
+msgid "packet installation failed"
+msgstr "nu s-a putut instala pachetul"
+
+msgid "Selection is being deleted. Please wait..."
+msgstr ""
+
+msgid "Really Delete?"
+msgstr "Chiar stergeti ?"
+
+msgid "Save/copy current playlist?"
+msgstr "Salvez/Copiez playlistul curent ?"
+
+#, fuzzy
+msgid "Playlist saved as "
+msgstr "Playlist: "
+
+msgid "Working"
+msgstr "Lucrez"
+
+msgid "Cancel"
+msgstr "Anuleaza"
+
+msgid "Execute"
+msgstr ""
+
+msgid "Paste selected entries"
+msgstr "Lipeste intrarile selectate"
+
+msgid "Insert"
+msgstr "Introdu"
+
+msgid "Create dir"
+msgstr "Creaza director"
+
+msgid "Selection is copied in background..."
+msgstr ""
+
+msgid "Selection is being moved in background..."
+msgstr ""
+
+msgid "Expert mode"
+msgstr "Modul expert"
+
+msgid "Too many entries for playlist!"
+msgstr "Prea multe intrari in playlist!"
+
+msgid "Playlist"
+msgstr "Playlist"
+
+msgid "Functions"
+msgstr "Functii"
+
+msgid "Unselect all"
+msgstr ""
+
+msgid "Select all"
+msgstr "Selectare toate"
+
+msgid "Unselect"
+msgstr ""
+
+msgid "Select"
+msgstr "Selectare"
+
+#, fuzzy
+msgid "Back"
+msgstr "Pista"
+
+msgid "Abort"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Playlist is saved in background..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Copiaza "
+
+#, fuzzy
+msgid "Directory Name"
+msgstr "Directorul exista deja"
+
+msgid "Playlist entries are copied in background..."
+msgstr ""
+
+msgid "Move"
+msgstr "Muta"
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Rename entry"
+msgstr "Redenumeste intrarea"
+
+msgid "Create directory"
+msgstr "Creeaza director"
+
+msgid "Show playlist"
+msgstr "Arata playlist"
+
+msgid "Convert to UTF8"
+msgstr "Converteste la UTF8"
+
+msgid "Burn ISO-File"
+msgstr ""
+
+msgid "Make And burn ISO-File"
+msgstr ""
+
+msgid "Sort alphabetically"
+msgstr ""
+
+msgid "Sort by file size"
+msgstr ""
+
+msgid "Filebrowser Commands"
+msgstr "Comenzi prezentator fisire"
+
+msgid "Started converting"
+msgstr "Convertirea pornita"
+
+msgid "Finished converting"
+msgstr "Convertirea terminata"
+
+msgid "Save playlist to disk"
+msgstr "Salveaza playlist pe disc"
+
+msgid "Copy playlist to usb stick"
+msgstr "Copiaza playlist pe usb stick"
+
+msgid "Playlist actions"
+msgstr "Actiuni playlist"
+
+msgid "Add selection to playlist"
+msgstr ""
+
+msgid "Discard playlist"
+msgstr ""
+
+msgid "Copy playlist content to a directory"
+msgstr ""
+
+msgid "Discard current playlist"
+msgstr ""
+
+msgid "Append new playlist to current playlist"
+msgstr ""
+
+msgid "Directory already exists"
+msgstr "Directorul exista deja"
+
+msgid "New"
+msgstr ""
+
+msgid "To create a new directory press 'OK'"
+msgstr ""
+
+#, fuzzy
+msgid "Rename to"
+msgstr "Redenumeste intrarea"
+
+msgid "Press OK to burn the playlists contents on a DVD"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr "Prezentator fisiere"
+
+msgid "File Browser"
+msgstr "Prezentator fisiere"
+
+msgid "Picture viewer"
+msgstr "Afare imagini"
+
+#~ msgid "Deselect all"
+#~ msgstr "Deselectare toate"
+
+#~ msgid "Deselect"
+#~ msgstr "Deselectare "
+
+#~ msgid "Moving"
+#~ msgstr "In curs de mutare"
+
+#~ msgid "Deleting"
+#~ msgstr "Sterg"
+
+#, fuzzy
+#~ msgid "Last image"
+#~ msgstr "Ultima modificare"
+
+#~ msgid "My Images"
+#~ msgstr "Imaginile mele"
+
+#~ msgid "Back to xine"
+#~ msgstr "Inapoi la Xine"
+
+#~ msgid "Back to playlist"
+#~ msgstr "Inapoi la playlist"

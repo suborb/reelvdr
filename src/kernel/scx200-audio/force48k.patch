@@ -1,0 +1,24 @@
+--- amd_geode.c	2004-11-03 19:07:40.000000000 -0700
++++ amd_geode.c_force48K	2004-12-07 18:31:13.000000000 -0700
+@@ -226,8 +226,8 @@
+              SNDRV_PCM_INFO_BLOCK_TRANSFER |
+              SNDRV_PCM_INFO_MMAP_VALID ),
+     .formats =          SNDRV_PCM_FMTBIT_U8 |   SNDRV_PCM_FMTBIT_S16_LE,
+-    .rates =            SNDRV_PCM_RATE_8000_48000,
+-    .rate_min =         8000,
++    .rates =            SNDRV_PCM_RATE_48000,
++    .rate_min =         48000,
+     .rate_max =         48000,
+     .channels_min =     1,
+     .channels_max =     2,
+@@ -246,8 +246,8 @@
+              SNDRV_PCM_INFO_BLOCK_TRANSFER |
+              SNDRV_PCM_INFO_MMAP_VALID),
+     .formats =          SNDRV_PCM_FMTBIT_S16_LE,
+-    .rates =            SNDRV_PCM_RATE_8000_48000,
+-    .rate_min =         8000,
++    .rates =            SNDRV_PCM_RATE_48000,
++    .rate_min =         48000,
+     .rate_max =         48000,
+     .channels_min =     2,
+     .channels_max =     2,

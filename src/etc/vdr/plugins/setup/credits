@@ -1,0 +1,58 @@
+About VDR
+
+Klaus Schmidinger (VDR Core)
+Rolf Ahrenberg    (Femon)
+Thomas Bergwinkl  (Rotor, permanent timeshift)
+Luca De Pieri     (Loadepg)
+Ralf Dotzert      (Setup)
+Oliver Endriss    (Remote)
+U. Hanke, Lars Tegeler (Radio)
+Stefan Huelswitt  (Premiereepg)
+Clemens Kirchgatterer (Games)
+Thomas Koch       (Sleep Timer)
+Dirk Leber        (ReelEPG)
+Matthias Müller   (Stream client)
+Martin Prochnow   (Extrecmenu)
+Andreas Regel     (Graphic LCD)
+Andreas Schmidt   (Dvdswitch)
+Jürgen Schmitz    (Timeline)
+Sascha Volkenandt (Burn, Client/Server Streaming, 
+                   Media detection, OSDPiP, VdrCD)
+Jörg Wendel       (Pin, iPod)
+Heiko Westphal    (ReelBlog)
+Christian Wieninger (EPG-Search)
+Marcel Wiesweg    (OSD Teletext)
+Emanuel Wontorra,
+ Arghra           (ArghDirector)
+Plugins by Reel-Multimedia:
+BgProcess, Channelscan, Filebrowser, Hdformat, Install, Ipkg, PiP, Reelbox, Reelcam, ReelEPG, Shoutcast, VLCclient, Xinemediaplayer)
+
+
+REEL SUPPORT TEAM / TESTERS / FREE DEVELOPERS
+
+Auric
+Michael "Behni" Behn
+carwasher
+crazyflo
+CrazySat
+DennisMoore
+Paul "Calimero" Dylla
+Stephan "digiTV" Hellebrand
+Henner
+Thomas "surge" Hofstetter
+Marc "Purgy" Keuchel
+Mario "Trudetreiber" Krömer
+Oliver "Diabolus" Rimmel
+Michael "Michi" Rips
+Stefan "dr_midas" Ritt
+Bernd "BernyR" Röske
+Hartmut "harruh" Ruhkopf
+Marino Schwedhelm
+Heiko "heiko.20" Thede
+tiqq
+travis
+
+
+Our great thanks goes to everyone who has contributed to the VDR Project and the ReelBox software.
+
+The Reel Multimedia Team 2008

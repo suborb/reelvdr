@@ -1,0 +1,489 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ReelBox 2.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-21 15:24+0100\n"
+"PO-Revision-Date: 2010-06-11 13:49+0100\n"
+"Last-Translator: Andreas Ritter <ar@reel-multimedia.com>\n"
+"Language-Team: <reelbox-devel@mailings.reelbox.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sbin/compress_recording.sh:32
+msgid "Compressing"
+msgstr "Komprimieren"
+
+#: ../../sbin/compress_recording.sh:43
+msgid "Starting compression"
+msgstr "Starte Komprimierung"
+
+#: ../../sbin/compress_recording.sh:124
+msgid "Compression successfull"
+msgstr "Komprimierung erfolgreich abgeschlossen"
+
+#: ../../sbin/compress_recording.sh:126
+msgid "Sorry, compression failed"
+msgstr "Komprimierung ist leider fehlgeschlagen"
+
+#: ../../sbin/delarchivemarks.sh:49
+msgid "Info: Archivemarks successfully deleted."
+msgstr "Hinweis: Archivmarkierungen erfolgreich entfernt."
+
+#: ../../sbin/delarchivemarks.sh:52
+msgid "No archivemarks found or deleting failed."
+msgstr "Keine Archivmarkierung gefunden oder löschen fehlgeschlagen."
+
+#: ../../sbin/delcuttingmarks.sh:54 ../../sbin/delcuttingmarks.sh:59
+#: ../../sbin/fskprotect.sh:18 ../../sbin/markasnew.sh:12
+#: ../../sbin/noadcall.sh:89
+msgid "Info:"
+msgstr "Information:"
+
+#: ../../sbin/delcuttingmarks.sh:55
+msgid "Cutting marks successfully deleted."
+msgstr "Schnittmarken erfolgreich gelöscht."
+
+#: ../../sbin/delcuttingmarks.sh:60
+msgid "No cutting marks found or deleting failed."
+msgstr "Keine Schnittmarken vorhanden oder löschen fehlgeschlagen."
+
+#: ../../sbin/delete_preview.sh:12
+msgid "Preview deleted"
+msgstr "Vorschau wurde gelöscht"
+
+#: ../../sbin/delete_preview.sh:12
+msgid "Error deleting preview"
+msgstr "Fehler beim Löschen der Vorschau"
+
+#: ../../sbin/delete_preview.sh:16
+msgid "Preview not found"
+msgstr "Vorschau nicht gefunden"
+
+#: ../../sbin/dvd-rw-format.sh:9
+msgid "Formating DVD"
+msgstr "DVD wird formatiert"
+
+#: ../../sbin/dvd-rw-format.sh:11
+msgid "Formating DVD done."
+msgstr "Formatieren beendet"
+
+#: ../../sbin/dvdswitch_read.sh:44 ../../sbin/dvdswitch_read.sh:92
+msgid "started reading DVD"
+msgstr "DVD wird ausgelesen"
+
+#: ../../sbin/dvdswitch_read.sh:95
+msgid "DVD reading done"
+msgstr "DVD auslesen beendet"
+
+#: ../../sbin/dvdswitch_read.sh:105
+msgid "DVD not ready"
+msgstr "DVD nicht bereit"
+
+#: ../../sbin/dvdswitch_write.sh:70
+msgid "Media is not writeable"
+msgstr "Medium kann nicht beschrieben werden"
+
+#: ../../sbin/fskprotect.sh:12
+msgid "Warning:"
+msgstr "Warnung:"
+
+#: ../../sbin/fskprotect.sh:13
+msgid "Please configure PIN first in main menu"
+msgstr "Bitte zuerst eine PIN über das Hauptmenü festlegen"
+
+#: ../../sbin/fskprotect.sh:24
+msgid "Recording is already protected"
+msgstr "Die Aufzeichnung ist bereits geschützt"
+
+#: ../../sbin/fskprotect.sh:27
+msgid "Recording has been protected"
+msgstr "Die Aufzeichnung wurde gesperrt."
+
+#: ../../sbin/fskprotect.sh:36
+msgid "Recording has no protection"
+msgstr "Die Aufzeichnung hat keinen Schutz"
+
+#: ../../sbin/fskprotect.sh:40
+msgid "Childlock has been removed"
+msgstr "Kindersicherung wurde entfernt"
+
+#: ../../sbin/generate_preview.sh:12
+msgid "Preview already exists. Doing nothing."
+msgstr "Vorschaubild existiert bereits."
+
+#: ../../sbin/generate_preview.sh:36
+msgid "no recording found in %s. Exiting"
+msgstr "Keine Aufnahme in %s gefunden. Ende."
+
+#: ../../sbin/generate_preview.sh:73
+msgid "Preview generated"
+msgstr "Vorschau erfolgreich erzeugt"
+
+#: ../../sbin/generate_preview.sh:73
+msgid "Error generating preview"
+msgstr "Fehler beim Erzeugen der Vorschau"
+
+#: ../../sbin/handlearchived.sh:30
+msgid "Unable to find DVD archive mark - bailing out."
+msgstr "Es wurde keine DVD-Archiv Markierung gefunden - Abbruch."
+
+#: ../../sbin/handlearchived.sh:37
+msgid "Recording has been cleaned up."
+msgstr "Die Aufzeichnung wurde entfernt."
+
+#: ../../sbin/handlearchived.sh:39 ../../sbin/handlearchived.sh:48
+msgid "Info: No mark found."
+msgstr "Hinweis: Keine Markierung gefunden."
+
+#: ../../sbin/handlearchived.sh:46
+msgid "Recording is only on DVD - please restore recording first."
+msgstr "Die Aufzeichnung ist ausschließlich auf DVD - bitte zuerst Aufzeichnung wiederherstellen."
+
+#: ../../sbin/handlearchived.sh:66
+msgid "The recording will be restored from DVD."
+msgstr "Die Aufzeichnung wird von DVD wieder eingespielt."
+
+#: ../../sbin/markasnew.sh:14
+msgid "This recording is marked as new."
+msgstr "Die Aufzeichnung wurde als neu markiert."
+
+#: ../../sbin/mp3_2_media.sh:56
+msgid "No media found"
+msgstr "Kein Medium gefunden"
+
+#: ../../sbin/mp3_2_media.sh:69
+msgid "To many files"
+msgstr "Zu viele Dateien"
+
+#: ../../sbin/mp3_2_media.sh:105
+msgid "Burn Error"
+msgstr "Fehler beim Brennen"
+
+#: ../../sbin/mp3_2_media.sh:108
+msgid "CD burning finished"
+msgstr "CD erfolgreich gebrannt"
+
+#: ../../sbin/noadcall.sh:91
+msgid "NoAd started for:"
+msgstr "NoAd gestartet für:"
+
+#: ../../sbin/noadcall.sh:95
+msgid "marking commercials in '%s'"
+msgstr "Markiere Werbung in '%s'"
+
+#: ../../sbin/PTPCameraMount.sh:76
+msgid "%s Camera added"
+msgstr "Kamera %s angeschlossen"
+
+#: ../../sbin/PTPCameraMount.sh:81
+msgid "%s Camera detected, but not mounted"
+msgstr "Kamera %s erkannt aber nicht eingebunden"
+
+#: ../../sbin/PTPCameraMount.sh:104
+msgid "%s Camera removed"
+msgstr "Kamera %s entfernt"
+
+#: ../../sbin/replex2mpeg.sh:66 ../../sbin/vdr2mpeg.sh:97
+msgid "Job started"
+msgstr "Auftrag wurde gestartet."
+
+#: ../../sbin/replex2mpeg.sh:68 ../../sbin/vdr2mpeg.sh:99
+msgid "Hint:"
+msgstr "Hinweis:"
+
+#: ../../sbin/replex2mpeg.sh:69 ../../sbin/vdr2mpeg.sh:100
+msgid "File is stored in:"
+msgstr "Die Datei wird abgelegt unter:"
+
+#: ../../sbin/replex2mpeg.sh:71 ../../sbin/vdr2mpeg.sh:102
+msgid "Main Menu - Films & DVD - Movie Library"
+msgstr "Hauptmenü - Filme & DVD - Filmarchiv"
+
+# shoutcast download script "scast"
+#: ../../sbin/scast:62
+msgid "Network error or shoutcast error"
+msgstr "Netzwerk- oder Shoutcast-Fehler"
+
+#: ../../sbin/scast:89
+msgid "No stations found for genre %s"
+msgstr "Keine Stationen für %s gefunden"
+
+#: ../../sbin/scast:93
+msgid "Invalid SHOUTcast key. Please set it in Setup"
+msgstr "Ungültiger SHOUTcast key. Bitte im Setup einstellen."
+
+#: ../../sbin/scast:96
+msgid "SHOUTcast server returned error. Please try again"
+msgstr "SHOUTcast-Server hat einen Fehler gemeldet. Bitte erneut versuchen"
+
+#: ../../sbin/screenshot.sh:64
+msgid "Info: Screenshot saved in My Images / screenshot"
+msgstr "Screenshot gespeichert in 'Meine Bilder/screenshot'"
+
+#: ../../../packages/usbmount/ROOT/etc/usbmount/mount.d/reelvdr:36
+msgid "Doing fsck for %s"
+msgstr "Prüfe Dateisystem auf %s"
+
+#: ../../../packages/usbmount/ROOT/etc/usbmount/mount.d/reelvdr:43
+msgid "Added %s"
+msgstr "%s eingebunden"
+
+#: ../../../packages/usbmount/ROOT/etc/usbmount/mount.d/reelvdr:79
+msgid "Removed %s"
+msgstr "%s entfernt"
+
+#: ../../sbin/ripit.pl:416
+msgid "AudioCD rip process started...\n"
+msgstr "Rippen der Audio-CD gestartet...\n"
+
+#: ../../sbin/ripit.pl:469
+msgid "Warning: year is not Y2K compliant"
+msgstr "Warnung: Jahr ist nicht Y2K sicher"
+
+#: ../../sbin/ripit.pl:475
+msgid "Will halt machine when finished."
+msgstr "Computer wird nach Vorgang heruntergefahren."
+
+#: ../../sbin/ripit.pl:481
+msgid "Will eject CD when finished."
+msgstr "CD wird nach Rippen ausgeworfen."
+
+#: ../../sbin/ripit.pl:487
+msgid "Won't create a m3u file."
+msgstr "Playliste wird nicht erstellt."
+
+#: ../../sbin/ripit.pl:497
+msgid "Will keep the wav files."
+msgstr "Wav Dateien werden nicht automatisch geloescht."
+
+#: ../../sbin/ripit.pl:528
+msgid "Waiting for Encoder to finish..."
+msgstr "Warte auf Beenden des Codierers..."
+
+#: ../../sbin/ripit.pl:552
+msgid "CD may NOT be complete! Check the error.log in"
+msgstr "Vorgang abgebrochen -> error.log in"
+
+#: ../../sbin/ripit.pl:559
+msgid "!! DONE... !! ACTION ENDED."
+msgstr "Fertig. Vorgang abgeschlossen."
+
+#: ../../sbin/ripit.pl:562
+msgid "Ripping:"
+msgstr "Rippen:"
+
+#: ../../sbin/ripit.pl:563
+msgid "Encoding:"
+msgstr "Encoden:"
+
+#: ../../sbin/ripit.pl:584
+msgid "Shutdown PC..."
+msgstr "Box wird herunter gefahren..."
+
+#: ../../sbin/ripit.pl:628
+msgid "Searching CDDB entry..., please wait..."
+msgstr "Suche CDDB Eintrag, bitte warten..."
+
+#: ../../sbin/ripit.pl:631
+msgid "Cannot create"
+msgstr "anlegen fehlgeschlagen"
+
+#: ../../sbin/ripit.pl:651
+msgid "Found CDDB entry"
+msgstr "CDDB Eintrag gefunden"
+
+#: ../../sbin/ripit.pl:706
+msgid "Searching CDDB entry"
+msgstr "Suche CDDB Eintrag"
+
+#: ../../sbin/ripit.pl:712
+msgid "Transfer mode not valid!"
+msgstr "Transfermodus ungültig!"
+
+#: ../../sbin/ripit.pl:754
+msgid "No connection to internet"
+msgstr "Keine Internetverbindung"
+
+#: ../../sbin/ripit.pl:857
+msgid "No CDDB info choosen or found for this CD"
+msgstr "Keine CDDB-Information für diese CD gewählt oder gefunden"
+
+#: ../../sbin/ripit.pl:904
+msgid "CDDB and ID3 Info"
+msgstr "CDDB und ID3 Info"
+
+#: ../../sbin/ripit.pl:909
+msgid "Artist"
+msgstr "Interpret"
+
+#: ../../sbin/ripit.pl:912
+msgid "Album"
+msgstr "Album"
+
+#: ../../sbin/ripit.pl:915
+msgid "Category"
+msgstr "Kategorie"
+
+#: ../../sbin/ripit.pl:918
+msgid "Genre"
+msgstr "Genre"
+
+#: ../../sbin/ripit.pl:924
+msgid "Year"
+msgstr "Jahr"
+
+#: ../../sbin/ripit.pl:935
+msgid "CD id"
+msgstr "CD ID"
+
+#: ../../sbin/ripit.pl:940
+msgid "Comment"
+msgstr "Kommentar"
+
+#: ../../sbin/ripit.pl:1214
+msgid "Track"
+msgstr "Titel"
+
+#: ../../sbin/ripit.pl:1214 ../../sbin/ripit.pl:1219
+msgid "will be ripped"
+msgstr "wird ausgelesen"
+
+#: ../../sbin/ripit.pl:1219
+msgid "Tracks"
+msgstr "Titel"
+
+#: ../../sbin/ripit.pl:1233
+msgid "Ripping started"
+msgstr "Auslesen gestarted"
+
+#: ../../sbin/ripit.pl:1244
+msgid "Ripper"
+msgstr ""
+
+#: ../../sbin/ripit.pl:1302
+msgid "cdparanoia failed on"
+msgstr "cdparanoia fehlgeschlagen für"
+
+#: ../../sbin/ripit.pl:1425 ../../sbin/ripit.pl:1432
+msgid "Encoding started"
+msgstr "Kodieren gestarted"
+
+#: ../../sbin/ripit.pl:1452
+msgid "Ripping complete"
+msgstr "Auslesen abgeschlossen"
+
+#: ../../sbin/ripit.pl:1533
+msgid "Encoder waited"
+msgstr "Codierer wartet"
+
+#: ../../sbin/ripit.pl:1533
+msgid "minutes for file"
+msgstr "minuten für Datei"
+
+#: ../../sbin/ripit.pl:1536
+msgid "Encoder: giving up"
+msgstr "Codierer: breche ab"
+
+#: ../../sbin/ripit.pl:1651
+msgid "Encoder"
+msgstr "Codierer"
+
+#: ../../sbin/ripit.pl:1682
+msgid "Encoder: finished"
+msgstr "Codierer: beendet"
+
+#: ../../sbin/ripit.pl:1697
+msgid "Encoder failed on"
+msgstr "Kodieren fehlgeschlagen für"
+
+#~ msgid "NoAd started"
+#~ msgstr "NoAd gestartet"
+
+#~ msgid "Checking internet connection"
+#~ msgstr "Prüfe Internetverbindung"
+
+#~ msgid "No internet connection. Update aborted!"
+#~ msgstr "Keine Internet Verbindung. Update wird abgebrochen!"
+
+#~ msgid "no packages on CD. Exit."
+#~ msgstr "Keine Pakete auf dieser CD gefunden. Abbruch."
+
+#~ msgid "found %s packages on CD. Installing..."
+#~ msgstr "%s Pakete auf dieser CD gefunden. Installiere..."
+
+#~ msgid "upgrade done."
+#~ msgstr "Upgrade beendet."
+
+#~ msgid "upgrade failed."
+#~ msgstr "Upgrade fehlgeschlagen"
+
+#~ msgid "Fetching list from server"
+#~ msgstr "Lade Liste vom Server"
+
+#~ msgid "Doing upgrade. This can take some time..."
+#~ msgstr "Upgrade gestartet. Bitte warten."
+
+#~ msgid "upgrade done. upgraded %s packages."
+#~ msgstr "Upgrade beendet. %s Pakete wurden aktualisiert."
+
+#~ msgid "mounting cdrom"
+#~ msgstr "CD/DVD wird eingebunden"
+
+#~ msgid "No medium found. Abort."
+#~ msgstr "Kein Medium gefunden. Abbruch."
+
+#~ msgid "mounting failed (bad cd?). Abort."
+#~ msgstr "Fehler beim Einlesen der CD/DVD. Abbruch."
+
+#~ msgid "started DVD reading"
+#~ msgstr "DVD wird ausgelesen"
+
+#~ msgid "Your software is up to date"
+#~ msgstr "Sie haben bereits die aktuellste Software"
+
+#~ msgid "No Updates available"
+#~ msgstr "Keine Updates verfügbar"
+
+#~ msgid "Downloading new Image file - Please wait ..."
+#~ msgstr "Neues Image wird geladen - Bitte warten ..."
+
+#~ msgid "shutting down vdr and services"
+#~ msgstr "VDR wird heruntergefahren"
+
+#~ msgid "Update started"
+#~ msgstr "Aktualisierung gestartet"
+
+#~ msgid "Added channels:"
+#~ msgstr "Kanäle hinzugefügt:"
+
+#~ msgid "DVD burning finished"
+#~ msgstr "DVD brennen beendet"
+
+#~ msgid "DVD reading started"
+#~ msgstr "DVD auslesen gestartet"
+
+#~ msgid "No internet connection."
+#~ msgstr "Keine Internet Verbindung."
+
+#~ msgid "Flash iso from /tmp"
+#~ msgstr "Update Iso vom /tmp"
+
+#~ msgid "Copy iso from ext1"
+#~ msgstr "Kopiere Iso von ext1"
+
+#~ msgid "CDDB entry found"
+#~ msgstr "CDDB Eintrag gefunden"
+
+#~ msgid "DeepStandby activated! TVTV disabled."
+#~ msgstr "DeepStandby aktiviert! TVTV Dienst nicht möglich."
+
+#~ msgid "Converting %s to %t"
+#~ msgstr "Wandle %s nach %t"
+
+#~ msgid "Copy error"
+#~ msgstr "Kopieren fehlgeschlagen"
+
+#~ msgid "ERROR: formatting %s failed."
+#~ msgstr "FEHLER: Formatieren von %s fehlgeschlagen"

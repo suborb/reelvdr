@@ -1,0 +1,134 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2009-03-03 17:06+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "JanFebMarAprMaiIunIulAugSepOctNovDec"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Muzica"
+
+msgid "File"
+msgstr "Fisier"
+
+msgid "Image"
+msgstr "Imagine"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Replay"
+
+msgid "no"
+msgstr "nu"
+
+msgid "yes"
+msgstr "da"
+
+msgid "not in menu"
+msgstr "nu in meniu"
+
+msgid "compressed"
+msgstr "comprimat"
+
+msgid "auto"
+msgstr "auto"
+
+msgid "medium"
+msgstr "mediu"
+
+msgid "large"
+msgstr "larg"
+
+msgid "never"
+msgstr "niciodata"
+
+msgid "once"
+msgstr "odata"
+
+msgid "always"
+msgstr "intotdeauna"
+
+msgid "Show Date/Time"
+msgstr "Arata Data/Timp"
+
+msgid "Show Channel"
+msgstr "Arata Canal"
+
+msgid "Show Logo"
+msgstr "Arata Logo"
+
+msgid "Show Symbols"
+msgstr "Arata Simboluri"
+
+msgid "Show ET Symbols"
+msgstr "Arata Simboluri ET"
+
+msgid "Show Program"
+msgstr "Arata Program"
+
+msgid "Show Timebar"
+msgstr "Arata bara Timp"
+
+msgid "Show Menu"
+msgstr "Arata Menu"
+
+msgid "Show Messages"
+msgstr "Arata Mesaje"
+
+msgid "Show Volume"
+msgstr "Arata Volum"
+
+msgid "Show free Tuner"
+msgstr "Arata Tuner disponibil"
+
+msgid "Identify replay type"
+msgstr "Identifica tipul de replay"
+
+msgid "Modify replay string"
+msgstr "Modifica sirul de caractere de la replay"
+
+msgid "Scroll text lines"
+msgstr "Deruleaza liniile de text"
+
+msgid "Scroll speed"
+msgstr "Viteza de derulare"
+
+msgid "Scroll time interval"
+msgstr "Interval  de timp derulare"
+
+msgid "Brightness on user activity"
+msgstr "Stralucirea la activitatea utilizatorului"
+
+msgid "Brightness on user inactivity"
+msgstr "Stralucirea la inactivitatea utilizatorului"
+
+msgid "Brightness delay [s]"
+msgstr "Intarziere la stralucire [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Arata ceas  la inactivitatea utilizatorului"
+
+msgid "Unknown title"
+msgstr "Titlu necunoscut"

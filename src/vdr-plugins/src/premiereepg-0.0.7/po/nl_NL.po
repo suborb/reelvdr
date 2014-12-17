@@ -1,0 +1,66 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-premiereepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-01-11 18:06+0100\n"
+"PO-Revision-Date: 2011-09-07 18:08+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Parses extended Premiere EPG data"
+msgstr "Ontleedt uitgebreide  Sky EPG data"
+
+msgid "Sky EPG"
+msgstr "Sky EPG"
+
+msgid "PremiereEPG"
+msgstr "PremiereEPG"
+
+msgid "off"
+msgstr "uit"
+
+msgid "Tag option events"
+msgstr "Markeer optie events"
+
+msgid "Show order information"
+msgstr "Toon bestel informatie"
+
+msgid "Show rating information"
+msgstr "Toon leeftijds categorie informatgie"
+
+msgid "Fix EPG data"
+msgstr "Fix de EPG data"
+
+msgid "Ordernumber"
+msgstr "Ondernummer"
+
+msgid "Price"
+msgstr "Prijs"
+
+msgid "Ordering"
+msgstr "Bestelling"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "WWW"
+msgstr "www"
+
+msgid "Rating"
+msgstr "Leeftijds categorie"
+
+msgid "years"
+msgstr "jaar"
+
+#~ msgid "Premiere EPG"
+#~ msgstr "Premiere EPG"

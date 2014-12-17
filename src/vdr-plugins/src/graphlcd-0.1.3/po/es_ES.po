@@ -1,0 +1,130 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare-Tododream. Diciembre 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2008-09-29 10:10+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "EneFebMarAbrMayJunJulAgoSepOctNovDic"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "File"
+msgstr "Archivo"
+
+msgid "Image"
+msgstr "Imágen"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Repetir"
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Si"
+
+msgid "not in menu"
+msgstr "No en menú"
+
+msgid "compressed"
+msgstr "Comprimido"
+
+msgid "auto"
+msgstr "Auto"
+
+msgid "medium"
+msgstr "Medio"
+
+msgid "large"
+msgstr "Grande"
+
+msgid "never"
+msgstr "Nunca"
+
+msgid "once"
+msgstr "Una vez"
+
+msgid "always"
+msgstr "Siempre"
+
+msgid "Show Date/Time"
+msgstr "Ver fecha/hora"
+
+msgid "Show Channel"
+msgstr "Ver canal"
+
+msgid "Show Logo"
+msgstr "Ver logo"
+
+msgid "Show Symbols"
+msgstr "Ver símbolos"
+
+msgid "Show ET Symbols"
+msgstr "Ver símb. ET"
+
+msgid "Show Program"
+msgstr "Ver programa"
+
+msgid "Show Timebar"
+msgstr "Ver barra tiempo"
+
+msgid "Show Menu"
+msgstr "Ver menú"
+
+msgid "Show Messages"
+msgstr "Ver mensajes"
+
+msgid "Show Volume"
+msgstr "Ver volumen"
+
+msgid "Show free Tuner"
+msgstr "Ver sintonz. libre"
+
+msgid "Identify replay type"
+msgstr "Identif.tipo de reprod."
+
+msgid "Modify replay string"
+msgstr "Modif. cadena repet."
+
+msgid "Scroll text lines"
+msgstr "Texto móvil"
+
+msgid "Scroll speed"
+msgstr "Veloc. movim."
+
+msgid "Scroll time interval"
+msgstr "Intervalo deslizam."
+
+msgid "Brightness on user activity"
+msgstr "Brillo durante uso"
+
+msgid "Brightness on user inactivity"
+msgstr "Brillo en inactividad"
+
+msgid "Brightness delay [s]"
+msgstr "Retraso brillo [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Ver reloj durante inactvidad"
+
+msgid "Unknown title"
+msgstr "Título desconocido"

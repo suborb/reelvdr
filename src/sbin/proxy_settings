@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Proxy  Export
+# 
+# Version 0.1
+# Date 18.10.2007
+#
+
+PATH="/sbin:/bin/:/usr/bin:/usr/sbin"
+
+
+SYSCONFIG="/etc/default/sysconfig"
+. $SYSCONFIG
+
+
+if [ "$USE_PROXY" = "yes" ]; then
+    export http_proxy=http://$PROXY_IP:$PROXY_PORT
+    export https_proxy=http://$PROXY_IP:$PROXY_PORT
+    export ftp_proxy=http://$PROXY_IP:$PROXY_PORT	
+    export HTTP_PROXY=http://$PROXY_IP:$PROXY_PORT
+    export HTTPS_PROXY=http://$PROXY_IP:$PROXY_PORT
+    export FTP_PROXY=http://$PROXY_IP:$PROXY_PORT
+fi
+
+    

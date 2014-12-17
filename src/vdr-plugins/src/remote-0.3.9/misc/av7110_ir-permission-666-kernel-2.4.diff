@@ -1,0 +1,11 @@
+--- av7110_ir.c.org	Wed May 21 16:11:17 2003
++++ av7110_ir.c	Fri Oct 10 21:07:49 2003
+@@ -185,7 +185,7 @@ int __init av7110_ir_init (void)
+ 	av7110_setup_irc_config (NULL, 0x0001);
+ 	av7110_register_irc_handler (av7110_emit_key);
+ 
+-	e = create_proc_entry ("av7110_ir", S_IFREG | S_IRUGO | S_IWUSR, NULL);
++	e = create_proc_entry ("av7110_ir", S_IFREG | S_IRUGO | S_IWUGO, NULL);
+ 
+ 	if (e) {
+ 		e->write_proc = av7110_ir_write_proc;

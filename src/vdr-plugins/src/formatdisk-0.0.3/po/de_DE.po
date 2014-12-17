@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Reel Multimedia <reelbox-devel@mailings.reelbox.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: formatdisk 0.1\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-26 12:19+0200\n"
+"PO-Revision-Date: 2010-07-13 12:55+0200\n"
+"Last-Translator: Reel Multimedia Team<reelbox-devel@mailings.reelbox.org>\n"
+"Language-Team: German <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Prepare disk: confirm formatting"
+msgstr "Datenträger einrichten: formatieren bestätigen"
+
+msgid "The storage medium "
+msgstr "Das Medium "
+
+msgid " will be prepared. Please press the red key or choose another action:"
+msgstr " wird vorbereitet. Bitte drücken Sie die rote Taste oder wählen Sie eine andere Aktion:"
+
+msgid "\tFormat disk"
+msgstr "\tFestplatte jetzt formatieren"
+
+msgid "\tMount harddisk"
+msgstr "\tFestplatte einbinden"
+
+msgid "\tCreate boot disk"
+msgstr "\tBootfähiges Laufwerk erstellen"
+
+msgid "Info:"
+msgstr "Information:"
+
+msgid ""
+"The storage medium is going to be formatted.\n"
+"All data will be destroyed."
+msgstr ""
+"Der Datenträger wird formatiert.\n"
+"Alle Daten darauf werden gelöscht."
+
+msgid "The storage medium will not be formatted but integrated into the system to be used as the medium disk."
+msgstr "Der Datenträger wird nicht formatiert aber als Medienlaufwerk in das System eingebunden."
+
+msgid ""
+"CAUTION: All data will be destroyed.\n"
+"A fresh copy of the operating system will be installed. Needs internet connection."
+msgstr ""
+"WARNUNG: Alle Daten werden gelöscht.\n"
+"Es wird eine neue Version des Betriebssystems installiert. Eine Internetverbindung ist erforderlich."
+
+msgid "\tCancel"
+msgstr "\tAbbrechen"
+
+msgid "With pressing 'OK' you will cancel this process."
+msgstr "Mit drücken von 'OK' brechen Sie den Vorgang ab."
+
+msgid "Please wait, the setup for the storage media is running"
+msgstr "Bitte warten, die Einrichtung läuft."
+
+msgid "installing basic structure"
+msgstr "Struktur einrichten"
+
+msgid "integrating disk"
+msgstr "Integriere Datenträger"
+
+msgid "Process done."
+msgstr "Vorgang abgeschlossen."
+
+msgid "The storage medium has been successfully integrated. Please press the red key to continue"
+msgstr "Der Datenträger wurde erfolgreich eingerichtet. Bitte drücken Sie die rote Taste um fortzufahren."
+
+msgid "The integration of the storage medium has failed"
+msgstr "Die Einrichtung des Datenträgers ist fehlgeschlagen."
+
+msgid "Button$Continue"
+msgstr "Weiter"
+
+msgid "All recordings will be lost! Continue anyway ?"
+msgstr "Alle Aufnahmen gehen verloren! Trotzdem forfahren?"
+
+msgid "Press the red key to continue"
+msgstr "Bitte die rote Taste drücken um fortzufahren"
+
+msgid "\tType of target disk"
+msgstr "\tTyp Ziellaufwerk"
+
+msgid "\tSource of software"
+msgstr "\tQuelle der Software"
+
+msgid "Prepare disk: perform actions"
+msgstr "Datenträger einrichten: Änderungen durchführen"
+
+msgid "Harddisk"
+msgstr "Festplatte"
+
+msgid "SSD"
+msgstr "SSD"
+
+msgid "USB Flash Drive"
+msgstr "USB-Stick"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "Local disk"
+msgstr "Lokal"
+
+msgid "Some optimizations are made according to the type of the installation media. So please select the correct type of the device."
+msgstr "Abhängig vom Typ des Zielmediums werden einige Optimierungen vorgenommen. Bitte wählen Sie daher den korrekten Laufwerksyp."
+
+msgid "If you select to install the image from local source, the local harddisk oder USB-device will be copied. Select 'Internet' to download and install a fresh software image from the net."
+msgstr "Wenn Sie als Softwarequelle 'Lokal' wählen, wird eine 1:1 Kopie der aktuellen Installation erstellt. Wählen Sie 'Internet', um eine neue Installation aus dem Netz zu laden und zu installieren."
+
+msgid "Please select the image source"
+msgstr "Bitte wählen Sie die Quelle"
+
+msgid "Please select your media type"
+msgstr "Bitte wählen Sie den Laufwerkstyp"
+
+msgid "Please wait, creating boot disk can take a while (up to 30mins). Do not close this menu."
+msgstr "Das Erstellen der Bootdisk kann bis zu 30min dauern. Bitte dieses Menü nicht schließen."
+
+msgid "checking devices"
+msgstr "Prüfe Laufwerke"
+
+msgid "connected to internet"
+msgstr "Internetverbindung vorhanden"
+
+msgid "check internet connection!"
+msgstr "Internetverbindung prüfen!"
+
+msgid "creating boot disk"
+msgstr "Erstelle Bootdisk"
+
+msgid "creating media partitions"
+msgstr "Erstelle Medienpartition"
+
+msgid "creating media directories"
+msgstr "Erstelle Medienverzeichnisse"
+
+msgid "Updating system settings"
+msgstr "Aktualisiere Systemeinstellungen"
+
+msgid ""
+"Boot disk created successfully.\n"
+"To use the new boot disk please shutdown and REMOVE the old USB stick/harddisk and start the ReelBox again."
+msgstr ""
+"Bootdisk wurde erfolgreich erstellt.\n"
+"Um das neue Laufwerk zu benutzen, fahren Sie die ReelBox herunter, entfernen den aktuellen USB-Stick und starten dann die Box erneut."
+
+msgid "Creating boot disk failed. Please try again"
+msgstr "Das Erstellen der Bootdisk ist fehlgeschlagen. Bitte erneut versuchen."
+
+msgid "Please make sure the ReelBox is connected to the internet."
+msgstr "Bitte verbinden Sie die ReelBox mit dem Internet."
+
+msgid "Shutdown"
+msgstr "Ausschalten"
+
+msgid "partitioning"
+msgstr "Partitionieren"
+
+msgid "formatting"
+msgstr "Formatieren"
+
+msgid "The storage medium has been sucessfully integrated. The harddisk is ready for use now."
+msgstr "Der Datenträger wurde erfolgreich eingebunden. Sie können die Festplatte jetzt verwenden."
+
+msgid "The integration of the storage medium has failed. Please try again after rebooting the system."
+msgstr "Die Einrichtung des Datenträgers ist fehlgeschlagen. Bitte versuchen Sie es nach einem Neustart erneut."
+
+msgid "Button$Reboot"
+msgstr "Neustart"
+
+msgid "Shutdown now?"
+msgstr "Jetzt ausschalten?"
+
+msgid "Please wait, shutting down"
+msgstr "Bitte warten, ReelBox schaltet ab"
+
+msgid "Prepare disk: Choose disk"
+msgstr "Datenträger einrichten: Medium auswählen"
+
+msgid "Sorry. No applicable storage medium was detected."
+msgstr "Es wurde kein geeigneter Datenträger gefunden."
+
+msgid "The following storage media have been detected. Please select the medium to be configured:"
+msgstr "Diese Datenträger wurden gefunden. Bitte wählen Sie, welcher konfiguriert werden soll:"
+
+msgid "is already mounted on the system"
+msgstr "ist bereits im System eingebunden"
+
+msgid "has not yet been configured for the ReelBox"
+msgstr "wurde noch nie für die ReelBox konfiguriert"
+
+msgid "Prepare disk"
+msgstr "Datenträger vorbereiten"
+
+#~ msgid "The storage medium has been sucessfully integrated. A reboot of the system is neccessary. Please press the red key to reboot the ReelBox now."
+#~ msgstr "Der Datenträger wurde erfolgreich eingebunden. Ein Neustart ist erforderlich. Bitte drücken Sie die rote Taste, um die ReelBox jetzt neu zu starten."
+
+#~ msgid "\tStart installation"
+#~ msgstr "\tInstallation starten"
+
+#~ msgid "\tInstallation without formatting"
+#~ msgstr "\tInstallation ohne formatieren"

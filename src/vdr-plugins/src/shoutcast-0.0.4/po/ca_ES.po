@@ -1,0 +1,143 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Internet Radio"
+msgstr "Ràdio per internet"
+
+msgid "My Radio Stations"
+msgstr "Les meves Emissores de Ràdio"
+
+msgid "Getting playlist for Genre: "
+msgstr "Recupera llistes de reproducció per Gènere: "
+
+msgid "Internet Radio - Add New Server"
+msgstr "Ràdio per internet - Afegeix servidor"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Ràdio per internet - Edita Informació de l'Emissora"
+
+msgid "New Station"
+msgstr "Nova Emissora"
+
+msgid "Station Name"
+msgstr "Nom de l'Emissora"
+
+msgid "Station Url"
+msgstr "URL de l'Emissora"
+
+msgid "Save"
+msgstr "Desa"
+
+msgid "No URL entered!"
+msgstr "No heu indicat la URL!"
+
+msgid "Saved"
+msgstr "S'ha desat"
+
+msgid "Could not be saved!"
+msgstr "No es pot desar!"
+
+msgid "Already present"
+msgstr "Ja existeix"
+
+msgid "Couldnot save changes"
+msgstr "No es poden desar els canvis"
+
+msgid "Check URL: could not open radio-station"
+msgstr "Comproveu URL: no es pot obrir l'emissora"
+
+msgid "Please wait: opening radio-station"
+msgstr "Si us plau, espereu: obrint l'emissora"
+
+#, fuzzy
+msgid "Internet Radio Functions"
+msgstr "Funcions de la Ràdio per internet"
+
+msgid "1  Add New Radio Station"
+msgstr "1 Afegeix una nova emissora"
+
+msgid "2  Edit current Radio Station"
+msgstr "2 Edita l'emissora actual"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3 Suprimeix l'emissora actual"
+
+msgid "Selected Radio Station:"
+msgstr "Emissora seleccionada:"
+
+msgid "Could not save to disk"
+msgstr "No es pot desar al disc"
+
+msgid "Deletion failed"
+msgstr "No s'ha pogut suprimir"
+
+msgid "Internet Radio: My Stations"
+msgstr "Ràdio per internet: Les meves emissores"
+
+msgid "Button$Functions"
+msgstr "Funcions"
+
+msgid "No Radio Stations found."
+msgstr "No s'ha trobat cap emissora."
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please use 'Function' to add a station."
+msgstr ""
+
+msgid "Your SHOUTcast is active."
+msgstr ""
+
+msgid "Your SHOUTcast DevID is"
+msgstr ""
+
+msgid "Reset DevID"
+msgstr ""
+
+msgid "Welcome to Internetradio setup"
+msgstr ""
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr ""
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr ""
+
+msgid "Enter DevID"
+msgstr ""
+
+msgid "Show this page again"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr ""
+
+msgid "Internet Radio Setup"
+msgstr ""
+
+msgid "Radio station added to favorites"
+msgstr ""
+
+#~ msgid "Please use 'Function' to add"
+#~ msgstr "Utilitzeu 'Funcions' per afegir"
+
+#~ msgid "a station"
+#~ msgstr "una emissora"

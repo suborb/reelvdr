@@ -1,0 +1,110 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <Klaus.Schmidinger@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-12-07 16:12+0100\n"
+"PO-Revision-Date: 2010-02-28 14:43+0100\n"
+"Last-Translator: Nival Michaël\n"
+"Language-Team: French <vdr@linuxtv.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teletext subtitles"
+msgstr "Sous-titrage télétexte"
+
+msgid "Hide teletext subtitles"
+msgstr "Masquer le sous-titrage"
+
+msgid "Display teletext subtitles"
+msgstr "Afficher le sous-titrage"
+
+msgid "deprecated"
+msgstr "obsolète"
+
+msgid "Page Selection"
+msgstr "Page de sélection"
+
+msgid "Display on/off"
+msgstr "Affichage on/off"
+
+msgid "4:3/Letterbox (deprecated)"
+msgstr "4:3/Letterbox (obsolète)"
+
+msgid "Page Mode"
+msgstr "Mode page"
+
+msgid "All"
+msgstr "Tous"
+
+msgid "Only DVB-S"
+msgstr "Seulement DVB-S"
+
+msgid "Only DVB-T"
+msgstr "Seulement DVB-T"
+
+msgid "Only DVB-C"
+msgstr "Seulement DVB-C"
+
+msgid "Display Subtitles"
+msgstr "Afficher les sous-titre"
+
+msgid "Record Subtitles"
+msgstr "Enregistrer les sous-titres"
+
+msgid "Live Delay"
+msgstr "Délai en directe"
+
+msgid "Replay Delay (PES)"
+msgstr "Delai à la lecture (PES)"
+
+msgid "Replay Delay (TS)"
+msgstr "Delai à la lecture (TS)"
+
+msgid "Workaround for some French chns"
+msgstr "Contournement chaînes françaises"
+
+msgid "DVB Source Selection"
+msgstr "Sélection Source DVB"
+
+msgid "Font Size (pixel)"
+msgstr "Taille Police (pixel)"
+
+msgid "Font OutlineWidth (pixel)"
+msgstr "Largeur contour (pixel)"
+
+msgid "Language"
+msgstr "Langues"
+
+msgid "Hearing Impaired"
+msgstr "Malentendant"
+
+msgid "Subtitle Page Settings"
+msgstr "Conf. Page sous-titres"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Manual"
+msgstr "Manuel"
+
+msgid "Disabled"
+msgstr "Désactivé"
+
+msgid "Subtitle Mode"
+msgstr "Mode de sous-titres"
+
+msgid "Manual Subtitle Page"
+msgstr "Page manuel des sous-titres"
+
+#~ msgid "Main Menu Alternative"
+#~ msgstr "Choix du menu principal"

@@ -1,0 +1,23 @@
+The following steps are required for plugins to use mediamanager service
+interface:
+
+Plugin Start function:
+	create new cMediaService()
+	check if mediamanager plugin is available
+	if so create MediaManager_Register_v1_0 and register.
+	if successful registered use SetManager() function to set manager in cMediaService
+	now you can use static functions in cMediaService, if mediamanager is not avaiable
+	these functions do nothing.
+
+Plugin MainMenuEntry and
+Plugin MainMenuAction functions
+	should (but must not) return NULL (see mp3 and image plugin patches)
+
+Plugin Service function
+	if receive MEDIA_MANAGER_ACTIVATE_ID read required info from the disc
+	if receive MEDIA_MANAGER_MAINMENU_ID create a cOsdObject or return NULL
+	   and your plugin is called by cRemote::CallPlugin
+
+Of course you should include 'mediaservice.h' and add mediaservice.o to your
+OBJS in Makefile
+for details look at audiocd example or patches.

@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S123.2W
+2=Galaxy 18
+3=West
+4=123.2

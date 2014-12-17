@@ -1,0 +1,139 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediad\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-07-03 10:54+0200\n"
+"PO-Revision-Date: 2009-03-04 17:31+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "autoplays identified media"
+msgstr "Automatické přehrávání rozpoznaných médií"
+
+msgid "Play Disk"
+msgstr "Přehrát disk"
+
+msgid "Play Medium"
+msgstr "Přehrát médium"
+
+msgid "Identifying Disc"
+msgstr "Rozpoznávání disku"
+
+msgid "Choose action"
+msgstr "Zvolte akci"
+
+msgid "Couldn't read disc!"
+msgstr "Nelze načíst disk!"
+
+msgid "Start of"
+msgstr "Začátek"
+
+msgid "Missing appropriate PlugIn!"
+msgstr "Chybí příslušný modul!"
+
+msgid "Play recordings"
+msgstr "Přehrát nahrávky"
+
+msgid "Show archive"
+msgstr "Zobrazit archiv"
+
+msgid "Play video CD"
+msgstr "Přehrát Video CD"
+
+msgid "Play music"
+msgstr "Přehrát hudbu"
+
+msgid "Archive audio CD"
+msgstr "Archivovat zvukové CD"
+
+msgid "Play multimedia"
+msgstr "Přehrát multimédia"
+
+msgid "Play DVD"
+msgstr "Přehrát DVD"
+
+msgid "Play photo CD"
+msgstr "Přehrát Photo CD"
+
+msgid "Play audio CD"
+msgstr "Přehrát zvukové CD"
+
+msgid "Burn recordings"
+msgstr "Vypálit nahrávky"
+
+msgid "Copy DVD"
+msgstr "Kopírovat DVD"
+
+msgid "Browse data"
+msgstr ""
+
+msgid "Play video"
+msgstr "Přehrát video"
+
+msgid "Play video DVD"
+msgstr "Přehrát Video DVD"
+
+msgid "Wrong dmh-archive-dvd structure!"
+msgstr "Nesprávná struktura archivu DMH DVD!"
+
+msgid "Drive not present in mplayersources.conf!"
+msgstr "Jednotka chybí v souboru mplayersources.conf!"
+
+msgid "Drive not present in mp3sources.conf!"
+msgstr "Jednotka chybí v souboru mp3sources.conf!"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Video DVD"
+msgstr "Video DVD"
+
+msgid "SVCD"
+msgstr "SVCD"
+
+msgid "blank disc"
+msgstr "prázdný disk"
+
+msgid "unknown"
+msgstr "neznámý"
+
+msgid "Select device"
+msgstr "Vybrat zařízení"
+
+msgid "ask each time"
+msgstr "zobrazit dotaz"
+
+msgid "AutoStart"
+msgstr "Automatické spuštění"
+
+#, fuzzy
+msgid "Request for DVD action"
+msgstr "Vyžádat akci DVD"
+
+#, fuzzy
+msgid "Request for CD action"
+msgstr "Vyžádat akci DVD"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+#~ msgid "no"
+#~ msgstr "ne"
+
+#~ msgid "yes"
+#~ msgstr "ano"
+
+#, fuzzy
+#~ msgid "RequestDvdAction"
+#~ msgstr "Vyžádat akci DVD"

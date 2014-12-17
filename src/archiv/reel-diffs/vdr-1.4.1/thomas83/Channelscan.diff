@@ -1,0 +1,27 @@
+Nur in channelscan-0.4.0: .dependencies.
+diff -ubw channelscan-0.4.0/scan.c channelscan-0.4.0-patched/scan.c
+--- channelscan-0.4.0/scan.c	2006-08-09 13:13:50.000000000 +0200
++++ channelscan-0.4.0-patched/scan.c	2006-08-12 19:21:23.000000000 +0200
+@@ -112,6 +112,21 @@
+ 		
+ 	if (!device->SwitchChannel(c,true))
+ 		esyslog(ERR "SwitchChannel(c)  failed");
++#if VDRVERSNUM >= 10330
++	else 
++	{
++		struct 
++		{
++			cDevice* device;
++			cChannel* channel;
++		} data;
++		data.device = device;
++		data.channel = c; 
++		cPlugin *Plugin = cPluginManager::GetPlugin("rotor");
++		if (Plugin)
++	  		Plugin->Service("Rotor-SwitchChannel", &data);
++	}
++#endif
+ 	
+ 	if (cDevice::GetDevice(cardnr)->HasLock(transponders.LockMs()))
+ 	{
+Gemeinsame Unterverzeichnisse: channelscan-0.4.0/.svn und channelscan-0.4.0-patched/.svn.

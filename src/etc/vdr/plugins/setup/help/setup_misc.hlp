@@ -1,0 +1,30 @@
+
+Hier können diverse Einstellungen für den Betrieb vorgenommen werden:
+
+ Zeitzone: 
+ -Gebiet, Stadt/Region festlegen. 
+ -Festlegen, ob Systemzeit automatisch gestellt wird, 
+ -Auswahl des Transponders für die Systemzeit
+
+ Inaktivität: 
+ -Einstellungen für automatisches Abschalten 
+  nach Inaktivität vornehmen.
+ 
+ OSD/Sprachen: 
+ -Sämtliche optionale Einstellungen des Menüs.
+ -Einstellungen der Sprache
+ 
+ Deep Standby zulassen: 
+ -Festlegen, ob der Deep Standy-Modus verwendet wird.
+
+ Deep Standby nach (h): 
+ -Festlegen, nach wieviel Stunden im Standby der 
+  Deep Standby-Modus aktiviert werden soll.
+
+ Installiere optionale Software nach: 
+ -Festlegen, wo optionale Softwarepakete gespeichert 
+  werden sollen.
+
+ /opt benutzen: 
+ -Festlegen, ob optional installierte Software bei Systemstart 
+  geladen werden soll.

@@ -1,0 +1,29 @@
+VDR Plugin 'mediamanager' Revision History
+-------------------------------------
+
+2007-04-12: Version 0.0.2
+- Removed Makefile-APIVERSION directory. Makefile works now for all VDR-Versions
+- Fixed a bug in cMediaHandler::Action avoiding endless mount/umount loop if
+  mediatype is mtMp3Data or mtPhotoData
+- Renamed mediatype mtMp3Data to mtAudioData and mtPhotoData to mtImageData
+  now checks for mp3, ogg, wav files and jpg, png, tif, bmp files
+- Moved some stuff from Start() to Initialize() function so plugins can register
+  itself even if mediamanager is started after
+- Changed default behaviour for unsupported discs. Unsupported discs are no
+  longer ejected, but mediamanager still checks for disc removing. If this
+  behaviour interfere other plugins they may use the new service (see below) or
+  mediamanager must be deactivated manually.
+- Added new service "Suspend". Plugins which have their own idea of
+  mediahandling can use this service to deactivate mediamangers device polling.
+  To use this service plugins must not be registered.
+  This is primary for plugins like burn or dvdconvert.
+- Plugins which return NULL for cOsdObject in MediaManager_Mainmenu_v1_0 struct
+  are now called by cRemote::CallPlugin
+- Added patches directory which contains patches for plugins to work with
+  mediamanager
+- Added mediaservice.c in devel-docs for easy implementation of mediamanager
+  support to plugins without destroying normal functionality of plugins.
+
+2007-02-13: Version 0.0.1
+
+- Initial revision.

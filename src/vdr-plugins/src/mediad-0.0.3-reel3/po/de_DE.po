@@ -1,0 +1,127 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediad\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-07-03 10:54+0200\n"
+"PO-Revision-Date: 2008-09-26 13:04+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "autoplays identified media"
+msgstr "Spielt automatisch erkannte Medien"
+
+msgid "Play Disk"
+msgstr "Disk abspielen"
+
+msgid "Play Medium"
+msgstr "CD/DVD abspielen"
+
+msgid "Identifying Disc"
+msgstr "Identifiziere Disk"
+
+msgid "Choose action"
+msgstr "Aktion auswählen"
+
+msgid "Couldn't read disc!"
+msgstr "Konnte Disk nicht lesen!"
+
+msgid "Start of"
+msgstr "Starte "
+
+msgid "Missing appropriate PlugIn!"
+msgstr "Kein passendes Plugin gefunden!"
+
+msgid "Play recordings"
+msgstr "Aufnahmen abspielen"
+
+msgid "Show archive"
+msgstr "Archiv anzeigen"
+
+msgid "Play video CD"
+msgstr "Video-CD abspielen"
+
+msgid "Play music"
+msgstr "Musik abspielen"
+
+msgid "Archive audio CD"
+msgstr "Audio-CD archivieren"
+
+msgid "Play multimedia"
+msgstr "Multimediadatei abspielen"
+
+msgid "Play DVD"
+msgstr "DVD abspielen"
+
+msgid "Play photo CD"
+msgstr "Photo-CD anzeigen"
+
+msgid "Play audio CD"
+msgstr "Audio-CD abspielen"
+
+msgid "Burn recordings"
+msgstr "Aufnahmen brennen"
+
+msgid "Copy DVD"
+msgstr "DVD archivieren"
+
+msgid "Browse data"
+msgstr "Dateimanager öffnen"
+
+msgid "Play video"
+msgstr "Video abspielen"
+
+msgid "Play video DVD"
+msgstr "Video DVD abspielen"
+
+msgid "Wrong dmh-archive-dvd structure!"
+msgstr "Defekte DMH-Archiv-DVD Struktur!"
+
+msgid "Drive not present in mplayersources.conf!"
+msgstr "Laufwerk fehlt in mplayersources.conf!"
+
+msgid "Drive not present in mp3sources.conf!"
+msgstr "Laufwerk fehlt in mp3sources.conf!"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Data"
+msgstr "Daten"
+
+msgid "Video DVD"
+msgstr "Video DVD"
+
+msgid "SVCD"
+msgstr "SVCD"
+
+msgid "blank disc"
+msgstr "leere CD/DVD"
+
+msgid "unknown"
+msgstr "unbekannt"
+
+msgid "Select device"
+msgstr "Gerät auswählen"
+
+msgid "ask each time"
+msgstr "Immer nachfragen"
+
+msgid "AutoStart"
+msgstr "Automatisch starten"
+
+msgid "Request for DVD action"
+msgstr "DVD Aktion abfragen"
+
+msgid "Request for CD action"
+msgstr "CD Aktion abfragen"
+
+msgid "Recordings"
+msgstr "Aufnahmen"
+

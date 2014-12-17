@@ -1,0 +1,187 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-12-07 10:22+0100\n"
+"PO-Revision-Date: 2011-06-15 22:04+0100\n"
+"Last-Translator: TechNL <technl@reelbox4all.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Jump: "
+msgstr "Spring:"
+
+msgid "Cannot play"
+msgstr "Kan bestand niet afspelen"
+
+msgid "file type"
+msgstr "bestandstype"
+
+msgid "Waiting for server ..."
+msgstr "Wachten op server ..."
+
+msgid "Network read error"
+msgstr "Netwerk leesfout"
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr "Kreeg ongeldige playlist van de server. De volgende wordt afgespeeld."
+
+msgid "Open Error"
+msgstr "Fout tijdens openen"
+
+msgid "Only MPEG-1 format supported"
+msgstr "Alleen MPEG-1 formaat wordt ondersteund"
+
+msgid "VideoCodec not supported!"
+msgstr "VideoCodec niet ondersteund!"
+
+msgid "AudioCodec not supported!"
+msgstr "AudioCodec niet ondersteund!"
+
+msgid "Could not play file"
+msgstr "Kan bestand niet afspelen"
+
+msgid "Please wait, Loading..."
+msgstr "Laden...."
+
+msgid "Please check your network connection"
+msgstr "Controleer uw netwerk aub."
+
+msgid "Opening "
+msgstr "Openen "
+
+msgid "Chapter"
+msgstr "Hoofdstuk"
+
+msgid "Unable to get default CD device"
+msgstr "Kan standaard CD speler niet vinden"
+
+msgid "Unable open CD device"
+msgstr "Kan CD apparaat niet openen"
+
+msgid "No tracks found in CD"
+msgstr "Geen nummers op de CD gevonden"
+
+msgid "No audio tracks found"
+msgstr "Geen audio nummers gevonden"
+
+msgid "Track"
+msgstr "Track"
+
+msgid "Paused"
+msgstr "Gepauseerd"
+
+msgid "Mute"
+msgstr "Mute"
+
+msgid "Mode"
+msgstr ""
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Repeat"
+msgstr "Herhaal"
+
+msgid "Shuffle"
+msgstr "Shuffle"
+
+msgid "Overview"
+msgstr "Overzicht"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Options"
+msgstr "Opties"
+
+msgid "shoutcast"
+msgstr "shoutcast"
+
+msgid "Add to favs"
+msgstr "Toevoegen aan favs"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Loading..."
+msgstr "Laden...."
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Artist"
+msgstr "Artiest"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Genre"
+
+msgid "Comment"
+msgstr "Commentaar"
+
+msgid "Year"
+msgstr "Jaar"
+
+msgid "Length"
+msgstr "Lengte"
+
+msgid "min"
+msgstr "min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Sample rate"
+
+msgid "ID3$Channels"
+msgstr "Kanalen"
+
+msgid "Original"
+msgstr "Origineel"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-Layer"
+
+msgid "Copyrighted"
+msgstr "Copyright beschermd"
+
+msgid "Protected"
+msgstr "Beschermd"
+
+msgid "File size"
+msgstr "Bestands grootte"
+
+msgid "Last Modified"
+msgstr "Last aangepast"
+
+msgid "Mediaplayer - Id3 Info:"
+msgstr "Mediaplayer - Id3 info:"
+
+msgid "No Id3 info found!"
+msgstr "Geen Id3 info gevonden!"
+
+#~ msgid "Replaymode: Normal"
+#~ msgstr "Replaymode: Normaal"
+
+#~ msgid "Replaymode: Repeat"
+#~ msgstr "Replaymode: Herhaal"
+
+#~ msgid "Replaymode: Shuffle"
+#~ msgstr "Replaymode: Shuffle"
+
+#~ msgid "Function"
+#~ msgstr "Funktie"

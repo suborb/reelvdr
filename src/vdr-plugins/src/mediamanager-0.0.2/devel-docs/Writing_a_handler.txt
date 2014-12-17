@@ -1,0 +1,23 @@
+Use ./newhandler <name>
+
+For example if you want writing a handler for Video-DVD
+type ./newhandler dvd
+This command creates a directory media_dvd with the following files:
+
+Handler.include:
+	add your objects to HANDLEROBJS
+	add additionally required libs to HANDLERLIBS
+
+HandlerClassName
+	you must edit this file if you don't like the default handler classname
+
+i18n.include
+	put your translations here
+
+dvd_handler.[ch]
+dvd_disc.[ch]
+dvd_menu.[ch]
+	header and source files to write your handler
+
+
+To compile the handler put a line 'media_dvd' in COMPILE_HANDLERS.

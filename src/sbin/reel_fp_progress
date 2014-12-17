@@ -1,0 +1,35 @@
+# all this applies to startup_progress() from /etc/init.d/rc
+# use with care!!!
+
+. /etc/default/sysconfig
+
+IMAGEDIR=/etc/reel/images
+#REELFPCTL="reelfpctl -nowait -displaymode 0"
+REELFPCTL="reelfpctl -nowait"
+
+max_progress=95 # max process from rc
+fp_num_steps=9
+fp_step=$(($progress * $fp_num_steps / 100))
+
+case $FPDISPBRIGHT in
+	off)	BRIGHT=0 ;;
+	min)	BRIGHT=8 ;;
+	low)	BRIGHT=16 ;;
+	med)	BRIGHT=32 ;;
+	high)	BRIGHT=64 ;;
+	max)	BRIGHT=128 ;;
+	*)	BRIGHT=8 ;;
+esac
+
+# set brightness for reboot over dpkg plugin
+if [ -f /var/tmp/reboot ] && [ $step -ge 0 ]; then
+    $REELFPCTL -brightness $BRIGHT
+    rm /var/tmp/reboot
+fi
+
+if [ "$max_progress" -gt "$progress" ]; then
+	if type reelfpctl >/dev/null 2>&1; then
+        	[ $step -ge 0 ] && $REELFPCTL -showpnm "$IMAGEDIR/boot0${fp_step}.pnm" || true
+	fi
+fi
+

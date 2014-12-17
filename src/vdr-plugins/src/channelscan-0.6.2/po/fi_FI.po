@@ -1,0 +1,363 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-channelscan\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-09-06 10:13+0200\n"
+"PO-Revision-Date: 2009-01-30 20:58+0200\n"
+"Last-Translator: Saku Vainikainen\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel lists"
+msgstr "Kanavalistojen tiedostot"
+
+msgid "Backup"
+msgstr "Tallenna"
+
+msgid "Backup channel list to..."
+msgstr "Valitse kansio johon kanavalista tallennetaan..."
+
+msgid "Restore channel list from..."
+msgstr "Valitse kanavalistan sisältävä tiedosto..."
+
+msgid "Restore failed!"
+msgstr "Lataaminen ei onnistu!"
+
+msgid "Favourites List successfully loaded"
+msgstr ""
+
+msgid "Invalid file"
+msgstr "Tiedosto ei sisällä kanavalistaa"
+
+msgid "Channel List successfully loaded"
+msgstr "Kanavalista ladattu tiedostosta"
+
+msgid "Backup failed!"
+msgstr "Tallennus ei onnistu"
+
+msgid "Channel List successfully stored"
+msgstr "Kanavalistan tiedosto käsitelty"
+
+msgid "TV only"
+msgstr "TV-kanavat"
+
+msgid "Radio only"
+msgstr "radiokanavat"
+
+msgid "HDTV only"
+msgstr "teräväpiirtokanavat"
+
+msgid "Radio + TV"
+msgstr "radio- ja TV-kanavat"
+
+msgid "Servicetype"
+msgstr ""
+
+msgid "Enable Logfile"
+msgstr ""
+
+msgid "No tuners, please stop recording and retry"
+msgstr ""
+
+msgid "Channelscan"
+msgstr "Kanavahaku"
+
+msgid "Detailed search"
+msgstr "Tarkka haku"
+
+msgid "Manual"
+msgstr "itsemääritelty"
+
+msgid "SearchMode$Auto"
+msgstr "automaattinen"
+
+msgid "End of channellist"
+msgstr "lisätään kanavalistan loppuun"
+
+msgid "New channellist"
+msgstr "korvaavat nykyiset"
+
+msgid "Bouquets"
+msgstr "lisätään uusille kanavalistoille"
+
+msgid "Intelligent 6900/6875/6111"
+msgstr "päättele (6900/6875/6111)"
+
+msgid "Try all 6900/6875/6111"
+msgstr "kokeile kaikkia (6900/6875/6111)"
+
+#, fuzzy
+msgid "Satellite-S2"
+msgstr "DVB-S - kiinteä"
+
+#, fuzzy
+msgid "Satellite-S"
+msgstr "DVB-S - kiinteä"
+
+#, fuzzy
+msgid "Terrestrial"
+msgstr "DVB-T - antenniverkko"
+
+#, fuzzy
+msgid "Cable"
+msgstr "käytössä"
+
+msgid "DVB-T - Terrestrial"
+msgstr "DVB-T - antenniverkko"
+
+msgid "Tuner"
+msgstr "Viritin"
+
+msgid "DVB-C - Cable"
+msgstr "DVB-C - kaapeliverkko"
+
+msgid "DVB-S2 - Satellite"
+msgstr "DVB-S2 - kiinteä"
+
+msgid "DVB-S - Satellite"
+msgstr "DVB-S - kiinteä"
+
+msgid "Search Mode"
+msgstr "Hakutapa"
+
+msgid "Add new channels to"
+msgstr "Haetut kanavat"
+
+msgid "Source"
+msgstr "Viritin"
+
+msgid "No Tuners available"
+msgstr "Yhtään viritintiä ei ole käytettävissä"
+
+msgid "Position"
+msgstr "Sijainti"
+
+msgid "no"
+msgstr "ei käytössä"
+
+msgid "yes"
+msgstr "käytössä"
+
+msgid "Bandwidth"
+msgstr "Signaalikaistan leveys"
+
+msgid "Symbol Rates"
+msgstr "Symbolinopeus"
+
+msgid "Frequency (MHz)"
+msgstr "Taajuus (MHz)"
+
+msgid "Polarization"
+msgstr "Polarisaatio"
+
+msgid "Symbolrate"
+msgstr "Symbolinopeus"
+
+msgid "Modulation"
+msgstr "Modulaatio"
+
+msgid "Frequency (kHz)"
+msgstr "Taajuus (kHz)"
+
+msgid "Recording is running !"
+msgstr "Tallennus on meneillään!"
+
+msgid "Button$Start"
+msgstr "Aloita haku"
+
+msgid "Channel sel."
+msgstr "Lataa kanavat"
+
+msgid "DiSEqC"
+msgstr "DiSEqC-kytkin"
+
+msgid "Scanning aborted"
+msgstr "Haku keskeytettiin"
+
+msgid "Scanning succed"
+msgstr "Haku valmis"
+
+msgid "Retrieving transponders failed!"
+msgstr "Lähetysten haku ei onnistu!"
+
+msgid "Please check satellites.conf."
+msgstr "Tarkista satelliittiasetukset."
+
+msgid "Tuner obtained no lock!"
+msgstr "Viritin ei lukitu signaaliin!"
+
+msgid "Please check your connections and satellites.conf."
+msgstr "Tarkista kytkennät ja satelliittiasetukset."
+
+msgid "Unpredictable error occured!"
+msgstr "Järjestelmävirhe!"
+
+msgid "Please try again later"
+msgstr "Yritä myöhemmin uudestaan"
+
+msgid "Information:"
+msgstr ""
+
+#, fuzzy
+msgid "Entries in current channellist"
+msgstr "Tallenna kanavalista tiedostoon"
+
+msgid "Recording is running"
+msgstr "Tallennus on meneillään"
+
+msgid "Scan active"
+msgstr "Kanavahaku meneillään"
+
+msgid "TV Channels\tRadio Channels"
+msgstr "Löydetyt TV-kanavat\tLöydetyt radiokanavat"
+
+#, c-format
+msgid "Retrieving transponder list from %s"
+msgstr "Haetaan lähetyslistaa: %s"
+
+#, fuzzy, c-format
+msgid "Scanning %s (%iMHz) %s"
+msgstr "Haetaan kanavia %s (%iMHz)\t%s"
+
+#, fuzzy, c-format
+msgid "Scanning %s (%.1fMHz) %s"
+msgstr "Haetaan kanavia %s (%.3fMHz)\t%s"
+
+#, c-format
+msgid "Scanning %s (%.3fMHz)\t%s"
+msgstr "Haetaan kanavia %s (%.3fMHz)\t%s"
+
+msgid "No new channels found"
+msgstr "Uusia kanavia ei löytynyt"
+
+msgid "Added new channels"
+msgstr "Uudet kanavat lisätty"
+
+msgid "Press OK to go back to rotor settings"
+msgstr ""
+
+msgid "Press OK to finish or Exit for new scan"
+msgstr "Tee uusi haku painamalla EXIT, lopeta painamalla OK"
+
+msgid "Scanning on transponder"
+msgstr "Haetaan lähetyksestä"
+
+msgid "Auto"
+msgstr "automaattinen"
+
+msgid "enabled"
+msgstr "käytössä"
+
+msgid "disabled"
+msgstr "ei käytössä"
+
+msgid "Back"
+msgstr "Edellinen"
+
+msgid "Skip"
+msgstr "Ohita"
+
+msgid "Load predefined channel list"
+msgstr ""
+
+msgid "Start channelscan"
+msgstr ""
+
+msgid "    Overwrite Favourites list"
+msgstr ""
+
+msgid "You have the choice of loading a predefined channel list OR starting channelscan to find channels"
+msgstr ""
+
+msgid "Press OK to reload default channel list"
+msgstr ""
+
+msgid "Functions"
+msgstr "Toiminnot"
+
+msgid "Please select a channellist:"
+msgstr "Valitse kanavalista:"
+
+msgid "Overwrite existing favourites list, also?"
+msgstr ""
+
+#, fuzzy
+msgid "Loading channel list ..."
+msgstr "Valitse kansio johon kanavalista tallennetaan..."
+
+msgid "Channellist was installed successfully"
+msgstr ""
+
+msgid "Error while loading channellist"
+msgstr ""
+
+msgid "Changes Done"
+msgstr "Kanavat tallennettu"
+
+msgid "Please check your Timers!"
+msgstr "Kanavalistoja päivitetty - tarkista tallennusajastimet!"
+
+msgid "Changes failed"
+msgstr "Kanavien tallennus ei onnistu!"
+
+msgid "Reloaded default channel list"
+msgstr ""
+
+msgid "Error loading default channel list"
+msgstr ""
+
+msgid "Delete channel list?"
+msgstr "Poistetaanko kanavalista?"
+
+msgid "Channel lists functions"
+msgstr "Kanavalistojen toiminnot"
+
+msgid "Import a channellist"
+msgstr "Lataa kanavalista tiedostosta"
+
+msgid "Export current channellist"
+msgstr "Tallenna kanavalista tiedostoon"
+
+msgid "Import favourites list"
+msgstr ""
+
+msgid "Export current favourites list"
+msgstr ""
+
+msgid "Import channels from ReelBox Avantgarde"
+msgstr ""
+
+msgid "Scanning channels on DVB-T/C/S and S2 Tuners"
+msgstr ""
+
+msgid "Channel Scan"
+msgstr "Kanavahaku"
+
+#~ msgid "DVB-S2 - Rotor"
+#~ msgstr "DVB-S2 - moottoroitu"
+
+#~ msgid "DVB-S - Rotor"
+#~ msgstr "DVB-S - moottoroitu"
+
+#, fuzzy
+#~ msgid "Scanning %s (%.1fMHz, %s, SR%i) %s"
+#~ msgstr "Haetaan kanavia %s (%.3fMHz)\t%s"
+
+#~ msgid "Service type"
+#~ msgstr "Haettavat palvelut"
+
+#~ msgid "Channels in current list"
+#~ msgstr "Haettuja kanavia tällä hetkellä"
+
+#~ msgid "  TV CHANNELS                      RADIO"
+#~ msgstr "  TV-kanavat                      Radio"

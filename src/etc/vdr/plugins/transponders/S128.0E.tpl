@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S128.0E
+2=JCSAT RA
+3=East
+4=128.0

@@ -1,0 +1,290 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-rbmini\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-02-04 10:16+0100\n"
+"PO-Revision-Date: 2009-04-20 15:53+0200\n"
+"Last-Translator: Andreas Ritter <ar@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "HDMI: %s      SCART: %s"
+msgstr ""
+
+msgid "Setup - Video"
+msgstr "Einstellungen - Video"
+
+msgid "Setup - Audio"
+msgstr "Einstellungen - Audio"
+
+msgid "Keep these settings?"
+msgstr "Einstellungen beibehalten?"
+
+msgid "Using old settings"
+msgstr "Nutze alte Einstellungen"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Experts"
+msgstr "Experten"
+
+msgid "HDMI settings"
+msgstr "HDMI-Einstellungen"
+
+msgid "Mode"
+msgstr "Modus"
+
+msgid "Output"
+msgstr "Ausgang"
+
+msgid "Aspect"
+msgstr "Bildformat"
+
+msgid "Aspect ratio"
+msgstr "Seitenverhältnis"
+
+msgid "SCART settings"
+msgstr "SCART-Einstellungen"
+
+msgid "Mpeg2 settings"
+msgstr "Mpeg2 Einstellungen"
+
+msgid "Postprocessing"
+msgstr "Nachbearbeitung"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr "Ihre Einstellungen werden nun übernommen. Wenn die neuen Einstellungen nicht von Ihrem Display unterstützt werden, warten Sie 20 sek. oder drücken \"Exit\" um abzubrechen."
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Audio settings"
+msgstr "Audioeinstellungen"
+
+msgid "Analog offset"
+msgstr "Verzögerung analog"
+
+msgid "Dolby Digital offset"
+msgstr "Verzögerung Dolby Digital"
+
+msgid "Note:"
+msgstr "Hinweis:"
+
+msgid "The adjustable range is 1/100 seconds."
+msgstr "Der Einstellbereich der Verzögerung beträgt 1/100 Sekunden."
+
+msgid "None"
+msgstr "Keine"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Init"
+msgstr "Initialisiere"
+
+msgid "Play"
+msgstr "Wiedergabe"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Trick"
+msgstr "Trick"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Mpg2"
+msgstr "Mpg2"
+
+msgid "h264"
+msgstr "h264"
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "Ntsc Jap"
+
+msgid "Ntsc 443"
+msgstr "Ntsc 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "Secam"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "Ntsc BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p29"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "Source"
+msgstr "Quelle"
+
+msgid "1:1"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "14:9"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "20:9"
+msgstr ""
+
+msgid "Fill to Screen"
+msgstr "Vollbild"
+
+msgid "Crop to Fill"
+msgstr "Zoom"
+
+msgid "Fill to Aspect"
+msgstr "Original"
+
+msgid "NL X"
+msgstr ""
+
+msgid "NL Y"
+msgstr ""
+
+msgid "NL XY"
+msgstr ""
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr "Alle"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YprPb"
+
+msgid "Deblock"
+msgstr ""
+
+msgid "Deblock & dering"
+msgstr ""
+

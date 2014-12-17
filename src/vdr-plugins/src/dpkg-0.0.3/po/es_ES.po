@@ -1,0 +1,192 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Marc Rovira Vall <tm05462@salleURL.edu>, 2003
+# Ramon Roca <ramon.roca@xcombo.com>, 2003
+# Jordi Vilà <jvila@tinet.org>, 2003
+# elpajare-Tododream, Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2008-10-01 15:59+0200\n"
+"Last-Translator: Jordi Vilà <jvila@tinet.org>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr "Dpkg Plugin"
+
+msgid "Start Online Update"
+msgstr "Iniciar Actualización Online"
+
+msgid "Updates available! Press OK to update now."
+msgstr "¡Actualizaciones disponibles! Presione OK para actualizar ahora."
+
+msgid "Addon Plugin"
+msgstr "Plugin Addon"
+
+msgid "Optional Software "
+msgstr "Software Opcional"
+
+msgid "Online Update"
+msgstr "Actualización Online"
+
+msgid "Updating sources..."
+msgstr "Actualizando fuentes..."
+
+msgid "Updating packages..."
+msgstr "Actualizando paquetes..."
+
+msgid "Rebooting, please wait..."
+msgstr "Reiniciando...¡Por favor espere!"
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Actualización de software via conexión online:"
+
+msgid "Upgrade"
+msgstr "Actualización"
+
+msgid "Install"
+msgstr "Instalar"
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Skip"
+msgstr "Omitir"
+
+msgid "Packages"
+msgstr "Paquetes"
+
+msgid "Optional"
+msgstr "Opcional"
+
+msgid "Sources"
+msgstr "Fuentes"
+
+msgid "Please restart your ReelBox after the recording."
+msgstr "Por favor reinicie su ReelBoxdespués de la grabación"
+
+msgid "Reboot ?"
+msgstr "¿ Reiniciar ?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr "Cancelando..."
+
+msgid "Press OK to abort update."
+msgstr "Presione OK para cancelar la actualización."
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "¡Error al actualizar todas las fuentes! Buscando actualizaciones..."
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "¡Error al actualizar todas las fuentes! Buscando paquetes..."
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Fuentes preparadas. Buscando actualizaciones..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Fuentes preparadas. Buscando paquetes..."
+
+msgid "Failed to process all packages!"
+msgstr "¡Error al procesar todos los paquetes!"
+
+msgid "Failed"
+msgstr "Error"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Ahora seleccione actualizar para instalar los nuevos paquetes."
+
+msgid "Following packages will be updated:"
+msgstr "Los siguientes paquetes serán actualizados:"
+
+msgid "The software is up to date."
+msgstr "No hay actualizaciones pendientes."
+
+msgid "No updates found."
+msgstr "No se han encontrado actualizaciones."
+
+msgid "Downloading Packages..."
+msgstr "Descargando Paquetes..."
+
+msgid "Processing Packages..."
+msgstr "Procesando Paquetes..."
+
+msgid "All changes successfull!"
+msgstr "¡Todos los cambios se han realizado correctamente!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Por favor reinicie su ReelBox!"
+
+msgid "Please go into deep standby,"
+msgstr "Por favor pase al modo deep standby,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "Reinicie su ReelBox y intente actualizar de nuevo."
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Load"
+msgstr "Cargando"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Por favor compruebe su conexión a internet."
+
+msgid "IGN"
+msgstr "IGN"
+
+msgid "Source list"
+msgstr "Lista de fuentes"
+
+msgid "Save"
+msgstr "Grabar"
+
+msgid "Undo"
+msgstr "Deshacer"
+
+msgid "Insert"
+msgstr "Insertar"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Unable to read from sources.list!"
+msgstr "Imposible leer desde el sources.list!"
+
+msgid "Unable to write to surces.list!"
+msgstr "Imposible escribir en sources.list!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Configuración Dpkg"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Configuración del Software Opcional"
+
+#~ msgid "Recording is running !"
+#~ msgstr "¡Grabación en curso !"

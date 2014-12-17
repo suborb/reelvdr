@@ -1,0 +1,566 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2009-03-07 13:20+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Delete recording?"
+msgstr "Sterg inregistrarea ?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+#, fuzzy
+msgid "Directory Selector"
+msgstr "Nume Director"
+
+msgid "up"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Anuleaza"
+
+msgid "Move"
+msgstr "Muta"
+
+msgid "Rec Dir"
+msgstr "Director Iregistrari"
+
+msgid "Button$Create"
+msgstr "Creeaza"
+
+msgid "Cannot move into its own sub folder"
+msgstr "Nu-l pot muta in propriul subdirector"
+
+msgid "Cannot write into directory"
+msgstr "Nu pot scrie in director"
+
+msgid "Moving Recording"
+msgstr "Mut Iregistrari"
+
+msgid "Moving Directories"
+msgstr "Mut Directoare"
+
+msgid "Move failed. Not enough free space"
+msgstr "Esuare Mutare."
+
+#, fuzzy
+msgid "Copying started"
+msgstr "Sortare"
+
+#, fuzzy
+msgid "Cannot copy into its own sub folder"
+msgstr "Nu-l pot muta in propriul subdirector"
+
+#, fuzzy
+msgid "Copy failed. Not enough free space"
+msgstr "Esuare Mutare."
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Creeaza Director"
+
+msgid "New"
+msgstr ""
+
+#, fuzzy
+msgid "To create a new directory press 'OK':"
+msgstr "Creeaza Director nou"
+
+msgid "Directory Name"
+msgstr "Nume Director"
+
+msgid "Note:"
+msgstr ""
+
+msgid "Directory will only be shown with"
+msgstr ""
+
+#, fuzzy
+msgid "recordings inside."
+msgstr "Info Inregistrare"
+
+msgid "Created"
+msgstr "Creat"
+
+msgid "Failed"
+msgstr "Esuat"
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr "HDD Intern"
+
+msgid "External Media"
+msgstr "Media Extern"
+
+msgid "Please select the drive where to move the recording:"
+msgstr ""
+
+msgid "Select Media"
+msgstr "Selecteaza Media"
+
+msgid "Could not open media"
+msgstr "Nu pot deschide media"
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr "Schimba titlu"
+
+msgid "Title"
+msgstr "Titlu"
+
+msgid "Episode"
+msgstr "Episod"
+
+msgid "Invalid title!"
+msgstr "Titlu invalid!"
+
+msgid "Invalid episode!"
+msgstr "Episod invalid!"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Creeaza Director"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Invalid filename!"
+msgstr "Nume fisier invalid!"
+
+msgid "Creating directories failed!"
+msgstr "Esuare creeare directoare!"
+
+msgid "New folder"
+msgstr "Dosar nou"
+
+msgid "Button$Cancel"
+msgstr "Anuleaza"
+
+msgid "Button$Move"
+msgstr "Muta"
+
+msgid "Move recording"
+msgstr "Muta inregistrare"
+
+msgid "[base dir]"
+msgstr "[director baza]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "Fisierele de sistem, tinta, pline - incerc oricum?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "Mutarea in propriul subdirector nu este permisa!"
+
+msgid "Can't get filesystem information"
+msgstr "Nu pot obtine informatii despre fisierele de sistem"
+
+msgid "Details"
+msgstr "Detalii"
+
+msgid "low"
+msgstr "joasa"
+
+msgid "normal"
+msgstr "normala"
+
+msgid "high"
+msgstr "inalta"
+
+msgid "Priority"
+msgstr "Prioritate"
+
+msgid "Lifetime"
+msgstr "Durata de viata"
+
+msgid "unlimited"
+msgstr "nelimitat"
+
+msgid "Info:"
+msgstr "Info:"
+
+#, fuzzy
+msgid "In this menu you can adjust the point in time"
+msgstr "In acest meniu puteti ajusta"
+
+#, fuzzy
+msgid "a recording gets deleted automatically."
+msgstr "cand o inregistrare este automat stearsa."
+
+msgid "Recording info"
+msgstr "Info Inregistrare"
+
+msgid "Button$Play"
+msgstr "Redare"
+
+msgid "Button$Rewind"
+msgstr "Reluare"
+
+msgid "Large picture"
+msgstr ""
+
+msgid "Path"
+msgstr "Cale"
+
+msgid "Channel"
+msgstr "Canal"
+
+msgid "Size"
+msgstr "Dimensiune"
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "Indepartez inregistrari..."
+
+msgid "Error while mounting DVD!"
+msgstr "Eroare la citirea DVD-ului!"
+
+msgid "Recordings"
+msgstr "Inregistrari"
+
+msgid "free"
+msgstr "liber"
+
+msgid "Button$Functions"
+msgstr "Functii"
+
+msgid "Total"
+msgstr ""
+
+msgid "Last recording"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr "Eroare la accesarea inregistrarilor!"
+
+msgid "PIN code: "
+msgstr "Codul Pin:"
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Va rog introduceti DVD  %s"
+
+msgid "DVD plugin is not installed!"
+msgstr "Pluginul DVD nu este instalat!"
+
+msgid "No DVD in drive!"
+msgstr "Nici-un DVD in unitate!"
+
+msgid "Recording not found on DVD!"
+msgstr "Nu am gasit inregistrari pe DVD!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "Eroare la legarea [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "erorare sudo sau mount --bind / umount  (vfat system)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "Scriptul 'dvdarchive.sh' nu a fost gasit!"
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Creeaza Director"
+
+msgid "Timer still recording - really delete?"
+msgstr "Temporizatorul inca ingistreaza - chiar sterg ?"
+
+msgid "Error while deleting recording!"
+msgstr "Eroare la stergerea inregistrarilor!"
+
+msgid "Recording commands"
+msgstr "Inregistrez comenzi"
+
+msgid "Sort by date"
+msgstr "Sortare dupa data"
+
+msgid "Sort by name"
+msgstr "Sortare dupa nume"
+
+msgid "Show title"
+msgstr ""
+
+msgid "Show directory name"
+msgstr ""
+
+msgid "Invalid PIN"
+msgstr "PIN Invalid"
+
+msgid "PIN Aborted"
+msgstr "Pin Anulat"
+
+msgid "Cancel moving?"
+msgstr "Opresc mutarea ?"
+
+msgid "Cancel editing?"
+msgstr "Opresc Editarea ?"
+
+msgid "ascending"
+msgstr "crescator"
+
+msgid "descending"
+msgstr "descreascator"
+
+msgid "Show recording date"
+msgstr "Arata data inregistrarii"
+
+msgid "Show recording time"
+msgstr "Arata timpul inregistrarii"
+
+msgid "Show recording length"
+msgstr "Arata lungimea inregistrarii"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Arata numarul de inregistrari noi dintr-un director"
+
+msgid "Show alternative to new marker"
+msgstr "Arata alternativa la semn nou"
+
+msgid "Show free disk space for each file system"
+msgstr "Arata spatiul liber de pe disc pentru fiecare sistem de fisiere"
+
+msgid "Sorting"
+msgstr "Sortare"
+
+msgid "Hide main menu entry"
+msgstr "Ascunde intrarea Meniu Principal"
+
+msgid "Replace original recordings menu"
+msgstr "Inlocuieste meniul original Inregistrari"
+
+msgid "Jump to last played recording"
+msgstr "Sari la ultima inregistrare redata"
+
+msgid "Show recordings menu after playback"
+msgstr "Arata Meniul Inregistrari dupa redare"
+
+msgid "Patch font"
+msgstr "Patch font"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+msgid "Limit bandwidth when moving recordings"
+msgstr "Limiteaza banda cand muti inregistrari"
+
+msgid "Use cutter queue"
+msgstr "Foloseste sir de asteptare taiere"
+
+msgid "Undelete Recordings"
+msgstr "Nu Sterge Inregistrari"
+
+msgid "No recordings to undelete!"
+msgstr "Nu sant inregistrari de recuperat!"
+
+msgid "Button$Remove"
+msgstr "Indepartare"
+
+msgid "Button$Undelete"
+msgstr "Nu Sterge"
+
+msgid "Remove recording from disk?"
+msgstr "Sterg Inregistrari de pe disc ?"
+
+msgid "Removing recording ..."
+msgstr "Indepartez inregistrari..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Imi pare rau, recuperarea inregistrarilor a esuat"
+
+msgid "Button$Back"
+msgstr "Inapoi"
+
+#, fuzzy
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "Nu pot scrie in director"
+
+#, fuzzy
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Am adaugat inregistrare la sirul de asteptare la taiere"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr ""
+
+msgid "Recording already in cutter queue!"
+msgstr "Inregistrarea este deja in lista asteptare taiere"
+
+msgid "No editing marks defined!"
+msgstr "Nu sant definite semne de editare!"
+
+msgid "Added recording to cutter queue"
+msgstr "Am adaugat inregistrare la sirul de asteptare la taiere"
+
+msgid "Not enough space on harddisk!"
+msgstr ""
+
+msgid "Rename/Move failed!"
+msgstr "Esuare Redenumire/Mutare!"
+
+msgid "Cutter queue not empty"
+msgstr "Sirul de asteptare la taiere nu este gol"
+
+msgid "Move recordings in progress"
+msgstr "Mut Iregistrari"
+
+msgid "Can't start editing process!"
+msgstr "Nu pot porni procesul de editare!"
+
+msgid "Cutting"
+msgstr "In curs de taiere"
+
+#, fuzzy
+msgid "Moving"
+msgstr "Sortare"
+
+msgid "started"
+msgstr ""
+
+#, fuzzy
+msgid "Cancelled"
+msgstr "Anuleaza"
+
+#, fuzzy
+msgid "Completed"
+msgstr "Creat"
+
+#, fuzzy
+msgid "Copying"
+msgstr "Sortare"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "Mut Iregistrari"
+
+msgid "Copy failed!"
+msgstr ""
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "Aceasta versiune a extrecmenu nu suporta acest serviciu!"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "Meniul ExtRec nu exista!"
+
+#, fuzzy
+msgid "Extended recordings menu"
+msgstr "Inlocuieste meniul original Inregistrari"
+
+msgid "Rename"
+msgstr "Redenumire"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "Mut Iregistrari"
+
+msgid "Mark as new"
+msgstr ""
+
+#~ msgid "Button$Open"
+#~ msgstr "Deschide"
+
+#, fuzzy
+#~ msgid "moving recording"
+#~ msgstr "Mut Iregistrari"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Nu Sterge"
+
+#, fuzzy
+#~ msgid "Set Title"
+#~ msgstr "Titlu"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Detalii"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Editare"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Redenumire"
+
+#~ msgid "Create"
+#~ msgstr "Creeaza"

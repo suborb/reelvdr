@@ -1,0 +1,449 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvdswitch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 13:48+0200\n"
+"PO-Revision-Date: 2008-09-212:23+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Reading DVD"
+msgstr "Czyta DVD"
+
+msgid "Writing DVD"
+msgstr "Nagrywa DVD"
+
+#, fuzzy
+msgid "Copying DVD"
+msgstr "Czyta DVD"
+
+msgid "Please insert DVD: "
+msgstr "Prosze włorzyć DVD: "
+
+msgid "Commands"
+msgstr "Polecenia"
+
+msgid "Burn image"
+msgstr "Nagraj obraz"
+
+msgid "Rename image"
+msgstr "Zmień obraz"
+
+msgid "Open DVD-tray"
+msgstr "Otwórz kieszeń-DVD"
+
+msgid "Close DVD-tray"
+msgstr "Zamknąć kieszeń-DVD"
+
+msgid "Delete cache"
+msgstr "Usuń pliki tymczasowe"
+
+msgid "Format DVD-RW"
+msgstr "Formatuj DVD-RW"
+
+msgid "Directory management"
+msgstr "Zarzadzanie katalogiem"
+
+msgid "Success..."
+msgstr "Udane..."
+
+msgid "Directory Management"
+msgstr "Zarządzanie Katalogiem"
+
+msgid "Select Directory"
+msgstr "Wybierz Katalog"
+
+msgid "New"
+msgstr "Nowy"
+
+msgid "Select"
+msgstr "Wybierz"
+
+msgid "Rename"
+msgstr "Zmień"
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Move"
+msgstr "Przesuń"
+
+msgid "Edit Directories"
+msgstr "Edytcja Katalogów"
+
+msgid "no Rights!"
+msgstr "brak Autoryzacji!"
+
+msgid "really delete?"
+msgstr "na pewno usunać?"
+
+msgid "Directory not empty. however delete?"
+msgstr "Katalog nie jest pusty. napewno usunać?"
+
+msgid "no rights!"
+msgstr "brak autoryzacji!"
+
+msgid "no rights to create"
+msgstr "brak autoryzacji do utworzenia"
+
+msgid "Directory exists"
+msgstr "Katalog istnieje"
+
+msgid "no rights to rename"
+msgstr "nie ma prawa zmieniać"
+
+msgid "Insert"
+msgstr "Dodaj"
+
+msgid "Specified Writescript not exist!"
+msgstr "Podany Skrypt do czytania nie istnieje!"
+
+msgid "Cannot execute Writescript!"
+msgstr "Nie można wykonać Skryptu pisania!"
+
+msgid "Burn Now?"
+msgstr "Nagrać Teraz?"
+
+msgid "Read DVD"
+msgstr "Czytaj DVD"
+
+msgid "Specified Readscript not exist!"
+msgstr "Podany skrypt nie istnieje!"
+
+msgid "Cannot execute Readscript!"
+msgstr "Nie może wykonac Czytanie skryptu!"
+
+msgid "Now Read?"
+msgstr "Czytać teraz?"
+
+msgid "Image-File"
+msgstr "Plik-Obrazu"
+
+msgid "Image-Directory"
+msgstr "Katalog-Obrazu"
+
+msgid "Previously seen DVDs"
+msgstr "Poprzednio uzyte DVDs"
+
+msgid "Archives DVDs and plays it from Harddisk"
+msgstr "Archiwuje DVDs i odgrywa z Dysku twardego"
+
+msgid "Archive Video-DVD"
+msgstr "Archiwum Video-DVD"
+
+msgid "Image Directory not readable or does not exist"
+msgstr ""
+
+msgid "DVD-Plugin not found! Function deactivated!"
+msgstr "Wtyczka-DVD nie odnaleziona? Funkcje wylaczone!"
+
+msgid "Directory with 'VIDEO_TS' Folder"
+msgstr "Katalog razem z folderem 'VIDEO_TS'"
+
+msgid "Directory"
+msgstr "Katalog"
+
+msgid "File with '.iso' Extension"
+msgstr "Plik z rozszerzeniem '.iso'"
+
+msgid "Iso-Image"
+msgstr "Obraz-Iso"
+
+msgid "My DVDs"
+msgstr "Moje DVDs"
+
+msgid "free"
+msgstr "wolne"
+
+msgid "DVD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Use the red button to create a archive."
+msgstr ""
+
+msgid "No DVD found in drive."
+msgstr ""
+
+msgid "Insert a DVD to create a archive"
+msgstr ""
+
+msgid "to change"
+msgstr "do zmiany"
+
+msgid "File exists in Directory"
+msgstr "Plik istnieje w Katalogu"
+
+msgid "Please wait. Searching for DVD images"
+msgstr "Prosze czekac. Szuka obrazów DVD"
+
+msgid "without Category"
+msgstr "bez kategori"
+
+#, c-format
+msgid "(Size %03.1f GB)\t"
+msgstr "(Wielkość %03.1f GB)\t"
+
+msgid "DVD-Drive"
+msgstr "Naped-DVD"
+
+msgid "insert Media"
+msgstr ""
+
+msgid "no Rights to rename"
+msgstr "brak Autoryzacji do zmiany"
+
+msgid "RIP a DVD"
+msgstr "Ripuj plyte DVD"
+
+msgid "All Images"
+msgstr "Wszystkie Obrazy"
+
+msgid "All with Cat."
+msgstr "Wszystkie z Kategorią."
+
+msgid "Directories"
+msgstr "Katalogi"
+
+msgid "Image-Type"
+msgstr "Typ-Obrazu"
+
+msgid "File-Type"
+msgstr "Typ-Pliku"
+
+msgid "none"
+msgstr "nie"
+
+msgid "ascending"
+msgstr "rosnący"
+
+msgid "descending"
+msgstr "malejący"
+
+msgid "none Function"
+msgstr "bez Funkcji"
+
+msgid "Dir. Management"
+msgstr "Zarządzanie Katalogowe"
+
+msgid "Tray open"
+msgstr "Kieszeń otworzyć"
+
+msgid "Tray close"
+msgstr "Kieszeń zamknac"
+
+msgid "Play"
+msgstr "Odgrywaj"
+
+msgid "Image rename"
+msgstr "Zmienić nazwe Obrazu"
+
+msgid "Image move"
+msgstr "Obraz przenieść"
+
+msgid "Image delete"
+msgstr "Usuń Obraz"
+
+msgid "Image burn"
+msgstr "Nagraj obraz"
+
+msgid "Image read"
+msgstr "Czytaj obraz"
+
+msgid "Dir.Mgmt."
+msgstr "Zarz.Kat."
+
+msgid "Open"
+msgstr "Otwórz"
+
+msgid "Close"
+msgstr "Zamknij"
+
+msgid "Burn"
+msgstr "Nagraj"
+
+msgid "Copy"
+msgstr "Kopiuj"
+
+msgid "Use -> and <- for opening and closing menus"
+msgstr "Uzyj -> i <- dla otwarcia i zamkniecia menu"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "Generic Settings"
+msgstr "Generalne Ustawienia"
+
+msgid "\tImagetypes"
+msgstr "\tTypobrazów"
+
+msgid "\tView free DiskSpace"
+msgstr "\t Pokaż wolne Miejsce"
+
+msgid "Display Settings"
+msgstr "Wyświetl Ustawienia"
+
+msgid "\tDisplay Mode"
+msgstr "\tMetoda Wyświetlania"
+
+msgid "\t  Category Type"
+msgstr "\t  Rodzaj Kategori"
+
+msgid "\t  invisible empty Dir's/Cat."
+msgstr "\t  niewidoczne puste Katalogi/Kategorie."
+
+msgid "\tAlphabetic Sort"
+msgstr "\tSortuj Alfabetycznie"
+
+msgid "\tvisible DVD-Drive"
+msgstr "\twidzialne Napęd-DVD"
+
+msgid "Special Display Settings"
+msgstr "Specialne Ustawienia Obrazu"
+
+msgid "\tvisible Image-Type Col"
+msgstr "\twidzialne Kol. Typ-Obrazów"
+
+msgid "\t  Width for Image-Col"
+msgstr "\t  Szerokość dla Kol.-Obrazów"
+
+msgid "\tchar for Cat.Line"
+msgstr "\tznaki dla Kat.Lini"
+
+msgid "\t  Count before Cat.Name"
+msgstr "\t  Licz zanim Kat.Nazwę"
+
+msgid "\tSpaces before/after Cat.Name"
+msgstr "\tSpacje przed/za Kat.Nazwy"
+
+msgid "\tCutText for Subcat"
+msgstr "\tTnijTekst dla Subkategori"
+
+msgid "Navigation"
+msgstr "Nawigacja"
+
+msgid "\tCat.Jump by Left/Right"
+msgstr "\trozkaz Skoków Kat. przez Lewo/Prawo"
+
+msgid "Key allocation"
+msgstr "Przydział Przycisków"
+
+msgid "\tKey 1"
+msgstr "\tKey 1"
+
+msgid "\tKey 2"
+msgstr "\tKey 2"
+
+msgid "\tKey 3"
+msgstr "\tKey 3"
+
+msgid "\tKey 4"
+msgstr "\tKey 4"
+
+msgid "\tKey 5"
+msgstr "\tKey 5"
+
+msgid "\tKey 6"
+msgstr "\tKey 6"
+
+msgid "\tKey 7"
+msgstr "\tKey 7"
+
+msgid "\tKey 8"
+msgstr "\tKey 8"
+
+msgid "\tKey 9"
+msgstr "\tKey 9"
+
+msgid "\tKey 0"
+msgstr "\tKey 0"
+
+msgid "\tKey Green"
+msgstr "\tKey Zielony"
+
+msgid "\tKey Yellow"
+msgstr "\tKey Żółty"
+
+msgid "\tKey OK"
+msgstr "\tKey OK"
+
+msgid "to adjust"
+msgstr "do dostosowania"
+
+msgid "Imagetypes"
+msgstr "Rodzaj Obrazu"
+
+msgid "Edit"
+msgstr "Edytuj"
+
+msgid "really delete Entry?"
+msgstr "naprawde usunąć wpis?"
+
+msgid "File"
+msgstr "Plik"
+
+msgid "Description:"
+msgstr "Opis:"
+
+msgid "Type-Title:"
+msgstr "Typ-Tytułu:"
+
+msgid "Image Type"
+msgstr "Typ Obrazu"
+
+msgid "Directory contains:"
+msgstr "Katalog zawiera:"
+
+msgid "File Extension:"
+msgstr "Rozszerzenie Pliku:"
+
+msgid "Hide Extension"
+msgstr "Schowaj Rozszerzenie"
+
+msgid "'Description' must not empty!"
+msgstr "'Opis'ma nie byc puste!"
+
+msgid "'Type-Title' must not empty!"
+msgstr "'Rodzaj-Tytółu' ma nie byc puste!"
+
+msgid "'Directory contains' must not empty!"
+msgstr "'Katalog zawiera' ma nie byc puste!"
+
+msgid "'File Extension' must not empty!"
+msgstr "'Rozszerzenie Pliku' ma nie byc puste!"
+
+#~ msgid "Image Directory not readable or not exist"
+#~ msgstr "Katalog Obrazu nieczytelny lub nie istnieje"
+
+#, fuzzy
+#~ msgid "Rename DVD"
+#~ msgstr "Czytaj DVD"
+
+#~ msgid "New:"
+#~ msgstr "Nowy:"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+#~ msgstr " aąbcćdeęfghijklłmnńoóprsśtuwyzźż0123456789-.#~"
+
+#~ msgid "Rename:"
+#~ msgstr "Zmienić:"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+#~ msgstr " aąbcćdeęfghijklłmnńoóprsśtuwyzźż0123456789-.#~"
+
+#~ msgid "\tImage Dir."
+#~ msgstr "\tObraz Kat."
+
+#~ msgid "\tchange Character"
+#~ msgstr "\tzmiana Znaków"

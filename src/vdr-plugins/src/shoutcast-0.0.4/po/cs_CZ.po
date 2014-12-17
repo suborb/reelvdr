@@ -1,0 +1,143 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2009-03-04 17:44+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Internet Radio"
+msgstr "Internetové rádio"
+
+msgid "My Radio Stations"
+msgstr "Moje rozhlasové stanice"
+
+msgid "Getting playlist for Genre: "
+msgstr "Získávání seznamu stop pro žánr:"
+
+msgid "Internet Radio - Add New Server"
+msgstr "Internetové rádio - přidat nový server"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Internetové rádio - upravit inf. o stanici"
+
+msgid "New Station"
+msgstr "Nová stanice"
+
+msgid "Station Name"
+msgstr "Název stanice"
+
+msgid "Station Url"
+msgstr "Adresa URL stanice"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "No URL entered!"
+msgstr ""
+
+msgid "Saved"
+msgstr "Uloženo"
+
+msgid "Could not be saved!"
+msgstr "Nelze uložit!"
+
+msgid "Already present"
+msgstr "Již existuje"
+
+msgid "Couldnot save changes"
+msgstr "Změny nelze uložit"
+
+msgid "Check URL: could not open radio-station"
+msgstr ""
+
+msgid "Please wait: opening radio-station"
+msgstr ""
+
+#, fuzzy
+msgid "Internet Radio Functions"
+msgstr "Funkce internetového rádia"
+
+msgid "1  Add New Radio Station"
+msgstr "1  Přidat novou rozhlasovou stanici"
+
+msgid "2  Edit current Radio Station"
+msgstr "2  Upravit aktuální rozhlasovou stanici"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3  Odstranit aktuální rozhlasovou stanici"
+
+msgid "Selected Radio Station:"
+msgstr "Vybraná rozhlasová stanice:"
+
+msgid "Could not save to disk"
+msgstr "Nelze uložit na disk"
+
+msgid "Deletion failed"
+msgstr "Odstranění se nezdařilo"
+
+msgid "Internet Radio: My Stations"
+msgstr "Internetové rádio: Moje stanice"
+
+msgid "Button$Functions"
+msgstr "Funkce"
+
+msgid "No Radio Stations found."
+msgstr "Nebyly nalezeny žádné rozhlasové stanice."
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please use 'Function' to add a station."
+msgstr ""
+
+msgid "Your SHOUTcast is active."
+msgstr ""
+
+msgid "Your SHOUTcast DevID is"
+msgstr ""
+
+msgid "Reset DevID"
+msgstr ""
+
+msgid "Welcome to Internetradio setup"
+msgstr ""
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr ""
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr ""
+
+msgid "Enter DevID"
+msgstr ""
+
+msgid "Show this page again"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr ""
+
+msgid "Internet Radio Setup"
+msgstr ""
+
+msgid "Radio station added to favorites"
+msgstr ""
+
+#~ msgid "Please use 'Function' to add"
+#~ msgstr "K přidání stanice použijte"
+
+#~ msgid "a station"
+#~ msgstr "tlačítko Funkce"

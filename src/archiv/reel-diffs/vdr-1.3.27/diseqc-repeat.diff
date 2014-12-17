@@ -1,0 +1,810 @@
+diff -Nur vdr-1.3.27.save/diseqc.c vdr-1.3.27/diseqc.c
+--- vdr-1.3.27.save/diseqc.c	2005-09-02 18:33:08.000000000 +0200
++++ vdr-1.3.27/diseqc.c	2005-09-19 15:50:59.000000000 +0200
+@@ -18,7 +18,7 @@
+ 
+ cDiseqc::cDiseqc(void)
+ {
+-  satName  = NULL; 
++  satName  = NULL;
+   commands = NULL;
+   parsing = false;
+   numCodes = 0;
+@@ -33,16 +33,16 @@
+ 
+ cDiseqc &cDiseqc::operator=(const cDiseqc &diseqc)
+ {
+-  source = diseqc.source; 
++  source = diseqc.source;
+   satName =  strcpyrealloc(satName,diseqc.satName);
+   polarization = diseqc.polarization;
+   commands =  strcpyrealloc(commands,diseqc.commands);
+   numCodes = diseqc.numCodes;
+-  
++
+   slof = diseqc.slof;
+   lof = diseqc.lof;
+-  lnbID = diseqc.lnbID; 
+-  return *this;  
++  lnbID = diseqc.lnbID;
++  return *this;
+ }
+ 
+ 
+@@ -143,25 +143,25 @@
+ 
+ void cDiseqc::NewDiseqc(const char *Sat, int *Source, int Type, int P, int ID, int Line)
+ {
+-      satName = NULL; 	
+-	
++      satName = NULL;
++
+       int of[2][2] = { { 11700,  9750 },
+-		  	     { 99999, 10600 }}; 
+-		
+-	line = Line; 
++		  	     { 99999, 10600 }};
++
++	line = Line;
+ 	type = Type;
+-	source  = *Source; 
++	source  = *Source;
+ 	asprintf(&satName,"%s",Sat);
+-	
++
+ 	if ((Line+1)%2){
+ 		  lof = of[0][0];
+-		 slof = of[0][1]; 
++		 slof = of[0][1];
+ 	}
+       else  {
+ 		  lof = of[1][0];
+ 		 slof = of[1][1];
+ 	}
+-	  
++
+ 	SetCommands(Type, satName, slof, P, lof, ID,  Line);
+ }
+ 
+@@ -169,85 +169,87 @@
+ 
+ cString cDiseqc::ToText(const cDiseqc *Diseqc)
+ {
+-/* Syntax: 	 single LNB  		| mini | all    	  	full 		          mini 		  mini 	 
++/* Syntax: 	 single LNB  		| mini | all    	  	full 		          mini 		  mini
+  *   | S19.2E  | 11700 |  V  | 9750 |   t  |   v  | W15  | [E0 10 38 F0] | W15  |   A   |  W15  | t
+- *   | SatCode | SLOF  | POL | LOF  | tone | volt | Wait |  diseqc code  | Wait | MinAB |  Wait | tone 
++ *   | SatCode | SLOF  | POL | LOF  | tone | volt | Wait |  diseqc code  | Wait | MinAB |  Wait | tone
+  *   |
+- * 1.|   --    |  low  |  V  |  low |  x   |  13  |  x   | [E0 10 38 x ]  | x    |   x   | t     
+- * 2.|   --    |   hi  |  V  |  hi  |  x   |  13  |  x   | [E0 10 38 x+1] | x    |   x   | T    
+- * 3.|   --    |  low  |  H  |  low |  x   |  18  |  x   | [E0 10 38 x+2] | x    |   x   | t    
+- * 3.|   --    |   hi  |  H  |  hi  |  x   |  18  |  x   | [E0 10 38 x+3] | x    |   x   | T    
++ * 1.|   --    |  low  |  V  |  low |  x   |  13  |  x   | [E0 10 38 x ]  | x    |   x   | t
++ * 2.|   --    |   hi  |  V  |  hi  |  x   |  13  |  x   | [E0 10 38 x+1] | x    |   x   | T
++ * 3.|   --    |  low  |  H  |  low |  x   |  18  |  x   | [E0 10 38 x+2] | x    |   x   | t
++ * 3.|   --    |   hi  |  H  |  hi  |  x   |  18  |  x   | [E0 10 38 x+3] | x    |   x   | T
+  */
+ 
+  char *s, fullString[60] ;
+- 
+- 	s = fullString; 
+-	 
+- 	s += sprintf(s,"%s  %5d ", Diseqc->satName,Diseqc->slof);  
+-	s += sprintf(s,"%c  %5d ", Diseqc->polarization,Diseqc->lof);  
+-	s += sprintf(s,"%s",Diseqc->commands);	
++
++ 	s = fullString;
++
++ 	s += sprintf(s,"%s  %5d ", Diseqc->satName,Diseqc->slof);
++	s += sprintf(s,"%c  %5d ", Diseqc->polarization,Diseqc->lof);
++	s += sprintf(s,"%s",Diseqc->commands);
+ 	s += sprintf(s,"\n");
+- *s = 0; 
++ *s = 0;
+ 
+ 
+- return cString(fullString,false);  
++ return cString(fullString,false);
+ }
+ 
+ void cDiseqc::SetID(int LnbID)
+ {
+-	lnbID = static_cast<ID> (A +LnbID); 
++	lnbID = static_cast<ID> (A +LnbID);
+ 	Diseqcs.SetModified(true);
+ }
+ 
+-//--- ::SetCommands setting new DiSEqC (1.x) commands for old diseqc ojects 
++//--- ::SetCommands setting new DiSEqC (1.x) commands for old diseqc ojects
+ void cDiseqc::SetCommands(int Type, char *SatName, int slof, int P, int lof, int ID, int Line){
+ 
+-	SetID(ID); 
+-	char pol = P? 'H': 'V';   
+-	char ab =(ID+1)%2? 'A' : 'B';   
+-      char *buffer = NULL; 	
++	SetID(ID);
++	char pol = P? 'H': 'V';
++	char ab =(ID+1)%2? 'A' : 'B';
++      char *buffer = NULL;
+ 
+ 	if(Type == FFAST){
+ 		  asprintf(&buffer,"%s %5d %c %5d [E0 10 38 F%X]", SatName, slof, pol, lof,Line);
+ 	}
+-      else {
++	else {
+ 		asprintf(&buffer,"%s %5d %c %5d t %c W15", SatName, slof, pol, lof, P?'V':'v');
+-		
+-		if(Type == FULL) asprintf(&buffer,"%s [E0 10 38 F%X] W15",buffer,line);
+-		
++		if(Type == FULL)
++			asprintf(&buffer,"%s [E0 10 38 F%X] W15",buffer,line);
+ 		asprintf(&buffer,"%s %c W15 %c",buffer, ab, Line%2?'T':'t');
+-	 }	
+-		  
++	 }
++
+ 	Parse(buffer);
+ }
+ 
+-//--- ::SetCommands setting new DiSEqC (1.x) commands for new  diseqc ojects 
++//--- ::SetCommands setting new DiSEqC (1.x) commands for new  diseqc ojects
+ void cDiseqc::SetCommands(int Type, char *SatName, int P, int ID, int Line){
+ 
+-	SetID(ID); 
+-	char pol = P? 'H': 'V';  
+-      char *buffer = NULL; 	
++	SetID(ID);
++	char pol = P? 'H': 'V';
++	char *buffer = NULL;
++
++	char ab =(ID+1)%2? 'A' : 'B';
+ 
+-	char ab =(ID+1)%2? 'A' : 'B';   
+-	
+ 	if ((Line+1) % 2){
+-		 lof =   9750; 
++		 lof =   9750;
+ 		 slof = 11700;
+ 	}
+-      else  {
++	else  {
+ 		 lof =  10600;
+ 		 slof = 99999;
+ 	}
++
+ 	if(Type == FFAST){
+-		  asprintf(&buffer,"%s %5d %c %5d [E0 10 38 F%X]", SatName, slof, pol, lof,Line);
++		asprintf(&buffer,"%s %5d %c %5d [E0 10 38 F%X]", SatName, slof, pol, lof,Line);
++	}
++	else if(Type == REPEAT){
++		asprintf(&buffer,"%s %5d %c %5d W10 [E0 10 38 F%X] W10 [E1 10 38 F%X] W10 [E1 10 38 F%X] ", SatName, slof, pol, lof,Line,Line,Line);
+ 	}
+-      else {
++        else {
+ 		asprintf(&buffer,"%s %5d %c %5d t %c W15", SatName, slof, pol, lof, P?'V':'v');
+ 		if(Type == FULL)
+ 		   asprintf(&buffer,"%s [E0 10 38 F%X] W15",buffer,Line);
+ 		asprintf(&buffer,"%s %c W15 %c",buffer, ab, Line%2?'T':'t');
+-	 }	
+-
++	}
+ 	Parse(buffer);
+ }
+ 
+@@ -282,7 +284,7 @@
+ bool cDiseqcs::Load(const char *FileName, bool AllowComments, bool MustExist)
+ {
+   if (cConfig<cDiseqc>::Load(FileName, AllowComments, MustExist)) {
+-    ReNumber(); 
++    ReNumber();
+ 	return true;
+ 	}
+   return false;
+@@ -291,14 +293,14 @@
+ 
+ void cDiseqcs::ReNumber(void)
+ {
+- int id = 0, line = 0; 
++ int id = 0, line = 0;
+  for(cDiseqc *diseqc = First(); diseqc; diseqc = Next(diseqc)){
+-	   
+-    diseqc->SetLine(line); 
+-    diseqc->SetID(id); 
++
++    diseqc->SetLine(line);
++    diseqc->SetID(id);
+     if (!((line+1)%4)) id++;  // 4 Lines == 1 LNB
+ 
+-    line++; 
++    line++;
+  }
+ }
+ 
+@@ -354,22 +356,22 @@
+     int k = i+4;
+     while (k < Lnbs*4){
+ 	if( Src[i] == Src[k]){
+-	  return false; 
++	  return false;
+ 	}
+ 	k+=4;
+     }
+  }
+-  return true; 
++  return true;
+ }
+ 
+ bool cDiseqcs::ConfigLocked (void)
+ {
+-	 
++
+    bool ret = true;
+    if (FileWriteble(FileName())){ // returns true if writable
+ 	ret = false;
+-   } 
+-   fprintf(stderr,"cDiseqcs::ConfigLocked? %s\n",ret?"locked":"writable"); 
+-  return ret; 
++   }
++   fprintf(stderr,"cDiseqcs::ConfigLocked? %s\n",ret?"locked":"writable");
++  return ret;
+ 
+ }
+diff -Nur vdr-1.3.27.save/diseqc.h vdr-1.3.27/diseqc.h
+--- vdr-1.3.27.save/diseqc.h	2005-09-02 18:33:08.000000000 +0200
++++ vdr-1.3.27/diseqc.h	2005-09-19 14:37:04.000000000 +0200
+@@ -10,9 +10,10 @@
+ #ifndef __DISEQC_H
+ #define __DISEQC_H
+ 
+-#define  MINI  1
+-#define  FULL  2 
+-#define  FFAST 3
++#define  MINI   1
++#define  FULL   2 
++#define  FFAST  3
++#define  REPEAT 4
+ 
+ #define DISEQCMOD_NONE 0
+ #define DISEQCMOD_FILE 1
+diff -Nur vdr-1.3.27.save/menu.c vdr-1.3.27/menu.c
+--- vdr-1.3.27.save/menu.c	2005-09-02 18:33:08.000000000 +0200
++++ vdr-1.3.27/menu.c	2005-09-19 15:44:21.000000000 +0200
+@@ -1251,7 +1251,7 @@
+                         return AddSubMenu(new cMenuEvent(((cMenuScheduleItem *)Get(Current()))->event, otherChannel));
+                      break;
+ 
+-       case kHelp:   return osEnd; 
++       case kHelp:   return osEnd;
+        default:      break;
+        }
+      }
+@@ -1639,8 +1639,8 @@
+   else {
+ 	 if(!sortByDate) ToggleSort();
+   }
+- 
+-   
++
++
+   base = Base ? strdup(Base) : NULL;
+   level = Setup.RecordingDirs ? Level : -1;
+   Display(); // this keeps the higher level menus from showing up briefly when pressing 'Back' during replay
+@@ -1652,18 +1652,18 @@
+   else {
+      Recordings.Sort();
+ 	}
+-	map<string,int> Items; 
++	map<string,int> Items;
+    for (cRecording *recording = Recordings.First(); recording; recording = Recordings.Next(recording)) {
+      if (!Base || (strstr(recording->Name(), Base) == recording->Name() && recording->Name()[strlen(Base)] == '~')) {
+       cMenuRecordingItem *Item = new cMenuRecordingItem(recording, level);
+       if (*Item->Text() && (Items.find(Item->Text()) == Items.end())) {
+ 	     Add(Item);
+-	     Items[Item->Text()]; 
++	     Items[Item->Text()];
+ 	     LastItem = Item;
+ 	  }
+-      else 
++      else
+         delete Item;
+-	  
++
+      if (LastItem) {
+        if (LastReplayed && strcmp(LastReplayed, recording->FileName()) == 0)
+            SetCurrent(LastItem);
+@@ -1685,7 +1685,7 @@
+   free(base);
+ }
+ 
+-			 
++
+ void cMenuRecordings::SetHelpKeys(void)
+ {
+   cMenuRecordingItem *ri = (cMenuRecordingItem *)Get(Current());
+@@ -2014,7 +2014,7 @@
+            themeIndex = d ? themes.GetThemeIndex(d) : 0;
+         free(d);
+         }
+-     
++
+      Set();
+      Setup.OSDLanguage = OriginalOSDLanguage;
+      }
+@@ -2211,23 +2211,23 @@
+ class cMenuSetupLNB : public cMenuSetupBase {
+ private:
+   void Setup(void);
+-  
+-  bool locked; 
+-  cSource *source; 
++
++  bool locked;
++  cSource *source;
+   cDiseqc *diseqc;
+-  int tmpSource[MAXLNBS*4];  
++  int tmpSource[MAXLNBS*4];
+ 
+-  int lofStat;  
+-  const char *useDiSEqcTexts[4];
++  int lofStat;
++  const char *useDiSEqcTexts[5];
+   const char *lofTexts[5];
+   bool diseqcConfRead;
+   int diseqObjNumber;
+   int lnbNumber;
+   int oldlnbNumber;
+   int oldDiSEqC;
+-  int oldLofStat; 
+-  int currentchannel; 
+-	
++  int oldLofStat;
++  int currentchannel;
++
+ 
+ public:
+   cMenuSetupLNB(void);
+@@ -2237,29 +2237,29 @@
+ cMenuSetupLNB::cMenuSetupLNB(void)
+ {
+ 
+-   lofStat = 0; 
++   lofStat = 0;
+    diseqcConfRead = false;
+-   int initSource[] = {35008, 34946, 35031, 35098}; 
+-	  
+-   diseqc = 0; 
+-   diseqObjNumber = 0; 
++   int initSource[] = {35008, 34946, 35031, 35098};
++
++   diseqc = 0;
++   diseqObjNumber = 0;
+    for(diseqc = Diseqcs.First(); diseqc; diseqc = Diseqcs.Next(diseqc)){
+-	tmpSource[diseqObjNumber] = diseqc->Source(); 
++	tmpSource[diseqObjNumber] = diseqc->Source();
+ 	diseqObjNumber++;
+    }
+-	  
++
+    for (int i = diseqObjNumber; i < MAXLNBS*4; i+=4){
+ 	tmpSource[i] = initSource[ (int)(i/4)];
+    }
+-	   
+-   ::Setup.LnbNumbers = lnbNumber = diseqObjNumber/4; 
++
++   ::Setup.LnbNumbers = lnbNumber = diseqObjNumber/4;
+    oldlnbNumber = ::Setup.LnbNumbers;
+-   oldDiSEqC = ::Setup.DiSEqC; 
+-   oldLofStat = ::Setup.LnbFrequHi == 10600 ? 0 : 1; 
++   oldDiSEqC = ::Setup.DiSEqC;
++   oldLofStat = ::Setup.LnbFrequHi == 10600 ? 0 : 1;
+    currentchannel = cDevice::CurrentChannel();
+-	if (currentchannel > 100) 
+-	   currentchannel = 1 ; 
+-         	
++	if (currentchannel > 100)
++	   currentchannel = 1 ;
++
+   SetSection(tr("DiSEqC / LNB"));
+   Setup();
+ }
+@@ -2272,60 +2272,66 @@
+ 	useDiSEqcTexts [1] = "mini DiSEqC";
+ 	useDiSEqcTexts [2] = "Full DiSEqC";
+ 	useDiSEqcTexts [3] = "Optim. DiSEqC";
+-	
++	useDiSEqcTexts [4] = "Repeat D. Commands";
++
+ 	lofTexts [0] = "10.6/9.75 GHz EURO Univ. LNB";
+ 	lofTexts [1] = "11.25/10.75 GHz N. America Univ. LNB";
+ 
+ 
+   Clear();
+ 
+-  	int i; 
++  	int i;
+   	char buffer[16];
+    	char LnbC = 'A';
+ 
+-      Add(new cMenuEditStraItem(tr("DiSEqC Type"), 	&data.DiSEqC, 4, useDiSEqcTexts));
++      Add(new cMenuEditStraItem(tr("DiSEqC Type"), 	&data.DiSEqC, 5, useDiSEqcTexts));
+ 
+-#ifdef DEVEL 
+-	 fprintf(stderr," Setup() data.DiSEqC: %d \n",data.DiSEqC); 
++#ifdef DEVEL
++	 fprintf(stderr," Setup() data.DiSEqC: %d \n",data.DiSEqC);
+ #endif
+-	
+ 
+-    	switch (data.DiSEqC){
+-		case 0 :    // none DiSEqC 
+-      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
+-					lnbNumber = 1; 
+-					break;
+-		case 1 :	// mini DiSEqC
+-      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
+-					lnbNumber = 2; 
+-					for (i=0; i < lnbNumber;i++){
+-  			    		snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
+-  						Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4])); 
+-     }
+-					break;
+-		case 2 :     // Full DiSEqC  2,4,8  with waits 
+-      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
+-     				Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS,MAXLNBS));  
+-					
+-					for (i=0; i < lnbNumber;i++){
+-  			    		snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
+-  						Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4])); 
+-					}
+-					break;
+-
+-		case 3 :    // Full Fast DiSEqC  (ohne waits) 
+-      			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
+-     				Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS,MAXLNBS));  
+-					for (i=0;i < lnbNumber;i++){
+-  			       	snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
+-  						Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4])); 
+-					}
+-					break;
+ 
++	switch (data.DiSEqC){
++		case 0 :    // none DiSEqC
++			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++			lnbNumber = 1;
++			break;
++		case 1 :	// mini DiSEqC
++			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++			lnbNumber = 2;
++			for (i=0; i < lnbNumber;i++){
++				snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++				Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4]));
++			}
++			break;
++		case 2 :     // Full DiSEqC  2,4,8  with waits
++			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++			Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS,MAXLNBS));
++			for (i=0; i < lnbNumber;i++){
++				snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++				Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4]));
++			}
++			break;
++		case 3 :    // Full Fast DiSEqC  (w/o waits)
++			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++			Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS,MAXLNBS));
++			for (i=0;i < lnbNumber;i++){
++  				snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++  				Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4]));
++			}
++			break;
++		case 4 :    // Repeat Commands
++			Add(new cMenuEditStraItem(tr("LNB Type"), &lofStat, 2, lofTexts));
++			Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber,MINLNBS, MAXLNBS));
++			for (i=0;i < lnbNumber;i++){
++				snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++				Add(new cMenuEditSrcItem (buffer, &tmpSource[i*4]));
++			}
++			break;
+ 		}
+ 
+-#ifdef DEVEL 
+-	 fprintf(stderr,"                         Setup() data.DiSEqC: %d, lnbNumber %d\n",data.DiSEqC,lnbNumber); 
++#ifdef DEVEL
++	 fprintf(stderr,"                         Setup() data.DiSEqC: %d, lnbNumber %d\n",data.DiSEqC,lnbNumber);
+ #endif
+ 
+   SetCurrent(Get(current));
+@@ -2334,92 +2340,92 @@
+ 
+ eOSState cMenuSetupLNB::ProcessKey(eKeys Key)
+ {
+-	  int setupLnbNumber = ::Setup.LnbNumbers; 
+-	  int oldSource[MAXLNBS];  
++	  int setupLnbNumber = ::Setup.LnbNumbers;
++	  int oldSource[MAXLNBS];
+ 	  for (int i = 0;i< lnbNumber; i++){
+-		  oldSource[i] =  tmpSource[i*4];    
++		  oldSource[i] =  tmpSource[i*4];
+ 	  }
+ 
+   eOSState state = cMenuSetupBase::ProcessKey(Key);
+ 
+-#ifdef DEBUG 
+- 
++#ifdef DEBUG
++
+   fprintf(stderr," cMenuSetupLNB::ProcessKey vars: lofStat %d, lnbnumb: %d\n", lofStat, lnbNumber);
+-  fprintf(stderr," cMenuSetupLNB::ProcessKey oldSource[MAXLNBS]\n"); 
++  fprintf(stderr," cMenuSetupLNB::ProcessKey oldSource[MAXLNBS]\n");
+ 
+ 	  for (int i = 0;i< lnbNumber; i++){
+-		fprintf(stderr," oldSource[%d]: %d\n",i,oldSource[i]); 
++		fprintf(stderr," oldSource[%d]: %d\n",i,oldSource[i]);
+ 	  }
+-  fprintf(stderr," cMenuSetupLNB::ProcessKey tmpSrc[MAXLNBS]\n"); 
+-  
++  fprintf(stderr," cMenuSetupLNB::ProcessKey tmpSrc[MAXLNBS]\n");
++
+ 	  for (int i = 0;i< lnbNumber; i++){
+-		fprintf(stderr," oldtmp[%d]: %d\n",i,tmpSource[i]); 
++		fprintf(stderr," oldtmp[%d]: %d\n",i,tmpSource[i]);
+ 	  }
+-  
+ 
+-#endif 
++
++#endif
+ 
+ 	  if(Key == kOk){
+-		   //check for double entries 
++		   //check for double entries
+ 
+ 	    ::Setup.LnbNumbers =  lnbNumber;
+ 	    if (!Diseqcs.IsUnique(tmpSource, lnbNumber)){
+ 		 Skins.Message(mtError, tr("Sat positions must be unique!"));
+-	  	 return osContinue; 	   
++	  	 return osContinue;
+ 	    }
+ 		    // ask user to rewrite diseqc.conf
+ 	   if (Interface->Confirm(tr("Overwrite DiSEqC.conf?"))){
+-				  
++
+ 		     if (oldLofStat != lofStat)
+ 			  cDiseqcs::SetOszilatorFrequenzies(lofStat);
+-	      if (data.DiSEqC == 0){  
++	      if (data.DiSEqC == 0){
+ 
+ 
+-#ifdef DEVEL 
+-  				fprintf(stderr," delet all (%d)  diseqc objects! \n", diseqObjNumber); 
++#ifdef DEVEL
++  				fprintf(stderr," delet all (%d)  diseqc objects! \n", diseqObjNumber);
+ 
+-#endif 
+-			   // delete all diseqc objects 
++#endif
++			   // delete all diseqc objects
+ 				for (int i = 0;i < diseqObjNumber; i++)
+-					Diseqcs.Del(Diseqcs.Get(i)); 
++					Diseqcs.Del(Diseqcs.Get(i));
+ 			}
+ 	  	   else {
+-		    // delete  unused Diseqc Objects 
++		    // delete  unused Diseqc Objects
+ 		     if ( lnbNumber < setupLnbNumber){
+ 			  	for (int i = lnbNumber*4; i < diseqObjNumber; i++){
+-				  Diseqcs.Del(Diseqcs.Get(i)); 
++				  Diseqcs.Del(Diseqcs.Get(i));
+ 			  }
+ 		    }
+ 
+ 		    //change old diseqc Objects
+-		    int id = 0 ,line = 0, p = 0; 
+-		    diseqc = 0 ; 
++		    int id = 0 ,line = 0, p = 0;
++		    diseqc = 0 ;
+ 		    char *satname;
+ 		    for(diseqc=Diseqcs.First(); diseqc; diseqc = Diseqcs.Next(diseqc)){
+ 			  	asprintf(&satname,*cSource::ToString(tmpSource[id*4]));
+ 
+ 				diseqc->SetCommands(data.DiSEqC,satname, p, id, line);
+ 
+-#ifdef DEVEL 
+-  fprintf(stderr," change diseqc object #: %d \n", line); 
++#ifdef DEVEL
++  fprintf(stderr," change diseqc object #: %d \n", line);
+ 
+-#endif 
++#endif
+ 				if ((line)%2) p = p ? 0 : 1;  // polarization bit
+ 				line++;
+-				if (!(line%4)) id++;   		// ID counter every 4rth line 
++				if (!(line%4)) id++;   		// ID counter every 4rth line
+ 		    }
+ 
+ 		    	// Add diseqc Objects if required
+-		    if  (lnbNumber > setupLnbNumber  ){  
+-				int newObjects; 	
+-				setupLnbNumber == 1 ? newObjects  = lnbNumber*4  : newObjects = (lnbNumber - setupLnbNumber) *4 ; 
+-					  
+-#ifdef DEVEL 
+-  fprintf(stderr," add %d diseqc objects #: \n", newObjects); 
+-
+-#endif 
+-			  	
+-				int *newSource = NULL, k = 0, p = 0 ; 
++		    if  (lnbNumber > setupLnbNumber  ){
++				int newObjects;
++				setupLnbNumber == 1 ? newObjects  = lnbNumber*4  : newObjects = (lnbNumber - setupLnbNumber) *4 ;
++
++#ifdef DEVEL
++  fprintf(stderr," add %d diseqc objects #: \n", newObjects);
++
++#endif
++
++				int *newSource = NULL, k = 0, p = 0 ;
+ 				char *buffer = NULL;
+ 
+ 				for (int line = diseqObjNumber; line < (diseqObjNumber + (newObjects)); line++){
+@@ -2427,55 +2433,55 @@
+ 					  if(!(line% 4)){
+ 						    asprintf(&buffer,"%s",*cSource::ToString(tmpSource[line]));
+ 						    newSource = &tmpSource[line];
+-						    k++; 
++						    k++;
+ 					  }
+ 					  d->NewDiseqc(buffer,newSource,data.DiSEqC, p, k, line);
+-#ifdef DEVEL 
+-  fprintf(stderr," add diseqc object #: %d \n", line); 
++#ifdef DEVEL
++  fprintf(stderr," add diseqc object #: %d \n", line);
+ 
+-#endif 
+-					  Diseqcs.Add(d); 
+-					  if((line)%2) p = p ? 0 : 1; 
++#endif
++					  Diseqcs.Add(d);
++					  if((line)%2) p = p ? 0 : 1;
+ 				}
+-		   } 
+-	  	} //end elseif  DiSEqC != 0 
++		   }
++	  	} //end elseif  DiSEqC != 0
+ 
+-		 // update current Setup  Object 
+-	  	::Setup.DiSEqC= data.DiSEqC; 
++		 // update current Setup  Object
++	  	::Setup.DiSEqC= data.DiSEqC;
+ 
+ 	  	Diseqcs.SetModified(true);
+ 	  	if (data.DiSEqC){
+-			Diseqcs.Save(); 
+-			// workaround to trigger diseqc codes 
++			Diseqcs.Save();
++			// workaround to trigger diseqc codes
+  			Channels.SwitchTo(currentchannel+9);
+  			Channels.SwitchTo(currentchannel);
+ 	  	}
+-	     	state = osBack; 
+-	
+-	  } // endif overwrite confirm 
+-   } //endif kOK 
+-	 
+-		
+-	
++	     	state = osBack;
++
++	  } // endif overwrite confirm
++   } //endif kOK
++
++
++
+ 	if ((Key != kNone)) {
+ 
+-		 if (data.DiSEqC != oldDiSEqC || 
+-		     lnbNumber != oldlnbNumber || 
++		 if (data.DiSEqC != oldDiSEqC ||
++		     lnbNumber != oldlnbNumber ||
+ 		     lofStat != oldLofStat) {
+-			  
+ 
+-#ifdef DEVEL 
+-			   
+-  fprintf(stderr,"if Key != kNone: oldDiSEqC : %d oldlnbNumber  %d oldLofStat   %d\n", oldDiSEqC, oldlnbNumber, oldLofStat); 
+-  fprintf(stderr,"if Key != kNone: newDiSEqC: %d  lnbNumber     %d lofStat      %d\n", data.DiSEqC, lnbNumber, lofStat); 
+ 
+-#endif 
++#ifdef DEVEL
++
++  fprintf(stderr,"if Key != kNone: oldDiSEqC : %d oldlnbNumber  %d oldLofStat   %d\n", oldDiSEqC, oldlnbNumber, oldLofStat);
++  fprintf(stderr,"if Key != kNone: newDiSEqC: %d  lnbNumber     %d lofStat      %d\n", data.DiSEqC, lnbNumber, lofStat);
+ 
+-		     oldlnbNumber = lnbNumber; 
++#endif
++
++		     oldlnbNumber = lnbNumber;
+      Setup();
+ 		 }
+      } // endif other key as kOk
+-   
++
+   return state;
+ }
+ 
+@@ -2811,7 +2817,7 @@
+   subMenu.LoadXml(menuXML);
+   free(menuXML);
+   nrDynamicMenuEntries=0;
+-  
++
+   replaying = Replaying;
+   Set(0, Plugin);
+ 
+@@ -2899,7 +2905,7 @@
+      if( type==cSubMenuNode::PLUGIN)
+ 	 {
+ 	     const char *item = node->GetPluginMainMenuEntry();
+-         
++
+ 		 if(item)
+              Add(new cMenuPluginItem(hk(item), node->GetPluginIndex()));
+ 	 }
+@@ -3078,9 +3084,9 @@
+                              {
+                                 int index = Current()-nrDynamicMenuEntries;
+                                 cSubMenuNode *node = subMenu.GetNode(index);
+-                                                
++
+                                 if( node != NULL)
+-                                {  
++                                {
+                                    if(node->GetType() == cSubMenuNode::MENU)
+                                    {
+                                      subMenu.Down(index);
+@@ -3097,7 +3103,7 @@
+                                           free(buffer);
+                                        }
+                                        if (confirmed)
+-                                       { 
++                                       {
+                                          asprintf(&buffer, "%s...", node->GetName());
+                                          Skins.Message(mtStatus, buffer);
+                                          free(buffer);
+@@ -3109,7 +3115,7 @@
+                                        }
+                                      }
+                                 }
+-                                
++
+                                 Set(0);
+                                 return osContinue;
+                              }
+@@ -3351,7 +3357,7 @@
+     //XXX case kGreen:  return osEventNow;
+     //XXX case kYellow: return osEventNext;
+     case kHelp:
+-        return osEnd; 
++        return osEnd;
+     case kOk:     if (group >= 0) {
+                      channel = Channels.Get(Channels.GetNextNormal(group));
+                      if (channel)
+@@ -4259,11 +4265,11 @@
+   return osContinue;
+ }
+ 
+-/* 
++/*
+ 
+ 
+ */
+-			  /* 
++			  /*
+ 				// set for all in diseqc.c    -> SetOszilatorFrequenzies(int lofStat)
+ 			  if (lofStat){
+ 			    ::Setup.LnbFrequHi = 10600;
+@@ -4274,4 +4280,4 @@
+ 			    ::Setup.LnbFrequLo = 10750;
+ 			  }
+ 			}
+-			*/ 
++			*/

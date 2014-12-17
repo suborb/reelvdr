@@ -1,0 +1,53 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Oktay Yolgeçen <oktay_73@yahoo.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bgprocess\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-23 09:49+0200\n"
+"PO-Revision-Date: 2008-07-09 14:54+0200\n"
+"Last-Translator: Oktay Yolgeçen <oktay_73@yahoo.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Cutting"
+msgstr "Kesme"
+
+msgid "Collects and lists background processes and their status"
+msgstr ""
+
+msgid "Activity"
+msgstr "Aktiflik"
+
+#, c-format
+msgid "%d background process (%d%%)"
+msgstr "%d Zemin Işlemi (%d%%)"
+
+msgid "Background processes"
+msgstr "Zemin Işlemler"
+
+msgid " No process completed"
+msgstr "Işlemler Tamamlanmadi"
+
+msgid "Completed processes"
+msgstr "Işlemler Tamamlandi!"
+
+msgid "Clear list"
+msgstr "Liste Temizlendi"
+
+msgid "Running"
+msgstr "Sürüyor"
+
+msgid " No background process running"
+msgstr "Zemin Işlemler Yok"
+
+msgid "Running processes"
+msgstr "Işlemler Sürüyor"
+
+msgid "Completed"
+msgstr "Işlemler Biti"

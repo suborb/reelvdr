@@ -1,0 +1,49 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-timeline\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:44+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Prio"
+msgstr "Prio"
+
+msgid "Conflict on"
+msgstr "Conflicte a"
+
+msgid "same input device"
+msgstr "mateix dispositiu d'entrada"
+
+msgid "Repeating conflict on"
+msgstr "S'està produint el mateix conflicte a"
+
+msgid "No conflicts"
+msgstr "No hi ha conflictes"
+
+msgid "Cursor up/down/left/right+Nums"
+msgstr "Cursor amunt/avall/esquerra/dreta i Núms."
+
+msgid "(today)"
+msgstr "(avui)"
+
+msgid "Timeline"
+msgstr "Línia de temps"
+
+msgid "Ignore primary interface"
+msgstr "Ignora les interfícies primàries"
+
+msgid "Show timer overview and collisions"
+msgstr "Mostra la relació de tasques i els conflictes"
+
+msgid "Timer Timeline"
+msgstr "Programa la Línia de temps"

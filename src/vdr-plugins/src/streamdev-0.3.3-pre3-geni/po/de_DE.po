@@ -1,0 +1,234 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2008-10-01 16:06+0200\n"
+"PO-Revision-Date: 2008-09-30 14:40+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr "VTP Streaming Client"
+
+msgid "Streaming Client"
+msgstr ""
+
+msgid "VDR Streaming Server"
+msgstr "VDR Streaming Server"
+
+msgid "Streaming Server"
+msgstr "Streaming Server"
+
+msgid "Streaming active"
+msgstr "Streamen im aktiv"
+
+msgid "Pause Live TV"
+msgstr "Live-TV pausieren für Streaming"
+
+msgid "Common Settings"
+msgstr "Allgemeines"
+
+msgid "Maximum Number of Clients"
+msgstr "Maximalanzahl an Clients"
+
+msgid "Suspend behaviour"
+msgstr "Pausierverhalten"
+
+msgid "Client may suspend"
+msgstr "Client darf pausieren"
+
+msgid "ReelBox-to-ReelBox Server"
+msgstr "ReelBox-zu-ReelBox Server"
+
+msgid "Start ReelBox-to-ReelBox Server"
+msgstr "ReelBox-zu-ReelBox Server starten"
+
+msgid "ReelBox-to-ReelBox Server Port"
+msgstr "Port des ReelBox-zu-ReelBox Servers"
+
+msgid "Bind to IP"
+msgstr "Binde an IP"
+
+msgid "HTTP Server"
+msgstr "HTTP Server"
+
+msgid "Start HTTP Server"
+msgstr "HTTP Server starten"
+
+msgid "HTTP Server Port"
+msgstr "Port des HTTP Servers"
+
+msgid "HTTP Streamtype"
+msgstr "HTTP Streamtyp"
+
+msgid "Streaming Control"
+msgstr "Streamkontrolle"
+
+msgid "Remote Schedule"
+msgstr ""
+
+msgid "Remote Timers"
+msgstr "Entfernte Timer"
+
+msgid "Remote Recordings"
+msgstr "Entfernte Aufnahmen"
+
+msgid "Suspend Server"
+msgstr "Server pausieren"
+
+msgid "Synchronize EPG"
+msgstr "EPG synchronisieren"
+
+msgid "Server is suspended"
+msgstr "Server ist pausiert"
+
+msgid "Couldn't suspend Server!"
+msgstr "Konnte Server nicht pausieren!"
+
+msgid "Edit remote timer"
+msgstr "Entfernten Timer editieren"
+
+msgid "Active"
+msgstr ""
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "Day"
+msgstr "Tag"
+
+msgid "Start"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "VPS"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priorität"
+
+msgid "Lifetime"
+msgstr "Lebensdauer"
+
+msgid "File"
+msgstr "Datei"
+
+msgid "First day"
+msgstr "Erster Tag"
+
+msgid "*** Invalid Channel ***"
+msgstr ""
+
+msgid "What's on now?"
+msgstr ""
+
+msgid "What's on next?"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Switch"
+msgstr ""
+
+msgid "Can't switch channel!"
+msgstr ""
+
+#, c-format
+msgid "Schedule - %s"
+msgstr ""
+
+msgid "Fetching recordings..."
+msgstr "Hole Aufnahmen..."
+
+msgid "Open"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr ""
+
+msgid "Delete recording?"
+msgstr ""
+
+msgid "Edit"
+msgstr "Editieren"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "On/Off"
+msgstr "An/Aus"
+
+msgid "Delete timer?"
+msgstr ""
+
+msgid "MTWTFSS"
+msgstr ""
+
+msgid "Start Client"
+msgstr "Client starten"
+
+msgid "Remote IP"
+msgstr "IP der Gegenseite"
+
+msgid "Remote Port"
+msgstr "Port der Gegenseite"
+
+msgid "Filter Streaming"
+msgstr "Filter Streaming"
+
+msgid "Please restart VDR to activate changes"
+msgstr "Bitte starten Sie für die Änderungen VDR neu"
+
+msgid "Recordings not in sync! Try again..."
+msgstr ""
+
+msgid "Couldn't delete recording! Try again..."
+msgstr ""
+
+msgid "Couldn't save timer! Try again..."
+msgstr "Konnte Timer nicht speichern! Bitte wiederholen..."
+
+msgid "Timers not in sync! Try again..."
+msgstr "Timer nicht synchron! Bitte wiederholen..."
+
+msgid "Server error! Try again..."
+msgstr "Serverfehler! Bitte wiederholen..."
+
+msgid "Couldn't delete timer! Try again..."
+msgstr "Konnte Timer nicht löschen! Bitte wiederholen..."
+
+msgid "Offer suspend mode"
+msgstr "Pausieren anbieten"
+
+msgid "Always suspended"
+msgstr "Immer pausiert"
+
+msgid "Never suspended"
+msgstr "Nie pausiert"
+

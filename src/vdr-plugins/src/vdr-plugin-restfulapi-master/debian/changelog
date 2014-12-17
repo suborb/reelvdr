@@ -1,0 +1,60 @@
+vdr-plugin-restfulapi (0.1.2-1yavdr0~precise) precise; urgency=medium
+
+  * add vdr-abi dependency
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Sun, 02 Feb 2014 17:09:18 +0100
+
+vdr-plugin-restfulapi (0.1.2-0yavdr0~precise) precise; urgency=medium
+
+  * new upstream release
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Sun, 10 Mar 2013 13:36:48 +0100
+
+vdr-plugin-restfulapi (0.1.1-6-gf7e266a-2yavdr0~precise) precise; urgency=medium
+
+  * libvdr-*so doesn't need to be manually installed
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 07 Mar 2013 10:44:24 +0100
+
+vdr-plugin-restfulapi (0.1.1-6-gf7e266a-1yavdr0~precise) precise; urgency=medium
+
+  * depend on pkg-config
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 07 Mar 2013 03:10:31 +0100
+
+vdr-plugin-restfulapi (0.1.1-6-gf7e266a-0yavdr0~precise) precise; urgency=medium
+
+  * new upstream snapshot
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 07 Mar 2013 02:47:52 +0100
+
+vdr-plugin-restfulapi (0.1.1-4yavdr0~precise) precise; urgency=medium
+
+  * refactored to-json-encoder
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 28 Feb 2013 03:23:29 +0100
+
+vdr-plugin-restfulapi (0.1.1-3yavdr0~precise) precise; urgency=medium
+
+  * add some bugfixes and set version to 0.1.1 in the source...
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Wed, 27 Feb 2013 21:14:05 +0100
+
+vdr-plugin-restfulapi (0.1.1-2yavdr0~precise) precise; urgency=medium
+
+  * add new Makefile for vdr 1.7.36
+  * add german translation file
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Sat, 09 Feb 2013 11:16:57 +0100
+
+vdr-plugin-restfulapi (0.1.1-1yavdr0~precise) precise; urgency=medium
+
+  * new upstream snapshot
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Wed, 21 Nov 2012 21:34:34 +0100
+
+vdr-plugin-restfulapi (0.1.1-0yavdr0~natty) natty; urgency=medium
+
+  * Initial Release
+  
+ -- Michael Eiler <eiler.mike@gmail.com>  Thu, 26 July 2011 22:41:00 +0200

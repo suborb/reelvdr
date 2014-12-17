@@ -1,0 +1,374 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-femon\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-17 15:10+0200\n"
+"PO-Revision-Date: 2009-03-06 16:41+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Femon not available while replaying"
+msgstr "Modul Femon není při přehrávání k dispozici"
+
+msgid "basic"
+msgstr "základní"
+
+msgid "transponder"
+msgstr "transpondér"
+
+msgid "stream"
+msgstr "datový tok"
+
+msgid "AC-3"
+msgstr "AC-3"
+
+msgid "Classic"
+msgstr "Klasický"
+
+msgid "Elchi"
+msgstr "Elchi"
+
+msgid "DeepBlue"
+msgstr "DeepBlue"
+
+msgid "Moronimo"
+msgstr "Moronimo"
+
+msgid "Enigma"
+msgstr "Enigma"
+
+msgid "EgalsTry"
+msgstr "EgalsTry"
+
+msgid "Duotone"
+msgstr "Duotone"
+
+msgid "SilverGreen"
+msgstr "SilverGreen"
+
+msgid "Default display mode"
+msgstr "Výchozí režim zobrazení"
+
+msgid "Position"
+msgstr "Umístění"
+
+msgid "bottom"
+msgstr "dole"
+
+msgid "top"
+msgstr "nahoře"
+
+msgid "Height"
+msgstr "Výška"
+
+msgid "Horizontal offset"
+msgstr "Vodorovné posunutí"
+
+msgid "Use SVDRP service"
+msgstr "Používat službu SVDRP"
+
+msgid "SVDRP service port"
+msgstr "Port služby SVDRP"
+
+msgid "SVDRP service IP"
+msgstr "IP služby SVDRP"
+
+msgid "Video"
+msgstr "Obraz"
+
+msgid "Audio"
+msgstr "Zvuk"
+
+msgid "Transponder Information"
+msgstr "Informace o transpondéru"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid"
+msgstr "Apid"
+
+msgid "Dpid"
+msgstr "Dpid"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "CA"
+msgstr "CA"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Nid"
+msgstr "Nid"
+
+msgid "Tid"
+msgstr "Tid"
+
+msgid "Rid"
+msgstr "Rid"
+
+msgid "Satellite Card"
+msgstr "Satelitní karta"
+
+msgid "Frequency"
+msgstr "Frekvence"
+
+msgid "Source"
+msgstr "Zdroj"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "Polarization"
+msgstr "Polarizace"
+
+msgid "Inversion"
+msgstr "Inverze"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "Cable Card"
+msgstr "Kabelová karta"
+
+msgid "Modulation"
+msgstr "Modulace"
+
+msgid "Terrestrial Card"
+msgstr "Pozemní karta"
+
+msgid "Transmission"
+msgstr "Přenos"
+
+msgid "Bandwidth"
+msgstr "Šířka pásma"
+
+msgid "Coderate"
+msgstr "Coderate"
+
+msgid "Hierarchy"
+msgstr "Hierarchie"
+
+msgid "Guard"
+msgstr "Ochrana"
+
+msgid "Stream Information"
+msgstr "Informace o datovém toku"
+
+msgid "Video Stream"
+msgstr "Datový tok obrazu"
+
+msgid "Bitrate"
+msgstr "Přenosová rychlost"
+
+msgid "Aspect Ratio"
+msgstr "Poměr stran"
+
+msgid "Frame Rate"
+msgstr "Snímková frekvence"
+
+msgid "Hz"
+msgstr "Hz"
+
+msgid "Video Format"
+msgstr "Formát obrazu"
+
+msgid "Resolution"
+msgstr "Rozlišení"
+
+msgid "Audio Stream"
+msgstr "Datový tok zvuku"
+
+msgid "MPEG Layer"
+msgstr "MPEG Layer"
+
+msgid "Sampling Frequency"
+msgstr "Vzorkovací frekvence"
+
+msgid "AC-3 Stream"
+msgstr "Datový tok AC-3"
+
+msgid "kHz"
+msgstr "kHz"
+
+msgid "Frame Size"
+msgstr "Velikost snímku"
+
+msgid "Bit Stream Mode"
+msgstr "Režim bitového datového toku"
+
+msgid "Audio Coding Mode"
+msgstr "Režim kódování zvuku"
+
+msgid "Center Mix Level"
+msgstr "Úroveň středového směšování"
+
+msgid "Surround Mix Level"
+msgstr "Úroveň prostorového směšování"
+
+msgid "Dolby Surround Mode"
+msgstr "Režim Dolby Surround"
+
+msgid "Low Frequency Effects"
+msgstr "Nízkofrekvenční efekty"
+
+msgid "On"
+msgstr "Zapnuto"
+
+msgid "Off"
+msgstr "Vypnuto"
+
+msgid "Dialogue Normalization"
+msgstr "Normalizace dialogů"
+
+msgid "Free to Air"
+msgstr "Bezplatné vysílání"
+
+msgid "Fixed"
+msgstr "Pevný"
+
+msgid "Analog"
+msgstr "Analogový"
+
+msgid "SECA/Mediaguard"
+msgstr "SECA/Mediaguard"
+
+msgid "Viaccess"
+msgstr "Viaccess"
+
+msgid "Irdeto"
+msgstr "Irdeto"
+
+msgid "NDS"
+msgstr "NDS"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "CryptoWorks"
+msgstr "CryptoWorks"
+
+msgid "PowerVu"
+msgstr "PowerVu"
+
+msgid "Nagra"
+msgstr "Nagra"
+
+msgid "BetaCrypt"
+msgstr "BetaCrypt"
+
+msgid "SkyCrypt"
+msgstr "SkyCrypt"
+
+msgid "None"
+msgstr "Žádný"
+
+msgid "Auto"
+msgstr "Automaticky"
+
+msgid "MHz"
+msgstr "MHz"
+
+msgid "reserved"
+msgstr "vyhrazeno"
+
+msgid "unknown"
+msgstr "neznámý"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Complete Main (CM)"
+msgstr "Úplný hlavní (CM)"
+
+msgid "Music and Effects (ME)"
+msgstr "Hudba a efekty (ME)"
+
+msgid "Visually Impaired (VI)"
+msgstr "Zrakově postižení (VI)"
+
+msgid "Hearing Impaired (HI)"
+msgstr "Sluchově postižení (VI)"
+
+msgid "Dialogue (D)"
+msgstr "Dialogy (D)"
+
+msgid "Commentary (C)"
+msgstr "Komentář (C)"
+
+msgid "Emergency (E)"
+msgstr "Nouzový (E)"
+
+msgid "Voice Over (VO)"
+msgstr "Dabing (VO)"
+
+msgid "Karaoke"
+msgstr "Karaoke"
+
+msgid "Ch1"
+msgstr "Kan1"
+
+msgid "Ch2"
+msgstr "Kan2"
+
+msgid "C"
+msgstr "C"
+
+msgid "L"
+msgstr "L"
+
+msgid "R"
+msgstr "R"
+
+msgid "S"
+msgstr "S"
+
+msgid "SL"
+msgstr "SL"
+
+msgid "SR"
+msgstr "SR"
+
+msgid "dB"
+msgstr "dB"
+
+msgid "not indicated"
+msgstr "neuvedeno"
+
+msgid "no"
+msgstr "ne"
+
+msgid "yes"
+msgstr "ano"
+
+msgid "free"
+msgstr "volných"
+
+msgid "Mbit/s"
+msgstr "Mb/s"
+
+msgid "kbit/s"
+msgstr "kb/s"
+
+msgid "DVB Signal Information Monitor (OSD)"
+msgstr "Sledování informací o signálu DVB (OSD)"
+
+msgid "Signal Information"
+msgstr "Informace o signálu"
+

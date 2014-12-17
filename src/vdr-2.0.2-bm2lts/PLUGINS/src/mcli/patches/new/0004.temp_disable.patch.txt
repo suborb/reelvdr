@@ -1,0 +1,11 @@
+--- vdr-plugin-mcli.ori/mcli.h	2012-09-27 17:54:42.145480001 +0200
++++ vdr-plugin-mcli/mcli.h	2012-09-28 21:19:12.381188000 +0200
+@@ -28,7 +28,7 @@
+ #define TUNER_POOL_MAX 32
+ #define CAM_POOL_MAX 10
+ 
+-#define TEMP_DISABLE_DEVICE
++//#define TEMP_DISABLE_DEVICE
+ #define TEMP_DISABLE_TIMEOUT_DEFAULT (10)
+ #define TEMP_DISABLE_TIMEOUT_SCAN (30)
+ #define TEMP_DISABLE_TIMEOUT_CAOVERRIDE (30)

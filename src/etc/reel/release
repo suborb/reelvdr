@@ -1,0 +1,6 @@
+Distribution=Rubuntu 2013 first update
+Release=12.12.1
+VersionString=121201
+Build=R@BUILD@
+BuildDate=@DATE@
+md5sum=

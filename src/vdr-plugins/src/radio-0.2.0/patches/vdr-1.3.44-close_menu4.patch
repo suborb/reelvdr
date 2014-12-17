@@ -1,0 +1,138 @@
+--- vdr-1.3.44-orig/osdbase.h	2006-01-06 12:55:30.000000000 +0100
++++ vdr-1.3.44/osdbase.h	2006-02-26 14:55:29.000000000 +0100
+@@ -79,6 +79,7 @@ public:
+   bool IsMenu(void) { return isMenu; }
+   virtual void Show(void);
+   virtual eOSState ProcessKey(eKeys Key) { return osUnknown; }
++  virtual bool IsInteractive(void) { return true; }
+   };
+ 
+ class cOsdMenu : public cOsdObject, public cList<cOsdItem> {
+--- vdr-1.3.44-orig/eitscan.h	2005-09-04 12:51:35.000000000 +0200
++++ vdr-1.3.44/eitscan.h	2006-02-26 14:47:47.000000000 +0100
+@@ -36,7 +36,7 @@ public:
+   void AddTransponder(cChannel *Channel);
+   void ForceScan(void);
+   void Activity(void);
+-  void Process(void);
++  bool Process(bool MenuIsOpen);
+   };
+ 
+ extern cEITScanner EITScanner;
+--- vdr-1.3.44-orig/eitscan.c	2006-01-07 15:10:17.000000000 +0100
++++ vdr-1.3.44/eitscan.c	2006-02-27 21:55:54.000000000 +0100
+@@ -125,8 +125,9 @@ void cEITScanner::Activity(void)
+   lastActivity = time(NULL);
+ }
+ 
+-void cEITScanner::Process(void)
++bool cEITScanner::Process(bool MenuIsOpen)
+ {
++  bool CloseMenuAndTryAgain = false;
+   if ((Setup.EPGScanTimeout || !lastActivity) && Channels.MaxNumber() > 1) { // !lastActivity means a scan was forced
+      time_t now = time(NULL);
+      if (now - lastScan > ScanTimeout && now - lastActivity > ActivityTimeout) {
+@@ -154,6 +156,10 @@ void cEITScanner::Process(void)
+                                   if (MaySwitchTransponder || Device->ProvidesTransponderExclusively(Channel) && now - lastActivity > Setup.EPGScanTimeout * 3600) {
+                                      if (!MaySwitchTransponder) {
+                                         if (Device == cDevice::ActualDevice() && !currentChannel) {
++                                           if (MenuIsOpen) {
++                                              CloseMenuAndTryAgain = true;
++                                              continue;
++                                              }
+                                            cDevice::PrimaryDevice()->StopReplay(); // stop transfer mode
+                                            currentChannel = Device->CurrentChannel();
+                                            Skins.Message(mtInfo, tr("Starting EPG scan"));
+@@ -174,7 +183,7 @@ void cEITScanner::Process(void)
+                       }
+                   }
+                }
+-           if (!scanList->Count() || !AnyDeviceSwitched) {
++           if (!scanList->Count() || !(AnyDeviceSwitched || CloseMenuAndTryAgain)) {
+               delete scanList;
+               scanList = NULL;
+               if (lastActivity == 0) // this was a triggered scan
+@@ -182,7 +191,9 @@ void cEITScanner::Process(void)
+               }
+            Channels.Unlock();
+            }
+-        lastScan = time(NULL);
++        if (!CloseMenuAndTryAgain)
++           lastScan = time(NULL);
+         }
+      }
++  return CloseMenuAndTryAgain; 
+ }
+--- vdr-1.3.44-orig/vdr.c	2006-02-05 13:57:10.000000000 +0100
++++ vdr-1.3.44/vdr.c	2006-04-01 22:58:17.000000000 +0200
+@@ -727,8 +730,11 @@ int main(int argc, char *argv[])
+            }
+         // Channel display:
+         if (!EITScanner.Active() && cDevice::CurrentChannel() != LastChannel) {
+-           if (!Menu)
++           if (!Menu || !Menu->IsInteractive()) {
++              if (Menu)
++                 DELETE_MENU;
+               Menu = new cDisplayChannel(cDevice::CurrentChannel(), LastChannel >= 0);
++              }
+            LastChannel = cDevice::CurrentChannel();
+            LastChannelChanged = time(NULL);
+            }
+@@ -865,8 +871,11 @@ int main(int argc, char *argv[])
+           case kChanUp:
+           case kChanDn|k_Repeat:
+           case kChanDn:
+-               if (!Interact)
++               if (!Interact || Menu && !Menu->IsInteractive()) {
++                  if (Menu)
++                     DELETE_MENU;
+                   Menu = new cDisplayChannel(NORMALKEY(key));
++                  }
+                else if (cDisplayChannel::IsOpen()) {
+                   Interact->ProcessKey(key);
+                   continue;
+@@ -1037,17 +1046,22 @@ int main(int argc, char *argv[])
+              default:    break;
+              }
+            }
+-        if (!Menu) {
+-           if (!TimerInVpsMargin)
+-              EITScanner.Process();
++        if (!Menu || !Menu->IsInteractive()) {
++           if (!TimerInVpsMargin && EITScanner.Process(Menu != NULL)) {
++              DELETE_MENU;
++              EITScanner.Process(false);
++              }
+            if (!cCutter::Active() && cCutter::Ended()) {
++              if (Menu)
++                 DELETE_MENU;
+               if (cCutter::Error())
+                  Skins.Message(mtError, tr("Editing process failed!"));
+               else
+                  Skins.Message(mtInfo, tr("Editing process finished"));
+               }
+            }
+-        if (!Interact && ((!cRecordControls::Active() && !cCutter::Active() && (!Interface->HasSVDRPConnection() || UserShutdown)) || ForceShutdown)) {
++        Interact = Menu ? Menu : cControl::Control(); // might have been closed in the mean time
++        if ((!Interact || Menu && !Menu->IsInteractive()) && ((!cRecordControls::Active() && !cCutter::Active() && (!Interface->HasSVDRPConnection() || UserShutdown)) || ForceShutdown)) {
+            time_t Now = time(NULL);
+            if (Now - LastActivity > ACTIVITYTIMEOUT) {
+               // Shutdown:
+@@ -1068,6 +1082,8 @@ int main(int argc, char *argv[])
+                  if (UserShutdown && Next && Delta <= Setup.MinEventTimeout * 60 && !ForceShutdown) {
+                     char *buf;
+                     asprintf(&buf, tr("Recording in %d minutes, shut down anyway?"), Delta / 60);
++                    if (Menu)
++                       DELETE_MENU;
+                     if (Interface->Confirm(buf))
+                        ForceShutdown = true;
+                     else
+@@ -1080,6 +1096,8 @@ int main(int argc, char *argv[])
+                        dsyslog("next timer event at %s", *TimeToString(Next));
+                     if (WatchdogTimeout > 0)
+                        signal(SIGALRM, SIG_IGN);
++                    if (Menu)
++                       DELETE_MENU;
+                     if (Interface->Confirm(tr("Press any key to cancel shutdown"), UserShutdown ? 5 : SHUTDOWNWAIT, true)) {
+                        cControl::Shutdown();
+                        int Channel = timer ? timer->Channel()->Number() : 0;

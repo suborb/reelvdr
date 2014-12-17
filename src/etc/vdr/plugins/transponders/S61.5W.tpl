@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S61.5W
+2=EchoStar 12/15
+3=West
+4=61.5

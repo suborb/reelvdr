@@ -1,0 +1,1 @@
+KERNEL=="dvblo*", NAME="%k", GROUP="video"                                                                                            

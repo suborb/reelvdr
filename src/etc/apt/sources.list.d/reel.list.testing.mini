@@ -1,0 +1,3 @@
+# ReelBox software
+deb http://packages.reelbox.org/software/rubuntu mini testing testing-opt all
+

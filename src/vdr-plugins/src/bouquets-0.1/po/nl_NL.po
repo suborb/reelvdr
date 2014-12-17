@@ -1,0 +1,289 @@
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bouquets 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-01-22 02:29+0100\n"
+"PO-Revision-Date: 2011-09-07 17:29+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Select channels with OK"
+msgstr "Selekteer kanaal met OK"
+
+msgid "Customize channels: "
+msgstr "Kanalen bewerken:"
+
+msgid "Favorites: "
+msgstr "Favorieten:"
+
+msgid "encrypted radio channels"
+msgstr "gecodeerde radio kanalen"
+
+msgid "free radio channels"
+msgstr "vrije radio kanalen"
+
+msgid "radio channels"
+msgstr "radio kanalen"
+
+msgid "encrypted TV channels"
+msgstr "gecodeerde TV kanalen"
+
+msgid "free TV channels"
+msgstr "vrije TV kanalen"
+
+msgid "TV channels"
+msgstr "TV-Kanalen"
+
+msgid "encrypted channels"
+msgstr "gecodeerde kanalen"
+
+msgid "free channels"
+msgstr "vrije kanalen"
+
+msgid "HD channels"
+msgstr "HD kanalen"
+
+msgid "non HD channels"
+msgstr "niet HD kanalen"
+
+msgid "all channels"
+msgstr "alle kanalen"
+
+msgid "Select channels with blue key"
+msgstr "Selekteer kanaal met de blauwe knop"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Gebruik Omhoog/Omlaag voor nieuwe locatie - daarna Ok"
+
+msgid "Channel is being used by a timer!"
+msgstr "Kanaal wordt al gebruikt door een timer!"
+
+msgid "Delete channel?"
+msgstr "Kanaal wissen?"
+
+msgid "Channel deleted"
+msgstr "Kanaal gewist"
+
+msgid "Delete channels?"
+msgstr "Kanalen wissen?"
+
+msgid "Channels deleted"
+msgstr "Kanalen gewist"
+
+msgid "Channels have been moved"
+msgstr "Kanalen zijn verplaatst"
+
+msgid "Favorites"
+msgstr "Favorieten"
+
+msgid "Add to Favorites?"
+msgstr "Toevoegen aan favorieten?"
+
+msgid "Button$New"
+msgstr "Nieuw"
+
+msgid "Bouquets"
+msgstr "Boeketten"
+
+msgid "Key$Previous"
+msgstr ""
+
+msgid "Key$Next"
+msgstr "Volgende"
+
+msgid "Button$Customize"
+msgstr "Bewerken"
+
+msgid "Move"
+msgstr "Verplaats"
+
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Verplaats met op/neer naar de nieuwe plek - druk dan 'Invoegen'"
+
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Verplaats met op/neer naar de nieuwe plek - druk dan 'OK'"
+
+msgid "Channels"
+msgstr "Kanalen"
+
+msgid "Customize Bouquets"
+msgstr "Boeket aanpassen"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "Delete Bouquet?"
+msgstr "Boeket verwijderen?"
+
+msgid "Edit Bouquet"
+msgstr "Wijzig boeket"
+
+msgid "Add Bouquet"
+msgstr "Voeg boeket toe"
+
+msgid "CI-Slot for this Bouquet"
+msgstr "CI-Slot voor dit boeket"
+
+msgid "Bouquet starts with number"
+msgstr "Boeket begint met nummer"
+
+msgid "Note:"
+msgstr "Opmerking:"
+
+msgid "Select CI-Slot for this Bouquet."
+msgstr "Kies een CI-slot voor dit boeket."
+
+msgid "Select channelnumber for first channel inside this bouquet"
+msgstr "Kies kanaalnummer voor het eerste kanaal binnen dit boeket"
+
+msgid "Symbolrate"
+msgstr "Symbolrate"
+
+msgid "System-ID"
+msgstr "Systeem-ID"
+
+msgid "CI-Slot"
+msgstr "CI-slot"
+
+msgid "No CAM at"
+msgstr "Geen CAM in"
+
+msgid "upper slot"
+msgstr "bovenste slot"
+
+msgid "lower slot"
+msgstr "onderste slot"
+
+msgid "channellist"
+msgstr "kanalenlijst"
+
+msgid "current bouquet"
+msgstr "huidig boeket"
+
+msgid "bouquet list"
+msgstr "boeket lijst"
+
+msgid "Channellist: set filters"
+msgstr "Kanalen lijst: kies filters"
+
+msgid "Please select the content of the channellist"
+msgstr "Maak een keuze uit de inhoud van de kanalenlijst"
+
+msgid "All channels"
+msgstr "Alle kanalen"
+
+msgid "Only TV channels"
+msgstr "Alleen TV kanalen"
+
+msgid "Only radio channels"
+msgstr "Alleen radio kanalen"
+
+msgid "non encrypted channels"
+msgstr "ongecodeerde kanalen"
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Kanalenlijst begint met"
+
+msgid "non encrypted TV channels"
+msgstr "ongecodeerde TV kanalen"
+
+msgid "Channellist"
+msgstr "Kanalenlijst"
+
+#~ msgid "Select CI-Slot for current Bouquet."
+#~ msgstr "Selecteer Ci-slot voor huidig bouquet"
+
+#~ msgid "Customize Bouquet"
+#~ msgstr "Boeket bewerken"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Channel settings are not unique!"
+#~ msgstr "Kanaalinstellingen zijn niet uniek!"
+
+#~ msgid "Delete"
+#~ msgstr "Verwijder"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Verander"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Verwijder"
+
+#~ msgid "Button$Mark"
+#~ msgstr "Markeren"
+
+#~ msgid "Key$Back"
+#~ msgstr "Terug"
+
+#~ msgid "Button$Insert"
+#~ msgstr "Invoegen"
+
+#~ msgid "Edit channel"
+#~ msgstr "Kanaal aanpassen"
+
+#~ msgid "Source"
+#~ msgstr "Bron"
+
+#~ msgid "Frequency"
+#~ msgstr "Frequentie"
+
+#~ msgid "Polarization"
+#~ msgstr "Polarisatie"
+
+#~ msgid "Srate"
+#~ msgstr "Srate"
+
+#~ msgid "CoderateH"
+#~ msgstr "CoderateH"
+
+#~ msgid "none"
+#~ msgstr "geen"
+
+#~ msgid "CoderateL"
+#~ msgstr "CoderateL"
+
+#~ msgid "Vpid"
+#~ msgstr "Vpid"
+
+#~ msgid "Ppid"
+#~ msgstr "Ppid"
+
+#~ msgid "Apid1"
+#~ msgstr "Apid1"
+
+#~ msgid "Apid2"
+#~ msgstr "Apid2"
+
+#~ msgid "Tpid"
+#~ msgstr "Tpid"
+
+#~ msgid "Sid"
+#~ msgstr "Sid"
+
+#~ msgid "Modulation"
+#~ msgstr "Modulatie"
+
+#~ msgid "Bandwidth"
+#~ msgstr "Bandbreedte"
+
+#~ msgid "Transmission"
+#~ msgstr "Transmissie"
+
+#~ msgid "Guard"
+#~ msgstr "Bescherm"
+
+#~ msgid "Hierarchy"
+#~ msgstr "Hierarchie"
+
+#~ msgid "Rolloff"
+#~ msgstr "Rol uit"

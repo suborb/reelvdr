@@ -1,0 +1,200 @@
+#!/bin/sh
+#
+# Version 1.4.2 / 24.03.2010
+# VERSNUM 010402
+#
+# WARNING: if you damage this file, you ReelBox will not boot again!!!
+#
+
+/bin/echo "Loading temporary / INIT for ReelBox, please wait..."
+/bin/mount -t proc none /proc -onodev,noexec,nosuid
+
+[ -d /dev ] || mkdir -m 0755 /dev
+[ -d /root ] || mkdir --mode=0700 /root
+[ -d /sys ] || mkdir /sys
+[ -d /proc ] || mkdir /proc
+[ -d /tmp ] || mkdir /tmp
+mkdir -p /var/lock
+mount -t sysfs none /sys -onodev,noexec,nosuid
+
+
+# Settings for root-fs on NFS
+# TODO: bootp?
+
+[ -f $0.conf ] && . $0.conf
+
+[ -z "$NFSSERVER" ] && NFSSERVER=192.168.0.200
+[ -z "$MYIP" ] && MYIP=192.168.0.175
+[ -z "$NFSDIR" ] && NFSDIR=/media/hd/lenny-armel-new
+[ -z "$GW" ] && GW=192.168.0.254
+
+
+
+# Devices to test for root image
+DEVICES="sdd1 sda1 sde1 sdb1 sdc1"
+
+Shell () {
+    export PS1="HAL-9000 # "
+    echo "Hello Dave, how are you?"
+    ash
+    reboot
+}
+
+Mount () {
+    #echo mount -n -o ro $*
+    mount -n -o ro,noatime,nodiratime $*
+}
+
+### main
+
+# wait for usb-stick to become ready
+for i in 5 4 3 2 1 0; do
+	echo -en "waiting for USB devices: $i\r"
+	[ $i -gt 0 ] && sleep 1
+done
+echo
+
+### search for valid root devices
+# TODO: do we check for nfs? ping would take another 5 sec. or so...
+# maybe just as a last resort...
+
+### try for usb stick (sda1)
+### try for SD-card (sdd1/sde1)
+# TODO: better way? busybox does not know blkid :(
+
+for device in $DEVICES ; do
+	eval $device=false
+	echo "Testing for device $device:"
+	Mount /dev/$device /mnt # 2>/dev/null
+	if [ $? == 0 ] ; then
+		if [ -f /mnt/linuxrc ] || [ -f /mnt/sbin/init ]; then
+			echo "/dev/$device is a valid boot device"
+			eval $device=true
+			eval ${device}_isimage=false
+		fi
+		if [ -f /mnt/rootfs.img ]; then
+			echo "/dev/$device contains a root image (rootfs.img)."
+			eval $device=true
+			eval ${device}_isimage=true
+		fi
+		umount /mnt
+	fi
+done
+
+
+num=0
+echo
+echo "Valid boot devices:"
+# sdd must be the first one to make the device prefer the front USB-connector for boot
+if $sdd1 ; then
+        let num++
+        echo -n " [$num] Front USB Stick/HD on /dev/sdd1"
+        [ $num == 1 ] && echo " (default)" || echo ""
+fi
+if $sda1 ; then
+        let num++
+        echo -n " [$num] Backside USB Stick/HD on /dev/sda1"
+        [ $num == 1 ] && echo " (default)" || echo ""
+fi
+if $sde1 ; then
+        let num++
+        echo -n " [$num] SD-card on /dev/sde1"
+        [ $num == 1 ] && echo " (default)" || echo ""
+fi
+if $sdb1 ; then
+        let num++
+        echo -n " [$num] internal USB Stick/HD on /dev/sdb1"
+        [ $num == 1 ] && echo " (default)" || echo ""
+fi
+if $sdc1 ; then
+        let num++
+        echo -n " [$num] internal USB Stick/HD on /dev/sdc1"
+        [ $num == 1 ] && echo " (default)" || echo ""
+fi
+if [ ! -z "$NFSSERVER" ] ; then
+        let num++
+        echo " [$num] NFS root on $NFSSERVER:$NFSDIR"
+fi
+
+
+echo
+echo "==> Press 'Enter' within 2 sec to stop init and enter a shell"
+if read -t 2 bla ; then
+    if [ -z $bla ] ; then
+        Shell
+    fi
+else
+    # no key pressed
+    bla=1 # default value
+fi
+
+echo "Your choice: [$bla]"
+
+
+#set -x
+
+count=1
+for device in $DEVICES nfs; do
+	if ! eval $\{$device}; then
+	    continue
+	fi
+	if [ $count == $bla ]; then
+		if [ $device == nfs ]; then
+			ROOTDEV=nfs
+			echo "Rootdevice is: $NFSSERVER:$NFSDIR [nfs]"
+		else
+			ROOTDEV=/dev/$device
+			if eval $\{${device}_isimage}; then
+				echo "Rootdevice is: $device:/rootfs.img"
+			else
+				echo "Rootdevice is: $device"
+			fi
+		fi
+		break
+	fi
+	let count++
+done
+
+
+
+case $ROOTDEV in
+	nfs)
+		ifconfig eth0 ${MYIP} up
+		route add default gw $GW
+		[ -d /root ] || mkdir /root
+		mount -n -o nolock ${NFSSERVER}:${NFSDIR} /root
+		;;
+	/dev/*)
+		if eval $\{${device}_isimage}; then
+			Mount $ROOTDEV /mnt
+			# -t ext2 ???
+			mount -n -o loop $ROOTDEV /root
+		else
+			Mount $ROOTDEV /root
+		fi
+		;;
+	/mnt/rootfs.img)
+		# -t ext2 ???
+		mount -n -o loop $ROOTDEV /root
+		;;
+	*)
+		echo "no valid root device found. Entering shell so you can fix boot."
+		Shell
+		;;
+esac
+
+# Note that this only becomes /dev on the real filesystem if udev's scripts
+# are used; which they will be, but it's worth pointing out
+mount -t tmpfs -o mode=0755 udev /dev
+[ -e /dev/console ] || mknod /dev/console c 5 1
+[ -e /dev/null ] || mknod /dev/null c 1 3
+
+PS1="SERIAL-\u@\h:\w # "
+
+cd /root
+[ -d oldroot ] || mkdir oldroot
+pivot_root . oldroot
+exec usr/sbin/chroot . /sbin/init <dev/console >dev/console 2>&1
+
+echo "This should not happen..."
+Shell

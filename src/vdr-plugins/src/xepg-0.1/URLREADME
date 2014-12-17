@@ -1,0 +1,16 @@
+This file describes format of url.list
+
+Channel to EPG data mapping is provided by url.list file present in the cPlugins::Configdirectory("xmlepg2vdr) directory. (for eg. in my machine it is /etc/vdr/plugins/xmlepg2vdr/url.list) See below for the FORMAT of url.list file.
+
+
+------------------FORMAT OF url.list FILE----------
+CHANNEL1 NAME; URL1
+CHANNEL2 NAME; URL2
+BBC 1; http://www.bleb.org/tv/data/listings/0/bbc1.xml
+---------------------------END FILE----------------
+
+No blank lines allowed. 
+Spaces in Channel name allowed but Channel names should be terminated by a ';' character (no spaces before ';')
+
+
+

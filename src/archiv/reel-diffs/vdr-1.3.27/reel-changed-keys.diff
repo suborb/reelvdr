@@ -1,0 +1,119 @@
+diff -Nur vdr-1.3.21/vdr.c vdr-1.3.21-reel/vdr.c
+--- vdr-1.3.21/vdr.c    2005-07-10 17:29:04.000000000 +0200
++++ vdr-1.3.21-reel/vdr.c       2005-07-09 01:48:54.000000000 +0200
+@@ -695,11 +695,13 @@
+             Menu = new cMenuMain(cControl::Control(), function);\
+             Temp = NULL;\
+             key = kNone; // nobody else needs to see this key
+-          case kSchedule:   DirectMainFunction(osSchedule); break;
++          case kSchedule:   DirectMainFunction(osSchedule); break;
+           case kChannels:   DirectMainFunction(osChannels); break;
+           case kTimers:     DirectMainFunction(osTimers); break;
+           case kRecordings: DirectMainFunction(osRecordings); break;
+-          case kSetup:      DirectMainFunction(osSetup); break;
++          case kSetup:      cRemote::PutMacro(key); break;
++               //PluginManager.GetPlugin("setup"); break;
++               //DirectMainFunction(osSetup); break;
+           case kCommands:   DirectMainFunction(osCommands); break;
+           case kUser1 ... kUser9: cRemote::PutMacro(key); key = kNone; break;
+           case k_Plugin:    DirectMainFunction(osPlugin, cRemote::GetPlugin()); break;
+@@ -867,7 +869,8 @@
+                   cDevice::SwitchChannel(NORMALKEY(key) == kUp ? 1 : -1);
+                   break;
+              // Viewing Control:
+-             case kOk:   LastChannel = -1; break; // forces channel display
++             case kOk:   DirectMainFunction(osChannels); break;
++             case kSchedule:   LastChannel = -1; break; // forces channel display
+              // Instant resume of the last viewed recording:
+              case kPlay:
+                   if (cReplayControl::LastReplayed()) {
+diff -Nur vdr-1.3.27/device.h vdr-1.3.27-reel/device.h
+--- vdr-1.3.27/device.h 2005-10-03 13:51:15.000000000 +0200
++++ vdr-1.3.27-reel/device.h    2005-09-28 10:38:04.000000000 +0200
+@@ -26,7 +26,7 @@
+ #define MAXPIDHANDLES      64 // the maximum number of different PIDs per device
+ #define MAXRECEIVERS       16 // the maximum number of receivers per device
+ #define MAXVOLUME         255
+-#define VOLUMEDELTA         5 // used to increase/decrease the volume
++#define VOLUMEDELTA        15 // used to increase/decrease the volume
+ 
+ #define TS_SIZE          188
+ #define TS_SYNC_BYTE     0x47
+diff -Nur vdr-1.3.27/keys.c vdr-1.3.27-reel/keys.c
+--- vdr-1.3.27/keys.c   2004-12-27 12:08:34.000000000 +0100
++++ vdr-1.3.27-reel/keys.c      2005-08-07 12:18:42.000000000 +0200
+@@ -51,6 +51,8 @@
+                     { kRecordings,    "Recordings" },
+                     { kSetup,         "Setup"      },
+                     { kCommands,      "Commands"   },
++                    { kGreater,       "Greater"    },
++                    { kLess,          "Less"       },
+                     { kUser1,         "User1"      },
+                     { kUser2,         "User2"      },
+                     { kUser3,         "User3"      },
+@@ -60,6 +62,7 @@
+                     { kUser7,         "User7"      },
+                     { kUser8,         "User8"      },
+                     { kUser9,         "User9"      },
++                    { kHelp,          "Help"       },
+                     { kNone,          ""           },
+                     { k_Setup,        "_Setup"     },
+                     { kNone,          NULL         },
+diff -Nur vdr-1.3.27/keys.h vdr-1.3.27-reel/keys.h
+--- vdr-1.3.27/keys.h   2005-10-03 12:55:37.000000000 +0200
++++ vdr-1.3.27-reel/keys.h      2005-08-07 12:18:42.000000000 +0200
+@@ -45,7 +45,9 @@
+              kRecordings,
+              kSetup,
+              kCommands,
++             kGreater, kLess,
+              kUser1, kUser2, kUser3, kUser4, kUser5, kUser6, kUser7, kUser8, kUser9,
++             kHelp,
+              kNone,
+              kKbd,
+              // The following codes are used internally:
+diff -Nur vdr-1.3.27/menu.c vdr-1.3.27-reel/menu.c
+--- vdr-1.3.27/menu.c   2005-10-03 13:49:02.000000000 +0200
++++ vdr-1.3.27-reel/menu.c      2005-10-01 15:09:14.000000000 +0200
+@@ -7,6 +7,8 @@
+  * $Id: menu.c 1.351 2005/06/18 10:31:52 kls Exp $
+  */
+ 
++#include <map>
++#include <string>
+ #include "menu.h"
+ #include <ctype.h>
+ #include <limits.h>
+@@ -32,6 +34,9 @@
+ #include "videodir.h"
+ #include "diseqc.h"
+ 
++using std::map;
++using std::string;
++
+ #define MAX_CI_SLOTS   3  // Only Reel
+ #define MENUTIMEOUT     120 // seconds
+ #define MAXWAIT4EPGINFO   3 // seconds
+@@ -1431,6 +1436,8 @@
+        case kOk:     if (Count())
+                         return AddSubMenu(new cMenuEvent(((cMenuScheduleItem *)Get(Current()))->event, otherChannel));
+                      break;
++
++       case kHelp:   return osEnd;
+        default:      break;
+        }
+      }
+@@ -2310,11 +2336,11 @@
+ 
+   Clear();
+ 
+-  Add(new cMenuEditIntItem( tr("Setup.DVB$Primary DVB interface"), &data.PrimaryDVB, 1, cDevice::NumDevices()));
++  //Add(new cMenuEditIntItem( tr("Setup.DVB$Primary DVB interface"), &data.PrimaryDVB, 1, cDevice::NumDevices()));
+   Add(new cMenuEditBoolItem(tr("Setup.DVB$Video format"),          &data.VideoFormat, "4:3", "16:9"));
+   if (data.VideoFormat == 0)
+      Add(new cMenuEditStraItem(tr("Setup.DVB$Video display format"), &data.VideoDisplayFormat, 3, videoDisplayFormatTexts));
+-  Add(new cMenuEditBoolItem(tr("Setup.DVB$Use Dolby Digital"),     &data.UseDolbyDigital));
++  //Add(new cMenuEditBoolItem(tr("Setup.DVB$Use Dolby Digital"),     &data.UseDolbyDigital));
+   Add(new cMenuEditStraItem(tr("Setup.DVB$Update channels"),       &data.UpdateChannels, 5, updateChannelsTexts));
+   Add(new cMenuEditIntItem( tr("Setup.DVB$Audio languages"),       &numAudioLanguages, 0, I18nNumLanguages));
+   for (int i = 0; i < numAudioLanguages; i++)

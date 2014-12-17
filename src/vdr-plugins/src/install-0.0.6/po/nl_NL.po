@@ -1,0 +1,813 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-install\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-06-26 09:59+0200\n"
+"PO-Revision-Date: 2011-09-07 17:57+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "The ReelBox installation wizard"
+msgstr "De ReelBox installatie wizard"
+
+msgid "The channellist could not be installed automatically from the ReelBox Avantgarde."
+msgstr "De kanalenlijst kon niet automatisch van de ReelBox AvantGarde ingeladen worden"
+
+msgid "Channellist"
+msgstr "Kanalenlijst"
+
+msgid "Channelscan"
+msgstr "Kanalen scannen"
+
+msgid "We shall now scan for channels."
+msgstr "We gaan nu naar kanalen zoeken."
+
+msgid "This will take a few minutes."
+msgstr "Dit kan enkele minuten duren."
+
+msgid "Press OK to continue"
+msgstr "Druk OK om verder te gaan"
+
+msgid "MultiRoom"
+msgstr "MultiRoom"
+
+msgid "Scanning for ReelBox MultiRoom server on network. Please wait..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Even geduld Aub..."
+
+msgid "The MultiRoom system is already active."
+msgstr "Het MultiRoom systeem is reeds geactiveerd."
+
+msgid "The MultiRoom system cannot be activated."
+msgstr "Het MutliRoom systeem kan niet worden geactiveerd"
+
+msgid "This ReelBox Avantgarde is currently configured as recording server:"
+msgstr "Deze ReelBox Avantgarde is momenteel als opnameserver geconfigureerd:"
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server (the first one was used up to now):"
+msgstr "De volgende ReelBox Avantgardes zijn in het netwerk gevonden en kunnen als opnameserver worden gebruikt (de eerste werd tot op heden gebruikt):"
+
+msgid "\tDisable MultiRoom"
+msgstr "\tMultiroom uitschakelen"
+
+msgid "Note:"
+msgstr "Opmerking:"
+
+msgid "* MultiRoom is not enabled!"
+msgstr "* MultiRoom is niet geactiveerd!"
+
+msgid "This ReelBox Avantgarde is found, but has MultiRoom disabled, so cannot be used as recording server:"
+msgstr "De volgende ReelBox Avantgarde is gevonden maar heeft MultiRoom niet ingeschakeld en kan dus niet als opnameserver worden gebruikt:"
+
+msgid "This ReelBox Avantgarde is found and will be used as recording server:"
+msgstr "Deze ReelBox Avantgarde is gevonden en zal als opnameserver worden gebruikt:"
+
+msgid "\tLeave MultiRoom unconfigured"
+msgstr "\tLaat MultiRoom ongeconfigureerd"
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server."
+msgstr "De volgende ReelBox Avantgardes zijn in het netwerk gevonden en kunnen als opname server gebruikt worden."
+
+msgid "Please select one of them:"
+msgstr "Kies aub één van de Avantgardes:"
+
+msgid "No ReelBox Avantgarde was found in the network."
+msgstr "Er is geen ReelBox Avantgarde in het netwerk gevonden."
+
+msgid "If you own an Avantgarde, turn it on and activate the MultiRoom System in Setup/Installation/MultiRoom."
+msgstr "Indien u een Avantgarde bezit, schakel deze in en activeer het MultiRoom Systeem in Setup/Installatie/MultiRoom."
+
+msgid "Rescan"
+msgstr "Scan opnieuw"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Skip"
+msgstr "Overslaan"
+
+msgid "Setting changes - please wait"
+msgstr "Wijzigingen verwerken - even geduld aub"
+
+msgid "Storing failed! (UUID is missing)"
+msgstr "Opslaan mislukt! (mist UUID)"
+
+msgid "Settings stored"
+msgstr "Instellingen opgeslagen"
+
+msgid "Reception"
+msgstr "Ontvangst"
+
+msgid "No internal NetCeiver found. Searching network. Please wait..."
+msgstr ""
+
+msgid "Searching for internal NetCeiver..."
+msgstr ""
+
+#, c-format
+msgid "Searching for NetCeiver in VLAN %d"
+msgstr ""
+
+msgid "Internal NetCeiver found"
+msgstr ""
+
+msgid "NetCeiver found in VLAN"
+msgstr ""
+
+msgid "System error!"
+msgstr "Systeem fout!"
+
+msgid "No NetCeiver found!"
+msgstr "NetCeiver niet gevonden!"
+
+msgid "Please check if the system cable is connected properly."
+msgstr "Controleer of de systeemkabel juist is aangesloten."
+
+msgid "Harddisk"
+msgstr "Harddisk"
+
+msgid "Internal harddisk found."
+msgstr ""
+
+msgid "Press OK to format now, otherwise the yellow buttown 'skip'."
+msgstr ""
+
+msgid ""
+"If this is the first usage of the harddisk, it must be formatted now. Formatting will DELETE ALL data on the harddisk.\n"
+" If you have used this harddisk before, you could skip this step."
+msgstr ""
+"Indien de harddisk nooit eerder is gebruikt moet deze eerst geformatteerd worden. Alle data zal dan worden gewist.\n"
+" Indien de schijf eerder is gebruikt kan deze stap worden overgeslagen."
+
+#, c-format
+msgid "The disk '%s' was already used before and may contain recordings and multimedia files."
+msgstr ""
+
+msgid "Do you want to mount it and use it as a device for your media files?"
+msgstr ""
+
+msgid "\tYes, mount it, preserve all recordings"
+msgstr ""
+
+msgid "\tNo, do not use the harddisk at all"
+msgstr ""
+
+msgid "You should mount this disk now if you want to use it for permanent timeshift even if you are not going to use it for your media files."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' is already in use for media files."
+msgstr ""
+
+msgid "No action needs to be taken."
+msgstr ""
+
+msgid "Press red key, if you want to format this harddisk:"
+msgstr "Druk op de rode knop indien U de harddisk wilt formatteren:"
+
+msgid "CAUTION:"
+msgstr "LET OP:"
+
+msgid "If you choose to format, ALL data on the internal harddisk will be deleted!"
+msgstr "Indien u kiest om te formatteren, zal alle data op de interne harddisk worden verwijderd!"
+
+msgid "Format"
+msgstr "Formatteren"
+
+msgid "Formatting in progress"
+msgstr "Bezig met formatteren"
+
+msgid "Formatting"
+msgstr "Formatteren"
+
+msgid "Formatting in progress."
+msgstr "Bezig met formatteren."
+
+msgid "Please wait ..."
+msgstr "Even geduld aub..."
+
+msgid "Time elapsed"
+msgstr "Verlopen tijd"
+
+msgid "Formatting complete"
+msgstr "Formatteren gereed"
+
+msgid "Formatting was successful."
+msgstr "Formatteren is gelukt."
+
+msgid "The harddisk is now prepared for recording."
+msgstr "De harde schijf is nu gereed om op te nemen."
+
+msgid "Press 'Next' to proceed with the installation."
+msgstr "Druk 'Volgende' om de installatie voort te zetten"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Not Formatting!"
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "Formatting failed!"
+msgstr ""
+
+msgid "Formating failed!"
+msgstr "Formatteren mislukt!"
+
+msgid "Mounting harddisk ..."
+msgstr ""
+
+msgid "Please select the target for your recordings:"
+msgstr "Selecteer de bestemming voor de opname's:"
+
+msgid " I want to store my recordings ..."
+msgstr " Ik wil mijn opname's opslaan op ..."
+
+msgid " - on the local harddisk of this NetClient."
+msgstr " -  de interne harddisk van deze NetClient."
+
+msgid " - on the harddisk of the ReelBox Avantgarde."
+msgstr " -  de harddisk van de ReelBox Avantgarde."
+
+msgid "Error"
+msgstr "Fout"
+
+msgid "No Harddisk found."
+msgstr "Geen hardeschijf gevonden."
+
+msgid "Recording is not possible."
+msgstr "Opnemen is niet mogelijk."
+
+msgid "Handling"
+msgstr "Handeling"
+
+msgid "Please select a language"
+msgstr "Maak uw taalkeuze aub."
+
+msgid "Please select a language and timezone"
+msgstr "Kies uw taal & tijdzone aub."
+
+msgid "Setup.OSD$Language"
+msgstr "Taal"
+
+msgid "City/Region"
+msgstr "Stad/Regio"
+
+msgid "Please select the prefered language using the"
+msgstr "Selecteer de gewenste taal met behulp van de"
+
+msgid "cursor keys on the remote control."
+msgstr "cursor toetsen op de afstandsbediening."
+
+msgid "Then press OK to continue."
+msgstr "Druk op OK om verder te gaan."
+
+msgid "Done"
+msgstr "Gereed"
+
+msgid "Congratulations."
+msgstr "Proficiat."
+
+msgid "All required settings for the initial operation have"
+msgstr "Alle benodigde instellingen voor het basisgebruik zijn"
+
+msgid "been saved."
+msgstr "opgeslagen."
+
+msgid "Reel Multimedia wishes you a lot of fun with"
+msgstr "Reel Multimedia wenst u veel plezier met"
+
+msgid "your NetClient."
+msgstr "uw NetClient"
+
+msgid "your ReelBox."
+msgstr "uw ReelBox."
+
+msgid "The Install prodecure wasn't completed"
+msgstr "De installatieprocedure is niet compleet afgerond"
+
+msgid "successfully."
+msgstr "succesvol verlopen."
+
+msgid "End"
+msgstr "Einde"
+
+#, c-format
+msgid "Reception check... %d%%"
+msgstr ""
+
+msgid "In this step you can configure the Reel MultiRoom system."
+msgstr ""
+
+msgid "Enable MultiRoom"
+msgstr ""
+
+msgid "Use this Reelbox as recording server?"
+msgstr ""
+
+msgid "No. of Clients in the network"
+msgstr ""
+
+msgid "Scan for MultiRoom server now"
+msgstr ""
+
+#, c-format
+msgid "Configuring as server: %d%%"
+msgstr ""
+
+msgid "Network"
+msgstr "Netwerk"
+
+msgid "Changes done"
+msgstr "Wijzigingen opgeslagen"
+
+msgid "Network (WLAN)"
+msgstr ""
+
+msgid "setup plugin missing: cannot configure WLAN"
+msgstr ""
+
+msgid "Network disabled"
+msgstr "Netwerk uitgeschakeld"
+
+msgid "Do you want to enable the network?"
+msgstr "Wilt U het netwerk activeren?"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "Do you want to set up the network now?"
+msgstr "Wilt u nu het netwerk instellen?"
+
+msgid "Disable Network"
+msgstr "Netwerk deactiveren"
+
+msgid "These settings are retrieved by DHCP:"
+msgstr "Volgende instellingen zijn via DHCP verkregen:"
+
+msgid "IP Address"
+msgstr "IP adres"
+
+msgid "Network mask"
+msgstr "Netwerk mask"
+
+msgid "Gateway"
+msgstr "Gateway"
+
+msgid "Nameserver"
+msgstr "Naamserver"
+
+msgid "Current settings:"
+msgstr "Huidige instellingen:"
+
+msgid "Do you want to use these settings?"
+msgstr "Wilt U deze instellingen gebruiken?"
+
+msgid "Yes, store"
+msgstr ""
+
+msgid "No, configure network manually"
+msgstr "Nee, netwerk handmatig configureren"
+
+msgid "No, configure WiFi"
+msgstr ""
+
+msgid "Manual network setting"
+msgstr "Handmatige netwerk instellingen"
+
+msgid "Use DHCP"
+msgstr "Gebruik DHCP"
+
+msgid "no"
+msgstr "nee"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "Hostname"
+msgstr "Hostnaam"
+
+msgid "Domain"
+msgstr "Domein"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Connection"
+msgstr "Verbinding"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Progressive"
+msgstr "Progressief"
+
+msgid "Interlaced"
+msgstr "Interlaced"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid "On"
+msgstr "Aan"
+
+msgid "Component"
+msgstr "Component"
+
+msgid "Select a video mode for your screen"
+msgstr "Selecteer een video-modus voor uw scherm"
+
+msgid "TV connected by"
+msgstr "TV aangesloten via"
+
+msgid "Display Type"
+msgstr "Scherm type"
+
+msgid "Digital Output"
+msgstr "Digitale uitgang"
+
+msgid "Analog Output"
+msgstr "Analoge uitgang"
+
+msgid "Analog Port"
+msgstr "Analoge poort"
+
+msgid "fill to screen"
+msgstr "Scherm vullend"
+
+msgid "fill to aspect"
+msgstr "Aspect vullend"
+
+msgid "crop to fill"
+msgstr "Verklein om te vullen"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Aspect ratio Ctrl"
+
+msgid "Resolution"
+msgstr "Resolutie"
+
+msgid "Norm/Framerate"
+msgstr "Norm/Framerate"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressive/Interlaced"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Expert"
+msgstr "Expert"
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Error: no menu got from reelice plugin"
+msgstr ""
+
+msgid "reelice plugin not found"
+msgstr ""
+
+msgid "Keep these settings?"
+msgstr "Wilt U deze instellingen gebruiken?"
+
+msgid "Using old settings"
+msgstr "Oude instellingen worden gebruikt"
+
+msgid "HDMI settings"
+msgstr "HDMI instellingen:"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output"
+msgstr "Uitgang"
+
+msgid "Aspect"
+msgstr "Aspect"
+
+msgid "Aspect ratio"
+msgstr "Aspect ratio"
+
+msgid "SCART settings"
+msgstr "SCART instellingen"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr "U moet de wijzigingen van de video-mode of uitgang bevestigen. Indien uw scherm de nieuwe instellingen niet ondersteund drukt u Exit of wacht 20 seconden om de wijzigingen te annuleren."
+
+msgid "samba not installed!"
+msgstr "samba niet geïnstalleerd"
+
+msgid "not set"
+msgstr "niet ingesteld"
+
+msgid "Installation Wizard"
+msgstr "Installatie wizard"
+
+msgid "None"
+msgstr "Geen"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Init"
+msgstr "Initialiseer"
+
+msgid "Play"
+msgstr "Play"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Trick"
+msgstr "Trick"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Mpg2"
+msgstr "Mpeg2"
+
+msgid "h264"
+msgstr "h.264"
+
+msgid "jpeg"
+msgstr "jpeg"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "NTSC Jap"
+
+msgid "Ntsc 443"
+msgstr "NTSC 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "Pal"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "SECAM"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "NTSC BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr "1080p23"
+
+msgid "1080p24"
+msgstr "1080p24"
+
+msgid "1080p25"
+msgstr "1080p25"
+
+msgid "1080p29"
+msgstr "1080p29"
+
+msgid "1080p30"
+msgstr "1080p30"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "1:1"
+msgstr "1:1"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "14:9"
+msgstr "14:9"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "20:9"
+msgstr "20:9"
+
+msgid "Fill to Screen"
+msgstr "Volledig scherm"
+
+msgid "Crop to Fill"
+msgstr "Zoom"
+
+msgid "Fill to Aspect"
+msgstr "Origineel"
+
+msgid "NL X"
+msgstr "NL X"
+
+msgid "NL Y"
+msgstr "NL Y"
+
+msgid "NL XY"
+msgstr "NL XY"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr "HDMI (PCM)"
+
+msgid "All"
+msgstr "Alles"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YPrPb"
+
+msgid "Deblock"
+msgstr "Deblock"
+
+msgid "Deblock & dering"
+msgstr "Deblock & dering"
+
+#~ msgid "of"
+#~ msgstr "van"
+
+#~ msgid "Internal harddisk found. Do you want to format it now?"
+#~ msgstr "Interne harddisk gevonden. Wilt U deze nu formatteren?"
+
+#~ msgid "If yes, please press OK to format, otherwise the yellow buttown 'skip'."
+#~ msgstr "Indien ja, druk op OK om te formatteren, druk anders op de gele knop 'annuleren'."
+
+#~ msgid "No ReelBox Avantgarde was found on the network."
+#~ msgstr "Geen ReelBox Avantgarde in het netwerk gedetecteerd."
+
+#, fuzzy
+#~ msgid "Please wait!"
+#~ msgstr "Even geduld Aub..."
+
+#, fuzzy
+#~ msgid "Storing settings. Please wait..."
+#~ msgstr "Wijzigingen doorvoeren - even geduld aub"
+
+#, fuzzy
+#~ msgid "Do you want to keep these settings?"
+#~ msgstr "Wilt U deze instellingen gebruiken?"
+
+#, fuzzy
+#~ msgid "Do you want to enable the Reel MultiRoom system?"
+#~ msgstr "Wilt U het Netwerk aanzetten?"
+
+#, fuzzy
+#~ msgid "No ReelBox Avantgarde was found on the network!"
+#~ msgstr "ReelBox Avantgarde is niet gevonden in het netwerk"
+
+#, fuzzy
+#~ msgid "    ... if so, please press OK to format."
+#~ msgstr "...druk OK om verder te gaan"
+
+#, fuzzy
+#~ msgid "If you want to format now, press the red key."
+#~ msgstr "Als u echt wilt formatteren, drukt u op het rode Knop."
+
+#, fuzzy
+#~ msgid "Formatting harddisk. Please wait..."
+#~ msgstr "Bezig met formatteren.....even geduld aub"
+
+#~ msgid "Watching TV is not available"
+#~ msgstr "TV kijken is niet beschikbaar"
+
+#~ msgid "Scanning Network..."
+#~ msgstr "Netwerk Scannen..."
+
+#~ msgid "built in Harddisk."
+#~ msgstr "Interne harddisk"
+
+#~ msgid "for recording."
+#~ msgstr "voor opnames."
+
+#~ msgid "Area"
+#~ msgstr "Omgeving"
+
+#~ msgid "Select a video mode of your screen"
+#~ msgstr "Selecteer de videomodus van uw scherm"
+
+#~ msgid "How many tuners are connected?"
+#~ msgstr "Hoeveel tuners zijn er aangesloten?"
+
+#~ msgid "Tuners count"
+#~ msgstr "Aantal tuners"
+
+#~ msgid "Rotor settings will follow..."
+#~ msgstr "Rotor instellingen volgen..."
+
+#~ msgid "Do you have a DiSEqC switch?"
+#~ msgstr "Heeft U een DiSEqC schakelaar?"
+
+#~ msgid "Select video a mode of your screen"
+#~ msgstr "Selecteer de videomodus van uw scherm"
+
+#~ msgid "You can now set up the network"
+#~ msgstr "U kunt nu het netwerk instellen"
+
+#~ msgid "Use internal interface"
+#~ msgstr "Gebruik Interne interface"
+
+#~ msgid "--- Ethernet (internal) ---"
+#~ msgstr "--- Ethernet (intern) ---"

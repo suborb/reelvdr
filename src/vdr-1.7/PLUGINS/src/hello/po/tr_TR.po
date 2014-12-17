@@ -1,0 +1,35 @@
+# VDR plugin language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Oktay Yolgeçen <oktay_73@yahoo.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <vdr-bugs@tvdr.de>\n"
+"POT-Creation-Date: 2011-05-15 15:08+0200\n"
+"PO-Revision-Date: 2008-05-12 22:34:4800\n"
+"Last-Translator: Oktay Yolgeçen <oktay_73@yahoo.de>\n"
+"Language-Team: Turkish <vdr@linuxtv.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-9\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "A friendly greeting"
+msgstr "Dostça selam"
+
+msgid "Hello"
+msgstr "Merhaba"
+
+msgid "Greeting time (s)"
+msgstr "Selam vakiti (s)"
+
+msgid "Use alternate greeting"
+msgstr "Alternatif selam kullan"
+
+msgid "Howdy folks!"
+msgstr "Selam dostlar!"
+
+msgid "Hello world!"
+msgstr "Merhaba dünya!"

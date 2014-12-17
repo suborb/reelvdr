@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# reboots the NetClient if it up for more than $MaxUptime (usally 24h)
+
+MaxUptime=$((23*60*60))
+#MaxUptime=$((60*60))
+
+Reboot=false
+
+
+[ $(cat /proc/uptime | cut -f 1 -d.) -gt $MaxUptime ] \
+	&& ([ ! -f /tmp/vdr.records ] || [ $(cat /tmp/vdr.records) -eq 0 ] ) \
+	&& Reboot=true
+
+if $Reboot ; then
+	(
+	logger -t daily-reboot "Doing reboot now"
+
+	/etc/init.d/reelvdr stop
+	sleep 1
+	halt
+	now=$(date +%s)
+	echo "wakeup @ $(($now + 45))"
+	reelfpctl -shutdown $(($now + 15))
+	reelfpctl -wakeup $(($now + 45))
+	) | logger -t daily-reboot
+fi

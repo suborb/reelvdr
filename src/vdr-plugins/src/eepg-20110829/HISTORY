@@ -1,0 +1,46 @@
+Release 0.0.6pre:
+- Fix for vdr-1.7.x
+- Fix for OTV formats
+- Fix MHW2 format
+- Fix crash when Themes are less than the size needed for the MHW2. This has also to be completely modified since the current implementation is not best.
+- Added parental rating for SKY since it is provided and handled by vdr-1.7.15
+- Fixed charset 
+- Added viasat support
+- Removed include si.c
+- Changed docodeText2 to use code from vdr which also handles charset override
+- Removed some gotos
+- Added setup option to display message after finish of writing epg
+
+
+Release 0.0.5:
+-changed TableId's so that Now/Next overwrites Nagra which overwrites MHW
+
+
+Release 0.0.4:
+-fixed changed format MHW1 that CDNL temporarily broadcasted, but has reversed after a lot of complaints
+-now first loading NagraGuide, not loading MHW if present on same stream (CDNL)
+
+Release 0.0.3:
+-fixed undefined symbol error when not using NO_EPG patch
+-declare Nagra-events that have day-of-the month in the period between today-7days and yesterday as "old events"; some providers keep sending old eepg data that otherways are presented as next months'
+-stopped processing the second title-field that is sent with Nagra, since it is not clear when it is valid 
+-make eepg-plugin actually obey the rules defined by the NO_EPG patch, if used
+-fixed all compiler warnings
+
+Release 0.0.2a:
+-fixed problem in NagraGuide, where month of title could get random value
+
+Release 0.0.2:
+-decoded and added NagraGuide
+-tested daylight savings functionality for SKY_UK
+-added daylight savings fucntionality for MHW1 and NAGRA
+-added possiblity to scan more eepg-streams on same transponder (like CanaalDigitaalNL, both MHW1 and Nagra)
+-disabled scan after 1 hour idle time; this was unused functionality, since a) most updates are once/24 hour, and b) most of the time zapping is done within 1 hour
+-added lookup for eventid, so existing events will be updated instead of added. This means less use for the DD_EPG patch, because double EPG entries will be minimized.
+-fixed compile problem when using NO_EPG patch
+-added hexdump routine for debugging
+-improved use of TableId's, so now the plugin can decide whether to overwrite or to preserve the existing EPG data
+-improved several routines, less memory use, less cpu use.
+
+Release 0.0.1:
+First release.

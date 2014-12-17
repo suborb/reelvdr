@@ -1,0 +1,8 @@
+VDR Plugin 'ipod' Revision History
+----------------------------------
+
+2006-12-29: Version 0.0.4 - fix to compile/use on 64 bit systems
+2006-04-30: Version 0.0.3 - changed Makefile due to VDR's new APIVERSION feature
+2005-01-15: Version 0.0.2 - ?
+2004-12-23: Version 0.0.1 - Initial revision.
+

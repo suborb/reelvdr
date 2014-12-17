@@ -1,0 +1,292 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreel3\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-03-01 16:42+0100\n"
+"PO-Revision-Date: 2009-06-21 00:48+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canale non valido ***"
+
+msgid "mins"
+msgstr "Minuti"
+
+msgid "min"
+msgstr "Min"
+
+msgid "en_US"
+msgstr "it_IT"
+
+msgid "Unknown Recording"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Cable TV"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Terrestrial TV"
+msgstr ""
+
+msgid "CI-slot: Upper"
+msgstr ""
+
+msgid "CI-slot: Lower"
+msgstr ""
+
+msgid "background process"
+msgstr "Processo in background"
+
+msgid "Play Disk"
+msgstr "Riprodurre disco"
+
+msgid "up"
+msgstr ""
+
+msgid "Languages"
+msgstr "Lingue"
+
+msgid "Image for recording"
+msgstr ""
+
+msgid "Size"
+msgstr "Dimensione"
+
+msgid "Auxiliary information"
+msgstr "Informazione ausiliaria"
+
+msgid "Subtitles"
+msgstr "Sottotitoli"
+
+msgid "Reel Avantgarde"
+msgstr "Reel Avantgarde"
+
+msgid "TrueType Font"
+msgstr "Carattere TrueType"
+
+msgid "No TTF support!"
+msgstr "Nessun supporto TTF!"
+
+msgid "Default OSD Font"
+msgstr "Carattere OSD predefinito"
+
+msgid "Default Fixed Size Font"
+msgstr "Carattere dimensione fissa pred."
+
+msgid "Default Small Font"
+msgstr "Carattere piccolo pred."
+
+msgid "General"
+msgstr "Generale"
+
+msgid "Logos & Symbols"
+msgstr "Loghi & simboli"
+
+msgid "Fonts"
+msgstr "Caratteri"
+
+msgid "Changes done"
+msgstr "Modifiche effettuate"
+
+msgid "elapsed"
+msgstr "trascorso"
+
+msgid "remaining"
+msgstr "rimasto"
+
+msgid "percent"
+msgstr "percentuale"
+
+msgid "never"
+msgstr "mai"
+
+msgid "use size.vdr only"
+msgstr "usare solo size.vdr"
+
+msgid "always"
+msgstr "sempre"
+
+msgid "Last line"
+msgstr "Ultima riga"
+
+msgid "Help buttons"
+msgstr "Pulsanti aiuto"
+
+msgid "Free last line"
+msgstr "Ultima riga libera"
+
+msgid "simple"
+msgstr "Semplice"
+
+msgid "graphical"
+msgstr "Grafico"
+
+msgid "graphical small"
+msgstr "Grafico piccolo"
+
+msgid "Show auxiliary information"
+msgstr "Mostrare Informazione ausiliaria"
+
+msgid "top"
+msgstr "In cima"
+
+msgid "bottom"
+msgstr "In fondo"
+
+msgid "Show recording's size"
+msgstr "Mostrare dimensione registrazioni"
+
+msgid "Show remaining/elapsed time"
+msgstr "Mostrare tempo rimasto/trascorso"
+
+msgid "Show VPS"
+msgstr "Mostrare VPS"
+
+msgid "Show source in the channelinfo"
+msgstr "Mostrare sorgente in info canale"
+
+msgid "Progressbar type"
+msgstr "Tipo barra progressione"
+
+msgid "Show channel logos"
+msgstr "Mostrare loghi canali"
+
+msgid "Flushing channel logo cache..."
+msgstr "Pulizia cache logo canale..."
+
+msgid "Show symbols"
+msgstr "Mostrare simboli"
+
+msgid "  Show symbols in replay"
+msgstr "  Mostrare simboli in riproduzione"
+
+msgid "  Show symbols in messages"
+msgstr "  Mostrare simboli nei messaggi"
+
+msgid "  Show symbols in audio"
+msgstr "  Mostrare simboli in audio"
+
+msgid "Show symbols in lists"
+msgstr "Mostrare simboli nelle liste"
+
+msgid "Show marker in lists"
+msgstr "Mostrare etichette negli elenchi"
+
+msgid "Show status symbols"
+msgstr "Mostrare simboli stato"
+
+msgid "  Identify channel by"
+msgstr "  Identificare canale per"
+
+msgid "name"
+msgstr "Nome"
+
+msgid "data"
+msgstr "Dati"
+
+msgid "Channel logo cache size"
+msgstr "Dimensione cache logo canale"
+
+msgid "Button$Flush cache"
+msgstr "Ripulire cache"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Width"
+msgstr "Larghezza"
+
+msgid "No TrueType fonts installed!"
+msgstr "Nessun carattere TrueType installato!"
+
+msgid "Font Sizes"
+msgstr "Dim. caratteri"
+
+msgid "Fixed Font"
+msgstr "Carattere fisso"
+
+msgid "Button$Set"
+msgstr "Impostare"
+
+msgid "OSD title"
+msgstr "Titolo OSD"
+
+msgid "Messages"
+msgstr "Messaggi"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Help keys"
+msgstr "Tasti aiuto"
+
+msgid "Channelinfo: title"
+msgstr "Info canale: titolo"
+
+msgid "Channelinfo: subtitle"
+msgstr "Info canale: sottotitolo"
+
+msgid "Channelinfo: language"
+msgstr "Info canale: lingua"
+
+msgid "List items"
+msgstr "Elenco voci"
+
+msgid "Info area: timers title"
+msgstr "Area info: titoli timer"
+
+msgid "Info area: timers text"
+msgstr "Area info: testo timer"
+
+msgid "Info area: warning title"
+msgstr "Area info: titolo avviso"
+
+msgid "Info area: warning text"
+msgstr "Area info: testo avviso"
+
+msgid "Details: title"
+msgstr "Dettagli: titolo"
+
+msgid "Details: subtitle"
+msgstr "Dettagli: sottotitolo"
+
+msgid "Details: date"
+msgstr "Dettagli: data"
+
+msgid "Details: text"
+msgstr "Dettagli: testo"
+
+msgid "Replay: times"
+msgstr "Riproduzione: ripetizioni"
+
+msgid "ReelBox skin 3rd generation"
+msgstr "Skin ReelBox 3° generazione"
+
+msgid "Channel:"
+msgstr "Canale:"
+
+msgid "Search pattern:"
+msgstr "Modello ricerca:"
+
+msgid "Timer check"
+msgstr "Verifica timer"
+
+msgid "No timer check"
+msgstr "Nessuna verifica timer"

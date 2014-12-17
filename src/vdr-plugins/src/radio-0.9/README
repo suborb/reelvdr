@@ -1,0 +1,64 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:     Lars Tegeler <email@host.dom>,
+                Uwe Hanke <egal@egal-vdr.de>
+
+Project's homepage:     www.math.uni-paderborn.de/~tegeler/vdr
+                        www.egal-vdr.de/plugins
+
+Latest version available at:    www.egal-vdr.de/plugins
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+The complete text of the GNU General Public License can be found
+in /usr/share/common-licenses/GPL on most Debian systems.
+
+
+Description:
+
+This plugin display an background image while the vdr is switcht to radio channels.
+Additionally it decode & show RDS (RadioDataSystem) information in the audiostream
+(RDS UECP) like Radiotext(Plus) and Rass (RadioScreenShow).
+Finally it receive & show external infos (scripts/programs) about title/interpret,
+f.e. parsing websites of radiostations.
+
+
+Install:
+
+1. Extract and copy the plugin:
+   cd /yourpath/VDR/PLUGINS/src
+   tar -xzf /yourpath/vdr-radio-x.y.z.tgz
+
+2. Make a link in /here is your vdr/PLUGINS/src:
+   ln -s radio-x.y.z radio
+
+3. cd /yourpath/VDR
+   make
+   make plugins
+
+4. Copy your background images to /yourpath/vdr/CONFIG/plugins/radio
+   (Default radio.mpg will be used or if exist <channelname>.mpg )
+   Yeah, must be .mpg!
+
+4.1 If you dont wont to use the default directory you can use the -f option
+    to set an other one.
+
+5. Start your VDR with the option:
+   -P radio
+
+6. Have Fun!
+
+
+For additional info/description see LIESMICH.bitte

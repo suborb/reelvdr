@@ -1,0 +1,370 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-filebrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-07-27 10:21+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Can't open file"
+msgstr "No es pot obrir el fitxer"
+
+msgid "Title"
+msgstr "Títol"
+
+msgid "Artist"
+msgstr "Intèrpret"
+
+msgid "Album"
+msgstr "Àlbum"
+
+msgid "Genre"
+msgstr "Gènere"
+
+msgid "Comment"
+msgstr "Comentaris"
+
+msgid "Year"
+msgstr "Any"
+
+msgid "Track"
+msgstr "Pistes"
+
+msgid "Length"
+msgstr "Durada"
+
+msgid "min"
+msgstr "min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Mostratge"
+
+msgid "ID3$Channels"
+msgstr "Canals"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "MPEG-Layer"
+msgstr "Capa MPEG"
+
+msgid "Copyrighted"
+msgstr "Amb copyright"
+
+msgid "Protected"
+msgstr "Protegit"
+
+msgid "Minimal bitrate"
+msgstr "Bitrate mínim"
+
+msgid "Maximal bitrate"
+msgstr "Bitrate màxim"
+
+msgid "Nominal bitrate"
+msgstr "Bitrate nominal"
+
+msgid "File size"
+msgstr "Mida del fitxer"
+
+msgid "Last Modified"
+msgstr "Darrera modificació"
+
+msgid "please wait ..."
+msgstr "si us plau, espereu ..."
+
+msgid "packet sucessfully installed"
+msgstr "el paquet s'ha instal·lat amb èxit"
+
+msgid "packet installation failed"
+msgstr "s'ha produït un error durant la instal·lació del paquet"
+
+msgid "Language packet sucessfully installed"
+msgstr "el paquet d'idioma s'ha instal·lat amb èxit"
+
+msgid "Language packet installation failed"
+msgstr "s'ha produït un error durant la instal·lació del paquet d'idioma"
+
+msgid "Hard Drive"
+msgstr "Disc Dur"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "My Music"
+msgstr "La meva Música"
+
+msgid "My Pictures"
+msgstr "Les meves Imatges"
+
+msgid "My Videos"
+msgstr "Les meves Pel·lícules"
+
+msgid "My Recordings"
+msgstr "Les meves Gravacions"
+
+msgid "My DVDs"
+msgstr "Els meus DVD"
+
+msgid "Cannot mount media"
+msgstr "No es pot muntar el suport"
+
+msgid "Access denied!"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr "Insereix a la llista de reproducció"
+
+msgid "File informations"
+msgstr "Detalls del fitxer"
+
+msgid "Attributes from:"
+msgstr "Copia atributs de:"
+
+msgid "Playlist: "
+msgstr "Llista de reproducció: "
+
+msgid "Delete entry"
+msgstr "Suprimeix entrada"
+
+msgid "Close playlist"
+msgstr "Tanca llista de reproducció"
+
+msgid "Save playlist as"
+msgstr "Desa la llista de reproducció com a"
+
+msgid "Save playlist"
+msgstr "Desa la llista de reproducció"
+
+msgid "Copy playlist to CD"
+msgstr "Copia la llista de reproducció a CD"
+
+msgid "Playlist Commands"
+msgstr "Ordres de la llista de reproducció"
+
+msgid "Entry already exists"
+msgstr "L'entrada ja existeix"
+
+msgid "Change the name and then press 'OK'"
+msgstr "Canvieu el nom i premeu 'OK'"
+
+msgid "Playlist name"
+msgstr "Nom de la Llista de reproducció"
+
+msgid "Options for image viewer"
+msgstr "Opcions per al visualitzador d'imatges"
+
+msgid "Display image file names"
+msgstr "Mostra el nom dels arxius d'imatge"
+
+msgid "no"
+msgstr "no"
+
+msgid "yes"
+msgstr "sí"
+
+msgid "Slide show"
+msgstr "Presentació"
+
+msgid "Random choice"
+msgstr "Selecció aleatòria"
+
+msgid "Cyclic display"
+msgstr "Presentació sense fi"
+
+msgid "Switch time (s)"
+msgstr "Temps de salt (s)"
+
+msgid "Clear cache"
+msgstr "Buida la memòria cau"
+
+msgid "Cache cleared"
+msgstr "S'ha buidat la memòria cau"
+
+msgid " ...opening file"
+msgstr " ...s'està obrint el fitxer"
+
+msgid "Can't open file:"
+msgstr "No es pot obrir el fitxer:"
+
+msgid "No more images"
+msgstr "No més imatges"
+
+msgid "Slide show started"
+msgstr "Presentació iniciada"
+
+msgid "Slide show halted"
+msgstr "Presentació aturada"
+
+msgid "Standard play mode"
+msgstr "Mode de reproducció estàndard"
+
+msgid "Random play mode"
+msgstr "Mode de reproducció aleatòria"
+
+msgid "Copying"
+msgstr "S'està copiant"
+
+msgid "Multiple files"
+msgstr "Més d'un fitxer"
+
+msgid "Selection is being deleted. Please wait..."
+msgstr ""
+
+msgid "Really Delete?"
+msgstr "Suprimir?"
+
+msgid "Save/copy current playlist?"
+msgstr "Desar/copiar la llista de reproducció actual?"
+
+msgid "Playlist saved as "
+msgstr "Llista de reproducció desada com a "
+
+msgid "Working"
+msgstr "S'hi està treballant"
+
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgid "Execute"
+msgstr "Executa"
+
+msgid "Paste selected entries"
+msgstr "Enganxa les entrades seleccionades"
+
+msgid "Insert"
+msgstr "Insereix"
+
+msgid "Create dir"
+msgstr "Crea carpeta"
+
+msgid "Selection is copied in background..."
+msgstr ""
+
+msgid "Selection is being moved in background..."
+msgstr ""
+
+msgid "Expert mode"
+msgstr "Mode avançat"
+
+msgid "Too many entries for playlist!"
+msgstr "Hi ha massa entrades a la llista de reproducció!"
+
+msgid "Playlist"
+msgstr "Llista de reproducció"
+
+msgid "Functions"
+msgstr "Funcions"
+
+msgid "Deselect all"
+msgstr "Desselecciona-ho tot"
+
+msgid "Select all"
+msgstr "Selecciona-ho tot"
+
+msgid "Deselect"
+msgstr "Desselecciona"
+
+msgid "Select"
+msgstr "Selecciona"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Move"
+msgstr "Desplaça"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Rename entry"
+msgstr "Canvia de nom l'entrada"
+
+msgid "Create directory"
+msgstr "Crea carpeta"
+
+msgid "Show playlist"
+msgstr "Mostra la llista de reproducció"
+
+msgid "Convert to UTF8"
+msgstr "Converteix a UTF8"
+
+msgid "Burn ISO-File"
+msgstr "Grava un fitxer ISO"
+
+msgid "Make And burn ISO-File"
+msgstr "Crea i grava un fitxer ISO"
+
+msgid "Filebrowser Commands"
+msgstr "Ordres de l'explorador de fitxers"
+
+msgid "Started converting"
+msgstr "S'ha iniciat la conversió"
+
+msgid "Finished converting"
+msgstr "La conversió ha finalitzat"
+
+msgid "Save playlist to disk"
+msgstr "Desa la llista de reproducció al disc"
+
+msgid "Copy playlist to usb stick"
+msgstr "Copia la llista de reproducció al dispositiu usb"
+
+msgid "Playlist actions"
+msgstr "Accions a la llista de reproducció"
+
+msgid "Directory already exists"
+msgstr "La carpeta ja existeix"
+
+msgid "New"
+msgstr "Nova"
+
+msgid "To create a new directory press 'OK'"
+msgstr "Per crear una nova carpeta premeu 'OK'"
+
+msgid "Directory Name"
+msgstr "Nom de la carpeta"
+
+msgid "Rename to"
+msgstr "Canvia de nom a"
+
+msgid "Filebrowser"
+msgstr "Explorador de fitxers"
+
+msgid "File Browser"
+msgstr "Explorador de fitxers"
+
+msgid "Picture viewer"
+msgstr "Visualitzador d'imatges"
+
+#~ msgid "Moving"
+#~ msgstr "S'està desplaçant"
+
+#~ msgid "Deleting"
+#~ msgstr "S'està suprimint"
+
+#~ msgid "Last image"
+#~ msgstr "Darrera imatge"
+
+#~ msgid "Back to xine"
+#~ msgstr "Torna al xine"
+
+#~ msgid "Back to playlist"
+#~ msgstr "Torna a la llista de reproducció"
+
+#~ msgid "My Images"
+#~ msgstr "Les meves imatges"

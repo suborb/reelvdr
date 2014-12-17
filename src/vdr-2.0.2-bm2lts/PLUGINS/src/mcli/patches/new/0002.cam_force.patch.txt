@@ -1,0 +1,11 @@
+--- vdr-plugin-mcli-0.0.1+svn20110620.2011.ori/device.c	2012-03-19 21:51:37.000000000 +0100
++++ vdr-plugin-mcli-0.0.1+svn20110620.2011/device.c	2012-03-19 21:51:10.911375001 +0100
+@@ -474,7 +474,7 @@
+ 	} else {
+ 		m_disabletimeout = TEMP_DISABLE_TIMEOUT_DEFAULT;
+ 	}
+-	bool cam_force=!EITScanner.UsesDevice(this);
++	bool cam_force=true;
+ 	if(cam_force && !CheckCAM(Channel, true)) {
+ #ifdef DEBUG_TUNE
+ 		printf("No CAM on %d available even after tried to steal one\n", CardIndex () + 1);

@@ -1,0 +1,363 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreelng\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-03-01 16:42+0100\n"
+"PO-Revision-Date: 2009-03-03 16:20+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal invalid ***"
+
+msgid "mins"
+msgstr "mins"
+
+msgid "min"
+msgstr "min"
+
+msgid "en_US"
+msgstr "ro_RO"
+
+msgid "Unknown Recording"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Cable TV"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Terrestrial TV"
+msgstr ""
+
+msgid "CI-slot: Upper"
+msgstr ""
+
+msgid "CI-slot: Lower"
+msgstr ""
+
+msgid "background process"
+msgstr ""
+
+msgid "Play Disk"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+msgid "Languages"
+msgstr "Limbi"
+
+msgid "Image for recording"
+msgstr ""
+
+msgid "Size"
+msgstr "Dimensiune"
+
+msgid "Auxiliary information"
+msgstr "Informatii auxiliare"
+
+msgid "Subtitles"
+msgstr "Subtitrari"
+
+msgid "Reel Avantgarde"
+msgstr ""
+
+msgid "TrueType Font"
+msgstr "Font TrueType "
+
+msgid "No TTF support!"
+msgstr "Fara suport font TrueType"
+
+msgid "Default OSD Font"
+msgstr "Fontul implicit pentru OSD"
+
+msgid "Default Fixed Size Font"
+msgstr "Dimensiune implicita font fixat"
+
+msgid "Default Small Font"
+msgstr "Font mic implicit"
+
+msgid "General"
+msgstr "General"
+
+msgid "Logos & Symbols"
+msgstr "Logo-uri & Simboluri"
+
+msgid "Fonts"
+msgstr "Fonturi"
+
+msgid "Changes done"
+msgstr "Modificari efectuate"
+
+msgid "elapsed"
+msgstr "trecut"
+
+msgid "remaining"
+msgstr "ramas"
+
+msgid "percent"
+msgstr "procent"
+
+msgid "never"
+msgstr "niciodata"
+
+msgid "use size.vdr only"
+msgstr "foloseste dimensiune numai vdr"
+
+msgid "always"
+msgstr "intotdeauna"
+
+msgid "Last line"
+msgstr "Ultima linie"
+
+msgid "Help buttons"
+msgstr "Butoane ajutor"
+
+msgid "Free last line"
+msgstr "Ultima linie libera"
+
+msgid "simple"
+msgstr ""
+
+msgid "graphical"
+msgstr ""
+
+msgid "graphical small"
+msgstr ""
+
+msgid "Show auxiliary information"
+msgstr "Arata informatii auxiliare"
+
+msgid "top"
+msgstr ""
+
+msgid "bottom"
+msgstr ""
+
+msgid "Show recording's size"
+msgstr "Arata dimensiunea inregistrarii (lor)"
+
+msgid "Show remaining/elapsed time"
+msgstr "Arata timpul ramas/trecut"
+
+msgid "Show VPS"
+msgstr "Arata VPS"
+
+msgid "Show source in the channelinfo"
+msgstr ""
+
+#, fuzzy
+msgid "Progressbar type"
+msgstr "Arata bara progres"
+
+msgid "Show channel logos"
+msgstr "Arata logo-uri canale"
+
+msgid "Flushing channel logo cache..."
+msgstr "Eliberez cache logo-uri canale"
+
+msgid "Show symbols"
+msgstr "Arata simboluri"
+
+msgid "  Show symbols in replay"
+msgstr "  Arata simboluri in reluare"
+
+msgid "  Show symbols in messages"
+msgstr "  Arata simboluri in mesaje"
+
+msgid "  Show symbols in audio"
+msgstr "  Arata simboluri in audio"
+
+msgid "Show symbols in lists"
+msgstr "Arata simboluri in liste"
+
+msgid "Show marker in lists"
+msgstr "Arata semn marcator in lista"
+
+msgid "Show status symbols"
+msgstr "Arata simboluri stare"
+
+msgid "  Identify channel by"
+msgstr "  Identificare canale dupa"
+
+msgid "name"
+msgstr "nume"
+
+msgid "data"
+msgstr "data"
+
+msgid "Channel logo cache size"
+msgstr "Dimensiune cache logo-uri"
+
+msgid "Button$Flush cache"
+msgstr "Elibereaza cache"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Width"
+msgstr "Latime"
+
+msgid "No TrueType fonts installed!"
+msgstr "Nu sunt instalate fonturi TrueType!"
+
+msgid "Font Sizes"
+msgstr "Dimensiune font"
+
+msgid "Fixed Font"
+msgstr "Font Fixat"
+
+msgid "Button$Set"
+msgstr "Seteaza"
+
+msgid "OSD title"
+msgstr "titlu OSD"
+
+msgid "Messages"
+msgstr "Mesaje"
+
+msgid "Date"
+msgstr "Dată"
+
+msgid "Help keys"
+msgstr "Taste ajutor"
+
+msgid "Channelinfo: title"
+msgstr "Info Canal: titlu"
+
+msgid "Channelinfo: subtitle"
+msgstr "Info Canal: subtitrare"
+
+msgid "Channelinfo: language"
+msgstr "Info Canal: limba"
+
+msgid "List items"
+msgstr "Lista obiecte"
+
+msgid "Info area: timers title"
+msgstr "Info: titlu temporizator"
+
+msgid "Info area: timers text"
+msgstr "Info: text temporizator"
+
+msgid "Info area: warning title"
+msgstr "Info: titlu avertisment"
+
+msgid "Info area: warning text"
+msgstr "Info: text avertisment"
+
+msgid "Details: title"
+msgstr "Detalii: titlu"
+
+msgid "Details: subtitle"
+msgstr "Detalii: subtitrare"
+
+msgid "Details: date"
+msgstr "Detalii: Dată"
+
+msgid "Details: text"
+msgstr "Detalii: text"
+
+msgid "Replay: times"
+msgstr "Reluare: timpi"
+
+msgid "ReelBox skin 3rd generation"
+msgstr ""
+
+msgid "Channel:"
+msgstr "Canal:"
+
+msgid "Search pattern:"
+msgstr "Tipar cautare:"
+
+msgid "Timer check"
+msgstr "Verifica temporizator"
+
+msgid "No timer check"
+msgstr "Nu verifica temporizator"
+
+#~ msgid "Sunday"
+#~ msgstr "Duminică"
+
+#~ msgid "Monday"
+#~ msgstr "Luni"
+
+#~ msgid "Tuesday"
+#~ msgstr "Marţi"
+
+#~ msgid "Wednesday"
+#~ msgstr "Miercuri"
+
+#~ msgid "Thursday"
+#~ msgstr "Joi"
+
+#~ msgid "Friday"
+#~ msgstr "Vineri"
+
+#~ msgid "Saturday"
+#~ msgstr "Sâmbătă"
+
+#~ msgid "TIMERS"
+#~ msgstr "TEMPORIZATOARE"
+
+#~ msgid "Reel Classic"
+#~ msgstr "Clasic Reel"
+
+#~ msgid "Try 8bpp single area"
+#~ msgstr "Incearca 8bpp (bitiperpixel) o singura arie"
+
+#~ msgid "Show info area in main menu"
+#~ msgstr "Arata arie info in meniul principal"
+
+#~ msgid "Show messages in menu on"
+#~ msgstr "Arata mesaje in meniu"
+
+#~ msgid "pixel algo"
+#~ msgstr "algoritm pixel"
+
+#~ msgid "ratio algo"
+#~ msgstr "algoritm aspect"
+
+#~ msgid "zoom image"
+#~ msgstr "marire imagine"
+
+#~ msgid "  Show symbols in menu"
+#~ msgstr "  Arata simboluri in meniu"
+
+#~ msgid "  Show flags"
+#~ msgstr "  Arata steaguri"
+
+#~ msgid "Show event/recording images"
+#~ msgstr "Arata imagini evenimente/inregistrari"
+
+#~ msgid "  Resize images"
+#~ msgstr "  Redimensionare imagini"
+
+#~ msgid "  Image width"
+#~ msgstr "  Latime imagine"
+
+#~ msgid "  Image height"
+#~ msgstr "  Inaltime imagine"
+
+#~ msgid "  Image format"
+#~ msgstr "  Format imagine"
+
+#~ msgid "ReelNG skin"
+#~ msgstr "ReelNG skin"

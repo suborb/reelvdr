@@ -1,0 +1,3 @@
+install hd-extension  /sbin/modprobe hdshm
+alias char-major-246* hdshm
+options hdshm has_fb=1

@@ -1,0 +1,2391 @@
+# VDR language source file.
+# Copyright (C) 2008 Osama Alrawab <alrawab@hotmail.com>
+# This file is distributed under the same license as the VDR package.
+# Osama Alrawab <alrawab@hotmail.com>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.7.0\n"
+"Report-Msgid-Bugs-To: <vdr-bugs@tvdr.de>\n"
+"POT-Creation-Date: 2013-12-04 08:22+0100\n"
+"PO-Revision-Date: 2008-10-16 11:16-0400\n"
+"Last-Translator: Osama Alrawab <alrawab@hotmail.com>\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,-1,1249,-1\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: LIBYA\n"
+"X-Generator: KBabel 1.11.4\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "********قناة خاطئة***************"
+
+#, fuzzy
+msgid "Channel locked by LNB!"
+msgstr "القناة مقفلة للتسجيل"
+
+msgid "Channel not available!"
+msgstr "القناة غير متاحة"
+
+msgid "Can't start Transfer Mode!"
+msgstr "تعذر  بدء طور النقل"
+
+msgid "Still writing timeshift data to recording. Abort?"
+msgstr ""
+
+msgid "off"
+msgstr "ايقاف"
+
+#, fuzzy
+msgid "on"
+msgstr "لا يوجد"
+
+msgid "auto"
+msgstr "ذاتى"
+
+msgid "none"
+msgstr "لا يوجد"
+
+msgid "Polarization"
+msgstr "الاستقطاب"
+
+msgid "System"
+msgstr ""
+
+msgid "Srate"
+msgstr "معدل الترميز"
+
+msgid "Inversion"
+msgstr "قلب"
+
+msgid "CoderateH"
+msgstr "تون عالى"
+
+msgid "CoderateL"
+msgstr "تون منخفض"
+
+msgid "Modulation"
+msgstr "الترميز"
+
+msgid "Bandwidth"
+msgstr "العرض"
+
+msgid "Transmission"
+msgstr "الارسال"
+
+msgid "Guard"
+msgstr "الدرجة"
+
+msgid "Hierarchy"
+msgstr "الهرمية"
+
+#, fuzzy
+msgid "Rolloff"
+msgstr "ايقاف"
+
+msgid "PlpId"
+msgstr ""
+
+msgid "Starting EPG scan"
+msgstr "EPG ا لبدء بالبحث على دليل القنوات الالكترونى "
+
+msgid "Content$Movie/Drama"
+msgstr ""
+
+msgid "Content$Detective/Thriller"
+msgstr ""
+
+msgid "Content$Adventure/Western/War"
+msgstr ""
+
+msgid "Content$Science Fiction/Fantasy/Horror"
+msgstr ""
+
+msgid "Content$Comedy"
+msgstr ""
+
+msgid "Content$Soap/Melodrama/Folkloric"
+msgstr ""
+
+msgid "Content$Romance"
+msgstr ""
+
+msgid "Content$Serious/Classical/Religious/Historical Movie/Drama"
+msgstr ""
+
+msgid "Content$Adult Movie/Drama"
+msgstr ""
+
+msgid "Content$News/Current Affairs"
+msgstr ""
+
+msgid "Content$News/Weather Report"
+msgstr ""
+
+msgid "Content$News Magazine"
+msgstr ""
+
+msgid "Content$Documentary"
+msgstr ""
+
+msgid "Content$Discussion/Inverview/Debate"
+msgstr ""
+
+msgid "Content$Show/Game Show"
+msgstr ""
+
+msgid "Content$Game Show/Quiz/Contest"
+msgstr ""
+
+msgid "Content$Variety Show"
+msgstr ""
+
+msgid "Content$Talk Show"
+msgstr ""
+
+msgid "Content$Sports"
+msgstr ""
+
+msgid "Content$Special Event"
+msgstr ""
+
+msgid "Content$Sport Magazine"
+msgstr ""
+
+msgid "Content$Football/Soccer"
+msgstr ""
+
+msgid "Content$Tennis/Squash"
+msgstr ""
+
+msgid "Content$Team Sports"
+msgstr ""
+
+msgid "Content$Athletics"
+msgstr ""
+
+msgid "Content$Motor Sport"
+msgstr ""
+
+msgid "Content$Water Sport"
+msgstr ""
+
+msgid "Content$Winter Sports"
+msgstr ""
+
+msgid "Content$Equestrian"
+msgstr ""
+
+msgid "Content$Martial Sports"
+msgstr ""
+
+msgid "Content$Children's/Youth Programme"
+msgstr ""
+
+msgid "Content$Pre-school Children's Programme"
+msgstr ""
+
+msgid "Content$Entertainment Programme for 6 to 14"
+msgstr ""
+
+msgid "Content$Entertainment Programme for 10 to 16"
+msgstr ""
+
+msgid "Content$Informational/Educational/School Programme"
+msgstr ""
+
+msgid "Content$Cartoons/Puppets"
+msgstr ""
+
+msgid "Content$Music/Ballet/Dance"
+msgstr ""
+
+msgid "Content$Rock/Pop"
+msgstr ""
+
+msgid "Content$Serious/Classical Music"
+msgstr ""
+
+msgid "Content$Folk/Tradional Music"
+msgstr ""
+
+msgid "Content$Jazz"
+msgstr ""
+
+msgid "Content$Musical/Opera"
+msgstr ""
+
+msgid "Content$Ballet"
+msgstr ""
+
+msgid "Content$Arts/Culture"
+msgstr ""
+
+msgid "Content$Performing Arts"
+msgstr ""
+
+msgid "Content$Fine Arts"
+msgstr ""
+
+msgid "Content$Religion"
+msgstr ""
+
+msgid "Content$Popular Culture/Traditional Arts"
+msgstr ""
+
+msgid "Content$Literature"
+msgstr ""
+
+msgid "Content$Film/Cinema"
+msgstr ""
+
+msgid "Content$Experimental Film/Video"
+msgstr ""
+
+msgid "Content$Broadcasting/Press"
+msgstr ""
+
+msgid "Content$New Media"
+msgstr ""
+
+msgid "Content$Arts/Culture Magazine"
+msgstr ""
+
+msgid "Content$Fashion"
+msgstr ""
+
+msgid "Content$Social/Political/Economics"
+msgstr ""
+
+msgid "Content$Magazine/Report/Documentary"
+msgstr ""
+
+msgid "Content$Economics/Social Advisory"
+msgstr ""
+
+msgid "Content$Remarkable People"
+msgstr ""
+
+msgid "Content$Education/Science/Factual"
+msgstr ""
+
+msgid "Content$Nature/Animals/Environment"
+msgstr ""
+
+msgid "Content$Technology/Natural Sciences"
+msgstr ""
+
+msgid "Content$Medicine/Physiology/Psychology"
+msgstr ""
+
+msgid "Content$Foreign Countries/Expeditions"
+msgstr ""
+
+msgid "Content$Social/Spiritual Sciences"
+msgstr ""
+
+msgid "Content$Further Education"
+msgstr ""
+
+#, fuzzy
+msgid "Content$Languages"
+msgstr "اللغة"
+
+msgid "Content$Leisure/Hobbies"
+msgstr ""
+
+msgid "Content$Tourism/Travel"
+msgstr ""
+
+msgid "Content$Handicraft"
+msgstr ""
+
+msgid "Content$Motoring"
+msgstr ""
+
+msgid "Content$Fitness & Health"
+msgstr ""
+
+msgid "Content$Cooking"
+msgstr ""
+
+msgid "Content$Advertisement/Shopping"
+msgstr ""
+
+msgid "Content$Gardening"
+msgstr ""
+
+msgid "Content$Original Language"
+msgstr ""
+
+msgid "Content$Black & White"
+msgstr ""
+
+msgid "Content$Unpublished"
+msgstr ""
+
+msgid "Content$Live Broadcast"
+msgstr ""
+
+#, c-format
+msgid "ParentalRating$from %d"
+msgstr ""
+
+msgid "No title"
+msgstr "لايوجد عنوان"
+
+msgid "Help"
+msgstr ""
+
+#, fuzzy
+msgid "No help available"
+msgstr "لا يوجد صوت متاح"
+
+msgid "Already first help item"
+msgstr ""
+
+msgid "Already last help item"
+msgstr ""
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Arabic"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "ara"
+
+#. TRANSLATORS:
+#. Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+msgid "Timer Manager"
+msgstr ""
+
+msgid "Search-Timer Manager"
+msgstr ""
+
+msgid "Parental Control"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "TV & Radio"
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr ""
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr ""
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr ""
+
+msgid "View, edit and manage recording timers"
+msgstr ""
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr ""
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "Music & Pictures"
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio"
+msgstr ""
+
+msgid "Play music, manage and copy music files"
+msgstr ""
+
+msgid "Play music and films from your collection"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr ""
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr ""
+
+msgid "Copy an Audio CD to the music library"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+#. TRANSLATORS:
+#. Tooltips Menu "Films & DVD"
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr ""
+
+msgid "Movie library, TV recordings"
+msgstr ""
+
+msgid "Watch movies, manage and copy movie files"
+msgstr ""
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr ""
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr ""
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr ""
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI epgsearch
+#, fuzzy
+msgid "Button$Functions"
+msgstr "الصوت"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "مدة التسجيل الفورى بالدقيقة"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "معدل الايقاف باليوم"
+
+#. TRANSLATORS:
+#. PI extrecmenu
+#, fuzzy
+msgid "Undelete Recordings"
+msgstr "حذف التسجيل"
+
+msgid "Recording commands"
+msgstr "اوامر التسجيل"
+
+#. TRANSLATORS:
+#. PI undelete
+#. PI burn
+msgid "Write DVD - Job"
+msgstr ""
+
+msgid "Write DVD - Job options"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI dvdswitch
+msgid "New folder"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr ""
+
+#. TRANSLATORS:
+#. Tooltips Menu "Internet & Extras"
+msgid "File Manager, Web browser, ReelBlog"
+msgstr ""
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr ""
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr ""
+
+msgid "Read news & information on the ReelBox"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI Filebrowser
+msgid "Filebrowser"
+msgstr ""
+
+msgid "Create directory"
+msgstr ""
+
+msgid "Playlist"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist actions"
+msgstr "الاستقطاب"
+
+#, fuzzy
+msgid "Playlist Commands"
+msgstr "الاوامر"
+
+#, fuzzy
+msgid "Filebrowser Commands"
+msgstr "اوامر الموءقت"
+
+msgid "Copy playlist"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Additional Software"
+msgid "Additional Software"
+msgstr ""
+
+msgid "Magazine EPG"
+msgstr ""
+
+msgid "Additional software provided by third party developers"
+msgstr ""
+
+#. TRANSLATORS:
+#. More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr ""
+
+msgid "Show currently active background processes"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu Media Manager
+msgid "Format a DVD-RW"
+msgstr ""
+
+msgid "Directory browser"
+msgstr ""
+
+#. TRANSLATORS:
+#. Special Menus that have a banner at the left
+msgid "My Pictures"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "My DVDs"
+msgstr ""
+
+#, fuzzy
+msgid "EPG Commands: "
+msgstr "الاوامر"
+
+msgid "Search actions"
+msgstr ""
+
+msgid "Search entries"
+msgstr ""
+
+msgid "Search templates"
+msgstr ""
+
+#, fuzzy
+msgid "Edit search"
+msgstr "تعديل الموءقت"
+
+msgid "Edit timer"
+msgstr "تعديل الموءقت"
+
+msgid "Edit blacklist"
+msgstr ""
+
+#, fuzzy
+msgid "Edit template"
+msgstr "تعديل الموءقت"
+
+msgid "Edit user-defined days of week"
+msgstr ""
+
+#, fuzzy
+msgid "found recordings"
+msgstr "ايقاف التسجيل"
+
+#, fuzzy
+msgid "Select directory"
+msgstr "حذف التسجيل"
+
+#, fuzzy
+msgid "Timer conflicts -"
+msgstr "اوامر الموءقت"
+
+msgid "Title$Childlock"
+msgstr ""
+
+#, fuzzy
+msgid "Games"
+msgstr "الاسم"
+
+msgid "Multifeed Options"
+msgstr ""
+
+#, fuzzy
+msgid "Move recording"
+msgstr "ايقاف التسجيل"
+
+msgid "Select Reelblog item"
+msgstr ""
+
+#, fuzzy
+msgid "SleepTimer"
+msgstr "الموءقت"
+
+#, fuzzy
+msgid "Rename entry"
+msgstr "التالى"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "اعادة تسمية التسجيل"
+
+msgid "Choose action"
+msgstr ""
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid "Channel List:"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup Menus with "Setup"-banner on the left
+msgid "Title$Setup"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Settings: System Settings"
+msgstr ""
+
+msgid "Software Update"
+msgstr ""
+
+#, fuzzy
+msgid "Channel Lists"
+msgstr "القنوات"
+
+msgid "Channel lists functions"
+msgstr ""
+
+#, fuzzy
+msgid "Channelscan"
+msgstr "القنوات"
+
+msgid "Installation Wizard"
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+msgid "Remote Control / Automation"
+msgstr ""
+
+msgid "MultiRoom Setup"
+msgstr ""
+
+msgid "MultiRoom - Error!"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "EPG Services"
+msgstr ""
+
+msgid "Reception Settings"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "Global Settings"
+msgstr ""
+
+msgid "UMTS Settings"
+msgstr ""
+
+msgid "Dynamic DNS"
+msgstr ""
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr ""
+
+msgid "Windows Network Connection"
+msgstr ""
+
+msgid "NFS Client"
+msgstr ""
+
+msgid "Video Recorder "
+msgstr ""
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr ""
+
+msgid "Setup - Audio/Video"
+msgstr ""
+
+msgid "Timezone & clock"
+msgstr ""
+
+#, fuzzy
+msgid "System Information"
+msgstr "حذف معلومات العلامة"
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr ""
+
+#, fuzzy
+msgid "Rotor Setup"
+msgstr "الاعدادات"
+
+msgid "Streaming Clients"
+msgstr ""
+
+#, fuzzy
+msgid "Language Settings"
+msgstr "ara"
+
+msgid "Timezone"
+msgstr ""
+
+msgid "Timezone Settings"
+msgstr ""
+
+msgid "Front Panel"
+msgstr ""
+
+msgid "TVTV Service"
+msgstr ""
+
+msgid "International EPG"
+msgstr ""
+
+msgid "Energy Options"
+msgstr ""
+
+msgid "Factory defaults"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "خروج طارىء"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr "كسابق"
+
+msgid "Option$Quick"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup OSD and Language
+msgid "Setup.OSD$OSD Font Size"
+msgstr ""
+
+msgid "FontSize$Normal"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "User defined"
+msgstr ""
+
+#. TRANSLATORS:
+#. Recording Commands
+msgid "Mark Commercials"
+msgstr ""
+
+msgid "Add Child Lock"
+msgstr ""
+
+msgid "Remove Child Lock"
+msgstr ""
+
+#, fuzzy
+msgid "Change title"
+msgstr "القناة"
+
+msgid "Mark as New"
+msgstr ""
+
+msgid "Remove Archive Mark"
+msgstr ""
+
+msgid "Remove Crop Mark"
+msgstr ""
+
+#, fuzzy
+msgid "Remove Archived Recording"
+msgstr "اعادة تسمية التسجيل"
+
+#, fuzzy
+msgid "Restore Archived Recording"
+msgstr "اعادة تسمية التسجيل"
+
+msgid "Convert to MPEG (TS)"
+msgstr ""
+
+msgid "Directory Selector:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+#, fuzzy
+msgid "Directory commands"
+msgstr "اوامر الموءقت"
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "Generate preview"
+msgstr ""
+
+msgid "Remove preview"
+msgstr ""
+
+msgid "Compress recording"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI MCLI
+msgid "No CI-Module"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+#. TRANSLATORS:
+#. Channels/Bouquets
+#, fuzzy
+msgid "Edit Channels"
+msgstr "تعديل القناة"
+
+msgid "Customize Bouquets"
+msgstr ""
+
+msgid "Channellist: set filters"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI CHANNELLIST
+msgid "All Channels"
+msgstr ""
+
+msgid "Functions: Favourites"
+msgstr ""
+
+msgid "Functions: Channel list"
+msgstr ""
+
+msgid "Functions: Select favourite folder"
+msgstr ""
+
+msgid "Functions: search for channel"
+msgstr ""
+
+msgid "Functions: Create new Favourite folder"
+msgstr ""
+
+msgid "Functions: Rename favourite folder"
+msgstr ""
+
+msgid "Functions: Select "
+msgstr ""
+
+msgid "Functions: search "
+msgstr ""
+
+msgid "Functions: Create "
+msgstr ""
+
+msgid "Functions: Rename "
+msgstr ""
+
+msgid "Functions: Channel "
+msgstr ""
+
+msgid "Functions: Move Channel"
+msgstr ""
+
+msgid "Sources"
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "Music Browser"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "التحقق من مفاتيح  وحدة التحكم"
+
+msgid "Press any key on the RC unit"
+msgstr "الرجاء الضغط على اى زر فى وحدة التحكم"
+
+msgid "RC code detected!"
+msgstr "تم التعرف على الكود المرسل من وحدة التحكم"
+
+msgid "Do not press any key..."
+msgstr "الرجاء عدم ضغط اى زر"
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "الطور الثانى:تعريف الرموز الخاصة بالمفاتيح"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "%sالرجاء الضغط على الزر"
+
+msgid "Press 'Up' to confirm"
+msgstr "اضغط اعلى للتاكيد"
+
+msgid "Press 'Down' to continue"
+msgstr "اضغط اسفل للاستمرار"
+
+msgid "(press 'Up' to go back)"
+msgstr "(اضغط اعلى للرجوع للخلف)"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(اضغط اسفل للانتهاء نت تعريف المفاتيح)"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "(اضغط قائمة لتخطى هذا المفتاح)"
+
+msgid "Learning Remote Control Keys"
+msgstr "التعرف على مفاتيح وحدة التحكم عن بعد"
+
+msgid "Phase 3: Saving key codes"
+msgstr "المرحلة الثالثة:حفظ اكواد المفاتيح"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "اضغط اعلى للحفظ او اسفل للالغاء"
+
+msgid "Key$Up"
+msgstr "اعلى"
+
+msgid "Key$Down"
+msgstr "اسفل"
+
+msgid "Key$Menu"
+msgstr "القائمة"
+
+msgid "Key$Ok"
+msgstr "تاكيد"
+
+msgid "Key$Back"
+msgstr "رجوع"
+
+msgid "Key$Left"
+msgstr "يسار"
+
+msgid "Key$Right"
+msgstr "يمين"
+
+msgid "Key$Red"
+msgstr "احمر"
+
+msgid "Key$Green"
+msgstr "اخضر"
+
+msgid "Key$Yellow"
+msgstr "اصفر"
+
+msgid "Key$Blue"
+msgstr "ازرق"
+
+msgid "Key$Info"
+msgstr "معلومات"
+
+msgid "Key$Play"
+msgstr "عرض"
+
+msgid "Key$Pause"
+msgstr "تجميد"
+
+msgid "Key$Stop"
+msgstr "ايقاف"
+
+msgid "Key$Record"
+msgstr "تسجيل"
+
+msgid "Key$FastFwd"
+msgstr "تقدم سريع"
+
+msgid "Key$FastRew"
+msgstr "رجوع سريع"
+
+msgid "Key$Next"
+msgstr "التالى"
+
+msgid "Key$Prev"
+msgstr "السابق"
+
+msgid "Key$Power"
+msgstr "تشغيل"
+
+msgid "Key$Channel+"
+msgstr "قناة +"
+
+msgid "Key$Channel-"
+msgstr "قناة -"
+
+msgid "Key$PrevChannel"
+msgstr "القناة السابقة"
+
+msgid "Key$Volume+"
+msgstr "صوت +"
+
+msgid "Key$Volume-"
+msgstr "صوت -"
+
+msgid "Key$Mute"
+msgstr "طمس"
+
+msgid "Key$Audio"
+msgstr "الصوت"
+
+msgid "Key$Subtitles"
+msgstr "ترجمة"
+
+msgid "Key$Schedule"
+msgstr "جدولة"
+
+msgid "Key$Channels"
+msgstr "قنوات"
+
+msgid "Key$Timers"
+msgstr "الموءقت"
+
+msgid "Key$Recordings"
+msgstr "البدء بالتسجيل"
+
+msgid "Key$Setup"
+msgstr "الاعدادات"
+
+msgid "Key$Commands"
+msgstr "اوامر"
+
+#, fuzzy
+msgid "Key$Greater"
+msgstr "اخضر"
+
+#, fuzzy
+msgid "Key$Less"
+msgstr "يسار"
+
+#, fuzzy
+msgid "Key$2digit"
+msgstr "يمين"
+
+#, fuzzy
+msgid "Key$DVD"
+msgstr "اسفل"
+
+#, fuzzy
+msgid "Key$DVB"
+msgstr "اسفل"
+
+#, fuzzy
+msgid "Key$PVR"
+msgstr "احمر"
+
+#, fuzzy
+msgid "Key$Reel"
+msgstr "احمر"
+
+#, fuzzy
+msgid "Key$TT"
+msgstr "اعلى"
+
+#, fuzzy
+msgid "Key$PiP"
+msgstr "عرض"
+
+#, fuzzy
+msgid "Key$Help"
+msgstr "اعلى"
+
+#, fuzzy
+msgid "Key$Eject"
+msgstr "يسار"
+
+#, fuzzy
+msgid "Key$Aspect"
+msgstr "يسار"
+
+#, fuzzy
+msgid "Key$Search"
+msgstr "رجوع"
+
+msgid "Key$Searchtimers"
+msgstr ""
+
+msgid "Key$Internet"
+msgstr ""
+
+msgid "Key$Guide"
+msgstr ""
+
+msgid "Key$Multimedia"
+msgstr ""
+
+msgid "Key$Radio"
+msgstr ""
+
+msgid "Key$Heart"
+msgstr ""
+
+#, fuzzy
+msgid "Key$Favourites"
+msgstr "ترجمة"
+
+msgid "Key$AddFavorite"
+msgstr ""
+
+#, fuzzy
+msgid "Key$User0"
+msgstr "المستخدم 1"
+
+msgid "Key$User1"
+msgstr "المستخدم 1"
+
+msgid "Key$User2"
+msgstr "المستخدم 2"
+
+msgid "Key$User3"
+msgstr "المستخدم 3"
+
+msgid "Key$User4"
+msgstr "المستخدم 4"
+
+msgid "Key$User5"
+msgstr "المستخدم 5 "
+
+msgid "Key$User6"
+msgstr "المستخدم 6 "
+
+msgid "Key$User7"
+msgstr "المستخدم 7"
+
+msgid "Key$User8"
+msgstr "المستخدم 8"
+
+msgid "Key$User9"
+msgstr "المستخدم 9"
+
+msgid "Free To Air"
+msgstr "غير مشفر"
+
+msgid "encrypted"
+msgstr "مشفر"
+
+msgid "Edit channel"
+msgstr "تعديل القناة"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Source"
+msgstr "المصدر"
+
+msgid "Frequency"
+msgstr "التردد"
+
+msgid "Vpid"
+msgstr "PID الفيديو"
+
+msgid "Ppid"
+msgstr "PID Pcr"
+
+msgid "Apid1"
+msgstr "PID الصوت"
+
+msgid "Apid2"
+msgstr "PID الصوت 2"
+
+msgid "Dpid1"
+msgstr ""
+
+msgid "Dpid2"
+msgstr ""
+
+msgid "Spid1"
+msgstr ""
+
+msgid "Spid2"
+msgstr ""
+
+msgid "Tpid"
+msgstr ""
+
+msgid "CA"
+msgstr "الكامة"
+
+msgid "Sid"
+msgstr ""
+
+msgid "Rid"
+msgstr ""
+
+msgid "Channel settings are not unique!"
+msgstr "اعدادات القناة غبر موحد"
+
+msgid "Channels"
+msgstr "القنوات"
+
+msgid "Button$Edit"
+msgstr "اعدادات"
+
+msgid "Button$New"
+msgstr "جديد"
+
+msgid "Button$Delete"
+msgstr "حذف"
+
+msgid "Button$Mark"
+msgstr "علامة"
+
+msgid "Channel is being used by a timer!"
+msgstr "القناة مستخدمة من قبل الموءقت"
+
+msgid "Delete channel?"
+msgstr "حذف القناة"
+
+#, fuzzy
+msgid "Edit folder"
+msgstr "تعديل الموءقت"
+
+msgid "Sub folder"
+msgstr ""
+
+msgid "Folder name already exists!"
+msgstr ""
+
+#, c-format
+msgid "Folder name must not contain '%c'!"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Select"
+msgstr "حذف"
+
+msgid "Delete folder and all sub folders?"
+msgstr ""
+
+#, fuzzy
+msgid "Delete folder?"
+msgstr "الغاء الموءقت"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Channel"
+msgstr "القناة"
+
+msgid "Day"
+msgstr "يوم"
+
+msgid "Start"
+msgstr "بدء"
+
+msgid "Stop"
+msgstr "ايقاف"
+
+msgid "VPS"
+msgstr ""
+
+msgid "Priority"
+msgstr "الاستقطاب"
+
+msgid "Lifetime"
+msgstr "معدل البقاء"
+
+msgid "Childlock"
+msgstr ""
+
+msgid "yes"
+msgstr "نعم"
+
+msgid "no"
+msgstr "ﻻ"
+
+msgid "File"
+msgstr "ملف"
+
+#, fuzzy
+msgid "Button$Folder"
+msgstr "الموءقت"
+
+msgid "Button$Single"
+msgstr ""
+
+msgid "Button$Repeating"
+msgstr ""
+
+msgid "First day"
+msgstr "اليوم الاول"
+
+msgid "Select folder"
+msgstr ""
+
+msgid "Timers"
+msgstr "الموءقت"
+
+msgid "Button$On/Off"
+msgstr "تشغيل/ايقاف"
+
+msgid "Button$Info"
+msgstr "معلومات"
+
+msgid "Delete timer?"
+msgstr "الغاء الموءقت"
+
+msgid "Timer still recording - really delete?"
+msgstr "الموءقت يقوم بالتسجيل هل تريد الالغاء ?"
+
+msgid "Event"
+msgstr "الحدث"
+
+msgid "Description:"
+msgstr ""
+
+msgid "Button$Timer"
+msgstr "الموءقت"
+
+msgid "Button$Record"
+msgstr "التسجيل"
+
+msgid "Button$Switch"
+msgstr "تبديل"
+
+msgid "What's on now?"
+msgstr "ماذا يوجد الان"
+
+msgid "What's on next?"
+msgstr "ما التالى"
+
+msgid "Button$Next"
+msgstr "التالى"
+
+msgid "Button$Now"
+msgstr "الان"
+
+msgid "Button$Schedule"
+msgstr "جدولة"
+
+msgid "Can't switch channel!"
+msgstr "لا يمكن تبديل القناة"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "%sجدولة"
+
+#, c-format
+msgid "This event - %s"
+msgstr " %sهذا الحدث"
+
+msgid "This event - all channels"
+msgstr "هذا الحدث لكل القنوات"
+
+msgid "All events - all channels"
+msgstr "جميع الاحداث لجميع القنوات"
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "الرجاء ادخال %d رقم!"
+
+msgid "CAM not responding!"
+msgstr "الكامة لا تستجيب"
+
+msgid "Recording info"
+msgstr "معلومات التسجبل"
+
+msgid "Button$Play"
+msgstr "عرض"
+
+msgid "Button$Rewind"
+msgstr "اعادة"
+
+msgid "Rename recording"
+msgstr "اعادة تسمية التسجيل"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Length"
+msgstr "الطول"
+
+msgid "Format"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "TS"
+msgstr ""
+
+msgid "Size"
+msgstr "الحجم"
+
+msgid "Delete marks information?"
+msgstr "حذف معلومات العلامة"
+
+msgid "Delete resume information?"
+msgstr "حذف معلومات المواصلة"
+
+msgid "Error while accessing recording!"
+msgstr "حدث خطاء عند محاولة الوصول لتسجيلات"
+
+msgid "Recordings"
+msgstr "التسجيلات"
+
+msgid "Button$Open"
+msgstr "افتح"
+
+msgid "Commands"
+msgstr "الاوامر"
+
+msgid "Delete recording?"
+msgstr "حذف التسجيل"
+
+msgid "Recording is being edited - really delete?"
+msgstr ""
+
+msgid "Error while deleting recording!"
+msgstr "حدث خطاء عند محاولة حذف التسجيل"
+
+msgid "never"
+msgstr "ابدا"
+
+msgid "skin dependent"
+msgstr "متوقف على نوع الثوب"
+
+msgid "always"
+msgstr "دائما"
+
+msgid "OSD"
+msgstr "عرص على الشاشة"
+
+msgid "Setup.OSD$Language"
+msgstr "اللغة"
+
+msgid "Setup.OSD$Skin"
+msgstr " الثوب"
+
+msgid "Setup.OSD$Theme"
+msgstr " الثيمة"
+
+#, fuzzy
+msgid "Setup.OSD$WarEagle icons"
+msgstr "الخط صغير"
+
+#, fuzzy
+msgid "Setup.OSD$Left (%)"
+msgstr "يسار"
+
+#, fuzzy
+msgid "Setup.OSD$Top (%)"
+msgstr "الى اعلى"
+
+#, fuzzy
+msgid "Setup.OSD$Width (%)"
+msgstr "العرض"
+
+#, fuzzy
+msgid "Setup.OSD$Height (%)"
+msgstr "ارتفاع"
+
+msgid "Setup.OSD$Message time (s)"
+msgstr "مواقيت الرسائل"
+
+msgid "Setup.OSD$Use small font"
+msgstr "استعمل خط صغير"
+
+msgid "Setup.OSD$Anti-alias"
+msgstr "محدد الحواف"
+
+msgid "Setup.OSD$Default font"
+msgstr "الخط الافتراضى"
+
+msgid "Setup.OSD$Small font"
+msgstr "الخط صغير"
+
+msgid "Setup.OSD$Fixed font"
+msgstr "الخط ثابت"
+
+#, fuzzy
+msgid "Setup.OSD$Default font size (%)"
+msgstr "  حجم الخط الافتراضى"
+
+#, fuzzy
+msgid "Setup.OSD$Small font size (%)"
+msgstr "حجم الخط الصغير"
+
+#, fuzzy
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr "حجم الخط الثابت"
+
+msgid "Setup.OSD$Channel info position"
+msgstr " موضع معلومات القناة"
+
+msgid "bottom"
+msgstr "اسفل"
+
+msgid "top"
+msgstr "الى اعلى"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "مدة معلومات القناة"
+
+msgid "Setup.OSD$Info on channel switch"
+msgstr "معلومات القناة عند تبديل القنوات"
+
+msgid "Setup.OSD$Timeout requested channel info"
+msgstr "مدة انتهاء معلومات القنات"
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "تقليب الصفحات"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "طى الصفحات"
+
+msgid "Setup.OSD$Menu key closes"
+msgstr "زر اغلاق القاائمة"
+
+msgid "Setup.OSD$Recording directories"
+msgstr "مجلد التسجيلات"
+
+#, fuzzy
+msgid "Setup.OSD$Folders in timer menu"
+msgstr "مدة معلومات القناة"
+
+#, fuzzy
+msgid "Setup.OSD$Number keys for characters"
+msgstr "زر اغلاق القاائمة"
+
+msgid "Setup.OSD$Main menu command position"
+msgstr "موضع اوامر القائمة الرئسية"
+
+#, fuzzy
+msgid "Setup.OSD$Show valid input"
+msgstr "الخط صغير"
+
+msgid "EPG"
+msgstr "الدليل الالكتونى للقنوات"
+
+msgid "Button$Scan"
+msgstr "بحث"
+
+msgid "blacklist"
+msgstr ""
+
+msgid "whitelist"
+msgstr ""
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "اﻻنتهاء من البحث على الدليل الالكترونى للقنوات"
+
+msgid "Setup.EPG$EPG bugfix level"
+msgstr " معدل اصلاح اخطاء الدليل الالكترونى"
+
+msgid "Setup.EPG$EPG linger time (min)"
+msgstr "اقل مدة للدليل الالكترونى"
+
+msgid "Setup.EPG$Show progress bar"
+msgstr "اضهار شريط التقدم"
+
+msgid "Setup.EPG$Set system time"
+msgstr "اعداد توقيت النظام"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "الحصول على التوقيت من القناة"
+
+#. TRANSLATORS: note the plural!
+msgid "Setup.EPG$Preferred languages"
+msgstr "اللغة المفضلة"
+
+#. TRANSLATORS: note the singular!
+msgid "Setup.EPG$Preferred language"
+msgstr "اللغة المقضلة"
+
+msgid "Setup.EPG$Period for double EPG search(min)"
+msgstr ""
+
+msgid "Setup.EPG$extern double Epg entry"
+msgstr ""
+
+msgid "Setup.EPG$Mix intern and extern EPG"
+msgstr ""
+
+msgid "Setup.EPG$Disable running VPS event"
+msgstr ""
+
+msgid "Setup.EPG$Mode of noEPG-Patch"
+msgstr ""
+
+msgid "pan&scan"
+msgstr "بحث خفيف"
+
+msgid "letterbox"
+msgstr "صندوق الحروف"
+
+msgid "center cut out"
+msgstr "قص من الوسط"
+
+msgid "names only"
+msgstr "الاسماء فقط"
+
+msgid "PIDs only"
+msgstr "فقط PID"
+
+msgid "names and PIDs"
+msgstr "الاسماء و PID"
+
+msgid "add new channels"
+msgstr "اضافة قناة جديدة"
+
+msgid "add new transponders"
+msgstr "اضافة مصدر قنوات جديد"
+
+msgid "DVB"
+msgstr "الدى فى بى"
+
+msgid "Button$Audio"
+msgstr "الصوت"
+
+msgid "Button$Subtitles"
+msgstr "الترجمة"
+
+#, fuzzy
+msgid "Setup.DVB$Use DVB receivers"
+msgstr "دولبى رقمى"
+
+msgid "Setup.DVB$Primary DVB interface"
+msgstr "كرت الستالايت الاولى"
+
+msgid "Setup.DVB$Standard compliance"
+msgstr ""
+
+msgid "Setup.DVB$Video format"
+msgstr "نوع الفيديو  "
+
+msgid "Setup.DVB$Video display format"
+msgstr "نوع عرض الفديو"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "دولبى رقمى"
+
+msgid "Setup.DVB$Update channels"
+msgstr "تحديث القنوات"
+
+#, fuzzy
+msgid "Setup.DVB$channel binding by Rid"
+msgstr " موضع معلومات القناة"
+
+msgid "Setup.DVB$Audio languages"
+msgstr "لغات الصوت"
+
+msgid "Setup.DVB$Audio language"
+msgstr "لغة الصوت"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "عرض الترجمة"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "لغات الترجمة"
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "لغة الترجمة"
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "معدل انحراف الترجمة"
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "درجة شفافية الترجمة"
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "شفافية الخلفية"
+
+msgid "Setup.DVB$Enable teletext support"
+msgstr ""
+
+msgid "LNB"
+msgstr "الاقط"
+
+#, c-format
+msgid "Setup.LNB$DVB device %d uses LNB No."
+msgstr ""
+
+#, fuzzy
+msgid "Setup.LNB$Log LNB usage"
+msgstr "التردد المنخفض للاقط م هرتز"
+
+msgid "Setup.LNB$Use DiSEqC"
+msgstr " DiSEqC استعمل"
+
+msgid "Setup.LNB$SLOF (MHz)"
+msgstr "التذبذب المحلى للاقط م هرتز"
+
+msgid "Setup.LNB$Low LNB frequency (MHz)"
+msgstr "التردد المنخفض للاقط م هرتز"
+
+msgid "Setup.LNB$High LNB frequency (MHz)"
+msgstr "التردد المرتفع للاقط م هرتز"
+
+#, c-format
+msgid "Setup.LNB$Device %d connected to sat cable"
+msgstr ""
+
+msgid "Setup.LNB$own"
+msgstr ""
+
+msgid "CAM reset"
+msgstr "اعادة تشغيل الكامة"
+
+msgid "CAM present"
+msgstr "الكامة موجودة"
+
+msgid "CAM ready"
+msgstr "الكامة جاهزة"
+
+msgid "CAM"
+msgstr "الكامة "
+
+msgid "Button$Menu"
+msgstr "القائمة"
+
+msgid "Button$Reset"
+msgstr "اعد الضبط"
+
+msgid "Opening CAM menu..."
+msgstr "فتح قائمة الكامة"
+
+msgid "Can't open CAM menu!"
+msgstr "تعذر فتح قائمة الكامة"
+
+msgid "CAM is in use - really reset?"
+msgstr "الكامة مستخدمة الان هل تريد اعادة تشغيلها"
+
+msgid "Can't reset CAM!"
+msgstr "تعذر اعادة تشغيل الكامة"
+
+#, fuzzy
+msgid "do not pause live video"
+msgstr "تجميد العرض الحى"
+
+#, fuzzy
+msgid "confirm pause live video"
+msgstr "تجميد العرض الحى"
+
+#, fuzzy
+msgid "pause live video"
+msgstr "تجميد العرض الحى"
+
+msgid "confirm"
+msgstr ""
+
+msgid "Recording"
+msgstr "تسجيل"
+
+msgid "Setup.Recording$Margin at start (min)"
+msgstr ""
+
+msgid "Setup.Recording$Margin at stop (min)"
+msgstr ""
+
+msgid "Setup.Recording$Default priority"
+msgstr "الاولويات الافتراضية"
+
+msgid "Setup.Recording$Default Lifetime (d)"
+msgstr "معدل البقاء باليوم"
+
+#, fuzzy
+msgid "Setup.Recording$Pause key handling"
+msgstr "معدل الايقاف باليوم"
+
+msgid "Setup.Recording$Pause priority"
+msgstr "تعطيل الاولويات"
+
+msgid "Setup.Recording$Pause lifetime (d)"
+msgstr "معدل الايقاف باليوم"
+
+#, fuzzy
+msgid "Setup.Recording$Video directory policy"
+msgstr "مجلد التسجيلات"
+
+#, fuzzy
+msgid "Setup.Recording$Number of video directories"
+msgstr "مجلد التسجيلات"
+
+#, fuzzy, c-format
+msgid "Setup.Recording$Video %d priority"
+msgstr "تعطيل الاولويات"
+
+#, fuzzy, c-format
+msgid "Setup.Recording$Video %d min. free MB"
+msgstr "اقصى حجم لملف الفيديو ب م ب"
+
+msgid "Setup.Recording$Use episode name"
+msgstr "استخدم اسم المرحلة"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "استعمل VPS"
+
+msgid "Setup.Recording$VPS margin (s)"
+msgstr ""
+
+msgid "Setup.Recording$Mark instant recording"
+msgstr "علم التسجيل الفورى"
+
+msgid "Setup.Recording$Name instant recording"
+msgstr "اسم التسجيل الفورى"
+
+msgid "Setup.Recording$Instant rec. time (min)"
+msgstr "مدة التسجيل الفورى بالدقيقة"
+
+msgid "Setup.Recording$Max. video file size (MB)"
+msgstr "اقصى حجم لملف الفيديو ب م ب"
+
+msgid "Setup.Recording$Max. recording size (GB)"
+msgstr "اقصى حجم للتسجيل م ب"
+
+msgid "Setup.Recording$Hard Link Cutter"
+msgstr "قاطع وصلات الاختصرات"
+
+msgid "Setup.Recording$Split edited files"
+msgstr "اقسم الملف المعدل"
+
+msgid "Setup.Recording$Show date"
+msgstr "اظهر التاريخ"
+
+msgid "Setup.Recording$Show time"
+msgstr "اظهر تاريخ التعديل"
+
+msgid "Setup.Recording$Show length"
+msgstr "اظهر VPS"
+
+#, fuzzy
+msgid "Setup.Recording$Delete timeshift recording"
+msgstr "اسم التسجيل الفورى"
+
+msgid "Replay"
+msgstr "اعادة عرض"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "موءقت النوم"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "اضهر طور الاعادة"
+
+msgid "Setup.Replay$Show remaining time"
+msgstr ""
+
+msgid "Setup.Replay$Resume ID"
+msgstr "رقم المواصلة"
+
+#, fuzzy
+msgid "Setup.Recording$Jump Seconds"
+msgstr "اظهر التاريخ"
+
+#, fuzzy
+msgid "Setup.Recording$Jump Seconds Slow"
+msgstr "استعمل VPS"
+
+#, fuzzy
+msgid "Setup.Recording$Jump Seconds (Repeat)"
+msgstr "اظهر التاريخ"
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "intelligent"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Replay$Jump&Play"
+msgstr "رقم المواصلة"
+
+#, fuzzy
+msgid "Setup.Replay$Play&Jump"
+msgstr "رقم المواصلة"
+
+#, fuzzy
+msgid "Setup.Replay$Pause at last mark"
+msgstr "موءقت النوم"
+
+#, fuzzy
+msgid "Setup.Replay$Reload marks"
+msgstr "رقم المواصلة"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$only in channelinfo"
+msgstr "القناة الاساسية"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$only in progress display"
+msgstr "كسابق"
+
+msgid "Miscellaneous"
+msgstr "متفرقات"
+
+msgid "Setup.Miscellaneous$Min. event timeout (min)"
+msgstr "مدة انتهاء الحدث بالدقيقة"
+
+msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+msgstr "اقل مدة لعدم تفاعل المستخدم بالدقيقة"
+
+msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+msgstr "مدة انتهاء مدخلات القناة بالدقيقة"
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "القناة الاساسية"
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "كسابق"
+
+msgid "Setup.Miscellaneous$Initial volume"
+msgstr "فعل الصوت"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Channels wrap"
+msgstr "كسابق"
+
+msgid "Setup.Miscellaneous$Emergency exit"
+msgstr "خروج طارىء"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Lirc repeat delay"
+msgstr "خروج طارىء"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Lirc repeat freq"
+msgstr "كسابق"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Lirc repeat timeout"
+msgstr "مدة انتهاء الحدث بالدقيقة"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Volume ctrl with left/right"
+msgstr "خروج طارىء"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Channelgroups with left/right"
+msgstr "كسابق"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Search fwd/back with left/right"
+msgstr "كسابق"
+
+msgid "Plugins"
+msgstr "الملحقات"
+
+msgid "This plugin has no setup parameters!"
+msgstr "هذا الملحق لا يوجد له اعادات خاصة"
+
+msgid "Setup"
+msgstr "الاعدادات"
+
+msgid "Restart"
+msgstr "اعادة تشغيل"
+
+msgid "Really restart?"
+msgstr "هل حقا تريد اعادة التشغيل"
+
+#. TRANSLATORS: note the leading and trailing blanks!
+msgid " Stop recording "
+msgstr " ايقاف التسجيل "
+
+msgid "Schedule"
+msgstr "جدولة"
+
+msgid "VDR"
+msgstr ""
+
+msgid " Stop replaying"
+msgstr " ايقاف الاعادة"
+
+msgid "Button$Pause"
+msgstr "طمس"
+
+msgid "Button$Stop"
+msgstr "ايقاف"
+
+msgid "Button$Resume"
+msgstr "مواصلة"
+
+msgid " Cancel editing"
+msgstr " تعديل القناة"
+
+msgid "Stop recording?"
+msgstr "ايقاف التسجيل"
+
+msgid "Cancel editing?"
+msgstr "الغاء التعديل"
+
+msgid "No audio available!"
+msgstr "لا يوجد صوت متاح"
+
+msgid "No subtitles"
+msgstr "لا توجد ترجمة متاحة"
+
+msgid "No subtitles available!"
+msgstr "لا ترجمة متاحة"
+
+msgid "Not enough disk space to start recording!"
+msgstr "لا يوجد مساحة كافية على القرص الصلب لبدء التسجيل"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "Could not add timer"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "لا يوجد كرت ستالايت متاح ليتم التسجيل"
+
+msgid "Pausing live video..."
+msgstr "تجميد العرض الحى"
+
+#, fuzzy
+msgid "Delete timeshift recording?"
+msgstr "حذف التسجيل"
+
+msgid "Timeshift mode"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Forward"
+msgstr ""
+
+msgid "End"
+msgstr ""
+
+msgid "Jump"
+msgstr ""
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Jump: "
+msgstr "اقفز الى  "
+
+msgid "No editing marks defined!"
+msgstr "لاتوجد علامات تعديل معرفة"
+
+msgid "Can't start editing process!"
+msgstr "لا يمكن البدء فى عملية التعديل"
+
+msgid "Editing process started"
+msgstr "البدء فى التعديل"
+
+msgid "Editing process already active!"
+msgstr "عملية التعديل نشطة بالفعل"
+
+msgid "Recording started"
+msgstr "ابتداء التسجيل"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr ""
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr ""
+
+msgid "CharMap$ 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr ""
+
+msgid "Button$ABC/abc"
+msgstr ""
+
+msgid "Button$Overwrite"
+msgstr "اعادة الكتابة"
+
+msgid "Button$Insert"
+msgstr "ادراج"
+
+msgid "Changes applied"
+msgstr ""
+
+msgid "Plugin"
+msgstr "الملحق"
+
+msgid "Power Off ReelBox"
+msgstr ""
+
+msgid "Recording - activating Standby"
+msgstr ""
+
+msgid "Running Processes - activating Standby"
+msgstr ""
+
+msgid "Standby"
+msgstr ""
+
+msgid "Power off"
+msgstr ""
+
+msgid "Reboot"
+msgstr ""
+
+msgid "Set Sleeptimer"
+msgstr ""
+
+msgid "Maintenance Mode"
+msgstr ""
+
+msgid "Activating standby"
+msgstr ""
+
+msgid "Activating deep standby"
+msgstr ""
+
+msgid "PowerOff will happen after background processes are complete"
+msgstr ""
+
+msgid "Entering maintenance mode"
+msgstr ""
+
+msgid "Activating reboot"
+msgstr ""
+
+msgid "Main Menu"
+msgstr ""
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "اعلى او اسفل ل الموضع الجديد و موافق للتحريك"
+
+msgid "Channel locked (recording)!"
+msgstr "القناة مقفلة للتسجيل"
+
+msgid "can't record - check your configuration"
+msgstr ""
+
+msgid "Low disk space!"
+msgstr "مساحة القرص غير كافية"
+
+msgid "Regenerating index file"
+msgstr ""
+
+msgid "Index file regeneration complete"
+msgstr ""
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "لا يمكن قفل الحاسوب الرمز s لم يحدد"
+
+msgid "Editing - shut down anyway?"
+msgstr "قم باغلاق الحاسوب على اى حال"
+
+msgid "Recording - shut down anyway?"
+msgstr "اغلق الحاسوب"
+
+#, c-format
+msgid "Recording in %ld minutes, shut down anyway?"
+msgstr "تم تسجيل %ld دقيقة سيتم الاغلاق على اى حال"
+
+msgid "shut down anyway?"
+msgstr "الاغلاق على اى حال"
+
+#, c-format
+msgid "Plugin %s wakes up in %ld min, continue?"
+msgstr ""
+
+msgid "Editing - restart anyway?"
+msgstr ""
+
+msgid "Recording - restart anyway?"
+msgstr ""
+
+msgid "restart anyway?"
+msgstr ""
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Volume "
+msgstr "الصوت "
+
+msgid "Classic VDR"
+msgstr "VDR تقليدى  "
+
+msgid "DISK"
+msgstr ""
+
+msgid "LOAD"
+msgstr ""
+
+msgid "TIMERS"
+msgstr ""
+
+msgid "DEVICES"
+msgstr ""
+
+msgid "LIVE"
+msgstr ""
+
+msgid "PLAY"
+msgstr ""
+
+msgid "ST:TNG Panels"
+msgstr "ST:TNG شاشة "
+
+#. TRANSLATORS: the first character of each weekday, beginning with monday
+msgid "MTWTFSS"
+msgstr ""
+
+#, fuzzy
+msgid "Database not available!"
+msgstr "القناة غير متاحة"
+
+#. TRANSLATORS: abbreviated weekdays, beginning with monday (must all be 3 letters!)
+msgid "MonTueWedThuFriSatSun"
+msgstr ""
+
+msgid "Monday"
+msgstr "الاحد"
+
+msgid "Tuesday"
+msgstr "الاثنين"
+
+msgid "Wednesday"
+msgstr "الاربعاء"
+
+msgid "Thursday"
+msgstr "الثلاثاء"
+
+msgid "Friday"
+msgstr "الجمعة"
+
+msgid "Saturday"
+msgstr "السبت"
+
+msgid "Sunday"
+msgstr "الاحد"
+
+msgid "ejecting media"
+msgstr ""
+
+msgid "Upcoming recording!"
+msgstr ""
+
+#, c-format
+msgid "ReelBox will standby in %s minutes"
+msgstr ""
+
+msgid "Timeshift is not available!"
+msgstr ""
+
+#, fuzzy
+msgid "Pause live video?"
+msgstr "تجميد العرض الحى"
+
+msgid "No free tuner to record!"
+msgstr ""
+
+msgid "ReelBox will shut down later - press Power to force"
+msgstr "البرنامج سيقوم بالاغلاق لاحقا اضغط زر  القفل لاتمام  عملية الاغلاق"
+
+msgid "Press any key to cancel shutdown"
+msgstr "اضغط اى زر لالغاء اقفال البرنامج"
+
+msgid "Switching primary DVB..."
+msgstr "تم الانتقال لكرت الستالايت الافتراضى"
+
+msgid "End recording"
+msgstr ""
+
+msgid "Editing process failed!"
+msgstr "تم فشل عملية التعديل"
+
+msgid "Editing process finished"
+msgstr "تم الانتهاء من التعديل"
+
+msgid "Press any key to cancel restart"
+msgstr "اضغط اى زر لالغاء اعادة التشغيل"
+
+#, c-format
+msgid "ReelBox will shut down in %s minutes"
+msgstr "البرنامج سيقوم بالاغلاق بعد%s دقيقة "
+
+msgid "Disk"
+msgstr ""
+
+msgid "free"
+msgstr ""
+
+#~ msgid "Path"
+#~ msgstr "المسار"
+
+#~ msgid "Rename$Up"
+#~ msgstr "اعلى"
+
+#~ msgid "Rename$Down"
+#~ msgstr "اسفل"
+
+#~ msgid "Rename$Previous"
+#~ msgstr "السابق"

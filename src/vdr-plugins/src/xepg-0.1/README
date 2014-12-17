@@ -1,0 +1,17 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Sundararaj <sundararaj.reel@googlemail.com>
+
+Project's homepage:          URL
+
+Latest version available at: URL
+
+See the file COPYING for license information.
+
+Description:
+    This plugin gets EPG data from internet (currently only from bleb.org) and loads it into VDR.
+
+One should be able to Enable/Disable parts of the plugin or manually start download(Setup->System settings->Xmlepg2vdr).
+Currently, download from internet alone is implemented.
+
+Also see HISTORY, URLREADME

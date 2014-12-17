@@ -1,0 +1,361 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Oktay Yolgeçen <oktay_73@yahoo.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-filebrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-07-27 10:21+0200\n"
+"PO-Revision-Date: 2008-09-26 13:30+0200\n"
+"Last-Translator: Oktay Yolgeçen <oktay_73@yahoo.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Can't open file"
+msgstr ""
+
+msgid "Title"
+msgstr "Baş Isim"
+
+msgid "Artist"
+msgstr ""
+
+msgid "Album"
+msgstr ""
+
+msgid "Genre"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Year"
+msgstr ""
+
+msgid "Track"
+msgstr ""
+
+msgid "Length"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "Bitrate"
+msgstr ""
+
+msgid "Samplerate"
+msgstr ""
+
+msgid "ID3$Channels"
+msgstr ""
+
+msgid "Original"
+msgstr ""
+
+msgid "MPEG-Layer"
+msgstr ""
+
+msgid "Copyrighted"
+msgstr ""
+
+msgid "Protected"
+msgstr ""
+
+msgid "Minimal bitrate"
+msgstr ""
+
+msgid "Maximal bitrate"
+msgstr ""
+
+msgid "Nominal bitrate"
+msgstr ""
+
+msgid "File size"
+msgstr ""
+
+msgid "Last Modified"
+msgstr ""
+
+msgid "please wait ..."
+msgstr "Lütfen Bekleyiniz ..."
+
+msgid "packet sucessfully installed"
+msgstr ""
+
+msgid "packet installation failed"
+msgstr ""
+
+msgid "Language packet sucessfully installed"
+msgstr ""
+
+msgid "Language packet installation failed"
+msgstr ""
+
+msgid "Hard Drive"
+msgstr ""
+
+msgid "DVD"
+msgstr ""
+
+msgid "My Music"
+msgstr "Benim Muziklerim"
+
+#, fuzzy
+msgid "My Pictures"
+msgstr "Benim Görüntülerim"
+
+msgid "My Videos"
+msgstr "Benim Görüntülerim"
+
+msgid "My Recordings"
+msgstr "Benim TV Kayitlarim"
+
+msgid "My DVDs"
+msgstr "Benim DVD'lerim"
+
+msgid "Cannot mount media"
+msgstr ""
+
+msgid "Access denied!"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "File informations"
+msgstr ""
+
+msgid "Attributes from:"
+msgstr ""
+
+msgid "Playlist: "
+msgstr "Çalma Liste:"
+
+msgid "Delete entry"
+msgstr ""
+
+msgid "Close playlist"
+msgstr "Çalma Listesi Kapat"
+
+msgid "Save playlist as"
+msgstr "Çalma Listesini Buraya Hafizla"
+
+msgid "Save playlist"
+msgstr "Çalma Liste Hafisala"
+
+msgid "Copy playlist to CD"
+msgstr ""
+
+msgid "Playlist Commands"
+msgstr "Çalma Liste Komutlari"
+
+msgid "Entry already exists"
+msgstr ""
+
+msgid "Change the name and then press 'OK'"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist name"
+msgstr "Çalma Liste:"
+
+msgid "Options for image viewer"
+msgstr ""
+
+msgid "Display image file names"
+msgstr ""
+
+msgid "no"
+msgstr "Hayir"
+
+msgid "yes"
+msgstr "Evet"
+
+msgid "Slide show"
+msgstr ""
+
+msgid "Random choice"
+msgstr ""
+
+msgid "Cyclic display"
+msgstr ""
+
+msgid "Switch time (s)"
+msgstr ""
+
+msgid "Clear cache"
+msgstr ""
+
+msgid "Cache cleared"
+msgstr ""
+
+msgid " ...opening file"
+msgstr "...Dosya Aciliyor"
+
+msgid "Can't open file:"
+msgstr "...Dosya Acilamiyor!"
+
+msgid "No more images"
+msgstr ""
+
+msgid "Slide show started"
+msgstr ""
+
+msgid "Slide show halted"
+msgstr ""
+
+msgid "Standard play mode"
+msgstr ""
+
+msgid "Random play mode"
+msgstr ""
+
+msgid "Copying"
+msgstr "Kopyalama"
+
+msgid "Multiple files"
+msgstr ""
+
+msgid "Selection is being deleted. Please wait..."
+msgstr ""
+
+msgid "Really Delete?"
+msgstr "Eminmisiniz Silmeye?"
+
+msgid "Save/copy current playlist?"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist saved as "
+msgstr "Çalma Liste:"
+
+msgid "Working"
+msgstr "Calisiyor"
+
+msgid "Cancel"
+msgstr "Iptal"
+
+msgid "Execute"
+msgstr ""
+
+msgid "Paste selected entries"
+msgstr ""
+
+msgid "Insert"
+msgstr "Ekle"
+
+msgid "Create dir"
+msgstr "Kayıtı Sil?"
+
+msgid "Selection is copied in background..."
+msgstr ""
+
+msgid "Selection is being moved in background..."
+msgstr ""
+
+msgid "Expert mode"
+msgstr "Uzman Mod"
+
+msgid "Too many entries for playlist!"
+msgstr ""
+
+msgid "Playlist"
+msgstr "Çalma List"
+
+msgid "Functions"
+msgstr "Fonksiyonlar"
+
+msgid "Deselect all"
+msgstr ""
+
+msgid "Select all"
+msgstr "Hepsini Seç"
+
+msgid "Deselect"
+msgstr ""
+
+msgid "Select"
+msgstr "Seç"
+
+msgid "Back"
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopya"
+
+msgid "Move"
+msgstr "Taşı"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Rename entry"
+msgstr ""
+
+msgid "Create directory"
+msgstr ""
+
+msgid "Show playlist"
+msgstr ""
+
+msgid "Convert to UTF8"
+msgstr ""
+
+msgid "Burn ISO-File"
+msgstr ""
+
+msgid "Make And burn ISO-File"
+msgstr ""
+
+msgid "Filebrowser Commands"
+msgstr ""
+
+msgid "Started converting"
+msgstr ""
+
+msgid "Finished converting"
+msgstr ""
+
+msgid "Save playlist to disk"
+msgstr ""
+
+msgid "Copy playlist to usb stick"
+msgstr ""
+
+msgid "Playlist actions"
+msgstr ""
+
+msgid "Directory already exists"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "To create a new directory press 'OK'"
+msgstr ""
+
+msgid "Directory Name"
+msgstr ""
+
+msgid "Rename to"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr ""
+
+msgid "File Browser"
+msgstr ""
+
+msgid "Picture viewer"
+msgstr ""
+
+#~ msgid "Deleting"
+#~ msgstr "Siliniyor..."
+
+#~ msgid "My Images"
+#~ msgstr "Benim Resimlerim"

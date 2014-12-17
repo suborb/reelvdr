@@ -1,0 +1,120 @@
+diff -Nru busybox-1.2.1/include/usage.h busybox-1.2.1-patched/include/usage.h
+--- busybox-1.2.1/include/usage.h	2006-07-01 00:42:10.000000000 +0200
++++ busybox-1.2.1-patched/include/usage.h	2006-08-09 17:49:20.000000000 +0200
+@@ -2868,6 +2868,7 @@
+ 	"Options:\n" \
+ 	"\t-m MIN\t\tMinutes between MARK lines (default=20, 0=off)\n" \
+ 	"\t-n\t\tRun as a foreground process\n" \
++	"\t-p FILE\t\tUse an alternate log socket (default=/dev/log)\n" \
+ 	"\t-O FILE\t\tUse an alternate log file (default=/var/log/messages)\n" \
+ 	"\t-S\t\tMake logging output smaller." \
+ 	USAGE_ROTATE_LOGFILE( \
+diff -Nru busybox-1.2.1/Rules.mak busybox-1.2.1-patched/Rules.mak
+--- busybox-1.2.1/Rules.mak	2006-07-29 00:55:51.000000000 +0200
++++ busybox-1.2.1-patched/Rules.mak	2006-08-09 17:50:53.000000000 +0200
+@@ -33,14 +33,14 @@
+ # your compiler is broken, you should not need to specify TARGET_ARCH
+ CROSS          =$(strip $(subst ",, $(strip $(CROSS_COMPILER_PREFIX))))
+ # be gentle to vi coloring.. "))
+-CC             = $(CROSS)gcc
+-AR             = $(CROSS)ar
+-AS             = $(CROSS)as
+-LD             = $(CROSS)ld
+-NM             = $(CROSS)nm
+-STRIP          = $(CROSS)strip
+-ELF2FLT        = $(CROSS)elf2flt
+-CPP            = $(CC) -E
++CC            ?= $(CROSS)gcc
++AR            ?= $(CROSS)ar
++AS            ?= $(CROSS)as
++LD            ?= $(CROSS)ld
++NM            ?= $(CROSS)nm
++STRIP         ?= $(CROSS)strip
++ELF2FLT       ?= $(CROSS)elf2flt
++CPP           ?= $(CC) -E
+ SED           ?= sed
+ BZIP2         ?= bzip2
+ 
+@@ -49,6 +49,10 @@
+ # OS specific things, syscall overrides, etc.
+ TARGET_OS=linux
+ 
++# Select the compiler needed to build binaries for your development system
++HOSTCC    ?= gcc
++HOSTCFLAGS ?= -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer
++
+ # Ensure consistent sort order, 'gcc -print-search-dirs' behavior, etc.
+ LC_ALL:= C
+
+@@ -134,11 +134,11 @@
+ 
+ 
+ # Select the compiler needed to build binaries for your development system
+-HOSTCC     = gcc
+-HOSTCFLAGS:=$(call check_cc,$(HOSTCC),-Wall,)
+-HOSTCFLAGS+=$(call check_cc,$(HOSTCC),-Wstrict-prototypes,)
+-HOSTCFLAGS+=$(call check_cc,$(HOSTCC),-O2,)
+-HOSTCFLAGS+=$(call check_cc,$(HOSTCC),-fomit-frame-pointer,)
++HOSTCC     ?= gcc
++HOSTCFLAGS:?=$(call check_cc,$(HOSTCC),-Wall,)
++HOSTCFLAGS+?=$(call check_cc,$(HOSTCC),-Wstrict-prototypes,)
++HOSTCFLAGS+?=$(call check_cc,$(HOSTCC),-O2,)
++HOSTCFLAGS+?=$(call check_cc,$(HOSTCC),-fomit-frame-pointer,)
+ 
+ LD_WHOLE_ARCHIVE:=$(shell echo "int i;" > conftest.c ; \
+ 	$(CC) -c -o conftest.o conftest.c ; \
+diff -Nru busybox-1.2.1/sysklogd/syslogd.c busybox-1.2.1-patched/sysklogd/syslogd.c
+--- busybox-1.2.1/sysklogd/syslogd.c	2006-07-01 00:42:04.000000000 +0200
++++ busybox-1.2.1-patched/sysklogd/syslogd.c	2006-08-09 17:54:37.000000000 +0200
+@@ -43,6 +43,7 @@
+ 
+ /* Path to the unix socket */
+ static char lfile[MAXPATHLEN];
++static const char *logSockPath = _PATH_LOG;
+ 
+ static const char *logFilePath = __LOG_FILE;
+ 
+@@ -530,7 +531,8 @@
+ 	alarm(MarkInterval);
+ 
+ 	/* Create the syslog file so realpath() can work. */
+-	if (realpath(_PATH_LOG, lfile) != NULL) {
++//	if (realpath(_PATH_LOG, lfile) != NULL) {
++	if (realpath(logSockPath, lfile) != NULL) {	
+ 		unlink(lfile);
+ 	}
+ 
+@@ -540,11 +542,11 @@
+ 	sock_fd = bb_xsocket(AF_UNIX, SOCK_DGRAM, 0);
+ 	addrLength = sizeof(sunx.sun_family) + strlen(sunx.sun_path);
+ 	if (bind(sock_fd, (struct sockaddr *) &sunx, addrLength) < 0) {
+-		bb_perror_msg_and_die("Could not connect to socket " _PATH_LOG);
++		bb_perror_msg_and_die("Could not connect to socket %s", logSockPath);
+ 	}
+ 
+ 	if (chmod(lfile, 0666) < 0) {
+-		bb_perror_msg_and_die("Could not set permission on " _PATH_LOG);
++		bb_perror_msg_and_die("Could not set permission on  %s", logSockPath);
+ 	}
+ #ifdef CONFIG_FEATURE_IPC_SYSLOG
+ 	if (circular_logging == TRUE) {
+@@ -601,7 +603,8 @@
+ 	char *p;
+ 
+ 	/* do normal option parsing */
+-	while ((opt = getopt(argc, argv, "m:nO:s:Sb:R:LC::")) > 0) {
++//	while ((opt = getopt(argc, argv, "m:nO:s:Sb:R:LC::")) > 0) {
++	while ((opt = getopt(argc, argv, "m:nO:s:p:Sb:R:LC::")) > 0) {
+ 		switch (opt) {
+ 		case 'm':
+ 			MarkInterval = atoi(optarg) * 60;
+@@ -612,6 +615,9 @@
+ 		case 'O':
+ 			logFilePath = optarg;
+ 			break;
++		case 'p':
++		        logSockPath = optarg;
++		        break;
+ #ifdef CONFIG_FEATURE_ROTATE_LOGFILE
+ 		case 's':
+ 			logFileSize = atoi(optarg) * 1024;

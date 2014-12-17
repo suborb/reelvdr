@@ -1,0 +1,24 @@
+#!/bin/bash
+# PlanetRadio-Playlist
+# $1 = outfile
+
+### Variabel
+Name="planet radio [www.planetradio.de]"
+### 
+
+# get...
+wget -q --tries=1 --timeout=10 -O /tmp/playlist "http://www.planetradio.de/p_mt.php"
+
+# Artist/Title
+all=`grep -A1 'die letzten 3 tracks' /tmp/playlist`
+title=${all/*$'<table><tr><td>'????????????????????/}; title=${title/$'<'\/'td>'*/}
+artist=${all//*$'td><td>'/}; artist=${artist/$'<'\/'td>'*/}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

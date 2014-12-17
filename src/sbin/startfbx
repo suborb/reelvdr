@@ -1,0 +1,185 @@
+#!/bin/sh
+
+# FIXME:  if startx fails, add "allowed_users=anybody" to /etc/X11/Xwrapper.config
+
+# FIXME: eval screen resolution for res != 1080
+#
+# switches:
+# $1: resolution
+# $2: command
+# $3: start URL
+#
+
+resolution=$1
+command=$2
+url=$3
+
+Syntax () {
+	cat << EOF
+$0 [ resolution ] [ command ]
+    resolution: 1080 | 720 | 576 | 480
+    command:    kde | firefox | amarok
+EOF
+}
+
+. /etc/default/globals
+
+GenChromeLaunch () {
+cat << EOF > /tmp/reelvdr-browser.sh
+#!/bin/sh
+
+set -x
+xrdb -load \$HOME/.Xresources
+xsetroot -solid gray &
+matchbox-window-manager -theme reel &
+#resolution=$resolution
+
+if [ -x /usr/lib/chrome-ice/chrome ]; then
+	eval \`dbus-launch\`
+	export DBUS_SESSION_BUS_ADDRESS
+	export DBUS_SESSION_BUS_PID
+	export LD_LIBRARY_PATH=/usr/lib/chrome-ice/lib
+
+	/usr/lib/chrome-ice/chrome --ignore-gpu-blacklist -use-gl=egl  --disable-accelerated-compositing \
+	    --enable-accelerated-2d-canvas \$*
+
+	# go back to vdr/liveTV
+	zorder B A C D
+else
+        Syslog "No executeable /usr/lib/chrome-ice/chrome found. Cannot start."
+fi
+EOF
+chmod a+x /tmp/reelvdr-browser.sh
+}
+
+GenChromiumLaunch () {
+cat << EOF > /tmp/reelvdr-browser.sh
+#!/bin/sh
+
+set -x
+xrdb -load \$HOME/.Xresources
+xsetroot -solid gray &
+matchbox-window-manager -theme reel &
+#resolution=$resolution
+
+if [ -x //usr/bin/chromium-browser ]; then
+	#eval \`dbus-launch\`
+	#export DBUS_SESSION_BUS_ADDRESS
+	#export DBUS_SESSION_BUS_PID
+	#export LD_LIBRARY_PATH=/usr/lib/chrome-ice/lib
+
+	#/usr/lib/chrome-ice/chrome --ignore-gpu-blacklist -use-gl=egl  --disable-accelerated-compositing \
+	#    --enable-accelerated-2d-canvas \$*
+	/usr/bin/chromium-browser \$*
+
+	# go back to vdr/liveTV
+	zorder B A C D
+else
+        Syslog "No executeable /usr/bin/chromium-browser found. Cannot start."
+fi
+EOF
+chmod a+x /tmp/reelvdr-browser.sh
+}
+
+case $resolution in
+	1080)
+		;;
+	720)
+		;;
+	576)
+		resolution=720
+		;;
+	480)
+		resolution=720
+		;;
+	"")
+		resolution=1080
+		;;
+	-h)
+		Syntax
+		exit 0
+		;;
+	*)
+		;;
+esac
+
+set -x
+
+
+# get and set correct framebuffer device
+MY_FB=$(grep hde_fb /proc/fb | awk '{print $1}')
+if ! RbIce && [ -n "$MY_FB" ]; then
+    if grep -q "/dev/fb" /etc/X11/xorg.conf.hde.$resolution ; then
+	    sed s,/fb.,/fb$MY_FB, -i /etc/X11/xorg.conf.hde.$resolution
+    else
+	    sed /"fbdev"/a"\\\tOption \"fbdev\" \"/dev/fb$MY_FB\"" -i /etc/X11/xorg.conf.hde.$resolution
+    fi
+fi
+
+
+
+# FIXME: how to start firefox
+case $command in
+	firefox)
+		cmd="startx `which framebuffer-firefox` $url -- :1 vt08"
+		;;
+	amarok)
+		cmd="startx `which framebuffer-amarok` -- :2 vt09"
+		;;
+	kde)
+		cmd="startx -- :1 vt08"
+		;;
+	chrome)
+		GenChromeLaunch
+		cmd="startx /tmp/reelvdr-browser.sh $url -- :1 vt08"
+		;;
+	chromium)
+		GenChromiumLaunch
+		cmd="startx /tmp/reelvdr-browser.sh $url -- :1 vt08"
+		;;
+	xterm)
+		cmd="startx `which xterm` -geometry 110x50 -- :1 vt08"
+		;;
+	*)
+		cmd="startx -- :1 vt08"
+		;;
+esac
+
+if  ! RbIce ; then
+	cmd="$cmd -config xorg.conf.hde.$resolution"
+fi
+
+#check if a X session is already running
+    case $command in
+        amarok)
+            chvt 9
+            ;;
+        *)
+	    chvt 8
+
+		# planes on ICE
+		# A : Video/liveTV
+		# B : X
+		# C : OSD
+		# D : PiP
+	    zorder D A C B # B is the "top" most plane
+            ;;
+    esac
+
+if [ ! -f /tmp/.X1-lock ]; then
+#else
+    if RbIce || [ -e /etc/X11/xorg.conf.hde.$resolution ]; then
+	    RbIce && NICE="nice"
+	    if [ `id -g` = 0 ]; then
+		    su reel -c "$NICE $cmd" >/dev/null 2>&1 &
+	    else
+		    $NICE $cmd >/dev/null 2>&1 &
+	    fi
+    else
+	    Syslog "No xorg.conf.hde for this resolution ($resolution)"
+    fi
+else
+    Syslog "X11 already running"
+    #TODO: switch screens
+fi
+

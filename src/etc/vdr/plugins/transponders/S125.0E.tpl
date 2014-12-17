@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S125.0E
+2=ChinaSat 6A
+3=East
+4=125.0

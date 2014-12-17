@@ -1,0 +1,316 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-rbmini\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-02-04 10:16+0100\n"
+"PO-Revision-Date: 2009-06-21 00:45+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#, c-format
+msgid "HDMI: %s      SCART: %s"
+msgstr ""
+
+msgid "Setup - Video"
+msgstr "Configurazione - Video"
+
+msgid "Setup - Audio"
+msgstr "Configurazione - Audio"
+
+msgid "Keep these settings?"
+msgstr "Mantenere questa configurazione?"
+
+msgid "Using old settings"
+msgstr "Utilizzare configurazione precedente"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Experts"
+msgstr "Avanzata"
+
+msgid "HDMI settings"
+msgstr "Configurazione HDMI"
+
+msgid "Mode"
+msgstr "Modalità"
+
+msgid "Output"
+msgstr "Output"
+
+msgid "Aspect"
+msgstr "Aspetto"
+
+msgid "Aspect ratio"
+msgstr "Rapporto d'aspetto"
+
+msgid "SCART settings"
+msgstr "Configurazione SCART"
+
+msgid "Mpeg2 settings"
+msgstr "Configurazione Mpeg2"
+
+msgid "Postprocessing"
+msgstr "Postprocessing"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr ""
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Audio settings"
+msgstr "Configurazione audio"
+
+#, fuzzy
+msgid "Analog offset"
+msgstr "Offset MPA"
+
+msgid "Dolby Digital offset"
+msgstr ""
+
+#, fuzzy
+msgid "Note:"
+msgstr "Nessuno"
+
+msgid "The adjustable range is 1/100 seconds."
+msgstr ""
+
+msgid "None"
+msgstr "Nessuno"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Play"
+msgstr "Play"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Trick"
+msgstr "Astuzia"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Left"
+msgstr "Sinistro"
+
+msgid "Right"
+msgstr "Destro"
+
+msgid "Mpg2"
+msgstr "Mpg2"
+
+msgid "h264"
+msgstr "h264"
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "Ntsc Jap"
+
+msgid "Ntsc 443"
+msgstr "Ntsc 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "SECAM"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "Ntsc BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr "1080p23"
+
+msgid "1080p24"
+msgstr "1080p24"
+
+msgid "1080p25"
+msgstr "1080p25"
+
+msgid "1080p29"
+msgstr "1080p29"
+
+msgid "1080p30"
+msgstr "1080p30"
+
+msgid "Source"
+msgstr ""
+
+msgid "1:1"
+msgstr "1:1"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "14:9"
+msgstr "14:9"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "20:9"
+msgstr "20:9"
+
+#, fuzzy
+msgid "Fill to Screen"
+msgstr "Adattare all'aspetto"
+
+msgid "Crop to Fill"
+msgstr "Ritagliare per adattare"
+
+msgid "Fill to Aspect"
+msgstr "Adattare all'aspetto"
+
+msgid "NL X"
+msgstr "NL X"
+
+msgid "NL Y"
+msgstr "NL Y"
+
+msgid "NL XY"
+msgstr "NL XY"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr "Tutti"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YPrPb"
+
+msgid "Deblock"
+msgstr "Deblock"
+
+msgid "Deblock & dering"
+msgstr "Deblock & dering"
+
+#, fuzzy
+#~ msgid "Dolby D offset"
+#~ msgstr "Offset MPA"
+
+#~ msgid "Ignore"
+#~ msgstr "Ignorare"
+
+#~ msgid "You will have to confirm changes to mode or output."
+#~ msgstr "E' necessario confermare le modifiche a modalità o output."
+
+#~ msgid "If your display doesn not support the new settings,"
+#~ msgstr "Se il display non supportasse la nuova configurazione,"
+
+#~ msgid "just wait for 20 seconds or press Exit to cancel"
+#~ msgstr "attendere 20 secondi o premere Exit per annullare"
+
+#~ msgid "the changes."
+#~ msgstr "le modifiche"

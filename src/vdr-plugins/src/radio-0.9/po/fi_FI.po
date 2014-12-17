@@ -1,0 +1,359 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 11:01+0100\n"
+"PO-Revision-Date: 2007-08-13 19:21+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "unknown program type"
+msgstr "tuntematon ohjelmatyyppi"
+
+msgid "News"
+msgstr "Uutiset"
+
+msgid "Current affairs"
+msgstr "ajankohtaista"
+
+msgid "Information"
+msgstr "tiedote"
+
+msgid "Sport"
+msgstr "urheilua"
+
+msgid "Education"
+msgstr "opetusohjelmaa"
+
+msgid "Drama"
+msgstr "draamaa"
+
+msgid "Culture"
+msgstr "kulttuuria"
+
+msgid "Science"
+msgstr "tiedeohjelma"
+
+msgid "Varied"
+msgstr "sekalaista"
+
+msgid "Pop music"
+msgstr "pop-musiikkia"
+
+msgid "Rock music"
+msgstr "rock-musiikkia"
+
+msgid "M.O.R. music"
+msgstr "taukomusiikkia"
+
+msgid "Light classical"
+msgstr "kevyttä klassista"
+
+msgid "Serious classical"
+msgstr "klassista"
+
+msgid "Other music"
+msgstr "musiikkia"
+
+msgid "Alarm"
+msgstr "Hälytys"
+
+msgid "ext. Info"
+msgstr ""
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radioteksti"
+
+msgid "  [waiting ...]"
+msgstr "  [odota ...]"
+
+msgid "Title :"
+msgstr "Kappale :"
+
+msgid "Artist :"
+msgstr "Esittäjä :"
+
+msgid "Records"
+msgstr "Rass-tallenteet"
+
+msgid "with <0>"
+msgstr "'0'-näppäimellä"
+
+msgid "Rass-Image(s) saved from Archiv "
+msgstr ""
+
+msgid "Rass-Image(s) saved from Gallery"
+msgstr ""
+
+msgid "Rass-Image saved"
+msgstr ""
+
+msgid "Rass-Image failed"
+msgstr ""
+
+msgid "Playlist"
+msgstr "Soittolista"
+
+msgid "Sports"
+msgstr "Urheilu"
+
+msgid "Lottery"
+msgstr "Arvonta"
+
+msgid "Weather"
+msgstr "Sää"
+
+msgid "Stockmarket"
+msgstr "Pörssikurssit"
+
+msgid "Other"
+msgstr "Sekalaiset"
+
+msgid "extra Info  since"
+msgstr ""
+
+msgid "RTplus Memory  since"
+msgstr "RTplus-muisti  alkaen"
+
+msgid "Programme"
+msgstr "Ohjelma"
+
+msgid "Stat.Short"
+msgstr ""
+
+msgid "Station"
+msgstr "Asema"
+
+msgid "Now"
+msgstr "Nyt"
+
+msgid "...Part"
+msgstr "...osa"
+
+msgid "Next"
+msgstr "Seuraavaksi"
+
+msgid "Host"
+msgstr "Juontaja"
+
+msgid "Edit.Staff"
+msgstr "Henkilökunta"
+
+msgid "Homepage"
+msgstr "Kotisivu"
+
+msgid "Interactivity"
+msgstr "Interaktiivinen"
+
+msgid "Phone-Hotline"
+msgstr "Suoralinja puhelimelle"
+
+msgid "Phone-Studio"
+msgstr "Puhelin studioon"
+
+#, fuzzy
+msgid "SMS-Studio"
+msgstr "Puhelin studioon"
+
+msgid "Email-Hotline"
+msgstr "Suoralinja sähköpostille"
+
+msgid "Email-Studio"
+msgstr "Sähköposti studioon"
+
+msgid "Info"
+msgstr "Lisätiedot"
+
+msgid "NewsLocal"
+msgstr "Paikallisuutiset"
+
+msgid "DateTime"
+msgstr "Ajankohtaista"
+
+msgid "Traffic"
+msgstr "Liikenne"
+
+msgid "Advertising"
+msgstr "Mainos"
+
+msgid "Url"
+msgstr "Linkki"
+
+msgid "Exit"
+msgstr "Lopeta"
+
+msgid "Info-File saved"
+msgstr ""
+
+msgid "RTplus-File saved"
+msgstr "RTplus-tiedosto tallennettu"
+
+msgid "last seen Radiotext"
+msgstr "viimeksi nähty radioteksti"
+
+msgid "Time"
+msgstr "Kellonaika"
+
+msgid "Title"
+msgstr "Kappale"
+
+msgid "Artist"
+msgstr "Esittäjä"
+
+msgid "Refresh Off"
+msgstr "Älä päivitä"
+
+msgid "Refresh On"
+msgstr "Päivitä"
+
+msgid "Back"
+msgstr "Takaisin"
+
+msgid "Radiochannels RDS-Text"
+msgstr ""
+
+msgid "RDS-Radiotext"
+msgstr ""
+
+msgid "Off"
+msgstr "pois"
+
+msgid "only Text"
+msgstr "vain teksti"
+
+msgid "Text+TagInfo"
+msgstr "teksti+tunniste"
+
+msgid "only, if some"
+msgstr "jos saatavilla"
+
+msgid "always"
+msgstr "aina"
+
+msgid "Top"
+msgstr "yläreuna"
+
+msgid "Bottom"
+msgstr "alareuna"
+
+msgid "latest at Top"
+msgstr "ylöspäin"
+
+msgid "latest at Bottom"
+msgstr "alaspäin"
+
+msgid "Black"
+msgstr "musta"
+
+msgid "White"
+msgstr "valkoinen"
+
+msgid "Red"
+msgstr "punainen"
+
+msgid "Green"
+msgstr "vihreä"
+
+msgid "Yellow"
+msgstr "keltainen"
+
+msgid "Magenta"
+msgstr "magenta"
+
+msgid "Blue"
+msgstr "sininen"
+
+msgid "Cyan"
+msgstr "syaani"
+
+msgid "Transparent"
+msgstr "läpinäkyvä"
+
+msgid "about MainMenu"
+msgstr "päävalikosta"
+
+msgid "Automatic"
+msgstr "automaattisesti"
+
+msgid "only Taginfo"
+msgstr "vain tunniste"
+
+msgid "Rass only"
+msgstr "vain Rass"
+
+msgid "Rass+Text mixed"
+msgstr "Teksti ja Rass"
+
+msgid "Activate"
+msgstr "Aktiivinen"
+
+msgid "Use StillPicture-Function"
+msgstr ""
+
+msgid "Hide MainMenuEntry"
+msgstr "Piilota valinta päävalikosta"
+
+msgid "RDSText Function"
+msgstr "RDS-tekstin toiminto"
+
+msgid "RDSText OSD-Position"
+msgstr "RDS-tekstin sijainti"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "RDS-tekstin kappale"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "RDS-tekstin rivimäärä"
+
+msgid "RDSText OSD-Scrollmode"
+msgstr "RDS-tekstin vieritystapa"
+
+msgid "RDSText OSD-Taginfo"
+msgstr "RDS-tekstin tunnistetiedot"
+
+msgid "RDSText OSD-Skincolors used"
+msgstr "Käytä RDS-tekstille ulkoasun värejä"
+
+msgid "RDSText OSD-Backgr.Color"
+msgstr "RDS-tekstin taustaväri"
+
+msgid "RDSText OSD-Backgr.Transp."
+msgstr "RDS-tekstin taustan läpinäkyvyys"
+
+msgid "RDSText OSD-Foregr.Color"
+msgstr "RDS-tekstin väri"
+
+msgid "RDSText OSD-Timeout (0-1440 min)"
+msgstr "RDS-tekstin odotusaika (0-1440min)"
+
+msgid "RDSText OSD-Display"
+msgstr "RDS-tekstin esitys"
+
+msgid "RDSText StatusMsg (lcdproc & co)"
+msgstr "RDS-tekstin toiminto laajennoksille"
+
+msgid "RDSText Rass-Function"
+msgstr "Käytä RDS-tekstin Rass-toimintoa"
+
+msgid "External Info-Request by Internet"
+msgstr ""
+
+msgid "External Info-Request"
+msgstr ""
+
+#~ msgid "Radio Background-Image/RDS-Text"
+#~ msgstr "Taustakuva ja RDS-teksti radiokanaville"
+
+#~ msgid "Show RDS-Radiotext"
+#~ msgstr "Näytä RDS-teksti"

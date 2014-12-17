@@ -1,0 +1,434 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Ruben Nunez Francisco <ruben.nunez@tang-it.com>, 2002
+# elpajare-Tododream.Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-burn\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 09:40+0200\n"
+"PO-Revision-Date: 2008-09-26 12:25+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Versatile convert-and-burn plugin"
+msgstr "Plugin versátil para convertir y grabar"
+
+msgid "Burn Recordings to DVD"
+msgstr "Pasar grabaciones a DVD"
+
+msgid "iso8859-15"
+msgstr "iso8859-15"
+
+msgid "Burn job active"
+msgstr "Grabar trabajo actual"
+
+msgid "Burn"
+msgstr "Grabar"
+
+msgid "Please enter the burn plugin"
+msgstr "Arranque el plugin de grabación"
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Inserte un disco vacío y presione OK"
+
+msgid "Job still active - really cancel?"
+msgstr "Tarea en curso - ¿desea cancelarla?"
+
+msgid "Burning DVD"
+msgstr "Grabando DVD"
+
+msgid "done"
+msgstr "Hecho"
+
+msgid "DVD with menus"
+msgstr "DVD con menús"
+
+msgid "DVD without menus"
+msgstr "DVD sin menús"
+
+msgid "Archive disk"
+msgstr "Guardar en disco"
+
+msgid "ISO file only"
+msgstr ""
+
+msgid "Disc"
+msgstr ""
+
+msgid "ISO file and Disc"
+msgstr ""
+
+msgid "No chapters"
+msgstr "Sin capítulos"
+
+msgid "Use editing marks"
+msgstr "Usar marcas de edición"
+
+msgid "Every 5 minutes"
+msgstr "Cada 5 minutos"
+
+msgid "Every 10 minutes"
+msgstr "Cada 10 minutos"
+
+msgid "Every 15 minutes"
+msgstr "Cada 15 minutos"
+
+msgid "Every 30 minutes"
+msgstr "Cada 30 minutos"
+
+msgid "Every hour"
+msgstr "Cada hora"
+
+msgid "none"
+msgstr "Ninguno"
+
+msgid "Couldn't convert character sets!"
+msgstr "¡No se pueden convertir estos caracteres!"
+
+msgid "Couldn't open image file!"
+msgstr "¡No se puede abrir esta imágen!"
+
+msgid "Couldn't create new image!"
+msgstr "¡No se puede crear nueva imágen!"
+
+msgid "Couldn't render menu images!"
+msgstr "¡No se puede encontrar el menú de imágenes!"
+
+msgid "Couldn't save image file!"
+msgstr "¡No se puede guardar esta imágen!"
+
+msgid "Recording too big for disc type!"
+msgstr "¡La grabación ocupa demasiado espacio!"
+
+msgid "Disc too big for disc type!"
+msgstr "¡El disco es demasiado grande!"
+
+msgid "A job failed!"
+msgstr "¡Tarea frustrada!"
+
+msgid "A job was finished successfully."
+msgstr "La tarea acabó satisfactoriamente"
+
+msgid "Recordings"
+msgstr "Grabaciones"
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "Title of recording"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+msgid "Move down"
+msgstr "Mover abajo"
+
+msgid "Track$Off"
+msgstr "Off"
+
+msgid "Track$On"
+msgstr "On"
+
+msgid "Language code"
+msgstr "Código idioma"
+
+msgid "Choose title"
+msgstr "Escoger título"
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "$Grabaciones: %1$d, tamaño total: %2$.1f MB"
+
+msgid "Write DVD"
+msgstr "Grabar DVD"
+
+msgid "Select recordings for burning with 'OK'"
+msgstr ""
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr "Medio recomendado: %s"
+
+# fuzzy
+msgid "Only archive disk possible"
+msgstr "Sólo es posible usar disco grabable"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Button$Burn"
+msgstr "Grabar"
+
+msgid "Select recording with > OK <"
+msgstr "Seleccionar grabación con > OK <"
+
+msgid "Analyzing recording..."
+msgstr "Analizando grabación..."
+
+msgid "Job"
+msgstr "Tarea"
+
+msgid "DVD title"
+msgstr "Título DVD"
+
+msgid "Archive-ID"
+msgstr "ID archivo"
+
+msgid "Recordings scheduled to be burnt are:"
+msgstr ""
+
+msgid "No recordings marked"
+msgstr "No hay grabaciones marcadas"
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please press the blue key to select recording."
+msgstr ""
+
+msgid "Remove"
+msgstr "Borrar"
+
+msgid "Details"
+msgstr ""
+
+msgid "Button$Cancel"
+msgstr "Cancelar"
+
+msgid "No video track selected!"
+msgstr "¡No hay pista de video seleccionada!"
+
+msgid "No audio track selected!"
+msgstr "¡No hay pista de audio seleccionada!"
+
+msgid "Not enough free disk space!"
+msgstr "¡No hay suficiente espacio libre en disco!"
+
+msgid "Remove recording from list?"
+msgstr "¿Borrar grabación de la lista?"
+
+msgid "Remove all recordings from list?"
+msgstr ""
+
+msgid "Status"
+msgstr "Estado"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Tarea activa (grabando: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Tarea activa (convirtiendo: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Tarea activa (grabando)"
+
+msgid "Job active (Converting)"
+msgstr "Tarea activa (convirtiendo)"
+
+msgid "No active or waiting jobs present"
+msgstr "No hay tareas activas ni pendientes"
+
+msgid "Canceled jobs"
+msgstr "Tareas canceladas"
+
+msgid "Erroneous jobs"
+msgstr "Tareas erróneas"
+
+msgid "Button$Recordings"
+msgstr "Grabaciones"
+
+msgid "Restart"
+msgstr "Reiniciar"
+
+msgid "Retry"
+msgstr "Reintentar"
+
+msgid "Button$Remove"
+msgstr "Borrar"
+
+msgid "Replace current job?"
+msgstr "¿Sustituir tarea actual?"
+
+msgid "Remove job from list?"
+msgstr "¿Borrar tarea de la lista?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Tamaño total: %1$.1f MB %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(será reducido)"
+
+msgid "Aspect ratio"
+msgstr "Relación/aspecto"
+
+msgid "Previous page"
+msgstr "Página anterior"
+
+msgid "Next page"
+msgstr "Página siguiente"
+
+msgid "Play movie"
+msgstr "Reproducir película"
+
+msgid "Button$Back"
+msgstr "Atrás"
+
+msgid "Couldn't read index"
+msgstr "No se puede leer el índice"
+
+msgid "Couldn't browse recording"
+msgstr "No se pueden abrir las grabaciónes"
+
+msgid "mp2"
+msgstr ""
+
+msgid "dolby"
+msgstr "Dolby"
+
+msgid "Couldn't read marks"
+msgstr "No se pueden leer las marcas"
+
+msgid "Recording is too short"
+msgstr "La grabación es demasiado breve"
+
+msgid "Disk type"
+msgstr "Tipo de disco"
+
+msgid "Write to"
+msgstr ""
+
+msgid "Burn speed"
+msgstr "Velocidad de grabación"
+
+msgid "unlimited"
+msgstr "Ilimitado"
+
+msgid "Skin"
+msgstr "Skin"
+
+msgid "Chapters"
+msgstr "Capítulos"
+
+msgid "Cut"
+msgstr "Cortar"
+
+msgid "Skip empty titlemenu"
+msgstr "Omitir título de menú vacío"
+
+msgid "Skip short mainmenu"
+msgstr "Omitir menú principal corto"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Configuraciones generales ---------------------------------------"
+
+msgid "Remove path component"
+msgstr "Borrar componente path"
+
+msgid "Eject disc after burn"
+msgstr "Expulsar disco al acabar"
+
+msgid "Demux using"
+msgstr "Usando demux"
+
+msgid "Requant using"
+msgstr "Usando requant"
+
+msgid "Preserve logfiles"
+msgstr "Mantener archivos log"
+
+msgid "Spare language code"
+msgstr "Código de idioma sobrante"
+
+msgid "Status in main menu"
+msgstr "Estado en menú principal"
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Tareas por defecto ----------------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Menú de configuración de tareas ---------------------------------"
+
+msgid "Offer disk type"
+msgstr "Ofrecer tipo de disco"
+
+msgid "Offer chapters"
+msgstr "Ofrecer capítulos"
+
+msgid "Offer target"
+msgstr "Ofrecer destino"
+
+msgid "Offer burn speed"
+msgstr "Ofrecer velocidad grabación"
+
+msgid "Offer cutting"
+msgstr "Ofrecer cortes"
+
+msgid "Offer skip titlemenu"
+msgstr "Ofrecer omitir título del menú"
+
+msgid "Offer skip mainmenu"
+msgstr "Ofrecer omitir menú principal"
+
+msgid "Job options"
+msgstr "Opciones de tarea"
+
+msgid "Please select burn options below:"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+msgid "skip"
+msgstr ""
+
+msgid "Button$Start"
+msgstr "Inicio"
+
+msgid "Default"
+msgstr "Por defecto"
+
+msgid "Video track"
+msgstr "Pista de vídeo"
+
+msgid "Audio track"
+msgstr "Pista de audio"
+
+msgid "Subtitle track"
+msgstr ""
+
+msgid "page"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Desconocido"
+
+#~ msgid "No recordings marked for burning"
+#~ msgstr "No hay pistas marcadas para grabar"
+
+#~ msgid "Create ISO only"
+#~ msgstr "Crear ISO sólamente"
+
+#~ msgid "Write to Disc"
+#~ msgstr "Grabar en disco"
+
+#~ msgid "Create ISO and write"
+#~ msgstr "Crear un ISO y grabar"
+
+#~ msgid "analog"
+#~ msgstr "Analóg"
+
+#~ msgid "Disk content"
+#~ msgstr "Contenido del disco"
+
+#, fuzzy
+#~ msgid "Format DVD"
+#~ msgstr "Grabar DVD"

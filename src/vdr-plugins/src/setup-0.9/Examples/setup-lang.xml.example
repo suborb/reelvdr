@@ -1,0 +1,89 @@
+<? xml version="1.0" standalone="no" ?>
+
+<!-- Translation Table for setupPlugin -->
+
+<lang language="deu">
+    <item entry="Misc">Sonstiges</item>
+    <item entry="Add Ons">Zubehör</item>
+    <item entry="Hardware">Geräte</item>
+    <item entry="Activate Network">Netzwerk Aktivieren</item>
+    <item entry="Network">Netzwerk</item>
+    <item entry="Power Save">Inaktivität</item>
+    <item entry="Using DHCP">Benutze DHCP</item>
+    <item entry="IP Address">IP-Adress</item>
+    <item entry="Gateway">Gateway</item>
+    <item entry="Nameserver">Nameserver</item>
+    <item entry="Nameserver 2">Nameserver 2</item>
+    <item entry="Domaine">Netzwerkname</item>
+    <item entry="Hostname">Rechner Name</item>
+    <item entry="Windows Network Client">Windows Netwerk Anbindung</item>
+    <item entry="Start Samba Client">Starte Samba</item>
+    <item entry="Account">Zugangsname</item>
+    <item entry="User Name">Benutzername</item>
+    <item entry="Networkmask">Netzwerkmaske</item>
+    <item entry="Passwords">Passwort</item>
+    <item entry="Windows Host">Windows Rechner</item>
+    <item entry="NFS Client">Linux NFS Anbindung</item>
+    <item entry="Start Linux NFS Client">Starte Linux NFS Anbindung</item>
+</lang>
+<lang language="fra">
+    <item entry="Network">réseau</item>
+    <item entry="Using DHCP">Utiliser DHCP</item>
+    <item entry="Start Samba Client">lancer Samba</item>
+    <item entry="IP Address">IP-Adresse</item>
+    <item entry="Networkmask">Masque réseau</item>
+    <item entry="Gateway">Routeur</item>
+    <item entry="Nameserver">Serveur DNS</item>
+    <item entry="Nameserver 2">Serveur DNS 2</item>
+    <item entry="Domaine">Domaine</item>
+    <item entry="Hostname">nom de machine</item>
+    <item entry="Windows Network Client">Windows réseau connexion</item>
+    <item entry="Windows Host">Windows client</item>
+    <item entry="Account">Account</item>
+    <item entry="User Name">Nome de usager</item>
+    <item entry="Passwords">mot de passe</item>
+    <item entry="NFS Client">Linux NFS connexion</item>
+    <item entry="Start Linux NFS Client">lancer Linux NFS</item>
+    <item entry="Host/IP">adresse de machine local</item>
+</lang>
+<lang language="ita">
+    <item entry="Add Ons">Extras / Sonstiges</item>
+    <item entry="Network">Rete</item>
+    <item entry="Using DHCP">Nutzing DHCP</item>
+    <item entry="IP Address">IP-Adress</item>
+    <item entry="Networkmask">Netzwerkmaske</item>
+    <item entry="Gateway">Gateway</item>
+    <item entry="Nameserver">Nameserver</item>
+    <item entry="Nameserver 2">Nameserver 2</item>
+    <item entry="Domaine">Netzwerkname</item>
+    <item entry="Hostname">Rechner Name</item>
+    <item entry="Windows Network Client">Windows Netwerk Anbindung</item>
+    <item entry="Start Samba Client">Starte Samba</item>
+    <item entry="Windows Host">Windows Rechner</item>
+    <item entry="Account">Akonto de </item>
+    <item entry="User Name">Benutzername</item>
+    <item entry="Passwords">Passwort</item>
+    <item entry="NFS Client">Linux NFS Anbindung</item>
+    <item entry="Start Linux NFS Client">Starte Linux NFS Anbindung</item>
+    <item entry="Host/IP">Lokale IP Adresse</item>
+</lang>
+<lang language="sve">
+    <item entry="Network">Netzwerka</item>
+    <item entry="Using DHCP">Nutzing DHCP</item>
+    <item entry="IP Address">IP-Adress</item>
+    <item entry="Networkmask">Netzwerkmaske</item>
+    <item entry="Gateway">Gateway</item>
+    <item entry="Nameserver">Nameserver</item>
+    <item entry="Nameserver 2">Nameserver 2</item>
+    <item entry="Domaine">Netzwerkname</item>
+    <item entry="Hostname">Rechner Name</item>
+    <item entry="Windows Network Client">Windows Netwerk Anbindung</item>
+    <item entry="Start Samba Client">Starte Samba</item>
+    <item entry="Windows Host">Windows Rechner</item>
+    <item entry="Account">Freigabename</item>
+    <item entry="User Name">Benutzername</item>
+    <item entry="Passwords">Passwort</item>
+    <item entry="NFS Client">Linux NFS Anbindung</item>
+    <item entry="Start Linux NFS Client">Starte Linux NFS Anbindung</item>
+    <item entry="Host/IP">Lokale IP Adresse</item>
+</lang>

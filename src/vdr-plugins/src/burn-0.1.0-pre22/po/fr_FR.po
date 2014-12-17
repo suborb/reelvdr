@@ -1,0 +1,417 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <<vdr@smue.org>>\n"
+"POT-Creation-Date: 2008-08-12 12:23+0200\n"
+"PO-Revision-Date: 2008-04-09 10:59+0200\n"
+"Last-Translator: Nicolas Huillard <nhuillard@e-dition.fr>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Archive recordings"
+msgstr ""
+
+msgid "iso8859-15"
+msgstr ""
+
+msgid "Burn job active"
+msgstr "Tâche de gravure est active"
+
+msgid "Please enter the burn plugin"
+msgstr ""
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Veuilliez introduire un DVD vierge et appuyez sur OK"
+
+msgid "Job still active - really cancel?"
+msgstr "Tâche encore active - vraiment intérompre?"
+
+msgid "DVD with menus"
+msgstr "DVD avec menu"
+
+msgid "DVD without menus"
+msgstr ""
+
+msgid "Archive disk"
+msgstr "Disque archive"
+
+msgid "Create ISO only"
+msgstr "Créer seulement l'image"
+
+msgid "Write to Disc"
+msgstr "Seulement graver"
+
+msgid "Create ISO and write"
+msgstr "Créer l'image et graver"
+
+msgid "No chapters"
+msgstr "Pas de chapitre"
+
+msgid "Use editing marks"
+msgstr "Utiliser les marques de coupe"
+
+msgid "Every 5 minutes"
+msgstr "Toute les 5 minutes"
+
+msgid "Every 10 minutes"
+msgstr "Toute les 10 minutes"
+
+msgid "Every 15 minutes"
+msgstr "Tout les 1/4 d'heures"
+
+msgid "Every 30 minutes"
+msgstr "Toute les 1/2 heures"
+
+msgid "Every hour"
+msgstr "Toutes les heures"
+
+msgid "CD-R"
+msgstr "CD-R"
+
+msgid "Single Layer"
+msgstr "Simple couche"
+
+msgid "Double Layer"
+msgstr "Double couche"
+
+msgid "BlueRay"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "CD-R (700MB)"
+msgstr ""
+
+msgid "DVD (4.7GB)"
+msgstr ""
+
+msgid "DVD-DL (8.5GB)"
+msgstr ""
+
+msgid "BlueRay (25GB)"
+msgstr ""
+
+msgid "BlueRay (50GB)"
+msgstr ""
+
+msgid "VDRSync"
+msgstr "VDRSync"
+
+msgid "ProjectX"
+msgstr "ProjectX"
+
+msgid "Replex"
+msgstr ""
+
+msgid "M2VRequantizer"
+msgstr ""
+
+msgid "Transcode"
+msgstr ""
+
+msgid "Don't requant"
+msgstr ""
+
+msgid "Couldn't convert character sets!"
+msgstr ""
+
+msgid "Couldn't open image file!"
+msgstr ""
+
+msgid "Couldn't create new image!"
+msgstr ""
+
+msgid "Couldn't render menu images!"
+msgstr ""
+
+msgid "Couldn't save image file!"
+msgstr ""
+
+msgid "Recording too big for disc type!"
+msgstr "Enregistrement trop volumineux pour ce type de disque!"
+
+msgid "Disc too big for disc type!"
+msgstr ""
+
+msgid "A job failed!"
+msgstr "La tâche a echouée!"
+
+msgid "A job was finished successfully."
+msgstr "La tâche est accomplie."
+
+msgid "Recordings"
+msgstr "enregistrement"
+
+msgid "Burn"
+msgstr "Liste"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Move down"
+msgstr "Vers en bas"
+
+msgid "Track$Off"
+msgstr ""
+
+msgid "Track$On"
+msgstr ""
+
+msgid "Language code"
+msgstr ""
+
+msgid "Choose title"
+msgstr ""
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "Enregistrements: %1$d, Taille totale: %2$.1fMo"
+
+msgid "No recordings marked for burning"
+msgstr "Aucun enregistrement marqué pour la gravure"
+
+msgid "Write DVD"
+msgstr "Gravure DVD"
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr ""
+
+msgid "Only archive disk possible"
+msgstr ""
+
+msgid "Mark"
+msgstr "Choisir"
+
+msgid "Analyzing recording..."
+msgstr "Analyser l'enregistrement..."
+
+msgid "Job"
+msgstr "Tâche"
+
+msgid "DVD title"
+msgstr "Titre du DVD"
+
+msgid "Archive-ID"
+msgstr "ID-Archive"
+
+msgid "Options"
+msgstr ""
+
+msgid "No recordings marked"
+msgstr "Pas d'enregistrements marqués pour la gravure"
+
+msgid "Button$Start"
+msgstr "Graver"
+
+msgid "Remove"
+msgstr "Enlever"
+
+msgid "No video track selected!"
+msgstr "Pas de piste vidéo sélectionnée!"
+
+msgid "No audio track selected!"
+msgstr "Pas de piste audio sélectionnée!"
+
+msgid "Not enough free disk space!"
+msgstr "Pas assez d'espace disponible sur le disque!"
+
+msgid "Remove recording from list?"
+msgstr "Enlever l'enregistrement de la liste?"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Travail actif (Gravure:  %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Tâche active (convertion: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Travail actif (Gravure)"
+
+msgid "Job active (Converting)"
+msgstr "Tâche active (convertion)"
+
+msgid "No active or waiting jobs present"
+msgstr "Pas de tâches où d'activés présente"
+
+msgid "Canceled jobs"
+msgstr "Tâches imterrompues"
+
+msgid "Erroneous jobs"
+msgstr "Tâches erronée"
+
+msgid "Restart"
+msgstr "Repris"
+
+msgid "Retry"
+msgstr "Répéter"
+
+msgid "Cancel"
+msgstr "Interrompre"
+
+msgid "Replace current job?"
+msgstr "Remplacer le travail actuel?"
+
+msgid "Remove job from list?"
+msgstr "Enlever la tâche de la liste?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Volume total: %1$.1f MO %2$s"
+
+msgid "(would be shrinked)"
+msgstr ""
+
+msgid "Aspect ratio"
+msgstr ""
+
+msgid "Previous page"
+msgstr "La page précédante"
+
+msgid "Next page"
+msgstr "La prochaine page"
+
+msgid "Play movie"
+msgstr "Regarder le film"
+
+msgid "Back"
+msgstr "retour"
+
+msgid "Couldn't read index"
+msgstr ""
+
+msgid "Couldn't browse recording"
+msgstr ""
+
+msgid "analog"
+msgstr ""
+
+msgid "dolby"
+msgstr ""
+
+msgid "Couldn't read marks"
+msgstr ""
+
+msgid "Recording is too short"
+msgstr ""
+
+msgid "Target"
+msgstr "Cible"
+
+msgid "Burn speed"
+msgstr "Vitesse de gravure"
+
+msgid "unlimited"
+msgstr "sans limite"
+
+msgid "Process priority"
+msgstr ""
+
+msgid "Disk type"
+msgstr "Genre de DVD"
+
+msgid "DMH-archive"
+msgstr "Archivage DMH"
+
+msgid "Skin"
+msgstr "Apparence"
+
+msgid "Chapters"
+msgstr "Chapitre"
+
+msgid "Cut"
+msgstr "Couper"
+
+msgid "Skip empty titlemenu"
+msgstr ""
+
+msgid "Skip short mainmenu"
+msgstr ""
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr ""
+
+msgid "Remove path component"
+msgstr "Couper de chemin"
+
+msgid "Eject disc after burn"
+msgstr ""
+
+msgid "Demux using"
+msgstr "Demultipléxeur"
+
+msgid "Requant using"
+msgstr ""
+
+msgid "Preserve logfiles"
+msgstr ""
+
+msgid "Spare language code"
+msgstr ""
+
+msgid "Status in main menu"
+msgstr ""
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr ""
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr ""
+
+msgid "Offer disk type"
+msgstr ""
+
+msgid "Offer chapters"
+msgstr "Proposer les chapitres"
+
+msgid "Offer target"
+msgstr "Proposer la cible"
+
+msgid "Offer burn speed"
+msgstr ""
+
+msgid "Offer process prio"
+msgstr ""
+
+msgid "Offer cutting"
+msgstr "Proposer la coupe"
+
+msgid "Offer DMH-archive"
+msgstr "Proposer l'archivage DMH"
+
+msgid "Offer skip titlemenu"
+msgstr ""
+
+msgid "Offer skip mainmenu"
+msgstr ""
+
+msgid "Job options"
+msgstr ""
+
+msgid "Default"
+msgstr "Par défaut"
+
+msgid "Video track"
+msgstr "Piste vidéo"
+
+msgid "Audio track"
+msgstr "Piste audio"
+
+msgid "Unknown"
+msgstr "inconnue"
+
+#~ msgid "Versatile convert-and-burn plugin"
+#~ msgstr "Plugin convertiseur et graveur universel"

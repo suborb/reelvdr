@@ -1,0 +1,551 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Delete recording?"
+msgstr "Suprimir gravació?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+msgid "Directory Selector"
+msgstr "Selector de carpetes"
+
+msgid "up"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgid "Move"
+msgstr "Desplaça"
+
+msgid "Rec Dir"
+msgstr "Carpeta Gravac."
+
+msgid "Button$Create"
+msgstr "Crea"
+
+msgid "Cannot move into its own sub folder"
+msgstr "No s'ha pogut desplaçar a la pròpia subcarpeta"
+
+msgid "Cannot write into directory"
+msgstr "No s'ha pogut escriure a la carpeta"
+
+msgid "Moving Recording"
+msgstr "S'està desplaçant la gravació"
+
+msgid "Moving Directories"
+msgstr "S'estan desplaçant les carpetes"
+
+msgid "Move failed. Not enough free space"
+msgstr "El desplaçament ha fallat. No hi ha prou espai al disc"
+
+#, fuzzy
+msgid "Copying started"
+msgstr "s'ha iniciat"
+
+#, fuzzy
+msgid "Cannot copy into its own sub folder"
+msgstr "No s'ha pogut desplaçar a la pròpia subcarpeta"
+
+#, fuzzy
+msgid "Copy failed. Not enough free space"
+msgstr "El desplaçament ha fallat. No hi ha prou espai al disc"
+
+msgid "Create directory"
+msgstr "Crea Carpeta"
+
+msgid "New"
+msgstr "Nova"
+
+msgid "To create a new directory press 'OK':"
+msgstr "Per crear una carpeta nova premeu 'OK':"
+
+msgid "Directory Name"
+msgstr "Nom de la carpeta"
+
+msgid "Note:"
+msgstr "Nota:"
+
+msgid "Directory will only be shown with"
+msgstr "Les carpetes només es mostraran si"
+
+msgid "recordings inside."
+msgstr "contenen gravacions."
+
+msgid "Created"
+msgstr "Creada"
+
+msgid "Failed"
+msgstr "S'ha produït un error"
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr "HDD Intern"
+
+msgid "External Media"
+msgstr "Suport Extern"
+
+msgid "Please select the drive where to move the recording:"
+msgstr "Si us plau, seleccioneu la unitat on es mouran les gravacions:"
+
+msgid "Select Media"
+msgstr "Selecciona Suport"
+
+msgid "Could not open media"
+msgstr "No s'ha pogut obrir el suport"
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr "Canvia el títol"
+
+msgid "Title"
+msgstr "Títol"
+
+msgid "Episode"
+msgstr "Episodi"
+
+msgid "Invalid title!"
+msgstr "Títol no vàlid!"
+
+msgid "Invalid episode!"
+msgstr "Episodi no vàlid!"
+
+msgid "Rename directory"
+msgstr "Canvia el nom de la carpeta"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Invalid filename!"
+msgstr "Nom de fitxer no vàlid!"
+
+msgid "Creating directories failed!"
+msgstr "No s'han pogut crear les carpetes!"
+
+msgid "New folder"
+msgstr "Nova carpeta"
+
+msgid "Button$Cancel"
+msgstr "Cancel·la"
+
+msgid "Button$Move"
+msgstr "Desplaça"
+
+msgid "Move recording"
+msgstr "Desplaça gravació"
+
+msgid "[base dir]"
+msgstr "[dir base]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "El sistema de fitxers ha fallat - Tornar-ho a provar?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "No està permès el desplaçament a una subcarpeta pròpia!"
+
+msgid "Can't get filesystem information"
+msgstr "No es pot llegir la informació del sistema de fitxers"
+
+msgid "Details"
+msgstr "Detalls"
+
+msgid "low"
+msgstr "baixa"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "alta"
+
+msgid "Priority"
+msgstr "Prioritat"
+
+msgid "Lifetime"
+msgstr "Durada"
+
+msgid "unlimited"
+msgstr "il·limitada"
+
+msgid "Info:"
+msgstr "Info:"
+
+msgid "In this menu you can adjust the point in time"
+msgstr "Des d'aquest menú podeu ajustar el moment"
+
+msgid "a recording gets deleted automatically."
+msgstr "quan una gravació es suprimeix automàticament."
+
+msgid "Recording info"
+msgstr "Informació de la gravació"
+
+msgid "Button$Play"
+msgstr "Reprodueix"
+
+msgid "Button$Rewind"
+msgstr "Rebobina"
+
+msgid "Large picture"
+msgstr ""
+
+msgid "Path"
+msgstr "Camí"
+
+msgid "Channel"
+msgstr "Canal"
+
+msgid "Size"
+msgstr "Mida"
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "S'està suprimint la gravació ..."
+
+msgid "Error while mounting DVD!"
+msgstr "S'ha produït un error mentre es muntava el DVD!"
+
+msgid "Recordings"
+msgstr "Gravacions"
+
+msgid "free"
+msgstr "lliure"
+
+msgid "Button$Functions"
+msgstr "Funcions"
+
+msgid "Total"
+msgstr ""
+
+msgid "Last recording"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr "S'ha produït un error en accedir a la gravació!"
+
+msgid "PIN code: "
+msgstr "Codi PIN: "
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Si us plau, inseriu un DVD %s"
+
+msgid "DVD plugin is not installed!"
+msgstr "No s'ha instal·lat el connector DVD!"
+
+msgid "No DVD in drive!"
+msgstr "No hi ha cap DVD a la unitat!"
+
+msgid "Recording not found on DVD!"
+msgstr "No s'ha trobat la gravació al DVD!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "S'ha produït un error mentre enllaçava [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "S'ha produït un error de tipus sudo o mount --bind / umount (sistema vfat)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "No s'ha trobat l'script 'dvdarchive.sh'!"
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Crea Carpeta"
+
+msgid "Timer still recording - really delete?"
+msgstr "La gravació és activa -  Voleu suprimir-la?"
+
+msgid "Error while deleting recording!"
+msgstr "S'ha produït un error en suprimir la gravació!"
+
+msgid "Recording commands"
+msgstr "Ordres de gravació"
+
+msgid "Sort by date"
+msgstr "Ordena per data"
+
+msgid "Sort by name"
+msgstr "Ordena per nom"
+
+msgid "Show title"
+msgstr ""
+
+msgid "Show directory name"
+msgstr ""
+
+msgid "Invalid PIN"
+msgstr "PIN no vàlid"
+
+msgid "PIN Aborted"
+msgstr "PIN Interromput"
+
+msgid "Cancel moving?"
+msgstr "Cancel·lar desplaçament?"
+
+msgid "Cancel editing?"
+msgstr "Cancel·lar edició?"
+
+msgid "ascending"
+msgstr "ascendent"
+
+msgid "descending"
+msgstr "descendent"
+
+msgid "Show recording date"
+msgstr "Mostra la data de gravació"
+
+msgid "Show recording time"
+msgstr "Mostra l'hora de la gravació"
+
+msgid "Show recording length"
+msgstr "Mostra la durada de la gravació"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Mostra el nombre de noves gravacions d'una carpeta"
+
+msgid "Show alternative to new marker"
+msgstr "Mostra marcadors alternatius"
+
+msgid "Show free disk space for each file system"
+msgstr "Mostra l'espai de disc disponible"
+
+msgid "Sorting"
+msgstr "S'està ordenant"
+
+msgid "Hide main menu entry"
+msgstr "Oculta entrada al menú principal"
+
+msgid "Replace original recordings menu"
+msgstr "Substitueix el menú original de gravacions"
+
+msgid "Jump to last played recording"
+msgstr "Salta a l'última gravació reproduïda"
+
+msgid "Show recordings menu after playback"
+msgstr "Mostra el menú de gravacions després de la reproducció"
+
+msgid "Patch font"
+msgstr "Revisió de la font"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+msgid "Limit bandwidth when moving recordings"
+msgstr "Limita l'amplada de banda quan es mouen gravacions"
+
+msgid "Use cutter queue"
+msgstr "Utilitza la cua d'edició"
+
+msgid "Undelete Recordings"
+msgstr "Gravacions recuperades"
+
+msgid "No recordings to undelete!"
+msgstr "No hi ha gravacions per recuperar!"
+
+msgid "Button$Remove"
+msgstr "Suprimeix"
+
+msgid "Button$Undelete"
+msgstr "Recupera"
+
+msgid "Remove recording from disk?"
+msgstr "Suprimir la gravació del disc?"
+
+msgid "Removing recording ..."
+msgstr "S'està suprimint la gravació ..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Ho sento! No es possible recuperar la gravació!"
+
+msgid "Button$Back"
+msgstr "Enrere"
+
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "No es pot editar la gravació quan no es troba a la carpeta Vídeo"
+
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "S'ha afegit una gravació a la cua d'edició"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr "No es poden editar gravacions al Netclient sense un servidor Avantgarde"
+
+msgid "Recording already in cutter queue!"
+msgstr "La gravació ja és a la cua d'edició!"
+
+msgid "No editing marks defined!"
+msgstr "No hi ha marques d'edició definides!"
+
+msgid "Added recording to cutter queue"
+msgstr "S'ha afegit una gravació a la cua d'edició"
+
+msgid "Not enough space on harddisk!"
+msgstr "No hi ha prou espai al disc dur!"
+
+msgid "Rename/Move failed!"
+msgstr "Canviar nom/Desplaça ha fallat!"
+
+msgid "Cutter queue not empty"
+msgstr "La cua d'edició no és buida"
+
+msgid "Move recordings in progress"
+msgstr "S'estan desplaçant les gravacions"
+
+msgid "Can't start editing process!"
+msgstr "No es pot iniciar el procés d'edició!"
+
+msgid "Cutting"
+msgstr "S'està editant"
+
+msgid "Moving"
+msgstr "S'està desplaçant"
+
+msgid "started"
+msgstr "s'ha iniciat"
+
+msgid "Cancelled"
+msgstr "S'ha cancel·lat"
+
+msgid "Completed"
+msgstr "S'ha acabat"
+
+#, fuzzy
+msgid "Copying"
+msgstr "S'està desplaçant"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "s'està desplaçant la gravació"
+
+msgid "Copy failed!"
+msgstr ""
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "Aquesta versió d'extrecmenu no suporta aquest servei!"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "ExtRecMenu no s'ha instal·lat!"
+
+msgid "Extended recordings menu"
+msgstr "Menú addicional de gravacions"
+
+msgid "Rename"
+msgstr "Canvia el nom"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "s'està desplaçant la gravació"
+
+msgid "Mark as new"
+msgstr ""
+
+#~ msgid "Button$Open"
+#~ msgstr "Obre"
+
+#~ msgid "moving recording"
+#~ msgstr "s'està desplaçant la gravació"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Recupera"
+
+#, fuzzy
+#~ msgid "Set Title"
+#~ msgstr "Títol"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Detalls"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Edita"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Canvia de nom"
+
+#~ msgid "Create"
+#~ msgstr "Crea"
+
+#~ msgid "Create new directory:"
+#~ msgstr "Crea una carpeta nova"

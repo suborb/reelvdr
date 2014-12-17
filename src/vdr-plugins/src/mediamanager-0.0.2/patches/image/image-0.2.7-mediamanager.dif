@@ -1,0 +1,440 @@
+diff -urN image-0.2.7.orig/control-image.c image-0.2.7/control-image.c
+--- image-0.2.7.orig/control-image.c	2006-01-27 20:42:55.000000000 +0100
++++ image-0.2.7/control-image.c	2007-03-24 17:17:20.000000000 +0100
+@@ -29,6 +29,7 @@
+ #include "i18n.h"
+ #include "menu-commands.h"
+ #include "list.h"
++#include "mediaservice.h"
+ 
+ #ifdef HAVE_LIBEXIF
+ #include "exif.h"
+@@ -42,14 +43,16 @@
+ // --- cImageControl ---------------------------------------------------------
+ 
+ char* cImageControl::m_szLastShowStatusMsg = 0;
++bool cImageControl::replaysFromMedia = false;
+ 
+-void cImageControl::SetSlideShow(cSlideShow * pNewSlideShow)
++void cImageControl::SetSlideShow(cSlideShow * pNewSlideShow, bool FromMedia)
+ {
+   // Remove old session
+   if(cControl::Control())
+   	cControl::Shutdown();
+ 
+   if(pNewSlideShow) {
++    replaysFromMedia = FromMedia;
+     cImageControl* pControl = new cImageControl(pNewSlideShow);
+     cControl::Launch(pControl);
+   }
+@@ -64,6 +67,8 @@
+ {
+   // Notity all cStatusMonitor
+   cStatus::MsgReplaying(this, "image", NULL, true );
++  if(replaysFromMedia)
++    cMediaService::SetReplaying(true);
+   
+   m_tStarted = time(NULL);
+   
+@@ -91,6 +96,10 @@
+ {
+   // Notity cleanup all cStatusMonitor
+   cStatus::MsgReplaying(this, "image", NULL, false);
++  if(replaysFromMedia) {
++    cMediaService::SetReplaying(false);
++    replaysFromMedia = false;
++    }
+   // Free OSD Data
+   Hide();
+   // Stop Playback
+diff -urN image-0.2.7.orig/control-image.h image-0.2.7/control-image.h
+--- image-0.2.7.orig/control-image.h	2006-01-19 17:28:08.000000000 +0100
++++ image-0.2.7/control-image.h	2007-03-24 17:14:05.000000000 +0100
+@@ -117,7 +117,7 @@
+   int ImageTotal(void) const;
+   /** Deliver the filename from the current number of viewed Image */
+   const char* FileName() const;
+-  
++  static bool replaysFromMedia;
+   /** Check if key for pluginstop was processed*/
+   eOSState ProcessKeyStopped();
+   /** Toogle between all supported OSD Modes */
+@@ -158,7 +158,7 @@
+ public:
+   virtual ~ cImageControl();
+ 
+-  static void SetSlideShow(cSlideShow * pNewSlideShow);
++  static void SetSlideShow(cSlideShow * pNewSlideShow, bool FromMedia = false);
+ 
+   virtual eOSState ProcessKey(eKeys Key);
+   virtual void Hide(void);
+diff -urN image-0.2.7.orig/image.c image-0.2.7/image.c
+--- image-0.2.7.orig/image.c	2006-05-19 05:34:37.000000000 +0200
++++ image-0.2.7/image.c	2007-04-07 16:48:58.000000000 +0200
+@@ -36,6 +36,74 @@
+ #include "i18n.h"
+ #include "commands.h"
+ #include "liboutput/encode.h"
++#include "mediaservice.h"
++
++// --- cMediaService --------------------------------------------------------
++cPlugin *cMediaService::manager = NULL;
++bool cMediaService::active = false;
++bool cMediaService::replaying = false;
++
++cMediaService::cMediaService(void)
++{
++  manager = NULL;
++}
++
++cMediaService::~cMediaService(void)
++{
++  manager = NULL;
++}
++
++void cMediaService::SetManager(cPlugin *Manager)
++{
++  manager = Manager;
++}
++
++bool cMediaService::HaveManager(void)
++{
++  if(manager) return true;
++  return false;
++}
++
++void cMediaService::SetReplaying(bool Replaying)
++{
++  if(manager && active) {
++    MediaManager_Status_v1_0 st;
++    st.set = true;
++    st.flags = MEDIA_STATUS_REPLAY;
++    st.isreplaying = Replaying;
++    manager->Service(MEDIA_MANAGER_STATUS_ID, &st);
++    replaying = Replaying;
++    }
++   else
++     replaying = false;
++}
++
++void cMediaService::SetActive(bool Active)
++{
++  active = Active;
++}
++
++bool cMediaService::IsReplaying(void)
++{
++  return replaying;
++}
++
++bool cMediaService::IsActive(void)
++{
++  return active;
++}
++
++void cMediaService::EjectDisc(void)
++{
++  if(manager && active) {
++    MediaManager_Status_v1_0 st;
++    st.set = true;
++    st.flags = MEDIA_STATUS_EJECTDISC;
++    st.ejectdisc = true;
++    manager->Service(MEDIA_MANAGER_STATUS_ID, &st);
++    }
++}
++
+ 
+ static const char *VERSION        = "0.2.7";
+ static const char *DESCRIPTION    = "A Image Viewer plugin";
+@@ -53,15 +121,98 @@
+   virtual const char *CommandLineHelp(void);
+   virtual bool ProcessArgs(int argc, char *argv[]);
+   virtual bool Start(void);
+-  virtual const char *MainMenuEntry(void) { return tr(MAINMENUENTRY); }
++  virtual const char *MainMenuEntry(void);
+   virtual cOsdMenu *MainMenuAction(void);
+   virtual cMenuSetupPage *SetupMenu(void);
+   virtual bool SetupParse(const char *Name, const char *Value);
+   virtual bool Service(const char *Id, void *Data);
+ private:
++  cMediaService *mediaservice;
++  char *managerentry;
++  cFileSource *disc;
++  int sourcesCount;
+   void RemoveServiceSource();
+ };
+ 
++class cMenuImageMedia : public cMenuBrowse {
++private:
++  cFileSource *source;
++  bool ejectrequest;
++public:
++  cMenuImageMedia(cFileSource *Source, const char *Title);
++  ~cMenuImageMedia(void);
++  virtual void SetButtons(void);
++  virtual eOSState ProcessKey(eKeys Key);
++  };
++
++cMenuImageMedia::cMenuImageMedia(cFileSource *Source, const char *Title)
++:cMenuBrowse(Source,true,Title)
++{
++  ejectrequest = false;
++  source=Source;
++  SetButtons();
++}
++
++cMenuImageMedia::~cMenuImageMedia(void)
++{
++  if(ejectrequest)
++    cMediaService::EjectDisc();
++
++}
++
++void cMenuImageMedia::SetButtons(void)
++{
++  SetHelp(tr("Button$Play"), 0, cMediaService::IsReplaying() ? 0 : tr("Eject"),
++          currentdir ? tr("Button$Parent") : 0);
++  Display();
++}
++
++eOSState cMenuImageMedia::ProcessKey(eKeys Key)
++{
++  eOSState state = cMenuBrowse::ProcessKey(Key);
++  if(!cMediaService::IsActive())
++    return osEnd;
++
++  if(state == osBack && lastselect) {
++    char *name = lastselect->Path();
++    char *full = source->BuildName(name);
++    cDirItem *item = cMenuBrowse::GetSelected();
++    if(item) {
++printf("%p %s %s %d\n",item->Source, item->Subdir, item->Name, item->Type);
++      //FIXME use a nonblocking way
++      //OSD_InfoMsg(tr("Building slide show..."));
++    
++      cSlideShow *newss = new cSlideShow(item);
++      if(newss->Load() && newss->Count()) {
++        cImageControl::SetSlideShow(newss, true);
++        state = osEnd;
++      } 
++      else {
++        OSD_ErrorMsg(tr("No files!"));
++        delete newss;
++        state = osContinue;
++        }
++      lastselect = NULL;
++      }
++    free(full);
++    free(name);
++    }
++
++  if(state==osUnknown) {
++     switch (Key) {
++       case kYellow:
++	       if(!cMediaService::IsReplaying()) {
++			 ejectrequest = true;
++             return osEnd;
++			 }
++         break;
++       default: break;
++       }
++     }
++
++  return state;
++}
++
+ bool cPluginImage::SetupParse(const char *szName, const char *szValue)
+ {
+ 	return ImageSetup.SetupParse(szName,szValue);
+@@ -115,18 +266,38 @@
+     return false;
+   }
+ 
++  RegisterI18n(Phrases);
+   ImageSources.Load(AddDirectory(ConfigDirectory(g_szConfigDirectory),  "imagesources.conf"));
+-  if(ImageSources.Count()<1) {
++  mediaservice = new cMediaService();
++  cPlugin *manager = cPluginManager::GetPlugin(MEDIA_MANAGER_PLUGIN);
++  if(manager) {
++    MediaManager_Register_v1_0 reg;
++    asprintf(&managerentry,"%s%s","Media ", tr(MAINMENUENTRY));
++    reg.PluginName = Name();
++    reg.MainMenuEntry = managerentry;
++    reg.Description = tr(DESCRIPTION);
++    reg.mediatype = mtImageData;
++    reg.shouldmount = true;
++    if(manager->Service(MEDIA_MANAGER_REGISTER_ID, &reg)) {
++      mediaservice->SetManager(manager);
++      isyslog("image: Successful registered");
++    }
++  }
++
++  sourcesCount = ImageSources.Count();
++  if((sourcesCount<1) && (!manager)) {
+     esyslog("imageplugin: you must have defined at least one source in imagesources.conf");
+     return false;
+     }
+   
+-  RegisterI18n(Phrases);
+   return true;
+ }
+ 
+ cPluginImage::cPluginImage()
+ {
++    mediaservice = NULL;
++    managerentry = NULL;
++    disc = NULL;
+     m_pServiceDirItem = NULL;
+     m_pServiceFileSource = NULL;
+ }
+@@ -135,6 +306,8 @@
+ {
+   cEncode::UnRegister();
+   RemoveServiceSource();
++  free(managerentry);
++  delete mediaservice;
+ }
+ 
+ void cPluginImage::RemoveServiceSource()
+@@ -148,10 +321,22 @@
+       delete m_pServiceFileSource;
+       m_pServiceFileSource = NULL;
+   }
++  sourcesCount = ImageSources.Count();
++}
++
++const char *cPluginImage::MainMenuEntry(void)
++{
++  if(sourcesCount < 1)
++    return NULL;
++
++  return tr(MAINMENUENTRY);
+ }
+ 
+ cOsdMenu *cPluginImage::MainMenuAction(void)
+ {
++  if(sourcesCount < 1)
++    return NULL;
++
+   return new cMenuImageBrowse;
+ }
+ 
+@@ -177,11 +362,36 @@
+     free(Basedir);
+     if(newss->Load() && newss->Count()) {
+       cImageControl::SetSlideShow(newss);
++      sourcesCount = ImageSources.Count();
+       return true;
+       }
+     delete newss;
+     RemoveServiceSource();
++    return false;
+     }
++
++  if(Data == NULL)
++    return false;
++
++  if(strcmp(Id, MEDIA_MANAGER_ACTIVATE_ID) == 0) {
++    struct MediaManager_Activate_v1_0 *act = (MediaManager_Activate_v1_0*)Data;
++    if(act->on) {
++      disc = new cFileSource(act->mount_point, "CDROM", false, NULL);
++      cMediaService::SetActive(true);
++      return true;
++    } else {
++      cMediaService::SetActive(false);
++      delete(disc);
++      disc = NULL;
++      return true;
++      }
++  } else if(strcmp(Id, MEDIA_MANAGER_MAINMENU_ID) == 0) {
++    if(cMediaService::IsActive()) {
++      MediaManager_Mainmenu_v1_0 *m = (MediaManager_Mainmenu_v1_0*)Data;
++      m->mainmenu = new cMenuImageMedia(disc, managerentry);
++      }
++      return true;
++  }
+   return false;
+ }
+ 
+diff -urN image-0.2.7.orig/mediaservice.h image-0.2.7/mediaservice.h
+--- image-0.2.7.orig/mediaservice.h	1970-01-01 01:00:00.000000000 +0100
++++ image-0.2.7/mediaservice.h	2007-03-25 14:42:44.000000000 +0200
+@@ -0,0 +1,78 @@
++#ifndef _MEDIA_SERVICE_H
++#define _MEDIA_SERVICE_H
++
++#include <vdr/plugin.h>
++
++/* flags for MediaManager_Status_v1_0 */
++#define MEDIA_STATUS_REPLAY 	0x01
++#define MEDIA_STATUS_EJECTDISC	0x02
++#define MEDIA_STATUS_ACTIVE 	0x04
++#define MEDIA_STATUS_CRASHED	0x08
++
++#define MEDIA_MANAGER_REGISTER_ID	"MediaManager-Register-v1.0"
++#define MEDIA_MANAGER_ACTIVATE_ID	"MediaManager-Activate-v1.0"
++#define MEDIA_MANAGER_MAINMENU_ID	"MediaManager-Mainmenu-v1.0"
++#define MEDIA_MANAGER_STATUS_ID 	"MediaManager-Status-v1.0"
++#define MEDIA_MANAGER_PLUGIN		"mediamanager"
++
++enum eMediaType {
++	mtInvalid	= -1,
++	mtNoDisc	= 0,
++	mtBlank 	= 1,
++	mtAudio 	= 2,
++	mtVideoDvd	= 3,
++	mtSvcd		= 4,
++	mtVcd		= 5,
++	mtData		= 6,
++	mtVDRdata	= 7,
++	mtAudioData	= 8,
++	mtImageData = 9,
++	mtExternUse = 10
++};
++
++struct MediaManager_Register_v1_0 {
++	const char *PluginName;
++	const char *MainMenuEntry;
++	const char *Description;
++	eMediaType mediatype;
++	bool shouldmount;
++};
++
++struct MediaManager_Status_v1_0 {
++	bool set;
++	int flags;
++	bool isreplaying;
++	bool ejectdisc;
++	bool active;		/* read only */
++	bool crashed;
++};
++
++struct MediaManager_Activate_v1_0 {
++	bool on;
++	const char *device_file;
++	const char *mount_point;
++};
++
++struct MediaManager_Mainmenu_v1_0 {
++	cOsdObject *mainmenu;
++};
++
++class cMediaService {
++  private:
++	static cPlugin *manager;
++	static bool active;
++	static bool replaying;
++  public:
++	cMediaService(void);
++	~cMediaService(void);
++
++	void SetManager(cPlugin *Manager);
++
++	static bool HaveManager(void);
++	static void SetReplaying(bool Replaying);
++	static void SetActive(bool Active);
++	static bool IsReplaying(void);
++	static bool IsActive(void);
++	static void EjectDisc(void);
++};
++#endif

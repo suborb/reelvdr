@@ -1,0 +1,131 @@
+#!/bin/sh
+#
+# Reelbox Automounter for setup-shares
+#
+# Author: Behni@Vollbuettel.de
+# Licence: GPL2
+# History: based on automounter-script from heiko.20 http://hthede.de
+#          20070820 ported for additional-mounts
+#          20080808 ported for Reel-Image
+#
+
+SYSCONFIG=/etc/default/sysconfig
+. $SYSCONFIG
+[ -e /etc/default/globals ] && . /etc/default/globals
+
+NAME=setup-shares
+
+Syslog "Starting $0" || echo "Starting $0"
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+if grep -q 12d51000 /proc/bus/pci/devices; then
+	BINDIR=/opt/bin
+	SETUPSHARES=$(which setup-shares)
+	LINKSHARES=$(which link-shares)
+	PING=$BINDIR/ping
+	TOUCH=$BINDIR/touch
+else
+	SETUPSHARES=$(which setup-shares)
+	LINKSHARES=$(which link-shares)
+	PING=$(which ping)
+	TOUCH=$(which touch)
+fi
+
+statusfile=.update
+localdotupdate=$RECORDINGSDIR/$statusfile
+LOGFILE=/var/log/automounter
+
+servertest () {
+	MOUNTPOINT=$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR
+	# ping server with with 1 packet and timeout = 1sec
+	# if server online:
+	if $PING -c 1 -t 1 $SERVER > /dev/null ; then
+		echo "** $(date)  Server $SERVER online (mount $MOUNTNR, $TYPE) ... **" >> $LOGFILE
+		# look, if share always mounted
+		mount | grep $MOUNTPOINT > /dev/null
+		# if share not always mounted, try to mount ...
+		if [ $? -eq 1 ] ; then
+			echo "try to mount $MOUNTPOINT ..." >> $LOGFILE
+			$SETUPSHARES start $MOUNTNR
+		else
+			echo "$MOUNTPOINT always mounted" >> $LOGFILE
+			if [ "$(eval echo \$MOUNT${MOUNTNR}_${TYPE}_RECORDINGS)" = yes ]; then
+				if [ "$AUTOMOUNTER_RELOAD_RECORDS" = "no" ]; then
+					echo "reload recordlist is turned off in sysconfig." >> $LOGFILE
+				else
+					unset dotupdate
+					if [ -e $MOUNTPOINT/recordings/$statusfile ]; then
+						dotupdate=$MOUNTPOINT/recordings/$statusfile
+					elif [ -e $MOUNTPOINT/video/$statusfile ]; then
+						dotupdate=$MOUNTPOINT/video/$statusfile
+					fi
+					if [ $dotupdate ]; then
+						if [ $dotupdate -nt $localdotupdate ]; then
+							echo "$dotupdate ist neuer. Starte Aktualisierung" >> $LOGFILE
+							$TOUCH -r$dotupdate $localdotupdate
+						elif [ $dotupdate -ot $localdotupdate ]; then
+							echo "$dotupdate ist aelter" >> $LOGFILE
+						else
+							echo "Synchron mit $dotupdate" >> $LOGFILE
+						fi
+					fi
+				fi
+			fi
+		fi
+	# if server offline:
+	else
+		echo "## $(date)  Server $SERVER offline ... ##" >> $LOGFILE
+		# look, if share always mounted
+		mount | grep $MOUNTPOINT > /dev/null
+		# if share always mounted, umount it
+		if [ $? -eq 0 ] ; then
+			echo "try to umount $MOUNTPOINT ..." >> $LOGFILE
+			$SETUPSHARES stop $MOUNTNR
+			$SETUPSHARES stop $MOUNTNR nolink
+		else
+			echo "$MOUNTPOINT not mounted ..." >> $LOGFILE
+		fi
+	fi
+}
+
+suspendcheck () {
+	while [ -e $AMCHECKFILE ]; do
+		touch $AMSUSPENDFILE
+		if [ $AMSUSPENDFILE -nt $AMCHECKFILE ]; then
+			rm $AMCHECKFILE
+		else
+			echo "suspending"  >> $LOGFILE
+			sleep 1
+		fi
+	done
+	[ -e $AMSUSPENDFILE ] && rm $AMSUSPENDFILE
+}
+
+AMSUSPENDFILE=/tmp/automounter.suspend
+AMCHECKFILE=/tmp/automounter.suspendckeck
+LENGTH=$(echo $PREFIX | wc -c)
+
+while true ; do
+	suspendcheck
+	echo "** $(date)  Sleeping 60 seconds." >> $LOGFILE
+	touch $AMSUSPENDFILE
+	sleep 60
+	[ -e $LOGFILE ] && rm $LOGFILE
+	echo "** $(date)  Starting Servertest." >> $LOGFILE
+	. $SYSCONFIG
+	for MOUNT in $(grep ^$PREFIX $SYSCONFIG | grep "_[SNA][MF][BSP]_STARTCLIENT"); do
+		suspendcheck
+		MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+		if [ $(echo $MOUNT | cut -d= -f2) = "\"yes\"" ]; then
+			TYPE=$(echo $MOUNT | cut -d= -f1 | cut -d_ -f2)
+			SERVER=$(eval echo \$${PREFIX}${MOUNTNR}_${TYPE}_HOST)
+			servertest
+		else
+			echo "mount $MOUNTNR is turned off in sysconfig." >> $LOGFILE
+		fi
+	done
+	echo "** $(date)  checking for unused links." >> $LOGFILE
+	$LINKSHARES check >> $LOGFILE
+done

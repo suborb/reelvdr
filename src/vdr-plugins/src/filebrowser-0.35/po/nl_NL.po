@@ -1,0 +1,625 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-filebrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-17 11:51+0200\n"
+"PO-Revision-Date: 2011-09-07 17:52+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+msgid "Cannot open file"
+msgstr "Kan bestand niet openenen"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Artist"
+msgstr "Artiest"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Genre"
+
+msgid "Comment"
+msgstr "Kommentaar"
+
+msgid "Year"
+msgstr "Jaar"
+
+msgid "Track"
+msgstr "Track"
+
+msgid "Length"
+msgstr "Lengte"
+
+msgid "min"
+msgstr "min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Samplerate"
+
+msgid "ID3$Channels"
+msgstr "Kanalen"
+
+msgid "Original"
+msgstr "Origineel"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-layer"
+
+msgid "Copyrighted"
+msgstr "Copyrighted"
+
+msgid "Protected"
+msgstr "Beschermd"
+
+msgid "Minimal bitrate"
+msgstr "Minimale bitrate"
+
+msgid "Maximal bitrate"
+msgstr "Maximale bitrate"
+
+msgid "Nominal bitrate"
+msgstr "Nominale bitrate"
+
+msgid "File size"
+msgstr "Bestandsgrootte"
+
+msgid "Last Modified"
+msgstr "Laatst aangepast"
+
+msgid "please wait ..."
+msgstr "een momentje aub ..."
+
+msgid "Language packet sucessfully installed"
+msgstr "Taalpakket succesvol geïstalleerd"
+
+msgid "Language packet installation failed"
+msgstr "Installeren van taalpakket mislukt"
+
+msgid "Hard Drive"
+msgstr "Harddisk"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "My Music"
+msgstr "Mijn muziek"
+
+msgid "My Pictures"
+msgstr "Mijn foto's"
+
+msgid "My Videos"
+msgstr "Mijn video's"
+
+msgid "My Recordings"
+msgstr "Mijn opnames"
+
+msgid "My DVDs"
+msgstr "Mijn DVD's"
+
+msgid "Cannot mount media"
+msgstr "Kan media niet mounten"
+
+msgid "Access denied!"
+msgstr "Toegang geweigerd"
+
+msgid "Insert in playlist"
+msgstr "Voeg aan afspeellijst toe"
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Copy playlist into"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr "Sla afspeellijst op als"
+
+msgid "File informations"
+msgstr "Bestandsinformatie"
+
+msgid "Attributes from:"
+msgstr "Attributen van:"
+
+msgid "Playlist: "
+msgstr "Afspeellijst:"
+
+msgid "Delete entry"
+msgstr "Wis selectie"
+
+msgid "Close playlist"
+msgstr "Sluit afspeellijst"
+
+msgid "Save playlist"
+msgstr "Afspeellijst opslaan"
+
+msgid "Copy playlist to CD"
+msgstr "Kopieer afspeellijst naar CD"
+
+msgid "Playlist Commands"
+msgstr "Afspeellijst commando's"
+
+msgid "Entry already exists"
+msgstr "Invoer bestaat reeds"
+
+msgid "Change the name and then press 'OK'"
+msgstr "Pas de naam aan en druk op  'OK'"
+
+msgid "Playlist name"
+msgstr "Naam van de afspeellijst"
+
+msgid "Options for image viewer"
+msgstr "Opties voor foto viewer"
+
+msgid "Display image file names"
+msgstr "Toon bestandsnaam van foto's"
+
+msgid "no"
+msgstr "nee"
+
+msgid "yes"
+msgstr "je"
+
+msgid "Slide show"
+msgstr "Dia presentatie"
+
+msgid "Random choice"
+msgstr "Willekeurig"
+
+msgid "Cyclic display"
+msgstr "Normale weergave"
+
+msgid "Switch time (s)"
+msgstr "Schakeltijd (s)"
+
+msgid "Clear cache"
+msgstr "Wis cache"
+
+msgid "Cache cleared"
+msgstr "Cache gewist"
+
+msgid " ...opening file"
+msgstr "...bestand wordt geopend"
+
+msgid "Cannot open file:"
+msgstr "Kan bestand niet openen"
+
+msgid "No more images"
+msgstr "Geen foto's meer beschikbaar"
+
+msgid "Slide show started"
+msgstr "Dia presentatie gestart"
+
+msgid "Slide show halted"
+msgstr "Dia presentatie gestopt"
+
+msgid "Standard play mode"
+msgstr "Standaard afspeel mode"
+
+msgid "Random play mode"
+msgstr "Willekeurige afspeel mode"
+
+msgid "Copying"
+msgstr "Kopieëren"
+
+msgid "Multiple files"
+msgstr "Meerder bestanden"
+
+msgid "packet sucessfully installed"
+msgstr "pakket met succes geïnstalleerd"
+
+msgid "packet installation failed"
+msgstr "installatie van pakket mislukt"
+
+msgid "Selection is being deleted. Please wait..."
+msgstr "Selectie wordt gewist, Een moment aub...."
+
+msgid "Really Delete?"
+msgstr "Echt wissen?"
+
+msgid "Save/copy current playlist?"
+msgstr "Huidige afspeellijst opslaan/kopieren?"
+
+msgid "Playlist saved as "
+msgstr "Afspeellijst opgeslagen als"
+
+msgid "Working"
+msgstr "Bezig"
+
+msgid "Cancel"
+msgstr "annuleren"
+
+msgid "Execute"
+msgstr "Uitvoeren"
+
+msgid "Paste selected entries"
+msgstr "Gemarkeerde selectie plakken"
+
+msgid "Insert"
+msgstr "Invoegen"
+
+msgid "Create dir"
+msgstr "Maak directory"
+
+msgid "Selection is copied in background..."
+msgstr "Selectie is in de achtergrond gekopieerd....."
+
+msgid "Selection is being moved in background..."
+msgstr "Selectie wordt in de achtergrond verplaatst....."
+
+msgid "Expert mode"
+msgstr "Expert mode"
+
+msgid "Too many entries for playlist!"
+msgstr "Teveel geselecteerd voor de afspeellijst"
+
+msgid "Playlist"
+msgstr "Afspeellijst"
+
+msgid "Functions"
+msgstr "Funkties"
+
+msgid "Unselect all"
+msgstr ""
+
+msgid "Select all"
+msgstr "Selecteer alles"
+
+msgid "Unselect"
+msgstr ""
+
+msgid "Select"
+msgstr "Selecteer"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Abort"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Playlist is saved in background..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopieer"
+
+msgid "Directory Name"
+msgstr "Directory naam"
+
+msgid "Playlist entries are copied in background..."
+msgstr ""
+
+msgid "Move"
+msgstr "Verplaats"
+
+msgid "Delete"
+msgstr "Wis"
+
+msgid "Rename entry"
+msgstr "Hernoem entry"
+
+msgid "Create directory"
+msgstr "Maak een directory"
+
+msgid "Show playlist"
+msgstr "Afspeellijst tonen"
+
+msgid "Convert to UTF8"
+msgstr "Converteer naar UTF8"
+
+msgid "Burn ISO-File"
+msgstr "Brand ISO bestand"
+
+msgid "Make And burn ISO-File"
+msgstr "Maak en brandt het ISO bestand"
+
+msgid "Sort alphabetically"
+msgstr ""
+
+msgid "Sort by file size"
+msgstr ""
+
+msgid "Filebrowser Commands"
+msgstr "Bestand browser commando's"
+
+msgid "Started converting"
+msgstr "Conversie gestart"
+
+msgid "Finished converting"
+msgstr "Conversie gereed"
+
+msgid "Save playlist to disk"
+msgstr "Sla de afspeellijst op harddisk op"
+
+msgid "Copy playlist to usb stick"
+msgstr "Kopieer de afspellijst naar een USB stick"
+
+msgid "Playlist actions"
+msgstr "Afspeellijst akties"
+
+msgid "Add selection to playlist"
+msgstr ""
+
+msgid "Discard playlist"
+msgstr ""
+
+msgid "Copy playlist content to a directory"
+msgstr ""
+
+msgid "Discard current playlist"
+msgstr ""
+
+msgid "Append new playlist to current playlist"
+msgstr ""
+
+msgid "Directory already exists"
+msgstr "Directory bestaat reeds"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "To create a new directory press 'OK'"
+msgstr "Druk ´OK´ om een nieuwe directory te maken"
+
+msgid "Rename to"
+msgstr "Hernoem naar"
+
+msgid "Press OK to burn the playlists contents on a DVD"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr "Bestand browser"
+
+msgid "File Browser"
+msgstr "Bestand browser"
+
+msgid "Picture viewer"
+msgstr "Foto viewer"
+
+#~ msgid "Deselect all"
+#~ msgstr "Deselecteer alles"
+
+#~ msgid "Deselect"
+#~ msgstr "Deselecteer"
+
+#~ msgid "Moving"
+#~ msgstr "Verplaatsen"
+
+#~ msgid "Deleting"
+#~ msgstr "Wissen"
+
+#~ msgid "unknown program type"
+#~ msgstr "Onbekend Programma type"
+
+#~ msgid "Current affairs"
+#~ msgstr "Lopende zaken"
+
+#~ msgid "Sport"
+#~ msgstr "Sport"
+
+#~ msgid "Drama"
+#~ msgstr "Drama"
+
+#~ msgid "Culture"
+#~ msgstr "Cultuur"
+
+#~ msgid "Science"
+#~ msgstr "Wetenschap"
+
+#~ msgid "Varied"
+#~ msgstr "Gevarieerd"
+
+#~ msgid "Pop music"
+#~ msgstr "Pop Muziek"
+
+#~ msgid "Rock music"
+#~ msgstr "Rock muziek"
+
+#~ msgid "Light classical"
+#~ msgstr "Licht classiek"
+
+#~ msgid "Serious classical"
+#~ msgstr "Serieuze klassiek"
+
+#~ msgid "Other music"
+#~ msgstr "Andere muziek"
+
+#~ msgid "RTplus"
+#~ msgstr "RTplus"
+
+#~ msgid "Radiotext"
+#~ msgstr "Radiotext"
+
+#~ msgid "Title  :"
+#~ msgstr "Titel  :"
+
+#~ msgid "Artist :"
+#~ msgstr "Artiest :"
+
+#~ msgid "with <0>"
+#~ msgstr "Met <0>"
+
+#~ msgid "Sports"
+#~ msgstr "Sports"
+
+#~ msgid "Lottery"
+#~ msgstr "Loterij"
+
+#~ msgid "Weather"
+#~ msgstr "Het weer"
+
+#~ msgid "Stockmarket"
+#~ msgstr "Beurs"
+
+#~ msgid "Other"
+#~ msgstr "Ander"
+
+#~ msgid "RTplus Memory  since"
+#~ msgstr "RTplus geheugen sinds"
+
+#~ msgid "Programme"
+#~ msgstr "Programma"
+
+#~ msgid "Station"
+#~ msgstr "Zender"
+
+#~ msgid "Now"
+#~ msgstr "Nu"
+
+#~ msgid "...Part"
+#~ msgstr "...Deel"
+
+#~ msgid "Next"
+#~ msgstr "Volgende"
+
+#~ msgid "Host"
+#~ msgstr "Host"
+
+#~ msgid "Edit.Staff"
+#~ msgstr "Host bewerken"
+
+#~ msgid "Homepage"
+#~ msgstr "Homepage"
+
+#~ msgid "Interactivity"
+#~ msgstr "Interactief"
+
+#~ msgid "Phone-Hotline"
+#~ msgstr "Telefoon-hotline"
+
+#~ msgid "Phone-Studio"
+#~ msgstr "Telefoon-studio"
+
+#~ msgid "Email-Hotline"
+#~ msgstr "Email-hotline"
+
+#~ msgid "Email-Studio"
+#~ msgstr "Email-studio"
+
+#~ msgid "NewsLocal"
+#~ msgstr "Lokaal nieuws"
+
+#~ msgid "DateTime"
+#~ msgstr "DatumTijd"
+
+#~ msgid "Advertising"
+#~ msgstr "Reclame"
+
+#~ msgid "Url"
+#~ msgstr "Url"
+
+#~ msgid "Exit"
+#~ msgstr "Afsluiten"
+
+#~ msgid "RTplus-File saved"
+#~ msgstr "RTplus bestand opgeslagen"
+
+#~ msgid "last seen Radiotext"
+#~ msgstr "laatst bekeken radiotekst"
+
+#~ msgid "Time"
+#~ msgstr "Tijd"
+
+#~ msgid "Refresh Off"
+#~ msgstr "Vernieuwen Uit"
+
+#~ msgid "Refresh On"
+#~ msgstr "Vernieuwen Aan"
+
+#~ msgid "Off"
+#~ msgstr "Uit"
+
+#~ msgid "only Text"
+#~ msgstr "Alleen tekst"
+
+#~ msgid "Text+TagInfo"
+#~ msgstr "Text+Labelinfo"
+
+#~ msgid "only, if some"
+#~ msgstr "alleen, als bepaalde"
+
+#~ msgid "always"
+#~ msgstr "altijd"
+
+#~ msgid "Top"
+#~ msgstr "Boven"
+
+#~ msgid "Bottom"
+#~ msgstr "Onder"
+
+#~ msgid "latest at Top"
+#~ msgstr "Laatste Boven"
+
+#~ msgid "latest at Bottom"
+#~ msgstr "Laatste Onder"
+
+#~ msgid "Black"
+#~ msgstr "Zwart"
+
+#~ msgid "White"
+#~ msgstr "Wit"
+
+#~ msgid "Red"
+#~ msgstr "Rood"
+
+#~ msgid "Yellow"
+#~ msgstr "Geel"
+
+#~ msgid "Magenta"
+#~ msgstr "Magenta"
+
+#~ msgid "Blue"
+#~ msgstr "Blauw"
+
+#~ msgid "Transparent"
+#~ msgstr "Transparant"
+
+#~ msgid "about MainMenu"
+#~ msgstr "over het Hoofdmenu"
+
+#~ msgid "Automatic"
+#~ msgstr "automatisch"
+
+#~ msgid "only Taginfo"
+#~ msgstr "Alleen labelinfo"
+
+#~ msgid "RaSS only"
+#~ msgstr "Alleen RaSS"
+
+#~ msgid "RaSS+Text mixed"
+#~ msgstr "RaSS+Text gemengd"
+
+#~ msgid "Activate"
+#~ msgstr "Aktief"
+
+#~ msgid "RDSText Function"
+#~ msgstr "RDSText Functie"
+
+#~ msgid "RDSText OSD-Position"
+#~ msgstr "RDSText OSD-Positie"
+
+#~ msgid "RDSText OSD-Titlerow"
+#~ msgstr "RDSText OSD-Titellijn"
+
+#~ msgid "RDSText OSD-Rows (1-5)"
+#~ msgstr "RDSText OSD-Titellijn (1-5)"

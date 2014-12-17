@@ -1,0 +1,48 @@
+VDR Plugin 'xxvautotimer' Revision History
+------------------------------------------
+
+2005-04-11: Version 0.0.1
+
+- Initial revision.
+- Tested with XXV Version 0.20
+
+2005-04-12: Version 0.0.2
+
+- fixed bug
+2005-04-17: Version 0.0.5
+- first public released version
+- handles Autotimers for XXV 0.20
+- runs with XXV 0.30, but ignores additional Autotimer parameters
+
+2005-04-23: Version 0.0.6
+- handles all Autotimer Parameters which are used with XXV 0.30
+- Still kompatible with XXV 0.20 (change behavoiur in setup)
+
+2005-05-21: Version 0.0.7
+- changed order of header files to avoid compiler problems
+- New optional command line parameter "-f" respectively "--xxvconfigfile"
+  specifying the XXV configuration file.
+ 
+2005-05-22: Version 0.0.8
+- ignore trailing spaces after defintion of sections within the xxv config file
+
+2005-05-23: Version 0.0.10
+- accecpt now variable length of lines in xxvd.cfg
+
+2005-12-03 Version 0.1.0
+- support "ignore recurrences"
+- read default values of afterMinutes, prevMinutes
+- if afterMinutes was not set write NULL Value to database
+- if prevMinutes was not set write NULL Value to database
+- Execute XXV Commands via Telnet Interface
+
+2005-12-10 Version 0.1.1
+- sort Timers
+- changed makefile, added CXXFLAGS = -fPIC, added dependency
+- vdr includes are now include with <>
+
+2006-08-15 Version 0.1.2
+- applied some patches provided by Tobias Grimm (Thanks a lot)
+- now supports gcc 4.1
+- now ready for VDR 1.4
+- no functional changes

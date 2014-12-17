@@ -1,0 +1,16 @@
+--- vdr-plugin-mcli.ori/mcast/tool/Makefile	2012-09-27 20:10:03.799109000 +0200
++++ vdr-plugin-mcli/mcast/tool/Makefile	2012-09-27 20:08:20.294887000 +0200
+@@ -35,11 +35,11 @@
+   LIBRARY_PATH = /usr/lib
+ endif
+ 
+-CFLAGS ?= -Os -Wall 
++CFLAGS ?= -Os -Wall -pthread 
+ 
+ INCLUDES += $(XML_INC) -I../dvbloop -I../common/ -I../client
+ 
+-LDFLAGS:=$(XML_LIB) -lpthread
++LDFLAGS:=$(XML_LIB) -pthread
+ 
+ ifdef API_SHM
+ LDFLAGS:= $(LDFLAGS) -lrt

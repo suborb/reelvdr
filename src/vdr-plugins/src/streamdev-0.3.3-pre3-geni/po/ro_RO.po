@@ -1,0 +1,229 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2008-10-01 16:06+0200\n"
+"PO-Revision-Date: 2009-03-03 16:12+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "VTP Streaming Client"
+msgstr "Client Streaming VTP"
+
+msgid "Streaming Client"
+msgstr "Client transmisie"
+
+msgid "VDR Streaming Server"
+msgstr "Server transmisie VDR"
+
+msgid "Streaming Server"
+msgstr "Server Transmisie"
+
+msgid "Streaming active"
+msgstr "Transmisie activa"
+
+msgid "Pause Live TV"
+msgstr "Pauza Live TV"
+
+msgid "Common Settings"
+msgstr "Setari comune"
+
+msgid "Maximum Number of Clients"
+msgstr "Numar maxim de clienti"
+
+msgid "Suspend behaviour"
+msgstr "Comportament la suspendare"
+
+msgid "Client may suspend"
+msgstr "Clientul poate suspenda"
+
+msgid "VDR-to-VDR Server"
+msgstr "Server VDR-catre-VDR "
+
+msgid "Start VDR-to-VDR Server"
+msgstr "Start Server VDR-catre-VDR"
+
+msgid "VDR-to-VDR Server Port"
+msgstr "Port Server VDR-catre-VDR "
+
+msgid "Bind to IP"
+msgstr "Atasaza la IP"
+
+msgid "HTTP Server"
+msgstr "Server HTTP "
+
+msgid "Start HTTP Server"
+msgstr "Start Server HTTP "
+
+msgid "HTTP Server Port"
+msgstr "Port Server HTTP "
+
+msgid "HTTP Streamtype"
+msgstr "Tip transmisie HTTP"
+
+msgid "Streaming Control"
+msgstr "Control transmisie"
+
+msgid "Remote Schedule"
+msgstr "Programare 'de la  distanta'"
+
+msgid "Remote Timers"
+msgstr "Temporizatoare 'de la distanta'"
+
+msgid "Remote Recordings"
+msgstr "Inregistrarile 'de la distanta'"
+
+msgid "Suspend Server"
+msgstr "Suspenda Server"
+
+msgid "Synchronize EPG"
+msgstr "Sincronizeaza EPG"
+
+msgid "Server is suspended"
+msgstr "Serverul este suspendat"
+
+msgid "Couldn't suspend Server!"
+msgstr "Nu pot sa suspend server!"
+
+msgid "Edit remote timer"
+msgstr "Editare temporizator 'de la distanta'"
+
+msgid "Active"
+msgstr "Activ"
+
+msgid "Channel"
+msgstr "Canal"
+
+msgid "Day"
+msgstr "Zi"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Prioritate"
+
+msgid "Lifetime"
+msgstr "Durata de viata"
+
+msgid "File"
+msgstr "Fisier"
+
+msgid "First day"
+msgstr "Prima zi"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal invalid ***"
+
+msgid "What's on now?"
+msgstr "Ce este acum ?"
+
+msgid "What's on next?"
+msgstr "Ce este dupa aceea ?"
+
+msgid "Record"
+msgstr "Inregistreaza"
+
+msgid "Next"
+msgstr "Urmatorul"
+
+msgid "Now"
+msgstr "Acum"
+
+msgid "Schedule"
+msgstr "Programare"
+
+msgid "Switch"
+msgstr "Schimba"
+
+msgid "Can't switch channel!"
+msgstr "Nu pot schimba canal"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Programare - %s"
+
+msgid "Fetching recordings..."
+msgstr "Primesc inregistrarile..."
+
+msgid "Open"
+msgstr "Deschid"
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Summary"
+msgstr "Sumar"
+
+msgid "Error while accessing recording!"
+msgstr "Eroare la accesare inregistrare!"
+
+msgid "Delete recording?"
+msgstr "Sterg inregistrarea?"
+
+msgid "Edit"
+msgstr "Editare"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "On/Off"
+msgstr "Pornit/Oprit "
+
+msgid "Delete timer?"
+msgstr "Sterg Temporizator ?"
+
+msgid "MTWTFSS"
+msgstr "MTWTFSS"
+
+msgid "Start Client"
+msgstr "Start Client"
+
+msgid "Remote IP"
+msgstr "IP-ul 'de la distanta'"
+
+msgid "Remote Port"
+msgstr "Portul 'de la distanta'"
+
+msgid "Filter Streaming"
+msgstr "Filtru transmisie"
+
+msgid "Please restart VDR to activate changes"
+msgstr "Va rog reporniti VDR pentru a activa modificarile"
+
+msgid "Recordings not in sync! Try again..."
+msgstr "Inregistrarile nu sant sincronizate! Incearca din nou..."
+
+msgid "Couldn't delete recording! Try again..."
+msgstr "Nu pot sterge inregistrarea!  Incearca din nou"
+
+msgid "Couldn't save timer! Try again..."
+msgstr "Nu pot salva temporizator !  Incearca din nou"
+
+msgid "Timers not in sync! Try again..."
+msgstr "Temporizatoarele nu sant sincronizate !  Incearca din nou"
+
+msgid "Server error! Try again..."
+msgstr "Eroare server! Incearca din nou"
+
+msgid "Couldn't delete timer! Try again..."
+msgstr "Nu pot sterge temporizator! Incearca din nou"
+

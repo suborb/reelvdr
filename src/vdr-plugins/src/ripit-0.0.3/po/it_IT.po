@@ -1,0 +1,161 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ripit\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 16:14+0200\n"
+"PO-Revision-Date: 2009-06-20 23:03+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "user defined"
+msgstr "Definito dall'utente"
+
+msgid "low"
+msgstr "Basso"
+
+msgid "standard"
+msgstr "Standard"
+
+msgid "great"
+msgstr "Ottimo"
+
+msgid "best"
+msgstr "Migliore"
+
+msgid "Destination format"
+msgstr "Formato destinazione"
+
+msgid "Hide mainmenu entry"
+msgstr "Nascondere voce menu princ."
+
+msgid "Shutdown when finished"
+msgstr "Spegnere quando terminato"
+
+msgid "Verbose output"
+msgstr "Output esteso"
+
+msgid "Fast mode"
+msgstr "Modalità veloce"
+
+msgid "Eject CD when finished"
+msgstr "Espellere CD alla fine"
+
+msgid "Presets"
+msgstr "Preselezioni"
+
+msgid "Min. bitrate"
+msgstr "Bitrate min."
+
+msgid "Max. bitrate"
+msgstr "Bitrate max"
+
+msgid "More encoder settings"
+msgstr "Maggiori configurazioni encoder"
+
+msgid "Device"
+msgstr "Dispositivo"
+
+msgid "Directory for ripped tracks"
+msgstr "cartella per tracce estratte"
+
+msgid "Priority of task (nice)"
+msgstr "Priorità processi (ottimale)"
+
+msgid "Encode remotely"
+msgstr "Codificare in remoto"
+
+msgid "Options for remote encoding"
+msgstr "Opzioni per codifica in remoto"
+
+msgid "Abort"
+msgstr "Interrompere"
+
+msgid "No CD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please insert an audio CD to archive it."
+msgstr ""
+
+msgid "CD found in drive."
+msgstr ""
+
+msgid "Please select archive format and quality and press RED to start archiving your audio CD."
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid "Copy"
+msgstr "Copiare"
+
+msgid "Ripped: \t"
+msgstr "Estratto: \t"
+
+msgid "completed"
+msgstr "Completato"
+
+msgid "Ripping: \t"
+msgstr "Estraz. in corso: \t"
+
+msgid "Encoded: \t"
+msgstr "Codificato: \t"
+
+msgid "Encoding: \t"
+msgstr "Cod. in corso: \t"
+
+msgid "Completed"
+msgstr "Completato"
+
+msgid "Aborted"
+msgstr "Interrotto"
+
+msgid "No medium found"
+msgstr "Nessun supporto trovato!"
+
+msgid "Searching CDDB entry, please wait"
+msgstr "Ricarca voce CDDB, attendere..."
+
+msgid "Total Tracks: "
+msgstr "Tracce totali: "
+
+msgid "Reading CD"
+msgstr "Lettura CD in corso"
+
+msgid "PROCESS MANUALLY ABORTED"
+msgstr "PROCESSO INTERROTTO MANUALMENTE"
+
+msgid "Encoding tracks"
+msgstr "Codifica tracce in corso"
+
+msgid "Ripping and Encoding tracks"
+msgstr "Estrazione e codifica tracce in corso"
+
+msgid "Audio-CD ripper"
+msgstr "Ripper CD audio"
+
+msgid "Archive Audio-CD"
+msgstr "Archiviare CD audio"
+
+msgid "Audio-CD archive "
+msgstr "Archivio CD audio "
+
+#~ msgid "No ripping in progress"
+#~ msgstr "Nessuna estrazione in corso"

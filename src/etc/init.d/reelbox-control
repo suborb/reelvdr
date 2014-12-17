@@ -1,0 +1,235 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          reebox-control
+# Required-Start:    $local_fs $remote_fs
+# Required-Stop:     $local_fs $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      S 0 1 6
+# Short-Description: Example initscript
+# Description:       This file should be used to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+# Author: Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+DESC="ReelBox control"
+NAME=reelbox-ctrld
+DAEMON=/usr/sbin/$NAME
+DAEMON_ARGS=""
+#DAEMON_ARGS="-r"  # raw mode for remote
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+# Read global settings for ReelBox
+[ -r /etc/default/sysconfig ] && . /etc/default/sysconfig
+
+# Load the VERBOSE setting and other rcS variables
+[ -f /etc/default/rcS ] && . /etc/default/rcS
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+. /etc/default/globals
+
+REELFPCTL="/sbin/reelfpctl"
+
+
+GetWakeup () {
+	# Get the wakeup reason
+	FP=`$REELFPCTL -getwakeup`
+	WAKEUP=`echo $FP -getwakeup | cut -f3 -d" "`
+	echo "$WAKEUP" > /var/run/.reelbox.wakeup
+	Syslog "wakeup reason was: $WAKEUP" 2>/dev/null
+}
+
+
+#
+# Function that start the daemon/service
+#
+do_start()
+{
+	# check for current frontpanel/AVR firmware
+	if RbMini ; then
+		firm=`ls /usr/share/reel/firmware/main.flash_*`
+		new_firm=`echo $firm | cut -f2 -d_`
+
+		if nice -15 avr_flash -c $new_firm -w $firm ; then
+			Syslog "Successfully written new firmware $new_firm to AVR."
+		fi
+	else
+		firm=`ls /usr/share/reel/frontpanel/main.flash-*`
+		new_firm=`echo $firm | tr -d [A-Za-z-/.]`
+
+		if nice -15 avr_flasher -c $new_firm -w $firm ; then
+			Syslog "Successfully written new frontpanel firmware $new_firm to AVR."
+			sleep 7  # wait for frontpanel to reboot
+		fi
+	fi
+
+	# Return
+	#   0 if daemon has been started
+	#   1 if daemon was already running
+	#   2 if daemon could not be started
+
+	#prepare uinput driver, load kernel module if neccessary
+	#TODO: don't do this on RB Mini, uinput is compiled in the kernel
+	if ! grep -q uinput /proc/modules ; then
+		modprobe uinput
+	fi
+
+	if  [ "$USE_SERIAL_REMOTE" = "yes" ]; then
+		case $SERIAL_SPEED in
+			57.600)
+				PORT_SPEED=":57600"
+				;;
+			38.400)
+				PORT_SPEED=":38400"
+				;;
+			19.200)
+				PORT_SPEED=":19200"
+				;;
+			9.600)
+				PORT_SPEED=":9600"
+				;;
+			115.200|default|*)
+				PORT_SPEED=""
+				;;
+		esac
+		DAEMON_ARGS="$DAEMON_ARGS -X rs232:/dev/ttyS0$PORT_SPEED"
+		#echo "DEBUG: $DAEMON_ARGS"
+	fi
+
+	if  [ "$USE_UDP_REMOTE" = "yes" ] && [ "$USE_UDP_REMOTE_PORT" != "" ]; then
+		DAEMON_ARGS="$DAEMON_ARGS -X udp:$USE_UDP_REMOTE_PORT"
+	fi
+
+	if  grep -q 10027910 /proc/bus/pci/devices 2>/dev/null ; then
+		DAEMON_ARGS="$DAEMON_ARGS -d /dev/frontpanel"
+	fi
+
+
+	loop=0
+	while ! [ -c /dev/input/uinput ] ; do
+		loop=`expr $loop + 1`
+		busybox usleep 100000
+		[ $loop -gt 100 ] && return 1
+	done
+
+	#start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null \
+	#	|| return 1
+	start-stop-daemon --start --quiet --pidfile $PIDFILE -b -m --exec $DAEMON -- $DAEMON_ARGS \
+		|| return 2
+	#start-stop-daemon --start --quiet --exec $DAEMON --background -- $DAEMON_ARGS || return 2
+	# Add code here, if necessary, that waits for the process to be ready
+	# to handle requests from services started subsequently which depend
+	# on this one.  As a last resort, sleep for some time.
+}
+
+#
+# Function that stops the daemon/service
+#
+do_stop()
+{
+	# Return
+	#   0 if daemon has been stopped
+	#   1 if daemon was already stopped
+	#   2 if daemon could not be stopped
+	#   other if a failure occurred
+	start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile $PIDFILE --name $NAME
+	RETVAL="$?"
+	[ "$RETVAL" = 2 ] && return 2
+	# Wait for children to finish too if this is a daemon that forks
+	# and if the daemon is only ever run from this initscript.
+	# If the above conditions are not satisfied then add some other code
+	# that waits for the process to drop all resources that could be
+	# needed by services started subsequently.  A last resort is to
+	# sleep for some time.
+	start-stop-daemon --stop --quiet --oknodo --retry=0/30/KILL/5 --exec $DAEMON
+	[ "$?" = 2 ] && return 2
+	# Many daemons don't delete their pidfiles when they exit.
+	rm -f $PIDFILE
+	return "$RETVAL"
+}
+
+#
+# Function that sends a SIGHUP to the daemon/service
+#
+do_reload() {
+	#
+	# If the daemon can reload its configuration without
+	# restarting (for example, when it is sent a SIGHUP),
+	# then implement that here.
+	#
+	start-stop-daemon --stop --signal 1 --quiet --pidfile $PIDFILE --name $NAME
+	return 0
+}
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
+	# we have to get the wakeup reason from fp before reelbox-control starts
+	GetWakeup
+
+	do_start
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  stop)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC" "$NAME"
+	do_stop
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  #reload|force-reload)
+	#
+	# If do_reload() is not implemented then leave this commented out
+	# and leave 'force-reload' as an alias for 'restart'.
+	#
+	#log_daemon_msg "Reloading $DESC" "$NAME"
+	#do_reload
+	#log_end_msg $?
+	#;;
+  restart|force-reload)
+	#
+	# If the "reload" option is implemented then remove the
+	# 'force-reload' alias
+	#
+	log_daemon_msg "Restarting $DESC" "$NAME"
+	do_stop
+	case "$?" in
+	  0|1)
+		do_start
+		case "$?" in
+			0) log_end_msg 0 ;;
+			1) log_end_msg 1 ;; # Old process is still running
+			*) log_end_msg 1 ;; # Failed to start
+		esac
+		;;
+	  *)
+	  	# Failed to stop
+		log_end_msg 1
+		;;
+	esac
+	;;
+  *)
+	#echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
+	exit 3
+	;;
+esac
+
+:

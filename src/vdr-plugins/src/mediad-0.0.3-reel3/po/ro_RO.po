@@ -1,0 +1,150 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediad\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-07-03 10:54+0200\n"
+"PO-Revision-Date: 2009-03-03 17:03+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "autoplays identified media"
+msgstr "autoredare mediu stocare identificat"
+
+msgid "Play Disk"
+msgstr "Redare Disc"
+
+msgid "Play Medium"
+msgstr "Redare mediu stocare"
+
+msgid "Identifying Disc"
+msgstr "Identific Disc"
+
+msgid "Choose action"
+msgstr "Alege o actiune"
+
+msgid "Couldn't read disc!"
+msgstr "Nu pot sa citesc discul!"
+
+msgid "Start of"
+msgstr "Pornire a"
+
+msgid "Missing appropriate PlugIn!"
+msgstr "Lipseste un plugin necesar!"
+
+msgid "Play recordings"
+msgstr "Redare inregistrari"
+
+msgid "Show archive"
+msgstr "Arata arhiva"
+
+msgid "Play video CD"
+msgstr "Redare video CD"
+
+msgid "Play music"
+msgstr "Redare muzica"
+
+msgid "Archive audio CD"
+msgstr "Arhiva CD Audio"
+
+msgid "Play multimedia"
+msgstr "Redare multimedia"
+
+msgid "Play DVD"
+msgstr "Redare DVD"
+
+msgid "Play photo CD"
+msgstr "Redare CD poze"
+
+msgid "Play audio CD"
+msgstr "Redare Audio CD"
+
+msgid "Burn recordings"
+msgstr "Scrie pe disc inregistrari"
+
+msgid "Copy DVD"
+msgstr "Copiaza DVD"
+
+msgid "Browse data"
+msgstr ""
+
+msgid "Play video"
+msgstr "Redare video"
+
+msgid "Play video DVD"
+msgstr "Redare video DVD"
+
+msgid "Wrong dmh-archive-dvd structure!"
+msgstr "Structura gresita de arhiva dvd-dmh!"
+
+msgid "Drive not present in mplayersources.conf!"
+msgstr "Hardul sau unitatea CD/DVD nu este prezenta in mplayersources.conf!"
+
+msgid "Drive not present in mp3sources.conf!"
+msgstr "Hardul sau unitatea CD/DVD nu este prezenta in mp3sources.conf!"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Video DVD"
+msgstr "Video DVD"
+
+msgid "SVCD"
+msgstr "SVCD"
+
+msgid "blank disc"
+msgstr "disc gol"
+
+msgid "unknown"
+msgstr "necunoscut"
+
+msgid "Select device"
+msgstr "Selecteaza dispozitiv"
+
+msgid "ask each time"
+msgstr "intreaba de fiecare data"
+
+msgid "AutoStart"
+msgstr "AutoStart"
+
+#, fuzzy
+msgid "Request for DVD action"
+msgstr "Cere actiune Dvd"
+
+#, fuzzy
+msgid "Request for CD action"
+msgstr "Cere actiune Dvd"
+
+msgid "Recordings"
+msgstr "Inregistrari"
+
+#~ msgid "no"
+#~ msgstr "nu"
+
+#~ msgid "yes"
+#~ msgstr "da"
+
+#, fuzzy
+#~ msgid "RequestDvdAction"
+#~ msgstr "Cere actiune Dvd"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"
+
+#, fuzzy
+#~ msgid "RequestCdAction"
+#~ msgstr "Cere actiune Dvd"

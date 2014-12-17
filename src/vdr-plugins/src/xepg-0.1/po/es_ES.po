@@ -1,0 +1,46 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare-Tododream. Diciembre 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-10-20 18:13+0200\n"
+"PO-Revision-Date: 2008-10-08 12:26+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "A plugin to import EPG data into VDR"
+msgstr "Plugin para importar datos EPG al VDR"
+
+msgid "Load custom EPG"
+msgstr ""
+
+msgid "United Kingdom (BBC+Sky)"
+msgstr "Reino Unido (BBC-Sky)"
+
+msgid " Retrieve EPG now"
+msgstr "Cargar EPG ahora"
+
+msgid "External BBC-SKY EPG"
+msgstr "EPG externo de BBC-Sky"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "On"
+msgstr "On"
+
+msgid "Okay, Starting download in the background"
+msgstr "Comenzamos la descarga en segundo plano"
+
+msgid "Download already in progress!"
+msgstr "¡Descarga aún en progreso!"
+
+#~ msgid "Load BBC-SKY EPG"
+#~ msgstr "Cargar EPG de BBC-Sky"

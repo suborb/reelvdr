@@ -1,0 +1,2643 @@
+# VDR language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002, 2003
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003, 2004, 2005, 2006, 2007, 2008
+# Saku Vainikainen <saku.vainikainen@iki.fi>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <vdr-bugs@tvdr.de>\n"
+"POT-Creation-Date: 2013-12-04 08:25+0100\n"
+"PO-Revision-Date: 2007-08-15 15:52+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: Finnish\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Virheellinen kanavavalinta ***"
+
+msgid "Channel locked by LNB!"
+msgstr ""
+
+msgid "Channel not available!"
+msgstr "Kanava ei ole käytettävissä!"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Siirtotilan aloitus epäonnistui!"
+
+msgid "Still writing timeshift data to recording. Abort?"
+msgstr ""
+
+msgid "off"
+msgstr "poissa"
+
+msgid "on"
+msgstr "päällä"
+
+msgid "auto"
+msgstr "auto"
+
+msgid "none"
+msgstr "tyhjä"
+
+msgid "Polarization"
+msgstr "Polarisaatio"
+
+msgid "System"
+msgstr "Systeemi"
+
+msgid "Srate"
+msgstr "Symbolinopeus"
+
+msgid "Inversion"
+msgstr "Inversio"
+
+msgid "CoderateH"
+msgstr "Suojaustaso (HP)"
+
+msgid "CoderateL"
+msgstr "Suojaustaso (LP)"
+
+msgid "Modulation"
+msgstr "Modulaatio"
+
+msgid "Bandwidth"
+msgstr "Kaistanleveys"
+
+msgid "Transmission"
+msgstr "Transmissio"
+
+msgid "Guard"
+msgstr "Suojaväli"
+
+msgid "Hierarchy"
+msgstr "Hierarkia"
+
+msgid "Rolloff"
+msgstr "Rolloff"
+
+msgid "PlpId"
+msgstr "PLP-tunniste"
+
+msgid "Starting EPG scan"
+msgstr "Ohjelmaoppaan päivitys aloitettu"
+
+msgid "Content$Movie/Drama"
+msgstr "Elokuva/draama"
+
+msgid "Content$Detective/Thriller"
+msgstr "Etsivä/trilleri"
+
+msgid "Content$Adventure/Western/War"
+msgstr "Seikkailu/western/sota"
+
+msgid "Content$Science Fiction/Fantasy/Horror"
+msgstr "Scifi/fantasia/kauhu"
+
+msgid "Content$Comedy"
+msgstr "Komedia"
+
+msgid "Content$Soap/Melodrama/Folkloric"
+msgstr "Saippua/melodraama/kansanperinne"
+
+msgid "Content$Romance"
+msgstr "Romanssi"
+
+msgid "Content$Serious/Classical/Religious/Historical Movie/Drama"
+msgstr "Vakava/klassinen/uskonnollinen/historiallinen elokuva/draama"
+
+msgid "Content$Adult Movie/Drama"
+msgstr "Aikuiselokuva/draama"
+
+msgid "Content$News/Current Affairs"
+msgstr "Uutiset/ajankohtaisohjelma"
+
+msgid "Content$News/Weather Report"
+msgstr "Uutiset/säätiedot"
+
+msgid "Content$News Magazine"
+msgstr "Uutismakasiini"
+
+msgid "Content$Documentary"
+msgstr "Dokumentti"
+
+msgid "Content$Discussion/Inverview/Debate"
+msgstr "Keskustelu/haastattelu/väittely"
+
+msgid "Content$Show/Game Show"
+msgstr "Show/visailu"
+
+msgid "Content$Game Show/Quiz/Contest"
+msgstr "Visailu/kilpailu"
+
+msgid "Content$Variety Show"
+msgstr "Varietee"
+
+msgid "Content$Talk Show"
+msgstr "Keskusteluohjelma"
+
+msgid "Content$Sports"
+msgstr "Urheilua"
+
+msgid "Content$Special Event"
+msgstr "Erikoistapahtuma"
+
+msgid "Content$Sport Magazine"
+msgstr "Urheilumakasiini"
+
+msgid "Content$Football/Soccer"
+msgstr "Jalkapallo"
+
+msgid "Content$Tennis/Squash"
+msgstr "Tennis/Squash"
+
+msgid "Content$Team Sports"
+msgstr "Joukkueurheilua"
+
+msgid "Content$Athletics"
+msgstr "Yleisurheilua"
+
+msgid "Content$Motor Sport"
+msgstr "Moottoriurheilua"
+
+msgid "Content$Water Sport"
+msgstr "Vesiurheilua"
+
+msgid "Content$Winter Sports"
+msgstr "Talviurheilua"
+
+msgid "Content$Equestrian"
+msgstr "Ratsastusta"
+
+msgid "Content$Martial Sports"
+msgstr "Kamppailu-urheilua"
+
+msgid "Content$Children's/Youth Programme"
+msgstr "Lasten ja nuorten ohjelma"
+
+msgid "Content$Pre-school Children's Programme"
+msgstr "Alle kouluikäisten ohjelma"
+
+msgid "Content$Entertainment Programme for 6 to 14"
+msgstr "Viihdeohjelma 6-14 vuotiaille"
+
+msgid "Content$Entertainment Programme for 10 to 16"
+msgstr "Viihdeohjelma 10-16 vuotiaille"
+
+msgid "Content$Informational/Educational/School Programme"
+msgstr "Opetus/kouluohjelma"
+
+msgid "Content$Cartoons/Puppets"
+msgstr "Piirretty/nukke-esitys"
+
+msgid "Content$Music/Ballet/Dance"
+msgstr "Musiikki/baletti/tanssi"
+
+msgid "Content$Rock/Pop"
+msgstr "Rock/pop"
+
+msgid "Content$Serious/Classical Music"
+msgstr "Vakava/klassinen musiikki"
+
+msgid "Content$Folk/Tradional Music"
+msgstr "Folk/kansanmusiikki"
+
+msgid "Content$Jazz"
+msgstr "Jazz"
+
+msgid "Content$Musical/Opera"
+msgstr "Musikaali/ooppera"
+
+msgid "Content$Ballet"
+msgstr "Baletti"
+
+msgid "Content$Arts/Culture"
+msgstr "Taide/kulttuuri"
+
+msgid "Content$Performing Arts"
+msgstr "Performanssitaide"
+
+msgid "Content$Fine Arts"
+msgstr "Kuvataide"
+
+msgid "Content$Religion"
+msgstr "Uskonto"
+
+msgid "Content$Popular Culture/Traditional Arts"
+msgstr "Populaarikulttuuri/perinnetaiteet"
+
+msgid "Content$Literature"
+msgstr "Kirjallisuus"
+
+msgid "Content$Film/Cinema"
+msgstr "Elokuvataide"
+
+msgid "Content$Experimental Film/Video"
+msgstr "Kokeellinen elokuva/video"
+
+msgid "Content$Broadcasting/Press"
+msgstr "Televisio/radio/lehdistö"
+
+msgid "Content$New Media"
+msgstr "Uusmedia"
+
+msgid "Content$Arts/Culture Magazine"
+msgstr "Taide/kulttuurimakasiini"
+
+msgid "Content$Fashion"
+msgstr "Muoti"
+
+msgid "Content$Social/Political/Economics"
+msgstr "Yhteiskunta/politiikka/talous"
+
+msgid "Content$Magazine/Report/Documentary"
+msgstr "Makasiini/reportaasi/dokumentti"
+
+msgid "Content$Economics/Social Advisory"
+msgstr "Talous/yhteiskunnallinen neuvonta"
+
+msgid "Content$Remarkable People"
+msgstr "Merkittävät henkilöt"
+
+msgid "Content$Education/Science/Factual"
+msgstr "Koulutus/tiede"
+
+msgid "Content$Nature/Animals/Environment"
+msgstr "Luonto/eläimet/ympäristö"
+
+msgid "Content$Technology/Natural Sciences"
+msgstr "Teknologia/luonnontiede"
+
+msgid "Content$Medicine/Physiology/Psychology"
+msgstr "Lääketiede/fysiologia/psykologia"
+
+msgid "Content$Foreign Countries/Expeditions"
+msgstr "Vieraat maat/tutkimusretket"
+
+msgid "Content$Social/Spiritual Sciences"
+msgstr "Yhteiskunta/hengelliset tieteet"
+
+msgid "Content$Further Education"
+msgstr "Jatkokoulutus"
+
+msgid "Content$Languages"
+msgstr "Kielet"
+
+msgid "Content$Leisure/Hobbies"
+msgstr "Vapaa-aika ja harrastukset"
+
+msgid "Content$Tourism/Travel"
+msgstr "Turismi/matkustaminen"
+
+msgid "Content$Handicraft"
+msgstr "Käsityöt"
+
+msgid "Content$Motoring"
+msgstr "Autoilu"
+
+msgid "Content$Fitness & Health"
+msgstr "Kuntoilu & terveys"
+
+msgid "Content$Cooking"
+msgstr "Ruuanlaitto"
+
+msgid "Content$Advertisement/Shopping"
+msgstr "Mainostaminen/ostaminen"
+
+msgid "Content$Gardening"
+msgstr "Puutarhanhoito"
+
+msgid "Content$Original Language"
+msgstr "Alkuperäiskieli"
+
+msgid "Content$Black & White"
+msgstr "Mustavalkoinen"
+
+msgid "Content$Unpublished"
+msgstr "Julkaisematon"
+
+msgid "Content$Live Broadcast"
+msgstr "Suoralähetys"
+
+#, c-format
+msgid "ParentalRating$from %d"
+msgstr "%d"
+
+msgid "No title"
+msgstr "Ei esitystä"
+
+msgid "Help"
+msgstr "Auta"
+
+msgid "No help available"
+msgstr ""
+
+msgid "Already first help item"
+msgstr "Ei enää aiempia aputekstejä"
+
+msgid "Already last help item"
+msgstr "Ei enempää aputekstejä"
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "suomi"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "fin"
+
+#. TRANSLATORS:
+#. Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr "TV ja Radio"
+
+msgid "TV-Guide (EPG)"
+msgstr "Ohjelmaopas (EPG)"
+
+msgid "Timer Manager"
+msgstr "Tallennusajastimet"
+
+msgid "Search-Timer Manager"
+msgstr "Hakuajastimet"
+
+msgid "Parental Control"
+msgstr "Lapsilukon asetukset"
+
+#. TRANSLATORS: Tooltips Menu "TV & Radio"
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr "Kanavalistat, ohjelmaopas, ajastinvalikot ja lapsilukon asetukset"
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr "Selaa ja muokkaa käytössä olevia kanavia ja kanavalistoja"
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr "Selaa kanavien ohjelmatietoja ja ajasta ohjelmia tallennettaviksi"
+
+msgid "View, edit and manage recording timers"
+msgstr "Selaa ja muokkaa tallennusajastimia"
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr "Selaa ja muokkaa hakuajastimia"
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr "Muokkaa lapsilukon asetuksia"
+
+#. TRANSLATORS:
+#. Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr "Musiikki ja valokuvat"
+
+msgid "Image Library"
+msgstr "Valokuvakansiot"
+
+msgid "Music Library"
+msgstr "Musiikkikansiot"
+
+msgid "Internet Radio"
+msgstr "Internetradio"
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+#. TRANSLATORS: Tooltips Menu "Music & Pictures"
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr "Musiikki- ja kuvakansiot, nettiradio ja CD-levyjen tallennus"
+
+#, fuzzy
+msgid "Music library, Picture library, Internet radio"
+msgstr "Musiikki- ja kuvakansiot, nettiradio ja CD-levyjen tallennus"
+
+msgid "Play music, manage and copy music files"
+msgstr "Kuuntele, selaa ja muokkaa tallennettuja kappaleita"
+
+msgid "Play music and films from your collection"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr "Katsele, selaa ja muokkaa tallennettuja kuvia"
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr "Kuuntele, selaa ja muokkaa nettiradiokanavia"
+
+msgid "Copy an Audio CD to the music library"
+msgstr "Tallenna CD-levy musiikkikansioon"
+
+#. TRANSLATORS:
+#. Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr "Videot ja TV-ohjelmat"
+
+msgid "Movie Library"
+msgstr "Videokansiot"
+
+#. TRANSLATORS:
+#. Tooltips Menu "Films & DVD"
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr "Videokansiot, TV-tallenteet ja DVD-levyjen teko ja tallennus"
+
+msgid "Movie library, TV recordings"
+msgstr ""
+
+msgid "Watch movies, manage and copy movie files"
+msgstr "Katsele, selaa ja muokkaa tallennettuja videoita"
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr "Katsele, selaa ja muokkaa tallennettuja TV-ohjelmia"
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr "Palauta epähuomiossa poistetet TV-tallenteet"
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr "Tee TV-tallenteesta CD- tai DVD-levy"
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr "Tallenna DVD-levy videokansioon"
+
+#. TRANSLATORS:
+#. PI epgsearch
+msgid "Button$Functions"
+msgstr ""
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr ""
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI extrecmenu
+msgid "Undelete Recordings"
+msgstr ""
+
+msgid "Recording commands"
+msgstr "Tallennekomennot"
+
+#. TRANSLATORS:
+#. PI undelete
+#. PI burn
+msgid "Write DVD - Job"
+msgstr ""
+
+msgid "Write DVD - Job options"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI dvdswitch
+msgid "New folder"
+msgstr "Uusi kansio"
+
+#. TRANSLATORS:
+#. Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr "Internet ja muut ekstrat"
+
+#. TRANSLATORS:
+#. Tooltips Menu "Internet & Extras"
+msgid "File Manager, Web browser, ReelBlog"
+msgstr "Tiedostoselain, Linux-työpöytä, nettiselain ja ReelBlog"
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr "Selaa ja muokkaa tiedostoja"
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr "Selaa nettiä Firefoxilla tai käytä Linux-työpöytää"
+
+msgid "Read news & information on the ReelBox"
+msgstr "Lue Reelboxin blogia"
+
+#. TRANSLATORS:
+#. PI Filebrowser
+msgid "Filebrowser"
+msgstr "Tiedostoselain"
+
+msgid "Create directory"
+msgstr "Tee uusi kansio"
+
+msgid "Playlist"
+msgstr "Toistolista"
+
+msgid "Playlist actions"
+msgstr "Toistolistan toiminnot"
+
+msgid "Playlist Commands"
+msgstr "Toistolistan toiminnot"
+
+msgid "Filebrowser Commands"
+msgstr "Tiedostoselaimen toiminnot"
+
+msgid "Copy playlist"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr ""
+
+#. TRANSLATORS:
+#. Menu "Additional Software"
+msgid "Additional Software"
+msgstr "Lisätoiminnot"
+
+msgid "Magazine EPG"
+msgstr "Ohjelmalehti"
+
+msgid "Additional software provided by third party developers"
+msgstr "Muiden valmistajien tuottamat lisätoiminnot"
+
+#. TRANSLATORS:
+#. More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr "Toista levyasemassa sisällä oleva levy"
+
+msgid "Show currently active background processes"
+msgstr "Näytä tausta-ajoon jätetyt toiminnot"
+
+#. TRANSLATORS:
+#. Menu Media Manager
+msgid "Format a DVD-RW"
+msgstr "Alusta uudelleenalustettava DVD-levy"
+
+msgid "Directory browser"
+msgstr "Tiedostoselain"
+
+#. TRANSLATORS:
+#. Special Menus that have a banner at the left
+msgid "My Pictures"
+msgstr "Valokuvakansiot"
+
+msgid "My Music"
+msgstr "Musiikkikansiot"
+
+msgid "My Videos"
+msgstr "Videokansiot"
+
+msgid "My DVDs"
+msgstr "Tallennetut DVD-levyt"
+
+msgid "EPG Commands: "
+msgstr "Ohjelmaoppaan toiminnot: "
+
+msgid "Search actions"
+msgstr "Hakuajastimen toiminnot"
+
+msgid "Search entries"
+msgstr "Haun tulokset"
+
+msgid "Search templates"
+msgstr "Hakuajastimien mallipohjat"
+
+msgid "Edit search"
+msgstr "Muokkaa hakuajastinta"
+
+msgid "Edit timer"
+msgstr "Muokkaa ajastinta"
+
+msgid "Edit blacklist"
+msgstr "Muokkaa sulkulistaa"
+
+msgid "Edit template"
+msgstr "Muokkaa mallipohjaa"
+
+msgid "Edit user-defined days of week"
+msgstr "Muokkaa viikonpäiviä"
+
+msgid "found recordings"
+msgstr "Löydetyt tallenteet"
+
+msgid "Select directory"
+msgstr "Valitse kansio"
+
+msgid "Timer conflicts -"
+msgstr "Päällekkäiset ajastimet -"
+
+msgid "Title$Childlock"
+msgstr "Lapsilukko"
+
+msgid "Games"
+msgstr "Pelit"
+
+msgid "Multifeed Options"
+msgstr "Mikropäiden asetukset"
+
+msgid "Move recording"
+msgstr "Siirrä tallenne"
+
+msgid "Select Reelblog item"
+msgstr "Valitse blogimerkintä"
+
+msgid "SleepTimer"
+msgstr "Uniajastin"
+
+msgid "Rename entry"
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Choose action"
+msgstr ""
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid "Channel List:"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup Menus with "Setup"-banner on the left
+msgid "Title$Setup"
+msgstr "Asetukset"
+
+msgid "Settings"
+msgstr ""
+
+msgid "Settings: System Settings"
+msgstr ""
+
+msgid "Software Update"
+msgstr "Ohjelmiston päivitys"
+
+msgid "Channel Lists"
+msgstr "Kanavalistat"
+
+msgid "Channel lists functions"
+msgstr "Kanavalistan toiminnot"
+
+msgid "Channelscan"
+msgstr "Kanavahaku"
+
+msgid "Installation Wizard"
+msgstr "Ohjattu asennus"
+
+msgid "Installation"
+msgstr ""
+
+msgid "Remote Control / Automation"
+msgstr "Kaukosäädön asetukset"
+
+msgid "MultiRoom Setup"
+msgstr ""
+
+msgid "MultiRoom - Error!"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr "Perusasetukset"
+
+msgid "Network Settings"
+msgstr ""
+
+msgid "EPG Services"
+msgstr "Ohjelmaoppaat"
+
+msgid "Reception Settings"
+msgstr "Vastaanoton asetukset"
+
+msgid "Network"
+msgstr "Tietoverkkoyhteydet"
+
+msgid "Global Settings"
+msgstr "Yleiset asetukset"
+
+msgid "UMTS Settings"
+msgstr ""
+
+msgid "Dynamic DNS"
+msgstr "Päivitettävät nimipalvelut"
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr "Itsemääritellyt tietoverkkoyhteydet"
+
+msgid "Windows Network Connection"
+msgstr "Windows-verkkoyhteys"
+
+msgid "NFS Client"
+msgstr "Unix-verkkoyhteys"
+
+msgid "Video Recorder "
+msgstr "Videotallennin"
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr "Verkkokansiot"
+
+msgid "Setup - Audio/Video"
+msgstr "Kuvan ja äänen asetukset"
+
+msgid "Timezone & clock"
+msgstr "Kellonaika ja aikavyöhyke"
+
+msgid "System Information"
+msgstr "Järjestelmän tiedot"
+
+msgid "NetCeiver diagnostics"
+msgstr "Verkkovastaanoton vianselvitys"
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr "Virittimien asetukset"
+
+msgid "Rotor Setup"
+msgstr "Lautasmoottorin asetukset"
+
+msgid "Streaming Clients"
+msgstr ""
+
+msgid "Language Settings"
+msgstr "Kieliasetukset"
+
+msgid "Timezone"
+msgstr "Aikavyöhyke"
+
+msgid "Timezone Settings"
+msgstr "Aikavyöhykkeen asetukset"
+
+msgid "Front Panel"
+msgstr "Etupaneelin asetukset"
+
+msgid "TVTV Service"
+msgstr "TVTV-palvelu"
+
+msgid "International EPG"
+msgstr "Kansainvälinen ohjelmaopas"
+
+msgid "Energy Options"
+msgstr "Virransäästöasetukset"
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "Virtakatkaisimen toiminto"
+
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr ""
+
+msgid "Option$Quick"
+msgstr ""
+
+#. TRANSLATORS:
+#. Setup OSD and Language
+msgid "Setup.OSD$OSD Font Size"
+msgstr "Valikoiden kirjaisinkoko"
+
+msgid "FontSize$Normal"
+msgstr "tavallinen"
+
+msgid "Small"
+msgstr "pieni"
+
+msgid "User defined"
+msgstr "mukautettu"
+
+#. TRANSLATORS:
+#. Recording Commands
+msgid "Mark Commercials"
+msgstr "Merkitse mainoskatkot"
+
+msgid "Add Child Lock"
+msgstr "Lisää lapsilukko"
+
+msgid "Remove Child Lock"
+msgstr "Poista lapsilukko"
+
+msgid "Change title"
+msgstr "Muokkaa otsaketta"
+
+msgid "Mark as New"
+msgstr "Merkitse uudeksi"
+
+msgid "Remove Archive Mark"
+msgstr "Poista arkistomerkintä"
+
+msgid "Remove Crop Mark"
+msgstr "Poista katkomerkinnät"
+
+msgid "Remove Archived Recording"
+msgstr "Poista arkistoitu tallenne"
+
+msgid "Restore Archived Recording"
+msgstr "Palauta arkistoitu tallenne"
+
+msgid "Convert to MPEG (TS)"
+msgstr "Muunna MPEG-PS -muotoon"
+
+msgid "Directory Selector:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+msgid "Directory commands"
+msgstr ""
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "Generate preview"
+msgstr ""
+
+msgid "Remove preview"
+msgstr ""
+
+msgid "Compress recording"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI MCLI
+msgid "No CI-Module"
+msgstr ""
+
+msgid "upper slot"
+msgstr "Ylempi CI-moduulipaikka"
+
+msgid "lower slot"
+msgstr "Alempi CI-moduulipaikka"
+
+#. TRANSLATORS:
+#. Channels/Bouquets
+msgid "Edit Channels"
+msgstr "Muokkaa kanavia"
+
+msgid "Customize Bouquets"
+msgstr ""
+
+msgid "Channellist: set filters"
+msgstr ""
+
+#. TRANSLATORS:
+#. PI CHANNELLIST
+msgid "All Channels"
+msgstr ""
+
+msgid "Functions: Favourites"
+msgstr ""
+
+msgid "Functions: Channel list"
+msgstr ""
+
+msgid "Functions: Select favourite folder"
+msgstr ""
+
+msgid "Functions: search for channel"
+msgstr ""
+
+msgid "Functions: Create new Favourite folder"
+msgstr ""
+
+msgid "Functions: Rename favourite folder"
+msgstr ""
+
+msgid "Functions: Select "
+msgstr ""
+
+msgid "Functions: search "
+msgstr ""
+
+msgid "Functions: Create "
+msgstr ""
+
+msgid "Functions: Rename "
+msgstr ""
+
+msgid "Functions: Channel "
+msgstr ""
+
+msgid "Functions: Move Channel"
+msgstr ""
+
+msgid "Sources"
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "Music Browser"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Vaihe 1: Koodauksen tunnistaminen"
+
+msgid "Press any key on the RC unit"
+msgstr "Paina mitä tahansa kaukosäätimen näppäintä"
+
+msgid "RC code detected!"
+msgstr "Näppäinpainallus vastaanotettu!"
+
+msgid "Do not press any key..."
+msgstr "Älä paina kaukosäätimen näppäimiä..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Vaihe 2: Näppäinkoodien opettelu"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Paina näppäintä toiminnolle '%s'"
+
+msgid "Press 'Up' to confirm"
+msgstr "Hyväksy painamalla 'Ylös'"
+
+msgid "Press 'Down' to continue"
+msgstr "Jatka painamalla 'Alas'"
+
+msgid "(press 'Up' to go back)"
+msgstr "(palaa takaisin painamalla 'Ylös')"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(lopeta opettaminen painamalla 'Alas')"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "näppäimen puuttuessa paina 'Valikko'"
+
+msgid "Learning Remote Control Keys"
+msgstr "Kaukosäätimen opettaminen"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Vaihe 3: Näppäinkoodien tallentaminen"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "Paina 'Ylös' tallentaaksesi ja 'Alas' peruuttaaksesi"
+
+msgid "Key$Up"
+msgstr "Ylös"
+
+msgid "Key$Down"
+msgstr "Alas"
+
+msgid "Key$Menu"
+msgstr "Valikko"
+
+msgid "Key$Ok"
+msgstr "Ok"
+
+msgid "Key$Back"
+msgstr "Takaisin"
+
+msgid "Key$Left"
+msgstr "Vasemmalle"
+
+msgid "Key$Right"
+msgstr "Oikealle"
+
+msgid "Key$Red"
+msgstr "Punainen"
+
+msgid "Key$Green"
+msgstr "Vihreä"
+
+msgid "Key$Yellow"
+msgstr "Keltainen"
+
+msgid "Key$Blue"
+msgstr "Sininen"
+
+msgid "Key$Info"
+msgstr "Tiedot"
+
+msgid "Key$Play"
+msgstr "Toista"
+
+msgid "Key$Pause"
+msgstr "Tauko"
+
+msgid "Key$Stop"
+msgstr "Lopeta"
+
+msgid "Key$Record"
+msgstr "Tallenna"
+
+msgid "Key$FastFwd"
+msgstr "Pikakelaus >>"
+
+msgid "Key$FastRew"
+msgstr "Pikakelaus <<"
+
+msgid "Key$Next"
+msgstr "Seuraava"
+
+msgid "Key$Prev"
+msgstr "Edellinen"
+
+msgid "Key$Power"
+msgstr "Virta"
+
+msgid "Key$Channel+"
+msgstr "Kanava +"
+
+msgid "Key$Channel-"
+msgstr "Kanava -"
+
+msgid "Key$PrevChannel"
+msgstr "Edellinen kanava"
+
+msgid "Key$Volume+"
+msgstr "Äänenvoimakkuus +"
+
+msgid "Key$Volume-"
+msgstr "Äänenvoimakkuus -"
+
+msgid "Key$Mute"
+msgstr "Mykistys"
+
+msgid "Key$Audio"
+msgstr "Ääni"
+
+msgid "Key$Subtitles"
+msgstr "Tekstitys"
+
+msgid "Key$Schedule"
+msgstr "Ohjelmisto"
+
+msgid "Key$Channels"
+msgstr "Kanavat"
+
+msgid "Key$Timers"
+msgstr "Ajastimet"
+
+msgid "Key$Recordings"
+msgstr "Tallenteet"
+
+msgid "Key$Setup"
+msgstr "Asetukset"
+
+msgid "Key$Commands"
+msgstr "Komennot"
+
+msgid "Key$Greater"
+msgstr "Suurempi kuin >"
+
+msgid "Key$Less"
+msgstr "Pienempi kuin <"
+
+msgid "Key$2digit"
+msgstr "-/--"
+
+msgid "Key$DVD"
+msgstr "DVD"
+
+msgid "Key$DVB"
+msgstr "DVB"
+
+msgid "Key$PVR"
+msgstr "PVR"
+
+msgid "Key$Reel"
+msgstr "REEL"
+
+msgid "Key$TT"
+msgstr "TV"
+
+msgid "Key$PiP"
+msgstr "Kuva kuvassa"
+
+msgid "Key$Help"
+msgstr "Auta"
+
+msgid "Key$Eject"
+msgstr "Poista media"
+
+msgid "Key$Aspect"
+msgstr "Kuvasuhde"
+
+msgid "Key$Search"
+msgstr "Haku"
+
+msgid "Key$Searchtimers"
+msgstr ""
+
+msgid "Key$Internet"
+msgstr ""
+
+msgid "Key$Guide"
+msgstr ""
+
+msgid "Key$Multimedia"
+msgstr ""
+
+msgid "Key$Radio"
+msgstr ""
+
+msgid "Key$Heart"
+msgstr ""
+
+msgid "Key$Favourites"
+msgstr ""
+
+msgid "Key$AddFavorite"
+msgstr ""
+
+msgid "Key$User0"
+msgstr "Lisänäppäin 0"
+
+msgid "Key$User1"
+msgstr "Lisänäppäin 1"
+
+msgid "Key$User2"
+msgstr "Lisänäppäin 2"
+
+msgid "Key$User3"
+msgstr "Lisänäppäin 3"
+
+msgid "Key$User4"
+msgstr "Lisänäppäin 4"
+
+msgid "Key$User5"
+msgstr "Lisänäppäin 5"
+
+msgid "Key$User6"
+msgstr "Lisänäppäin 6"
+
+msgid "Key$User7"
+msgstr "Lisänäppäin 7"
+
+msgid "Key$User8"
+msgstr "Lisänäppäin 8"
+
+msgid "Key$User9"
+msgstr "Lisänäppäin 9"
+
+msgid "Free To Air"
+msgstr "vapaa"
+
+msgid "encrypted"
+msgstr "salattu"
+
+msgid "Edit channel"
+msgstr "Muokkaa kanavaa"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Source"
+msgstr "Lähde"
+
+msgid "Frequency"
+msgstr "Taajuus"
+
+msgid "Vpid"
+msgstr "Kuva-PID"
+
+msgid "Ppid"
+msgstr "PCR-PID"
+
+msgid "Apid1"
+msgstr "Ääni-PID (1)"
+
+msgid "Apid2"
+msgstr "Ääni-PID (2)"
+
+msgid "Dpid1"
+msgstr "Dolby-PID (1)"
+
+msgid "Dpid2"
+msgstr "Dolby-PID (2)"
+
+msgid "Spid1"
+msgstr "Tekstitys-PID (1)"
+
+msgid "Spid2"
+msgstr "Tekstitys-PID (2)"
+
+msgid "Tpid"
+msgstr "Teksti-TV-PID"
+
+msgid "CA"
+msgstr "Salaus (CA)"
+
+msgid "Sid"
+msgstr "Palvelu-ID"
+
+msgid "Rid"
+msgstr ""
+
+msgid "Channel settings are not unique!"
+msgstr "Kanava-asetukset eivät ole yksilölliset!"
+
+msgid "Channels"
+msgstr "Kanavat"
+
+msgid "Button$Edit"
+msgstr "Muokkaa"
+
+msgid "Button$New"
+msgstr "Uusi"
+
+msgid "Button$Delete"
+msgstr "Poista"
+
+msgid "Button$Mark"
+msgstr "Siirrä"
+
+msgid "Channel is being used by a timer!"
+msgstr "Kanava on ajastimen käytössä!"
+
+msgid "Delete channel?"
+msgstr "Poistetaanko kanava?"
+
+msgid "Edit folder"
+msgstr "Muokkaa kansiota"
+
+msgid "Sub folder"
+msgstr "Alikansio"
+
+msgid "Folder name already exists!"
+msgstr "Kansio on jo olemassa!"
+
+#, c-format
+msgid "Folder name must not contain '%c'!"
+msgstr "Kansion nimessä ei saa olla '%c'-merkkiä!"
+
+msgid "Button$Select"
+msgstr "Valitse"
+
+msgid "Delete folder and all sub folders?"
+msgstr "Poistetaanko kansio alikansioineen?"
+
+msgid "Delete folder?"
+msgstr "Poistetaanko kansio?"
+
+msgid "Active"
+msgstr "Aktiivinen"
+
+msgid "Channel"
+msgstr "Kanava"
+
+msgid "Day"
+msgstr "Päivä"
+
+msgid "Start"
+msgstr "Aloitus"
+
+msgid "Stop"
+msgstr "Lopetus"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Prioriteetti"
+
+msgid "Lifetime"
+msgstr "Elinikä"
+
+msgid "Childlock"
+msgstr ""
+
+msgid "yes"
+msgstr "kyllä"
+
+msgid "no"
+msgstr "ei"
+
+msgid "File"
+msgstr "Tiedosto"
+
+msgid "Button$Folder"
+msgstr "Kansio"
+
+msgid "Button$Single"
+msgstr "Yksittäinen"
+
+msgid "Button$Repeating"
+msgstr "Toistuva"
+
+msgid "First day"
+msgstr "1. päivä"
+
+msgid "Select folder"
+msgstr "Valitse kansio"
+
+msgid "Timers"
+msgstr "Ajastimet"
+
+msgid "Button$On/Off"
+msgstr "Päällä/Pois"
+
+msgid "Button$Info"
+msgstr "Tiedot"
+
+msgid "Delete timer?"
+msgstr "Poistetaanko ajastin?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Ajastettu tallennus käynnissä - poistetaanko silti?"
+
+msgid "Event"
+msgstr "Tapahtuma"
+
+msgid "Description:"
+msgstr ""
+
+msgid "Button$Timer"
+msgstr "Ajastin"
+
+msgid "Button$Record"
+msgstr "Tallenna"
+
+msgid "Button$Switch"
+msgstr "Valitse"
+
+msgid "What's on now?"
+msgstr "Menossa nyt"
+
+msgid "What's on next?"
+msgstr "Tulossa seuraavaksi"
+
+msgid "Button$Next"
+msgstr "Seuraavaksi"
+
+msgid "Button$Now"
+msgstr "Nyt"
+
+msgid "Button$Schedule"
+msgstr "Ohjelmisto"
+
+msgid "Can't switch channel!"
+msgstr "Kanavan vaihtaminen ei mahdollista!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Ohjelmisto - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr "Tämä tapahtuma - %s"
+
+msgid "This event - all channels"
+msgstr "Tämä tapahtuma - kaikki kanavat"
+
+msgid "All events - all channels"
+msgstr "Kaikki tapahtumat - kaikki kanavat"
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "Syötä %d numeroa!"
+
+msgid "CAM not responding!"
+msgstr "CA-moduuli ei vastaa!"
+
+msgid "Recording info"
+msgstr "Tallenteen tiedot"
+
+msgid "Button$Play"
+msgstr "Toista"
+
+msgid "Button$Rewind"
+msgstr "Alkuun"
+
+msgid "Rename recording"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Length"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "TS"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Delete marks information?"
+msgstr ""
+
+msgid "Delete resume information?"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr "Tallenteen toistaminen epäonnistui!"
+
+msgid "Recordings"
+msgstr "Tallenteet"
+
+msgid "Button$Open"
+msgstr "Avaa"
+
+msgid "Commands"
+msgstr "Komennot"
+
+msgid "Delete recording?"
+msgstr "Poistetaanko tallenne?"
+
+msgid "Recording is being edited - really delete?"
+msgstr "Tallennetta muokataan - poistetaanko silti?"
+
+msgid "Error while deleting recording!"
+msgstr "Tallenteen poistaminen epäonnistui!"
+
+msgid "never"
+msgstr "ei koskaan"
+
+msgid "skin dependent"
+msgstr "ulkoasun mukaan"
+
+msgid "always"
+msgstr "aina"
+
+msgid "OSD"
+msgstr "Kuvaruutunäyttö"
+
+msgid "Setup.OSD$Language"
+msgstr "Kieli"
+
+msgid "Setup.OSD$Skin"
+msgstr "Ulkoasu"
+
+msgid "Setup.OSD$Theme"
+msgstr "Teema"
+
+msgid "Setup.OSD$WarEagle icons"
+msgstr ""
+
+msgid "Setup.OSD$Left (%)"
+msgstr "Vaakakeskitys (%)"
+
+msgid "Setup.OSD$Top (%)"
+msgstr "Pystykeskitys (%)"
+
+msgid "Setup.OSD$Width (%)"
+msgstr "Leveys (%)"
+
+msgid "Setup.OSD$Height (%)"
+msgstr "Korkeus (%)"
+
+msgid "Setup.OSD$Message time (s)"
+msgstr "Viestien esitysaika (s)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Käytä pieniä kirjasimia"
+
+msgid "Setup.OSD$Anti-alias"
+msgstr "Käytä reunan pehmennystä"
+
+msgid "Setup.OSD$Default font"
+msgstr "Oletuskirjasintyyppi"
+
+msgid "Setup.OSD$Small font"
+msgstr "Pieni kirjasintyyppi"
+
+msgid "Setup.OSD$Fixed font"
+msgstr "Tasavälinen kirjasintyyppi"
+
+msgid "Setup.OSD$Default font size (%)"
+msgstr "Oletuskirjasintyypin koko (%)"
+
+msgid "Setup.OSD$Small font size (%)"
+msgstr "Pienen kirjasintyypin koko (%)"
+
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr "Tasavälisen kirjasintyypin koko (%)"
+
+msgid "Setup.OSD$Channel info position"
+msgstr "Kanavatiedon sijainti"
+
+msgid "bottom"
+msgstr "alareuna"
+
+msgid "top"
+msgstr "yläreuna"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "Kanavatiedon esitysaika (s)"
+
+msgid "Setup.OSD$Info on channel switch"
+msgstr "Näytä kanavatieto vaihdettaessa"
+
+msgid "Setup.OSD$Timeout requested channel info"
+msgstr "Sulje erikseen avattu kanavatieto"
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Valikoiden vieritys sivuttain"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "Valikoiden vieritys ympäri"
+
+msgid "Setup.OSD$Menu key closes"
+msgstr "Sulje valikkonäppäimellä"
+
+msgid "Setup.OSD$Recording directories"
+msgstr "Näytä tallennehakemistot"
+
+msgid "Setup.OSD$Folders in timer menu"
+msgstr "Näytä kansiot ajastinvalikossa"
+
+msgid "Setup.OSD$Number keys for characters"
+msgstr "Käytä numeronäppäimiä tekstisyötteessä"
+
+msgid "Setup.OSD$Main menu command position"
+msgstr ""
+
+msgid "Setup.OSD$Show valid input"
+msgstr ""
+
+msgid "EPG"
+msgstr "Ohjelmaopas"
+
+msgid "Button$Scan"
+msgstr "Päivitä"
+
+msgid "blacklist"
+msgstr ""
+
+msgid "whitelist"
+msgstr ""
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Ohjelmaoppaan taustapäivitys (h)"
+
+msgid "Setup.EPG$EPG bugfix level"
+msgstr "Ohjelmaoppaan korjaustaso"
+
+msgid "Setup.EPG$EPG linger time (min)"
+msgstr "Vanha tieto näkyy (min)"
+
+msgid "Setup.EPG$Show progress bar"
+msgstr ""
+
+msgid "Setup.EPG$Set system time"
+msgstr "Tahdista kellonaika"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "Vastaanota kellonaika transponderilta"
+
+#. TRANSLATORS: note the plural!
+msgid "Setup.EPG$Preferred languages"
+msgstr "Suosikkikielet"
+
+#. TRANSLATORS: note the singular!
+msgid "Setup.EPG$Preferred language"
+msgstr "Suosikkikieli"
+
+msgid "Setup.EPG$Period for double EPG search(min)"
+msgstr ""
+
+msgid "Setup.EPG$extern double Epg entry"
+msgstr ""
+
+msgid "Setup.EPG$Mix intern and extern EPG"
+msgstr ""
+
+msgid "Setup.EPG$Disable running VPS event"
+msgstr ""
+
+msgid "Setup.EPG$Mode of noEPG-Patch"
+msgstr ""
+
+msgid "pan&scan"
+msgstr "pan&scan"
+
+msgid "letterbox"
+msgstr "letterbox"
+
+msgid "center cut out"
+msgstr "center cut out"
+
+msgid "names only"
+msgstr "vain nimet"
+
+msgid "PIDs only"
+msgstr "vain PID:it"
+
+msgid "names and PIDs"
+msgstr "nimet ja PID:it"
+
+msgid "add new channels"
+msgstr "uudet kanavat"
+
+msgid "add new transponders"
+msgstr "uudet transponderit"
+
+msgid "DVB"
+msgstr "DVB"
+
+msgid "Button$Audio"
+msgstr "Ääni"
+
+msgid "Button$Subtitles"
+msgstr "Tekstitys"
+
+msgid "Setup.DVB$Use DVB receivers"
+msgstr ""
+
+msgid "Setup.DVB$Primary DVB interface"
+msgstr "Ensisijainen DVB-sovitin"
+
+msgid "Setup.DVB$Standard compliance"
+msgstr "Noudatettava standardi"
+
+msgid "Setup.DVB$Video format"
+msgstr "Kuvasuhde"
+
+msgid "Setup.DVB$Video display format"
+msgstr "Näyttömuoto"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Käytä Dolby Digital -ääntä"
+
+msgid "Setup.DVB$Update channels"
+msgstr "Päivitä kanavat"
+
+msgid "Setup.DVB$channel binding by Rid"
+msgstr ""
+
+msgid "Setup.DVB$Audio languages"
+msgstr "Äänen kielet"
+
+msgid "Setup.DVB$Audio language"
+msgstr "Äänen kieli"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "Näytä tekstitys"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "Tekstityskielet"
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "Tekstityskieli"
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "Tekstityksen tasaus"
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "Tekstityksen läpinäkyvyys"
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "Tekstityksen taustan läpinäkyvyys"
+
+msgid "Setup.DVB$Enable teletext support"
+msgstr ""
+
+msgid "LNB"
+msgstr "LNB"
+
+#, c-format
+msgid "Setup.LNB$DVB device %d uses LNB No."
+msgstr ""
+
+msgid "Setup.LNB$Log LNB usage"
+msgstr ""
+
+msgid "Setup.LNB$Use DiSEqC"
+msgstr "Käytä DiSEqC-kytkintä"
+
+msgid "Setup.LNB$SLOF (MHz)"
+msgstr "LNB-rajataajuus (MHz)"
+
+msgid "Setup.LNB$Low LNB frequency (MHz)"
+msgstr "LNB-alataajuus (MHz)"
+
+msgid "Setup.LNB$High LNB frequency (MHz)"
+msgstr "LNB-ylätaajuus (MHz)"
+
+#, c-format
+msgid "Setup.LNB$Device %d connected to sat cable"
+msgstr "DVB-sovitin %d kytketty SAT-kaapeliin"
+
+msgid "Setup.LNB$own"
+msgstr "oma"
+
+msgid "CAM reset"
+msgstr "CAM nollaus"
+
+msgid "CAM present"
+msgstr "CAM havaittu"
+
+msgid "CAM ready"
+msgstr "CAM valmis"
+
+msgid "CAM"
+msgstr "CAM"
+
+msgid "Button$Menu"
+msgstr "Valikko"
+
+msgid "Button$Reset"
+msgstr "Nollaa"
+
+msgid "Opening CAM menu..."
+msgstr "Avataan CA-moduulin valikkoa..."
+
+msgid "Can't open CAM menu!"
+msgstr "CA-moduulin valikko ei saatavilla"
+
+msgid "CAM is in use - really reset?"
+msgstr "CA-moduuli käytössä - nollataanko?"
+
+msgid "Can't reset CAM!"
+msgstr "CA-moduulin nollaus epäonnistui!"
+
+msgid "do not pause live video"
+msgstr "älä pysäytä lähetystä"
+
+msgid "confirm pause live video"
+msgstr "varmista lähetyksen pysäyttäminen"
+
+msgid "pause live video"
+msgstr "pysäytä lähetys"
+
+msgid "confirm"
+msgstr "varmista"
+
+msgid "Recording"
+msgstr "Tallennus"
+
+msgid "Setup.Recording$Margin at start (min)"
+msgstr "Aloitusmarginaali (min)"
+
+msgid "Setup.Recording$Margin at stop (min)"
+msgstr "Lopetusmarginaali (min)"
+
+msgid "Setup.Recording$Default priority"
+msgstr "Tallenteen oletusprioriteetti"
+
+msgid "Setup.Recording$Default Lifetime (d)"
+msgstr "Tallenteen oletuselinikä (d)"
+
+msgid "Setup.Recording$Pause key handling"
+msgstr "Taukonäppäimen toiminta"
+
+msgid "Setup.Recording$Pause priority"
+msgstr "Taukotallenteen prioriteetti"
+
+msgid "Setup.Recording$Pause lifetime (d)"
+msgstr "Taukotallenteen elinikä (d)"
+
+msgid "Setup.Recording$Video directory policy"
+msgstr ""
+
+msgid "Setup.Recording$Number of video directories"
+msgstr ""
+
+#, c-format
+msgid "Setup.Recording$Video %d priority"
+msgstr ""
+
+#, c-format
+msgid "Setup.Recording$Video %d min. free MB"
+msgstr ""
+
+msgid "Setup.Recording$Use episode name"
+msgstr "Käytä jakson nimeä"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "Käytä VPS-toimintoa"
+
+msgid "Setup.Recording$VPS margin (s)"
+msgstr "VPS-toiminnon aloitusmarginaali (s)"
+
+msgid "Setup.Recording$Mark instant recording"
+msgstr "Merkitse pikatallenne"
+
+msgid "Setup.Recording$Name instant recording"
+msgstr "Nimeä pikatallenne"
+
+msgid "Setup.Recording$Instant rec. time (min)"
+msgstr "Pikatallennuksen kesto (min)"
+
+msgid "Setup.Recording$Max. video file size (MB)"
+msgstr "Suurin tiedostokoko (Mt)"
+
+msgid "Setup.Recording$Max. recording size (GB)"
+msgstr ""
+
+msgid "Setup.Recording$Hard Link Cutter"
+msgstr ""
+
+msgid "Setup.Recording$Split edited files"
+msgstr "Jaottele muokatut tallenteet"
+
+msgid "Setup.Recording$Show date"
+msgstr ""
+
+msgid "Setup.Recording$Show time"
+msgstr ""
+
+msgid "Setup.Recording$Show length"
+msgstr ""
+
+msgid "Setup.Recording$Delete timeshift recording"
+msgstr "Poista ajansiirtotallenne"
+
+msgid "Replay"
+msgstr "Toisto"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Käytä toiston moninopeustilaa"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Näytä toiston tila"
+
+msgid "Setup.Replay$Show remaining time"
+msgstr "Näytä jäljellä oleva aika"
+
+msgid "Setup.Replay$Resume ID"
+msgstr "Tallenteen paluutunniste"
+
+msgid "Setup.Recording$Jump Seconds"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds Slow"
+msgstr ""
+
+msgid "Setup.Recording$Jump Seconds (Repeat)"
+msgstr ""
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "intelligent"
+msgstr ""
+
+msgid "Setup.Replay$Jump&Play"
+msgstr ""
+
+msgid "Setup.Replay$Play&Jump"
+msgstr ""
+
+msgid "Setup.Replay$Pause at last mark"
+msgstr ""
+
+msgid "Setup.Replay$Reload marks"
+msgstr ""
+
+msgid "Setup.Miscellaneous$only in channelinfo"
+msgstr ""
+
+msgid "Setup.Miscellaneous$only in progress display"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr "Sekalaiset"
+
+msgid "Setup.Miscellaneous$Min. event timeout (min)"
+msgstr "Tapahtuman odotusaika (min)"
+
+msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+msgstr "Käyttäjätoiminnon odotusaika (min)"
+
+msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+msgstr "SVDRP-komennon odotusaika (s)"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "Kanavavalinnan odotusaika (s)"
+
+msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+msgstr "Kanavasyötteen odotusaika (ms)"
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "Kanava käynnistettäessä"
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "edellinen"
+
+msgid "Setup.Miscellaneous$Initial volume"
+msgstr "Äänenvoimakkuus käynnistettäessä"
+
+msgid "Setup.Miscellaneous$Channels wrap"
+msgstr "Kanavien rullaus"
+
+msgid "Setup.Miscellaneous$Emergency exit"
+msgstr "Käytä hätäsammutusta"
+
+msgid "Setup.Miscellaneous$Lirc repeat delay"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Lirc repeat freq"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Lirc repeat timeout"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Volume ctrl with left/right"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Channelgroups with left/right"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Search fwd/back with left/right"
+msgstr ""
+
+msgid "Plugins"
+msgstr "Laajennokset"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Tällä laajennoksella ei ole asetuksia!"
+
+msgid "Setup"
+msgstr "Asetukset"
+
+msgid "Restart"
+msgstr "Käynnistä uudelleen"
+
+msgid "Really restart?"
+msgstr "Käynnistetäänkö uudelleen?"
+
+#. TRANSLATORS: note the leading and trailing blanks!
+msgid " Stop recording "
+msgstr " Lopeta tallennus "
+
+msgid "Schedule"
+msgstr "Ohjelmisto"
+
+msgid "VDR"
+msgstr "VDR"
+
+msgid " Stop replaying"
+msgstr " Lopeta toisto"
+
+msgid "Button$Pause"
+msgstr "Tauko"
+
+msgid "Button$Stop"
+msgstr "Lopeta"
+
+msgid "Button$Resume"
+msgstr "Jatka"
+
+msgid " Cancel editing"
+msgstr " Peru muokkaus"
+
+msgid "Stop recording?"
+msgstr "Lopetetaanko tallennus?"
+
+msgid "Cancel editing?"
+msgstr "Perutaanko muokkaus?"
+
+msgid "No audio available!"
+msgstr "Äänen kieli ei ole valittavissa!"
+
+msgid "No subtitles"
+msgstr "Ei tekstitystä"
+
+msgid "No subtitles available!"
+msgstr "Tekstitys ei ole valittavissa!"
+
+msgid "Not enough disk space to start recording!"
+msgstr "Tallennustilan puute estää tallennuksen!"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "Could not add timer"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "Ei vapaata DVB-viritintä tallennukselle!"
+
+msgid "Pausing live video..."
+msgstr "Pysäytetään lähetys..."
+
+msgid "Delete timeshift recording?"
+msgstr "Poistetaanko ajansiirtotallenne?"
+
+msgid "Timeshift mode"
+msgstr "Ajansiirtotila"
+
+msgid "Back"
+msgstr "Edellinen"
+
+msgid "Forward"
+msgstr ""
+
+msgid "End"
+msgstr ""
+
+msgid "Jump"
+msgstr ""
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Jump: "
+msgstr "Siirry: "
+
+msgid "No editing marks defined!"
+msgstr "Muokkausmerkinnät puuttuvat!"
+
+msgid "Can't start editing process!"
+msgstr "Muokkauksen aloitus epäonnistui!"
+
+msgid "Editing process started"
+msgstr "Muokkaus aloitettu"
+
+msgid "Editing process already active!"
+msgstr "Muokkaus on jo käynnissä!"
+
+msgid "Recording started"
+msgstr "Tallennus aloitettu"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " abcdefghijklmnopqrstuvwxyzåäö0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabcäå2\tdef3\tghi4\tjkl5\tmnoö6\tpqrs7\ttuv8\twxyz9"
+
+msgid "CharMap$ 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.,1#~\\^$[]|()*+?{}/:%@&\tabcäå2\tdef3\tghi4\tjkl5\tmnoö6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc"
+
+msgid "Button$Overwrite"
+msgstr "Korvaa"
+
+msgid "Button$Insert"
+msgstr "Lisää"
+
+msgid "Changes applied"
+msgstr ""
+
+msgid "Plugin"
+msgstr "Laajennos"
+
+msgid "Power Off ReelBox"
+msgstr ""
+
+msgid "Recording - activating Standby"
+msgstr ""
+
+msgid "Running Processes - activating Standby"
+msgstr ""
+
+msgid "Standby"
+msgstr "valmiustilaan"
+
+msgid "Power off"
+msgstr ""
+
+msgid "Reboot"
+msgstr "Käynnistä uudelleen"
+
+msgid "Set Sleeptimer"
+msgstr "Aseta uniajastin"
+
+msgid "Maintenance Mode"
+msgstr ""
+
+msgid "Activating standby"
+msgstr "Siirrytään valmiustilaan"
+
+msgid "Activating deep standby"
+msgstr "Siirrytään syvään valmiustilaan"
+
+msgid "PowerOff will happen after background processes are complete"
+msgstr ""
+
+msgid "Entering maintenance mode"
+msgstr ""
+
+msgid "Activating reboot"
+msgstr "Käynnistetään uudelleen"
+
+msgid "Main Menu"
+msgstr "Päävalikko"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "'Ylös/Alas' uusi paikka - 'OK' hyväksy"
+
+msgid "Channel locked (recording)!"
+msgstr "Kanava lukittu (tallennus käynnissä)!"
+
+msgid "can't record - check your configuration"
+msgstr "Tallennus epäonnistui - tarkista asetukset"
+
+msgid "Low disk space!"
+msgstr "Tallennustila loppumassa!"
+
+msgid "Regenerating index file"
+msgstr "Luodaan indeksitiedosto uudelleen"
+
+msgid "Index file regeneration complete"
+msgstr "Indeksitiedosto valmistui"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Sammutus ei onnistu - '-s' parametri puuttuu!"
+
+msgid "Editing - shut down anyway?"
+msgstr "Muokkaus kesken - sammutetaanko?"
+
+msgid "Recording - shut down anyway?"
+msgstr "Tallennus kesken - sammutetaanko?"
+
+#, c-format
+msgid "Recording in %ld minutes, shut down anyway?"
+msgstr "Tallennus alkaa %ld min kuluttua - sammutetaanko?"
+
+msgid "shut down anyway?"
+msgstr "sammutetaanko?"
+
+#, c-format
+msgid "Plugin %s wakes up in %ld min, continue?"
+msgstr "Laajennos %s herää %ld minuutin kuluttua - sammutetaanko?"
+
+msgid "Editing - restart anyway?"
+msgstr "Muokkaus kesken - käynnistetäänkö uudelleen?"
+
+msgid "Recording - restart anyway?"
+msgstr "Tallennus kesken - käynnistetäänkö uudelleen?"
+
+msgid "restart anyway?"
+msgstr "käynnistetäänkö uudelleen?"
+
+#. TRANSLATORS: note the trailing blank!
+msgid "Volume "
+msgstr "Äänenvoimakkuus "
+
+msgid "Classic VDR"
+msgstr "Klassinen VDR"
+
+msgid "DISK"
+msgstr ""
+
+msgid "LOAD"
+msgstr ""
+
+msgid "TIMERS"
+msgstr ""
+
+msgid "DEVICES"
+msgstr ""
+
+msgid "LIVE"
+msgstr ""
+
+msgid "PLAY"
+msgstr ""
+
+msgid "ST:TNG Panels"
+msgstr "ST:TNG konsoli"
+
+#. TRANSLATORS: the first character of each weekday, beginning with monday
+msgid "MTWTFSS"
+msgstr "MTKTPLS"
+
+msgid "Database not available!"
+msgstr ""
+
+#. TRANSLATORS: abbreviated weekdays, beginning with monday (must all be 3 letters!)
+msgid "MonTueWedThuFriSatSun"
+msgstr "Ma Ti Ke To Pe La Su "
+
+msgid "Monday"
+msgstr "Maanantai"
+
+msgid "Tuesday"
+msgstr "Tiistai"
+
+msgid "Wednesday"
+msgstr "Keskiviikko"
+
+msgid "Thursday"
+msgstr "Torstai"
+
+msgid "Friday"
+msgstr "Perjantai"
+
+msgid "Saturday"
+msgstr "Lauantai"
+
+msgid "Sunday"
+msgstr "Sunnuntai"
+
+msgid "ejecting media"
+msgstr "Poista DVD"
+
+msgid "Upcoming recording!"
+msgstr "Tallennus on alkamassa!"
+
+#, c-format
+msgid "ReelBox will standby in %s minutes"
+msgstr ""
+
+msgid "Timeshift is not available!"
+msgstr ""
+
+msgid "Pause live video?"
+msgstr "Pysäytetäänkö lähetys?"
+
+msgid "No free tuner to record!"
+msgstr ""
+
+msgid "ReelBox will shut down later - press Power to force"
+msgstr "VDR sammuu myöhemmin - pakota virtanäppäimellä"
+
+msgid "Press any key to cancel shutdown"
+msgstr "Peru sammutus painamalla mitä tahansa näppäintä"
+
+msgid "Switching primary DVB..."
+msgstr "Vaihdetaan ensisijaista DVB-sovitinta..."
+
+msgid "End recording"
+msgstr "Lopeta tallennus"
+
+msgid "Editing process failed!"
+msgstr "Muokkaus epäonnistui!"
+
+msgid "Editing process finished"
+msgstr "Muokkaus valmis"
+
+msgid "Press any key to cancel restart"
+msgstr "Peru uudelleenkäynnistys painamalla mitä tahansa näppäintä"
+
+#, c-format
+msgid "ReelBox will shut down in %s minutes"
+msgstr "VDR sammuu %s minuutin kuluttua"
+
+msgid "Disk"
+msgstr ""
+
+msgid "free"
+msgstr ""
+
+#~ msgid "Button$abc/ABC"
+#~ msgstr "ABC/abc"
+
+#~ msgid "New Channels"
+#~ msgstr "Uudet kanavat"
+
+#~ msgid "Favorites"
+#~ msgstr "Suosikit"
+
+#~ msgid "internal CAM"
+#~ msgstr "Sisäinen CA-moduuli"
+
+#~ msgid "No CI at"
+#~ msgstr "Ei CI-moduulia"
+
+#~ msgid "Rotor - shared LNB"
+#~ msgstr "Jaetun mikropään lautasmoottori"
+
+#~ msgid "channellist"
+#~ msgstr "kanavalista"
+
+#~ msgid "current bouquet"
+#~ msgstr "valittu kanavalista"
+
+#~ msgid "bouquet list"
+#~ msgstr "kaikki kanavalistat"
+
+#~ msgid "Setup.OSD$Channellist starts with"
+#~ msgstr "Kanavalistana näytetään"
+
+#~ msgid "Edit Bouquet"
+#~ msgstr "Muokkaa kanavalistaa"
+
+#~ msgid "Add Bouquet"
+#~ msgstr "Lisää kanavalista"
+
+#~ msgid "CI-Slot for this Bouquet"
+#~ msgstr "Kanavalistan CI-moduulipaikka"
+
+#~ msgid "Note:"
+#~ msgstr "Huom:"
+
+#~ msgid "Select CI-Slot for current Bouquet."
+#~ msgstr "Valitse kanavalistan CI-moduulipaikka"
+
+#~ msgid "Bouquets"
+#~ msgstr "Kanavalistat"
+
+#~ msgid "Move"
+#~ msgstr "Siirrä"
+
+#~ msgid "Delete"
+#~ msgstr "Poista"
+
+#~ msgid "Delete Bouquet?"
+#~ msgstr "Poistetaanko kanavalista?"
+
+#~ msgid "Select channels with OK"
+#~ msgstr "Valitse kanavat 'OK':lla"
+
+#~ msgid "Add to Favorites?"
+#~ msgstr "Lisätäänkö suosikkeihin?"
+
+#~ msgid "low"
+#~ msgstr "matala"
+
+#~ msgid "normal"
+#~ msgstr "tavallinen"
+
+#~ msgid "high"
+#~ msgstr "korkea"
+
+#~ msgid "unlimited"
+#~ msgstr "ei rajattu"
+
+#~ msgid "Child protection"
+#~ msgstr "Lapsilukko"
+
+#~ msgid "OSD & Language"
+#~ msgstr "Valikot ja kielet"
+
+#~ msgid "Setup.OSD$OSD font size (pixel)"
+#~ msgstr "  Valikoiden kirjaisinkoko (px)"
+
+#~ msgid "channelinfo"
+#~ msgstr "kanavan tiedot"
+
+#~ msgid "Expertmenu"
+#~ msgstr "tarkat asetukset"
+
+#~ msgid "OSD - Expertmenu"
+#~ msgstr "Valikoiden asetukset"
+
+#~ msgid "Setup.OSD$OSD font name"
+#~ msgstr "Kirjaisintyyppi"
+
+#~ msgid "Setup.OSD$Small font name"
+#~ msgstr "Pieni kirjasintyyppi"
+
+#~ msgid "Setup.OSD$Fixed font name"
+#~ msgstr "Tasavälinen kirjasintyyppi"
+
+#~ msgid "Setup.OSD$Small font size (pixel)"
+#~ msgstr "Pienen kirjasintyypin koko (px)"
+
+#~ msgid "Setup.OSD$Fixed font size (pixel)"
+#~ msgstr "Tasavälisen kirjasintyypin koko (px)"
+
+#~ msgid "Setup.OSD$Left"
+#~ msgstr "Vaakakeskitys"
+
+#~ msgid "Setup.OSD$Top"
+#~ msgstr "Pystykeskitys"
+
+#~ msgid "Setup.OSD$Width"
+#~ msgstr "Leveys"
+
+#~ msgid "Setup.OSD$Height"
+#~ msgstr "Korkeus"
+
+#~ msgid "Setup.OSD$Random menu placement"
+#~ msgstr "Satunnainen valikon sijainti"
+
+#~ msgid "Setup.OSD$Optional languages"
+#~ msgstr "Vaihtoehtoiset kielet"
+
+#~ msgid "Setup.OSD$ Optional language"
+#~ msgstr "  Vaihtoehtoinen kieli"
+
+#~ msgid "Audio"
+#~ msgstr "Ääni"
+
+#~ msgid " Delay ac3 (10ms)"
+#~ msgstr " AC3-äänen viive (10ms)"
+
+#~ msgid " Prefer ac3 over HDMI"
+#~ msgstr " Suosi AC3-ääntä HDMI-yhteyden kanssa"
+
+#~ msgid "Delay Stereo (10ms)"
+#~ msgstr "Stereoäänen viive (10ms)"
+
+#~ msgid "Dish settings"
+#~ msgstr "Lautasantennin asetukset"
+
+#~ msgid "DiSEqC disabled"
+#~ msgstr "DiSEqC poissa käytöstä"
+
+#~ msgid "Different Setups"
+#~ msgstr "Kokoonpanot"
+
+#~ msgid "Tuner"
+#~ msgstr "Vastaanotin"
+
+#~ msgid "DiSEqC Type"
+#~ msgstr "DiSEqC:n tyyppi"
+
+#~ msgid "Satellite"
+#~ msgstr "Satelliitti"
+
+#~ msgid "   LNB Type"
+#~ msgstr "   Mikropään tyyppi"
+
+#~ msgid "Delay (ms)"
+#~ msgstr "Viive (ms)"
+
+#~ msgid "Number of LNBs"
+#~ msgstr "Mikropäiden lukumäärä"
+
+#~ msgid "Repeat"
+#~ msgstr "Toisto"
+
+#~ msgid "Rotor on tuner"
+#~ msgstr "Virittimen lautasmoottori"
+
+#~ msgid "Normal"
+#~ msgstr "Tavallinen"
+
+#~ msgid "Expert"
+#~ msgstr "Laaja"
+
+#~ msgid "Rotor Settings"
+#~ msgstr "Lautasmoottorin asetukset"
+
+#~ msgid "Sat positions must be unique!"
+#~ msgstr "Satelliittien sijaintien oltava yksilöllisiä!"
+
+#~ msgid "Overwrite DiSEqC.conf?"
+#~ msgstr "Korvaa DiSEqC.conf?"
+
+#~ msgid "Changes done"
+#~ msgstr "Muutokset tallennettu"
+
+#~ msgid "Init"
+#~ msgstr "Nollaa"
+
+#~ msgid "Error"
+#~ msgstr "Virhe"
+
+#~ msgid "Disabled"
+#~ msgstr "ei käytössä"
+
+#~ msgid "--OFF--"
+#~ msgstr "--EI KÄYTÖSSÄ--"
+
+#~ msgid "Common Interface"
+#~ msgstr "CI-rajapinta"
+
+#~ msgid "Reset"
+#~ msgstr "Nollaa"
+
+#~ msgid "On/Off"
+#~ msgstr "Päälle/Pois"
+
+#~ msgid "Resetting CAM..."
+#~ msgstr "Nollataan CA-moduulia..."
+
+#~ msgid "CAM has been reset"
+#~ msgstr "CA-moduuli nollattu"
+
+#~ msgid "Setup.Recording$Timer Buffer at Start (min)"
+#~ msgstr "Aloitusmarginaali (min)"
+
+#~ msgid "Setup.Recording$Timer Buffer at End (min)"
+#~ msgstr "Lopetusmarginaali (min)"
+
+#~ msgid "Setup.Recording$Default Priority"
+#~ msgstr "Tallenteiden tärkeys"
+
+#~ msgid "Setup.Recording$Default Recording Lifetime"
+#~ msgstr "Tallenteiden säilytysaika (päiviä)"
+
+#~ msgid "Setup.Recording$Mark Instant Recording"
+#~ msgstr "Merkitse pikatallenteet"
+
+#~ msgid "Setup.Recording$Instant Recording Time (min)"
+#~ msgstr "Pikatallenteiden pituus (min)"
+
+#~ msgid "Setup.Recording$Instant Recording Lifetime"
+#~ msgstr "Pikatallenteiden säilytysaika"
+
+#~ msgid "Setup.Recording$Instant Recording Priority"
+#~ msgstr "Pikatallenteiden tärkeys"
+
+#~ msgid "Setup.Recording$Mark Blocks after Recording"
+#~ msgstr "Merkitse pikatallenteiden mainoskatkot"
+
+#~ msgid "Setup.Replay$Jump over cutting-mark"
+#~ msgstr "Ohita merkityt katkot"
+
+#~ msgid "Setup.Replay$Resume play after jump"
+#~ msgstr "Jatka toistoa ohitetun katkon jälkeen"
+
+#~ msgid "update"
+#~ msgstr "päivitä nykyiset"
+
+#~ msgid "add"
+#~ msgstr "lisää uudet"
+
+#~ msgid "at the end"
+#~ msgstr "uusien listalle"
+
+#~ msgid "to bouquets"
+#~ msgstr "nykyisiin listoihin"
+
+#~ msgid "Background Services"
+#~ msgstr "Taustatoiminnot"
+
+#~ msgid "Request"
+#~ msgstr "kysy painettaessa"
+
+#~ msgid "Button$Scan EPG"
+#~ msgstr "Päivitä EPG"
+
+#~ msgid "Setup.DVB$Autom. update channels"
+#~ msgstr "Kanavien automaattinen päivitys"
+
+#~ msgid "  Update mode"
+#~ msgstr "  Lisäystapa"
+
+#~ msgid "Setup.Miscellaneous$Update-check on system start"
+#~ msgstr "Tarkista ohjelmistopäivitykset käynnistettäessä"
+
+#~ msgid "Permanent Timeshift"
+#~ msgstr "Jatkuva ajansiirtotoiminto"
+
+#~ msgid "Setup.LiveBuffer$Buffer (min)"
+#~ msgstr "Puskurimuistin pituus (min)"
+
+#~ msgid "System Settings"
+#~ msgstr "Järjestelmän asetukset"
+
+#~ msgid "CICAM"
+#~ msgstr "CA-moduuli"
+
+#~ msgid "Recording settings"
+#~ msgstr "Tallennusasetukset"
+
+#~ msgid "Replay settings"
+#~ msgstr "Toiston asetukset"
+
+#~ msgid "Channel list"
+#~ msgstr "Kanavalista"
+
+#~ msgid "Title$Menu"
+#~ msgstr "Valikko"
+
+#~ msgid "Title$Main Menu"
+#~ msgstr "Päävalikko"
+
+#~ msgid "Button$Recordings"
+#~ msgstr "Tallenteet"
+
+#~ msgid "Button$Multifeed"
+#~ msgstr "Mikropäät"
+
+#~ msgid "recording already running - Start another?"
+#~ msgstr "Tallennus kesken - aloitetaanko uusi?"
+
+#~ msgid "Pause Live-TV"
+#~ msgstr "Pysäytä vastaanotettava lähetys"
+
+#~ msgid "Please select"
+#~ msgstr "valitse kanava"
+
+#~ msgid "Recording-file already exists!"
+#~ msgstr "Tallenne löytyy jo!"
+
+#~ msgid "Upcoming VPS recording!"
+#~ msgstr "Tallennus on alkamassa!"
+
+#~ msgid "Edit"
+#~ msgstr "Muokkaa"
+
+#~ msgid "Next"
+#~ msgstr "Seuraava"
+
+#~ msgid "Options"
+#~ msgstr "Toiminnot"
+
+#~ msgid "Setup.OSD$Ok shows"
+#~ msgstr "OK:n toiminto"
+
+#~ msgid "Deep standby"
+#~ msgstr "syvään valmiustilaan"
+
+#~ msgid "Activated standby after current recording"
+#~ msgstr "Siirtyy valmiustilaan tallennuksen jälkeen"
+
+#~ msgid "UMTS"
+#~ msgstr "UMTS-verkkoyhteys"
+
+#~ msgid "VDR will shut down later - press Power to force"
+#~ msgstr "VDR sammuu myöhemmin - pakota virtanäppäimellä"
+
+#~ msgid "VDR will shut down in %s minutes"
+#~ msgstr "VDR sammuu %s minuutin kuluttua"

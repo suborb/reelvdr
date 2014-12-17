@@ -1,0 +1,161 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ripit\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 16:14+0200\n"
+"PO-Revision-Date: 2009-03-04 17:34+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "user defined"
+msgstr "uživatelský"
+
+msgid "low"
+msgstr "nízký"
+
+msgid "standard"
+msgstr "standardní"
+
+msgid "great"
+msgstr "výborný"
+
+msgid "best"
+msgstr "nejlepší"
+
+msgid "Destination format"
+msgstr "Cílový formát"
+
+msgid "Hide mainmenu entry"
+msgstr "Skrýt položku v hlavní nabídce"
+
+msgid "Shutdown when finished"
+msgstr "Po dokončení vypnout"
+
+msgid "Verbose output"
+msgstr "Podrobný výstup"
+
+msgid "Fast mode"
+msgstr "Rychlý režim"
+
+msgid "Eject CD when finished"
+msgstr "Po dokončení vysunout CD"
+
+msgid "Presets"
+msgstr "Předvolby"
+
+msgid "Min. bitrate"
+msgstr "Min. přenosová rychlost"
+
+msgid "Max. bitrate"
+msgstr "Max. přenosová rychlost"
+
+msgid "More encoder settings"
+msgstr "Další nastavení kodéru"
+
+msgid "Device"
+msgstr "Zařízení"
+
+msgid "Directory for ripped tracks"
+msgstr "Adresář pro zkopírované stopy"
+
+msgid "Priority of task (nice)"
+msgstr "Priorita úlohy"
+
+msgid "Encode remotely"
+msgstr "Kódovat vzdáleně"
+
+msgid "Options for remote encoding"
+msgstr "Možnosti vzdáleného kódování"
+
+msgid "Abort"
+msgstr "Přerušit"
+
+msgid "No CD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please insert an audio CD to archive it."
+msgstr ""
+
+msgid "CD found in drive."
+msgstr ""
+
+msgid "Please select archive format and quality and press RED to start archiving your audio CD."
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopírovat"
+
+msgid "Ripped: \t"
+msgstr "Zkopírováno: \t"
+
+msgid "completed"
+msgstr "Dokončeno"
+
+msgid "Ripping: \t"
+msgstr "Kopírování: \t"
+
+msgid "Encoded: \t"
+msgstr "Zakódováno: \t"
+
+msgid "Encoding: \t"
+msgstr "Kódování: \t"
+
+msgid "Completed"
+msgstr "Dokončeno"
+
+msgid "Aborted"
+msgstr "Přerušeno"
+
+msgid "No medium found"
+msgstr "Nebylo nalezeno žádné médium"
+
+msgid "Searching CDDB entry, please wait"
+msgstr ""
+
+msgid "Total Tracks: "
+msgstr "Celkový počet stop:"
+
+msgid "Reading CD"
+msgstr "Načítání CD"
+
+msgid "PROCESS MANUALLY ABORTED"
+msgstr "PROCES RUČNĚ PŘERUŠEN"
+
+msgid "Encoding tracks"
+msgstr "Kódování stop"
+
+msgid "Ripping and Encoding tracks"
+msgstr "Kopírování a kódování stop"
+
+msgid "Audio-CD ripper"
+msgstr "Kopírování zvukových CD"
+
+msgid "Archive Audio-CD"
+msgstr "Archivovat zvukové CD"
+
+msgid "Audio-CD archive "
+msgstr "Kopírování zvukových CD "
+
+#, fuzzy
+#~ msgid "No ripping in progress"
+#~ msgstr "Neprobíhá kopírování"
+
+#~ msgid "Audio-CD Ripper"
+#~ msgstr "Kopírování zvukových CD"
+
+#~ msgid "Archive Audio-CD "
+#~ msgstr "Archivovat zvukové CD"

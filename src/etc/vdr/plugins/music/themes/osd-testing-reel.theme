@@ -1,0 +1,62 @@
+<SKIN-ID>Reel-Blue
+## LINE "MUST" END WITH THE COLORVALUE AND WITHOUT SPACES
+## 0xAARRGGBB
+#
+#
+## BACKGROUND
+<value> clrBG                 =0xEF0c1f33
+#
+## TOP : 2 colors
+<value> clrTopBG              =0xEF0c1f33
+<value> clrTopFG              =0xFFFFFFFF
+#
+## COVER : 2 colors
+<value> clrCoverBG            =0xEE0c1f33
+<value> clrCoverBar           =0xEE0c1f33
+#
+## ARTIST,RATING : 3 colors
+<value> clrArtistBG           =0xEE0c1f33
+<value> clrArtistFG           =0xFFEEEE00
+<value> clrRatingFG           =0x00000000
+#
+## PLAYSTATUS : 3 colors
+<value> clrPlayStatusBG       =0xEE0c1f33
+<value> clrPlayStatusFG       =0xFFEEEEEE
+<value> clrInfoBG             =0xEE0c1f33
+<value> clrInfoFG             =0xFFEEEEEE
+<value> clrProgressbarBG      =0xFFEEEEEE
+<value> clrProgressbarFG      =0xFF8EA4E3
+#
+## TRACKLIST : 3 colors
+<value> clrListTitle          =0xFFAA0000
+<value> clrListBG             =0xff0c1f33
+<value> clrListFG             =0xFFEEEEEE
+#
+## SYMBOLS : 3 colors
+<value> clrSymbolBG           =0xFF0c1f33
+<value> clrSymbolFG           =0xFF707070
+<value> clrSymbolActive       =0xFFF4F400
+<value> clrRecordingActive    =0xFFF4F400
+#
+## STATUSBAR : 6 colors
+<value> clrStatusBG           =0xEE0c1f33
+<value> clrStatusFG           =0xFFEEEEEE
+<value> clrStatusRed          =0xff990000
+<value> clrStatusGreen        =0xff009900
+<value> clrStatusYellow       =0xff888800
+<value> clrStatusBlue         =0xff000099
+#
+#
+## DEFAULTCOVER
+<value> localcover            =/music-local-headphone.png
+<value> streamcover           =/music-stream-headphone.png
+## FOR MPEGBACKGROUNDCOVER
+<value> isMpeg                =0
+<value> localbackground       =/themes/mpegs/music-AQUA-local.mpg
+<value> streambackground      =/themes/mpegs/music-AQUA-local.mpg
+<value> rows                  =3
+<value> osdheight             =524
+<value> osdwidth              =616
+<value> osdtop                =50
+<value> osdleft               =48
+<value> mpgdif                =28

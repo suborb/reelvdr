@@ -1,0 +1,27 @@
+#!/bin/bash
+# Truckradio-Playlist
+# $1 = outfile
+
+### Variabel
+Name="Truckradio [truckradio.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://truckradio.de/truckradio.php"
+
+# Artist/Title
+artist=`grep -A1 '>Was l&auml;uft gerade:' /tmp/playlist`
+artist=${artist/*$'<strong>'/}; artist=${artist/$'<BR>'*/}
+title=`grep -A1 '>Was l&auml;uft gerade:' /tmp/playlist`
+title=${title/*$'<BR>'/}; title=${title/$'<'\/'strong>'*/}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

@@ -1,0 +1,375 @@
+mld_common.o: mld_common.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+mld_client.o: mld_client.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+mld_reporter.o: mld_reporter.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+mcast.o: mcast.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+recv_tv.o: recv_tv.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+recv_ccpp.o: recv_ccpp.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+tools.o: tools.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+tca_handler.o: tca_handler.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+tra_handler.o: tra_handler.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+satlists.o: satlists.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+interfaces.o: interfaces.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+api_server.o: api_server.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+ciparser.o: ciparser.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+ci_handler.o: ci_handler.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h
+mmi_handler.o: mmi_handler.c headers.h ../common/defs.h \
+ /usr/include/libxml2/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h \
+ /usr/include/libxml2/libxml/tree.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xmlwriter.h \
+ /usr/include/libxml2/libxml/xpath.h ../common/version.h ../common/list.h \
+ ../common/satlists.h ../common/mcast.h ../common/input.h \
+ ../common/recv_ccpp.h recv_tv.h ../common/tools.h ../common/interfaces.h \
+ ../common/mld.h api_server.h tca_handler.h tra_handler.h mld_reporter.h \
+ ../common/ciparser.h ci_handler.h mmi_handler.h ../common/siparser.h

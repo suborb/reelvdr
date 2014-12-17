@@ -1,0 +1,98 @@
+
+Genindex
+(C) 2003-2006 Stefan Hülswitt s.huelswitt@gmx.de
+
+See the file COPYING for license information.
+
+----------------------------------------------------------------------
+
+This tool can be used to generate a VDR index file.
+
+Usefull if you lost the orginal index file or if you want to create an index
+file for some other video stuff.
+
+The tool is suitable for MPEG2 video (e.g. VDR recordings) and MPEG1 video
+(e.g. ripped VCD files).
+
+The VDR index format doesn't supports files larger than 2GB. If you have larger
+video files you have to split them up.
+
+If the tool is called without any commandline options, it searchs for VDR video
+files (001.vdr, 002.vdr ...) in the current directory.
+The generated index file will be named "index.vdr" or "index.vdr.generated" if
+there is already an "index.vdr".
+
+There are some commandline options to influence the behaviour of the tool:
+
+  -q
+  --quiet		no output to the console, except errors.
+
+  -r
+  --rewrite		enables rewrite mode, i.e. genindex reads all data
+                        contained in the input file(s), filters out any crap
+                        and/or data not usefull for VDR and writes the remaining
+                        data to new file(s).
+                        The output file(s) will be named 001.vdr, 002.vdr ...
+                        and will not exceed the 2GB limit.
+                        In no case any existing file will be overwritten, so you
+                        cannot rewrite files from the current directory to the
+                        current directory (use either -i or -d option).
+                        Only data which is actually used by VDR is written to
+                        output file(s), i.e. PES packets of type 0xE0-0xEF,
+                        0xC0-0xCF, 0xBD and 0xBE.
+
+  -d DIR
+  --dest=DIR		Writes output files to directory DIR.
+
+  -i FILE
+  --input=FILE		Rather than scanning for input files, use FILE as single
+                        input file.
+
+  -s SIZE
+  --split=SIZE		Split output files at a size of SIZE megabytes. Allowed
+			input range is 1-2000. 
+
+  --skip=STR		In addition to the normal stream filtering, skip PES
+			packets of type STR too. The value has to be given in
+                        hexdecimal. You can give multiple --skip options, if you
+                        want to skip more than one stream.
+
+The rewrite mode is especially usefull if you want to prepare a single, huge
+file for replay with VDR e.g. a DVD rip.
+Assuming you have ripped the DVD to the file /tmp/rip.vob, you can prepare it
+with (creating VDR video files in current directoy):
+
+  genindex -r -i /tmp/rip.vob
+
+If you additionaly want to skip any DolbyDigital audio stream:
+
+  genindex -r -i /tmp/rip.vob --skip=0xBD
+
+Or limit output files to 1GB:
+
+  genindex -r -i /tmp/rip.vob -s 1000
+
+
+This work was inspired by and is based on the work from Werner Fink and Sascha
+Volkenandt (although virtualy no code pieces from their work made it into this
+work).
+
+----------------------------------------------------------------------
+
+HISTORY:
+
+05.06.2006 - Version 0.1.3
+- Added mode to rewrite video files (including file splitting and removing of
+  PES streams).
+- Allow a single input file >2GB in rewrite mode.
+
+17.10.2003 - Version 0.1.2
+- Don't choke on files >2GB but give the user a hint about the limitation.
+
+27.07.2003 - Version 0.1.1
+- Fixed index creation behond the first video file.
+- Fixed index creation for broken video files (e.g. with skipped bytes).
+
+26.07.2003 - Version 0.1.0
+- Initial release.
+

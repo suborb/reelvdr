@@ -1,0 +1,126 @@
+.TH fbshot 1 "(C) 2002 Dariusz Swiderski, GPL"
+.SH NAME
+\fBfbshot\fP - takes screenshots from your framebuffer device
+.SH SYNOPSIS
+.B fbshot [options] filename
+.SH DESCRIPTION
+.B fbshot
+reads your \fB8,15,16,24 and 32-bit\fP framebuffer device and saves a \fBPNG\fP image
+file. You can use it for making screenshots of your framebuffer 
+application or of your text or (n)curses applications (just
+for fun). You can also use it to show somebody (who lives far away) 
+your crazy framebuffer boot logo ;-) You may also use your shots in
+presentations or anything. I think this program isn't for nothing.
+Send \fBfeedback\fP for more suggestions to use it!
+.SH OPTIONS
+.TP
+.B -h
+print usage informations
+.TP
+.B -c console
+specifies which \fBconsole\fP (or virtual terminal - like other 
+people call this feature) to grab. Sometimes this changing is 
+faster then the framebuffer is refreshed (especially when grabbing
+framebuffer apps). If so, you should \fBuse -C console\fP ... This
+waits some time before grabbing. You can't use \fB-s\fP in this case.
+.TP
+.B -d device
+specifies which framebuffer device you want to read. If 
+you do not use this option, it takes the value from the 
+\fBFRAMEBUFFER\fP environment variable. If no FRAMEBUFFER 
+environment variable is given or if its value is \fBNULL\fP, the
+DEFAULT_FB is taken. (see source code) If you got the official 
+binary \fB.deb\fP package, this value is \fB/dev/fb0\fP ... Of 
+course, if you received a \fB.rpm\fP, it is the same. And if you
+take a look into the binary \fBELF\fP file you can still change
+this standard.
+.TP
+.B -i
+turns \fBoff\fP interlacing. If you do not want \fBADAM7 interlacing\fP, 
+you should use the \fB-i\fP option.
+.TP
+.B -s seconds
+specifies how many seconds to wait before grabbing. \fBfbshot\fP
+does not lock console switching, so you can switch it while 
+waiting and so you can use this feature if -c doesn't work 
+as normal user and can't log in as root (see BUGS).
+.SH WHY PNG
+Reasons why I chose PNG for output format:
+
+PNG is small, does everything I or you need for a screenshot. PNG is web 
+standard. JPEG or GIF are web standard, too, but both JPEG and GIF are limited.
+And libjpeg isn't working at my machine :-) and I needn't choose between libgif
+or libungif or between some related full-featured graphic libs (libLUG, 
+libMagick). But please notice: in some Netscape versions Netscape has some problems
+with PNG when calling directly. It displays them \fBsmaller\fP, and with \fBblack 
+bars\fP left and right. Within a HTML page there are \fBno\fP problems I know.
+.SH BUGS
+\fB-c\fP option does not work as non-root. But I do not want to setuid root
+the binary, because this is a \fBsecurity hazard\fP. And I do not like such
+hazards! Maybe it works with your kernel. Please mail me (with kernel version),
+if so. If you are root, it should change to the console you specified two 
+times (which is \fBnot\fP a bug).
+.SH TODO
+Nice, if some coders would help me:
+.nf
+
+    * port it to and test it on other color depths!!!
+    * make options to specify compression (I think, that's not important)
+    * remove bugs and make bugs (but only unintentionly!)
+    * send me mail (suggestions, tips, critics)...
+.fi
+.SH AUTHOR
+If you have any comments, patches, questions, critics, tips or anything 
+else (well, feedback) to \fBfbshot\fP, send it to 
+
+    \fBDariusz Swiderski <sfires@sfires.net>\fP
+
+.SH GETTING NEW VERSIONS
+You may visit my homepage for newer versions of fbshot:
+
+    \fBhttp://www.sfires.net/fbshot/\fP
+
+You should be able to download \fBtar.gz\fPed source.
+.SH THANKS TO (from \fBStephan Beyer\fP <fbshot@s-beyer.de> original man page)
+Thanks to \fBGlenn Randers-Pehrson\fP <randeg@alum.rpi.edu> who helped
+me with some basic libPNG things.
+I also have to thank \fBElliot Lee\fP <sopwith@redhat.com> who sent 
+me code for converting 8bpp to 24bpp, although this didn't work at my 
+machine. I also didn't implement it into the program, but the code contains 
+it...
+Also thanks to \fBFrank Kaefer\fP <fbshot@sta.to> who I met at #linux.de 
+in IRCnet. Caused by him I noticed, that fbshot had a real heavy bug in 
+its first two versions.
+\fBliff\fP I also met at IRCnet, channel #c. He helped me with some basic 
+bit operation stuff. Also thanks to him. 
+Thanks, of course, to everyone who downloaded this program, too. If you send 
+me mail I'll call you here (if you want). 
+So thanks to 
+\fBBrad Douglas\fP <brad@neruo.com>, 
+\fBEdmund Haworth\fP <oliver.legion@bigfoot.com>, 
+\fBElliot Lee\fP <sopwith@redhat.com>, 
+\fBFrank Kaefer\fP <fbshot@sta.to> 
+\fBGlenn Randers-Pehrson\fP <randeg@alum.rpi.edu>, 
+\fB<imaginate@elektromensch.de>\fP, 
+and you? mail me if you want to be called here. 
+You may tell me Realname and e-mail and what you are thinking of this program, 
+send me patches, comments, questions - what you want...
+.SH THANKS TO
+\fBStephan Beyer\fP <fbshot@s-beyer.de> for the idea and first code.
+\fBPaul Mundt\fP <lethal@chaoticdreams.org> for his further work.
+.SH COPYLEFT
+Copyleft (C) 2002 \fBDariusz Swiderski\fP <sfires@sfires.net>
+.P
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+.P
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+.P
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.

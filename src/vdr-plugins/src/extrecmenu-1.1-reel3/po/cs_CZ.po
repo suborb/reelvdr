@@ -1,0 +1,577 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2009-03-02 20:28+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "Delete recording?"
+msgstr "Odstranit nahrávku?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+msgid "Directory Selector"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+#, fuzzy
+msgid "Cancel"
+msgstr "Kanál"
+
+msgid "Move"
+msgstr ""
+
+msgid "Rec Dir"
+msgstr ""
+
+msgid "Button$Create"
+msgstr "Vytvořit"
+
+msgid "Cannot move into its own sub folder"
+msgstr ""
+
+msgid "Cannot write into directory"
+msgstr ""
+
+#, fuzzy
+msgid "Moving Recording"
+msgstr "Přesunout nahrávku"
+
+#, fuzzy
+msgid "Moving Directories"
+msgstr "Přesunout nahrávku"
+
+msgid "Move failed. Not enough free space"
+msgstr ""
+
+#, fuzzy
+msgid "Copying started"
+msgstr "Řazení"
+
+msgid "Cannot copy into its own sub folder"
+msgstr ""
+
+msgid "Copy failed. Not enough free space"
+msgstr ""
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Vytvoření adresářů se nezdařilo!"
+
+msgid "New"
+msgstr ""
+
+#, fuzzy
+msgid "To create a new directory press 'OK':"
+msgstr "Vytvoření adresářů se nezdařilo!"
+
+msgid "Directory Name"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Directory will only be shown with"
+msgstr ""
+
+#, fuzzy
+msgid "recordings inside."
+msgstr "Informace o nahrávce"
+
+#, fuzzy
+msgid "Created"
+msgstr "Vytvořit"
+
+msgid "Failed"
+msgstr ""
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr ""
+
+msgid "External Media"
+msgstr ""
+
+msgid "Please select the drive where to move the recording:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+msgid "Could not open media"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr "Změnit název"
+
+msgid "Title"
+msgstr "Název"
+
+msgid "Episode"
+msgstr "Epizoda"
+
+msgid "Invalid title!"
+msgstr "Neplatný název!"
+
+msgid "Invalid episode!"
+msgstr "Neplatná epizoda!"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Vytvoření adresářů se nezdařilo!"
+
+msgid "Name"
+msgstr "Název"
+
+msgid "Invalid filename!"
+msgstr "Neplatný název souboru!"
+
+msgid "Creating directories failed!"
+msgstr "Vytvoření adresářů se nezdařilo!"
+
+msgid "New folder"
+msgstr "Nový adresář"
+
+msgid "Button$Cancel"
+msgstr "Storno"
+
+msgid "Button$Move"
+msgstr "Přesunout"
+
+msgid "Move recording"
+msgstr "Přesunout nahrávku"
+
+msgid "[base dir]"
+msgstr "[základní adresář]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "Cílový systém souborů je plný - přesto se pokusit?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "Přesunutí do vlastního adresáře není povoleno!"
+
+msgid "Can't get filesystem information"
+msgstr "Nelze získat informace o systému souborů"
+
+msgid "Details"
+msgstr "Podrobnosti"
+
+msgid "low"
+msgstr "nízká"
+
+msgid "normal"
+msgstr "normální"
+
+msgid "high"
+msgstr "vysoká"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Lifetime"
+msgstr "Životnost"
+
+msgid "unlimited"
+msgstr "bez omezení"
+
+msgid "Info:"
+msgstr "Informace:"
+
+#, fuzzy
+msgid "In this menu you can adjust the point in time"
+msgstr "V této nabídce můžete nastavit, kdy"
+
+#, fuzzy
+msgid "a recording gets deleted automatically."
+msgstr "bude nahrávka automaticky odstraněna."
+
+msgid "Recording info"
+msgstr "Informace o nahrávce"
+
+msgid "Button$Play"
+msgstr "Přehrát"
+
+msgid "Button$Rewind"
+msgstr "Na začátek"
+
+msgid "Large picture"
+msgstr ""
+
+msgid "Path"
+msgstr "Cesta"
+
+msgid "Channel"
+msgstr "Kanál"
+
+msgid "Size"
+msgstr "Velikost"
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "Odebírání nahrávky..."
+
+msgid "Error while mounting DVD!"
+msgstr "Chyba při připojování DVD!"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "free"
+msgstr "volných"
+
+msgid "Button$Functions"
+msgstr "Funkce"
+
+msgid "Total"
+msgstr ""
+
+msgid "Last recording"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr "Chyba při přístupu k nahrávce!"
+
+msgid "PIN code: "
+msgstr "Kód PIN:"
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Vložte DVD %s"
+
+msgid "DVD plugin is not installed!"
+msgstr "Modul DVD není nainstalován!"
+
+msgid "No DVD in drive!"
+msgstr "V jednotce není DVD!"
+
+msgid "Recording not found on DVD!"
+msgstr "Nahrávka nebyla na DVD nalezena!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "Chyba při vytváření propojení [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "Chyba sudo nebo mount --bind / umount (systém vfat)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "Skript dvdarchive.sh nebyl nalezen!"
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Vytvoření adresářů se nezdařilo!"
+
+msgid "Timer still recording - really delete?"
+msgstr "Časovač stále nahrává - opravdu odstranit?"
+
+msgid "Error while deleting recording!"
+msgstr "Chyba při odstraňování nahrávky!"
+
+msgid "Recording commands"
+msgstr "Příkazy pro nahrávání"
+
+msgid "Sort by date"
+msgstr "Řadit podle data"
+
+msgid "Sort by name"
+msgstr "Řadit podle názvu"
+
+msgid "Show title"
+msgstr ""
+
+msgid "Show directory name"
+msgstr ""
+
+msgid "Invalid PIN"
+msgstr "Neplatný kód PIN"
+
+msgid "PIN Aborted"
+msgstr "Kód PIN zrušen"
+
+msgid "Cancel moving?"
+msgstr "Zrušit přesouvání?"
+
+msgid "Cancel editing?"
+msgstr "Zrušit úpravy?"
+
+msgid "ascending"
+msgstr "vzestupně"
+
+msgid "descending"
+msgstr "sestupně"
+
+msgid "Show recording date"
+msgstr "Zobrazit datum nahrávky"
+
+msgid "Show recording time"
+msgstr "Zobrazit čas nahrávky"
+
+msgid "Show recording length"
+msgstr "Zobrazit délku nahrávky"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Zobrazovat počet nových nahrávek v adresáři"
+
+msgid "Show alternative to new marker"
+msgstr "Zobrazit alternativu k novým značkám"
+
+msgid "Show free disk space for each file system"
+msgstr "Zobrazit volné místo na disku pro každý systém souborů"
+
+msgid "Sorting"
+msgstr "Řazení"
+
+msgid "Hide main menu entry"
+msgstr "Skrýt položku v hlavní nabídce"
+
+msgid "Replace original recordings menu"
+msgstr "Nahradit původní nabídku nahrávek"
+
+msgid "Jump to last played recording"
+msgstr "Přejít na naposledy přehrávanou nahrávku"
+
+msgid "Show recordings menu after playback"
+msgstr "Po přehrání zobrazit nabídku nahrávek"
+
+msgid "Patch font"
+msgstr "Opravit písmo"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+msgid "Limit bandwidth when moving recordings"
+msgstr "Při přesouvání nahrávek omezit rychlost"
+
+msgid "Use cutter queue"
+msgstr "Použít střihovou frontu"
+
+msgid "Undelete Recordings"
+msgstr "Obnovit nahrávky"
+
+msgid "No recordings to undelete!"
+msgstr "Žádná nahrávka k obnovení!"
+
+msgid "Button$Remove"
+msgstr "Odebrat"
+
+msgid "Button$Undelete"
+msgstr "Obnovit"
+
+msgid "Remove recording from disk?"
+msgstr "Odebrat nahrávku z disku?"
+
+msgid "Removing recording ..."
+msgstr "Odebírání nahrávky..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Obnovení nahrávky se nezdařilo"
+
+msgid "Button$Back"
+msgstr "Zpět"
+
+#, fuzzy
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "Zobrazovat počet nových nahrávek v adresáři"
+
+#, fuzzy
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Nahrávka přidána do střihové fronty"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr ""
+
+msgid "Recording already in cutter queue!"
+msgstr "Nahrávka je již ve střihové frontě!"
+
+msgid "No editing marks defined!"
+msgstr "Nejsou nadefinovány žádné střihové značky!"
+
+msgid "Added recording to cutter queue"
+msgstr "Nahrávka přidána do střihové fronty"
+
+msgid "Not enough space on harddisk!"
+msgstr ""
+
+msgid "Rename/Move failed!"
+msgstr "Přejmenování nebo přesunutí se nezdařilo!"
+
+msgid "Cutter queue not empty"
+msgstr "Střihová fronta není prázdná"
+
+msgid "Move recordings in progress"
+msgstr "Probíhá přesouvání nahrávek"
+
+msgid "Can't start editing process!"
+msgstr "Proces úprav nelze zahájit!"
+
+msgid "Cutting"
+msgstr "Střih"
+
+#, fuzzy
+msgid "Moving"
+msgstr "Řazení"
+
+msgid "started"
+msgstr ""
+
+#, fuzzy
+msgid "Cancelled"
+msgstr "Kanál"
+
+#, fuzzy
+msgid "Completed"
+msgstr "Vytvořit"
+
+#, fuzzy
+msgid "Copying"
+msgstr "Řazení"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "Přesunout nahrávku"
+
+msgid "Copy failed!"
+msgstr ""
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "V této verzi modulu extrecmenu není tato služba podporována!"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "Modul ExtRecMenu neexistuje!"
+
+#, fuzzy
+msgid "Extended recordings menu"
+msgstr "Nahradit původní nabídku nahrávek"
+
+msgid "Rename"
+msgstr "Přejmenovat"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "Přesunout nahrávku"
+
+msgid "Mark as new"
+msgstr ""
+
+#~ msgid "Button$Open"
+#~ msgstr "Otevřít"
+
+#, fuzzy
+#~ msgid "moving recording"
+#~ msgstr "Přesunout nahrávku"
+
+#~ msgid "Button$Info"
+#~ msgstr "Informace"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Obnovit"
+
+#, fuzzy
+#~ msgid "Set Title"
+#~ msgstr "Název"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Podrobnosti"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Upravit"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Přejmenovat"
+
+#, fuzzy
+#~ msgid "Create"
+#~ msgstr "Vytvořit"
+
+#, fuzzy
+#~ msgid "Create new directory:"
+#~ msgstr "Vytvoření adresářů se nezdařilo!"
+
+#~ msgid "Button$Commands"
+#~ msgstr "Příkazy"
+
+#~ msgid "Use VDR's recording info menu"
+#~ msgstr "Používat info menu nahrávek VDR"
+
+#~ msgid "Call plugin after playback"
+#~ msgstr "Návrat do modulu po ukončení přehrávání"

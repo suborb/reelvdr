@@ -1,0 +1,419 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-filebrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-17 11:51+0200\n"
+"PO-Revision-Date: 2009-06-21 00:37+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Cannot open file"
+msgstr "Impossibile aprire il file!"
+
+msgid "Title"
+msgstr "Titolo"
+
+msgid "Artist"
+msgstr "Artista"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Genere"
+
+msgid "Comment"
+msgstr "Commento"
+
+msgid "Year"
+msgstr "Anno"
+
+msgid "Track"
+msgstr "Traccia"
+
+msgid "Length"
+msgstr "Lunghezza"
+
+msgid "min"
+msgstr "Min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Samplerate"
+
+msgid "ID3$Channels"
+msgstr "Canali"
+
+msgid "Original"
+msgstr "Originale"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-Layer"
+
+msgid "Copyrighted"
+msgstr "Protetto da copyright"
+
+msgid "Protected"
+msgstr "Protetto"
+
+msgid "Minimal bitrate"
+msgstr "Bitrate minimo"
+
+msgid "Maximal bitrate"
+msgstr "Bitrate massimo"
+
+msgid "Nominal bitrate"
+msgstr "Bitrate nominale"
+
+msgid "File size"
+msgstr "Dimensione file"
+
+msgid "Last Modified"
+msgstr "Ultimo modificato"
+
+msgid "please wait ..."
+msgstr "Attendere..."
+
+msgid "Language packet sucessfully installed"
+msgstr "Lingua installata correttamente!"
+
+msgid "Language packet installation failed"
+msgstr "Installazione lingua fallita!"
+
+msgid "Hard Drive"
+msgstr "Disco fisso"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "My Music"
+msgstr "La mia musica"
+
+msgid "My Pictures"
+msgstr "Le mie immagini"
+
+msgid "My Videos"
+msgstr "I miei video"
+
+msgid "My Recordings"
+msgstr "Le mie registrazioni"
+
+msgid "My DVDs"
+msgstr "I miei DVD"
+
+msgid "Cannot mount media"
+msgstr "Mount supporto impossibile!"
+
+msgid "Access denied!"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr "Inserire nella playlist"
+
+msgid "Open playlist"
+msgstr ""
+
+msgid "Copy playlist into"
+msgstr ""
+
+msgid "Save playlist as"
+msgstr "Salvare la playlist come"
+
+msgid "File informations"
+msgstr "Informazioni sul file"
+
+msgid "Attributes from:"
+msgstr "Attributi da: "
+
+msgid "Playlist: "
+msgstr "Playlist: "
+
+msgid "Delete entry"
+msgstr "Rimuovere voce"
+
+msgid "Close playlist"
+msgstr "Chiudere la playlist"
+
+msgid "Save playlist"
+msgstr "Salvare la playlist"
+
+msgid "Copy playlist to CD"
+msgstr "Copiare la playlist su CD"
+
+msgid "Playlist Commands"
+msgstr "Comandi playlist"
+
+msgid "Entry already exists"
+msgstr "Voce già presente!"
+
+msgid "Change the name and then press 'OK'"
+msgstr "Cambiare il nome e premere \"Ok\""
+
+msgid "Playlist name"
+msgstr "Nome playlist"
+
+msgid "Options for image viewer"
+msgstr "Opzioni visualizzatore immagini"
+
+msgid "Display image file names"
+msgstr "Mostrare nomi file immagine"
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Sì"
+
+msgid "Slide show"
+msgstr "Presentazione"
+
+msgid "Random choice"
+msgstr "Scelta casuale"
+
+msgid "Cyclic display"
+msgstr "Presentazione ciclica"
+
+msgid "Switch time (s)"
+msgstr "Persistenza immagini (s)"
+
+msgid "Clear cache"
+msgstr "Pulire cache"
+
+msgid "Cache cleared"
+msgstr "Cache ripulita"
+
+msgid " ...opening file"
+msgstr " ... File in apertura"
+
+msgid "Cannot open file:"
+msgstr "Impossibile aprire il file:"
+
+msgid "No more images"
+msgstr ""
+
+msgid "Slide show started"
+msgstr "Presentazione avviata"
+
+msgid "Slide show halted"
+msgstr "Presentazione arrestata"
+
+msgid "Standard play mode"
+msgstr ""
+
+#, fuzzy
+msgid "Random play mode"
+msgstr "Scelta casuale"
+
+msgid "Copying"
+msgstr "Copia in corso"
+
+msgid "Multiple files"
+msgstr "Fili multipli"
+
+msgid "packet sucessfully installed"
+msgstr "Pacchetto installato correttamente!"
+
+msgid "packet installation failed"
+msgstr "Installazione pacchetto fallita!"
+
+msgid "Selection is being deleted. Please wait..."
+msgstr ""
+
+msgid "Really Delete?"
+msgstr "Cancellare?"
+
+msgid "Save/copy current playlist?"
+msgstr "Salvare/Copiare la playlist corrente?"
+
+msgid "Playlist saved as "
+msgstr "Playlista salvata come"
+
+msgid "Working"
+msgstr "Operazione in corso"
+
+msgid "Cancel"
+msgstr "Annullare"
+
+msgid "Execute"
+msgstr "Eseguire"
+
+msgid "Paste selected entries"
+msgstr "Incollare le voci selezionate"
+
+msgid "Insert"
+msgstr "Inserire"
+
+msgid "Create dir"
+msgstr "Creare cartella"
+
+msgid "Selection is copied in background..."
+msgstr ""
+
+msgid "Selection is being moved in background..."
+msgstr ""
+
+msgid "Expert mode"
+msgstr "Modalità avanzata"
+
+msgid "Too many entries for playlist!"
+msgstr "Troppe voci nella playlist!"
+
+msgid "Playlist"
+msgstr "Playlist"
+
+msgid "Functions"
+msgstr "Funzioni"
+
+msgid "Unselect all"
+msgstr ""
+
+msgid "Select all"
+msgstr "Selezionare tutto"
+
+msgid "Unselect"
+msgstr ""
+
+msgid "Select"
+msgstr "Selezionare"
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Abort"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Playlist is saved in background..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Copiare"
+
+msgid "Directory Name"
+msgstr "Nome cartella"
+
+msgid "Playlist entries are copied in background..."
+msgstr ""
+
+msgid "Move"
+msgstr "Spostare"
+
+msgid "Delete"
+msgstr "Cancellare"
+
+msgid "Rename entry"
+msgstr "Rinominare voce"
+
+msgid "Create directory"
+msgstr "Creare cartella"
+
+msgid "Show playlist"
+msgstr "Mostrare playlist"
+
+msgid "Convert to UTF8"
+msgstr "Convertire in UTF8"
+
+msgid "Burn ISO-File"
+msgstr "Masterizzare file ISO"
+
+msgid "Make And burn ISO-File"
+msgstr "Produrre e masterizzare un file ISO"
+
+msgid "Sort alphabetically"
+msgstr ""
+
+msgid "Sort by file size"
+msgstr ""
+
+msgid "Filebrowser Commands"
+msgstr "Comandi filebrowser"
+
+msgid "Started converting"
+msgstr "Conversione avviata"
+
+msgid "Finished converting"
+msgstr "Conversione terminata!"
+
+msgid "Save playlist to disk"
+msgstr "Salvare la playlist su disco"
+
+msgid "Copy playlist to usb stick"
+msgstr "Copiare la playlist su penna USB"
+
+msgid "Playlist actions"
+msgstr "Azioni playlist"
+
+msgid "Add selection to playlist"
+msgstr ""
+
+msgid "Discard playlist"
+msgstr ""
+
+msgid "Copy playlist content to a directory"
+msgstr ""
+
+msgid "Discard current playlist"
+msgstr ""
+
+msgid "Append new playlist to current playlist"
+msgstr ""
+
+msgid "Directory already exists"
+msgstr "Cartella già presente!"
+
+msgid "New"
+msgstr "Nuovo"
+
+msgid "To create a new directory press 'OK'"
+msgstr "Ok -> Creare una nuova cartella"
+
+msgid "Rename to"
+msgstr "Rinominare come"
+
+msgid "Press OK to burn the playlists contents on a DVD"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr "Filebrowser"
+
+msgid "File Browser"
+msgstr "File browser"
+
+msgid "Picture viewer"
+msgstr "Visualizzatore immagini"
+
+#~ msgid "Deselect all"
+#~ msgstr "Deselezionare tutto"
+
+#~ msgid "Deselect"
+#~ msgstr "Deselezionare"
+
+#~ msgid "Moving"
+#~ msgstr "Spostamento in corso"
+
+#~ msgid "Deleting"
+#~ msgstr "Cancellazione in corso"
+
+#, fuzzy
+#~ msgid "Last image"
+#~ msgstr "Ultimo modificato"

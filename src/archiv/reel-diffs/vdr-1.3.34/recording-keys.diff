@@ -1,0 +1,32 @@
+Index: menu.c
+===================================================================
+--- menu.c	(Revision 790)
++++ menu.c	(Arbeitskopie)
+@@ -4719,19 +4747,21 @@
+   switch (Key) {
+     // Positioning:
+     case kPlay:
+-    case kUp:      Play(); break;
++                   Play(); break;
+     case kPause:
+-    case kDown:    Pause(); break;
++                   Pause(); break;
++    case kLeft|k_Repeat:
++                   SkipSeconds( -5); break;
+     case kFastRew|k_Release:
+-    case kLeft|k_Release:
+                    if (Setup.MultiSpeedMode) break;
+     case kFastRew:
+-    case kLeft:    Backward(); break;
++    //case kLeft:    Backward(); break;
++    case kRight|k_Repeat:
++                   SkipSeconds( 5); break;
+     case kFastFwd|k_Release:
+-    case kRight|k_Release:
+                    if (Setup.MultiSpeedMode) break;
+     case kFastFwd:
+-    case kRight:   Forward(); break;
++    //case kRight:   Forward(); break;
+     case kRed:     TimeSearch(); break;
+     case kGreen|k_Repeat:
+     case kGreen:   SkipSeconds(-60); break;

@@ -1,0 +1,4 @@
+HANDLEROBJS += media_#handler#/#handler#_handler.o media_#handler#/#handler#_menu.o \
+	media_#handler#/#handler#_disc.o
+
+HANDLERLIBS += 

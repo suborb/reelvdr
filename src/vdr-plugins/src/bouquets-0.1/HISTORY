@@ -1,0 +1,9 @@
+VDR Plugin 'formatHD' Revision History
+--------------------------------------
+
+2005-09-21: Version 0.0.4 (RollerCoaster)
+
+- removed hardcoded string from cMenuFormatHD::Store() for formating the hd
+- therefore intruduced preparehd.sh shell script which is called from Store()
+- introduced i18n and first two language versions (english+german)
+

@@ -1,0 +1,155 @@
+#!/bin/bash
+
+#
+# UMTS Setup for ReelBox Avantgarde
+# Version 0.4.2
+# 
+# History
+# 26.06.2010 0.4.2:
+#   bugfix
+# 24.06.2010 0.4.1:
+#		use usb modswitch for new Huawei Surfsticks
+# 04.10.2008 0.3:
+#		added pin function
+#		added provider settings
+#		added provider data for a1-austria and swisscom
+# 02.10.2008 0.2: 
+#		First Version
+
+#set -x
+
+PATH="/usr/sbin:/bin:/usr/bin:/sbin"
+
+SYSCONFIG="/etc/default/sysconfig"
+. $SYSCONFIG
+
+#UMTS=yes
+
+if [ "$1" = "" ];then
+    SOPTION="start"
+else
+    SOPTION="$1"
+fi
+
+Device="/dev/ttyUSB0"
+
+umts_start () {
+cat >/etc/wvdial.conf<< EOF
+[Dialer umts]
+Phone = *99***1#
+Stupid Mode = 1
+Carrier Check = no
+Dial Command = ATDT
+Modem = $Device
+Baud = 460800
+Init1 = ATZ
+Init2 = ATE0V1&D2&C1S0=0+IFC=2,2
+ISDN = 0
+Modem Type = USB Modem
+EOF
+}
+
+set_pin () {
+	/bin/echo -e -n "AT+CPIN=$MY_UMTS_PIN" > $Device
+	echo "Set PinCode"
+	sleep 3
+}
+
+
+product_id () {
+	Check_Product_ID=`/usr/sbin/lsusb 2>/dev/null | grep Huawei | awk '{ print $6 }' | cut -d ':' -f2`
+}
+
+# Start here
+case $SOPTION in
+	start)	
+		if [ "$UMTS_PIN" = "yes" ]; then
+			set_pin
+		fi
+
+		if ! [ -f /tmp/umts_on ] && [ "$UMTS" = "yes" ]; then
+			product_id
+			modprobe -r usb_storage
+			modprobe -r usbserial
+			if ! [ $Check_Product_ID == "1003" ]; then
+				/usr/sbin/usb_modeswitch -d -I -W -c /etc/usb_modeswitch.conf
+			fi
+			product_id
+				modprobe -v usbserial vendor=0x12d1 product=0x$Check_Product_ID
+			sleep 20
+			umts_start
+			/sbin/route del default
+		if [ "$UMTS_PROVIDER" = "D1" ]; then
+			echo "Username = internet" >> /etc/wvdial.conf
+			echo "Password = t-d1" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"internet.t-d1.de\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "D2" ]; then
+			echo "Username = d2" >> /etc/wvdial.conf
+			echo "Password = d2" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"web.vodafone.de\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "O2" ]; then
+			echo "Username = o2" >> /etc/wvdial.conf
+			echo "Password = o2" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"$UMTS_APN\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "EPlus" ]; then
+			echo "Username = eplus" >> /etc/wvdial.conf
+			echo "Password = wap" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"internet.eplus.de\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "A1-Austria" ]; then
+			echo "Username = ppp@a1plus.at" >> /etc/wvdial.conf
+			echo "Password = ppp" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"a1.net\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "Orange-Austria" ]; then
+                        echo "Username = web" >> /etc/wvdial.conf
+                        echo "Password = web" >> /etc/wvdial.conf
+                        echo "Init3 = AT+CGDCONT=1,\"IP\",\"web.orange.at\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "Planet3-Austria" ]; then
+                        echo "Username = Kein" >> /etc/wvdial.conf
+                        echo "Password = Kein" >> /etc/wvdial.conf
+                        echo "Init3 = AT+CGDCONT=1,\"IP\",\"drei.at\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "YESSS-Austria" ]; then
+                        echo "Username = Kein" >> /etc/wvdial.conf
+                        echo "Password = Kein" >> /etc/wvdial.conf
+                        echo "Init3 = AT+CGDCONT=1,\"IP\",\"web.yesss.at\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "Swisscom" ]; then
+			echo "Username = swiss" >> /etc/wvdial.conf
+			echo "Password = swiss" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"gprs.swisscom.ch\"" >> /etc/wvdial.conf
+		elif [ "$UMTS_PROVIDER" = "MY-Provider" ]; then
+			if [ $UMTS_NAME = "" ] || [ $UMTS_PASS = "" ]; then
+				UMTS_NAME = "umts"
+				UMTS_PASS = "umts"
+			fi
+			echo "Username = $UMTS_NAME" >> /etc/wvdial.conf
+			echo "Password = $UMTS_PASS" >> /etc/wvdial.conf
+			echo "Init3 = AT+CGDCONT=1,\"IP\",\"$UMTS_APN\"" >> /etc/wvdial.conf
+		fi
+			wvdial umts  >/dev/null 2>&1 &
+			touch /tmp/umts_on
+			echo "start umts service"
+		else
+			echo "umts service running"
+		fi
+		;;
+	stop)
+		if [ -f /tmp/umts_on ]; then
+			killall `pidof` wvdial
+			rm /tmp/umts_on
+			echo "stop umts service"
+			# start internal network
+			setup-net restart >/dev/null 2>&1 &
+			exit
+		fi
+	        ;;
+	restart)
+			echo "restart umts service"
+			$0 stop
+			sleep 3
+			$0 start
+		;;
+
+	    *)
+	        echo "Usage: $0 { start | stop | restart }"
+	        exit 1
+	        ;;
+esac

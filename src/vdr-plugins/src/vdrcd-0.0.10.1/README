@@ -1,0 +1,122 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Bernd Schweikert <schweikert@dit-gmbh.de>
+Maintained by:               Sascha Volkenandt <sascha@akv-soft.de>
+
+Project's homepage:          www.magoa.net/linux
+
+Latest version available at: www.magoa.net/linux
+
+See the file COPYING for license information.
+
+Description:
+
+This PlugIn tries to identify the type of a Media Disc inserted into your
+CD-ROM/DVD drive. If the type of media is known and an appropriate PlugIn
+is loaded, it starts it. If you have a VDR directory structure on that disc,
+it launches VDR's own Recording Menu. This also works if you have the MPEG-
+files stored directly in the root of the disc, starting with 001.vdr.
+
+Note that this PlugIn controls the other PlugIns as well. This means it can
+start a Onetrack-VCD on the fly, even if the VCD-PlugIn displays a menu 
+before you can play-back. This also wirks with Audio-CD's and MP3-CD's. It
+should even work with CD-Extra, if you read the instructions below 
+carefully;).
+
+This makes (at least) the two entries VCD and DVD obsolete, and that's 
+why you can disable them in the latest versions ;).
+
+You will need to provide a mount.sh Script, which must react to te commands 
+mount, unmount, eject and status, like in "mount.sh status /cdrom". All 
+those commands return 0 on success (e.g. the disc is mounted or correctly
+ejected) and 1 on failure. You can take the script from the MP3-PlugIn by
+Stefan Huelswitt. I've put a local copy into my PlugIn-Archive as well. If 
+you use the automounter, you should always return 0.
+
+Installation:
+
+Let's say vdrcd's version is 0.0.6 and vdr's version is 1.1.25. If you 
+use anything else please exchange the version numbers appropriately (this
+way I don't have to update this section all the times;) )
+
+cd vdr-1.1.25/PLUGINS/src
+tar xvfz vdr-vdrcd-0.0.6.tgz
+ln -s vdrcd-0.0.6 vdrcd
+cd ../..
+make [options, if necessary] plugins
+
+Usage:
+
+The PlugIn has the commandline parameter -c (or --cdDir) to specify the 
+location of your media drives if it is not symlinked to /cdrom (the default). 
+You may specify multiple -c options. Those drives and filesystems will be 
+probed in order, then. Those can also be DVD-drives of course. Or both.
+The main reason why I implemented this feature was CD-Extra and similar.
+Those are CD's with Audio and Data on the disc. You could specify an entry
+for your Drive in /etc/fstab as usual, and define another entry which only
+allows CD-FS (for audio-cd's). Example:
+
+/dev/dvd  /dvd  auto  ro,noauto,user,exec 0 0
+/dev/dvd  /cdfs cdfs  ro,noauto,user,exec 0 0
+
+If you now specify /media/cdfs BEFORE /media/dvd in the commandline, as in:
+
+vdr -P"vdrcd -c /cdfs -c /dvd"
+
+your Mixed-Mode-CD's are replayed in audio-only mode ;)
+
+To mount and unmount the Drive you should provide a mount.sh script on the 
+command line with the -m parameter, or you should make sure that such a 
+script is in the PATH. See the last section of *Description:* for more info.
+
+The PlugIn Setup provides "Video-CD Autostart" and "Audio/MP3-CD Autostart",
+which are enabled by default (for your convenience). The first one, if 
+enabled, makes the VCD-PlugIn replay a Onetrack-VCD instantly. If the Disc
+has multiple tracks, the track selection menu will be shown. The second one
+enables Autostart for Audio-CD's and MP3-CD's. Upon recognition of such a 
+disc, the MP3-PlugIn will be started with an instant playback of all tracks
+or files on the disc.
+
+Note that for the latter to work, all drives you specify on the PlugIn's 
+"-c" command line must be specified in mp3sources.conf as well.
+
+Since Audio- and MP3-CD's must be unmounted after playback before they will 
+eject, I'd suggest you put a command like:
+
+Eject CD : mount.sh unmount /cdfs ; mount.sh unmount /cdrom ; mount.sh eject 
+/cdrom
+
+into your commands.conf. Please write it on one line. Then you could specify
+two Macros in keymacros.conf:
+
+Yellow  @vdrcd
+Green   Commands 1
+
+The first one launches the PlugIn, and the second one launches your Command
+from the menu. You will have to adapt the second macro to fit your setup,
+just replace "1" with the number you see for your umount-command in the menu.
+
+
+These Media-Types should work 
+
+Media        Player        Autostart?
+Video-CD     vdr-vcd           X
+Super-VCD    vdr-vcd           X
+DVD          vdr-dvd           X
+Photo CD     vdr-pcd           
+MP3 files    vdr-mp3           X
+OGG files    vdr-mp3           X         (not tested)
+Audio CD's   vdr-mp3           X
+Mixed Mode   vdr-mp3           X         (read the above instructions carefully)
+AVI files    vdr-mplayer       X         (not tested)
+VDR dirs     vdr itself
+VDR files    vdr itself
+
+
+Remarks:
+
+After Playback of VCD's, the drive will lock sometimes, that is because the
+VCD-PlugIn doesn't fully release it. T.H. is working on that.
+
+This PlugIn is tested with vdr-1.1.26 and gcc-3.2.2
+

@@ -1,0 +1,46 @@
+
+Hier können sämtliche Einstellungen für die Audio- und 
+Videowiedergabe vorgenommen werden.
+
+Audio Einstellungen:
+- Nutzung des Dolby Digital-Tons (falls gesendet)
+- Verzögerung für Dolby Digital-Ton und Stereo-Ton festlegen 
+  (falls Probleme mit Bild-/Tonsynchronität auftreten)
+
+Video Einstellungen:
+- Modus wählen: 
+  SDTV für Standard PAL-Signal
+  SDTV+HDTV ermöglicht Hochskalieren des Pal-Signals 
+  über YUV-Ausgang. 
+  PC/VGA aktiviert Bildausgabe über VGA-Ausgang
+
+- Ausgabemodus: 
+  Wahl der Bildsignalart. 
+  Zur Verfügung stehen folgende Signalarten
+  YUV, RGB, CVBS (FBAS) und YC (S-Video). 
+  
+  Bitte konsultieren Sie die Anleitung Ihres Bildschirms bzgl. 
+  der unterstützten Bildsignalarten.
+
+- Bildseitenverhältnis: 
+  Wahl des Bildschirmformats. 
+  4:3 für herkömmliche Bildschirme, 16:9 für Breitbildschirme.
+
+- Steuerung Seitenverhältnis: 
+  Automatisch (empfohlen) sowie Manuell: 
+  Auswahl über die Fernbedienung,
+  Anamorph + WSS: bringt Breitwandfilme auf 4:3 Format und 
+  versucht die schwarzen Ränder zu beseitigen, führt dadurch 
+  aber zur Verzerrung des Bildes
+
+- TV-Norm:
+  Auswahl der genutzten TV-Norm. 
+  Automatik PAL50/PAL60 (empfohlen), 
+  PAL 50: PAL-Signal mit 50Hz Bildwiederholfrequenz, 
+  PAL 60: PAL-Signal mit 60Hz Bildwiederholfrequenz, 
+  NTSC: wird in USA, Kanada und Japan verwendet.
+
+- SCART-Schaltspannung:
+  Bei "An" wird über das SCART-Kabel bei Einschalten der 
+  ReelBox ein Signal an den Fernseher gesendet, das diesen
+  aus dem Standby einschaltet.

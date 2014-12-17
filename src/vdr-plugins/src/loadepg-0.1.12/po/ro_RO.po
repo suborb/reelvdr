@@ -1,0 +1,60 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-loadepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2009-03-03 17:04+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Load EPG Data sent to Mediahighway receivers"
+msgstr "Incarc date EPG trimise catre receptoare Mediahighway"
+
+msgid "LoadEPG"
+msgstr "Incarc EPG"
+
+msgid "Card not available"
+msgstr "Cardul nu este diponibil"
+
+msgid "Select a provider and press Ok"
+msgstr "Selecteaza un furnizor si apasa OK"
+
+msgid "Wait load epg data"
+msgstr "Ateapta sa incarc datele EPG"
+
+msgid "No epg data available"
+msgstr "Nu sant disponibile date EPG"
+
+#, fuzzy
+msgid "No data epg available"
+msgstr "Nu sant disponibile date EPG"
+
+msgid "Use file channels equivalences"
+msgstr "Foloseste fisier pentru echivalente canale"
+
+msgid "No"
+msgstr "Nu"
+
+msgid "Yes"
+msgstr "Da"
+
+msgid "DVB-S device for scanning"
+msgstr "Dispozitivul DVB-S pentru scanare"
+
+msgid "Invalid provider number"
+msgstr "Numar invalid furnizor"
+
+msgid "The plugin is already active"
+msgstr "Pluginul este deja activ"

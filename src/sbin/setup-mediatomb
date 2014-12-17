@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# UPnP-Server (mediatomb) Setup Script for Reelbox AVG
+# Date: 17.04.2008 by RC
+#
+
+
+
+PATH="/usr/sbin:/bin:/usr/bin:/sbin"
+
+SYSCONFIG="/etc/default/sysconfig"
+. $SYSCONFIG
+. /etc/default/globals
+
+CONFIGFILE=/etc/default/mediatomb
+DATABASE=/var/lib/mediatomb/mediatomb.db
+HTMLINDEX=/var/lib/mediatomb/mediatomb.html
+
+case $1 in
+	setup)
+		if [ "$UPNP_ENABLE" = "yes" ]; then
+			sed -i s/NO_START=.*/NO_START=\"\"/ $CONFIGFILE
+			/etc/init.d/mediatomb start
+		else
+			/etc/init.d/mediatomb stop
+			sed -i s/NO_START=.*/NO_START=\"yes\"/ $CONFIGFILE
+			# TODO: delete db
+			rm -f $DATABASE $HTMLINDEX
+		fi
+		;;
+	    *)
+	        echo "Usage: $0 { setup }"
+	        echo "You shuld not start this script directly, its only for use from the setup"
+	        exit 1
+	        ;;
+esac
+exit 0

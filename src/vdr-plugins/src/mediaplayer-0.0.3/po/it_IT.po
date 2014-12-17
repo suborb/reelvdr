@@ -1,0 +1,92 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-05-30 16:11+0200\n"
+"PO-Revision-Date: 2009-06-20 16:17+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Media Player"
+msgstr "Media player"
+
+msgid "Recordings"
+msgstr "Registrazioni"
+
+msgid "Music"
+msgstr "Musica"
+
+msgid "Images"
+msgstr "Immagini"
+
+msgid "Videos"
+msgstr "Video"
+
+msgid "My Music"
+msgstr "La mia musica"
+
+msgid "My Images"
+msgstr "Le mie immagini"
+
+msgid "My Videos"
+msgstr "I miei video"
+
+msgid "Browser"
+msgstr "Recordings"
+
+msgid "Rotor"
+msgstr "Rotore"
+
+msgid "My Recordings"
+msgstr "Le mie registrazioni"
+
+msgid "Play CD/DVD"
+msgstr "Riprodurre CD/DVD"
+
+msgid "Internet radio"
+msgstr "Internet radio"
+
+msgid "Play Ipod"
+msgstr "Riprodurre Ipod"
+
+msgid "Audio Player2"
+msgstr ""
+
+msgid "Music & media player"
+msgstr ""
+
+msgid "Audio Player"
+msgstr "Audio player"
+
+msgid "Music Library"
+msgstr "Archivio musica"
+
+msgid "Image Player"
+msgstr "Player immagini"
+
+msgid "Image Library"
+msgstr "Archivio immagini"
+
+msgid "MediaplayerDvd"
+msgstr "MediaplayerDvd"
+
+msgid "Video Library"
+msgstr "Archivio video"
+
+msgid "Movie & media player"
+msgstr ""
+
+msgid "Movie Library"
+msgstr "Archivio film"

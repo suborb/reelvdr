@@ -1,0 +1,184 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-pin\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-03 13:06+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Recordings"
+msgstr "Gravacions"
+
+msgid "1 Activate childlock"
+msgstr "1 Activa la protecció infantil"
+
+msgid "2 Add current channel to protection list"
+msgstr "2 Afegeix la protecció infantil al canal actual"
+
+msgid "3 Add current broadcast to protection list"
+msgstr "3 Afegeix la protecció infantil al programa actual"
+
+msgid "4 Edit channel locks"
+msgstr "4 Edita els canals bloquejats"
+
+msgid "5 Edit broadcast locks"
+msgstr "5 Edita els programes bloquejats"
+
+msgid "6 Unlock setup"
+msgstr "6 Desbloqueja la configuració"
+
+msgid "6 Lock setup"
+msgstr "6 Bloqueja la configuració"
+
+msgid "Note:"
+msgstr "Nota:"
+
+msgid "Please activate Childlock by pressing (1)."
+msgstr "Activeu la protecció infantil prement (1)."
+
+msgid "Activated pin protection"
+msgstr "Activat el PIN de protecció"
+
+msgid "Please setup a pin code first!"
+msgstr "Introduïu el codi PIN!"
+
+msgid "Protected channels"
+msgstr "Canals protegits"
+
+msgid "Protected broadcasts"
+msgstr "Programes protegits"
+
+msgid "Plugin protections"
+msgstr "Connectors protegits"
+
+msgid "locked"
+msgstr "bloquejat"
+
+msgid "unlocked"
+msgstr "desbloquejat"
+
+msgid "already in list"
+msgstr "ja és a la llista"
+
+msgid "added to protection list"
+msgstr "afegida la protecció infantil"
+
+msgid "No locked channels present."
+msgstr "No hi ha canals bloquejats."
+
+msgid "Use the green button to lock channels."
+msgstr "Utilitza el botó verd per bloquejar canals."
+
+msgid "No locked broadcasts present."
+msgstr "No hi ha programes bloquejats."
+
+msgid "Use the green button to lock broadcasts."
+msgstr "Utilitza el botó verd per bloquejar programes."
+
+msgid "Edit"
+msgstr "Edita"
+
+msgid "Lock / Unlock"
+msgstr "Bloqueja / Desbloqueja"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "On/Off"
+msgstr "On/Off"
+
+msgid "- new -"
+msgstr "- nou -"
+
+msgid "Remove entry?"
+msgstr "Suprimir l'entrada?"
+
+msgid "Lock active"
+msgstr "Bloqueig actiu"
+
+msgid "Start"
+msgstr "Inicia"
+
+msgid "Stop"
+msgstr "Atura"
+
+msgid "Keyword"
+msgstr "Paraula clau"
+
+msgid "Search mode"
+msgstr "Mode de cerca"
+
+msgid "Setup your pin code: "
+msgstr "Introdueix el codi PIN: "
+
+msgid "Pin Code: "
+msgstr "Codi PIN: "
+
+msgid "Pin code successfully setup"
+msgstr "El codi PIN s'ha introduït amb èxit"
+
+msgid "Code accepted"
+msgstr "Codi acceptat"
+
+msgid "Invalid Code !"
+msgstr "Codi no vàlid !"
+
+msgid "Title$Childlock"
+msgstr "Protecció infantil"
+
+msgid "Please enter pin code first"
+msgstr "Entreu el codi PIN"
+
+msgid "channel is protected"
+msgstr "aquest canal és protegit"
+
+msgid "broadcast is protected"
+msgstr "aquest programa és protegit"
+
+msgid "is protected"
+msgstr "és protegit"
+
+msgid "Pin code"
+msgstr "Codi PIN"
+
+msgid "Skip protected channel silent"
+msgstr "Omet els canals protegits"
+
+msgid "Open menu after pin request"
+msgstr "Obre el menú després de sol·licitar el PIN"
+
+msgid "Pin inactivity time [min]"
+msgstr "Temps inactivitat PIN [min]"
+
+msgid "Autoprotection of recordings"
+msgstr "Autoprotegeix les gravacions"
+
+msgid "Ignoring invalid pin"
+msgstr "Ignora el PIN no vàlid"
+
+msgid "Childlock plugin"
+msgstr "Connector de protecció infantil"
+
+msgid "Parental Control"
+msgstr "Protecció infantil"
+
+#~ msgid "Add"
+#~ msgstr "Afegeix"
+
+#~ msgid "7 Unlock setup"
+#~ msgstr "7 Desbloqueja la configuració"
+
+#~ msgid "7 Lock setup"
+#~ msgstr "7 Bloqueja la configuració"
+
+#~ msgid "6 Edit plugin locks"
+#~ msgstr "6 Edita els connectors bloquejats"

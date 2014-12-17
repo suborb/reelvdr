@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel (press OK): "
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "not found"
+msgstr ""
+
+msgid "Teletext"
+msgstr ""
+
+msgid "Red key"
+msgstr ""
+
+msgid "Green key"
+msgstr ""
+
+msgid "Yellow key"
+msgstr ""
+
+msgid "Blue key"
+msgstr ""
+
+msgid "Zoom"
+msgstr ""
+
+msgid "Half page"
+msgstr ""
+
+msgid "Change channel"
+msgstr ""
+
+msgid "Switch background"
+msgstr ""
+
+msgid "Jump to..."
+msgstr ""
+
+msgid "Background transparency"
+msgstr ""
+
+msgid "Show clock"
+msgstr ""
+
+msgid "Auto-update pages"
+msgstr ""
+
+msgid "OSD height"
+msgstr ""
+
+msgid "OSD width"
+msgstr ""
+
+msgid "  Page number"
+msgstr ""

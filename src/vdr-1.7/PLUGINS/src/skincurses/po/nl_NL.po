@@ -1,0 +1,30 @@
+# VDR plugin language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@tvdr.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <vdr-bugs@tvdr.de>\n"
+"POT-Creation-Date: 2010-10-24 16:43+0200\n"
+"PO-Revision-Date: 2011-06-15 22:32+0100\n"
+"Last-Translator: TechNL <technl@reelbox4all.com>\n"
+"Language-Team: German <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+
+msgid "A text only skin"
+msgstr "Alleen tekst als skin"
+
+msgid "Key$Mute"
+msgstr "Mute"
+
+msgid "Volume "
+msgstr "Volume"
+
+msgid "Text mode"
+msgstr "Tekst-modus"
+

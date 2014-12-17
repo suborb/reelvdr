@@ -1,0 +1,54 @@
+Plugin radio for vdr >= 1.3.43
+
+vdr-Patches (siehe SubDir ../patches):
+ - vdr-1.3.44-close_menu4.patch (rnissl)		>>>	(nicht f¸r >= 1.3.47 !!!)
+   (schlieﬂt das Radiotext-OSD im vdr bei Bedarf)
+ - vdr-1.3.44-device.patch (rnissl)			>>>	(ab 1.3.35 enthalten !!!)
+   (ge‰nderte Umschaltung in den Transfermode)
+
+Default funktioniert das radio-plugin mit ungepatchtem
+vdr >= 1.3.43 
+
+Mit Anwendung der vdr-patches m¸ssen die ersten
+2 Defines/Variablen in der Datei 'Makefile' ge‰ndert werden;
+VDRP_DTRANSFER/VDRP_MENUCLOSE, siehe dort.
+
+MPEG-Standbilder als Beispiele beigef¸gt (siehe SubDir ../mpgestill),
+(¸berarbeitete Vorlage von kleo @ vdrportal)
+
+
+Grunds‰tzlich zur Bedienung:
+----------------------------
+Wenn im OSD entweder der Radiotext oder der RaSS-Archivhinweis aktiv ist,
+kann mit der Taste 'Zur¸ck' das OSD getoggelt werden, soll heiﬂen:
+RaSS-Hinweis/Radiotext -> kein OSD -> RaSS-Hinweis/Radiotext usw.
+
+
+Bedienung/Tasten RTplus-Menu:
+-----------------------------
+Wenn im OSD der Radiotext zu sehen ist, kann mit der Taste '0'
+das zus‰tzliche RTplus-Menu + evtl. weitere aufgerufen werden.
+Die ‹bersicht wird automatisch alle 60 Sekunden aktualisiert;
+evtl. Untermenus ca. alle 20s, wenn aktiviert.
+
+Tasten in den Menus:
+ 0		= Aktualisieren
+ OK/Zur¸ck 	= Schlieﬂen 
+ 8		= RTplus-Infos speichern (nur 1.Menu)
+
+
+Bedienung/Tasten RaSS-Archiv:
+----------------------------
+Wenn im OSD der Hinweis 'Archiv verf¸gbar' zu sehen ist, kann mit der Taste '0'
+das zus‰tzliche RaSS-Archiv aufgerufen werden.
+Auf der linken Seite erscheint das Archiv-Menu mit den Bedienungstasten 0-9,
+dabei bedeuten folgende Symbole:
+ |=| 		= (Sub-)Seiten vorhanden
+  > 		= (Seiten-)Standort
+
+Alle anderen Tasten schlieﬂen das RaSS-Archiv wieder.
+
+
+
+Viel Spaﬂ...
+Uwe <egal at egal-vdr dot de>

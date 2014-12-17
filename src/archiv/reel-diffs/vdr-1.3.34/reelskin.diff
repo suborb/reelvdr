@@ -1,0 +1,235 @@
+diff -Nur vdr-1.3.27/interface.c vdr-1.3.27-reel/interface.c
+--- vdr-1.3.27/interface.c      2004-11-01 15:23:28.000000000 +0100
++++ vdr-1.3.27-reel/interface.c 2005-07-13 22:44:57.000000000 +0200
+@@ -31,8 +31,17 @@
+ 
+ eKeys cInterface::GetKey(bool Wait)
+ {
+-  if (!cRemote::HasKeys())
+-     Skins.Flush();
++    static int doFlush = 0;
++    if (!cRemote::HasKeys() || doFlush == 0)
++    {
++        Skins.Flush();
++        doFlush = 2;
++    }
++    if (doFlush > 0)
++    {
++        doFlush --;
++    }
++  
+   if (SVDRP) {
+      if (SVDRP->Process())
+         Wait = false;
+diff -Nur vdr-1.3.27/osd.c vdr-1.3.27-reel/osd.c
+--- vdr-1.3.27/osd.c    2005-06-19 12:43:04.000000000 +0200
++++ vdr-1.3.27-reel/osd.c       2005-09-10 18:09:22.000000000 +0200
+@@ -344,6 +344,44 @@
+      SetIndex(x, y, Index(Color));
+ }
+ 
++#include <sys/time.h>
++#include <time.h>
++class Profiler
++{
++public:
++    explicit Profiler(const char *s)
++    {
++        s_ = s;
++    }
++
++    void Start()
++    {
++         now_ = GetTime();
++    }
++    
++    void Stop()
++    {
++         now_ = GetTime() - now_;
++    }
++    
++    void Result()
++    {
++        ::printf("%s %d\n", s_, (int)now_);
++    }
++    
++private:
++    unsigned long long GetTime()
++    {
++        struct  timeval  ti;
++        struct  timezone tzp;
++        ::gettimeofday(&ti,&tzp);
++        return  ti.tv_usec + 1000000LL * ti.tv_sec;
++    }
++    
++    const char *s_;
++    unsigned long long now_;
++};
++
+ void cBitmap::DrawBitmap(int x, int y, const cBitmap &Bitmap, tColor ColorFg, tColor ColorBg, bool ReplacePalette)
+ {
+   if (bitmap && Bitmap.bitmap && Intersects(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1)) {
+@@ -361,12 +399,61 @@
+      else {
+         tIndexes Indexes;
+         Take(Bitmap, &Indexes, ColorFg, ColorBg);
+-        for (int ix = 0; ix < Bitmap.width; ix++) {
+-            for (int iy = 0; iy < Bitmap.height; iy++)
+-                SetIndex(x + ix, y + iy, Indexes[int(Bitmap.bitmap[Bitmap.width * iy + ix])]);
++        for (int iy = 0; iy < Bitmap.height; iy++)
++        {
++            const int lineStart = Bitmap.width * iy;
++            for (int ix = 0; ix < Bitmap.width; ix++) {
++                SetIndex(x + ix, y + iy, Indexes[int(Bitmap.bitmap[lineStart + ix])]);
+             }
+         }
+-     }
++      }
++   }
++}
++
++void cBitmap::DrawBitmapHor(int x, int y, int w, const cBitmap &Bitmap)
++{
++    if (bitmap && Bitmap.bitmap && Intersects(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1))
++    {
++        if (Covers(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1))
++        {
++            Reset();
++        }
++        x -= x0;
++        y -= y0;
++        tIndexes Indexes;
++        Take(Bitmap, &Indexes, 0, 0);
++        for (int iy = 0; iy < Bitmap.height; iy++)
++        {
++            tIndex index = Indexes[int(Bitmap.bitmap[iy])];
++            for (int ix = 0; ix < w; ix++)
++            {
++                SetIndex(x + ix, y + iy, index);
++            }
++        }
++    }
++}
++
++void cBitmap::DrawBitmapVert(int x, int y, int h, const cBitmap &Bitmap)
++{
++    if (bitmap && Bitmap.bitmap && Intersects(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1))
++    {
++        if (Covers(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1))
++        {
++            Reset();
++        }
++        x -= x0;
++        y -= y0;
++        tIndexes Indexes;
++        Take(Bitmap, &Indexes, 0, 0);
++        for (int ix = 0; ix < Bitmap.width; ix++)
++        {
++            tIndex index = Indexes[int(Bitmap.bitmap[ix])];
++            for (int iy = 0; iy < h; iy++)
++            {
++                SetIndex(x + ix, y + iy, index);
++            }
++        }
++    }
+ }
+ 
+ void cBitmap::DrawText(int x, int y, const char *s, tColor ColorFg, tColor ColorBg, const cFont *Font, int Width, int Height, int Alignment)
+@@ -437,22 +524,33 @@
+ 
+ void cBitmap::DrawRectangle(int x1, int y1, int x2, int y2, tColor Color)
+ {
+-  if (bitmap && Intersects(x1, y1, x2, y2)) {
+-     if (Covers(x1, y1, x2, y2))
+-        Reset();
+-     x1 -= x0;
+-     y1 -= y0;
+-     x2 -= x0;
+-     y2 -= y0;
+-     x1 = max(x1, 0);
+-     y1 = max(y1, 0);
+-     x2 = min(x2, width - 1);
+-     y2 = min(y2, height - 1);
+-     tIndex c = Index(Color);
+-     for (int y = y1; y <= y2; y++)
+-         for (int x = x1; x <= x2; x++)
+-             SetIndex(x, y, c);
+-     }
++    if (bitmap && Intersects(x1, y1, x2, y2)) {
++        if (Covers(x1, y1, x2, y2))
++            Reset();
++        x1 -= x0;
++        y1 -= y0;
++        x2 -= x0;
++        y2 -= y0;
++        x1 = max(x1, 0);
++        y1 = max(y1, 0);
++        x2 = min(x2, width - 1);
++        y2 = min(y2, height - 1);
++        tIndex c = Index(Color);
++        if (dirtyX1 > x1)  dirtyX1 = x1;
++        if (dirtyY1 > y1)  dirtyY1 = y1;
++        if (dirtyX2 < x2)  dirtyX2 = x2;
++        if (dirtyY2 < y2)  dirtyY2 = y2;
++        
++        for (int y = y1; y <= y2; y++)
++        {
++            if (x2 >= x1)
++            {
++                memset(bitmap + y * width + x1, c, x2 - x1 + 1);
++            }
++            //for (int x = x1; x <= x2; x++)
++            //    SetIndex(x, y, c);
++        }
++    }
+ }
+ 
+ void cBitmap::DrawEllipse(int x1, int y1, int x2, int y2, tColor Color, int Quadrants)
+@@ -687,6 +786,18 @@
+       bitmaps[i]->DrawBitmap(x, y, Bitmap, ColorFg, ColorBg, ReplacePalette);
+ }
+ 
++void cOsd::DrawBitmapHor(int x, int y, int w, const cBitmap &Bitmap)
++{
++  for (int i = 0; i < numBitmaps; i++)
++      bitmaps[i]->DrawBitmapHor(x, y, w, Bitmap);
++}
++
++void cOsd::DrawBitmapVert(int x, int y, int h, const cBitmap &Bitmap)
++{
++  for (int i = 0; i < numBitmaps; i++)
++      bitmaps[i]->DrawBitmapVert(x, y, h, Bitmap);
++}
++
+ void cOsd::DrawText(int x, int y, const char *s, tColor ColorFg, tColor ColorBg, const cFont *Font, int Width, int Height, int Alignment)
+ {
+   for (int i = 0; i < numBitmaps; i++)
+diff -Nur vdr-1.3.27/osd.h vdr-1.3.27-reel/osd.h
+--- vdr-1.3.27/osd.h    2005-06-19 12:35:25.000000000 +0200
++++ vdr-1.3.27-reel/osd.h       2005-09-10 18:09:22.000000000 +0200
+@@ -20,6 +20,7 @@
+                    //AARRGGBB
+   clrTransparent = 0x00000000,
+   clrGray50      = 0x7F000000, // 50% gray
++  clrGray62      = 0xA0000000, // 62% gray
+   clrBlack       = 0xFF000000,
+   clrRed         = 0xFFFC1414,
+   clrGreen       = 0xFF24FC24,
+@@ -163,6 +164,8 @@
+        ///< will be mapped to ColorBg and the second palette entry will be mapped to
+        ///< ColorFg (palette indexes are defined so that 0 is the background and
+        ///< 1 is the foreground color).
++  void DrawBitmapHor(int x, int y, int w, const cBitmap &Bitmap);
++  void DrawBitmapVert(int x, int y, int h, const cBitmap &Bitmap);
+   void DrawText(int x, int y, const char *s, tColor ColorFg, tColor ColorBg, const cFont *Font, int Width = 0, int Height = 0, int Alignment = taDefault);
+        ///< Draws the given string at coordinates (x, y) with the given foreground
+        ///< and background color and font. If Width and Height are given, the text
+@@ -284,6 +287,8 @@
+        ///< will be mapped to ColorBg and the second palette entry will be mapped to
+        ///< ColorFg (palette indexes are defined so that 0 is the background and
+        ///< 1 is the foreground color).
++  virtual void DrawBitmapHor(int x, int y, int w, const cBitmap &Bitmap);
++  virtual void DrawBitmapVert(int x, int y, int h, const cBitmap &Bitmap);
+   virtual void DrawText(int x, int y, const char *s, tColor ColorFg, tColor ColorBg, const cFont *Font, int Width = 0, int Height = 0, int Alignment = taDefault);
+        ///< Draws the given string at coordinates (x, y) with the given foreground
+        ///< and background color and font. If Width and Height are given, the text

@@ -1,0 +1,254 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          sanitycheck-reel
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Does some checks/corrections on every start/stop
+# Description:       needed by the ReelBox system
+### END INIT INFO
+
+
+NAME="sanity-check"
+DESC="sanity-checks"
+
+
+. /lib/lsb/init-functions
+. /etc/default/globals
+
+
+check_dvdlinks () {
+	for device in dvd dvdrw cdrom cdrw ; do
+		[ ! -L /dev/$device ] && [ -b /dev/sr0 ] && ln -sf /dev/sr0 /dev/$device
+	done
+}
+
+check_linuxrc () {
+	if RbMini && [ -f /oldroot/linuxrc ] && [ -f /root/tmp/linuxrc ]; then
+		OLDVER=`grep VERSNUM /oldroot/linuxrc| awk '{ print $3 }'`
+		[ -z $OLDVER ] && OLDVER=0
+		NEWVER=`grep VERSNUM /root/tmp/linuxrc| awk '{ print $3 }'`
+		if [ "$NEWVER" -gt "$OLDVER" ]; then
+			echo -n " Updating linuxrc to V`grep Version /root/tmp/linuxrc| awk '{ print $3 }'` "
+			install -p -m 755 /root/tmp/linuxrc /oldroot/linuxrc
+		fi
+	fi
+}
+
+check_nfs_common_options () {
+	if RbMini ; then
+		sed -i s/NEED_IDMAPD=.*/NEED_IDMAPD=no/ /etc/default/nfs-common
+	fi
+}
+
+
+check_ntfs () {
+	NTFS=$(which ntfs-3g)
+	[ -f ${NTFS} ] && [ ! -L /sbin/mount.ntfs ] && ln -sf ${NTFS} /sbin/mount.ntfs
+}
+
+
+check_xorg_config () {
+	# on AVG (Intel), use i810 driver
+	if grep -q 808627a0 /proc/bus/pci/devices \
+		&& ! grep -q i810 /etc/X11/xorg.conf \
+		&& ! grep -q intel /etc/X11/xorg.conf ; then
+		echo "Found wrong /etc/X11/xorg.conf for this mainboard."
+		echo "Installing default one for Intel Mobile 945GM/PM/GMS chipset."
+		cp -a /etc/X11/xorg.conf.intel /etc/X11/xorg.conf
+		$UBUNTU10 && sed -i s/i810/intel/ /etc/X11/xorg.conf
+	fi
+
+	# on AVG II (AMD), use fglrx driver
+	if grep -q 10027910 /proc/bus/pci/devices \
+		&& ! grep -q fglrx /etc/X11/xorg.conf \
+		&& ! grep -q radeon /etc/X11/xorg.conf ; then
+		echo "Found wrong /etc/X11/xorg.conf for this mainboard."
+		echo "Installing default one for AMD/ATI RS690 chipset."
+		if $UBUNTU10 ; then
+			cp -a /etc/X11/xorg.conf.ati /etc/X11/xorg.conf
+			sed -i s/fglrx/radeon/ /etc/X11/xorg.conf
+		elif [ -f /usr/lib/xorg/modules/drivers/fglrx_drv.so ] ; then
+			cp -a /etc/X11/xorg.conf.ati /etc/X11/xorg.conf
+		else
+			echo "fglrx driver not found! Please install Package 'xorg-driver-fglrx'."
+			return 1
+		fi
+	fi
+}
+
+check_filebrowser_filetypes () {
+	if ! grep -q filebrowser.VideoFileTypes /etc/vdr/setup.conf ; then
+	    echo "filebrowser.VideoFileTypes = asf avi divx flv f4v iso mkv mpeg mpg mp4 mov ogm pes rec ts mts m2ts vob vcd vdr wmv pls" >> /etc/vdr/setup.conf
+	elif ! grep -q flv /etc/vdr/setup.conf ; then
+	    sed -i s/filebrowser.VideoFileTypes.*/"filebrowser.VideoFileTypes = asf avi divx flv f4v iso mkv mpeg mpg mp4 mov ogm pes rec ts mts m2ts vob vcd vdr wmv pls"/ /etc/vdr/setup.conf
+	fi
+}
+
+configure_pending_packages () {
+	# if anyone who is in charge for apt*: pls implement a *useable*
+	#     function for unattended updates!
+	echo -e "n\nn\nn\nn\nn\nn\nn\nn\nn\nn" > /tmp/sayno
+	apt-get -f -y install
+	# configure pending packages
+	dpkg --configure -a < /tmp/sayno
+	#killall sleep
+}
+
+create_key () {
+	msg="$1"
+	shift
+	hostkeys="$1"
+	shift
+	file="$1"
+	shift
+	echo -n $msg
+	ssh-keygen -q -f "$file" -N '' "$@"
+}
+
+del_nasty_persitent_rules () {
+	[ -f /etc/udev/rules.d/70-persistent-cd.rules ] && rm -f /etc/udev/rules.d/70-persistent-cd.rules
+	#[ -f /lib/udev/rules.d/75-cd-aliases-generator.rules ] && rm -f /lib/udev/rules.d/75-cd-aliases-generator.rules
+
+	[ -f /etc/udev/rules.d/70-persistent-net.rules ] && rm -f /etc/udev/rules.d/70-persistent-net.rules
+	[ -f /etc/udev/rules.d/75-persistent-net.rules ] && rm -f /etc/udev/rules.d/75-persistent-net.rules
+
+	[ -f /etc/udev/rules.d/70-persistent-net.rules ] && rm -f /etc/udev/rules.d/70-persistent-net.rules
+	[ -f /etc/udev/rules.d/75-persistent-net-generator.rules ] && rm -f /etc/udev/rules.d/75-persistent-net-generator.rules
+	[ -f /lib/udev/rules.d/75-persistent-net-generator.rules ] && rm -f /lib/udev/rules.d/75-persistent-net-generator.rules
+
+}
+
+del_chromium_lock () {
+	[ -e /home/reel/.config/chromium/SingletonLock ] || [ -L /home/reel/.config/chromium/SingletonLock ] && rm -f /home/reel/.config/chromium/SingletonLock
+}
+
+fix_networkif_4ncl () {
+    #set correct device in setup-shares.conf
+    device="eth0"
+    if [ ! -d /proc/sys/net/ipv4/conf/eth1 ] && ! grep -q "IFACE=eth0" /etc/init/setup-shares.conf ; then
+	#we have to wait for the correct device to be configured by DHCP
+	sed -i s/"net-device-up IFACE=.*"/"net-device-up IFACE=$device"/  /etc/init/setup-shares.conf
+    fi
+}
+
+if [ -x /usr/bin/lsb_release ] && [ $(lsb_release -rs | cut -f1 -d.) -ge 10 ]; then
+	UBUNTU10="true"
+fi
+
+case "$1" in
+  start)
+	log_daemon_msg "Doing sanity-checks (Startup)"
+	# delete compromised ssh_host_keys
+	if ssh-vulnkey | grep -q COMPROMISED ; then
+		echo delete compromised ssh_host_keys
+		for key in `ssh-vulnkey | grep COMPROMISED | cut -f4 -d" "` ; do
+			rm -f `echo $key | sed s/.pub//`*
+		done
+		rm -f /etc/ssl/certs/ssl-cert-snakeoil.pem
+		[ -f /usr/NX/home/nx/.ssh/known_hosts ] && rm -f /usr/NX/home/nx/.ssh/known_hosts
+		#sleep 120
+	fi
+
+	configure_pending_packages >/dev/null 2>&1 &
+
+	# check for missing sshd host keyfiles
+	keyfiles="/etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_dsa_key"
+	for keyfile in $keyfiles ; do
+		if [ ! -f $keyfile ] || [ ! -f $keyfile.pub ] ; then
+			rm -f $keyfile*
+			dpkg-reconfigure openssh-server
+			[ -f /usr/NX/home/nx/.ssh/known_hosts ] && rm -f /usr/NX/home/nx/.ssh/known_hosts
+			dpkg-reconfigure nxserver
+		fi
+	done
+
+	#run spooled jobs (currently for resizing the disk)
+	for job in `ls /var/spool/vdr/*.sh 2>/dev/null` ; do
+		echo "   executing $job"
+		sh $job
+	done
+
+	#convert recordings to utf8
+	/usr/sbin/convert_to_utf8.sh init
+
+        #set samba's unix charset to utf8
+        sed 's/ISO8859-15/UTF8/' -i /etc/samba/smb.conf
+
+	#check nfs options, only needed on NetClient w/ NFS v3
+	check_nfs_common_options
+
+	# check xorg.conf for right driver for our chipset
+	check_xorg_config
+
+	# check if /oldroot/linuxrc is up-to-date (NetClient only)
+	check_linuxrc
+
+	# check if /dev/dvd* links exist
+	check_dvdlinks
+
+	# check if nfts mount tool is linked correctly
+	check_ntfs
+
+	;;
+  restart|reload|force-reload)
+	echo "Error: '$1' not supported" >&2
+	exit 3
+	;;
+  stop)
+	log_daemon_msg "Doing sanity-checks (Shutdown)"
+
+	del_nasty_persitent_rules
+
+	# kdm must be S21 to speed up reelvdr start
+	if [ ! -L /etc/rc2.d/S21kdm ] && [ -L /etc/rc2.d/S??kdm ] ; then
+		update-rc.d -f kdm remove
+		update-rc.d kdm defaults 21 01
+	fi
+
+	# remove serial.so from libgphoto2 as it causes trouble with the frontpanel
+	if [ -f /usr/lib/libgphoto2_port/*/serial.so ]; then
+		rm -f /usr/lib/libgphoto2_port/*/serial.so
+	fi
+
+	# fix umask from ubuntu
+	if ! grep -q "umask 002" /etc/profile ; then
+		sed -i s/^umask.*/"umask 002"/ /etc/profile
+	fi
+
+	# rm snd_hda_intel before power-off as it can cause box to hang
+	# http://wiki.ubuntuusers.de/Herunterfahren und
+	# http://forum.ubuntuusers.de/topic/shutdown-rechner-schaltet-sich-nicht-ab-acpi-/
+	grep -q ^snd_hda_intel /proc/modules && rmmod -f snd_hda_intel
+
+	# Delete leftover chromium lockfile
+	del_chromium_lock
+
+	#Check if filetypes for the filebrowser are defined (RB ICE only)
+	RbIce && check_filebrowser_filetypes
+
+	#set correct network interface for startup of "setup-shares" on NCL2
+	RbIce && fix_networkif_4ncl
+
+	#enable the watchdog in case the box does not turn off
+	#if RbAvg ; then
+	#    modprobe iTCO_wdt
+	#    date > /dev/watchdog
+	#fi
+	;;
+ reset)
+        keyfiles="/etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_dsa_key"
+        for keyfile in $keyfiles ; do
+		rm $keyfile $keyfile.pub
+	done
+	$0 start
+	;;
+
+  *)
+	echo "Usage: sanitycheck-reel [start|stop|reset]" >&2
+	exit 3
+	;;
+esac
+
+log_end_msg 0

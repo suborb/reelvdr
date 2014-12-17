@@ -1,0 +1,59 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ipod\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-14 20:20+0200\n"
+"PO-Revision-Date: 2011-09-07 17:58+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ipod not found."
+msgstr "Ipod niet gevonden."
+
+msgid "Add recursivly?"
+msgstr "Voeg recursief toe?"
+
+msgid "Play"
+msgstr "Speel"
+
+msgid "Add"
+msgstr "Voeg toe"
+
+msgid "Playlist"
+msgstr "Afspeellijst"
+
+msgid "Add to playlist"
+msgstr "Voeg toe aan afspeellijst"
+
+msgid "Delete"
+msgstr "Vewijderen"
+
+msgid "Clear"
+msgstr "Wis"
+
+msgid "Delete entry?"
+msgstr "Verwijder toevoeging?"
+
+msgid "Clear playlist?"
+msgstr "Wis afspeellijst?"
+
+msgid "Mount Script"
+msgstr "Koppel script"
+
+msgid "Mount Point"
+msgstr "Koppel punt"
+
+msgid "mp3 Plugin's Playlist Path"
+msgstr "Pad naar playlist van MP3 plugin"
+

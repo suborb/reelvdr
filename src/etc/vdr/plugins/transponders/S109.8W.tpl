@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S109.8W
+2=EchoStar 8
+3=West
+4=109.8

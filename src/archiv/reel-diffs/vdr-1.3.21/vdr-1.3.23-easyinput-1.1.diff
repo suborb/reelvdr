@@ -1,0 +1,163 @@
+--- vdr-1.3.23.orig/menuitems.h	2005-03-20 21:59:56.000000000 +0100
++++ vdr-1.3.23/menuitems.h	2005-03-20 22:03:51.000000000 +0100
+@@ -85,6 +85,8 @@
+   void SetHelpKeys(void);
+   virtual void Set(void);
+   char Inc(char c, bool Up);
++  int ieCurChr;
++  eKeys lastKey;
+ public:
+   cMenuEditStrItem(const char *Name, char *Value, int Length, const char *Allowed);
+   ~cMenuEditStrItem();
+--- vdr-1.3.23.orig/menuitems.c	2005-03-20 21:59:56.000000000 +0100
++++ vdr-1.3.23/menuitems.c	2005-03-20 22:03:51.000000000 +0100
+@@ -243,6 +243,8 @@
+   pos = -1;
+   insert = uppercase = false;
+   newchar = true;
++  ieCurChr = 0;
++  lastKey = kNone;
+   Set();
+ }
+ 
+@@ -320,6 +322,17 @@
+ 
+ eOSState cMenuEditStrItem::ProcessKey(eKeys Key)
+ {
++  char c1[] = "-.#~,/_@1";
++  char c2[] = "abcäåá2";
++  char c3[] = "defé3";
++  char c4[] = "ghi4";
++  char c5[] = "jkl5";
++  char c6[] = "mnoöñó6";
++  char c7[] = "pqrs7";
++  char c8[] = "tuvüú8";
++  char c9[] = "wxyz9";
++  char c0[] = " 0";
++
+   switch (Key) {
+     case kRed:   // Switch between upper- and lowercase characters
+                  if (pos >= 0 && (!insert || !newchar)) {
+@@ -333,6 +346,7 @@
+                     newchar = true;
+                     SetHelpKeys();
+                     }
++                 lastKey = Key;
+                  break;
+     case kYellow|k_Repeat:
+     case kYellow: // Remove the character at current position; in insert mode it is the character to the right of cursor
+@@ -350,6 +364,7 @@
+                        uppercase = isupper(value[pos]);
+                     newchar = true;
+                     }
++                 lastKey = Key;
+                  break;
+     case kLeft|k_Repeat:
+     case kLeft:  if (pos > 0) {
+@@ -359,6 +374,7 @@
+                     }
+                  if (!insert && isalpha(value[pos]))
+                     uppercase = isupper(value[pos]);
++                 lastKey = Key;
+                  break;
+     case kRight|k_Repeat:
+     case kRight: if (pos < length - 2 && pos < int(strlen(value)) ) {
+@@ -376,6 +392,7 @@
+                     uppercase = isupper(value[pos]);
+                  if (pos == 0)
+                     SetHelpKeys();
++                 lastKey = Key;
+                  break;
+     case kUp|k_Repeat:
+     case kUp:
+@@ -396,9 +413,90 @@
+                     }
+                  else
+                     return cMenuEditItem::ProcessKey(Key);
++                 lastKey = Key;
+                  break;
++    case k1:
++    case k2:
++    case k3:
++    case k4:
++    case k5:
++    case k6:
++    case k7:
++    case k8:
++    case k9:
++    case k0:
++      if (Key != lastKey) ieCurChr = 0;
++      if (pos >= 0) {
++        if (insert && newchar) {
++          // create a new character in insert mode
++          if (int(strlen(value)) < length - 1) {
++            memmove(value + pos + 1, value + pos, strlen(value) - pos + 1);
++            value[pos] = ' ';
++            }
++          }
++        }
++      else
++        return cMenuEditItem::ProcessKey(Key);
++      switch (Key) {
++        case k1:
++          value[pos] = c1[ieCurChr];
++          if (c1[ieCurChr+1]==NULL)  ieCurChr = 0; else ieCurChr++;
++          break;
++
++        case k2:
++          if (uppercase) value[pos] = toupper(c2[ieCurChr]); else value[pos] = c2[ieCurChr];
++          if (c2[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k3:
++          if (uppercase) value[pos] = toupper(c3[ieCurChr]); else value[pos] = c3[ieCurChr];
++          if (c3[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k4:
++          if (uppercase) value[pos] = toupper(c4[ieCurChr]); else value[pos] = c4[ieCurChr];
++          if (c4[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k5:
++          if (uppercase) value[pos] = toupper(c5[ieCurChr]); else value[pos] = c5[ieCurChr];
++          if (c5[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k6:
++          if (uppercase) value[pos] = toupper(c6[ieCurChr]); else value[pos] = c6[ieCurChr];
++          if (c6[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k7:
++          if (uppercase) value[pos] = toupper(c7[ieCurChr]); else value[pos] = c7[ieCurChr];
++          if (c7[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k8:
++          if (uppercase) value[pos] = toupper(c8[ieCurChr]); else value[pos] = c8[ieCurChr];
++          if (c8[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k9:
++          if (uppercase) value[pos] = toupper(c9[ieCurChr]); else value[pos] = c9[ieCurChr];
++          if (c9[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++          break;
++
++        case k0:
++          if (uppercase) value[pos] = toupper(c0[ieCurChr]); else value[pos] = c0[ieCurChr];
++          if (c0[ieCurChr+1]==NULL) ieCurChr = 0; else  ieCurChr++;
++
++        default:
++          break;
++      }
++      lastKey = Key;
++      newchar = false;
++      break;
++
+     case kOk:    if (pos >= 0) {
+                     pos = -1;
++                    lastKey = Key;
+                     newchar = true;
+                     stripspace(value);
+                     SetHelpKeys();

@@ -1,0 +1,42 @@
+This reelblog plugin is a special version of the RSS Reader Plugin (Version 1.0.2) for the Video Disk Recorder (VDR).
+
+Written by:                   Heiko Westphal
+                              <reelbox@heiko-westphal.net>
+
+Project's homepage:           
+Modified Project's homepage:  
+
+Latest version available at:  http://www.reelbox.org/software/
+                              
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+See the file COPYING for license information.
+
+
+Dieses Programm ist freie Software. Sie können es unter den Bedingungen 
+der GNU General Public License, wie von der Free Software Foundation veröffentlicht,
+weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder 
+(nach Ihrer Option) jeder späteren Version.
+
+Die Veröffentlichung dieses Programms erfolgt in der Hoffnung,
+daß es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE,
+sogar ohne die implizite Garantie der MARKTREIFE oder der 
+VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK.
+Details finden Sie in der GNU General Public License.
+
+
+Requirements:
+
+- Expat XML Parser library version 1.95.8 or newer (http://expat.sourceforge.net/)
+- CURL library 7.15.1 or newer (http://curl.haxx.se/)
+
+Description:
+
+The Reelblog plugin (based on RSS Reader plugin) provides a simple OSD menu based user interface
+for reading special reelblog feeds.
+ 
+The current code is heavily reusing the VOD plugin by Olivier Jacques and the RSS Reader plugin by Rolf Ahrenberg.
+Huge thanks to the original author!

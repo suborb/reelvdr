@@ -1,0 +1,32 @@
+--- vdr-plugin-mcli-0.0.1+svn20120927.ori/device.c      2012-09-28 22:00:17.000000000 +0200
++++ vdr-plugin-mcli-0.0.1+svn20120927/device.c  2012-09-28 22:00:34.573160001 +0200
+@@ -977,4 +977,16 @@
+        }
+        return ret;
+ }
++
+ #endif
++
++int cMcliDevice::SignalStrength(void) const 
++{
++       return int(m_ten.s.strength/65536.*100.);
++} 
++
++int cMcliDevice::SignalQuality(void) const 
++{
++       return int(m_ten.s.snr/65536.*100.);
++}
++
+diff -Naur vdr-plugin-mcli-0.0.1+svn20120927.ori/device.h vdr-plugin-mcli-0.0.1+svn20120927/device.h
+--- vdr-plugin-mcli-0.0.1+svn20120927.ori/device.h      2012-09-27 19:22:49.000000000 +0200
++++ vdr-plugin-mcli-0.0.1+svn20120927/device.h  2012-09-28 22:00:34.573160001 +0200
+@@ -160,6 +160,8 @@
+                return true;
+        }
+ #endif
++       virtual int SignalStrength(void) const;
++       virtual int SignalQuality(void) const;
+ };
+ 
+ #endif // VDR_MCLI_DEVICE_H
+

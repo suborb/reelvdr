@@ -1,0 +1,37 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Lars Tegeler <email@host.dom>
+
+Project's homepage:          www.math.uni-paderborn.de/~tegeler/vdr
+
+Latest version available at: URL
+
+See the file COPYING for license information.
+
+Description:
+
+This Plugin display an background image while the vdr is switcht to radio channels.
+
+
+Install:
+
+1. Extract and copy the Plugin in /here is your vdr/PLUGINS/src/radio-0.0.1
+   (when you read this, I think you allready done it)
+
+2. Make a Link in /here is your vdr/PLUGINS/src:
+   ln -s radio-0.0.1 radio
+
+3. Go to /here is your vdr/PLUGINS/src/radio-0.0.1 and type:
+   make all
+
+4. Copy your background Images to /here is your vdr CONFIG/plugins/radio
+   (Default radio.mpg will be used or if exist <channelname>.mpg )
+   Yeah, must be .mpg!
+
+4.1. If you dont wont to use the default directory you can use the -f option
+     to set an other one.
+
+5. Start your VDR with the Option:
+   -P radio
+
+6. Have Fun!

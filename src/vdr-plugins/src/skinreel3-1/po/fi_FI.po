@@ -1,0 +1,342 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreel3\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-10-21 09:51+0200\n"
+"PO-Revision-Date: 2008-09-26 12:52+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Virheellinen kanava ***"
+
+msgid "mins"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "en_US"
+msgstr "fi_FI"
+
+msgid "background process"
+msgstr ""
+
+msgid "Play Disk"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+msgid "Languages"
+msgstr "Kielet"
+
+msgid "Image for recording"
+msgstr ""
+
+msgid "Size"
+msgstr "Koko"
+
+msgid "Auxiliary information"
+msgstr "Lisätiedot"
+
+msgid "Subtitles"
+msgstr ""
+
+msgid "Reel Avantgarde"
+msgstr ""
+
+msgid "TrueType Font"
+msgstr "TrueType-kirjasin"
+
+msgid "No TTF support!"
+msgstr "Ei TrueType-kirjasintyyppi tukea!"
+
+msgid "Default OSD Font"
+msgstr "oletuskirjasintyyppi"
+
+msgid "Default Fixed Size Font"
+msgstr "tasavälinen kirjasintyyppi"
+
+msgid "Default Small Font"
+msgstr "pieni kirjasintyyppi"
+
+msgid "General"
+msgstr "Yleiset"
+
+msgid "Logos & Symbols"
+msgstr "Logot ja symbolit"
+
+msgid "Fonts"
+msgstr "Kirjasintyypit"
+
+msgid "Changes done"
+msgstr ""
+
+msgid "elapsed"
+msgstr "kulunut"
+
+msgid "remaining"
+msgstr "jäljellä oleva"
+
+msgid "percent"
+msgstr "prosentti"
+
+msgid "never"
+msgstr "ei koskaan"
+
+msgid "use size.vdr only"
+msgstr "vain jos size.vdr"
+
+msgid "always"
+msgstr "aina"
+
+msgid "Last line"
+msgstr ""
+
+msgid "Help buttons"
+msgstr ""
+
+msgid "Free last line"
+msgstr ""
+
+msgid "simple"
+msgstr ""
+
+msgid "graphical"
+msgstr ""
+
+msgid "graphical small"
+msgstr ""
+
+msgid "Show auxiliary information"
+msgstr "Näytä lisätiedot"
+
+msgid "top"
+msgstr ""
+
+msgid "bottom"
+msgstr ""
+
+msgid "Show recording's size"
+msgstr "Näytä tallenteen koko"
+
+msgid "Show remaining/elapsed time"
+msgstr "Näytä tapahtuman aika"
+
+msgid "Show VPS"
+msgstr "Näytä VPS-tieto"
+
+msgid "Show source in the channelinfo"
+msgstr ""
+
+#, fuzzy
+msgid "Progressbar type"
+msgstr "Näytä aikajana"
+
+msgid "Show channel logos"
+msgstr "Näytä kanavalogot"
+
+msgid "Flushing channel logo cache..."
+msgstr "Tyhjennetään välimuistia..."
+
+msgid "Show symbols"
+msgstr "Näytä symbolit"
+
+msgid "  Show symbols in replay"
+msgstr "  Näytä symbolit toistettaessa"
+
+msgid "  Show symbols in messages"
+msgstr "  Näytä symbolit viesteissä"
+
+msgid "  Show symbols in audio"
+msgstr "  Näytä symbolit äänivalikossa"
+
+msgid "Show symbols in lists"
+msgstr "Näytä tapahtumien symbolit"
+
+msgid "Show marker in lists"
+msgstr "Näytä valintasymboli"
+
+msgid "Show status symbols"
+msgstr "Näytä symbolit"
+
+msgid "  Identify channel by"
+msgstr "  Tunnista kanava"
+
+msgid "name"
+msgstr "nimestä"
+
+msgid "data"
+msgstr "tiedoista"
+
+msgid "Channel logo cache size"
+msgstr "Välimuistin koko kanavalogoille"
+
+msgid "Button$Flush cache"
+msgstr "Tyhjennä"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Width"
+msgstr "Leveys"
+
+msgid "No TrueType fonts installed!"
+msgstr "TrueType-kirjasintyyppejä ei löydy!"
+
+msgid "Font Sizes"
+msgstr "Kirjasintyypit"
+
+msgid "Fixed Font"
+msgstr "Tasavälinen kirjasintyyppi"
+
+msgid "Button$Set"
+msgstr "Aseta"
+
+msgid "OSD title"
+msgstr "Valikon otsikko"
+
+msgid "Messages"
+msgstr "Viestit"
+
+msgid "Date"
+msgstr "Päiväys"
+
+msgid "Help keys"
+msgstr "Värinäppäimet"
+
+msgid "Channelinfo: title"
+msgstr "Kanavatieto: ohjelman nimi"
+
+msgid "Channelinfo: subtitle"
+msgstr "Kanavatieto: ohjelman kuvaus"
+
+msgid "Channelinfo: language"
+msgstr "Kanavatieto: kieli"
+
+msgid "List items"
+msgstr "Listat"
+
+msgid "Info area: timers title"
+msgstr "Infoalue: ajastimen otsikko"
+
+msgid "Info area: timers text"
+msgstr "Infoalue: ajastimen leipäteksti"
+
+msgid "Info area: warning title"
+msgstr "Infoalue: varoituksen otsikko"
+
+msgid "Info area: warning text"
+msgstr "Infoalue: varoituksen leipäteksti"
+
+msgid "Details: title"
+msgstr "Lisätiedot: ohjelman nimi"
+
+msgid "Details: subtitle"
+msgstr "Lisätiedot: ohjelman kuvaus"
+
+msgid "Details: date"
+msgstr "Lisätiedot: päivämäärä"
+
+msgid "Details: text"
+msgstr "Lisätiedot: leipäteksti"
+
+msgid "Replay: times"
+msgstr "Toisto: kellonajat"
+
+msgid "ReelBox skin 3rd generation"
+msgstr ""
+
+msgid "Channel:"
+msgstr "Kanava:"
+
+msgid "Search pattern:"
+msgstr "Hakutapa:"
+
+msgid "Timer check"
+msgstr "Ajastimien valvonta"
+
+msgid "No timer check"
+msgstr "Ei valvontaa"
+
+#~ msgid "Try 8bpp single area"
+#~ msgstr "Suosi yhtä 8bpp kuva-aluetta"
+
+#~ msgid "Show progressbar"
+#~ msgstr "Näytä aikajana"
+
+#, fuzzy
+#~ msgid "stop recording"
+#~ msgstr "Näytä tallenteen koko"
+
+#~ msgid "Sunday"
+#~ msgstr "Sunnuntai"
+
+#~ msgid "Monday"
+#~ msgstr "Maanantai"
+
+#~ msgid "Tuesday"
+#~ msgstr "Tiistai"
+
+#~ msgid "Wednesday"
+#~ msgstr "Keskiviikko"
+
+#~ msgid "Thursday"
+#~ msgstr "Torstai"
+
+#~ msgid "Friday"
+#~ msgstr "Perjantai"
+
+#~ msgid "Saturday"
+#~ msgstr "Lauantai"
+
+#~ msgid "TIMERS"
+#~ msgstr "AJASTIMET"
+
+#~ msgid "Show info area in main menu"
+#~ msgstr "Näytä infoalue päävalikossa"
+
+#~ msgid "pixel algo"
+#~ msgstr "näytteistys"
+
+#~ msgid "ratio algo"
+#~ msgstr "skaalaus"
+
+#~ msgid "zoom image"
+#~ msgstr "zoomaus"
+
+#~ msgid "  Show symbols in menu"
+#~ msgstr "  Näytä symbolit valikossa"
+
+#~ msgid "  Show flags"
+#~ msgstr "  Näytä liput"
+
+#~ msgid "Show event/recording images"
+#~ msgstr "Näytä kuvat lisätietovalikossa"
+
+#~ msgid "  Resize images"
+#~ msgstr "  Muokkaa kuvien kokoa"
+
+#~ msgid "  Image width"
+#~ msgstr "  Kuvien leveys"
+
+#~ msgid "  Image height"
+#~ msgstr "  Kuvien korkeus"
+
+#~ msgid "  Image format"
+#~ msgstr "  Kuvaformaatti"
+
+#~ msgid "Full title width"
+#~ msgstr "Levitä otsikkopalkki"

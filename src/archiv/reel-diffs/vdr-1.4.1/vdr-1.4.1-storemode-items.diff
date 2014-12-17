@@ -1,0 +1,56 @@
+diff -u vdr-1.4.1-pl3/menuitems.c vdr-1.4.1/menuitems.c
+--- vdr-1.4.1-pl3/menuitems.c	2006-08-02 17:40:24.000000000 +0200
++++ vdr-1.4.1/menuitems.c	2006-08-03 14:35:36.000000000 +0200
+@@ -911,3 +911,10 @@
+   if (plugin)
+      plugin->SetupStore(Name, Value);
+ }
++
++void cMenuSetupPage::SetupStore(const char *Name, const char *PluginName, int Value)
++{
++  if (cPluginManager::GetPlugin(PluginName))
++       cPluginManager::GetPlugin(PluginName)->SetupStore(Name, PluginName, Value);
++}
++
+diff -u vdr-1.4.1-pl3/menuitems.h vdr-1.4.1/menuitems.h
+--- vdr-1.4.1-pl3/menuitems.h	2006-04-14 12:01:47.000000000 +0200
++++ vdr-1.4.1/menuitems.h	2006-08-03 14:35:36.000000000 +0200
+@@ -160,6 +160,7 @@
+ protected:
+   void SetSection(const char *Section);
+   virtual void Store(void) = 0;
++  void SetupStore(const char *Name, const char *PluginName, int Value);
+   void SetupStore(const char *Name, const char *Value = NULL);
+   void SetupStore(const char *Name, int Value);
+ public:
+diff -u vdr-1.4.1-pl3/plugin.c vdr-1.4.1/plugin.c
+--- vdr-1.4.1-pl3/plugin.c	2006-04-17 11:20:05.000000000 +0200
++++ vdr-1.4.1/plugin.c	2006-08-03 14:35:36.000000000 +0200
+@@ -99,6 +99,14 @@
+   return false;
+ }
+ 
++void cPlugin::SetupStore(const char *Name, const char* PluginName, int Value)
++{ 
++  char *buffer = NULL;
++  asprintf(&buffer, "%d", Value);
++  Setup.Store(Name, buffer, PluginName);
++  free(buffer);
++}
++
+ void cPlugin::SetupStore(const char *Name, const char *Value)
+ {
+   Setup.Store(Name, Value, this->Name());
+diff -u vdr-1.4.1-pl3/plugin.h vdr-1.4.1/plugin.h
+--- vdr-1.4.1-pl3/plugin.h	2006-04-17 11:18:16.000000000 +0200
++++ vdr-1.4.1/plugin.h	2006-08-03 14:35:36.000000000 +0200
+@@ -46,7 +46,9 @@
+   virtual cOsdObject *MainMenuAction(void);
+ 
+   virtual cMenuSetupPage *SetupMenu(void);
++  virtual bool HasSetupOptions(void){ return true; }
+   virtual bool SetupParse(const char *Name, const char *Value);
++  void SetupStore(const char *Name, const char *PluginName, int Value);
+   void SetupStore(const char *Name, const char *Value = NULL);
+   void SetupStore(const char *Name, int Value);
+ 

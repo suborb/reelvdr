@@ -1,0 +1,71 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-reelblog\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-12-14 11:28+0100\n"
+"PO-Revision-Date: 2009-03-03 16:42+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid ""
+"Responsible person for contents of reelblog in terms of press law:\n"
+"Mr. Robert M.K. Schmidt\n"
+"Feuerbachstr. 5\n"
+"D-69126 Heidelberg\n"
+"Germany\n"
+"\n"
+"\n"
+"While we endeavor to provide the most accurate, up-to-date information available, the information on this Site may be out of date or include omissions, inaccuracies or other errors. This Site and the materials therein are provided \"AS IS.\" We make no representations or warranties, either express or implied, of any kind with respect to this Site, its operations, contents, information or materials as this site is managed by a third party (s. above). WE EXPRESSLY DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, OF ANY KIND WITH RESPECT TO THIS SITE OR ITS USE, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"\n"
+"According Paragraph 7 sect.1 TMG Reel Multimedia is only reliable for contents provided by itself. According to Paragraph 8 to 10 TMG Reel Multimedia is not obliged to ensure legitimacy of transferred or saved data or to investigate circumstances that imply illicit actions.  Other obligations to delete or block usage or information according to applicable law still apply. We will remove any illicit contents promptly one informed about it.\n"
+"\n"
+"\n"
+"Certain content from third party vendors may be made available as part of reelblog. This content is believed to be reliable, but we do not endorse or guarantee the accuracy or completeness of this content. Should we recognize any breach of applicable laws we will remove all concerned links immediately."
+msgstr ""
+
+#, fuzzy
+msgid "Reelblog-Impressum"
+msgstr "Obiect Reelblog"
+
+msgid "Reelblog item"
+msgstr "Obiect Reelblog"
+
+msgid "Impressum"
+msgstr ""
+
+msgid "Select Reelblog item"
+msgstr "Selecteaza obiect Reelblog"
+
+msgid "Can't parse Reelblog item!"
+msgstr "Nu pot parcurge obiectele din Reelblog!"
+
+msgid "Can't download Reelblog item!"
+msgstr "Nu pot sa downloadez obiectele din Reelblog!"
+
+msgid "Unknown error!"
+msgstr "Eroare necunoscuta!"
+
+msgid "Show the new feeds around the Reelbox"
+msgstr "Arata noile anunturi  in legatura cu Reelblog"
+
+msgid "Reelblog"
+msgstr "Reelblog"
+
+msgid "ConfigFile reelblog.conf not found!"
+msgstr "Fisiereul de configurare reelblog.conf nu a fost gasit!"
+
+msgid "Loading Reelblog items ..."
+msgstr "Incarc obiectele  Reelblog..."

@@ -1,0 +1,307 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreelng\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-12-04 16:52+0100\n"
+"PO-Revision-Date: 2008-09-26 12:52+0200\n"
+"Last-Translator: Nicolas Huillard <nhuillard@e-dition.fr>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Sunday"
+msgstr "Dimanche"
+
+msgid "Monday"
+msgstr "Lundi"
+
+msgid "Tuesday"
+msgstr "Mardi"
+
+msgid "Wednesday"
+msgstr "Mercredi"
+
+msgid "Thursday"
+msgstr "Jeudi"
+
+msgid "Friday"
+msgstr "Vendredi"
+
+msgid "Saturday"
+msgstr "Samedi"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Chaîne non valable ***"
+
+msgid "mins"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "en_US"
+msgstr "fr_FR"
+
+msgid "TIMERS"
+msgstr "PROGRAMMATION"
+
+msgid "Languages"
+msgstr "Langues"
+
+msgid "Size"
+msgstr "Taille"
+
+msgid "Auxiliary information"
+msgstr "Information auxiliare"
+
+msgid "Subtitles"
+msgstr ""
+
+msgid "Reel Classic"
+msgstr ""
+
+msgid "TrueType Font"
+msgstr "TrueType"
+
+msgid "No TTF support!"
+msgstr "Les polices TrueType ne sont pas supportées!"
+
+msgid "Default OSD Font"
+msgstr "OSD standard"
+
+msgid "Default Fixed Size Font"
+msgstr "Largeur fixe standard"
+
+msgid "Default Small Font"
+msgstr "Petite police standard"
+
+msgid "General"
+msgstr "Généralité"
+
+msgid "Logos & Symbols"
+msgstr "Logos et symboles"
+
+msgid "Fonts"
+msgstr "Les polices"
+
+msgid "Changes done"
+msgstr ""
+
+msgid "elapsed"
+msgstr "écoulé"
+
+msgid "remaining"
+msgstr "restant"
+
+msgid "percent"
+msgstr "Pourcentage"
+
+msgid "never"
+msgstr "jamais"
+
+msgid "use size.vdr only"
+msgstr "utiliser seulement size.vdr"
+
+msgid "always"
+msgstr "toujours"
+
+msgid "Last line"
+msgstr ""
+
+msgid "Help buttons"
+msgstr ""
+
+msgid "Free last line"
+msgstr ""
+
+msgid "Try 8bpp single area"
+msgstr "Essayer une surface à 8bpp"
+
+msgid "Show info area in main menu"
+msgstr "Surface d'infos dans le menu principal"
+
+msgid "Show auxiliary information"
+msgstr "Afficher informations auxiliaires"
+
+msgid "Show recording's size"
+msgstr "Afficher la taille des enregistrements"
+
+msgid "Show remaining/elapsed time"
+msgstr "Afficher le temps écoulé/restant"
+
+msgid "Show VPS"
+msgstr "Afficher le VPS"
+
+msgid "Show progressbar"
+msgstr "Afficher barre de progression"
+
+msgid "Show messages in menu on"
+msgstr ""
+
+msgid "pixel algo"
+msgstr "Algorithme pixel"
+
+msgid "ratio algo"
+msgstr "Algorithme ratio"
+
+msgid "zoom image"
+msgstr "Agrandir image"
+
+msgid "Flushing channel logo cache..."
+msgstr "Suppression du cache..."
+
+msgid "Show symbols"
+msgstr "Afficher symbole"
+
+msgid "  Show symbols in menu"
+msgstr "  dans le menu"
+
+msgid "  Show symbols in replay"
+msgstr "  dans lecture"
+
+msgid "  Show symbols in messages"
+msgstr "  dans les messages"
+
+msgid "  Show symbols in audio"
+msgstr "  dans audio"
+
+msgid "Show symbols in lists"
+msgstr "Symboles dans les listes"
+
+msgid "Show marker in lists"
+msgstr "Marque devant les listes"
+
+msgid "Show status symbols"
+msgstr "Afficher symbole"
+
+msgid "  Show flags"
+msgstr "  Afficher drapeau"
+
+msgid "Show event/recording images"
+msgstr "Images dans les EPG et détails d'enregistrements"
+
+msgid "  Resize images"
+msgstr "  Redimensionne les images"
+
+msgid "  Image width"
+msgstr "  Largeur"
+
+msgid "  Image height"
+msgstr "  Hauteur"
+
+msgid "  Image format"
+msgstr "  Format d'image"
+
+msgid "Show channel logos"
+msgstr "Afficher logos des chaînes"
+
+msgid "  Identify channel by"
+msgstr "  Identifier chaîne par"
+
+msgid "name"
+msgstr "Nom"
+
+msgid "data"
+msgstr "Donnée"
+
+msgid "Channel logo cache size"
+msgstr "Taille du cache des logos"
+
+msgid "Button$Flush cache"
+msgstr "Supprimer cache"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Width"
+msgstr "Largeur"
+
+msgid "No TrueType fonts installed!"
+msgstr "Il n'y a pas de police TrueType d'installé!"
+
+msgid "Font Sizes"
+msgstr "Les polices"
+
+msgid "Fixed Font"
+msgstr "Police avec une largeur fixe"
+
+msgid "Button$Set"
+msgstr "Changer"
+
+msgid "OSD title"
+msgstr "Titre OSD"
+
+msgid "Messages"
+msgstr "Message"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Help keys"
+msgstr "Touche couleur"
+
+msgid "Channelinfo: title"
+msgstr "Chaîne info: titre "
+
+msgid "Channelinfo: subtitle"
+msgstr "Chaîne info: sous-titres"
+
+msgid "Channelinfo: language"
+msgstr "Chaîne info: langue"
+
+msgid "List items"
+msgstr "Liste"
+
+msgid "Info area: timers title"
+msgstr "Barre d'information: Titre Progammation"
+
+msgid "Info area: timers text"
+msgstr "Barre d'information: Text programmation"
+
+msgid "Info area: warning title"
+msgstr "Barre d'information: avertissement titre"
+
+msgid "Info area: warning text"
+msgstr "Barre d'information: texte d'avertissement"
+
+msgid "Details: title"
+msgstr "Détails: Titre"
+
+msgid "Details: subtitle"
+msgstr "Détails: Sous-titre"
+
+msgid "Details: date"
+msgstr "Détails: date"
+
+msgid "Details: text"
+msgstr "Détails: Texte"
+
+msgid "Replay: times"
+msgstr "Rejouer : périodes"
+
+msgid "ReelNG skin"
+msgstr ""
+
+msgid "Channel:"
+msgstr "Chaîne:"
+
+msgid "Search pattern:"
+msgstr "Modèle de recherche"
+
+msgid "Timer check"
+msgstr "Observation de la programmation"
+
+msgid "No timer check"
+msgstr "Sans surveillance"
+
+#~ msgid "Full title width"
+#~ msgstr "Largeur totale pour le titre"

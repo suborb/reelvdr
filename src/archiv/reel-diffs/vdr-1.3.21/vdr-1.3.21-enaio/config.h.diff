@@ -1,0 +1,20 @@
+diff -Nru vdr-1.3.21-vanilla/config.h vdr-1.3.21-enaio/config.h
+--- vdr-1.3.21-vanilla/config.h	2005-02-08 13:22:14.000000000 +0200
++++ vdr-1.3.21-enaio/config.h	2005-02-13 18:22:49.989992712 +0200
+@@ -23,6 +23,8 @@
+ #define VDRVERSION  "1.3.21"
+ #define VDRVERSNUM   10321  // Version * 10000 + Major * 100 + Minor
+ 
++#define ENAIOVERSION 21
++
+ #define MAXPRIORITY 99
+ #define MAXLIFETIME 99
+ 
+@@ -254,6 +256,7 @@
+   int CurrentChannel;
+   int CurrentVolume;
+   int CurrentDolby;
++  int ShowRecDate, ShowRecTime, ShowRecLength, MenuCmdPosition, ShowProgressBar;
+   int __EndData__;
+   cSetup(void);
+   cSetup& operator= (const cSetup &s);

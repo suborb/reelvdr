@@ -1,0 +1,144 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2008-10-01 18:15+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Internet Radio"
+msgstr "Radio Internetowe"
+
+msgid "My Radio Stations"
+msgstr "Moje Stacje Radiowe"
+
+msgid "Getting playlist for Genre: "
+msgstr "Wywoływuje liste odgrywania roznych Rodzajów"
+
+msgid "Internet Radio - Add New Server"
+msgstr "Radio Internetowe - Dodaj nowy Serwer"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Radio internetowe - Edycja Informacji Stacji"
+
+msgid "New Station"
+msgstr "Nowa Stacja"
+
+msgid "Station Name"
+msgstr "Nazwa Stacji"
+
+msgid "Station Url"
+msgstr "Url Stacji"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "No URL entered!"
+msgstr ""
+
+msgid "Saved"
+msgstr "Zapisane"
+
+msgid "Could not be saved!"
+msgstr "Nie można bylo zapisać!"
+
+msgid "Already present"
+msgstr "Juz istnieje"
+
+msgid "Couldnot save changes"
+msgstr "Nie można zapisać zmian"
+
+msgid "Check URL: could not open radio-station"
+msgstr ""
+
+msgid "Please wait: opening radio-station"
+msgstr ""
+
+#, fuzzy
+msgid "Internet Radio Functions"
+msgstr "Funkcje Radia Internetowego"
+
+msgid "1  Add New Radio Station"
+msgstr "1  Dodaj Nową Stacje Radiową"
+
+msgid "2  Edit current Radio Station"
+msgstr "2  Edycja obecnej Stacji Radiowej"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3  Usuń obecną Stacje Radiową"
+
+msgid "Selected Radio Station:"
+msgstr "Wybraną Stacje Radiową:"
+
+msgid "Could not save to disk"
+msgstr "Nie można zapisac na dysk"
+
+msgid "Deletion failed"
+msgstr "Usuniecie nie powiodło się"
+
+msgid "Internet Radio: My Stations"
+msgstr "Radio Internetowe: Moje Stacje"
+
+msgid "Button$Functions"
+msgstr "Funkcje"
+
+msgid "No Radio Stations found."
+msgstr "Nie znaleziono Stacji Radiowych"
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please use 'Function' to add a station."
+msgstr ""
+
+msgid "Your SHOUTcast is active."
+msgstr ""
+
+msgid "Your SHOUTcast DevID is"
+msgstr ""
+
+msgid "Reset DevID"
+msgstr ""
+
+msgid "Welcome to Internetradio setup"
+msgstr ""
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr ""
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr ""
+
+msgid "Enter DevID"
+msgstr ""
+
+msgid "Show this page again"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr ""
+
+msgid "Internet Radio Setup"
+msgstr ""
+
+msgid "Radio station added to favorites"
+msgstr ""
+
+#~ msgid "Please use 'Function' to add"
+#~ msgstr "Prosze uzyć 'Funkcji' do dodania"
+
+#~ msgid "a station"
+#~ msgstr "stacji"

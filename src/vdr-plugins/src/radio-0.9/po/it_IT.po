@@ -1,0 +1,358 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 11:01+0100\n"
+"PO-Revision-Date: 2008-06-15 22:39+0100\n"
+"Last-Translator: Diego Pierotto <vdr-italian@tiscali.it>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "unknown program type"
+msgstr "tipo programma sconosciuto"
+
+msgid "News"
+msgstr "Notizie"
+
+msgid "Current affairs"
+msgstr "Attualità"
+
+msgid "Information"
+msgstr "Informazione"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Education"
+msgstr "Istruzione"
+
+msgid "Drama"
+msgstr "Dramma"
+
+msgid "Culture"
+msgstr "Cultura"
+
+msgid "Science"
+msgstr "Scienza"
+
+msgid "Varied"
+msgstr "Altro"
+
+msgid "Pop music"
+msgstr "Musica Pop"
+
+msgid "Rock music"
+msgstr "Musica Rock"
+
+msgid "M.O.R. music"
+msgstr "Musica M.O.R."
+
+msgid "Light classical"
+msgstr "Classica leggera"
+
+msgid "Serious classical"
+msgstr "Classica seria"
+
+msgid "Other music"
+msgstr "Altra musica"
+
+msgid "Alarm"
+msgstr "Allarme"
+
+msgid "ext. Info"
+msgstr "Info esterne"
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radio testo"
+
+msgid "  [waiting ...]"
+msgstr "  [attendere ...]"
+
+msgid "Title :"
+msgstr "Titolo  :"
+
+msgid "Artist :"
+msgstr "Artista :"
+
+msgid "Records"
+msgstr "Archivio"
+
+msgid "with <0>"
+msgstr "con <0>"
+
+msgid "Rass-Image(s) saved from Archiv "
+msgstr "Immagini Rass salvate dall'Archivio"
+
+msgid "Rass-Image(s) saved from Gallery"
+msgstr "Immagini Rass salvate dalla Galleria"
+
+msgid "Rass-Image saved"
+msgstr "Immagine Rass salvata"
+
+msgid "Rass-Image failed"
+msgstr "Immagine Rass fallita"
+
+msgid "Playlist"
+msgstr "Lista esecuzione"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Lottery"
+msgstr "Lotteria"
+
+msgid "Weather"
+msgstr "Meteo"
+
+msgid "Stockmarket"
+msgstr "Borse"
+
+msgid "Other"
+msgstr "Altro"
+
+msgid "extra Info  since"
+msgstr "Info extra  da"
+
+msgid "RTplus Memory  since"
+msgstr "Memoria RTplus da"
+
+msgid "Programme"
+msgstr "Programma"
+
+msgid "Stat.Short"
+msgstr "Brevi statistiche"
+
+msgid "Station"
+msgstr "Stazione"
+
+msgid "Now"
+msgstr "Adesso"
+
+msgid "...Part"
+msgstr "...Dettaglio"
+
+msgid "Next"
+msgstr "Prossimo"
+
+msgid "Host"
+msgstr "Animatore"
+
+msgid "Edit.Staff"
+msgstr "Staff"
+
+msgid "Homepage"
+msgstr "Pagina princ."
+
+msgid "Interactivity"
+msgstr "Interattività"
+
+msgid "Phone-Hotline"
+msgstr "Telefono assistenza"
+
+msgid "Phone-Studio"
+msgstr "Telefono studio"
+
+msgid "SMS-Studio"
+msgstr "SMS studio"
+
+msgid "Email-Hotline"
+msgstr "Email assistenza"
+
+msgid "Email-Studio"
+msgstr "Email studio"
+
+msgid "Info"
+msgstr "Informazioni"
+
+msgid "NewsLocal"
+msgstr "Notizie locali"
+
+msgid "DateTime"
+msgstr "Data-Ora"
+
+msgid "Traffic"
+msgstr "Traffico"
+
+msgid "Advertising"
+msgstr "Pubblicità"
+
+msgid "Url"
+msgstr "Sito web"
+
+msgid "Exit"
+msgstr "Esci"
+
+msgid "Info-File saved"
+msgstr "Info file salvate"
+
+msgid "RTplus-File saved"
+msgstr "File RTplus salvato"
+
+msgid "last seen Radiotext"
+msgstr "ultimo radio testo letto"
+
+msgid "Time"
+msgstr "Ora"
+
+msgid "Title"
+msgstr "Titolo"
+
+msgid "Artist"
+msgstr "Artista"
+
+msgid "Refresh Off"
+msgstr "Disattiva aggiornamenti"
+
+msgid "Refresh On"
+msgstr "Attiva aggiornamenti"
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Radiochannels RDS-Text"
+msgstr ""
+
+msgid "RDS-Radiotext"
+msgstr ""
+
+msgid "Off"
+msgstr "Disattivo"
+
+msgid "only Text"
+msgstr "solo testo"
+
+msgid "Text+TagInfo"
+msgstr "Testo+Scheda info"
+
+msgid "only, if some"
+msgstr "solo, se disp."
+
+msgid "always"
+msgstr "sempre"
+
+msgid "Top"
+msgstr "Alto"
+
+msgid "Bottom"
+msgstr "Basso"
+
+msgid "latest at Top"
+msgstr "ultimo in alto"
+
+msgid "latest at Bottom"
+msgstr "ultimo in basso"
+
+msgid "Black"
+msgstr "Nero"
+
+msgid "White"
+msgstr "Bianco"
+
+msgid "Red"
+msgstr "Rosso"
+
+msgid "Green"
+msgstr "Verde"
+
+msgid "Yellow"
+msgstr "Giallo"
+
+msgid "Magenta"
+msgstr "Magenta"
+
+msgid "Blue"
+msgstr "Blu"
+
+msgid "Cyan"
+msgstr "Ciano"
+
+msgid "Transparent"
+msgstr "Trasparente"
+
+msgid "about MainMenu"
+msgstr "info menu princ."
+
+msgid "Automatic"
+msgstr "Automatica"
+
+msgid "only Taginfo"
+msgstr "solo scheda info"
+
+msgid "Rass only"
+msgstr "Solo Rass"
+
+msgid "Rass+Text mixed"
+msgstr "Rass+testo misto"
+
+msgid "Activate"
+msgstr "Attiva"
+
+msgid "Use StillPicture-Function"
+msgstr "Utilizza funz. immagine princ."
+
+msgid "Hide MainMenuEntry"
+msgstr "Nascondi voce menu principale"
+
+msgid "RDSText Function"
+msgstr "Funzione testo RDS"
+
+msgid "RDSText OSD-Position"
+msgstr "Posizione OSD testo RDS"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "Riga titolo OSD testo RDS"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "Righe OSD testo RDS (1-5)"
+
+msgid "RDSText OSD-Scrollmode"
+msgstr "Mod. scorr. OSD testo RDS"
+
+msgid "RDSText OSD-Taginfo"
+msgstr "Campo info OSD testo RDS"
+
+msgid "RDSText OSD-Skincolors used"
+msgstr "Colori interf. OSD testo RDS"
+
+msgid "RDSText OSD-Backgr.Color"
+msgstr "Colore sfondo OSD testo RDS"
+
+msgid "RDSText OSD-Backgr.Transp."
+msgstr "Trasp. sfondo OSD testo RDS"
+
+msgid "RDSText OSD-Foregr.Color"
+msgstr "Colore car. OSD testo RDS"
+
+msgid "RDSText OSD-Timeout (0-1440 min)"
+msgstr "Scad. testo RDS (0-1440 min)"
+
+msgid "RDSText OSD-Display"
+msgstr "Visualizz. OSD testo RDS"
+
+msgid "RDSText StatusMsg (lcdproc & co)"
+msgstr "Mess. stato testo RDS (lcdproc & co)"
+
+msgid "RDSText Rass-Function"
+msgstr "Funzione Rass testo RDS"
+
+msgid "External Info-Request by Internet"
+msgstr ""
+
+msgid "External Info-Request"
+msgstr "Richiesta info esterna"
+
+#~ msgid "Radio Background-Image/RDS-Text"
+#~ msgstr "Immagine sfondo per Radio/Testo RDS"
+
+#~ msgid "Show RDS-Radiotext"
+#~ msgstr "Mostra testi RDS"

@@ -1,0 +1,552 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Ruben Nunez Francisco <ruben.nunez@tang-it.com>, 2002
+# elpajare-Tododream.Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2008-10-01 14:50+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Delete recording?"
+msgstr "¿Borrar grabación?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+msgid "Directory Selector"
+msgstr "Selector directorio"
+
+msgid "up"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Move"
+msgstr "Mover"
+
+msgid "Rec Dir"
+msgstr "Dir Grab"
+
+msgid "Button$Create"
+msgstr "Crear"
+
+msgid "Cannot move into its own sub folder"
+msgstr "No se puede mover a la propia subcarpeta"
+
+msgid "Cannot write into directory"
+msgstr "No se puede escribir en el directorio"
+
+msgid "Moving Recording"
+msgstr "Moviendo grabación"
+
+msgid "Moving Directories"
+msgstr "Moviendo directorios"
+
+msgid "Move failed. Not enough free space"
+msgstr "Movimiento fallido. No hay suficiente espacio"
+
+#, fuzzy
+msgid "Copying started"
+msgstr "Moviendo"
+
+#, fuzzy
+msgid "Cannot copy into its own sub folder"
+msgstr "No se puede mover a la propia subcarpeta"
+
+#, fuzzy
+msgid "Copy failed. Not enough free space"
+msgstr "Movimiento fallido. No hay suficiente espacio"
+
+msgid "Create directory"
+msgstr "Crear directorio"
+
+msgid "New"
+msgstr "Nuevo"
+
+#, fuzzy
+msgid "To create a new directory press 'OK':"
+msgstr "Para crear nuevo directorio pres. OK:"
+
+msgid "Directory Name"
+msgstr "Nombre directorio"
+
+msgid "Note:"
+msgstr "Nota"
+
+msgid "Directory will only be shown with"
+msgstr "Sólamente se mostrará directorio con"
+
+msgid "recordings inside."
+msgstr "grabaciones dentro"
+
+msgid "Created"
+msgstr "Creado"
+
+msgid "Failed"
+msgstr "Fallido"
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr "Disco duro interno"
+
+msgid "External Media"
+msgstr "Medio externo"
+
+msgid "Please select the drive where to move the recording:"
+msgstr "Seleccionar medio donde mover grabación:"
+
+msgid "Select Media"
+msgstr "Seleccionar medio"
+
+msgid "Could not open media"
+msgstr "No se puede abrir medio"
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr "Cambiar título"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Episode"
+msgstr "Episodio"
+
+msgid "Invalid title!"
+msgstr "¡Título inválido!"
+
+msgid "Invalid episode!"
+msgstr "¡Episodio inválido!"
+
+msgid "Rename directory"
+msgstr "Renombrar directorio"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Invalid filename!"
+msgstr "¡Nombre de archivo inválido"
+
+msgid "Creating directories failed!"
+msgstr "¡Error al crear directorios!"
+
+msgid "New folder"
+msgstr "Nueva carpeta"
+
+msgid "Button$Cancel"
+msgstr "Cancelar"
+
+msgid "Button$Move"
+msgstr "Mover"
+
+msgid "Move recording"
+msgstr "Mover grabación"
+
+msgid "[base dir]"
+msgstr "[dir. base]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "Sistema de archivos lleno - ¿probar aún?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "¡No se puede mover hacia el propio subdirectorio!"
+
+msgid "Can't get filesystem information"
+msgstr "No se puede obtener info. del sitema de archivos"
+
+msgid "Details"
+msgstr "Detalles"
+
+msgid "low"
+msgstr "Bajo"
+
+msgid "normal"
+msgstr "Normal"
+
+msgid "high"
+msgstr "Alto"
+
+msgid "Priority"
+msgstr "Prioridad"
+
+msgid "Lifetime"
+msgstr "Autoborrado"
+
+msgid "unlimited"
+msgstr "Ilimitada"
+
+msgid "Info:"
+msgstr "Info:"
+
+msgid "In this menu you can adjust the point in time"
+msgstr "Aquí puede modificar el punto en el tiempo"
+
+msgid "a recording gets deleted automatically."
+msgstr "cuando una grabación se borrará automáticamente"
+
+msgid "Recording info"
+msgstr "Info. grabación"
+
+msgid "Button$Play"
+msgstr "Reproducir"
+
+msgid "Button$Rewind"
+msgstr "Rebobinar"
+
+msgid "Large picture"
+msgstr ""
+
+msgid "Path"
+msgstr "Camino"
+
+msgid "Channel"
+msgstr "Canal"
+
+msgid "Size"
+msgstr "Tamaño"
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "Borrando grabación..."
+
+msgid "Error while mounting DVD!"
+msgstr "¡Error al montar DVD!"
+
+msgid "Recordings"
+msgstr "Grabaciones"
+
+msgid "free"
+msgstr "Libre"
+
+msgid "Button$Functions"
+msgstr "Funciones"
+
+msgid "Total"
+msgstr ""
+
+msgid "Last recording"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr "¡Error al acceder a la grabación!"
+
+msgid "PIN code: "
+msgstr "Código PIN"
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Insertar DVD %s"
+
+msgid "DVD plugin is not installed!"
+msgstr "¡El plugin DVD no está instalado!"
+
+msgid "No DVD in drive!"
+msgstr "¡No hay DVD en el reproductor!"
+
+msgid "Recording not found on DVD!"
+msgstr "¡Grabación no encontrada en DVD!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "¡Error al conectar [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "sudo or mount --bind / error al desmontar (vfat system)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "No se ha hallado el Script 'dvdarchive.sh'"
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Crear directorio"
+
+msgid "Timer still recording - really delete?"
+msgstr "Pogramador grabando - ¿borrar igualmente?"
+
+msgid "Error while deleting recording!"
+msgstr "¡Error al borrar grabación!"
+
+msgid "Recording commands"
+msgstr "Comandos de grabación"
+
+msgid "Sort by date"
+msgstr "Ordenado por fecha"
+
+msgid "Sort by name"
+msgstr "Ordenado por nombre"
+
+msgid "Show title"
+msgstr ""
+
+msgid "Show directory name"
+msgstr ""
+
+msgid "Invalid PIN"
+msgstr "PIN inválido"
+
+msgid "PIN Aborted"
+msgstr "PIN abortado"
+
+msgid "Cancel moving?"
+msgstr "¿Cancelar mover?"
+
+msgid "Cancel editing?"
+msgstr "¿Cancelar edición?"
+
+msgid "ascending"
+msgstr "Ascendiente"
+
+msgid "descending"
+msgstr "Descendiente"
+
+msgid "Show recording date"
+msgstr "Mostrar fecha grabación"
+
+msgid "Show recording time"
+msgstr "Mostrar tiempo grabación"
+
+msgid "Show recording length"
+msgstr "Mostrar tamaño grabación"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Mostrar nº de nuevas grabaciones en carpeta"
+
+msgid "Show alternative to new marker"
+msgstr "Mostrar alternativa a nuevo marcador"
+
+msgid "Show free disk space for each file system"
+msgstr "Mostrar espacio libre en disco para cada sistema de archivos"
+
+msgid "Sorting"
+msgstr "Ordenando"
+
+msgid "Hide main menu entry"
+msgstr "Ocultar entrada menú principal"
+
+msgid "Replace original recordings menu"
+msgstr "Reemplazar menú original grabaciones"
+
+msgid "Jump to last played recording"
+msgstr "Ir a última grabación reproducida"
+
+msgid "Show recordings menu after playback"
+msgstr "Mostrar menú grabaciones depués de reproducción"
+
+msgid "Patch font"
+msgstr "Fuente patch"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+msgid "Limit bandwidth when moving recordings"
+msgstr "Limitar ancho banda al mover grabaciones"
+
+msgid "Use cutter queue"
+msgstr "Usar cola para cortar"
+
+msgid "Undelete Recordings"
+msgstr "Restaurar grabaciones"
+
+msgid "No recordings to undelete!"
+msgstr "¡No hay grabaciones restaurables!"
+
+msgid "Button$Remove"
+msgstr "Borrar"
+
+msgid "Button$Undelete"
+msgstr "Restaurar"
+
+msgid "Remove recording from disk?"
+msgstr "¿Borrar grabación del disco?"
+
+msgid "Removing recording ..."
+msgstr "Borrando grabación..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Borrado de grabación fallido"
+
+msgid "Button$Back"
+msgstr "Atrás"
+
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "No se puede cortar grab. en el directorio de video"
+
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Grabación añadida a cola de corte de Avantgarde"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr "No se puede cortar grabaciones en NetClient sin un serv. Avantgarde"
+
+msgid "Recording already in cutter queue!"
+msgstr "¡Grabación en cola de corte todavía!"
+
+msgid "No editing marks defined!"
+msgstr "¡Sin marcas de corte definidas!"
+
+msgid "Added recording to cutter queue"
+msgstr "Grabación añadida a cola de corte"
+
+msgid "Not enough space on harddisk!"
+msgstr ""
+
+msgid "Rename/Move failed!"
+msgstr "¡Renombrar/Mover fallido!"
+
+msgid "Cutter queue not empty"
+msgstr "Cola de corte no vacía"
+
+msgid "Move recordings in progress"
+msgstr "Mover grabaciones en curso"
+
+msgid "Can't start editing process!"
+msgstr "No se puede iniciar proceso edición"
+
+msgid "Cutting"
+msgstr "Cortando"
+
+msgid "Moving"
+msgstr "Moviendo"
+
+msgid "started"
+msgstr ""
+
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgid "Completed"
+msgstr "Completado"
+
+#, fuzzy
+msgid "Copying"
+msgstr "Moviendo"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "Moviendo grabación"
+
+msgid "Copy failed!"
+msgstr ""
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "¡Esta versión del plugin no soporta este servicio!"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "¡ExRecMenu no existe!"
+
+msgid "Extended recordings menu"
+msgstr "Menú ampliado grabaciones"
+
+msgid "Rename"
+msgstr "Renombrar"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "Moviendo grabación"
+
+msgid "Mark as new"
+msgstr ""
+
+#~ msgid "Button$Open"
+#~ msgstr "Abrir"
+
+#~ msgid "moving recording"
+#~ msgstr "Moviendo grabación"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Restaurar"
+
+#, fuzzy
+#~ msgid "Set Title"
+#~ msgstr "Título"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Detalles"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Editar"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Renombrar"
+
+#~ msgid "Create"
+#~ msgstr "Crear"
+
+#~ msgid "Create new directory:"
+#~ msgstr "Crear nuevo directorio"

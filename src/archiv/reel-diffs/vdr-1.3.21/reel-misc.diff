@@ -1,0 +1,172 @@
+diff -Nur vdr-1.3.21/interface.c vdr-1.3.21-reel/interface.c
+--- vdr-1.3.21/interface.c	2005-07-10 23:07:38.000000000 +0200
++++ vdr-1.3.21-reel/interface.c	2005-06-20 22:21:40.000000000 +0200
+@@ -31,8 +31,17 @@
+ 
+ eKeys cInterface::GetKey(bool Wait)
+ {
+-  if (!cRemote::HasKeys())
+-     Skins.Flush();
++    static int doFlush = 0;
++    if (!cRemote::HasKeys() || doFlush == 0)
++    {
++        Skins.Flush();
++        doFlush = 2;
++    }
++    if (doFlush > 0)
++    {
++        doFlush --;
++    }
++  
+   if (SVDRP) {
+      if (SVDRP->Process())
+         Wait = false;
+diff -Nur vdr-1.3.21/osdbase.c vdr-1.3.21-reel/osdbase.c
+--- vdr-1.3.21/osdbase.c	2005-07-10 23:06:31.000000000 +0200
++++ vdr-1.3.21-reel/osdbase.c	2005-06-20 22:21:43.000000000 +0200
+@@ -189,10 +190,14 @@
+   displayMenu->SetButtons(helpRed, helpGreen, helpYellow, helpBlue);
+   cStatus::MsgOsdHelpKeys(helpRed, helpGreen, helpYellow, helpBlue);
+   int count = Count();
++    
+   if (count > 0) {
+-     int ni = 0;
++     /*int ni = 0;
+      for (cOsdItem *item = First(); item; item = Next(item))
++     {
+          cStatus::MsgOsdItem(item->Text(), ni++);
++         ni++;
++     }*/
+      if (current < 0)
+         current = 0; // just for safety - there HAS to be a current item!
+      if (current - first >= displayMenuItems || current < first) {
+@@ -265,7 +270,7 @@
+         DisplayCurrent(false);
+      current = tmpCurrent;
+      if (current < first) {
+-        first = first > displayMenuItems - 1 ? first - (displayMenuItems - 1) : 0;
++        first = first > 0 ? first - 1 : 0; // first > displayMenuItems - 1 ? first - (displayMenuItems - 1) : 0;
+         if (Setup.MenuScrollPage)
+            current = !SelectableItem(first) ? first + 1 : first;
+         Display();
+@@ -289,8 +294,10 @@
+         DisplayCurrent(false);
+      current = tmpCurrent;
+      if (current > lastOnScreen) {
+-        first += displayMenuItems - 1;
+-        lastOnScreen = first + displayMenuItems - 1;
++        ++ first;
++        ++ lastOnScreen;
++        //first += displayMenuItems - 1;
++        //lastOnScreen = first + displayMenuItems - 1;
+         if (lastOnScreen > last) {
+            first = last - (displayMenuItems - 1);
+            lastOnScreen = last;
+diff -Nur vdr-1.3.21/osd.c vdr-1.3.21-reel/osd.c
+--- vdr-1.3.21/osd.c	2004-12-19 13:27:38.000000000 +0100
++++ vdr-1.3.21-reel/osd.c	2005-06-20 22:21:35.000000000 +0200
+@@ -340,18 +341,18 @@
+ 
+ void cBitmap::DrawBitmap(int x, int y, const cBitmap &Bitmap, tColor ColorFg, tColor ColorBg)
+ {
+-  if (bitmap && Bitmap.bitmap && Intersects(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1)) {
+-     if (Covers(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1))
++    if (bitmap && Bitmap.bitmap && Intersects(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1)) {
++        if (Covers(x, y, x + Bitmap.Width() - 1, y + Bitmap.Height() - 1))
+         Reset();
+-     x -= x0;
+-     y -= y0;
+-     tIndexes Indexes;
+-     Take(Bitmap, &Indexes, ColorFg, ColorBg);
+-     for (int ix = 0; ix < Bitmap.width; ix++) {
+-         for (int iy = 0; iy < Bitmap.height; iy++)
+-             SetIndex(x + ix, y + iy, Indexes[int(Bitmap.bitmap[Bitmap.width * iy + ix])]);
+-         }
+-     }
++        x -= x0;
++        y -= y0;
++        tIndexes Indexes;
++        Take(Bitmap, &Indexes, ColorFg, ColorBg);
++        for (int ix = 0; ix < Bitmap.width; ix++) {
++            for (int iy = 0; iy < Bitmap.height; iy++)
++                SetIndex(x + ix, y + iy, Indexes[int(Bitmap.bitmap[Bitmap.width * iy + ix])]);
++            }
++        }
+ }
+ 
+ void cBitmap::DrawText(int x, int y, const char *s, tColor ColorFg, tColor ColorBg, const cFont *Font, int Width, int Height, int Alignment)
+@@ -422,22 +423,34 @@
+ 
+ void cBitmap::DrawRectangle(int x1, int y1, int x2, int y2, tColor Color)
+ {
+-  if (bitmap && Intersects(x1, y1, x2, y2)) {
+-     if (Covers(x1, y1, x2, y2))
+-        Reset();
+-     x1 -= x0;
+-     y1 -= y0;
+-     x2 -= x0;
+-     y2 -= y0;
+-     x1 = max(x1, 0);
+-     y1 = max(y1, 0);
+-     x2 = min(x2, width - 1);
+-     y2 = min(y2, height - 1);
+-     tIndex c = Index(Color);
+-     for (int y = y1; y <= y2; y++)
+-         for (int x = x1; x <= x2; x++)
+-             SetIndex(x, y, c);
+-     }
++    if (bitmap && Intersects(x1, y1, x2, y2)) {
++        if (Covers(x1, y1, x2, y2))
++            Reset();
++        x1 -= x0;
++        y1 -= y0;
++        x2 -= x0;
++        y2 -= y0;
++        x1 = max(x1, 0);
++        y1 = max(y1, 0);
++        x2 = min(x2, width - 1);
++        y2 = min(y2, height - 1);
++        tIndex c = Index(Color);
++        
++        if (dirtyX1 > x1)  dirtyX1 = x1;
++        if (dirtyY1 > y1)  dirtyY1 = y1;
++        if (dirtyX2 < x2)  dirtyX2 = x2;
++        if (dirtyY2 < y2)  dirtyY2 = y2;
++        
++        for (int y = y1; y <= y2; y++)
++        {
++            if (x2 >= x1)
++            {
++                memset(bitmap + y * width + x1, c, x2 - x1 + 1);
++            }
++            //for (int x = x1; x <= x2; x++)
++            //    SetIndex(x, y, c);
++        }
++    }
+ }
+ 
+ void cBitmap::DrawEllipse(int x1, int y1, int x2, int y2, tColor Color, int Quadrants)
+diff -Nur vdr-1.3.21/vdr.c vdr-1.3.21-reel/vdr.c
+--- vdr-1.3.21/vdr.c	2005-07-10 23:07:59.000000000 +0200
++++ vdr-1.3.21-reel/vdr.c	2005-07-09 01:48:54.000000000 +0200
+@@ -931,6 +931,7 @@
+                        isyslog("executing '%s'", cmd);
+                        SystemExec(cmd);
+                        free(cmd);
++		       Interrupted=1; // GA
+                        }
+                     else if (WatchdogTimeout > 0) {
+                        alarm(WatchdogTimeout);
+--- base_pkgs/vdr-1.3.21/transfer.c     2005-02-12 16:54:06.000000000 +0100
++++ vdr-1.3.21/transfer.c       2005-04-03 19:13:39.929057579 +0200
+@@ -126,8 +126,8 @@
+                  if (Result <= 0)
+                     p = NULL;
+                  }
+-              else if (w < 0 && FATALERRNO)
+-                 LOG_ERROR;
++//              else if (w < 0 && FATALERRNO)
++//                 LOG_ERROR;
+               }
+            else {
+               PollTimeouts++;

@@ -1,0 +1,233 @@
+--- ../vdr-1.3.10/spu.h	2002-09-08 16:17:51.000000000 +0200
++++ src/spu.h	2004-06-08 21:48:02.761556408 +0200
+@@ -32,6 +32,9 @@
+                               uint32_t palette) = 0;
+     virtual void clearHighlight(void) = 0;
+     virtual void Empty(void) = 0;
++    virtual void Hide(void) = 0;
++    virtual void Draw(void) = 0;
++    virtual bool IsVisible(void) = 0;
+     virtual void processSPU(uint32_t pts, uint8_t * buf) = 0;
+ };
+ 
+--- ../vdr-1.3.10/dvbspu.h	2004-05-31 10:49:20.000000000 +0200
++++ src/dvbspu.h	2004-06-08 21:51:33.025591416 +0200
+@@ -132,9 +132,6 @@
+     int ScaleYres(int value);
+     void DrawBmp(sDvbSpuRect & size, cBitmap * bmp);
+ 
+-    void Draw();
+-    void Hide();
+-
+   public:
+     cDvbSpuDecoder();
+     ~cDvbSpuDecoder();
+@@ -146,8 +143,14 @@
+     void setHighlight(uint16_t sx, uint16_t sy, uint16_t ex, uint16_t ey,
+                       uint32_t palette);
+     void clearHighlight(void);
+-    void Empty(void);
+     void processSPU(uint32_t pts, uint8_t * buf);
++
++    cOsd * getOsd() { return osd; } // fixme: not necessary ? yet !
++
++    void Empty(void);
++    void Hide(void);
++    void Draw(void);
++    bool IsVisible(void) { return osd!=NULL; }
+ };
+ 
+ // --- cDvbSpuPalette -------------------------------------------
+--- ../vdr-1.3.10/dvbspu.c	2004-05-22 16:02:32.000000000 +0200
++++ src/dvbspu.c	2004-06-10 04:27:45.037899744 +0200
+@@ -35,11 +35,15 @@
+  *    transparencies
+  */
+ 
+-// #define SPUDEBUG
++#if 0
++	#define SPUDEBUG
++	#undef DEBUG
++#endif
+ 
+ #ifdef SPUDEBUG
+ #define DEBUG(format, args...) printf (format, ## args)
+ #else
++#undef DEBUG
+ #define DEBUG(format, args...)
+ #endif
+ 
+@@ -240,7 +244,7 @@
+ {
+     setTime(pts);
+ 
+-    DEBUG("SPU pushData: pts: %d\n", pts);
++    DEBUG("DVB_SPU pushData: pts: %d\n", pts);
+ 
+     delete spubmp;
+     spubmp = NULL;
+@@ -261,6 +265,7 @@
+ 
+ void cDvbSpuDecoder::setPalette(uint32_t * pal)
+ {
++    DEBUG("DVB_SPU setPalette\n");
+     palette.setPalette(pal);
+ }
+ 
+@@ -280,7 +285,7 @@
+         pld[2] != hlpDescr[2] || pld[3] != hlpDescr[3];
+ 
+     if (ne) {
+-        DEBUG("setHighlight: %d,%d x %d,%d\n", sx, sy, ex, ey);
++        DEBUG("DVB_SPU setHighlight: %d,%d x %d,%d\n", sx, sy, ex, ey);
+         hlpsize.x1 = sx;
+         hlpsize.y1 = sy;
+         hlpsize.x2 = ex;
+@@ -288,11 +293,14 @@
+         memcpy(hlpDescr, pld, sizeof(aDvbSpuPalDescr));
+         highlight = true;
+         clean = false;
++    } else {
++        DEBUG("DVB_SPU setHighlight dropped ..\n");
+     }
+ }
+ 
+ void cDvbSpuDecoder::clearHighlight(void)
+ {
++    DEBUG("DVB_SPU clearHighlight\n");
+     clean &= !highlight;
+     highlight = false;
+     hlpsize.x1 = -1;
+@@ -334,11 +342,14 @@
+ 
+ void cDvbSpuDecoder::Draw(void)
+ {
++    DEBUG("DVB_SPU Draw ..\n");
+     Hide();
+ 
+     if (!spubmp)
+         return;
+ 
++    DEBUG("DVB_SPU Draw with spubmp\n");
++
+     cBitmap *fg = NULL;
+     cBitmap *bg = NULL;
+     sDvbSpuRect bgsize;
+@@ -363,11 +374,13 @@
+     }
+ 
+     if (bg || fg) {
+-        if (osd == NULL)
++        if (osd == NULL) {
+             if ((osd = cOsdProvider::NewOsd(0, 0)) == NULL) {
+                 dsyslog("NewOsd failed\n");
+                 return;
+             }
++            DEBUG("DVB_SPU new Osd\n");
++        }
+ 
+         if (fg)
+             DrawBmp(hlsize, fg);
+@@ -383,12 +396,14 @@
+ 
+ void cDvbSpuDecoder::Hide(void)
+ {
++    DEBUG("DVB_SPU Hide\n");
+     delete osd;
+     osd = NULL;
+ }
+ 
+ void cDvbSpuDecoder::Empty(void)
+ {
++    DEBUG("DVB_SPU Empty\n");
+     Hide();
+ 
+     delete spubmp;
+@@ -403,20 +418,26 @@
+ 
+ int cDvbSpuDecoder::setTime(uint32_t pts)
+ {
++    //DEBUG("DVB_SPU setTime .\n");
+     if (!spu)
+         return 0;
+ 
++    //DEBUG("DVB_SPU setTime .. spu=%p, clean=%d\n", spu, clean);
+     if (spu && !clean)
+         Draw();
+ 
++    //DEBUG("DVB_SPU setTime ...\n");
++
+     while (DCSQ_offset != prev_DCSQ_offset) {   /* Display Control Sequences */
+         int i = DCSQ_offset;
+         state = spNONE;
+ 
+         uint32_t exec_time = spupts + spuU32(i) * 1024;
+-        if ((pts != 0) && (exec_time > pts))
++
++        if ((pts != 0) && (exec_time > pts)) {
+             return 0;
+-        DEBUG("offs = %d, rel = %d, time = %d, pts = %d, diff = %d\n",
++        }
++        DEBUG("DVB_SPU setTime offs = %d, rel = %d, time = %d, pts = %d, diff = %d\n",
+               i, spuU32(i) * 1024, exec_time, pts, exec_time - pts);
+ 
+         if (pts != 0) {
+@@ -432,6 +453,7 @@
+             i += 2;
+ 
+             while (spu[i] != CMD_SPU_EOF) {     // Command Sequence
++	        DEBUG("\t@ %d: 0x%X (%d), ", i, spu[i], spu[i]);
+                 switch (spu[i]) {
+                 case CMD_SPU_SHOW:     // show subpicture
+                     DEBUG("\tshow subpicture\n");
+@@ -446,6 +468,7 @@
+                     break;
+ 
+                 case CMD_SPU_SET_PALETTE:      // CLUT
++                    DEBUG("\tset palette\n");
+                     palDescr[0].index = spu[i + 2] & 0xf;
+                     palDescr[1].index = spu[i + 2] >> 4;
+                     palDescr[2].index = spu[i + 1] & 0xf;
+@@ -454,6 +477,7 @@
+                     break;
+ 
+                 case CMD_SPU_SET_ALPHA:        // transparency palette
++                    DEBUG("\tset alpha\n");
+                     palDescr[0].trans = spu[i + 2] & 0xf;
+                     palDescr[1].trans = spu[i + 2] >> 4;
+                     palDescr[2].trans = spu[i + 1] & 0xf;
+@@ -462,6 +486,7 @@
+                     break;
+ 
+                 case CMD_SPU_SET_SIZE: // image coordinates
++                    DEBUG("\tset size ");
+                     size.x1 = (spu[i + 1] << 4) | (spu[i + 2] >> 4);
+                     size.x2 = ((spu[i + 2] & 0x0f) << 8) | spu[i + 3];
+ 
+@@ -474,6 +499,7 @@
+                     break;
+ 
+                 case CMD_SPU_SET_PXD_OFFSET:   // image 1 / image 2 offsets
++                    DEBUG("\tset pxd off ");
+                     fodd = spuU32(i + 1);
+                     feven = spuU32(i + 3);
+                     DEBUG("\todd = %d even = %d\n", fodd, feven);
+@@ -488,8 +514,8 @@
+                     break;
+ 
+                 default:
+-                    esyslog("invalid sequence in control header (%.2x)\n",
+-                            spu[i]);
++                    DEBUG("invalid sequence in control header (%.2x)\n", spu[i]);
++                    esyslog("invalid sequence in control header (%.2x)\n", spu[i]);
+                     assert(0);
+                     i++;
+                     break;
+@@ -499,6 +525,7 @@
+                 delete spubmp;
+                 spubmp = new cDvbSpuBitmap(size, spu + fodd, spu + feven,
+                                            spu + feven, spu + cmdOffs());
++                DEBUG("DVB_SPU new spubmp\n");
+             }
+         } else if (!clean)
+             state = spSHOW;

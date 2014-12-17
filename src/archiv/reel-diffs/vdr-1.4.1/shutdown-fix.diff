@@ -1,0 +1,33 @@
+Index: skins.h
+===================================================================
+--- skins.h	(Revision 1649)
++++ skins.h	(Arbeitskopie)
+@@ -316,6 +316,12 @@
+ public:
+   cSkins(void);
+   ~cSkins();
++  //Start by Klaus
++  void Shutdown() //shutdown the osd by explicit call
++  {
++      delete displayMessage;
++  }
++  //End by Klaus
+   bool SetCurrent(const char *Name = NULL);
+        ///< Sets the current skin to the one indicated by name.
+        ///< If no such skin can be found, the first one will be used.
+Index: vdr.c
+===================================================================
+--- vdr.c	(Revision 1649)
++++ vdr.c	(Arbeitskopie)
+@@ -1273,6 +1273,11 @@
+   Remotes.Clear();
+   Audios.Clear();
+   Skins.Clear();
++  //if(UserShutdownActive)
++  //{
++      Skins.Shutdown(); //Close open osd object (dirty hack)
++  //}
++  //End by Klaus
+   if (ExitCode != 2) {
+      Setup.CurrentChannel = cDevice::CurrentChannel();
+      Setup.CurrentVolume  = cDevice::CurrentVolume();

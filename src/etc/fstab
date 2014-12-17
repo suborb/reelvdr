@@ -1,0 +1,15 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+proc            /proc           proc    defaults        0       0
+# sda1 = /
+/dev/sda1	/               ext3    defaults,errors=remount-ro 0       1
+
+# sda2 = unused, previously /var
+# sda3
+/dev/sda3	none            swap    sw              0       0
+
+# sda4 = media partition
+/dev/sda4	/media/hd	jfs     defaults        0       2
+
+/dev/dvd	/media/dvd	udf,iso9660 user,noauto,exec 0       0

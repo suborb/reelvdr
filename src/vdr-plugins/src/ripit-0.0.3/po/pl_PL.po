@@ -1,0 +1,155 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ripit\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 16:14+0200\n"
+"PO-Revision-Date: 2008-09-26 13:00+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "user defined"
+msgstr "zdefiniowany przez użytkownika"
+
+msgid "low"
+msgstr "mały"
+
+msgid "standard"
+msgstr "standard"
+
+msgid "great"
+msgstr "szerokie"
+
+msgid "best"
+msgstr "najlepsza"
+
+msgid "Destination format"
+msgstr "Format celowy"
+
+msgid "Hide mainmenu entry"
+msgstr "Ukryć wpis głównego menu"
+
+msgid "Shutdown when finished"
+msgstr "Wyłącz po skonczeniu"
+
+msgid "Verbose output"
+msgstr "Wyjście szczegółowe"
+
+msgid "Fast mode"
+msgstr "Szybki tryb"
+
+msgid "Eject CD when finished"
+msgstr "Wysuń CD po skonczeniu"
+
+msgid "Presets"
+msgstr "Ustawienia fabryczne"
+
+msgid "Min. bitrate"
+msgstr "Min. bitrate"
+
+msgid "Max. bitrate"
+msgstr "Max. bitrate"
+
+msgid "More encoder settings"
+msgstr "Więcej ustawień kodujących"
+
+msgid "Device"
+msgstr "Urzadzenie"
+
+msgid "Directory for ripped tracks"
+msgstr "katalog dla zrypowanych śladów"
+
+msgid "Priority of task (nice)"
+msgstr "Zadanie priorytetowe (ladne)"
+
+msgid "Encode remotely"
+msgstr "Zdalne zdekodowanie"
+
+msgid "Options for remote encoding"
+msgstr "Opcje dla wiecej zdalnych zdekodowań"
+
+msgid "Abort"
+msgstr "Anulować"
+
+msgid "No CD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please insert an audio CD to archive it."
+msgstr ""
+
+msgid "CD found in drive."
+msgstr ""
+
+msgid "Please select archive format and quality and press RED to start archiving your audio CD."
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopiuj"
+
+msgid "Ripped: \t"
+msgstr "Zrypowane: \t"
+
+msgid "completed"
+msgstr "zakonczone"
+
+msgid "Ripping: \t"
+msgstr "Rypuje: \t"
+
+msgid "Encoded: \t"
+msgstr "Zdekodowane: \t"
+
+msgid "Encoding: \t"
+msgstr "Kodowanie: \t"
+
+msgid "Completed"
+msgstr "Zakonczony"
+
+msgid "Aborted"
+msgstr "Anulowane"
+
+msgid "No medium found"
+msgstr "Nie odnaleziono nosnika"
+
+msgid "Searching CDDB entry, please wait"
+msgstr "Szuka wpisu CDDB, prosze czekać"
+
+msgid "Total Tracks: "
+msgstr "Ilość Śladów: "
+
+msgid "Reading CD"
+msgstr "Czyta CD"
+
+msgid "PROCESS MANUALLY ABORTED"
+msgstr "PROCES RĘCZNIE ANULOWANY"
+
+msgid "Encoding tracks"
+msgstr "dekoduje ślady"
+
+msgid "Ripping and Encoding tracks"
+msgstr "Rypuje i dekoduje ślady"
+
+msgid "Audio-CD ripper"
+msgstr "Ripper Dzwiéku-CD"
+
+msgid "Archive Audio-CD"
+msgstr "Archiwum Dzwiéku-CD"
+
+msgid "Audio-CD archive "
+msgstr "Archiw Dzwiéku-CD "
+
+#~ msgid "No ripping in progress"
+#~ msgstr "Zadne rypowanie w trakcie"

@@ -1,0 +1,253 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2010-04-15 12:16+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr "Client VTP Streaming"
+
+msgid "Streaming Client"
+msgstr "Client Streaming"
+
+msgid "Server is suspended"
+msgstr "El servidor s'ha aturat"
+
+msgid "Couldn't suspend Server!"
+msgstr "No es pot aturar el Servidor!"
+
+msgid "VDR Streaming Server"
+msgstr "Servidor VDR Streaming"
+
+msgid "Pause Live TV"
+msgstr "Posa en pausa l'emissió de TV"
+
+msgid "Streaming Server"
+msgstr "Servidor Streaming"
+
+msgid "Streaming active"
+msgstr "Streaming actiu"
+
+msgid "Offer suspend mode"
+msgstr "Ofereix mode de suspensió"
+
+msgid "Always suspended"
+msgstr "Sempre en suspensió"
+
+msgid "Never suspended"
+msgstr "Mai en suspensió"
+
+msgid "Common Settings"
+msgstr "Paràmetres generals"
+
+msgid "Maximum Number of Clients"
+msgstr "Nombre màxim de Clients"
+
+msgid "Suspend behaviour"
+msgstr "Atura el funcionament"
+
+msgid "Client may suspend"
+msgstr "Desconnecta el Client"
+
+msgid "ReelBox-to-ReelBox Server"
+msgstr "Reelbox a Servidor ReelBox"
+
+msgid "Start ReelBox-to-ReelBox Server"
+msgstr "Inicia 'Reelbox a Servidor ReelBox'"
+
+msgid "ReelBox-to-ReelBox Server Port"
+msgstr "Port 'Reelbox a Servidor ReelBox'"
+
+msgid "Bind to IP"
+msgstr "Vincula a la IP"
+
+msgid "HTTP Server"
+msgstr "Servidor HTTP"
+
+msgid "Start HTTP Server"
+msgstr "Inicia Servidor HTTP"
+
+msgid "HTTP Server Port"
+msgstr "Port Servidor HTTP"
+
+msgid "HTTP Streamtype"
+msgstr "Tipus Stream HTTP"
+
+#, fuzzy
+msgid "Multicast Streaming Server"
+msgstr "Servidor Streaming"
+
+#, fuzzy
+msgid "Start IGMP Server"
+msgstr "Inicia Servidor HTTP"
+
+#, fuzzy
+msgid "Multicast Client Port"
+msgstr "Inicia Client"
+
+#, fuzzy
+msgid "Multicast Streamtype"
+msgstr "Tipus Stream HTTP"
+
+msgid "Start Client"
+msgstr "Inicia Client"
+
+msgid "Remote IP"
+msgstr "IP remota"
+
+msgid "Remote Port"
+msgstr "Port remot"
+
+msgid "Filter Streaming"
+msgstr "Filtre Streaming"
+
+msgid "Synchronize EPG"
+msgstr "Sincronitza l'EPG"
+
+#, fuzzy
+msgid "Minimum Priority"
+msgstr "Prioritat"
+
+#, fuzzy
+msgid "Maximum Priority"
+msgstr "Prioritat"
+
+#~ msgid "Streaming Control"
+#~ msgstr "Control d'Streaming"
+
+#~ msgid "Remote Schedule"
+#~ msgstr "Tasques remotes"
+
+#~ msgid "Remote Timers"
+#~ msgstr "Programació remota"
+
+#~ msgid "Remote Recordings"
+#~ msgstr "Gravacions remotes"
+
+#~ msgid "Suspend Server"
+#~ msgstr "Atura el Servidor"
+
+#~ msgid "Edit remote timer"
+#~ msgstr "Edita la programació remota"
+
+#~ msgid "Active"
+#~ msgstr "Actiu"
+
+#~ msgid "Channel"
+#~ msgstr "Canal"
+
+#~ msgid "Day"
+#~ msgstr "Dia"
+
+#~ msgid "Start"
+#~ msgstr "Inicia"
+
+#~ msgid "Stop"
+#~ msgstr "Atura"
+
+#~ msgid "VPS"
+#~ msgstr "VPS"
+
+#~ msgid "Lifetime"
+#~ msgstr "Durada"
+
+#~ msgid "File"
+#~ msgstr "Fitxer"
+
+#~ msgid "First day"
+#~ msgstr "Primer dia"
+
+#~ msgid "*** Invalid Channel ***"
+#~ msgstr "*** Canal no vàlid ***"
+
+#~ msgid "What's on now?"
+#~ msgstr "Què fan ara?"
+
+#~ msgid "What's on next?"
+#~ msgstr "Què faran després?"
+
+#~ msgid "Record"
+#~ msgstr "Grava"
+
+#~ msgid "Next"
+#~ msgstr "Següent"
+
+#~ msgid "Now"
+#~ msgstr "Ara"
+
+#~ msgid "Schedule"
+#~ msgstr "Programació"
+
+#~ msgid "Switch"
+#~ msgstr "Canvia"
+
+#~ msgid "Can't switch channel!"
+#~ msgstr "No puc canviar de canal!"
+
+#~ msgid "Schedule - %s"
+#~ msgstr "Programació - %s"
+
+#~ msgid "Fetching recordings..."
+#~ msgstr "S'estan cercant gravacions..."
+
+#~ msgid "Open"
+#~ msgstr "Obre"
+
+#~ msgid "Delete"
+#~ msgstr "Suprimeix"
+
+#~ msgid "Summary"
+#~ msgstr "Sumari"
+
+#~ msgid "Error while accessing recording!"
+#~ msgstr "S'ha produït un error en accedir a la gravació!"
+
+#~ msgid "Delete recording?"
+#~ msgstr "Suprimir gravació?"
+
+#~ msgid "Edit"
+#~ msgstr "Edita"
+
+#~ msgid "New"
+#~ msgstr "Nova"
+
+#~ msgid "On/Off"
+#~ msgstr "On/Off"
+
+#~ msgid "Delete timer?"
+#~ msgstr "Suprimir gravació programada?"
+
+#~ msgid "MTWTFSS"
+#~ msgstr "MTWFSS"
+
+#~ msgid "Please restart VDR to activate changes"
+#~ msgstr "Reinicieu l'VDR per activar els canvis"
+
+#~ msgid "Recordings not in sync! Try again..."
+#~ msgstr "Gravacions no sincronitzades! Torneu-ho a provar..."
+
+#~ msgid "Couldn't delete recording! Try again..."
+#~ msgstr "No s'ha pogut suprimir la gravació! Torneu-ho a provar..."
+
+#~ msgid "Couldn't save timer! Try again..."
+#~ msgstr "No s'ha pogut programar la gravació! Torneu-ho a provar..."
+
+#~ msgid "Timers not in sync! Try again..."
+#~ msgstr "Programes no sincronitzats! Torneu-ho a provar..."
+
+#~ msgid "Server error! Try again..."
+#~ msgstr "Error del Servidor! Torneu-ho a provar..."
+
+#~ msgid "Couldn't delete timer! Try again..."
+#~ msgstr "No s'ha pogut suprimir la gravació programada! Torneu-ho a provar..."

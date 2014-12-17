@@ -1,0 +1,30 @@
+#
+# configuration file for reelvdr(d)
+#
+
+# VDR bin and plugins
+VDR=/usr/sbin/vdr
+VDRPLUGINDIR="/usr/lib/vdr"
+
+## Developers: use these for your self-compiled reelvdr
+#VDR=/home/reel/devel/testing/src/vdr-1.7/vdr
+#VDRPLUGINDIR="/home/reel/devel/testing/src/vdr-plugins/lib"
+#LOCALEDIR=/home/reel/devel/testing/src/vdr-1.7/locale
+
+
+# INPUT device used by remote plugin
+#INPUTDEV="/dev/input/eventX"
+
+
+# OUTPUT:
+# one of:  auto | dummydevice
+# reelbox | rbmini
+# xine | xinelibout
+
+OUTPUT="auto"
+
+
+# Skin:
+# one of:  Reel | Enigma | none
+SKIN="Reel"
+

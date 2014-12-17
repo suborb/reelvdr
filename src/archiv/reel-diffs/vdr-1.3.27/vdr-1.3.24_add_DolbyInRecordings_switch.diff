@@ -1,0 +1,70 @@
+diff -Nur vdr-1.3.24_old/config.c vdr-1.3.24/config.c
+--- vdr-1.3.24_old/config.c	2005-02-20 13:52:59.000000000 +0100
++++ vdr-1.3.24/config.c	2005-05-26 21:38:53.000000000 +0200
+@@ -283,6 +283,7 @@
+   VideoFormat = 0;
+   UpdateChannels = 4;
+   UseDolbyDigital = 1;
++  UseDolbyInRecordings = 1;
+   ChannelInfoPos = 0;
+   ChannelInfoTime = 5;
+   OSDLeft = 54;
+@@ -440,6 +441,7 @@
+   else if (!strcasecmp(Name, "VideoFormat"))         VideoFormat        = atoi(Value);
+   else if (!strcasecmp(Name, "UpdateChannels"))      UpdateChannels     = atoi(Value);
+   else if (!strcasecmp(Name, "UseDolbyDigital"))     UseDolbyDigital    = atoi(Value);
++  else if (!strcasecmp(Name, "UseDolbyInRecordings")) UseDolbyInRecordings = atoi(Value);
+   else if (!strcasecmp(Name, "ChannelInfoPos"))      ChannelInfoPos     = atoi(Value);
+   else if (!strcasecmp(Name, "ChannelInfoTime"))     ChannelInfoTime    = atoi(Value);
+   else if (!strcasecmp(Name, "OSDLeft"))             OSDLeft            = atoi(Value);
+@@ -504,6 +506,7 @@
+   Store("VideoFormat",        VideoFormat);
+   Store("UpdateChannels",     UpdateChannels);
+   Store("UseDolbyDigital",    UseDolbyDigital);
++  Store("UseDolbyInRecordings", UseDolbyInRecordings);
+   Store("ChannelInfoPos",     ChannelInfoPos);
+   Store("ChannelInfoTime",    ChannelInfoTime);
+   Store("OSDLeft",            OSDLeft);
+diff -Nur vdr-1.3.24_old/config.h vdr-1.3.24/config.h
+--- vdr-1.3.24_old/config.h	2005-05-05 13:04:18.000000000 +0200
++++ vdr-1.3.24/config.h	2005-05-26 21:39:03.000000000 +0200
+@@ -241,6 +241,7 @@
+   int VideoFormat;
+   int UpdateChannels;
+   int UseDolbyDigital;
++  int UseDolbyInRecordings;
+   int ChannelInfoPos;
+   int ChannelInfoTime;
+   int OSDLeft, OSDTop, OSDWidth, OSDHeight;
+diff -Nur vdr-1.3.24_old/menu.c vdr-1.3.24/menu.c
+--- vdr-1.3.24_old/menu.c	2005-03-20 16:14:51.000000000 +0100
++++ vdr-1.3.24/menu.c	2005-05-26 21:39:09.000000000 +0200
+@@ -2168,6 +2168,7 @@
+ cMenuSetupRecord::cMenuSetupRecord(void)
+ {
+   SetSection(tr("Recording"));
++  Add(new cMenuEditBoolItem( tr("Setup.Recording$Record Dolby"),     &data.UseDolbyInRecordings));
+   Add(new cMenuEditIntItem( tr("Setup.Recording$Margin at start (min)"),     &data.MarginStart));
+   Add(new cMenuEditIntItem( tr("Setup.Recording$Margin at stop (min)"),      &data.MarginStop));
+   Add(new cMenuEditIntItem( tr("Setup.Recording$Primary limit"),             &data.PrimaryLimit, 0, MAXPRIORITY));
+diff -Nur vdr-1.3.24_old/recorder.c vdr-1.3.24/recorder.c
+--- vdr-1.3.24_old/recorder.c	2005-01-16 13:53:17.000000000 +0100
++++ vdr-1.3.24/recorder.c	2005-05-26 21:39:15.000000000 +0200
+@@ -128,7 +128,7 @@
+ }
+ 
+ cRecorder::cRecorder(const char *FileName, int Ca, int Priority, int VPid, const int *APids, const int *DPids, const int *SPids)
+-:cReceiver(Ca, Priority, VPid, APids, Setup.UseDolbyDigital ? DPids : NULL, SPids)
++:cReceiver(Ca, Priority, VPid, APids, Setup.UseDolbyInRecordings ? DPids : NULL, SPids)
+ ,cThread("recording")
+ {
+   active = false;
+@@ -139,7 +139,7 @@
+ 
+   ringBuffer = new cRingBufferLinear(RECORDERBUFSIZE, TS_SIZE * 2, true, "Recorder");
+   ringBuffer->SetTimeouts(0, 100);
+-  remux = new cRemux(VPid, APids, Setup.UseDolbyDigital ? DPids : NULL, SPids, true);
++  remux = new cRemux(VPid, APids, Setup.UseDolbyInRecordings ? DPids : NULL, SPids, true);
+   writer = new cFileWriter(FileName, remux);
+ }
+ 

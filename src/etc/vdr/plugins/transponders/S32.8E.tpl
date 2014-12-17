@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S32.8E
+2=Galaxy 11
+3=East
+4=32.8

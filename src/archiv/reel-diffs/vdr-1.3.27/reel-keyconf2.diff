@@ -1,0 +1,250 @@
+Nur in vdr-1.3.27: keyconf.diff.
+Gemeinsame Unterverzeichnisse: vdr-1.3.27_orig/libsi und vdr-1.3.27/libsi.
+diff -bu vdr-1.3.27_orig/menu.c vdr-1.3.27/menu.c
+--- vdr-1.3.27_orig/menu.c	2005-08-10 21:03:20.000000000 +0200
++++ vdr-1.3.27/menu.c	2005-08-10 21:53:49.000000000 +0200
+@@ -3168,13 +3168,14 @@
+ 
+ #define DIRECTCHANNELTIMEOUT 1500 //ms
+ 
+-cDisplayChannel::cDisplayChannel(int Number, bool Switched)
++cDisplayChannel::cDisplayChannel(int Number, bool Switched, bool Timeout )
+ :cOsdObject(true)
+ {
+   group = -1;
+   withInfo = !Switched || Setup.ShowInfoOnChSwitch;
+   displayChannel = Skins.Current()->DisplayChannel(withInfo);
+   number = 0;
++  timeout = Timeout;
+   channel = Channels.GetByNumber(Number);
+   lastPresent = lastFollowing = NULL;
+   if (channel) {
+@@ -3185,11 +3186,12 @@
+   lastTime.Set();
+ }
+ 
+-cDisplayChannel::cDisplayChannel(eKeys FirstKey)
++cDisplayChannel::cDisplayChannel(eKeys FirstKey, bool Timeout)
+ :cOsdObject(true)
+ {
+   group = -1;
+   number = 0;
++  timeout = Timeout;
+   lastPresent = lastFollowing = NULL;
+   lastTime.Set();
+   withInfo = Setup.ShowInfoOnChSwitch;
+@@ -3323,7 +3325,7 @@
+          Refresh();
+          break;
+     case kNone:
+-         if (number && lastTime.Elapsed() > DIRECTCHANNELTIMEOUT) {
++         if (number && lastTime.Elapsed() > DIRECTCHANNELTIMEOUT && timeout) {
+             if (Channels.GetByNumber(number))
+                Channels.SwitchTo(number);
+             else {
+@@ -3339,6 +3341,8 @@
+     //TODO
+     //XXX case kGreen:  return osEventNow;
+     //XXX case kYellow: return osEventNext;
++    case kHelp:
++        return osEnd; 
+     case kOk:     if (group >= 0) {
+                      channel = Channels.Get(Channels.GetNextNormal(group));
+                      if (channel)
+@@ -3354,7 +3358,7 @@
+                      return osEnd;
+                      }
+     };
+-  if (lastTime.Elapsed() < (uint64)(Setup.ChannelInfoTime * 1000)) {
++  if (lastTime.Elapsed() < (uint64)(Setup.ChannelInfoTime * 1000) || !timeout) {
+      if (!number && group < 0 && channel && channel->Number() != cDevice::CurrentChannel())
+         Refresh(); // makes sure a channel switch through the SVDRP CHAN command is displayed
+      DisplayInfo();
+diff -bu vdr-1.3.27_orig/menu.h vdr-1.3.27/menu.h
+--- vdr-1.3.27_orig/menu.h	2005-08-10 21:03:20.000000000 +0200
++++ vdr-1.3.27/menu.h	2005-08-10 21:56:04.000000000 +0200
+@@ -52,6 +52,7 @@
+   bool withInfo;
+   cTimeMs lastTime;
+   int number;
++  bool timeout;
+   cChannel *channel;
+   const cEvent *lastPresent;
+   const cEvent *lastFollowing;
+@@ -59,8 +60,8 @@
+   void DisplayInfo(void);
+   void Refresh(void);
+ public:
+-  cDisplayChannel(int Number, bool Switched);
+-  cDisplayChannel(eKeys FirstKey);
++  cDisplayChannel(int Number, bool Switched, bool Timeout = true );
++  cDisplayChannel(eKeys FirstKey, bool Timeout = true );
+   virtual ~cDisplayChannel();
+   virtual eOSState ProcessKey(eKeys Key);
+   };
+Binärdateien vdr-1.3.27_orig/menu.o and vdr-1.3.27/menu.o sind verschieden.
+Gemeinsame Unterverzeichnisse: vdr-1.3.27_orig/.svn und vdr-1.3.27/.svn.
+Gemeinsame Unterverzeichnisse: vdr-1.3.27_orig/symbols und vdr-1.3.27/symbols.
+Binärdateien vdr-1.3.27_orig/vdr and vdr-1.3.27/vdr sind verschieden.
+diff -bu vdr-1.3.27_orig/vdr.c vdr-1.3.27/vdr.c
+--- vdr-1.3.27_orig/vdr.c	2005-08-10 21:03:21.000000000 +0200
++++ vdr-1.3.27/vdr.c	2005-08-11 19:16:44.000000000 +0200
+@@ -391,6 +391,10 @@
+   bool ForceShutdown = false;
+   bool UserShutdown = false;
+   bool TimerInVpsMargin = false;
++  eOSState active_function = osUnknown;
++  eOSState active_function_cp = osUnknown;
++  eOSState last_active_function = osUnknown; 
++  bool channelinfo_requested = false;
+ 
+   // Load plugins:
+ 
+@@ -617,7 +621,8 @@
+         // Channel display:
+         if (!EITScanner.Active() && cDevice::CurrentChannel() != LastChannel) {
+            if (!Menu)
+-              Menu = Temp = new cDisplayChannel(cDevice::CurrentChannel(), LastChannel > 0);
++              Menu = Temp = new cDisplayChannel(cDevice::CurrentChannel(), LastChannel > 0, !channelinfo_requested);
++           channelinfo_requested = false; 
+            LastChannel = cDevice::CurrentChannel();
+            LastChannelChanged = time(NULL);
+            }
+@@ -685,7 +690,8 @@
+                key = kNone; // nobody else needs to see this key
+                if (Menu) {
+                   DELETENULL(Menu);
+-                  if (!Temp)
++                  active_function = osUnknown;
++                  //if (!Temp)
+                      break;
+                   }
+                if (cControl::Control())
+@@ -693,21 +699,30 @@
+                Menu = new cMenuMain(cControl::Control());
+                Temp = NULL;
+                break;
+-          #define DirectMainFunction(function...)\
++            #define DirectMainFunction(function, name)\
+             DELETENULL(Menu);\
++            active_function_cp = active_function;\
++            if (function == osChannels && last_active_function == osPlugin);\
++            else if (function != active_function) {\
+             if (cControl::Control())\
+                cControl::Control()->Hide();\
+-            Menu = new cMenuMain(cControl::Control(), function);\
++                active_function = function;\
++                Menu = new cMenuMain(cControl::Control(), function, name);\
+             Temp = NULL;\
++            }\
++            else {\
++               active_function = osUnknown;\
++            }\
++            last_active_function = active_function_cp;\
+             key = kNone; // nobody else needs to see this key
+-          case kSchedule:   DirectMainFunction(osSchedule); break;
+-          case kChannels:   DirectMainFunction(osChannels); break;
+-          case kTimers:     DirectMainFunction(osTimers); break;
+-          case kRecordings: DirectMainFunction(osRecordings); break;
++          case kSchedule:   DirectMainFunction(osSchedule, NULL); break;
++          case kChannels:   DirectMainFunction(osChannels, NULL); break;
++          case kTimers:     DirectMainFunction(osTimers, NULL); break;
++          case kRecordings: DirectMainFunction(osRecordings, NULL); break;
+           case kSetup:      cRemote::PutMacro(key); break;
+                //PluginManager.GetPlugin("setup"); break;
+                //DirectMainFunction(osSetup); break;
+-          case kCommands:   DirectMainFunction(osCommands); break;
++          case kCommands:   DirectMainFunction(osCommands, NULL); break;
+           case kUser1 ... kUser9: cRemote::PutMacro(key); key = kNone; break;
+           case k_Plugin:    DirectMainFunction(osPlugin, cRemote::GetPlugin()); break;
+           // Channel up/down:
+@@ -742,6 +757,7 @@
+                   cControl::Control()->Hide();
+                if (Temp && !cDisplayTracks::IsOpen()) {
+                   DELETENULL(Menu);
++                  active_function = osUnknown;
+                   Temp = NULL;
+                   }
+                if (!Menu && !cOsd::IsOpen())
+@@ -754,6 +770,7 @@
+           case kPause:
+                if (!cControl::Control()) {
+                   DELETENULL(Menu);
++                  active_function = osUnknown;
+                   Temp = NULL;
+                   if (!cRecordControls::PauseLiveVideo())
+                      Skins.Message(mtError, tr("No free DVB device to record!"));
+@@ -773,6 +790,7 @@
+           // Power off:
+           case kPower: isyslog("Power button pressed");
+                        DELETENULL(Menu);
++                       active_function = osUnknown;
+                        Temp = NULL;
+                        if (!Shutdown) {
+                           Skins.Message(mtError, tr("Can't shutdown - option '-s' not given!"));
+@@ -794,12 +812,14 @@
+               state = cControl::Control()->ProcessKey(key);
+            switch (state) {
+              case osPause:  DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown(); // just in case
+                             Temp = NULL;
+                             if (!cRecordControls::PauseLiveVideo())
+                                Skins.Message(mtError, tr("No free DVB device to record!"));
+                             break;
+              case osRecord: DELETENULL(Menu);
++                            active_function = osUnknown;
+                             Temp = NULL;
+                             if (cRecordControls::Start())
+                                ;//XXX Skins.Message(mtInfo, tr("Recording"));
+@@ -808,22 +828,26 @@
+                             break;
+              case osRecordings:
+                             DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             Menu = new cMenuMain(false, osRecordings);
+                             break;
+              case osReplay: DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             cControl::Launch(new cReplayControl);
+                             break;
+              case osStopReplay:
+                             DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             break;
+              case osSwitchDvb:
+                             DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             Skins.Message(mtInfo, tr("Switching primary DVB..."));
+@@ -836,7 +860,10 @@
+                             break;
+              case osBack:
+              case osEnd:    if (Interact == Menu)
++                            {
+                                DELETENULL(Menu);
++                               active_function = osUnknown;
++                            }
+                             else
+                                cControl::Shutdown();
+                             Temp = NULL;
+@@ -873,8 +900,8 @@
+                   cDevice::SwitchChannel(NORMALKEY(key) == kUp ? 1 : -1);
+                   break;
+              // Viewing Control:
+-             case kOk:   DirectMainFunction(osChannels); break;
+-             case kHelp:   LastChannel = -1; break; // forces channel display
++             case kOk: DirectMainFunction(osChannels, NULL); break;
++             case kHelp:   LastChannel = -1; channelinfo_requested = true; break; // forces channel display
+              // Instant resume of the last viewed recording:
+              case kPlay:
+                   if (cReplayControl::LastReplayed()) {
+Nur in vdr-1.3.27: vdr.c~.
+Binärdateien vdr-1.3.27_orig/vdr.o and vdr-1.3.27/vdr.o sind verschieden.

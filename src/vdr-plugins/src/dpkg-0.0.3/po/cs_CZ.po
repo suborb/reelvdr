@@ -1,0 +1,194 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2009-02-26 16:30+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr "Modul Dpkg"
+
+msgid "Start Online Update"
+msgstr "Spustit online aktualizaci"
+
+msgid "Updates available! Press OK to update now."
+msgstr "Aktualizace jsou k dispozici. Tlačítkem OK provedete aktualizaci."
+
+msgid "Addon Plugin"
+msgstr "Přídavný modul"
+
+msgid "Optional Software "
+msgstr "Volitelný software"
+
+msgid "Online Update"
+msgstr "Online aktualizace"
+
+msgid "Updating sources..."
+msgstr "Aktualizace zdrojů..."
+
+msgid "Updating packages..."
+msgstr "Aktualizace balíčků..."
+
+msgid "Rebooting, please wait..."
+msgstr "Restartování... Počkejte prosím"
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Aktualizace softwaru prostřednictvím online připojení:"
+
+msgid "Upgrade"
+msgstr "Upgradovat"
+
+msgid "Install"
+msgstr "Instalovat"
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Skip"
+msgstr "Přeskočit"
+
+msgid "Packages"
+msgstr "Balíčky"
+
+msgid "Optional"
+msgstr "Volitelné"
+
+msgid "Sources"
+msgstr "Zdroje"
+
+#, fuzzy
+msgid "Please restart your ReelBox after the recording."
+msgstr "Restartujte zařízení ReelBox!"
+
+msgid "Reboot ?"
+msgstr "Restartovat?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr "Rušení..."
+
+msgid "Press OK to abort update."
+msgstr "Aktualizaci přerušíte tlačítkem OK."
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "Aktualizace zdrojů se nezdařila! Hledání aktualizací..."
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "Aktualizace zdrojů se nezdařila! Hledání balíčků..."
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Zdroje jsou aktuální. Hledání aktualizací..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Zdroje jsou aktuální. Hledání balíčků..."
+
+msgid "Failed to process all packages!"
+msgstr "Zpracování balíčků se nezdařilo!"
+
+msgid "Failed"
+msgstr "Neúspěch"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Nové balíčky nainstalujete výběrem příkazu Upgradovat."
+
+msgid "Following packages will be updated:"
+msgstr "Budou aktualizovány následující balíčky:"
+
+msgid "The software is up to date."
+msgstr "Software je aktuální."
+
+msgid "No updates found."
+msgstr "Nebyly nalezeny žádné aktualizace."
+
+msgid "Downloading Packages..."
+msgstr "Stahování balíčků..."
+
+msgid "Processing Packages..."
+msgstr "Zpracování balíčků..."
+
+msgid "All changes successfull!"
+msgstr "Všechny změny byly úspěšně provedeny!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Restartujte zařízení ReelBox!"
+
+msgid "Please go into deep standby,"
+msgstr "Přejděte do režimu spánku,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "restartujte ReelBox a aktualizaci zopakujte."
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "Load"
+msgstr "Načíst"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Zkontrolujte připojení k Internetu."
+
+msgid "IGN"
+msgstr "IGN"
+
+msgid "Source list"
+msgstr "Seznam zdrojů"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Undo"
+msgstr "Zpět"
+
+msgid "Insert"
+msgstr "Vložit"
+
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "Unable to read from sources.list!"
+msgstr "Nelze číst ze souboru sources.list!"
+
+msgid "Unable to write to surces.list!"
+msgstr "Nelze zapisovat do souboru sources.list!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Nastavení Dpkg"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Nastavení volitelného softwaru"
+
+#~ msgid "Recording is running !"
+#~ msgstr "Probíhá nahrávání!"
+
+#~ msgid "Software - Optional packages"
+#~ msgstr "Software - Volitelné moduly"

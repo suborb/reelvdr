@@ -1,0 +1,274 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-reelbox\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-09 12:08+0200\n"
+"PO-Revision-Date: 2008-09-26 12:11+0200\n"
+"Last-Translator: Nicolas Huillard <nhuillard@e-dition.fr>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "brightness"
+msgstr "luminosité"
+
+msgid "contrast"
+msgstr "contraste"
+
+msgid "colour"
+msgstr "couleur"
+
+msgid "sharpness"
+msgstr "netteté"
+
+msgid "gamma cor."
+msgstr "cor. gamma"
+
+msgid "flicker"
+msgstr "scintillement"
+
+msgid "Reset to default"
+msgstr "Reinit. à défaut"
+
+msgid "Picture Settings"
+msgstr "Paramètres Image"
+
+msgid "Fill to Screen"
+msgstr "Remplir l'écran"
+
+msgid "Fill to Aspect"
+msgstr "Remplir avec proportions"
+
+msgid "Crop to Fill"
+msgstr "Remplir en recadrant"
+
+msgid "Setup - Video"
+msgstr "Configuration - Video"
+
+msgid "SDTV only"
+msgstr "SDTV uniq."
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Off"
+msgstr "Désactivé"
+
+msgid "Progressive"
+msgstr "Progessif"
+
+msgid "Interlaced"
+msgstr "Entrelacé"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "Media resolution"
+msgstr "Résolution du média"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Always on"
+msgstr "Toujours activé"
+
+msgid "Always off"
+msgstr "Toujours désactivé"
+
+msgid "On"
+msgstr "Activé"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "SCART"
+msgstr "Péritel"
+
+msgid "Mini-DIN"
+msgstr "Mini-DIN"
+
+msgid "Analog+digital"
+msgstr "Analogique+Numérique"
+
+msgid "Experts"
+msgstr "Avancés"
+
+msgid "Video Settings"
+msgstr "Paramètres Video"
+
+msgid "Use extension HD"
+msgstr "Utiliser l'extension HD"
+
+msgid "Output"
+msgstr "Sortie"
+
+msgid "Analog Output"
+msgstr "Sortie analogique"
+
+msgid "Analog Port"
+msgstr "Port analogique"
+
+msgid "Secondary Output"
+msgstr "Sortie secondaire"
+
+msgid "Switching Voltage"
+msgstr "Changement de voltage"
+
+msgid "Display Type"
+msgstr "Type d'écran"
+
+msgid "Aspect Ratio"
+msgstr "Proportion d'image"
+
+msgid "Resolution"
+msgstr "Résolution"
+
+msgid "Refresh Rate"
+msgstr "Rafraichissement"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressif/Entrelacé"
+
+msgid "Deinterlacer for SDTV"
+msgstr "Désentrelacer pour SDTV"
+
+msgid "Dot by Dot"
+msgstr "Point par Point"
+
+msgid "Resolution change"
+msgstr "Changement de résolution"
+
+msgid "OSD scaling"
+msgstr "Mise à l'échelle de l'OSD"
+
+msgid "Overscan"
+msgstr "Overscan"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output mode"
+msgstr "Mode de sortie"
+
+msgid "Anamorphic+WSS"
+msgstr "Anamorphique+Ecran large"
+
+msgid "Anamorphic"
+msgstr "Anamorphique"
+
+msgid "Manual"
+msgstr "Manuel"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Ctrl. des proportions"
+
+msgid "Auto PAL50/PAL60"
+msgstr ""
+
+msgid "PAL50 only"
+msgstr "PAL50 uniq."
+
+msgid "NTSC only"
+msgstr "NTSC uniq."
+
+msgid "Norm/Framerate"
+msgstr "Norme/Image par seconde"
+
+msgid "At Startup"
+msgstr "Au démarrage"
+
+msgid "Scart Voltage"
+msgstr "Voltage péritel"
+
+msgid "Auto 75Hz+60Hz (VESA)"
+msgstr ""
+
+msgid "Auto 50Hz+60Hz (NON-VESA!)"
+msgstr ""
+
+msgid "Auto 67Hz+60Hz (NON-VESA!)"
+msgstr ""
+
+msgid "50Hz Only (NON-VESA!)"
+msgstr "50Hz uniq. (NON-VESA!)"
+
+msgid "60Hz Only (VESA)"
+msgstr "60Hz uniq. (VESA)"
+
+msgid "67Hz Only (NON-VESA!)"
+msgstr "67Hz uniq. (NON-VESA!)"
+
+msgid "75Hz Only (VESA)"
+msgstr "75Hz uniq. (VESA)"
+
+msgid "Framerate"
+msgstr "Image par seconde"
+
+msgid "no"
+msgstr "non"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "Upscaling for SDTV"
+msgstr "Mise à l'échelle pour SDTV"
+
+msgid "Setup - Audio"
+msgstr "Configuration - Audio"
+
+msgid "Audio Settings"
+msgstr "Paramètres Audio"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Utiliser le Dolby Digital"
+
+msgid " Output Dolby D/dts on"
+msgstr " Activer la sortie Dolby D/dts"
+
+msgid "S/P-DIF"
+msgstr "S/P-DIF"
+
+msgid " Output as"
+msgstr " Sortir en tant que"
+
+msgid "Stereo (PCM)"
+msgstr "Stéréo (PCM)"
+
+msgid "bitstream (Dolby D)"
+msgstr "bitstream (Dolby D)"
+
+msgid "Soundcard"
+msgstr "Carte son"
+
+msgid " Delay (1/100s)"
+msgstr " Delai (1/100s)"
+
+msgid "Analog Audio on"
+msgstr "activé l'audio analogique"
+
+msgid "TRS (3.5mm phone jack)"
+msgstr "TRS (3.5mm phone jack)"
+
+msgid "HDMI/SCART/RCA jack"
+msgstr "HDMI/Péritel/RCA jack"
+
+msgid "Analog Mix"
+msgstr "Mix analogique"
+
+msgid "Restart ReelBox now? Please wait 2 minutes!"
+msgstr "Redémarrer Reelbox maintenant?  Attendre svp 2 minutes!"

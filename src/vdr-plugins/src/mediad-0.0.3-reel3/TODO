@@ -1,0 +1,11 @@
++ add support to dmh archive not to use track<nr> with dmh-dvds that only support one track. Do this by looking home many tracks are there. In case only one track is there skip the episode stuff
++ what to do with deviced that are added and in autostart while another media is currently played. Easiest is to do nothing, else ask whether it should be started.
++ when a media is inserted it should not overwrite the other current device, therefor devices should not be global but should be assigned to a specific plugin
++ change videodir reloading while removing device to be only executed with device that has currently relinked recording dir
++ add mediamanager's service interface to allow plugins to tell whether they are finished
++ add image plugin support
++ add support for music
+
+
+Already done:
++ check fstab to find out whether a device is mounted vi fstab

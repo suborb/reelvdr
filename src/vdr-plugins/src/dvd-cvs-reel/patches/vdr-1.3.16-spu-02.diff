@@ -1,0 +1,69 @@
+diff -ur vdr-1.3.16_orig/dvbspu.c vdr-1.3.16/dvbspu.c
+--- vdr-1.3.16_orig/dvbspu.c	2004-11-14 19:07:50.000000000 +0100
++++ vdr-1.3.16/dvbspu.c	2004-11-14 19:08:32.000000000 +0100
+@@ -227,6 +227,7 @@
+     spu = NULL;
+     osd = NULL;
+     spubmp = NULL;
++    allowedShow = false;
+ }
+ 
+ cDvbSpuDecoder::~cDvbSpuDecoder()
+@@ -236,7 +237,7 @@
+     delete osd;
+ }
+ 
+-void cDvbSpuDecoder::processSPU(uint32_t pts, uint8_t * buf)
++void cDvbSpuDecoder::processSPU(uint32_t pts, uint8_t * buf, bool AllowedShow)
+ {
+     setTime(pts);
+ 
+@@ -252,6 +253,7 @@
+     prev_DCSQ_offset = 0;
+ 
+     clean = true;
++    allowedShow = AllowedShow;
+ }
+ 
+ void cDvbSpuDecoder::setScaleMode(cSpuDecoder::eScaleMode ScaleMode)
+@@ -530,7 +532,7 @@
+         } else if (!clean)
+             state = spSHOW;
+ 
+-        if (state == spSHOW || state == spMENU)
++        if ((state == spSHOW && allowedShow) || state == spMENU)
+             Draw();
+ 
+         if (state == spHIDE)
+diff -ur vdr-1.3.16_orig/dvbspu.h vdr-1.3.16/dvbspu.h
+--- vdr-1.3.16_orig/dvbspu.h	2004-11-14 19:07:50.000000000 +0100
++++ vdr-1.3.16/dvbspu.h	2004-11-14 19:08:44.000000000 +0100
+@@ -120,6 +120,7 @@
+     uint16_t prev_DCSQ_offset;
+ 
+     cDvbSpuBitmap *spubmp;
++    bool allowedShow;
+   private:
+     int cmdOffs(void) {
+         return ((spu[2] << 8) | spu[3]);
+@@ -147,7 +148,7 @@
+     void Hide(void);
+     void Draw(void);
+     bool IsVisible(void) { return osd != NULL; }
+-    void processSPU(uint32_t pts, uint8_t * buf);
++    void processSPU(uint32_t pts, uint8_t * buf, bool AllowedShow);
+ };
+ 
+ // --- cDvbSpuPalette -------------------------------------------
+diff -ur vdr-1.3.16_orig/spu.h vdr-1.3.16/spu.h
+--- vdr-1.3.16_orig/spu.h	2004-11-14 19:07:50.000000000 +0100
++++ vdr-1.3.16/spu.h	2004-11-14 19:08:55.000000000 +0100
+@@ -35,7 +35,7 @@
+     virtual void Hide(void) = 0;
+     virtual void Draw(void) = 0;
+     virtual bool IsVisible(void) = 0;
+-    virtual void processSPU(uint32_t pts, uint8_t * buf) = 0;
++    virtual void processSPU(uint32_t pts, uint8_t * buf, bool AllowedShow) = 0;
+ };
+ 
+ #endif                          // __SPU_VDR_H

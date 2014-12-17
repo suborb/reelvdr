@@ -1,0 +1,26 @@
+#!/bin/bash
+# Radio Swiss Pop-Playlist
+# $1 = outfile
+
+### Variabel
+Name="Radio Swiss Pop [www.radioswisspop.ch]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.radioswisspop.ch/cgi-bin/pip/html.cgi?m=playlist&lang=de&v=d&loaded=#onair"
+
+# Artist/Title
+all=`grep -A2 'class="on"' /tmp/playlist`
+title=${all/*$';">'/}; title=${title/$'<'\/'strong>'*/}
+artist=${all/*$'strong><br '\/'>'/}; artist=${artist/$'<'\/'a><'\/'td>'*/}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

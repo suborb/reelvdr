@@ -1,0 +1,425 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvdswitch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 13:40+0200\n"
+"PO-Revision-Date: 2008-09-212:23+0200\n"
+"Last-Translator: Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Reading DVD"
+msgstr "Lese DVD"
+
+msgid "Writing DVD"
+msgstr "Schreibe DVD"
+
+msgid "Copying DVD"
+msgstr "Kopiere DVD"
+
+msgid "Please insert DVD: "
+msgstr "Bitte DVD einlegen: "
+
+msgid "Commands"
+msgstr "Funktionen"
+
+msgid "Burn image"
+msgstr "Abbild brennen"
+
+msgid "Rename image"
+msgstr "Abbild umbenennen"
+
+msgid "Open DVD-tray"
+msgstr "Disk auswerfen"
+
+msgid "Close DVD-tray"
+msgstr "Schließe DVD-Laufwerk"
+
+msgid "Delete cache"
+msgstr "Cache leeren"
+
+msgid "Format DVD-RW"
+msgstr "Formatiere DVD-RW"
+
+msgid "Directory management"
+msgstr "Ordner bearbeiten"
+
+msgid "Success..."
+msgstr "Datenbank erfolgreich gelöscht..."
+
+msgid "Directory Management"
+msgstr "Ordnermanagement"
+
+msgid "Select Directory"
+msgstr "Ordner auswählen"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "Select"
+msgstr "Auswählen"
+
+msgid "Rename"
+msgstr "Umbenennen"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Move"
+msgstr "Verschieben"
+
+msgid "Edit Directories"
+msgstr "Ordner bearbeiten"
+
+msgid "no Rights!"
+msgstr "keine Berechtigung!"
+
+msgid "really delete?"
+msgstr "Wirklich löschen?"
+
+msgid "Directory not empty. however delete?"
+msgstr "Ordner ist nicht leer. Dennoch löschen?"
+
+msgid "no rights!"
+msgstr "keine Berechtigung!"
+
+msgid "no rights to create"
+msgstr "keine Berechtigung zum Erstellen"
+
+msgid "Directory exists"
+msgstr "Ordner existiert bereits"
+
+msgid "no rights to rename"
+msgstr "Keine Berechtigung zum Umbenennen"
+
+msgid "Insert"
+msgstr "Einfügen"
+
+msgid "Specified Writescript not exist!"
+msgstr "Angegebenes Script existiert nicht!"
+
+msgid "Cannot execute Writescript!"
+msgstr "Kann Script nicht ausführen!"
+
+msgid "Burn Now?"
+msgstr "Jetzt brennen?"
+
+msgid "Read DVD"
+msgstr "Lies DVD"
+
+msgid "Specified Readscript not exist!"
+msgstr "Angegebenes Readscript existiert nicht!"
+
+msgid "Cannot execute Readscript!"
+msgstr "Kann Lesescript nicht ausführen!"
+
+msgid "Now Read?"
+msgstr "Jetzt einlesen?"
+
+msgid "Image-File"
+msgstr "Abbild-Datei"
+
+msgid "Image-Directory"
+msgstr "Abbild-Ordner"
+
+msgid "Previously seen DVDs"
+msgstr "Früher gesehene DVDs"
+
+msgid "Archives DVDs and plays it from Harddisk"
+msgstr "Archiviert DVDs und spielt diese von Festplatte"
+
+msgid "Archive Video-DVD"
+msgstr "Video-DVD archivieren"
+
+msgid "Image Directory not readable or does not exist"
+msgstr ""
+
+msgid "DVD-Plugin not found! Function deactivated!"
+msgstr "DVD Plugin nicht gefunden! Funktion deaktiviert!"
+
+msgid "Directory with 'VIDEO_TS' Folder"
+msgstr "Ordner mit 'VIDEO_TS' Ordner"
+
+msgid "Directory"
+msgstr "Ordner"
+
+msgid "File with '.iso' Extension"
+msgstr "Datei mit '.iso' Extension"
+
+msgid "Iso-Image"
+msgstr "Iso-Abbild"
+
+msgid "My DVDs"
+msgstr "Meine DVDs"
+
+msgid "free"
+msgstr "Frei"
+
+msgid "DVD found in drive."
+msgstr "DVD im Laufwerk gefunden."
+
+msgid "Info:"
+msgstr "Hinweis:"
+
+msgid "Use the red button to create a archive."
+msgstr "Mit der roten Taste starten Sie den Kopiervorgang."
+
+msgid "No DVD found in drive."
+msgstr "Keine DVD im Laufwerk gefunden."
+
+msgid "Insert a DVD to create a archive"
+msgstr "Legen Sie eine DVD ein um den Kopiervorgang starten zu können."
+
+msgid "to change"
+msgstr "Wechseln"
+
+msgid "File exists in Directory"
+msgstr "Datei existiert bereits im Ordner"
+
+msgid "Please wait. Searching for DVD images"
+msgstr "Suche nach DVD Abbildern. Bitte warten..."
+
+msgid "without Category"
+msgstr "ohne Kategorie"
+
+#, c-format
+msgid "(Size %03.1f GB)\t"
+msgstr "(Größe %03.1f GB)\t"
+
+msgid "DVD-Drive"
+msgstr "DVD-Laufwerk"
+
+msgid "insert Media"
+msgstr "DVD einlegen"
+
+msgid "no Rights to rename"
+msgstr "keine Berechtigung zum schreiben"
+
+msgid "RIP a DVD"
+msgstr "DVD auslesen"
+
+msgid "All Images"
+msgstr "Alle Abbilder"
+
+msgid "All with Cat."
+msgstr "Alle mit Kat."
+
+msgid "Directories"
+msgstr "Ordner"
+
+msgid "Image-Type"
+msgstr "Abbild-Typ"
+
+msgid "File-Type"
+msgstr "Datei-Typ"
+
+msgid "none"
+msgstr "Keine"
+
+msgid "ascending"
+msgstr "Aufsteigend"
+
+msgid "descending"
+msgstr "Absteigend"
+
+msgid "none Function"
+msgstr "keine Funktion"
+
+msgid "Dir. Management"
+msgstr "Verz. Management"
+
+msgid "Tray open"
+msgstr "DVD öffnen"
+
+msgid "Tray close"
+msgstr "DVD schließen"
+
+msgid "Play"
+msgstr "Wiedergabe"
+
+msgid "Image rename"
+msgstr "Abbild umbenennen"
+
+msgid "Image move"
+msgstr "Abbild verschieben"
+
+msgid "Image delete"
+msgstr "Abbild löschen"
+
+msgid "Image burn"
+msgstr "Abbild brennen"
+
+msgid "Image read"
+msgstr "Abbild einlesen"
+
+msgid "Dir.Mgmt."
+msgstr "Verz.Mgmt."
+
+msgid "Open"
+msgstr "Öffnen"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Burn"
+msgstr "Brennen"
+
+msgid "Copy"
+msgstr "Kopieren"
+
+msgid "Use -> and <- for opening and closing menus"
+msgstr "Nutze -> oder <- zum öffnen und schließen des Menüs"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Generic Settings"
+msgstr "Allgemeine Einstellungen"
+
+msgid "\tImagetypes"
+msgstr "\tAbbildtypen"
+
+msgid "\tView free DiskSpace"
+msgstr "\tZeige freien Plattenplatz"
+
+msgid "Display Settings"
+msgstr "Anzeigeeinstellungen"
+
+msgid "\tDisplay Mode"
+msgstr "\tAnzeigemodus"
+
+msgid "\t  Category Type"
+msgstr "\t  Art der Kategorie"
+
+msgid "\t  invisible empty Dir's/Cat."
+msgstr "\t  Blende leere Verz./Kat. aus"
+
+msgid "\tAlphabetic Sort"
+msgstr "\talphabetische Sortierung"
+
+msgid "\tvisible DVD-Drive"
+msgstr "\tDVD-LW einblenden"
+
+msgid "Special Display Settings"
+msgstr "Detailierte Anzeigeeinstellungen"
+
+msgid "\tvisible Image-Type Col"
+msgstr "\tZeige Spalte 'Abbildtyp'"
+
+msgid "\t  Width for Image-Col"
+msgstr "\t  Breite für Abbild-Spalte"
+
+msgid "\tchar for Cat.Line"
+msgstr "\tZeichen für Kat.Linie"
+
+msgid "\t  Count before Cat.Name"
+msgstr "\t  Anzahl vorm Kat.Namen"
+
+msgid "\tSpaces before/after Cat.Name"
+msgstr "\tLeerzeichen vor/nach Kat.Name"
+
+msgid "\tCutText for Subcat"
+msgstr "\tTrenntext für Subkat."
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "\tCat.Jump by Left/Right"
+msgstr "\tKat.sprung bei Links/Rechts"
+
+msgid "Key allocation"
+msgstr "Tastenbelegung"
+
+msgid "\tKey 1"
+msgstr "\tTaste 1"
+
+msgid "\tKey 2"
+msgstr "\tTaste 2"
+
+msgid "\tKey 3"
+msgstr "\tTaste 3"
+
+msgid "\tKey 4"
+msgstr "\tTaste 4"
+
+msgid "\tKey 5"
+msgstr "\tTaste 5"
+
+msgid "\tKey 6"
+msgstr "\tTaste 6"
+
+msgid "\tKey 7"
+msgstr "\tTaste 7"
+
+msgid "\tKey 8"
+msgstr "\tTaste 8"
+
+msgid "\tKey 9"
+msgstr "\tTaste 9"
+
+msgid "\tKey 0"
+msgstr "\tTaste 0"
+
+msgid "\tKey Green"
+msgstr "\tTaste Grün"
+
+msgid "\tKey Yellow"
+msgstr "\tTaste Gelb"
+
+msgid "\tKey OK"
+msgstr "\tTaste OK"
+
+msgid "to adjust"
+msgstr "Einstellen"
+
+msgid "Imagetypes"
+msgstr "Abbildtypen"
+
+msgid "Edit"
+msgstr "Ändern"
+
+msgid "really delete Entry?"
+msgstr "Eintrag wirklich löschen?"
+
+msgid "File"
+msgstr "Datei"
+
+msgid "Description:"
+msgstr "Beschreibung:"
+
+msgid "Type-Title:"
+msgstr "Typ-Bezeichnung:"
+
+msgid "Image Type"
+msgstr "Abbildtyp"
+
+msgid "Directory contains:"
+msgstr "Ordner enthält:"
+
+msgid "File Extension:"
+msgstr "Datei-Erweiterung:"
+
+msgid "Hide Extension"
+msgstr "Erweiterung ausblenden"
+
+msgid "'Description' must not empty!"
+msgstr "'Beschreibung' darf nicht leer sein!"
+
+msgid "'Type-Title' must not empty!"
+msgstr "'Typ Bezeichnung' darf nicht leer sein!"
+
+msgid "'Directory contains' must not empty!"
+msgstr "'Ordner enthält' darf nicht leer sein!"
+
+msgid "'File Extension' must not empty!"
+msgstr "'Datei Erweiterung' darf nicht leer sein!"
+
+#~ msgid "Image Directory not readable or not exist"
+#~ msgstr "Abbild Ordner ist nicht lesbar oder existiert nicht"

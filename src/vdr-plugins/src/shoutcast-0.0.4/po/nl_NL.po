@@ -1,0 +1,145 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2011-09-07 18:44+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Internet Radio"
+msgstr "Internet radio"
+
+msgid "My Radio Stations"
+msgstr "Favoriete radio zenders"
+
+msgid "Getting playlist for Genre: "
+msgstr "Afspeellijst per Genre verkrijgen: "
+
+msgid "Internet Radio - Add New Server"
+msgstr "Internet radio - nieuwe server toevoegen"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Internet radio - zender-info bewerken"
+
+msgid "New Station"
+msgstr "Nieuwe zender"
+
+msgid "Station Name"
+msgstr "Station naam"
+
+msgid "Station Url"
+msgstr "Zender Url"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "No URL entered!"
+msgstr "Geen URL opgegeven!"
+
+msgid "Saved"
+msgstr "Opgeslagen"
+
+msgid "Could not be saved!"
+msgstr "Kon niet worden opgeslagen!"
+
+msgid "Already present"
+msgstr "Bestaat al"
+
+msgid "Couldnot save changes"
+msgstr "Kon wijzigingen niet opslaan"
+
+msgid "Check URL: could not open radio-station"
+msgstr "Controleer de URL: kan radiostation niet openen"
+
+msgid "Please wait: opening radio-station"
+msgstr "Momentje aub. station wordt geopend"
+
+msgid "Internet Radio Functions"
+msgstr "Internet radio functie"
+
+msgid "1  Add New Radio Station"
+msgstr "1  Voeg nieuwe zender toe"
+
+msgid "2  Edit current Radio Station"
+msgstr "2  Bewerk huidige zender"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3  Verwijder huidige zender"
+
+msgid "Selected Radio Station:"
+msgstr "Geselecteerde zender:"
+
+msgid "Could not save to disk"
+msgstr "Kon niet worden opgeslagen"
+
+msgid "Deletion failed"
+msgstr "Verwijderen mislukt"
+
+msgid "Internet Radio: My Stations"
+msgstr "Internet radio: Mijn zenders"
+
+msgid "Button$Functions"
+msgstr "Functie"
+
+msgid "No Radio Stations found."
+msgstr "Geen radiozenders gevonden."
+
+msgid "Info:"
+msgstr "Informatie:"
+
+msgid "Please use 'Function' to add a station."
+msgstr "Gebruik 'Functie' om een station toe te voegen"
+
+msgid "Your SHOUTcast is active."
+msgstr "Uw SHOUTcast is aktief."
+
+msgid "Your SHOUTcast DevID is"
+msgstr "Uw SHOUTcast DevID is"
+
+msgid "Reset DevID"
+msgstr "Reset DevID"
+
+msgid "Welcome to Internetradio setup"
+msgstr "Welkom bij de setup van de Internetradio plugin"
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr "SHOUTcast overgegaan is naar een nieuwe (API 2.0) interface en daarom is een toegangscode benodigd om deze service te kunnen gebruiken."
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr "Op de website van AOL Developer Network http://dev.aol.keys, kan deze DevID verkregen worden door u op die site te registreren."
+
+msgid "Enter DevID"
+msgstr "Voer DevID in"
+
+msgid "Show this page again"
+msgstr "Pagina opnieuw tonen"
+
+msgid "Cancel"
+msgstr "Annuleer"
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr "DevID is te kort, deze bestaat minimaal uit 16 karakters"
+
+msgid "Internet Radio Setup"
+msgstr "Internet Radio Setup"
+
+msgid "Radio station added to favorites"
+msgstr "Radiostation toegevoegd aan favorieten"
+
+#~ msgid "Please use 'Function' to add"
+#~ msgstr "Gebruik 'Functie' om toe te voegen"
+
+#~ msgid "a station"
+#~ msgstr "een zender"

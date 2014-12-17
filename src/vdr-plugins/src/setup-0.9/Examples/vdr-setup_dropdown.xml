@@ -1,0 +1,271 @@
+<setup sysconfigFile="/etc/default/sysconfig"
+		bootLinux="/sbin/reboot"
+		bootVDR="mvdrshutdown"
+		VDRlibDir="/opt/lib/vdr"
+		credits="credits" >
+
+<plugins sysconfig="PLUGINLIST">
+	<plugin name="tvonscreen" info="tvonscreen" active="no" />
+</plugins>
+
+<mainmenus>
+	<menu name="TVTV&#160;Service" command="/usr/bin/sudo -s /usr/sbin/reeltvtvd setup">
+		<entry name="Use tvtv service" sysconfig="TVTV" type="bool" value="no"/>
+		<entry name="tvtv server" sysconfig="TVTVServer" type="selection" value="www.tvtv.de">
+			<value>www.tvtv.de</value> <value>www.tvtv.co.uk</value>
+		</entry>
+		<entry name="Username" sysconfig="TVTVUsername" type="text" value="" />
+		<entry name="Password" sysconfig="TVTVPasswd" type="text" value="" />
+	</menu>
+	<menu name="System-Settings" system="Plugins" />
+	<menu name="Front&#160;Panel" command="/etc/init.d/fpleds">
+
+		<entry name="Control LEDs Color" sysconfig="FPCOLOR" type="selection" tr="true" value="blue">
+			<value>blue</value> <value>red</value> <value>pink</value>
+		</entry>
+
+		<entry name="Control LEDs brightness" sysconfig="FPCLEDBR" type="selection" tr="true" value="med">
+			<value>off</value> <value>min</value> <value>low</value>
+			<value>med</value> <value>high</value> <value>max</value>
+		</entry>
+
+		<entry name="Status LEDs brightness" sysconfig="FPSLEDBR" type="selection" tr="true" value="med">
+			<value>off</value> <value>min</value> <value>low</value>
+			<value>med</value> <value>high</value> <value>max</value>
+		</entry>
+
+		<entry name="Display Type -> Black Series" sysconfig="BLACKDISP" type="selection" tr="true" value="no">
+			<value>no</value> <value>yes</value>
+		</entry>
+
+			<entry type="space"> </entry>
+
+		<entry name="Control LEDs Color in standby" sysconfig="FPCOLORSTB" type="selection" tr="true" value="blue">
+			<value>blue</value> <value>red</value> <value>pink</value>
+		</entry>
+
+		<entry name="Control LEDs brightness in standby" sysconfig="FPCLEDBRSTB" type="selection" tr="true" value="med">
+			<value>off</value> <value>min</value> <value>low</value>
+			<value>med</value> <value>high</value> <value>max</value>
+		</entry>
+
+		<entry name="Display brightness in standby" sysconfig="FPDISPBRIGHT" type="selection" tr="true" value="off">
+			<value>off</value> <value>min</value> <value>low</value>
+			<value>med</value> <value>high</value> <value>max</value>
+		</entry>
+	</menu>
+</mainmenus>
+
+<menus>
+	<menu name="Installation" command="/bin/true" info="(?)" help="setup_setinst.hlp">
+		<menu plugin="channelscan" />
+		<menu name="Channel Lists" execute="channelscan_list.sh 2>&amp;1" />
+		<menu name="Software Update">
+			<menu name="Update from CD/DVD" execute="/usr/bin/sudo -s /usr/sbin/reel-update.sh cd_update >/var/log/update.log 2>&amp;1 &amp;"/>
+			<menu plugin="dpkg" />
+			<!-- <menu plugin="dpkgopt" /> -->
+			<entry name="Update-check on system start" sysconfig="UPDATECHECK_ENABLE" type="bool" value="no" />
+		</menu>
+		<menu plugin="netcv" />
+		<menu plugin="install" />
+			<!-- entry name="Tuners in use" sysconfig="TUNER2" type="selection" value="1">
+				<value>1</value><value>2</value><value>3</value><value>4</value><value>5</value><value>6</value>
+			</entry-->
+			<entry type="space" />
+			<entry name="Energy Saving Mode" sysconfig="DS_ENABLE" type="bool" value="no" />
+			<entry name="Energy Saving Mode after (h)" sysconfig="DS_TIMEOUT" type="number" value="2" />
+			<entry name="Enable Control via RS232" sysconfig="USE_SERIAL_REMOTE" type="bool" value="no" />
+			<entry name="Eject Media on Shutdown" sysconfig="DS_EJECT_ENABLE" type="bool" value="no" />
+			<entry name="Disable Bluetooth Support" sysconfig="BLUETOOTH_OFF" type="bool" value="no" command="/usr/bin/sudo -s /usr/sbin/bluetooth_start.sh" />
+	</menu>
+
+	<menu name="Network" info="(?)" help="setup_network.hlp" command="/usr/bin/sudo -s /usr/sbin/setup-net restart">
+		<menu name="Ethernet" command="/usr/bin/sudo -s /usr/sbin/setup-net restart">
+			<entry id="10" name="Ethernet 1" sysconfig="ETH1" type="bool" value="yes" />
+			<if_equal id="10" value="yes" >
+				<entry id="11" name=" Use DHCP" sysconfig="ETH1_USE_DHCP" type="bool" value="no" />
+				<if_equal id="11" value="no" >
+					<entry name=" IP Address" sysconfig="ETH1_IP" type="ip" value="192.168.1.175" />
+					<entry name=" Network mask" sysconfig="ETH1_NETMASK" type="ip" value="255.255.255.0" />
+				</if_equal>
+			</if_equal>
+			<entry type="space" />
+		
+            <entry id="21" name="Ethernet 2" sysconfig="ETH2" type="bool" value="no" />
+            <if_equal id="21" value="yes" >
+				<entry id="22" name=" Use DHCP" sysconfig="ETH2_USE_DHCP" type="bool" value="no" />
+                <if_equal id="22" value="no" >
+					<entry name=" IP Address" sysconfig="ETH2_IP" type="ip" value="192.168.0.176" />
+					<entry name=" Network mask" sysconfig="ETH2_NETMASK" type="ip" value="255.255.255.0" />
+				</if_equal>
+			</if_equal>
+			<entry type="space" />
+
+			<entry name="NetCeiver bridge" sysconfig="ETH0_BRIDGE" type="selection" value="-" >
+				<value>-</value><value>Ethernet 1</value><value>Ethernet 2</value>
+			</entry>
+		</menu>
+                    <menu name="Wireless LAN" system="WLAN" />
+                    <menu name="Wireless LAN (old)" command="/usr/bin/sudo -s /usr/sbin/setup-net restart">
+			<entry id="6" name="Use WLAN" sysconfig="WLAN" type="bool" value="yes" />
+            <if_equal id="6" value="yes">
+				<entry id="61" name=" Use DHCP" sysconfig="WLAN_DHCP" type="bool" value="no" />
+                <if_equal id="61" value="no">
+                    <entry name=" IP Address" sysconfig="WLAN_IP" type="ip" value="192.168.1.200" />
+                    <entry name=" Network mask" sysconfig="WLAN_NETMASK" type="ip" value="255.255.255.0" />
+                </if_equal>
+
+				<entry id="3" name=" Encryption" sysconfig="WLAN_MODUS" type="selection" value="Open">
+					<value>WEP</value> <value>WPA</value> <value>Open</value>
+				</entry>
+				<entry type="space" />
+				<if_equal id="3" value="WEP">
+					<entry name="(E)SSID" sysconfig="WLAN_SSID" type="text" value="ar0815" />
+					<entry name="Mode" sysconfig="WLAN_MODE" type="selection" value="ad-hoc">
+						<value>ad-hoc</value> <value>managed</value>
+					</entry>
+					<entry name="Security" sysconfig="WLAN_SEC" type="selection" value="open">
+						<value>open</value> <value>restricted</value>
+					</entry>
+					<entry name="Channel" sysconfig="WLAN_CHANNEL" type="selection" value="6">
+						<value>1</value> <value>2</value> <value>3</value> <value>4</value>
+						<value>5</value> <value>6</value> <value>7</value> <value>8</value>
+						<value>9</value> <value>10</value> <value>11</value> <value>12</value>
+						<value>13</value> <value>14</value>
+					</entry>
+					<entry id="5" name="Use WEP Key #" sysconfig="WLAN_WEP_KEY" type="selection" value="0">
+						<value>none</value> <value>1</value> <value>2</value> <value>3</value> <value>4</value>
+					</entry>
+
+                    <if_equal id="5" value="1">
+						<entry name="WEP Key 1" sysconfig="WLAN_WEP_KEY_1" type="hex" value="E8:B5:5E:65:B9" />
+                    </if_equal>
+                    <if_equal id="5" value="2">
+						<entry name="WEP Key 2" sysconfig="WLAN_WEP_KEY_2" type="hex" value="35:45:BC:D0:D9" />
+                    </if_equal>
+                    <if_equal id="5" value="3">
+						<entry name="WEP Key 3" sysconfig="WLAN_WEP_KEY_3" type="hex" value="E1:90:9A:E7:B0" />
+                    </if_equal>
+                    <if_equal id="5" value="4">
+						<entry name="WEP Key 4" sysconfig="WLAN_WEP_KEY_4" type="hex" value="7A:1E:E0:80:1E" />
+                    </if_equal>
+                </if_equal>
+
+                <if_equal id="3" value="WPA">
+					<entry name="WPA (E)SSID" sysconfig="WPA_SSID" type="text" value="ar0815" />
+					<entry name="Scan SSID" sysconfig="SCAN_SSID" type="selection" value="1">
+						<value>0</value><value>1</value>
+					</entry>
+					<entry name="EAPOL VERSION" sysconfig="EAPOL_VERSION" type="selection" value="1">
+                        <value>1</value><value>2</value>
+                    </entry>
+                    <entry name="AP SCAN" sysconfig="AP_SCAN" type="selection" value="2">
+                        <value>1</value><value>2</value>
+                    </entry>
+					<entry name="Key MGMT" sysconfig="KEY_MGMT" type="selection" value="WPA-PSK">
+						<value>WPA-PSK</value>
+					</entry>
+					<entry name="Proto" sysconfig="PROTO" type="selection" value="WPA">
+						<value>WPA</value> <value>RSN</value>
+					</entry>
+					<entry name="Pairwise" sysconfig="PAIRWISE" type="selection" value="TKIP">
+						<value>TKIP</value> <value>CCMP</value>
+					</entry>
+					<entry name="Group" sysconfig="GROUP" type="selection" value="TKIP">
+						<value>TKIP</value> <value>CCMP</value>
+					</entry>
+					<entry name="PSK (Passphrase)" sysconfig="PSK_PLAIN" type="text" value="12345678" />
+                </if_equal>
+            </if_equal>                    
+		</menu>
+		<menu name="Global Settings" command="/usr/bin/sudo -s /usr/sbin/setup-net restart">
+			<entry name="Hostname" sysconfig="HOSTNAME" type="text" value="ReelBox" />
+			<entry name="Domain" sysconfig="DOMAIN" type="text" value="local" />
+			<entry name="Gateway" sysconfig="GATEWAY" type="ip" value="192.168.0.254" />
+			<entry name="Nameserver" sysconfig="NAMESERVER" type="ip" value="" />
+			<entry id="111" name="Use Proxy" sysconfig="USE_PROXY" type="bool" value="no" />
+			<if_equal id="111" value="yes">
+				<entry name="Proxy IP" sysconfig="PROXY_IP" type="ip" value="192.168.0.5" />
+				<entry name="Proxy Port" sysconfig="PROXY_PORT" type="number" value="8080" />
+			</if_equal>
+			<entry name="Enable Wake-on-LAN" sysconfig="WOL_ENABLE" type="bool" value="yes" />
+		</menu>
+		<menu name="Network Services" >
+			<menu name="NFS Client" command="/usr/bin/sudo -s /usr/sbin/nfs_client restart">
+				<entry id="120" name="Use NFS Client" sysconfig="START_NFSCL" type="bool" value="no" />
+                <if_equal id="120" value="yes">
+					<entry name="Host/IP" sysconfig="NFS_PC" type="ip" value="192.168.0.245" />
+					<entry name="Sharename" sysconfig="NFS_SHARECL" type="text" value="/home/reelbox" />
+					<menu name="Expert Settings">
+						<entry name="NFS Version" sysconfig="NFS_VERS" type="selection" value="3">
+							<value>2</value><value>3</value>
+						</entry>
+						<entry name="Protocol" sysconfig="NFS_PROTO" type="selection" value="tcp">
+							<value>tcp</value><value>udp</value>
+						</entry>
+						<entry name="Allow writing" sysconfig="NFS_OPT_RW" type="bool" value="yes" />
+						<entry name="Mount hard/soft" sysconfig="NFS_OPT_HS" type="selection" value="soft">
+							<value>soft</value><value>hard</value>
+						</entry>
+						<entry name="Use locking" sysconfig="NFS_OPT_LOCK" type="bool" value="yes" />
+						<entry name="Buffersize" sysconfig="NFS_BSIZE" type="selection" value="8192">
+							<value>2048</value><value>4096</value><value>8192</value>
+						</entry>
+					</menu>
+                </if_equal>
+			</menu>
+			<menu name="Windows Network Connection" command="/usr/bin/sudo -s /etc/init.d/smb_client restart">
+				<entry id="130" name="Activate shares for Windows" sysconfig="START_SMBSRV" type="bool"
+						value="no" command="/usr/bin/sudo -s /usr/sbin/setup-samba restart"/>
+                <if_equal id="130" value="yes" >
+				    <entry name="Workgroup" sysconfig="SAMBA_WORKGRP" type="text"
+					     	value="ReelNet" command="/usr/bin/sudo -s /usr/sbin/setup-samba restart"/>
+                </if_equal>
+				<entry type="space" />
+
+				<entry id="131" name="Use Windows Client" sysconfig="START_SMBCL" type="bool" value="no" />
+                <if_equal id="131" value="yes" >
+					<entry name="Windows Server" sysconfig="SAMBA_PC" type="ip" value="wserver" />
+					<entry name="Sharename" sysconfig="SAMBA_SHARECL" type="text" value="reelbox" />
+                    <entry name="Username" sysconfig="SMB_USER" type="text" value="Username" />
+                    <entry name="Password" sysconfig="SMB_PASSWORD" type="text" value="Password" />
+                    <entry name="DVD archive directory" sysconfig="NAS_DVDDIR" type="text" value="dvd"/>
+                </if_equal>
+			</menu>
+			<menu name="GnuDIP service" command="/usr/bin/sudo -s /usr/sbin/gnudipd restart">
+				<entry id="140" name="Use GnuDIP service" sysconfig="USE_GNUDIP" type="bool" value="no" />                    
+	            <if_equal id="140" value="yes" >
+					<entry name="Username" sysconfig="GNUDIPUSER" type="text" value="Username" />
+					<entry name="Password" sysconfig="GNUDIPPASS" type="text" value="Password" />
+					<entry name="GnuDIP Domain" sysconfig="GNUDIPDOMN" type="text" value="mydom.net" />
+					<entry name="GnuDIP Server" sysconfig="GNUDIPSRV" type="text" value="www.mydom.net" />
+	            </if_equal>
+			</menu>
+			<menu name="DynDNS service" command="/usr/bin/sudo -s /usr/sbin/dyndnsd restart">
+				<entry id="145" name="Use DynDNS service" sysconfig="USE_DYNDNS" type="bool" value="no" />
+	            <if_equal id="145" value="yes" >
+					<entry name="Username" sysconfig="DDNSUSER" type="text" value="Username" />
+					<entry name="Password" sysconfig="DDNSPASS" type="text" value="Password" />
+					<entry name="DynDNS hostname" sysconfig="DDNSHOST" type="text" value="myhost" />
+	            </if_equal>
+			</menu>
+			<entry name="Enable UPnP service" sysconfig="UPNP_ENABLE" type="bool" value="yes"
+					command="setup-mediatomb setup" />
+		</menu>
+		<entry type="space"/>
+	</menu>
+	<menu name="Audio - Video" system="Video" />
+	<menu name="Video Recorder " info="(?)" help="setup_video.hlp" >
+		<menu name="Recording settings" system="Record" />
+		<menu name="Playback Settings" system="Replay" />
+		<menu name="Harddisk/Media device" system="RecordingDevice" />
+		<entry type="space" />
+		<!-- <menu plugin="formathd" /> -->
+		<!-- <entry name="Spin down Harddisk (min)" sysconfig="HDTIMEOUT" type="number" value="0" command="/etc/init.d/hdstb"/> -->
+		<entry name="Mark Blocks after Recording" sysconfig="AUTO_NOAD" type="bool" value="no" />
+	</menu>
+	<menu name="Background activity" system="Misc" />
+	<menu name="Common Interfaces" info="(?)" help="setup_ci.hlp" system="CICAM" />
+	<menu name="System settings" info="(?)" help="setup_systein.hlp" system="Plugins" />
+</menus>
+</setup>

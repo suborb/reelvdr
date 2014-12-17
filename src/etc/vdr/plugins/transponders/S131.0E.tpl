@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S131.0E
+2=Vinasat 1
+3=East
+4=131.0

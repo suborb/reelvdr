@@ -1,0 +1,187 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Sascha Volkenandt <sascha at akv-soft dot de>
+                             sponsored by Open Source Factory
+                             designed for xeatre.tv
+
+Project's homepage:          http://www.xeatre.tv/community/burn/
+
+Latest version available at: http://www.xeatre.tv/community/burn/
+
+See the file COPYING for license information.
+
+
+Purpose
+-------
+
+This Plugin enables VDR to write compliant DVDs from VDR recordings while
+being able to control the process and to watch progress from inside VDRs
+on-screen-display. If the selected recordings don't fit the DVD, the video
+tracks are requantized (shrinked) automatically.
+
+The created menus support multipage-descriptions (in case the recording summary
+exceeds one page).
+
+
+Requirements
+------------
+
+g++ >= 3.3       - http://gcc.gnu.org/
+  ** Tested with 3.3.5 (Debian)
+  ** Always compile-checked with 4.1
+
+boost >= 1.32.0  - http://www.boost.org
+  ** If not available for your distribution, you can also use
+  ** http://linux.kompiliert.net/contrib/boost-for-burn-1.33.0.tgz
+  ** (see below)
+
+vdrsync.pl       - http://vdrsync.vdrportal.de
+  ** Tested with 0.1.3PRE1-050322
+  ** http://vdrsync.vdr-portal.de/releases/vdrsync-050322.tgz
+
+ALTERNATIVE for vdrsync.pl:
+ProjectX         - http://www.lucike.info/index.htm?http://www.lucike.info/page_projectx.htm
+  ** Tested with 0.90.4 on Blackdown JRE 1.4.2
+
+SUBTITLE SUPPORT:
+pxsup2dast       - http://www.guru-group.fi/~too/sw/m2vmp2cut/
+
+requant          - http://metakine.com/files
+  ** ATTN: Currently only the snapshot from around July 2004 is supported
+  ** For convenience, I've uploaded the package to:
+  ** http://www.xeatre.tv/community/burn/contrib/M2VRequantizer.tar.gz
+
+GD               - http://www.boutell.com/gd/
+  ** Texted with 2.0.33 (Debian Sarge: libgd2-noxpm[-dev] or libgd2-xpm[-dev])
+  ** needs at least PNG and FreeType support
+
+dvdauthor        - http://dvdauthor.sourceforge.net
+  ** Tested with 0.6.10
+  ** recommended: 0.6.12-alpha-2992-GfD-5 from
+  ** http://www.videohelp.com/~gfd/edcounter.php?file=download/dvdauthor-0.6.12-alpha-2992-GfD-5.zip
+  ** if you want to create discs with titles longer than 10000 seconds
+
+growisofs
+(dvd+rwtools)    - http://fy.chalmers.se/~appro/linux/DVD+RW
+  ** Tested with 5.21
+  ** needs mkisofs (tested 2.01)
+
+png2yuv
+mpeg2enc
+mplex
+(mjpegtools)     - http://mjpeg.sourceforge.net/
+  ** Tested with 1.6.2
+
+Installation
+------------
+
+1. Untar the archive inside VDR's plugin-source folder
+
+   vdr-1.4.2 # tar xvfz -C PLUGINS/src vdr-burn-0.1.0.tgz
+
+2. (optional) If your distributor doesn't provide development packages for the
+   boost libraries (at lease 1.32.0), download the boost-for-burn package from
+   the URL posted in the Requirements section above, and untar it inside the
+   plugin's source directory
+
+   vdr-1.4.2 # tar xvfz -C PLUGINS/src/burn boost-for-burn-1.33.0.tgz
+
+3. Recompile VDR and Plugins
+
+   vdr-1.4.2 # make plugins-clean clean vdr plugins
+
+3b.(optional) Change the default temporary folder, the default DVD writer device
+   and the default ISO directory with TMPDIR (default: /tmp),
+   DVDDEV (default: /dev/dvd) and ISODIR (default: /pub/export)
+
+   vdr-1.4.2 # make DVDDEV=/dev/cdrecorder ISODIR=/export plugins
+
+4. Copy the scripts vdrburn-dvd.sh, vdrburn-archive.sh and the program
+   burn-buffers to some location inside your $PATH.
+
+   vdr-1.4.2 # cp PLUGINS/src/burn/*.sh /usr/bin/
+   vdr-1.4.2 # cp PLUGINS/src/burn/burn-buffers /usr/bin/burn-buffers
+
+5. Copy the font file and menu image templates into "plugins/burn" inside your
+   VDR configuration directory (usually /video0 or /etc/vdr)
+
+   vdr-1.4.2 # cp -a PLUGINS/src/burn/burn /etc/vdr/plugins/
+
+6. (optional) Create a directory "skins" in "plugins/burn" inside your VDR
+   configuration directory. Create sub-directories for each skin you'd like
+   to be offered by the plugin. Place menu-bg.png and/or menu-button.png files
+   inside to use them as skins for the menus of your DVDs.
+
+   vdr-1.4.2 # mkdir /etc/vdr/plugins/burn/skins
+   vdr-1.4.2 # mkdir /etc/vdr/plugins/burn/skins/Star_Trek_TNG
+   vdr-1.4.2 # cp ~/images/star_trek_pal.png \
+                     /etc/vdr/plugins/burn/skins/Star_Trek_TNG/menu-bg.png
+
+7. Enjoy! :-)
+
+
+Usage
+-----
+
+When starting VDR and the Plugin, you can specify the directory where the
+temporary files will reside, your DVD recorder device, and optionally a
+directory where a possible ISO is placed. If you specify both a dvd recorder
+and an iso directory here or at compile time (see above, 3b), you can choose
+in the OSD what actions the plugin will take (create an ISO, burn on-the-fly,
+or do both). Additionally, you have to define a temporary directory and a data
+directory. The temporary directory MUST reside on a filesystem capable of
+handling symlinks and fifos, while the data directory must reside on a
+filesystem with enough free disk space. See vdr -P burn -h for a syntax
+explanation.
+
+To start a new DVD Project, you first have to mark one or several recordings
+for burning. You will be shown the recordings upon entering the plugin's
+submenu. Navigate as usual, and press the "red" button to select a recording.
+
+Now, you can switch to the job view with the "blue" button. You will see
+an overview of the selected recordings along with some additional information.
+You can edit the recording and disc titles by selecting such an entry and
+pressing the "right" button. Editing is done as known from other VDR menus
+(like when editing channel names). Press "Ok" to confirm and save the title.
+
+You can also delete recordings from that list and change the order of
+recordingswith the "green" and "yellow" buttons. You can add recordings by
+leaving the plugin and selecting addigional recordings from the recordings
+menu.
+
+Pressing "Ok" on a recording will open a tracks submenu. Here, you can deselect
+certain audio-tracks with the "red" button (be careful to leave at least one
+audio track active), and reorder them with the "green" button. Press "back" to
+leave the submenu.
+
+Between the recording titles and the disc info, you see a progressbar which
+shows how much space the recordings would consume on a 4,7GB DVD+-R(W). If
+space exceeds a limit, an additional warning "Recordings could be shrinked!"
+is displayed.
+
+The second possible DVD type, "Archive-Disc", just burns the VDR recording
+structure onto the DVD without shrinking, useful in conjunction with the
+Media-Detection Plugin, which can detect and play such discs.
+
+Pressing "red" now starts the necessary processes. If you place an empty
+DVD+-R(W) into your drive, the job will run and finish, and after some time
+(depending on the speed of your computer) the tray will open and the disc is
+finished. Anyway, you will be asked to place an empty disc into the drive if
+you forget it.
+
+You will notice that the display changes after you pressed the "red" button.
+You can switch between all displays using the "blue" button. This way you
+can enqueue additional jobs while one job is processed. In the status display,
+you can also see a hint on the progress (although the bar is not too precise)
+and whether a job crashed for some reason. If a job is marked as "crashed",
+you could examine the logfiles in /video/.vdr-burn.XXXXX. All intermediate
+files (including logs) are deleted if you remove the erroneous job from the
+status display (using the "yellow" button). You can also re-edit canceled or
+crashed jobs to alter the settings and try again with the "green" button.
+
+
+Caveats
+-------
+
+- No transcoding is done (will fail with non-DVD-compliant DVB-streams)
+

@@ -1,0 +1,194 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2009-06-21 00:34+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Dpkg Plugin"
+msgstr "Plugin Dpkg"
+
+msgid "Start Online Update"
+msgstr "Avviare agg. online"
+
+msgid "Updates available! Press OK to update now."
+msgstr "Aggiornamenti disponibili! Ok -> Aggiornare ora."
+
+msgid "Addon Plugin"
+msgstr "Plugin Addon"
+
+msgid "Optional Software "
+msgstr "Sofware opzionale"
+
+msgid "Online Update"
+msgstr "Aggiornamento online"
+
+msgid "Updating sources..."
+msgstr "Agg. sorgenti in corso..."
+
+msgid "Updating packages..."
+msgstr "Agg. pacchetti in corso..."
+
+msgid "Rebooting, please wait..."
+msgstr "Riavvio in corso. Attendere..."
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Aggiornamento software da connessione online: "
+
+msgid "Upgrade"
+msgstr "Aggiornamento"
+
+msgid "Install"
+msgstr "Installare"
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Skip"
+msgstr "Saltare"
+
+msgid "Packages"
+msgstr "Pacchetti"
+
+msgid "Optional"
+msgstr "Opzionale"
+
+msgid "Sources"
+msgstr "Sorgenti"
+
+msgid "Please restart your ReelBox after the recording."
+msgstr "Riavviare il ReelBox al termine della registrazione."
+
+msgid "Reboot ?"
+msgstr "Riavviare?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr "Interruzione in corso..."
+
+msgid "Press OK to abort update."
+msgstr "Ok -> Interrompere l'aggiornamento."
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "Aggiornamento sorgenti fallito! Ricerca aggiornamenti in corso... "
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "Aggiornamento sorgenti fallito! Ricerca pacchetti in corso... "
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Sorgenti aggiornate. Ricerca aggiornamenti in corso..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Sorgenti aggiornate. Ricerca pacchetti in corso..."
+
+msgid "Failed to process all packages!"
+msgstr "Elaborazione pacchetti fallita!"
+
+msgid "Failed"
+msgstr "Fallito!"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Selezionare aggiornare per installare i nuovi pacchetti."
+
+msgid "Following packages will be updated:"
+msgstr "I seguenti pacchetti saranno aggiornati: "
+
+msgid "The software is up to date."
+msgstr "Il software è aggiornato."
+
+msgid "No updates found."
+msgstr "Nessun aggiornamenti trovato."
+
+msgid "Downloading Packages..."
+msgstr "Dowload pacchetti in corso..."
+
+msgid "Processing Packages..."
+msgstr "Elaborazione pacchetti in corso..."
+
+msgid "All changes successfull!"
+msgstr "Modifice eseguite correttamente!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Riavviare il ReelBox!"
+
+msgid "Please go into deep standby,"
+msgstr "Porre il ReelBox in deep standby,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "riavviare il ReelBox e ritentare l'aggiornamento."
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "Load"
+msgstr "Caricare"
+
+msgid "OK"
+msgstr "Ok"
+
+msgid "Please check your internet connection."
+msgstr "Verificare la connessione a internet."
+
+msgid "IGN"
+msgstr "IGN"
+
+msgid "Source list"
+msgstr "Elenco sorgenti"
+
+msgid "Save"
+msgstr "Salvare"
+
+msgid "Undo"
+msgstr "Annullare"
+
+msgid "Insert"
+msgstr "Inserire"
+
+msgid "Delete"
+msgstr "Cancellare"
+
+msgid "Unable to read from sources.list!"
+msgstr "Impossibile leggere da sources.list!"
+
+msgid "Unable to write to surces.list!"
+msgstr "Impossibile scrivere su sources.list!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Configurazione Dpkg"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Configurazione software opzionale"

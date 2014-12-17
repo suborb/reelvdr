@@ -1,0 +1,50 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-10-20 18:13+0200\n"
+"PO-Revision-Date: 2009-03-02 19:57+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "A plugin to import EPG data into VDR"
+msgstr "Un plugin pentru a importa datele EPG  in VDR"
+
+msgid "Load custom EPG"
+msgstr ""
+
+msgid "United Kingdom (BBC+Sky)"
+msgstr "United Kingdom (BBC+Sky)"
+
+msgid " Retrieve EPG now"
+msgstr " Obtin  EPG-ul acum"
+
+msgid "External BBC-SKY EPG"
+msgstr "EPG-ul BBC-SKY Extern"
+
+msgid "Off"
+msgstr "Oprit"
+
+msgid "On"
+msgstr "Pornit"
+
+msgid "Okay, Starting download in the background"
+msgstr "OK, pornesc downloadul in fundal"
+
+msgid "Download already in progress!"
+msgstr "Downloadul deja in progres!"
+
+#~ msgid "Load BBC-SKY EPG"
+#~ msgstr "Incarc EPG-ul BBC-SKY"

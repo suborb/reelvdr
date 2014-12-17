@@ -1,0 +1,30 @@
+#!/bin/bash
+# SPUTNIK-Playlist
+# $1 = outfile
+
+### Variabel
+Name="SPUTNIK [www.sputnik.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.sputnik.de"
+
+# Artist/Title
+present=`grep -A7 'class="current_song"' /tmp/playlist | grep -c 'nicht zu ermitteln'`
+if [ $present = 0 ]; then 
+	artist=`grep -A7 'class="current_song"*' /tmp/playlist`
+	artist=${artist/*$'"name">'/}; artist=${artist/$'<'\/'p>'*/}
+	title=`grep -A8 'class="current_song"*' /tmp/playlist`
+	title=${title/*$'"title">'/}; title=${title/$'<'\/'p>'*/}
+fi
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

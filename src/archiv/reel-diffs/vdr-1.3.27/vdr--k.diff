@@ -1,0 +1,99 @@
+--- vdr-1.3.25-orig/vdr.c	2005-06-24 18:36:56.000000000 +0200
++++ vdr-1.3.25/vdr.c	2005-06-26 21:04:19.671424576 +0200
+@@ -102,11 +102,13 @@
+ #define DEFAULTWATCHDOG     0 // seconds
+ #define DEFAULTPLUGINDIR PLUGINDIR
+ #define DEFAULTEPGDATAFILENAME "epg.data"
++#define DEFAULTCHANNELSFILENAME "channels.conf"
+ 
+   int SVDRPport = DEFAULTSVDRPPORT;
+   const char *AudioCommand = NULL;
+   const char *ConfigDirectory = NULL;
+   const char *EpgDataFileName = DEFAULTEPGDATAFILENAME;
++  const char *ChannelsFileName = DEFAULTCHANNELSFILENAME;
+   bool DisplayHelp = false;
+   bool DisplayVersion = false;
+   bool DaemonMode = false;
+@@ -125,6 +127,7 @@
+       { "device",   required_argument, NULL, 'D' },
+       { "epgfile",  required_argument, NULL, 'E' },
+       { "help",     no_argument,       NULL, 'h' },
++      { "channel",  required_argument, NULL, 'k' },
+       { "lib",      required_argument, NULL, 'L' },
+       { "log",      required_argument, NULL, 'l' },
+       { "mute",     no_argument,       NULL, 'm' },
+@@ -140,7 +143,7 @@
+     };
+ 
+   int c;
+-  while ((c = getopt_long(argc, argv, "a:c:dD:E:hl:L:mp:P:r:s:t:v:Vw:", long_options, NULL)) != -1) {
++  while ((c = getopt_long(argc, argv, "a:c:dD:E:hk:l:L:mp:P:r:s:t:v:Vw:", long_options, NULL)) != -1) {
+         switch (c) {
+           case 'a': AudioCommand = optarg;
+                     break;
+@@ -161,6 +164,8 @@
+                     break;
+           case 'h': DisplayHelp = true;
+                     break;
++          case 'k': ChannelsFileName = (*optarg != '-' ? optarg : NULL);
++                    break;
+           case 'l': {
+                       char *p = strchr(optarg, '.');
+                       if (p)
+@@ -255,6 +260,8 @@
+                "                           if FILE is a directory, the default EPG file will be\n"
+                "                           created in that directory\n"
+                "  -h,       --help         print this help and exit\n"
++		   "  -k,	    --channel=FILE use FILE as channels file (default is '%s' in \n"
++		   "                           the video directory\n"
+                "  -l LEVEL, --log=LEVEL    set log level (default: 3)\n"
+                "                           0 = no logging, 1 = errors only,\n"
+                "                           2 = errors and info, 3 = errors, info and debug\n"
+@@ -274,6 +281,7 @@
+                "                           seconds (default: %d); '0' disables the watchdog\n"
+                "\n",
+                DEFAULTEPGDATAFILENAME,
++		   DEFAULTCHANNELSFILENAME,
+                DEFAULTPLUGINDIR,
+                DEFAULTSVDRPPORT,
+                VideoDirectory,
+@@ -332,6 +340,22 @@
+      fprintf(stderr, "vdr: can't access video directory %s\n", VideoDirectory);
+      return 2;
+      }
++   
++  
++  // Check the channels file 
++  char *channelsFilePath = NULL; 
++  asprintf(&channelsFilePath,"%s",*AddDirectory(ConfigDirectory, ChannelsFileName));
++			
++  if (access(channelsFilePath, R_OK | W_OK)) {
++   fprintf(stderr,"%s does not exist... creating \n",channelsFilePath);
++   MakeDirs(channelsFilePath); 
++   
++   int ret = creat(channelsFilePath, S_IRUSR | S_IWUSR );
++  	if (ret == -1 )
++	   fprintf(stderr,"can`t create %s! \n",channelsFilePath);
++   	else 
++	   close(ret); 
++   }
+ 
+   // Daemon mode:
+ 
+@@ -382,7 +406,7 @@
+   Setup.Load(AddDirectory(ConfigDirectory, "setup.conf"));
+   if (!(Sources.Load(AddDirectory(ConfigDirectory, "sources.conf"), true, true) &&
+         Diseqcs.Load(AddDirectory(ConfigDirectory, "diseqc.conf"), true, Setup.DiSEqC) &&
+-        Channels.Load(AddDirectory(ConfigDirectory, "channels.conf"), false, true) &&
++        Channels.Load(AddDirectory(ConfigDirectory, ChannelsFileName ), false, true) &&
+         Timers.Load(AddDirectory(ConfigDirectory, "timers.conf")) &&
+         Commands.Load(AddDirectory(ConfigDirectory, "commands.conf"), true) &&
+         RecordingCommands.Load(AddDirectory(ConfigDirectory, "reccmds.conf"), true) &&
+@@ -1011,6 +1013,7 @@
+      Setup.CurrentChannel = cDevice::CurrentChannel();
+      Setup.CurrentVolume  = cDevice::CurrentVolume();
+      Setup.Save();
++     Channels.Save();
+      }
+   cDevice::Shutdown();
+   PluginManager.Shutdown();

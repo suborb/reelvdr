@@ -1,0 +1,21 @@
+# this file is read on bash start and is a
+# trick to make aliases work, even in mc which doesn't source /etc/profile :(
+#
+
+umask 002
+
+alias l='ls -lh --color'
+alias la='ls -lah --color'
+alias ll='ls -la --color'
+alias +='pushd .'
+alias -- -='popd'
+alias grep='grep --color'
+
+function f. { find . -name $1 ; }
+function fi. { find . -iname $1 ; }
+function fn { find $1 -name $2 ; }
+function sll { svn log $1 | less ; }
+function sdl { svn diff $* | less ; }
+function build { time make $2 2>&1 | tee $1 build.log ; }
+
+[ -r /usr/sbin/proxy_settings ] && . /usr/sbin/proxy_settings

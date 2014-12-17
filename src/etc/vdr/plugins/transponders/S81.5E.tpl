@@ -1,0 +1,8 @@
+[SATTYPE]
+1=S81.5E
+2=Express AM33
+3=East
+4=81.5
+[EMPTY]
+0=1
+1=3925,R

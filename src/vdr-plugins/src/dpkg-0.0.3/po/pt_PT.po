@@ -1,0 +1,181 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paulo Lopes <pmml@netvita.pt>, 2001
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2008-10-01 15:59+0200\n"
+"Last-Translator: Paulo Lopes <pmml@netvita.pt>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr ""
+
+msgid "Start Online Update"
+msgstr ""
+
+msgid "Updates available! Press OK to update now."
+msgstr ""
+
+msgid "Addon Plugin"
+msgstr ""
+
+msgid "Optional Software "
+msgstr ""
+
+msgid "Online Update"
+msgstr ""
+
+msgid "Updating sources..."
+msgstr ""
+
+msgid "Updating packages..."
+msgstr ""
+
+msgid "Rebooting, please wait..."
+msgstr ""
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr ""
+
+msgid "Upgrade"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Packages"
+msgstr ""
+
+msgid "Optional"
+msgstr ""
+
+msgid "Sources"
+msgstr ""
+
+msgid "Please restart your ReelBox after the recording."
+msgstr ""
+
+msgid "Reboot ?"
+msgstr ""
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr ""
+
+msgid "Press OK to abort update."
+msgstr ""
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr ""
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr ""
+
+msgid "Sources up to date. Searching for updates..."
+msgstr ""
+
+msgid "Sources up to date. Searching for packages..."
+msgstr ""
+
+msgid "Failed to process all packages!"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Now select upgrade to install the new packages."
+msgstr ""
+
+msgid "Following packages will be updated:"
+msgstr ""
+
+msgid "The software is up to date."
+msgstr ""
+
+msgid "No updates found."
+msgstr ""
+
+msgid "Downloading Packages..."
+msgstr ""
+
+msgid "Processing Packages..."
+msgstr ""
+
+msgid "All changes successfull!"
+msgstr ""
+
+msgid "Please restart your ReelBox!"
+msgstr ""
+
+msgid "Please go into deep standby,"
+msgstr ""
+
+msgid "restart the ReelBox and try the update again."
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Load"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Please check your internet connection."
+msgstr ""
+
+msgid "IGN"
+msgstr ""
+
+msgid "Source list"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Undo"
+msgstr ""
+
+msgid "Insert"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Unable to read from sources.list!"
+msgstr ""
+
+msgid "Unable to write to surces.list!"
+msgstr ""

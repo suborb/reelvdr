@@ -1,0 +1,2146 @@
+# VDR language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dimitrios Dimitrakos <mail@dimitrios.de>, 2002, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 13:00+0100\n"
+"PO-Revision-Date: 2007-08-12 14:17+0200\n"
+"Last-Translator: Dimitrios Dimitrakos <mail@dimitrios.de>\n"
+"Language-Team: Greek\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "New Channels"
+msgstr "Κανάλια"
+
+msgid "Favorites"
+msgstr ""
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Ακυρο κανάλη ***"
+
+msgid "Channel not available!"
+msgstr "Το κανάλη δέν είναι διαθέσιμο!"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Αδυναμία εκκίνησης κατάστασης μεταφοράς!"
+
+msgid "Starting EPG scan"
+msgstr "Αρχή σάρωση EPG"
+
+msgid "No title"
+msgstr "Χωρίς Τίτλο"
+
+#, fuzzy
+msgid "No help available"
+msgstr "Μη διαθέσιμος ήχος"
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Ελληνικά"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "ell"
+
+#. TRANSLATORS:
+#. / Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+#, fuzzy
+msgid "Timer Manager"
+msgstr "Χρονοπρογραμματισμοί"
+
+#, fuzzy
+msgid "Search-Timer Manager"
+msgstr "Χρονοπρογραμματισμοί"
+
+msgid "Parental Control"
+msgstr ""
+
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr ""
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr ""
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr ""
+
+msgid "View, edit and manage recording timers"
+msgstr ""
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr ""
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio"
+msgstr ""
+
+msgid "Play music, manage and copy music files"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr ""
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr ""
+
+msgid "Copy an Audio CD to the music library"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Ήχος"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Πρόσθετος χρόνος στην αρχή (λεπτά)"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Πρόσθετος χρόνος στό τέλος (λεπτά)"
+
+#, fuzzy
+msgid "Undelete Recordings"
+msgstr "Διαγραφή εγγραφής?"
+
+msgid "New folder"
+msgstr ""
+
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr ""
+
+#, fuzzy
+msgid "Movie library, TV recordings"
+msgstr "Ακύρωση εγγραφής?"
+
+msgid "Watch movies, manage and copy movie files"
+msgstr ""
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr ""
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr ""
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr ""
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr ""
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Διαγραφή εγγραφής?"
+
+msgid "Playlist"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist actions"
+msgstr "Πόλωση"
+
+#, fuzzy
+msgid "Playlist Commands"
+msgstr "Εντολές"
+
+msgid "Filebrowser Commands"
+msgstr ""
+
+#, fuzzy
+msgid "Save playlist as"
+msgstr "Πόλωση"
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "File Manager, Web browser, ReelBlog"
+msgstr ""
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr ""
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr ""
+
+msgid "Read news & information on the ReelBox"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Additional Software"
+msgid "Additional Software"
+msgstr ""
+
+msgid "Magazine EPG"
+msgstr ""
+
+msgid "Additional software provided by third party developers"
+msgstr ""
+
+#. TRANSLATORS:
+#. / More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr ""
+
+msgid "Show currently active background processes"
+msgstr ""
+
+msgid "Format a DVD-RW"
+msgstr ""
+
+msgid "Directory browser"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Special Menus that have a bar at the left
+msgid "My Pictures"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "My DVDs"
+msgstr ""
+
+#, fuzzy
+msgid "EPG Commands: "
+msgstr "Εντολές"
+
+#, fuzzy
+msgid "Search actions"
+msgstr "Χρονοπρογραμματισμοί"
+
+#, fuzzy
+msgid "Search entries"
+msgstr "Χρονοπρογραμματισμοί"
+
+#, fuzzy
+msgid "Search templates"
+msgstr "Χρονοπρογραμματισμοί"
+
+#, fuzzy
+msgid "Edit search"
+msgstr "Τροποποίηση χρονοπρογραμματισμού"
+
+msgid "Edit timer"
+msgstr "Τροποποίηση χρονοπρογραμματισμού"
+
+msgid "Edit blacklist"
+msgstr ""
+
+#, fuzzy
+msgid "Edit template"
+msgstr "Τροποποίηση χρονοπρογραμματισμού"
+
+msgid "Edit user-defined days of week"
+msgstr ""
+
+#, fuzzy
+msgid "found recordings"
+msgstr "Εγγραφή"
+
+#, fuzzy
+msgid "Select directory"
+msgstr "Διαγραφή εγγραφής?"
+
+msgid "Timer conflicts -"
+msgstr ""
+
+msgid "Title$Childlock"
+msgstr ""
+
+#, fuzzy
+msgid "Games"
+msgstr "Όνομα"
+
+msgid "Multifeed Options"
+msgstr ""
+
+#, fuzzy
+msgid "Move recording"
+msgstr "Ακύρωση εγγραφής?"
+
+msgid "Select Reelblog item"
+msgstr ""
+
+#, fuzzy
+msgid "SleepTimer"
+msgstr "Χρονοπρογραμματισμοί"
+
+#, fuzzy
+msgid "Rename entry"
+msgstr "μόνο ονόματα"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Διαγραφή εγγραφής?"
+
+msgid "Choose action"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Setup Menus with "Setup"-bar on the left
+msgid "Setup"
+msgstr "Ρυθμισεις"
+
+msgid "Software Update"
+msgstr ""
+
+#, fuzzy
+msgid "Channel Lists"
+msgstr "Κανάλια"
+
+msgid "Channel lists functions"
+msgstr ""
+
+#, fuzzy
+msgid "Channelscan"
+msgstr "Κανάλια"
+
+msgid "Installation Wizard"
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+#, fuzzy
+msgid "Remote Control / Automation"
+msgstr "Εκμάθηση πλήκτρων τηλεχειρισμού"
+
+#, fuzzy
+msgid "MultiRoom Setup"
+msgstr "Ρυθμισεις"
+
+#, fuzzy
+msgid "MultiRoom - Error!"
+msgstr "Ρυθμισεις"
+
+#, fuzzy
+msgid "Basic Settings"
+msgstr "ell"
+
+#, fuzzy
+msgid "Network Settings"
+msgstr "Πληροφορίες Eγγραφής"
+
+msgid "EPG Services"
+msgstr ""
+
+#, fuzzy
+msgid "Reception Settings"
+msgstr "Πληροφορίες Eγγραφής"
+
+#, fuzzy
+msgid "Network"
+msgstr "ell"
+
+#, fuzzy
+msgid "Global Settings"
+msgstr "ell"
+
+#, fuzzy
+msgid "UMTS Settings"
+msgstr "ell"
+
+msgid "Dynamic DNS"
+msgstr ""
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr ""
+
+msgid "Windows Network Connection"
+msgstr ""
+
+msgid "NFS Client"
+msgstr ""
+
+msgid "Video Recorder "
+msgstr ""
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr ""
+
+msgid "Setup - Audio/Video"
+msgstr ""
+
+msgid "Timezone & clock"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+#, fuzzy
+msgid "Antenna settings"
+msgstr "Πληροφορίες Eγγραφής"
+
+#, fuzzy
+msgid "Rotor Setup"
+msgstr "Ρυθμισεις"
+
+#, fuzzy
+msgid "Language Settings"
+msgstr "ell"
+
+#, fuzzy
+msgid "Timezone"
+msgstr "Πληροφορίες Eγγραφής"
+
+#, fuzzy
+msgid "Timezone Settings"
+msgstr "ell"
+
+msgid "Front Panel"
+msgstr ""
+
+msgid "TVTV Service"
+msgstr ""
+
+msgid "International EPG"
+msgstr ""
+
+msgid "Energy Options"
+msgstr ""
+
+msgid "Factory defaults"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "SVDRP διακοπή (δ)"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr "Ζάπινγκ διακοπή (δ)"
+
+#, fuzzy
+msgid "Option$Quick"
+msgstr "Κυριακή"
+
+#. TRANSLATORS:
+#. / Recording Commands
+msgid "Mark Commercials"
+msgstr ""
+
+msgid "Add Child Lock"
+msgstr ""
+
+msgid "Remove Child Lock"
+msgstr ""
+
+#, fuzzy
+msgid "Change title"
+msgstr "Κανάλι"
+
+msgid "Mark as New"
+msgstr ""
+
+msgid "Remove Archive Mark"
+msgstr ""
+
+msgid "Remove Crop Mark"
+msgstr ""
+
+msgid "Remove Archived Recording"
+msgstr ""
+
+#, fuzzy
+msgid "Restore Archived Recording"
+msgstr "Διαγραφή εγγραφής?"
+
+msgid "Convert to MPEG (TS)"
+msgstr ""
+
+msgid "Directory Selector:"
+msgstr ""
+
+#, fuzzy
+msgid "Select Media"
+msgstr "Διαγραφή εγγραφής?"
+
+#, fuzzy
+msgid "Directory commands"
+msgstr "Εντολές γιά εγγραφές"
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "No CI-Module"
+msgstr ""
+
+#, fuzzy
+msgid "Edit Channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "Customize Bouquets"
+msgstr "Διαγραφή χρονοπρογραμματισμού;?"
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Φάση 1: Ανίχνευση κώδικα RC"
+
+msgid "Press any key on the RC unit"
+msgstr "Πίεσε ένα πλήκτρο στο τηλεχειριστήριο"
+
+msgid "RC code detected!"
+msgstr "Βρέθηκε κώδικας RC!"
+
+msgid "Do not press any key..."
+msgstr "Μήν πατάς πλήκτρα..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Φαση 2: Εκμάθηση μεμονομένων πλήκτρων"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Πίεσε το πλήκτρο γιά '%s'"
+
+msgid "Press 'Up' to confirm"
+msgstr "Πίεσε 'πάνω' γιά αποδοχή"
+
+msgid "Press 'Down' to continue"
+msgstr "Πίεσε 'κάτω' γιά συνέχεια"
+
+msgid "(press 'Up' to go back)"
+msgstr "(Πίεσε 'πάνω' γιά επιστροφή"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(Πίεσε 'κάτω' γιά τερματισμό δηλώσεων πλήκτρων)"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "Πίεσε 'μενού' για προσπέραση αυτού τού πλήκτρου"
+
+msgid "Learning Remote Control Keys"
+msgstr "Εκμάθηση πλήκτρων τηλεχειρισμού"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Φαση 3: Αποθήκευση κωδικών"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "Πίεσε 'Πάνω' για αποθήκευση, 'Κάτω' για ακύρωση"
+
+msgid "Key$Up"
+msgstr "Πάνω"
+
+msgid "Key$Down"
+msgstr "Κάτω"
+
+msgid "Key$Menu"
+msgstr "Μενού"
+
+msgid "Key$Ok"
+msgstr "Οκ"
+
+msgid "Key$Back"
+msgstr "Πίσω"
+
+msgid "Key$Left"
+msgstr "Αριστερά"
+
+msgid "Key$Right"
+msgstr "Δεξιά"
+
+msgid "Key$Red"
+msgstr "Κόκκινο"
+
+msgid "Key$Green"
+msgstr "Πράσινο"
+
+msgid "Key$Yellow"
+msgstr "Κίτρινο"
+
+msgid "Key$Blue"
+msgstr "Μπλέ"
+
+msgid "Key$Play"
+msgstr "Αναπαραγωγή"
+
+msgid "Key$Pause"
+msgstr "Παύση"
+
+msgid "Key$Stop"
+msgstr "Tέρμα"
+
+#, fuzzy
+msgid "Key$Eject"
+msgstr "Αριστερά"
+
+msgid "Key$Record"
+msgstr "Eγγραφή"
+
+msgid "Key$FastFwd"
+msgstr "Προώθηση εμπρός"
+
+msgid "Key$FastRew"
+msgstr "Προώθηση πίσω"
+
+msgid "Key$Next"
+msgstr ""
+
+msgid "Key$Prev"
+msgstr ""
+
+msgid "Key$Power"
+msgstr "Kλείσιμο"
+
+msgid "Key$Channel+"
+msgstr "Κανάλι+"
+
+msgid "Key$Channel-"
+msgstr "Κανάλι-"
+
+msgid "Key$PrevChannel"
+msgstr ""
+
+msgid "Key$Volume+"
+msgstr "Ένταση+"
+
+msgid "Key$Volume-"
+msgstr "Ένταση-"
+
+msgid "Key$Mute"
+msgstr "Σιωπηλό"
+
+msgid "Key$Audio"
+msgstr "Ήχος"
+
+msgid "Key$Subtitles"
+msgstr ""
+
+#, fuzzy
+msgid "Key$Aspect"
+msgstr "Αριστερά"
+
+msgid "Key$Schedule"
+msgstr "Πρόγραμμα"
+
+msgid "Key$Channels"
+msgstr "Κανάλια"
+
+msgid "Key$Timers"
+msgstr "Χρονοπρογραμματισμοί"
+
+#, fuzzy
+msgid "Key$Search"
+msgstr "Πίσω"
+
+msgid "Key$Recordings"
+msgstr "Εγγραφές"
+
+msgid "Key$Setup"
+msgstr "Ρυθμισεις"
+
+msgid "Key$Commands"
+msgstr "Εντολές"
+
+#, fuzzy
+msgid "Key$Greater"
+msgstr "Πράσινο"
+
+#, fuzzy
+msgid "Key$Less"
+msgstr "Αριστερά"
+
+#, fuzzy
+msgid "Key$2digit"
+msgstr "Δεξιά"
+
+#, fuzzy
+msgid "Key$DVD"
+msgstr "Κάτω"
+
+#, fuzzy
+msgid "Key$DVB"
+msgstr "Κάτω"
+
+#, fuzzy
+msgid "Key$PVR"
+msgstr "Κόκκινο"
+
+#, fuzzy
+msgid "Key$Reel"
+msgstr "Κόκκινο"
+
+#, fuzzy
+msgid "Key$TT"
+msgstr "Πάνω"
+
+#, fuzzy
+msgid "Key$PiP"
+msgstr "Αναπαραγωγή"
+
+msgid "Key$User1"
+msgstr ""
+
+msgid "Key$User2"
+msgstr ""
+
+msgid "Key$User3"
+msgstr ""
+
+msgid "Key$User4"
+msgstr ""
+
+msgid "Key$User5"
+msgstr ""
+
+msgid "Key$User6"
+msgstr ""
+
+msgid "Key$User7"
+msgstr ""
+
+msgid "Key$User8"
+msgstr ""
+
+msgid "Key$User9"
+msgstr ""
+
+msgid "Key$Info"
+msgstr "Πληροφορίες"
+
+#, fuzzy
+msgid "Key$Help"
+msgstr "Πάνω"
+
+msgid "Timeshift mode"
+msgstr ""
+
+msgid "Recording started"
+msgstr ""
+
+msgid "Free To Air"
+msgstr ""
+
+msgid "no"
+msgstr "όχι"
+
+msgid "internal CAM"
+msgstr ""
+
+msgid "No CI at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "encrypted"
+msgstr ""
+
+msgid "Rotor - shared LNB"
+msgstr ""
+
+msgid "auto"
+msgstr "αυτόματο"
+
+msgid "Edit channel"
+msgstr "Τροποποίηση Καναλιού"
+
+msgid "New"
+msgstr ""
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "Source"
+msgstr "Πηγή"
+
+msgid "Frequency"
+msgstr "Συχνότητα"
+
+msgid "Polarization"
+msgstr "Πόλωση"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "CoderateH"
+msgstr "Ρυθμός Κώδικα H"
+
+msgid "none"
+msgstr "κανένα"
+
+msgid "CoderateL"
+msgstr "Ρυθμός Κώδικα L"
+
+msgid "Vpid"
+msgstr "Bίντεο PID"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid1"
+msgstr "Apid1"
+
+msgid "Apid2"
+msgstr "Apid2"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Modulation"
+msgstr "Διαμόρφωση"
+
+msgid "Bandwidth"
+msgstr "Εύρος Συχνοτήτων"
+
+msgid "Transmission"
+msgstr "Μετάδοση"
+
+msgid "Guard"
+msgstr "Προστασία"
+
+msgid "Hierarchy"
+msgstr "Ιεραρχεία"
+
+#, fuzzy
+msgid "Rolloff"
+msgstr "κλειστό"
+
+msgid "Button$New"
+msgstr "Nέο"
+
+msgid "Channel settings are not unique!"
+msgstr "Οι ριθμύσεις τον καναλιών αλλυλοσυμπίπτουν!"
+
+#, fuzzy
+msgid "channellist"
+msgstr "Κανάλια"
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+#, fuzzy
+msgid "Channellist: set filters"
+msgstr "Κανάλια"
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+#, fuzzy
+msgid "All channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "Only TV channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "Only radio channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "non encrypted channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Θέση πληροφορίας καναλιών"
+
+#, fuzzy
+msgid "non encrypted TV channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "encrypted radio channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "HD channels"
+msgstr "Τροποποίηση Καναλιού"
+
+msgid "Channels"
+msgstr "Κανάλια"
+
+msgid "Button$Edit"
+msgstr "Προσαρμογή"
+
+msgid "Button$Delete"
+msgstr "Διαγραφή"
+
+msgid "Button$Mark"
+msgstr "Επιλογή"
+
+msgid "Channel is being used by a timer!"
+msgstr "Το κανάλη χρισιμοποιείται από χρονοπρογραμματισμό!"
+
+msgid "Delete channel?"
+msgstr "Διαγραφή καναλιού?"
+
+msgid "Edit Bouquet"
+msgstr ""
+
+msgid "Add Bouquet"
+msgstr ""
+
+msgid "CI-Slot for this Bouquet"
+msgstr ""
+
+#, fuzzy
+msgid "Note:"
+msgstr "Χωρίς Τίτλο"
+
+msgid "Select CI-Slot for current Bouquet."
+msgstr ""
+
+msgid "Bouquets"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Customize"
+msgstr "Παύση"
+
+msgid "Move"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#, fuzzy
+msgid "Delete Bouquet?"
+msgstr "Διαγραφή χρονοπρογραμματισμού;?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Πάνω/Κάτω γιά νέα θέση. Μετά ΟΚ"
+
+#, fuzzy
+msgid "Select channels with OK"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "Customize channels: "
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "free radio channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "radio channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "encrypted TV channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "free TV channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "TV channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "encrypted channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "free channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "non HD channels"
+msgstr "Τροποποίηση Καναλιού"
+
+#, fuzzy
+msgid "all channels"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "Select channels with blue key"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "Channel deleted"
+msgstr "Κανάλια"
+
+#, fuzzy
+msgid "Delete channels?"
+msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+msgid "Channels deleted"
+msgstr "Κανάλια"
+
+#, fuzzy
+msgid "Channels have been moved"
+msgstr "Κανάλια"
+
+msgid "Add to Favorites?"
+msgstr ""
+
+msgid "Button$Insert"
+msgstr "Εισαγωγή"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Πάνω/Κάτω γιά νέα θέση. Μετά ΟΚ"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Πάνω/Κάτω γιά νέα θέση. Μετά ΟΚ"
+
+msgid "Help"
+msgstr ""
+
+msgid "Already first help item"
+msgstr ""
+
+msgid "Already last help item"
+msgstr ""
+
+msgid "low"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "high"
+msgstr ""
+
+msgid "Active"
+msgstr "Ενεργό"
+
+msgid "Channel"
+msgstr "Κανάλι"
+
+msgid "Day"
+msgstr "Ημέρα"
+
+msgid "Start"
+msgstr "Αρχή"
+
+msgid "Stop"
+msgstr "Τέλος"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "Προτεραιότητα"
+
+msgid "Lifetime"
+msgstr "Διέρκεια Παραμονής"
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Child protection"
+msgstr ""
+
+msgid "yes"
+msgstr "ναί"
+
+msgid "File"
+msgstr "Αρχείο"
+
+msgid "First day"
+msgstr "Πρώτη μέρα"
+
+#, fuzzy
+msgid "Could not add timer"
+msgstr "Διαγραφή χρονοπρογραμματισμού;?"
+
+msgid "Timers"
+msgstr "Χρονοπρογραμματισμοί"
+
+msgid "Button$On/Off"
+msgstr "Aνοιχ/Kλειστό"
+
+msgid "Button$Info"
+msgstr "Πληροφορίες"
+
+msgid "Delete timer?"
+msgstr "Διαγραφή χρονοπρογραμματισμού;?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Χρονοπρογραμματισμός σέ εξέλιξη - Διαγραφή σίγουρα?"
+
+#, fuzzy
+msgid "Could not delete timer"
+msgstr "Διαγραφή χρονοπρογραμματισμού;?"
+
+msgid "Event"
+msgstr "Εκπομπή"
+
+msgid "Button$Timer"
+msgstr ""
+
+msgid "Button$Record"
+msgstr "Εγγραφή"
+
+msgid "Button$Switch"
+msgstr "Aλλαγή"
+
+#, fuzzy
+msgid "ActiveEvent"
+msgstr "Ενεργό"
+
+msgid "What's on now?"
+msgstr "Τρέχον πρόγραμμα"
+
+msgid "What's on next?"
+msgstr "Επόμενο πρόγραμμα"
+
+msgid "Button$Next"
+msgstr "Επόμενο"
+
+msgid "Button$Now"
+msgstr "Τώρα"
+
+msgid "Button$Schedule"
+msgstr "Πρόγραμμα"
+
+msgid "Can't switch channel!"
+msgstr "Αλλαγή καναλιού αδύνατη!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Πρόγραμμα - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr ""
+
+msgid "This event - all channels"
+msgstr ""
+
+msgid "All events - all channels"
+msgstr ""
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr ""
+
+msgid "Recording info"
+msgstr "Πληροφορίες Eγγραφής"
+
+msgid "Button$Play"
+msgstr "Αναπαραγωγή"
+
+msgid "Button$Rewind"
+msgstr "Μεταφορά στην Αρχή"
+
+msgid "Scale Picture"
+msgstr ""
+
+msgid "Recordings"
+msgstr "Εγγραφές"
+
+msgid "Button$Open"
+msgstr "Ανοιγμα"
+
+msgid "Commands"
+msgstr "Εντολές"
+
+msgid "Error while accessing recording!"
+msgstr "Πρόβλημα στήν προσπέλαση εγγραφής!"
+
+msgid "Delete recording?"
+msgstr "Διαγραφή εγγραφής?"
+
+msgid "Error while deleting recording!"
+msgstr "Λάθος κατά τήν διαγραφή του αρχείου!"
+
+msgid "Recording commands"
+msgstr "Εντολές γιά εγγραφές"
+
+#, fuzzy
+msgid "OSD & Language"
+msgstr "Γλώσσα"
+
+msgid "never"
+msgstr "Ποτέ"
+
+msgid "skin dependent"
+msgstr "Εξαρτάτε από τήν επιφάνεια"
+
+msgid "always"
+msgstr "πάντα"
+
+msgid "User defined"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "FontSize$Normal"
+msgstr ""
+
+msgid "Setup.OSD$Language"
+msgstr "Γλώσσα"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$OSD color"
+msgstr "Επιφάνεια"
+
+#, fuzzy
+msgid "Setup.OSD$OSD Font Size"
+msgstr "Επιφάνεια"
+
+#, fuzzy
+msgid "Setup.OSD$OSD font size (pixel)"
+msgstr "χρόνος ένδεικσης πληροφορίων καναλιού σε (δ)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Χρισημοποίηση μικρόν γραμματοσειρών"
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Κύλιση σελίδας"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "Κύλιση γύρω-γύρω"
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "χρόνος ένδεικσης πληροφορίων καναλιού σε (δ)"
+
+#, fuzzy
+msgid "Setup.OSD$Show expert menu options"
+msgstr "Χρισημοποίηση μικρόν γραμματοσειρών"
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr "Θέμα"
+
+#, fuzzy
+msgid "channelinfo"
+msgstr "Κανάλι"
+
+#, fuzzy
+msgid "Standard"
+msgstr "Κυριακή"
+
+#, fuzzy
+msgid "Setup.OSD$  Program +/- keys"
+msgstr "χρόνος ένδεικσης πληροφορίων καναλιού σε (δ)"
+
+#, fuzzy
+msgid "Channell./Bouquets"
+msgstr "Κανάλια"
+
+msgid "Expertmenu"
+msgstr ""
+
+msgid "OSD - Expertmenu"
+msgstr ""
+
+msgid "Setup.OSD$Skin"
+msgstr "Επιφάνεια"
+
+#, fuzzy
+msgid "Setup.OSD$OSD font name"
+msgstr "Κύλιση σελίδας"
+
+#, fuzzy
+msgid "Setup.OSD$Small font name"
+msgstr "Χρισημοποίηση μικρόν γραμματοσειρών"
+
+#, fuzzy
+msgid "Setup.OSD$Fixed font name"
+msgstr "Αριστερά"
+
+msgid "Setup.OSD$Small font size (pixel)"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font size (pixel)"
+msgstr ""
+
+msgid "Setup.OSD$Left"
+msgstr "Αριστερά"
+
+msgid "Setup.OSD$Top"
+msgstr "Επάνω"
+
+msgid "Setup.OSD$Width"
+msgstr "Μάκρος"
+
+msgid "Setup.OSD$Height"
+msgstr "Ύψος"
+
+#, fuzzy
+msgid "Setup.OSD$Random menu placement"
+msgstr "Επάνω"
+
+#, fuzzy
+msgid "Setup.OSD$Optional languages"
+msgstr "Γλώσσες ήχου"
+
+#, fuzzy
+msgid "Setup.OSD$ Optional language"
+msgstr "Γλώσσα"
+
+msgid "EPG"
+msgstr "Ηλεκτρονικός οδηγός προγράμματος"
+
+msgid "Button$Scan"
+msgstr "Σάρωση"
+
+#, fuzzy
+msgid "Audio"
+msgstr "Ήχος"
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle language"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr ""
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Χρήση ήχου Dolby Digital"
+
+msgid " Delay ac3 (10ms)"
+msgstr ""
+
+msgid " Prefer ac3 over HDMI"
+msgstr ""
+
+msgid "Delay Stereo (10ms)"
+msgstr ""
+
+msgid "Dish settings"
+msgstr ""
+
+msgid "DiSEqC disabled"
+msgstr ""
+
+msgid "Different Setups"
+msgstr ""
+
+#, fuzzy
+msgid "Tuner"
+msgstr "Ποτέ"
+
+msgid "DiSEqC Type"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "   LNB Type"
+msgstr ""
+
+msgid "Delay (ms)"
+msgstr ""
+
+msgid "Number of LNBs"
+msgstr ""
+
+#, fuzzy
+msgid "Repeat"
+msgstr "Αναπαραγωγή"
+
+msgid "Rotor on tuner"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Expert"
+msgstr ""
+
+msgid "Rotor Settings"
+msgstr ""
+
+msgid "Sat positions must be unique!"
+msgstr ""
+
+msgid "Overwrite DiSEqC.conf?"
+msgstr ""
+
+#, fuzzy
+msgid "Changes done"
+msgstr "Κανάλι"
+
+msgid "Init"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "--OFF--"
+msgstr ""
+
+msgid "Common Interface"
+msgstr ""
+
+#, fuzzy
+msgid "Reset"
+msgstr "Επανεκκίνηση"
+
+#, fuzzy
+msgid "On/Off"
+msgstr "Aνοιχ/Kλειστό"
+
+msgid "Opening CAM menu..."
+msgstr ""
+
+msgid "Can't open CAM menu!"
+msgstr "Αδύνατη η πρόσβαση στό CAM μενού!"
+
+msgid "Resetting CAM..."
+msgstr ""
+
+msgid "CAM has been reset"
+msgstr ""
+
+msgid "Can't reset CAM!"
+msgstr "Αδύνατη η επαναφορά στό CAM"
+
+msgid "Recording"
+msgstr "Εγγραφή"
+
+#, fuzzy
+msgid "Setup.Recording$Timer Buffer at Start (min)"
+msgstr "Πρόσθετος χρόνος στην αρχή (λεπτά)"
+
+#, fuzzy
+msgid "Setup.Recording$Timer Buffer at End (min)"
+msgstr "Πρόσθετος χρόνος στό τέλος (λεπτά)"
+
+#, fuzzy
+msgid "Setup.Recording$Default Priority"
+msgstr "Προκαθορισμένη προτεραιότητα"
+
+#, fuzzy
+msgid "Setup.Recording$Default Recording Lifetime"
+msgstr "Προκαθορισμένη διάρκεια παραμονής (Ημέρες)"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "Χρήση VPS"
+
+#, fuzzy
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr "Επιλογή τρέχουσας εγγραφής"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr "Διάρκεια στγμιαίας εγγραφής (λεπτά)"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr "Επιλογή τρέχουσας εγγραφής"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr "Επιλογή τρέχουσας εγγραφής"
+
+#, fuzzy
+msgid "Setup.Recording$Mark Blocks after Recording"
+msgstr "Επιλογή τρέχουσας εγγραφής"
+
+msgid "Replay"
+msgstr "Αναπαραγωγή"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Μεθοδος πολλαπλής ταχύτητας"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Ένδειξη κατάστασης αναμετάδοσης"
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "intelligent"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr "ID αναμετάδοσης"
+
+#, fuzzy
+msgid "Setup.Replay$Resume play after jump"
+msgstr "ID αναμετάδοσης"
+
+msgid "off"
+msgstr "κλειστό"
+
+msgid "update"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "at the end"
+msgstr ""
+
+msgid "to bouquets"
+msgstr ""
+
+msgid "Background Services"
+msgstr ""
+
+msgid "Request"
+msgstr ""
+
+#, fuzzy
+msgid "Standby"
+msgstr "Κυριακή"
+
+msgid "Power off"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Scan EPG"
+msgstr "Σάρωση"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "Ζάπινγκ διακοπή (δ)"
+
+#, fuzzy
+msgid "Setup.DVB$Autom. update channels"
+msgstr "Ενημέρωση καναλιών"
+
+msgid "  Update mode"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr ""
+
+msgid "Setup.Miscellaneous$as before"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Initial volume (%)"
+msgstr "Ζάπινγκ διακοπή (δ)"
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Χρόνος διάρκειας εξέτασης EPG σε ώρες"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr "Ζάπινγκ διακοπή (δ)"
+
+msgid "Permanent Timeshift"
+msgstr ""
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr ""
+
+#, fuzzy
+msgid "Info:"
+msgstr "Πληροφορίες"
+
+msgid "Permanent Timeshift has been disabled."
+msgstr ""
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+#, fuzzy
+msgid "System Settings"
+msgstr "ell"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Αυτή η επέκταση δεν έχει παράμετρους!"
+
+msgid "Title$Setup"
+msgstr "Ρυθμισεις"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "OSD"
+msgstr "OSD"
+
+msgid "DVB"
+msgstr "DVB"
+
+#, fuzzy
+msgid "CICAM"
+msgstr "CAM"
+
+#, fuzzy
+msgid "Recording settings"
+msgstr "Πληροφορίες Eγγραφής"
+
+msgid "Replay settings"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+msgid "Plugins"
+msgstr "Επεκτάσεις"
+
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+msgid "Really restart?"
+msgstr "Nα γίνει σίγουρα επανεκκίνηση?"
+
+msgid "Recording - restart anyway?"
+msgstr "Γίνεται εγγραφή - Τελικά να γίνει επανεκκίνηση?"
+
+msgid "restart anyway?"
+msgstr "Τελικά να γίνει επανεκκίνηση?"
+
+msgid " Stop recording "
+msgstr " Τέλος εγγαφής "
+
+#, fuzzy
+msgid "Channel list"
+msgstr "Κανάλια"
+
+#, fuzzy
+msgid "Title$Menu"
+msgstr "Μενού"
+
+msgid "Disk"
+msgstr "Δίσκος"
+
+msgid "free"
+msgstr "Ελεύθερος"
+
+#, fuzzy
+msgid "Title$Main Menu"
+msgstr "Μενού"
+
+msgid " Stop replaying"
+msgstr " Τέλος αναπαραγωγής"
+
+#, fuzzy
+msgid "Button$Recordings"
+msgstr "Εγγραφή"
+
+#, fuzzy
+msgid "Button$Multifeed"
+msgstr "Διαγραφή"
+
+msgid " Cancel editing"
+msgstr " Ακύρωση επεξεργασίας"
+
+msgid "Stop recording?"
+msgstr "Ακύρωση εγγραφής?"
+
+msgid "Cancel editing?"
+msgstr "Aκύρωση επεξεργασίας?"
+
+msgid "Button$Audio"
+msgstr "Ήχος"
+
+msgid "No audio available!"
+msgstr "Μη διαθέσιμος ήχος"
+
+msgid "No subtitles"
+msgstr ""
+
+msgid "Button$Subtitles"
+msgstr ""
+
+msgid "No subtitles available!"
+msgstr ""
+
+msgid "Not enough disk space to start recording!"
+msgstr ""
+
+msgid "recording already running - Start another?"
+msgstr ""
+
+#, fuzzy
+msgid "A recording is already active!"
+msgstr "Επεξεργασία βρίσκεται σέ εξέλιξη!"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "Ανεπάρκεια DVB Κάρτας γιά εγγραφή!"
+
+msgid "Pausing live video..."
+msgstr "Πάγωμα ζωντανού σήματος"
+
+msgid "Jump: "
+msgstr "Τοποθέτηση: "
+
+msgid "No editing marks defined!"
+msgstr "Δέν έχουν οριστεί σημεία επεξεργασίας"
+
+msgid "Can't start editing process!"
+msgstr "Αδυναμία εκκίνησης της επεξεργασίας!"
+
+msgid "Editing process started"
+msgstr "Αρχισε η επεξεργασία"
+
+msgid "Editing process already active!"
+msgstr "Επεξεργασία βρίσκεται σέ εξέλιξη!"
+
+msgid "Power Off ReelBox"
+msgstr ""
+
+#, fuzzy
+msgid "Recording - Activating QuickStandby"
+msgstr "Γίνεται εγγραφή - Τελικά να γίνει επανεκκίνηση?"
+
+msgid "Activating QuickStandby"
+msgstr ""
+
+#, fuzzy
+msgid "Running Process - Activating QuickStandby"
+msgstr "Γίνεται εγγραφή - Τελικά να γίνει επανεκκίνηση?"
+
+#, fuzzy
+msgid "Quick Standby"
+msgstr "Κυριακή"
+
+msgid "Reboot"
+msgstr ""
+
+#, fuzzy
+msgid "Set Sleeptimer"
+msgstr "Χρονοπρογραμματισμοί"
+
+msgid "Pause Live-TV"
+msgstr ""
+
+msgid "Activating standby"
+msgstr ""
+
+msgid "Activating deep standby"
+msgstr ""
+
+#, fuzzy
+msgid "Activating quick standby"
+msgstr "Γίνεται εγγραφή - Τελικά να γίνει επανεκκίνηση?"
+
+msgid "Activating reboot"
+msgstr ""
+
+msgid "Recording - shut down anyway?"
+msgstr "Γίνεται εγγραφή - Τελικά να γίνει τερματισμός?"
+
+#, fuzzy
+msgid "A recording starts soon, shut down anyway?"
+msgstr "Γίνεται εγγραφή - Τελικά να γίνει τερματισμός?"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " αάβγδεέζηήθιίκλμνξοόπρσςτυύφχψωώ0123456789-_.,#~\\^$[]|()*+?{}/:%@&abcdefghijklmnopqrstuvwxyz"
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tαάβγ2abc\tδεέζ3def\tηήθι4ghi\tίκλ5jkl\tμνξό6mno\tπρσς7pqrs\tτυύ8tuv\tφχψωώ9wxyz"
+
+msgid "Button$ABC/abc"
+msgstr "ABΓ/αβγ"
+
+msgid "Button$Overwrite"
+msgstr "Αντικατάσταση"
+
+msgid "Please select"
+msgstr ""
+
+msgid "Main Menu"
+msgstr ""
+
+msgid "Channel locked (recording)!"
+msgstr "Το κανάλι είναι αποσχολιμένο (Γίνετε εγγραφή)!"
+
+msgid "can't record - check your configuration"
+msgstr ""
+
+msgid "Low disk space!"
+msgstr "Ο σκληρός κοντεύει νά γεμίσει!"
+
+msgid "Recording-file already exists!"
+msgstr ""
+
+#, fuzzy
+msgid "Teletext not available!"
+msgstr "Το κανάλη δέν είναι διαθέσιμο!"
+
+#, fuzzy
+msgid "PiP not available!"
+msgstr "Το κανάλη δέν είναι διαθέσιμο!"
+
+msgid "Volume "
+msgstr "Ένταση "
+
+msgid "Classic VDR"
+msgstr "Κλασικό VDR"
+
+msgid "ST:TNG Panels"
+msgstr "Μορφές ST:TNG"
+
+msgid "MTWTFSS"
+msgstr "ΔΤΤΠΠΣΚ"
+
+#, fuzzy
+msgid "Database not available!"
+msgstr "Το κανάλη δέν είναι διαθέσιμο!"
+
+msgid "MonTueWedThuFriSatSun"
+msgstr "ΔευΤρίΤετΠέμΠαρΣάβKυρ"
+
+msgid "Monday"
+msgstr "Δευτέρα"
+
+msgid "Tuesday"
+msgstr "Τρίτη"
+
+msgid "Wednesday"
+msgstr "Τετάρτη"
+
+msgid "Thursday"
+msgstr "Πέμπτη"
+
+msgid "Friday"
+msgstr "Παρασκευή"
+
+msgid "Saturday"
+msgstr "Σάββατο"
+
+msgid "Sunday"
+msgstr "Κυριακή"
+
+msgid "ejecting media"
+msgstr ""
+
+#, fuzzy
+msgid "Upcoming VPS recording!"
+msgstr " Τέλος εγγαφής "
+
+#, fuzzy
+msgid "Timeshift is not available!"
+msgstr "Μη διαθέσιμος ήχος"
+
+#, fuzzy
+msgid "No free tuner to record!"
+msgstr "Ανεπάρκεια DVB Κάρτας γιά εγγραφή!"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Αδύνατον να γίνει τερματισμός. Ανύπαρκτη η παράμετρος '-s'!"
+
+msgid "Switching primary DVB..."
+msgstr "Η κύρια DVB κάρτα αλλάζει..."
+
+#, fuzzy
+msgid "End recording"
+msgstr "Εγγραφή"
+
+msgid "Editing process failed!"
+msgstr "Η επεξεργασία απέτυχε!"
+
+msgid "Editing process finished"
+msgstr "Η επεξεργασία τελείωσε"
+
+msgid "Switching to server-mode"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Back"
+#~ msgstr "Πίσω"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Κυριακή"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Skin color"
+#~ msgstr "Επιφάνεια"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Ok shows"
+#~ msgstr "Επάνω"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Channel +/- keys"
+#~ msgstr "χρόνος ένδεικσης πληροφορίων καναλιού σε (δ)"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Switch Channels in EPG"
+#~ msgstr "χρόνος ένδεικσης πληροφορίων καναλιού σε (δ)"
+
+#~ msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+#~ msgstr "Ελάχιστος χρόνος αναμονής (λεπτά)"
+
+#, fuzzy
+#~ msgid "An instant recording is already runnig!"
+#~ msgstr "Επεξεργασία βρίσκεται σέ εξέλιξη!"
+
+#, fuzzy
+#~ msgid "Select bouquet with OK"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "Channels sucessfully moved"
+#~ msgstr "Κανάλια"
+
+#, fuzzy
+#~ msgid "Only video channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "Only non decrypted channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "Only non decrypted video channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "Only decrypted radio channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "non encrypted radio channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "encrypted video channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "non encrypted video channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "video channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "Only non encrypted channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#, fuzzy
+#~ msgid "Only non encrypted TV channels"
+#~ msgstr "Διαγραφή καναλιού?"
+
+#~ msgid "shut down anyway?"
+#~ msgstr "Τελικά να γίνει τερματισμός?"
+
+#~ msgid "Recording in %ld minutes, shut down anyway?"
+#~ msgstr "Αναμένεται εγγραφή σέ %ld λεπτά - Τελικά να τερματιστεί?"
+
+#~ msgid "Setup.OSD$Theme"
+#~ msgstr "Θέμα"
+
+#~ msgid "Setup.Miscellaneous$Min. event timeout (min)"
+#~ msgstr "Ελάχιστος χράνος παρεμβολής (λεπτά)"
+
+#~ msgid "Setup.Recording$Split edited files"
+#~ msgstr "Διαμέλισμός επεξεργασμένων αρχείων"
+
+#~ msgid "Dpid1"
+#~ msgstr "Dpid1"
+
+#~ msgid "Dpid2"
+#~ msgstr "Dpid2"
+
+#~ msgid "CA"
+#~ msgstr "CA"
+
+#~ msgid "Inversion"
+#~ msgstr "Αντιστροφή"
+
+#~ msgid "Setup.OSD$Message time (s)"
+#~ msgstr "Χρόνος ένδειξης μυνημάτων (δ)"
+
+#~ msgid "bottom"
+#~ msgstr "κάτω"
+
+#~ msgid "top"
+#~ msgstr "πάνω"
+
+#~ msgid "Setup.OSD$Info on channel switch"
+#~ msgstr "Πληροφορίες στήν αλλαγή καναλιού"
+
+#~ msgid "Setup.OSD$Recording directories"
+#~ msgstr "Φάκελοι εγγραφών"
+
+#~ msgid "Setup.EPG$EPG bugfix level"
+#~ msgstr "Βαθμός διόρθωσης οδηγού EPG"
+
+#~ msgid "Setup.EPG$EPG linger time (min)"
+#~ msgstr "Ένδειξη ξεπερασμένων πληροφοριών (λεπτά)"
+
+#~ msgid "Setup.EPG$Set system time"
+#~ msgstr "Συντονισμός ώρας υπολογιστή"
+
+#~ msgid "Setup.EPG$Use time from transponder"
+#~ msgstr "Αναμεταδότης συντονισμού ώρας"
+
+#~ msgid "Setup.EPG$Preferred languages"
+#~ msgstr "Προτεινόμενες γλώσσες"
+
+#~ msgid "Setup.EPG$Preferred language"
+#~ msgstr "Προτεινόμενη γλώσσα"
+
+#~ msgid "pan&scan"
+#~ msgstr "pan&scan"
+
+#~ msgid "letterbox"
+#~ msgstr "letterbox"
+
+#~ msgid "center cut out"
+#~ msgstr "center cut out"
+
+#~ msgid "names and PIDs"
+#~ msgstr "Ονόματα καί PIDs"
+
+#~ msgid "add new transponders"
+#~ msgstr "προσθήκη νέου αναμεταδότη"
+
+#~ msgid "Setup.DVB$Primary DVB interface"
+#~ msgstr "Κύρια DVB κάρτα"
+
+#~ msgid "Setup.DVB$Video format"
+#~ msgstr "Μορφή οθόνης"
+
+#~ msgid "Setup.DVB$Video display format"
+#~ msgstr "Μορφή απεικόνισης Βίντεο"
+
+#~ msgid "Setup.DVB$Audio language"
+#~ msgstr "Γλώσσα ήχου"
+
+#~ msgid "Setup.LNB$Use DiSEqC"
+#~ msgstr "Ενεργοποίηση DiSEqC"
+
+#~ msgid "Setup.LNB$SLOF (MHz)"
+#~ msgstr "SLOF (MHz)"
+
+#~ msgid "Setup.LNB$Low LNB frequency (MHz)"
+#~ msgstr "Κάτω LNB-Συχνότητα (MHz)"
+
+#~ msgid "Setup.LNB$High LNB frequency (MHz)"
+#~ msgstr "’νω LNB-Συχνότητα (MHz)"
+
+#~ msgid "Button$Menu"
+#~ msgstr "Mενού"
+
+#~ msgid "Button$Reset"
+#~ msgstr "Επαναφορά"
+
+#~ msgid "Setup.Recording$Primary limit"
+#~ msgstr "Προτεύον όριο"
+
+#~ msgid "Setup.Recording$Pause priority"
+#~ msgstr "Προτεραιότητα διαλείμματος"
+
+#~ msgid "Setup.Recording$Pause lifetime (d)"
+#~ msgstr "Διάρκεια διαλείματος"
+
+#~ msgid "Setup.Recording$Use episode name"
+#~ msgstr "Χρήση ονόματος επεισοδίου"
+
+#~ msgid "Setup.Recording$VPS margin (s)"
+#~ msgstr "Περιθώριο VPS (δ)"
+
+#~ msgid "Setup.Recording$Name instant recording"
+#~ msgstr "Ονομασία τρέχουσας εγγραφής"
+
+#~ msgid "Setup.Recording$Max. video file size (MB)"
+#~ msgstr "Μέγιστο μέγεθος αρχείου (MB)"
+
+#~ msgid "Schedule"
+#~ msgstr "Πρόγραμμα"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"
+
+#~ msgid "Button$Stop"
+#~ msgstr "Τέρμα"
+
+#~ msgid "Button$Resume"
+#~ msgstr "Επαναφορά"
+
+#~ msgid "Plugin"
+#~ msgstr "Επέκταση"
+
+#~ msgid "Press any key to cancel shutdown"
+#~ msgstr "Πίεσε ένα πλήκτρο γιά ακύρωδη τερματισμού"

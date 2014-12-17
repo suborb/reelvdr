@@ -1,0 +1,63 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-loadepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2009-06-20 16:14+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Load EPG Data sent to Mediahighway receivers"
+msgstr "Load EPG - Ricezione dati EPG tipo MediaHighWay"
+
+msgid "LoadEPG"
+msgstr "LoadEPG"
+
+msgid "Card not available"
+msgstr "Card non disponibile!"
+
+msgid "Select a provider and press Ok"
+msgstr "Selezionare un provider e premere Ok"
+
+msgid "Wait load epg data"
+msgstr "Attendere il caricamento dati"
+
+msgid "No epg data available"
+msgstr "Dati EPG non disponibili"
+
+msgid "No data epg available"
+msgstr "Nessun dato EPG disponibile!"
+
+msgid "Use file channels equivalences"
+msgstr "Usare file equivalenze canali"
+
+msgid "No"
+msgstr "No"
+
+msgid "Yes"
+msgstr "Sì"
+
+msgid "DVB-S device for scanning"
+msgstr "Dispositivo DVB-S per la ricerca"
+
+msgid "Invalid provider number"
+msgstr "Numero provider non valido!"
+
+msgid "The plugin is already active"
+msgstr "Plugin già attivo!"
+

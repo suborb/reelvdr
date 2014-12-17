@@ -1,0 +1,34 @@
+--- busybox-1.00/Rules.mak.org	2004-10-08 12:52:33.000000000 +0200
++++ busybox-1.00/Rules.mak	2006-02-20 13:06:07.000000000 +0100
+@@ -35,13 +35,13 @@
+ # by asking the CC compiler what arch it compiles things for, so unless
+ # your compiler is broken, you should not need to specify TARGET_ARCH
+ CROSS           =$(subst ",, $(strip $(CROSS_COMPILER_PREFIX)))
+-CC             = $(CROSS)gcc
+-AR             = $(CROSS)ar
+-AS             = $(CROSS)as
+-LD             = $(CROSS)ld
+-NM             = $(CROSS)nm
+-STRIP          = $(CROSS)strip
+-CPP            = $(CC) -E
++CC             ?= $(CROSS)gcc
++AR             ?= $(CROSS)ar
++AS             ?= $(CROSS)as
++LD             ?= $(CROSS)ld
++NM             ?= $(CROSS)nm
++STRIP          ?= $(CROSS)strip
++CPP            ?= $(CC) -E
+ # MAKEFILES      = $(top_builddir)/.config
+ 
+ # What OS are you compiling busybox for?  This allows you to include
+@@ -49,8 +49,8 @@
+ TARGET_OS=linux
+ 
+ # Select the compiler needed to build binaries for your development system
+-HOSTCC    = gcc
+-HOSTCFLAGS= -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer
++HOSTCC    ?= gcc
++HOSTCFLAGS ?= -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer
+ 
+ # Ensure consistent sort order, 'gcc -print-search-dirs' behavior, etc.
+ LC_ALL:= C

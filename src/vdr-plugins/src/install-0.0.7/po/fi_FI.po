@@ -1,0 +1,875 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-install\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-08 11:41+0100\n"
+"PO-Revision-Date: 2009-01-29 19:06+0200\n"
+"Last-Translator: Saku Vainikainen\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "The ReelBox installation wizard"
+msgstr "Ohjattu asennus"
+
+msgid "The channellist could not be installed automatically from the ReelBox Avantgarde."
+msgstr ""
+
+msgid "Channellist"
+msgstr "Kanavalista"
+
+msgid "Channelscan"
+msgstr "Kanavahaku"
+
+msgid "We shall now scan for channels."
+msgstr "Seuraavaksi haetaan kanavat."
+
+msgid "This will take a few minutes."
+msgstr "Haku kestää muutaman minuutin."
+
+msgid "Press OK to continue"
+msgstr "Paina OK jatkaaksesi"
+
+msgid "MultiRoom"
+msgstr ""
+
+msgid "Scanning for ReelBox MultiRoom server on network. Please wait..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Odota..."
+
+msgid "The MultiRoom system is already active."
+msgstr ""
+
+msgid "The MultiRoom system cannot be activated."
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is currently configured as recording server:"
+msgstr "Toinen ReelBox Avantgarde löytyi:"
+
+#, fuzzy
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server (the first one was used up to now):"
+msgstr "Toinen ReelBox Avantgarde löytyi:"
+
+#, fuzzy
+msgid "\tDisable MultiRoom"
+msgstr "Kytke verkkoliitantä pois käytöstä"
+
+msgid "Note:"
+msgstr "Huom:"
+
+msgid "* MultiRoom is not enabled!"
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is found, but has MultiRoom disabled, so cannot be used as recording server:"
+msgstr "Toinen ReelBox Avantgarde löytyi:"
+
+msgid "This ReelBox Avantgarde is found and will be used as recording server:"
+msgstr ""
+
+msgid "\tLeave MultiRoom unconfigured"
+msgstr ""
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server."
+msgstr ""
+
+#, fuzzy
+msgid "Please select one of them:"
+msgstr "Valitse verkkokansio:"
+
+#, fuzzy
+msgid "No ReelBox Avantgarde was found in the network."
+msgstr "Toinen ReelBox Avantgarde löytyi:"
+
+msgid "If you own an Avantgarde, turn it on and activate the MultiRoom System in Setup/Installation/MultiRoom."
+msgstr ""
+
+msgid "Rescan"
+msgstr ""
+
+msgid "Back"
+msgstr "Edellinen"
+
+msgid "Skip"
+msgstr "Ohita"
+
+msgid "Setting changes - please wait"
+msgstr "Tallennetaan asetukset..."
+
+msgid "Storing failed! (UUID is missing)"
+msgstr ""
+
+msgid "Settings stored"
+msgstr ""
+
+msgid "Reception"
+msgstr "Vastaanotin"
+
+msgid "Searching for NetCeiver in network. Please wait..."
+msgstr ""
+
+msgid "Searching for directly connected NetCeiver..."
+msgstr ""
+
+#, c-format
+msgid "Searching for NetCeiver in VLAN %d"
+msgstr ""
+
+msgid "Internal NetCeiver found"
+msgstr ""
+
+msgid "NetCeiver found in VLAN"
+msgstr ""
+
+msgid "System error!"
+msgstr "Järjestelmävirhe!"
+
+#, fuzzy
+msgid "No NetCeiver found!"
+msgstr "Vastaanotinta ei löydy!"
+
+msgid "Please check if the system cable is connected properly."
+msgstr "Tarkista vastaanottimen ja emolevyn välinen johto."
+
+msgid "Harddisk"
+msgstr ""
+
+msgid "Internal harddisk found."
+msgstr ""
+
+msgid "Press OK to format now, otherwise the yellow buttown 'skip'."
+msgstr ""
+
+msgid ""
+"If this is the first usage of the harddisk, it must be formatted now. Formatting will DELETE ALL data on the harddisk.\n"
+" If you have used this harddisk before, you could skip this step."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' was already used before and may contain recordings and multimedia files."
+msgstr ""
+
+msgid "Do you want to mount it and use it as a device for your media files?"
+msgstr ""
+
+msgid "\tYes, mount it, preserve all recordings"
+msgstr ""
+
+msgid "\tNo, do not use the harddisk at all"
+msgstr ""
+
+msgid "You should mount this disk now if you want to use it for permanent timeshift even if you are not going to use it for your media files."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' is already in use for media files."
+msgstr ""
+
+msgid "No action needs to be taken."
+msgstr ""
+
+msgid "Press red key, if you want to format this harddisk:"
+msgstr ""
+
+msgid "CAUTION:"
+msgstr ""
+
+msgid "If you choose to format, ALL data on the internal harddisk will be deleted!"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Formatting in progress"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting"
+msgstr "DNS-toimialue"
+
+msgid "Formatting in progress."
+msgstr ""
+
+#, fuzzy
+msgid "Please wait ..."
+msgstr "Odota..."
+
+msgid "Time elapsed"
+msgstr ""
+
+msgid "Formatting complete"
+msgstr ""
+
+msgid "Formatting was successful."
+msgstr ""
+
+msgid "The harddisk is now prepared for recording."
+msgstr ""
+
+msgid "Press 'Next' to proceed with the installation."
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Not Formatting!"
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "Formatting failed!"
+msgstr ""
+
+msgid "Formating failed!"
+msgstr ""
+
+msgid "Mounting harddisk ..."
+msgstr ""
+
+#, fuzzy
+msgid "Please select the target for your recordings:"
+msgstr "Valitse aikavyöhyke"
+
+#, fuzzy
+msgid " I want to store my recordings ..."
+msgstr "Otetaanko verkkokansio käyttöön?"
+
+msgid " - on the local harddisk of this NetClient."
+msgstr ""
+
+#, fuzzy
+msgid " - on the harddisk of the ReelBox Avantgarde."
+msgstr "Otetaanko verkkokansio käyttöön?"
+
+msgid "Error"
+msgstr ""
+
+msgid "No Harddisk found."
+msgstr ""
+
+msgid "Recording is not possible."
+msgstr ""
+
+msgid "Handling"
+msgstr "Kieli ja sijainti"
+
+msgid "Please select a language"
+msgstr ""
+
+msgid "Please select a language and timezone"
+msgstr "Valitse käytettävä kieli ja kerro sijainti aikavyöhykettä varten"
+
+msgid "Setup.OSD$Language"
+msgstr "Valikkokieli"
+
+msgid "City/Region"
+msgstr "Kaupunki/alue"
+
+msgid "Please select the prefered language using the"
+msgstr "Tee valinnat käyttäen kaukosäätimen"
+
+msgid "cursor keys on the remote control."
+msgstr "nuolinäppäimiä. Paina sitten OK"
+
+msgid "Then press OK to continue."
+msgstr "jatkaaksesi."
+
+msgid "Done"
+msgstr "Valmis!"
+
+msgid "Congratulations."
+msgstr "Onneksi olkoon!"
+
+msgid "All required settings for the initial operation have"
+msgstr "Kaikki välttämättömimmät asetukset on nyt tehty ja"
+
+msgid "been saved."
+msgstr "tallennettu."
+
+msgid "Reel Multimedia wishes you a lot of fun with"
+msgstr "Reel Multimedia toivoo että viihde on yhtä"
+
+msgid "your NetClient."
+msgstr ""
+
+msgid "your ReelBox."
+msgstr "kuin ReelBox"
+
+msgid "The Install prodecure wasn't completed"
+msgstr ""
+
+msgid "successfully."
+msgstr ""
+
+msgid "End"
+msgstr "Valmis"
+
+msgid "In this step you can configure the Reel MultiRoom system."
+msgstr ""
+
+msgid "Enable MultiRoom"
+msgstr ""
+
+msgid "Use this Reelbox as recording server?"
+msgstr ""
+
+msgid "No. of Clients in the network"
+msgstr ""
+
+msgid "Scan for MultiRoom server now"
+msgstr ""
+
+#, c-format
+msgid "Configuring as server: %d%%"
+msgstr ""
+
+msgid "Network"
+msgstr "Verkkoasetukset"
+
+msgid "Changes done"
+msgstr "Asetukset tallennettu"
+
+msgid "Network (WLAN)"
+msgstr ""
+
+msgid "setup plugin missing: cannot configure WLAN"
+msgstr ""
+
+msgid "Network disabled"
+msgstr "Verkkoliitäntä ei ole käytössä"
+
+msgid "Do you want to enable the network?"
+msgstr "Kytketäänkö verkkoliitäntä käyttöön?"
+
+msgid "Yes"
+msgstr "Kyllä"
+
+msgid "No"
+msgstr "Ei"
+
+#, fuzzy
+msgid "Do you want to set up the network now?"
+msgstr "Määritelläänkö verkkoasetukset?"
+
+msgid "Disable Network"
+msgstr "Kytke verkkoliitantä pois käytöstä"
+
+msgid "These settings are retrieved by DHCP:"
+msgstr "Verkkoasetukset haettiin automaattisesti (DHCP)"
+
+msgid "IP Address"
+msgstr "IP-osoite"
+
+msgid "Network mask"
+msgstr "Aliverkon peite"
+
+msgid "Gateway"
+msgstr "Reititin"
+
+msgid "Nameserver"
+msgstr "Nimipalvelin"
+
+msgid "Current settings:"
+msgstr "Käytössä olevat asetukset:"
+
+msgid "Do you want to use these settings?"
+msgstr "Käytetäänkö näitä automaattisia asetuksia jatkossakin?"
+
+msgid "Yes, store"
+msgstr ""
+
+msgid "No, configure network manually"
+msgstr "Ei, määrittelen asetukset itse"
+
+msgid "No, configure WiFi"
+msgstr ""
+
+msgid "Manual network setting"
+msgstr "Verkkoasetukset"
+
+msgid "Use DHCP"
+msgstr "Hae asetukset automaattisesti (DHCP)"
+
+msgid "no"
+msgstr "ei"
+
+msgid "yes"
+msgstr "kyllä"
+
+msgid "Hostname"
+msgstr "Laitteen nimi"
+
+msgid "Domain"
+msgstr "DNS-toimialue"
+
+msgid "Software"
+msgstr "Ohjelmisto"
+
+msgid "Connection"
+msgstr "Näytön liitäntä"
+
+msgid "Auto"
+msgstr "automaattinen"
+
+msgid "Progressive"
+msgstr "ei käytössä"
+
+msgid "Interlaced"
+msgstr "käytössä"
+
+msgid "Off"
+msgstr "ei käytössä"
+
+msgid "On"
+msgstr "käytössä"
+
+msgid "Component"
+msgstr ""
+
+msgid "Select a video mode for your screen"
+msgstr "Valitse videoliitäntä ja näytön asetukset"
+
+msgid "TV connected by"
+msgstr "Näytön liitäntä"
+
+msgid "Display Type"
+msgstr "Näytön kuvasuhde"
+
+msgid "Digital Output"
+msgstr "Digitaalinen liitäntä"
+
+msgid "Analog Output"
+msgstr "Analoginen signaali"
+
+msgid "Analog Port"
+msgstr "Analoginen liitäntä"
+
+msgid "fill to screen"
+msgstr "venytä ruudun kokoiseksi"
+
+msgid "fill to aspect"
+msgstr "säilytä kuvasuhde"
+
+msgid "crop to fill"
+msgstr "rajaa ylimenevät pois"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Kuvakoon hallinta"
+
+msgid "Resolution"
+msgstr "Kuvasignaalin tarkkuus"
+
+msgid "Norm/Framerate"
+msgstr "Kuvan piirtonopeus"
+
+msgid "Progressive/Interlaced"
+msgstr "Kuvasignaalin lomitus"
+
+msgid "Normal"
+msgstr "Perusasetukset"
+
+msgid "Expert"
+msgstr "Tarkat asetukset"
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Error: no menu got from reelice plugin"
+msgstr ""
+
+msgid "reelice plugin not found"
+msgstr ""
+
+#, fuzzy
+msgid "Keep these settings?"
+msgstr "Käytetäänkö näitä automaattisia asetuksia jatkossakin?"
+
+msgid "Using old settings"
+msgstr ""
+
+#, fuzzy
+msgid "HDMI settings"
+msgstr "voimaan."
+
+msgid "Mode"
+msgstr "Kuvasuhde"
+
+#, fuzzy
+msgid "Output"
+msgstr "Analoginen signaali"
+
+msgid "Aspect"
+msgstr ""
+
+#, fuzzy
+msgid "Aspect ratio"
+msgstr "Kuvakoon hallinta"
+
+#, fuzzy
+msgid "SCART settings"
+msgstr "voimaan."
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr ""
+
+msgid "samba not installed!"
+msgstr ""
+
+msgid "not set"
+msgstr ""
+
+msgid "Installation Wizard"
+msgstr "Ohjattu asennus"
+
+#, fuzzy
+msgid "None"
+msgstr "Valmis!"
+
+msgid "TS"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Init"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Pause"
+msgstr ""
+
+msgid "Trick"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Mpg2"
+msgstr ""
+
+msgid "h264"
+msgstr ""
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Ntsc Jap"
+msgstr ""
+
+msgid "Ntsc 443"
+msgstr ""
+
+msgid "Pal B IT"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "Pal B Aus"
+msgstr ""
+
+msgid "Pal B NZ"
+msgstr ""
+
+msgid "Pal I"
+msgstr ""
+
+msgid "SECAM"
+msgstr ""
+
+msgid "Secam D"
+msgstr ""
+
+msgid "Pal D"
+msgstr ""
+
+msgid "Pal G"
+msgstr ""
+
+msgid "Pal H"
+msgstr ""
+
+msgid "Pal M"
+msgstr ""
+
+msgid "Pal 60"
+msgstr ""
+
+msgid "Pal N"
+msgstr ""
+
+msgid "Pal NC"
+msgstr ""
+
+msgid "Ntsc BT470"
+msgstr ""
+
+msgid "480p60"
+msgstr ""
+
+msgid "576p50"
+msgstr ""
+
+msgid "720p50"
+msgstr ""
+
+msgid "720p59"
+msgstr ""
+
+msgid "720p60"
+msgstr ""
+
+msgid "1080i50"
+msgstr ""
+
+msgid "1080i59"
+msgstr ""
+
+msgid "1080i60"
+msgstr ""
+
+msgid "1080p23"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p29"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "1:1"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "14:9"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "20:9"
+msgstr ""
+
+#, fuzzy
+msgid "Fill to Screen"
+msgstr "venytä ruudun kokoiseksi"
+
+#, fuzzy
+msgid "Crop to Fill"
+msgstr "rajaa ylimenevät pois"
+
+#, fuzzy
+msgid "Fill to Aspect"
+msgstr "säilytä kuvasuhde"
+
+msgid "NL X"
+msgstr ""
+
+msgid "NL Y"
+msgstr ""
+
+msgid "NL XY"
+msgstr ""
+
+msgid "DVI"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "CVBS DLY"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "YC"
+msgstr ""
+
+msgid "YPrPb"
+msgstr ""
+
+msgid "Deblock"
+msgstr ""
+
+msgid "Deblock & dering"
+msgstr ""
+
+#~ msgid "of"
+#~ msgstr "/"
+
+#, fuzzy
+#~ msgid "Internal harddisk found. Do you want to format it now?"
+#~ msgstr "Löydettiin sisäinen kiintolevy. Alustetaanko levy?"
+
+#, fuzzy
+#~ msgid "Please wait!"
+#~ msgstr "Odota..."
+
+#, fuzzy
+#~ msgid "Storing settings. Please wait..."
+#~ msgstr "Tallennetaan asetukset..."
+
+#, fuzzy
+#~ msgid "Do you want to keep these settings?"
+#~ msgstr "Käytetäänkö näitä automaattisia asetuksia jatkossakin?"
+
+#, fuzzy
+#~ msgid "Do you want to enable the Reel MultiRoom system?"
+#~ msgstr "Kytketäänkö verkkoliitäntä käyttöön?"
+
+#, fuzzy
+#~ msgid ""
+#~ "Disables the MultiRoom-System.\n"
+#~ "Please press 'OK' to store the setting."
+#~ msgstr "Käytetäänkö näitä automaattisia asetuksia jatkossakin?"
+
+#, fuzzy
+#~ msgid "No ReelBox Avantgarde was found on the network!"
+#~ msgstr "Toinen ReelBox Avantgarde löytyi:"
+
+#, fuzzy
+#~ msgid "If this is the first usage of the harddisk, it must be formatted now."
+#~ msgstr "Jos kiintolevyä ei ole aiemmin käytetty tämän laitteen kanssa se"
+
+#, fuzzy
+#~ msgid "    ... if so, please press OK to format."
+#~ msgstr "...paina OK jatkaaksesi"
+
+#, fuzzy
+#~ msgid "Formatting harddisk. Please wait..."
+#~ msgstr "Tallennetaan asetukset..."
+
+#, fuzzy
+#~ msgid "ReelBox Avantgarde found in network."
+#~ msgstr "Toinen ReelBox Avantgarde löytyi:"
+
+#~ msgid "Scanning Network..."
+#~ msgstr "Etsitään verkosta..."
+
+#~ msgid "Target storage for media"
+#~ msgstr "Tallennusmedia"
+
+#~ msgid "local"
+#~ msgstr "kiintolevy"
+
+#~ msgid "Avantgarde"
+#~ msgstr "verkkokansio"
+
+#~ msgid "Please Select an Avantgarde server"
+#~ msgstr "Valitse kansiopalvelin"
+
+#~ msgid "Area"
+#~ msgstr "Kaupunki/alue"
+
+#~ msgid "Select a video mode of your screen"
+#~ msgstr "Valitse näytön asetukset"
+
+#~ msgid "Anamorphic+WSS"
+#~ msgstr "16:9 / 4:3 autom."
+
+#~ msgid "Anamorphic"
+#~ msgstr "16:9"
+
+#~ msgid "The adjustment above should only be changed by experienced"
+#~ msgstr "Muuta näitä asetuksia vain jos tiedät varmasti mitä"
+
+#~ msgid "users."
+#~ msgstr "olet tekemässä."
+
+#~ msgid "Incorrect attitudes can impair the television picture."
+#~ msgstr "Väärät asetukset vaikuttavat vastaanotetun kuvan laatuun."
+
+#~ msgid "Framerate"
+#~ msgstr "Kuvanopeus"
+
+#~ msgid "DiSEqC disabled"
+#~ msgstr "DiSEqC ei käytössä"
+
+#~ msgid "How many tuners are connected?"
+#~ msgstr "Montako viritintä on käytössä?"
+
+#~ msgid "Tuners count"
+#~ msgstr "Virittimien lukumäärä"
+
+#~ msgid "Rotor settings will follow..."
+#~ msgstr "Lautasmoottorin asetukset tehdään myöhemmin..."
+
+#~ msgid "Do you have a DiSEqC switch?"
+#~ msgstr "Käytetäänkö DiSEqC-kytkintä?"
+
+#~ msgid "DiSEqC Type"
+#~ msgstr "DiSEqC:n tyyppi"
+
+#~ msgid "Number of LNBs"
+#~ msgstr "Mikropäiden lukumäärä"
+
+#~ msgid "LNB Type"
+#~ msgstr "Mikropään tyyppi"
+
+#~ msgid "Sat positions must be unique!"
+#~ msgstr "Satelliittien sijaintitietojen täytyy olla yksilöllisiä!"
+
+#~ msgid "now. If you activated the harddisk bevore, you don't need to"
+#~ msgstr "täytyy alustaa. Jos olet jo aiemmin alustanut levyn, voit ohittaa"
+
+#~ msgid "perform this step now."
+#~ msgstr "tämän vaiheen."
+
+#~ msgid "In this case press the 'yellow' button to skip to the next step."
+#~ msgstr "Ohita kiintolevyn alustus painamalla Ohita."
+
+#~ msgid "The device is rebooting to activate the"
+#~ msgstr "Laite täytyy käynnistää uudelleen jotta asetukset astuvat"
+
+#~ msgid "Restarting ReelBox"
+#~ msgstr "Käynnistetään uudelleen"

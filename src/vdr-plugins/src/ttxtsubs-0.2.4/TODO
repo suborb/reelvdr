@@ -1,0 +1,4 @@
+* Take care of the PTS values for synchronizing the subtitles and drop the
+  delay settings (COMMIT 82053ddc483b096bad7acf760e4219349a0d2206 can then be
+  reverted as well as COMMIT 0ac25c2487e123626a344cae57a2013c3c4a450b of the
+  ttxtsubs VDR patch)

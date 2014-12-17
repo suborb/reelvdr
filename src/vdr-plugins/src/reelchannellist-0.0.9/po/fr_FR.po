@@ -1,0 +1,319 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-14 14:48+0100\n"
+"PO-Revision-Date: 2008-09-26 12:18+0200\n"
+"Last-Translator: Andreas Ritter <ar@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Current Transponder"
+msgstr "Transpondeur actuel"
+
+msgid "Favourites"
+msgstr "Favoris"
+
+msgid "No favourite folders available"
+msgstr "Aucun dossiers favoris disponible"
+
+msgid "Info:"
+msgstr "Info:"
+
+msgid "Please select 'all Channels' to add channels to your favorites."
+msgstr "Sélectionner svp 'Toutes Chaînes' pour ajouter aux favoris"
+
+msgid "No channels in this bouquet"
+msgstr "Aucune chaîne dans ce bouquet"
+
+msgid "Channel List"
+msgstr "Liste de chaînes"
+
+msgid "Functions"
+msgstr "Commandes"
+
+msgid "Switching to channel failed"
+msgstr "Changement de chaîne a échoué"
+
+msgid "Enter new favourites folder name"
+msgstr "Saisir le nom du nouveau dossier favoris"
+
+msgid "Folder name"
+msgstr "Nom du dossier"
+
+msgid "Duplicate folder name. Please try another name."
+msgstr "Nom de dossier existant. Saisir un nouveau nom"
+
+msgid "Invalid folder name"
+msgstr "Nom de dossier invalide"
+
+msgid "You have no favourite folders. Please create one before you can add the channel"
+msgstr "Vous n'avez aucun dossier favoris. Créés en un avant d'ajouter la chaîne"
+
+#, c-format
+msgid "Select folder for %d channels"
+msgstr ""
+
+msgid "Create new folder"
+msgstr "Créer un nouveau dossier"
+
+msgid "Select folder with 'Ok'"
+msgstr "Sélectionner le dossier avec 'Ok'"
+
+msgid "Channel added to favourites"
+msgstr "Chaîne ajouté aux favoris"
+
+msgid "Channel not added to favourites"
+msgstr "Chaîne non ajouté aux favoris"
+
+#, c-format
+msgid "For folder '%s' please choose one of the following options:"
+msgstr "Pour le dossier '%s', choisir une des options suivantes:"
+
+#, c-format
+msgid "For channel '%s' please choose one of the following options:"
+msgstr "Pour la chaîne '%s', choisir une des options suivantes:"
+
+msgid "Rename folder"
+msgstr "Renommer le dossier"
+
+msgid "Delete folder"
+msgstr "Supprimer le dossier"
+
+msgid "Move folder"
+msgstr "Déplacer le dossier"
+
+msgid "CI-slot assignment for folder"
+msgstr "Assigner le slot CI pour le dossier"
+
+msgid "Move channel"
+msgstr "Déplacer la chaîne"
+
+msgid "Delete channel"
+msgstr "Supprimer la chaîne"
+
+msgid "CI-slot assignment for channel"
+msgstr "Assigner le slot CI pour la chaîne"
+
+msgid "Delete channel from favourites?"
+msgstr "Supprimer la chaîne des favoris"
+
+msgid "Channel deleted"
+msgstr "Chaîne supprimée"
+
+msgid "Deletion of channel failed"
+msgstr "Suppression de la chaîne a échoué"
+
+msgid "Delete cancelled"
+msgstr "Suppression abandonnée"
+
+msgid "Delete folder and all its channels?"
+msgstr "Supprimer le dossier et toutes ses chaînes?"
+
+msgid "Folder and its contents deleted"
+msgstr "Dossier et toutes ces chaînes supprimés"
+
+msgid "Deletion of folder failed"
+msgstr "Suppresion du dossier a échoué"
+
+msgid "Rename favourites folder"
+msgstr "Renommer le dossier favoris"
+
+msgid "New folder name"
+msgstr "Nouveau nom du dossier"
+
+msgid "Press right key to enter folder name and Ok to rename."
+msgstr "Pressez la touche Droite pour entrer le nom du dossier et appuyez sur Ok pour renommer"
+
+msgid "Renamed folder"
+msgstr "Dossier renommé"
+
+msgid "Rename failed"
+msgstr "Renommage a échoué"
+
+msgid "Sort by number"
+msgstr "Trier par numéro"
+
+msgid "Sort by channel name"
+msgstr "Trier par chaîne"
+
+msgid "Sort by provider name"
+msgstr "Trier par diffuseur"
+
+msgid "Delete channels?"
+msgstr ""
+
+msgid "Deletion cancelled"
+msgstr ""
+
+msgid "A selected channel has timer. Remove timer and try again."
+msgstr ""
+
+#, c-format
+msgid "Deleted %d Channels"
+msgstr ""
+
+msgid "Radio Only"
+msgstr "Radio uniq."
+
+msgid "TV Only"
+msgstr "TV uniq."
+
+msgid "Move to Fav"
+msgstr ""
+
+msgid "Delete selected"
+msgstr ""
+
+msgid "Unknown mode"
+msgstr ""
+
+msgid ""
+"No channels found.\n"
+"Press red key to list all channels."
+msgstr ""
+
+msgid "Select channels to delete"
+msgstr ""
+
+msgid "Select channels to add to Fav"
+msgstr ""
+
+msgid "All Channels"
+msgstr "Toutes Chaînes"
+
+msgid "Select channels with Ok. Then blue key for options."
+msgstr ""
+
+msgid "Providers"
+msgstr "Diffuseurs"
+
+msgid "Add provider"
+msgstr "Ajouter un diffuseur"
+
+msgid "to favourites"
+msgstr "aux favoris"
+
+msgid "CI-slot assignment for provider"
+msgstr "Assignement du slot CI pour le diffuseur"
+
+msgid "Provider added to favourites"
+msgstr "Diffuseur ajouté aux favoris"
+
+msgid "Error: Provider not added to favourites"
+msgstr "Erreur: Diffuseur n'a pas été ajouté aux favoris"
+
+msgid "Sources"
+msgstr "Sources"
+
+#, c-format
+msgid "Add the %d selected channels to favourites with the option below:"
+msgstr ""
+
+msgid "Add multiple channels to Favourites"
+msgstr ""
+
+#, c-format
+msgid "Delete the %d selected channels:"
+msgstr ""
+
+msgid "Delete channels"
+msgstr ""
+
+msgid "Edit selected channel"
+msgstr ""
+
+msgid "Add selected channel to Favourites"
+msgstr "Ajouter la chaîne sélectionnée aux favoris"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search for channel"
+msgstr "Rechercher une chaîne"
+
+msgid "Enter string to search"
+msgstr "Saisir une chaîne pour rechercher"
+
+msgid "Search for"
+msgstr "Recherche pour"
+
+msgid "channel"
+msgstr "chaîne"
+
+msgid "bouquet"
+msgstr "bouquet"
+
+msgid "provider"
+msgstr "diffuseur"
+
+msgid "Choose CI slot for"
+msgstr "Choisir le slot CI pour"
+
+msgid "CI-slot for"
+msgstr "slot CI pour"
+
+msgid "New"
+msgstr "Nouveau"
+
+msgid "Symbolrate"
+msgstr ""
+
+msgid "System-ID"
+msgstr ""
+
+msgid "CI-Slot"
+msgstr "slot CI"
+
+msgid "Button$New"
+msgstr "Nouveau"
+
+msgid "No CAM at"
+msgstr "Aucun CAM à"
+
+msgid "New channels"
+msgstr "Nouvelles chaînes"
+
+msgid "Channels"
+msgstr "Chaînes"
+
+msgid "Unknown source"
+msgstr "Source inconnue"
+
+msgid "Unknown Provider"
+msgstr ""
+
+msgid "Channel List: Move Channel"
+msgstr ""
+
+msgid "Select a channel with OK key"
+msgstr ""
+
+msgid "Up/Down to move channel. Exit key removes selection."
+msgstr ""
+
+msgid "Channel Info"
+msgstr "Info Chaîne"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Ok key in TV Mode"
+msgstr "Touche Ok en mode TV"
+
+#~ msgid "exit this menu with Exit"
+#~ msgstr "sortir du menu avec Sortie"
+
+#~ msgid "Edit selected Channel"
+#~ msgstr "Modifier la chaîne sélectionnée"
+
+#~ msgid "Select folder for:"
+#~ msgstr "Sélectionner le dossier pour:"

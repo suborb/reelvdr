@@ -1,0 +1,307 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-rbmini\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-02-04 10:16+0100\n"
+"PO-Revision-Date: 2011-09-07 18:10+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "HDMI: %s      SCART: %s"
+msgstr "HDMI: %s      SCART: %s"
+
+msgid "Setup - Video"
+msgstr "Setup - Video"
+
+msgid "Setup - Audio"
+msgstr "Setup  Audio"
+
+msgid "Keep these settings?"
+msgstr "Instellingen houden?"
+
+msgid "Using old settings"
+msgstr "Gebruik oude instellingen"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Experts"
+msgstr "Expert"
+
+msgid "HDMI settings"
+msgstr "HDMI instellingen"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output"
+msgstr "Uitgang"
+
+msgid "Aspect"
+msgstr "Aspect"
+
+msgid "Aspect ratio"
+msgstr "Aspect verhouding"
+
+msgid "SCART settings"
+msgstr "SCART instellingen"
+
+msgid "Mpeg2 settings"
+msgstr "Mpeg2 instellingen"
+
+msgid "Postprocessing"
+msgstr "Voorbewerking"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr "De wijzigingen aan video-mode of uitgang moet worden bevestigd, indien uw scherm de instellingen niet ondersteund wacht u 20 sec. ,of druk Exit om te annuleren."
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Audio settings"
+msgstr "Audio instellingen"
+
+msgid "Analog offset"
+msgstr "Analoge compensatie"
+
+msgid "Dolby Digital offset"
+msgstr "Dolby Digital compensatie"
+
+msgid "Note:"
+msgstr "Opmerking:"
+
+msgid "The adjustable range is 1/100 seconds."
+msgstr "De in te stellen variabele  is 1/100 seconden."
+
+msgid "None"
+msgstr "Geen"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Init"
+msgstr "Initialiseer"
+
+msgid "Play"
+msgstr "Play"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Trick"
+msgstr "Trick"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Mpg2"
+msgstr "Mpg2"
+
+msgid "h264"
+msgstr "h264"
+
+msgid "jpeg"
+msgstr "jpeg"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "Ntsc Jap"
+
+msgid "Ntsc 443"
+msgstr "Ntsc 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "SECAM"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "Ntsc BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr "1080p23"
+
+msgid "1080p24"
+msgstr "1080p24"
+
+msgid "1080p25"
+msgstr "1080p25"
+
+msgid "1080p29"
+msgstr "1080p29"
+
+msgid "1080p30"
+msgstr "1080p30"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "1:1"
+msgstr "1:1"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "14:9"
+msgstr "14:9"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "20:9"
+msgstr "20:9"
+
+msgid "Fill to Screen"
+msgstr "Volledig scherm"
+
+msgid "Crop to Fill"
+msgstr "Zoom"
+
+msgid "Fill to Aspect"
+msgstr "Origineel"
+
+msgid "NL X"
+msgstr "NL X"
+
+msgid "NL Y"
+msgstr "NL Y"
+
+msgid "NL XY"
+msgstr "NL XY"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr "HDMI (PCM)"
+
+msgid "All"
+msgstr "ALL"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YPrPb"
+
+msgid "Deblock"
+msgstr "Deblokkeer"
+
+msgid "Deblock & dering"
+msgstr "Deblock & dering"
+
+#~ msgid "Dolby D offset"
+#~ msgstr "Dolby D offset"
+
+#~ msgid "Ignore"
+#~ msgstr "Negeer"
+
+#~ msgid "You will have to confirm changes to mode or output."
+#~ msgstr "U moet de verandering naar mode of uitgang bevestigen."
+
+#~ msgid "If your display doesn not support the new settings,"
+#~ msgstr "Indien uw scherm de nieuwe instellingen niet ondersteund,"
+
+#~ msgid "just wait for 20 seconds or press Exit to cancel"
+#~ msgstr "kan u gewoon 20 seconden wachten of druk op Exit"
+
+#~ msgid "the changes."
+#~ msgstr "om het proces af te breken"

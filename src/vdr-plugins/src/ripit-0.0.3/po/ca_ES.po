@@ -1,0 +1,154 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ripit\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 16:14+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "user defined"
+msgstr "definit per l'usuari"
+
+msgid "low"
+msgstr "baixa"
+
+msgid "standard"
+msgstr "estàndard"
+
+msgid "great"
+msgstr "alta"
+
+msgid "best"
+msgstr "millor"
+
+msgid "Destination format"
+msgstr "Format de destí"
+
+msgid "Hide mainmenu entry"
+msgstr "Oculta entrada al menú principal"
+
+msgid "Shutdown when finished"
+msgstr "Atura quan hagis acabat"
+
+msgid "Verbose output"
+msgstr "Detalls de sortida"
+
+msgid "Fast mode"
+msgstr "Mode ràpid"
+
+msgid "Eject CD when finished"
+msgstr "Expulsa el CD quan acabis"
+
+msgid "Presets"
+msgstr "Predeterminats"
+
+msgid "Min. bitrate"
+msgstr "Bitrate mín."
+
+msgid "Max. bitrate"
+msgstr "Bitrate màx."
+
+msgid "More encoder settings"
+msgstr "Més paràmetres de codificació"
+
+msgid "Device"
+msgstr "Dispositiu"
+
+msgid "Directory for ripped tracks"
+msgstr "Carpeta per a les pistes copiades"
+
+msgid "Priority of task (nice)"
+msgstr "Prioritat de la tasca"
+
+msgid "Encode remotely"
+msgstr "Codifica de manera remota"
+
+msgid "Options for remote encoding"
+msgstr "Opcions de codificació remota"
+
+msgid "Abort"
+msgstr "Atura"
+
+msgid "No CD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please insert an audio CD to archive it."
+msgstr ""
+
+msgid "CD found in drive."
+msgstr ""
+
+msgid "Please select archive format and quality and press RED to start archiving your audio CD."
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Ripped: \t"
+msgstr "S'ha copiat: \t"
+
+msgid "completed"
+msgstr "acabada"
+
+msgid "Ripping: \t"
+msgstr "S'està copiant: \t"
+
+msgid "Encoded: \t"
+msgstr "Codificat: \t"
+
+msgid "Encoding: \t"
+msgstr "S'està codificant: \t"
+
+msgid "Completed"
+msgstr "Acabat"
+
+msgid "Aborted"
+msgstr "S'ha interromput"
+
+msgid "No medium found"
+msgstr "No s'ha trobat cap suport"
+
+msgid "Searching CDDB entry, please wait"
+msgstr "S'està cercant l'entrada CDDB, si us plau, espereu"
+
+msgid "Total Tracks: "
+msgstr "Total Pistes: "
+
+msgid "Reading CD"
+msgstr "Llegint CD"
+
+msgid "PROCESS MANUALLY ABORTED"
+msgstr "PROCÉS ATURAT MANUALMENT"
+
+msgid "Encoding tracks"
+msgstr "S'estan codificant les pistes"
+
+msgid "Ripping and Encoding tracks"
+msgstr "S'estan copiant i codificant les pistes"
+
+msgid "Audio-CD ripper"
+msgstr "Copia pistes d'Àudio CD"
+
+msgid "Archive Audio-CD"
+msgstr "Arxiva Audio CD"
+
+msgid "Audio-CD archive "
+msgstr "Arxiu d'Àudio CD "
+
+#~ msgid "No ripping in progress"
+#~ msgstr "No hi ha cap procés de còpia"

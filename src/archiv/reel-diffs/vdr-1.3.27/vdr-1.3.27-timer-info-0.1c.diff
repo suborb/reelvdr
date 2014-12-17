@@ -1,0 +1,504 @@
+diff -Nru vdr_plain/config.c vdr_patched/config.c
+--- vdr_plain/config.c	2005-06-18 12:30:02.000000000 +0200
++++ vdr_patched/config.c	2005-07-06 19:09:53.000000000 +0200
+@@ -271,6 +271,7 @@
+   SVDRPTimeout = 300;
+   ZapTimeout = 3;
+   SortTimers = 1;
++  ShowTimerInfo = 1;
+   PrimaryLimit = 0;
+   DefaultPriority = 50;
+   DefaultLifetime = 99;
+@@ -429,6 +430,7 @@
+   else if (!strcasecmp(Name, "SVDRPTimeout"))        SVDRPTimeout       = atoi(Value);
+   else if (!strcasecmp(Name, "ZapTimeout"))          ZapTimeout         = atoi(Value);
+   else if (!strcasecmp(Name, "SortTimers"))          SortTimers         = atoi(Value);
++  else if (!strcasecmp(Name, "ShowTimerInfo"))       ShowTimerInfo         = atoi(Value);
+   else if (!strcasecmp(Name, "PrimaryLimit"))        PrimaryLimit       = atoi(Value);
+   else if (!strcasecmp(Name, "DefaultPriority"))     DefaultPriority    = atoi(Value);
+   else if (!strcasecmp(Name, "DefaultLifetime"))     DefaultLifetime    = atoi(Value);
+@@ -493,6 +495,7 @@
+   Store("SVDRPTimeout",       SVDRPTimeout);
+   Store("ZapTimeout",         ZapTimeout);
+   Store("SortTimers",         SortTimers);
++  Store("ShowTimerInfo",      ShowTimerInfo);
+   Store("PrimaryLimit",       PrimaryLimit);
+   Store("DefaultPriority",    DefaultPriority);
+   Store("DefaultLifetime",    DefaultLifetime);
+diff -Nru vdr_plain/config.h vdr_patched/config.h
+--- vdr_plain/config.h	2005-06-18 12:29:25.000000000 +0200
++++ vdr_patched/config.h	2005-07-06 19:08:43.000000000 +0200
+@@ -231,6 +231,7 @@
+   int SVDRPTimeout;
+   int ZapTimeout;
+   int SortTimers;
++  int ShowTimerInfo;
+   int PrimaryLimit;
+   int DefaultPriority, DefaultLifetime;
+   int PausePriority, PauseLifetime;
+diff -Nru vdr_plain/i18n.c vdr_patched/i18n.c
+--- vdr_plain/i18n.c	2005-06-18 12:42:31.000000000 +0200
++++ vdr_patched/i18n.c	2005-07-06 19:08:08.000000000 +0200
+@@ -2947,6 +2947,27 @@
+     "Taimeri sorteerimine",
+     "Sorter timere",
+   },
++  { "Setup.OSD$Show timer-info",
++    "Timerinfo anzeigen",
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++    "",// TODO
++  },
+   { "Setup.OSD$Recording directories",
+     "Aufnahmeverzeichnisse",
+     "Direktoriji za posnetke",
+diff -Nru vdr_plain/menu.c vdr_patched/menu.c
+--- vdr_plain/menu.c	2005-06-18 12:31:52.000000000 +0200
++++ vdr_patched/menu.c	2005-07-08 17:04:01.000000000 +0200
+@@ -33,6 +33,7 @@
+ #define MENUTIMEOUT     120 // seconds
+ #define MAXWAIT4EPGINFO   3 // seconds
+ #define MODETIMEOUT       3 // seconds
++#define MB_PER_MINUTE 25.75 // this is just an estimate!
+ 
+ #define MAXRECORDCONTROLS (MAXDEVICES * MAXRECEIVERS)
+ #define MAXINSTANTRECTIME (24 * 60 - 1) // 23:59 hours
+@@ -712,16 +713,19 @@
+ class cMenuTimerItem : public cOsdItem {
+ private:
+   cTimer *timer;
++  char diskStatus;
+ public:
+-  cMenuTimerItem(cTimer *Timer);
++  cMenuTimerItem(cTimer *Timer, char DiskStatus = ' ');
++  void SetDiskStatus(char DiskStatus);
+   virtual int Compare(const cListObject &ListObject) const;
+   virtual void Set(void);
+   cTimer *Timer(void) { return timer; }
+   };
+ 
+-cMenuTimerItem::cMenuTimerItem(cTimer *Timer)
++cMenuTimerItem::cMenuTimerItem(cTimer *Timer, char DiskStatus)
+ {
+   timer = Timer;
++  diskStatus = DiskStatus;
+   Set();
+ }
+ 
+@@ -759,9 +763,15 @@
+                     timer->Stop() / 100,
+                     timer->Stop() % 100,
+                     timer->File());
++  if (Setup.ShowTimerInfo) asprintf(&buffer, "%c%s", diskStatus, buffer);
+   SetText(buffer, false);
+ }
+ 
++void cMenuTimerItem::SetDiskStatus(char DiskStatus)
++{
++	diskStatus = DiskStatus;
++}
++
+ // --- cMenuTimers -----------------------------------------------------------
+ 
+ class cMenuTimers : public cOsdMenu {
+@@ -773,6 +783,7 @@
+   virtual void Move(int From, int To);
+   eOSState Summary(void);
+   cTimer *CurrentTimer(void);
++  void ActualiseDiskStatus(void);
+ public:
+   cMenuTimers(void);
+   virtual ~cMenuTimers();
+@@ -780,7 +791,7 @@
+   };
+ 
+ cMenuTimers::cMenuTimers(void)
+-:cOsdMenu(tr("Timers"), 2, CHNUMWIDTH, 10, 6, 6)
++:cOsdMenu(tr("Timers"), Setup.ShowTimerInfo ? 3 : 2, CHNUMWIDTH, 10, 6, 6)
+ {
+   for (cTimer *timer = Timers.First(); timer; timer = Timers.Next(timer))
+       Add(new cMenuTimerItem(timer));
+@@ -788,6 +799,171 @@
+      Sort();
+   SetHelp(tr("Edit"), tr("New"), tr("Delete"), Setup.SortTimers ? tr("On/Off") : tr("Mark"));
+   Timers.IncBeingEdited();
++  ActualiseDiskStatus();
++}
++
++struct sListEntry
++{
++  int key;
++  bool active;
++  time_t startTime;
++  int priority;
++  int duration;
++  bool repTimer;
++  bool isDummy;
++};
++
++static int CompareListEntry(const void *a, const void *b)
++{
++  int r = ( (sListEntry *)a)->startTime - ( (sListEntry *)b)->startTime;
++  
++  if (r == 0)
++  {
++	  r = ( (sListEntry *)b)->priority - ( (sListEntry *)a)->priority;
++  }
++  
++  return r;
++}
++
++void cMenuTimers::ActualiseDiskStatus(void)
++{
++  if (!Setup.ShowTimerInfo) return;
++  
++  int nTimers = Timers.Count();
++  
++  if (!nTimers) return;
++  
++  int freeMB, freeMinutes, runshortMinutes;
++  cTimer *timer, *timerTmp;
++  int duration;
++  int nList = nTimers;
++  int nRepTimers = 0, nDays = 0;
++  time_t firstStart, latestStart = 0;
++  char status;
++  sListEntry *list = (sListEntry *)malloc(nList * sizeof(sListEntry) );
++  cMenuTimerItem *item = NULL;
++  
++  
++  VideoDiskSpaceIncDel(&freeMB);
++  freeMinutes = int(double(freeMB) * 1.1 / MB_PER_MINUTE); // overestimate by 10 percent
++  runshortMinutes = freeMinutes / 5; // 20 Percent
++  
++  // generate sorted timer-list
++  timer = Timers.First();
++  firstStart = timer->StartTime();
++  
++  for (int i = 0; i < nTimers; i++)
++  {
++	  duration = (timer->Stop()  / 100 * 60 + timer->Stop()  % 100)
++				  - (timer->Start() / 100 * 60 + timer->Start() % 100);
++	  if (duration < 0) duration += 24 * 60; 
++		  
++	  list[i].key = i;
++	  list[i].active = timer->HasFlags(tfActive);
++	  list[i].startTime = timer->StartTime();	  
++	  list[i].priority = timer->Priority();
++	  list[i].duration = duration;
++	  list[i].repTimer = !timer->IsSingleEvent();
++	  list[i].isDummy = false;
++	  
++	  if (list[i].repTimer && list[i].active) nRepTimers++;
++	  
++	  latestStart = max(list[i].startTime, latestStart);
++	  firstStart = min(list[i].startTime, firstStart);
++	  
++	  timer = Timers.Next(timer);
++  }
++  
++  nDays = (latestStart - firstStart) / (3600 * 24) + 1;
++  
++  // add the repeating dummy-timers (if there are any)
++  if (nRepTimers)
++  {
++	  // reallocate more space (estimated)
++	  list = (sListEntry *)realloc(list, (nList + nDays * nRepTimers) * sizeof(sListEntry) );
++	  
++	  for (int i = 0; i < nTimers; i++)
++	  {
++		  if (list[i].repTimer)
++		  {
++			  cTimer timerDummy;
++			  timerDummy = *(Timers.Get(list[i].key) );
++			  
++			  for (int j = 0; j < nDays; j++)
++			  {
++				  timerDummy.Skip();
++				  timerDummy.Matches(); // Actualise the timer
++
++				  if ( *(*timerDummy.PrintDay((timerDummy.Day() ), 0) + j) != '-')
++				  {
++					  if (timerDummy.StartTime() > latestStart) break;
++					  
++					  list[nList].key = 0;
++					  list[nList].active = true;
++					  list[nList].startTime = timerDummy.StartTime();	  
++					  list[nList].priority = list[i].priority;
++					  list[nList].duration = list[i].duration;
++					  list[nList].repTimer = true;
++					  list[nList].isDummy = true;	
++					  
++					  nList++;
++				  }
++			  }
++		  }
++	  }
++  }
++  
++  qsort(list, nList, sizeof(sListEntry), *CompareListEntry); 
++  
++  // set the disk-status
++  for (int i = 0; i < nList; i++)
++  {
++	  // Debugging-info:
++	  /* printf("timer %d:\t%d | %s | %s | %d -> %d\n",
++		  i + 1,
++		  list[i].startTime,
++		  list[i].active ? "aktiv " : "n.akt.",
++		  list[i].repTimer ? list[i].isDummy ? "  dummy  " : "mehrmalig" : "einmalig ",
++		  list[i].duration,
++		  freeMinutes); */
++	  
++	  if (list[i].active)
++	  {
++		  freeMinutes -= list[i].duration;
++	  
++		  status = freeMinutes > runshortMinutes ? '+' : freeMinutes > 0 ? 177 /* +/- */ : '-';
++	  }
++	  else
++	  {
++		  status = ' ';
++	  }
++	  
++	  // search corresponding timer in timer-list
++	  if (!list[i].isDummy)
++	  {
++		  timer = Timers.Get(list[i].key);
++
++		  for (int j = 0; j < nTimers; j++)
++		  {
++			  item = (cMenuTimerItem *)Get(j);
++			  
++			  if (item)
++			  {
++				  timerTmp = item->Timer();
++				  
++				  if (timer == timerTmp)
++				  {
++					  item->SetDiskStatus(status);
++					  item->Set();
++					  break;
++				  }
++			  }
++		  }
++	  }
++  }
++  
++  free(list);
++  Display();
+ }
+ 
+ cMenuTimers::~cMenuTimers()
+@@ -877,6 +1053,7 @@
+ 
+ eOSState cMenuTimers::ProcessKey(eKeys Key)
+ {
++  static bool actualiseDiskStatus = false;
+   int TimerNumber = HasSubMenu() ? Count() : -1;
+   eOSState state = cOsdMenu::ProcessKey(Key);
+ 
+@@ -885,9 +1062,9 @@
+        case kOk:     return Summary();
+        case kRed:    return Edit();
+        case kGreen:  return New();
+-       case kYellow: return Delete();
++       case kYellow: { actualiseDiskStatus = true; return Delete(); }
+        case kBlue:   if (Setup.SortTimers)
+-                        OnOff();
++		 						{ actualiseDiskStatus = true; OnOff(); }
+                      else
+                         Mark();
+                      break;
+@@ -899,6 +1076,15 @@
+      Add(new cMenuTimerItem(Timers.Get(TimerNumber)), true);
+      Display();
+      }
++  
++  if (TimerNumber >= 0 && !HasSubMenu() ) actualiseDiskStatus = true;
++	  
++  if (actualiseDiskStatus)
++  {
++	  ActualiseDiskStatus();
++	  actualiseDiskStatus = false;
++  }
++  
+   return state;
+ }
+ 
+@@ -1847,6 +2033,7 @@
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Scroll pages"),           &data.MenuScrollPage));
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Scroll wraps"),           &data.MenuScrollWrap));
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Sort timers"),            &data.SortTimers));
++  Add(new cMenuEditBoolItem(tr("Setup.OSD$Show timer-info"),            &data.ShowTimerInfo));
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Recording directories"),  &data.RecordingDirs));
+   SetCurrent(Get(current));
+   Display();
+@@ -2472,9 +2659,6 @@
+   SetHasHotkeys();
+ 
+   // Title with disk usage:
+-
+-#define MB_PER_MINUTE 25.75 // this is just an estimate!
+-
+   char buffer[40];
+   int FreeMB;
+   int Percent = VideoDiskSpace(&FreeMB);
+diff -Nru vdr_plain/README.timer-info vdr_patched/README.timer-info
+--- vdr_plain/README.timer-info	1970-01-01 01:00:00.000000000 +0100
++++ vdr_patched/README.timer-info	2005-07-08 17:14:02.000000000 +0200
+@@ -0,0 +1,37 @@
+++------------------------------------------------------------------------------+
++|               Info about the timer-info-patch by Brougs78                    |
++|                brougs78@gmx.net / home.pages.at/brougs78                     |
+++------------------------------------------------------------------------------+
++
++
++README timer-info:
++------------------
++
++Features:
++ - Shows info, if it is possible to record an event in the timer-info of vdr.
++   For calculations the free space incl. the deleted recordings is used, 
++	considering an average consumtion of 25.75 MB/min (also used by vdr itself).
++	The first column int the timer-list shows:
++	 ( + ) recording will be most probably possible (enough space)
++	 (+/-) recording may be possible
++	 ( - ) recording will most probably fail (to less space)
++	The calculations also consider repeating timers.
++ - It is possible to deactivate the patch in the OSD-menu of VDR, if it slows
++   down the Timer-menu too much.
++
++	
++HISTORY timer-info:
++-------------------
++
++25.11.2004: v0.1
++ - Initial release
++
++11.01.2005: v0.1b
++ - Bugfixes for vdr-1.3.18
++ - In the menu the free recording-time no longer includes the space of the
++   deleted recordings, because this slowed the vdr down to much.
++
++08.07.2005: v0.1c
++ - Made the patch configurable
++
++	
+diff -Nru vdr_plain/recording.c vdr_patched/recording.c
+--- vdr_plain/recording.c	2005-06-05 16:11:45.000000000 +0200
++++ vdr_patched/recording.c	2005-07-06 18:56:56.000000000 +0200
+@@ -705,6 +705,31 @@
+   return RemoveVideoFile(FileName());
+ }
+ 
++bool cRecording::GetSizeCount(long long *lSize, int *Count)
++{
++   bool bRet=false;
++   struct stat fileinfo;             /* Holds file information structure */
++   char *cmd = NULL;
++	cReadLine reader;
++   asprintf(&cmd, "find '%s' -follow -type f -name '*.*'|sort ", FileName());
++
++   FILE *p = popen(cmd, "r");
++   int ret=0;
++   if (p) {
++      char *s;
++      while ((s = reader.Read(p)) != NULL) {
++         if ((ret=stat(s, &fileinfo)) != -1) {
++            (*lSize)+=(long long)fileinfo.st_size;
++            (*Count)++;
++            }
++      }
++      bRet=true;
++   }
++   pclose(p);
++   delete cmd;
++   return bRet;
++}
++
+ // --- cRecordings -----------------------------------------------------------
+ 
+ cRecordings Recordings;
+diff -Nru vdr_plain/recording.h vdr_patched/recording.h
+--- vdr_plain/recording.h	2005-05-28 11:34:07.000000000 +0200
++++ vdr_patched/recording.h	2005-07-06 18:56:56.000000000 +0200
+@@ -86,6 +86,9 @@
+   bool Remove(void);
+        // Actually removes the file from the disk
+        // Returns false in case of error
++  bool GetSizeCount(long long *lSize, int *Count);
++       // Adds the number of files found in the dir to Count and their size to lSize
++       // Returns false in case of error
+   };
+ 
+ class cRecordings : public cList<cRecording> {
+diff -Nru vdr_plain/videodir.c vdr_patched/videodir.c
+--- vdr_plain/videodir.c	2004-12-26 12:52:12.000000000 +0100
++++ vdr_patched/videodir.c	2005-07-08 16:01:32.000000000 +0200
+@@ -17,6 +17,7 @@
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include "tools.h"
++#include "recording.h"
+ 
+ const char *VideoDirectory = VIDEODIR;
+ 
+@@ -197,6 +198,31 @@
+   return (free + used) ? used * 100 / (free + used) : 0;
+ }
+ 
++// incl. size of deleted recordings (thanks to Torsten/WarEagle and Hardy/HFlor)
++int VideoDiskSpaceIncDel(int *FreeMB, int *UsedMB)
++{
++  int free = 0, used = 0;
++  long long lSize = 0;
++  int countFiles = 0;
++  cRecordings recordings(true);
++  recordings.Load();
++  for (cRecording *rec = recordings.First();  rec; rec = recordings.Next(rec))
++  rec->GetSizeCount(&lSize, &countFiles);
++  recordings.Clear();
++  
++  VideoDiskSpace(&free, &used);
++  
++  int tmp = lSize / (1024 * 1024);
++  free += tmp;
++  used -= tmp;
++
++  if (FreeMB)
++     *FreeMB = free;
++  if (UsedMB)
++     *UsedMB = used;
++  return (free + used) ? used * 100 / (free + used) : 0;
++}
++
+ cString PrefixVideoFileName(const char *FileName, char Prefix)
+ {
+   char PrefixedName[strlen(FileName) + 2];
+diff -Nru vdr_plain/videodir.h vdr_patched/videodir.h
+--- vdr_plain/videodir.h	2004-12-26 12:52:56.000000000 +0100
++++ vdr_patched/videodir.h	2005-07-06 18:56:56.000000000 +0200
+@@ -21,6 +21,7 @@
+ bool RemoveVideoFile(const char *FileName);
+ bool VideoFileSpaceAvailable(int SizeMB);
+ int VideoDiskSpace(int *FreeMB = NULL, int *UsedMB = NULL); // returns the used disk space in percent
++int VideoDiskSpaceIncDel(int *FreeMB = NULL, int *UsedMB = NULL); // same as above but calculations include the deleted recordings
+ cString PrefixVideoFileName(const char *FileName, char Prefix);
+ void RemoveEmptyVideoDirectories(void);
+ 

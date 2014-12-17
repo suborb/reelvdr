@@ -1,0 +1,534 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netcv\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-06-15 17:07+0200\n"
+"PO-Revision-Date: 2009-06-20 22:17+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "empty"
+msgstr "Vuoto"
+
+msgid "DiSEqC list"
+msgstr "Lista DiSEqC"
+
+msgid "Restarting NetCeiver..."
+msgstr "Riavvio NetCeiver in corso..."
+
+msgid "Restarting VDR..."
+msgstr "Riavvio VDR in corso..."
+
+msgid "Please wait..."
+msgstr "Attendere..."
+
+msgid "Reloading diseqc.conf failed!"
+msgstr "Nuovo Caricamento diseqc.conf fallito!"
+
+msgid "Settings stored"
+msgstr "Configurazione salvata"
+
+msgid "Reloading channels.conf failed"
+msgstr "Nuovo Caricamento channels.conf fallito!"
+
+msgid "Reloading diseqc.conf failed"
+msgstr "Nuovo Caricamento diseqc.conf fallito!"
+
+msgid "Error: Store failed! Error Number: "
+msgstr "Errore: Memorizzazione fallita! Numero Errore: "
+
+msgid "Error: Only 4 LNBs per cascade is allowed!"
+msgstr "Errore: Consentiti solo 4 LNB per discesa!"
+
+msgid "Error: Every DiSEqC list must have a name!"
+msgstr "Errore: Ogni Lista DiSEqC deve avere un nome!"
+
+msgid "Error: Duplicate DiSEqC list name is not allowed!"
+msgstr "Errore: Duplicati NON consentiti nei nomi di liste DiSEqC!"
+
+msgid "Error: Every tuner must have a valid DiSEqC list!"
+msgstr "Errore: Ogni tuner DEVE avere una lista DiSEqC valida!"
+
+msgid "Error: At least 1 tuner must be enabled!"
+msgstr "Errore: Almeno 1 tuner deve essere abilitato!"
+
+msgid "Unknown Error: "
+msgstr "Errore Sconosciuto: "
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC disabilitato"
+
+msgid "Diseqc$Source"
+msgstr "Origine"
+
+msgid "LNB Type"
+msgstr "Tipo LNB"
+
+msgid "DiSEqC Mini"
+msgstr "Mini DiSEqC"
+
+msgid "Number of LNBs"
+msgstr "Numero LNB"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Single Cable Router"
+msgstr ""
+
+msgid "Unique Slot Nr."
+msgstr ""
+
+msgid "Downlink freq. (MHz)"
+msgstr ""
+
+msgid "PIN (optional)"
+msgstr ""
+
+msgid "No pin"
+msgstr ""
+
+msgid "DiSEqC 1.0"
+msgstr "DiSEqC 1.0"
+
+msgid "DiSEqC 1.1"
+msgstr "DiSEqC 1.1"
+
+msgid "Multiswitch"
+msgstr "Multiswitch"
+
+msgid "Cascade"
+msgstr "Cascata"
+
+msgid "DiSEqC 1.2"
+msgstr "DiSEqC 1.2"
+
+msgid "Number of sources"
+msgstr "Numero sorgenti"
+
+msgid "Rotor (GotoX)"
+msgstr "Rotore (gotoX)"
+
+msgid "off"
+msgstr "Off"
+
+msgid "fine"
+msgstr "Accurato"
+
+msgid "coarse"
+msgstr "Approssimativo"
+
+msgid "maximum"
+msgstr "Massimo"
+
+msgid "Min Position"
+msgstr "Posizione min"
+
+msgid "East"
+msgstr "Est"
+
+msgid "West"
+msgstr "Ovest"
+
+msgid "Max Position"
+msgstr "Posizione max"
+
+msgid "Longitude"
+msgstr "Longitudine"
+
+msgid "Latitude"
+msgstr "Latitudine"
+
+msgid "North"
+msgstr "Nord"
+
+msgid "South"
+msgstr "Sud"
+
+msgid "Autofocus"
+msgstr "Autofocus"
+
+msgid "DisiCon 4"
+msgstr "DisiCon 4"
+
+msgid "DiSEqC mode:"
+msgstr "Modalità DiSEqC: "
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Sì"
+
+msgid " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.,1#~\\^$[]|()*+°?{}/:%@&\taàbc2\tdeèf3\tghiì4\tjkl5\tmnoò6\tpqrs7\ttuùv8\twxyz9\""
+
+msgid "Save"
+msgstr "Salvare"
+
+msgid "Antenna settings"
+msgstr "Configurazione antenna"
+
+msgid "NetCeiver Firmwareupdate is running!"
+msgstr "Aggiornamento firmware NetCeiver in corso!"
+
+msgid "No NetCeiver found!"
+msgstr "Nessun NetCeiver trovato!"
+
+msgid "Creating directory tmp failed!"
+msgstr "Creazione cartella tmp fallita!"
+
+msgid "Retrieving information about tuners failed!"
+msgstr "Ricerca informazioni tuner fallita!"
+
+msgid "Getting network interface failed!"
+msgstr "Collegamento interfaccia di rete fallito!"
+
+msgid "sec"
+msgstr "Sec"
+
+msgid "min"
+msgstr "Min"
+
+msgid "h"
+msgstr "h"
+
+msgid "d"
+msgstr ""
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DiSEqC settings"
+msgstr "Configurazione DiSEqC"
+
+msgid "NetCeiver is being updated."
+msgstr "NetCeiver aggiornato."
+
+msgid "Try again later."
+msgstr "Riprovare più tardi."
+
+msgid "Error!"
+msgstr "Errore!"
+
+msgid "Failed to open directory "
+msgstr "Apertura cartella fallita!"
+
+msgid "No file found in "
+msgstr "Nessun file trovato!"
+
+msgid "Please select a setting for upload: "
+msgstr "Selezionare configurazione da caricare: "
+
+msgid "Finished!"
+msgstr "Terminato!"
+
+msgid "Uploading failed!"
+msgstr "Caricamento fallito!"
+
+msgid "Current"
+msgstr "Corrente"
+
+msgid "NetCeiver diagnostics"
+msgstr "Diagnostica NetCeiver"
+
+msgid "Alive"
+msgstr "Attivo"
+
+msgid "Yes"
+msgstr "Sì"
+
+msgid "No"
+msgstr "No"
+
+msgid "Tuners"
+msgstr "Tuner"
+
+msgid "OS"
+msgstr "OS"
+
+msgid "App"
+msgstr "App"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Hardware"
+msgstr "Hardware"
+
+msgid "Serial"
+msgstr "Seriale"
+
+msgid "System uptime"
+msgstr "Uptime del sistema"
+
+msgid "Process uptime"
+msgstr "Uptime del processo"
+
+msgid "Dish settings"
+msgstr "Configurazione parabola"
+
+msgid "State"
+msgstr "Stato"
+
+msgid "Slot"
+msgstr "Slot"
+
+msgid "Chip"
+msgstr ""
+
+msgid "Used"
+msgstr "Usato"
+
+msgid "Lock"
+msgstr "Bloccato"
+
+msgid "Frequency"
+msgstr "Frequenza"
+
+msgid "Strenght"
+msgstr "Potenza"
+
+msgid "SNR"
+msgstr "SNR"
+
+msgid "BER"
+msgstr "BER"
+
+msgid "UNC"
+msgstr ""
+
+#, fuzzy
+msgid "electric$Current"
+msgstr "Corrente"
+
+msgid "Power save mode"
+msgstr ""
+
+msgid "Couldn't create tmp-path!"
+msgstr "Impossibile creare percorso tmp!"
+
+msgid "Internal Error! Sorry!"
+msgstr "Errore Interno!"
+
+#, fuzzy
+msgid "Loading data from NetCeiver failed!"
+msgstr "Caricamento dati da NetCeiver fallito!"
+
+msgid "Please check the Connection to NetCeiver!"
+msgstr "Verificare Connessione NetCeiver!"
+
+msgid "Number of Tuners"
+msgstr "Numero tuner"
+
+msgid "Please choose the satellites you can receive:"
+msgstr "Selezionare satelliti ricevibili: "
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Skip"
+msgstr "Saltare"
+
+msgid "Static antenna"
+msgstr "Antenna "
+
+msgid "Single Cable System"
+msgstr ""
+
+msgid "Rotor antenna"
+msgstr "Antenna motorizzata"
+
+msgid "Updating... please wait!"
+msgstr "Aggiornamento in corso, attendere..."
+
+msgid "Satellite"
+msgstr "Satellite"
+
+msgid "Cable"
+msgstr "Cavo"
+
+msgid "Terrestrial"
+msgstr "Terrestre"
+
+msgid "on"
+msgstr "On"
+
+msgid "Antenna type"
+msgstr "Tipo antenna"
+
+msgid "Rotor"
+msgstr "Rotore"
+
+msgid "Experts"
+msgstr "Esperti"
+
+msgid "Unknown Error! Sorry!"
+msgstr "Errore sconosciuto!"
+
+msgid "Internal Error: DiSEqC not working"
+msgstr "Errore Interno: DiSEqC non operativo!"
+
+msgid "Internal Error: Loading netceiver.conf failed"
+msgstr "Errore Int.: Caricamento netceiver.conf fallito!"
+
+msgid "Save changes?"
+msgstr "Salvare le modifiche?"
+
+msgid "No netcvrotor-Plugin found!"
+msgstr "Plugin netcvrotor NON trovato!"
+
+#, fuzzy
+msgid "Status"
+msgstr "Stato"
+
+msgid "Multi-Transponder-Decryption is"
+msgstr ""
+
+msgid "impossible because of mixed CAMs"
+msgstr ""
+
+msgid "Multi-Transponder"
+msgstr ""
+
+msgid "Signal (strength/snr)"
+msgstr "Segnale (potenza/SNR)"
+
+msgid "Signal (ber/unc)"
+msgstr "Segnale (BER/UNC)"
+
+msgid "Update firmware"
+msgstr "Aggiornamento firmware"
+
+msgid "Load"
+msgstr "Caricare"
+
+msgid "Clear"
+msgstr "Ripulire"
+
+msgid "Add DiSEqC list"
+msgstr "Aggiungere lista DiSEqC"
+
+msgid "disable"
+msgstr "Disabilitare"
+
+msgid "enable"
+msgstr "Abilitare"
+
+msgid "No tmp files available."
+msgstr "Nessun file .tmp disponibile!"
+
+msgid "Update progress: "
+msgstr "Progresso aggiornamento:"
+
+msgid "Information"
+msgstr "Informazioni"
+
+#, fuzzy
+msgid "CAM settings"
+msgstr "Configurazione DiSEqC"
+
+msgid "Tuner settings"
+msgstr "Configurazione tuner"
+
+msgid "CAM"
+msgstr ""
+
+msgid "not selected"
+msgstr "Non selezionato"
+
+msgid "Setting loaded"
+msgstr "Configurazione caricata"
+
+msgid "Loading failed! (Error: "
+msgstr "Caricamento fallito! (Errore: "
+
+msgid "Update finished"
+msgstr "Aggiornamento terminato!"
+
+msgid "Priority"
+msgstr "Priorità"
+
+msgid "normal"
+msgstr "Normale"
+
+msgid "disabled"
+msgstr "Disabilitato"
+
+msgid "NetCeiver update available. Do you want to update?"
+msgstr "Aggiornamento NetCeiver disponibile: eseguirlo?"
+
+msgid "NetCeiver firmware update"
+msgstr "Aggiornamento firmware NetCeiver"
+
+#, fuzzy
+msgid "There is a new firmware version for the NetCeiver available!"
+msgstr "Nuova versione firmware per NetCeiver disponibile!"
+
+msgid "Current version:"
+msgstr "Versione attuale: "
+
+msgid "New version:"
+msgstr "Nuova versione: "
+
+msgid "If you want to use CA-modules, it is absolutely required to perform this update right now."
+msgstr ""
+
+#, fuzzy
+msgid "Do you want to update the NetCeiver firmware now?"
+msgstr "Aggiornare il firmware del NetCeiver ora?"
+
+msgid "Caution:"
+msgstr "Attenzione: "
+
+msgid "Current recordings will be interrupted for a few minutes."
+msgstr "La registrazione in corso sarà interrotta per alcuni minuti!"
+
+msgid "Update"
+msgstr "Aggiornamento"
+
+msgid "Update failed!"
+msgstr "Aggiornamento fallito!"
+
+msgid "internal error!"
+msgstr "Errore interno!"
+
+#~ msgid "Button$ABC/abc"
+#~ msgstr "ABC/abc"
+
+#~ msgid "Button$Overwrite"
+#~ msgstr "Sovrascrivere"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Cancellare"
+
+#~ msgid "Delete"
+#~ msgstr "Cancellare"
+
+#, fuzzy
+#~ msgid "Normal"
+#~ msgstr "Normale"
+
+#~ msgid "Current power"
+#~ msgstr "Power"
+
+#~ msgid "No DiSEqC-Settings available!"
+#~ msgstr "Nessuna configurazione DiSEqC disponibile!"

@@ -1,0 +1,109 @@
+diff -Nru xine-lib-1.1.4-org/src/xine-engine/audio_out.h xine-lib-1.1.4/src/xine-engine/audio_out.h
+--- xine-lib-1.1.4-org/src/xine-engine/audio_out.h	2007-07-26 17:12:13.888427638 +0200
++++ xine-lib-1.1.4/src/xine-engine/audio_out.h	2007-07-26 17:20:41.364516263 +0200
+@@ -336,7 +336,7 @@
+ #define AO_CTRL_FLUSH_BUFFERS	2      
+ 
+ /* above that value audio frames are discarded */
+-#define AO_MAX_GAP              15000
++#define AO_MAX_GAP              150000
+ 
+ #ifdef __cplusplus
+ }
+diff -Nru xine-lib-1.1.4-org/src/xine-engine/xine.c xine-lib-1.1.4/src/xine-engine/xine.c
+--- xine-lib-1.1.4-org/src/xine-engine/xine.c	2007-07-26 17:12:13.900428585 +0200
++++ xine-lib-1.1.4/src/xine-engine/xine.c	2007-07-26 17:21:07.382571592 +0200
+@@ -1261,7 +1261,7 @@
+   /* Wait until the first frame produced is displayed
+    * see video_out.c
+    */
+-  wait_first_frame (stream);
++  //wait_first_frame (stream);
+   
+   xprintf (stream->xine, XINE_VERBOSITY_DEBUG, "play_internal ...done\n");
+ 
+--- xine-lib-1.1.6/configure.org	2007-08-29 18:54:41.000000000 +0200
++++ xine-lib-1.1.6/configure	2007-08-29 18:54:27.000000000 +0200
+@@ -26081,7 +26081,7 @@
+ else
+   ac_save_CFLAGS="$CFLAGS"
+      ac_save_LIBS="$LIBS"
+-     CFLAGS="$CFLAGS $cc_cv_werror $PTHREAD_CFLAGS"
++     CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+ 
+      LIBS="$LIBS $PTHREAD_LIBS"
+      cat >conftest.$ac_ext <<_ACEOF
+--- xine-lib-1.1.7/src/xine-engine/audio_out.c.org	2007-06-04 23:37:38.000000000 +0200
++++ xine-lib-1.1.7/src/xine-engine/audio_out.c	2007-08-30 13:56:59.000000000 +0200
+@@ -1027,11 +1027,15 @@
+ 	}
+ 
+         if ((in_buf->vpts - cur_time) > 2 * 90000)
++        {
++          printf("--------xine:audio_out:---------vpts/clock error--------\n");
+ 	  xprintf (this->xine, XINE_VERBOSITY_DEBUG,
+ 		 "audio_out: vpts/clock error, in_buf->vpts=%" PRId64 " cur_time=%" PRId64 "\n",
+ 		 in_buf->vpts, cur_time);
++        }
+       }
+ 
++      printf("--------xine:audio_out:----loop:pause: I feel sleepy--------\n");
+       lprintf ("loop:pause: I feel sleepy (%d buffers).\n", this->out_fifo->num_buffers);
+       xine_usec_sleep (10000);
+       lprintf ("loop:pause: I wake up.\n");
+@@ -1061,6 +1065,7 @@
+       delay = this->driver->delay(this->driver);
+       while (delay < 0 && this->audio_loop_running) {
+         /* Get the audio card into RUNNING state. */
++        printf("--------xine:audio_out:------Get the audio card into RUNNING state------\n");
+         ao_fill_gap (this, 10000); /* FIXME, this PTS of 1000 should == period size */
+         delay = this->driver->delay(this->driver);
+       }
+@@ -1074,6 +1079,7 @@
+       if (in_buf && in_buf->num_frames) {
+ 	xine_list_iterator_t ite;
+ 
++        printf("---------xine:audio_out:---delay calculation impossible---------\n");
+ 	xprintf(this->xine, XINE_VERBOSITY_LOG,
+ 		_("audio_out: delay calculation impossible with an unavailable audio device\n"));
+ 
+@@ -1097,6 +1103,7 @@
+     if( in_buf && in_buf->stream && (!in_buf->stream->video_decoder_plugin ||
+         (cur_time - in_buf->stream->current_extra_info->vpts) > 30000 )) {
+ 
++      printf("--------xine:audio_out:------ update current_extra_info----------\n");
+       pthread_mutex_lock( &in_buf->stream->current_extra_info_lock );
+       _x_extra_info_merge( in_buf->stream->current_extra_info, in_buf->extra_info );
+       pthread_mutex_unlock( &in_buf->stream->current_extra_info_lock );
+@@ -1130,6 +1137,7 @@
+        * This function only calculates the drift correction factor. The
+        * actual resampling is done by prepare_samples().
+        */
++      printf("--------xine:audio_out:----------resample_rate_adjust-------------\n");
+       resample_rate_adjust(this, gap, in_buf);
+     } else {
+       this->resample_sync_factor = 1.0;
+@@ -1140,6 +1148,7 @@
+      */
+ 
+     if (gap < (-1 * AO_MAX_GAP) || !in_buf->num_frames ) {
++      printf("-------xine:audio_out:--------gap < (-1 * AO_MAX_GAP)-----------------\n");
+ 
+       /* drop package */
+       lprintf ("loop: drop package, next fifo\n");
+@@ -1160,6 +1169,7 @@
+                 cur_time > (last_sync_time + SYNC_TIME_INVERVAL) && 
+                 bufs_since_sync >= SYNC_BUF_INTERVAL &&
+                 !this->resample_sync_method ) {
++        printf("--------xine:audio_out:--------audio_loop: ADJ_VPTS---------------\n");
+ 	xine_list_iterator_t *ite;
+         lprintf ("audio_loop: ADJ_VPTS\n");
+ 	pthread_mutex_lock(&this->streams_lock);
+@@ -1176,6 +1186,7 @@
+ 
+     } else if ( gap > AO_MAX_GAP ) {
+       /* for big gaps output silence */
++      printf("--------xine:audio_out:------gap > AO_MAX_GAP------------------\n");
+       ao_fill_gap (this, gap);
+     } else {
+ #if 0

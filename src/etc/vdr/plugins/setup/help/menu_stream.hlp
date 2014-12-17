@@ -1,0 +1,20 @@
+Live-TV ausetzen:
+
+-Über diesen Menüpunkt kann die Live-TV-Wiedergabe
+ komplett deaktiviert werden.
+ Dies ist notwendig, um alle vorhandenen DVB-Tuner 
+ für das Streaming zur Verfügung zu stellen.
+
+VideoLanClient:
+
+-Über den VideoLanClient haben Sie die Möglickeit, 
+ MPEG,AVI,DIVX etc. die sich auf einem entfernten
+ Rechner befinden auf Ihrer ReelBox abzuspielen.
+
+ Einstellungen dazu finden Sie unter 
+ Setup/Systemeinstellungen/Video-Lan Client
+
+ Den VideoLanClient (VLC) finden Sie im Download-Bereich 
+ unter: http://www.reel-multimedia.com
+
+ Der Startparameter für den Client lautet: vlc.exe --extraintf=http

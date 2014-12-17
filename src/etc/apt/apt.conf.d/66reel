@@ -1,0 +1,4 @@
+// always keep old configuration file
+Dpkg::Options {"--force-confold";}
+APT::Force-LoopBreak "true";
+APT::Immediate-Configure "false";

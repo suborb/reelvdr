@@ -1,0 +1,394 @@
+#!/bin/sh
+#
+# ReelBox Network Shares Start/Stop
+#
+# (C) 2005-2009 by Reel Multimedia AG http://www.reelbox.org
+# Author: Behni@Vollbuettel.de
+# Licence: GPL2
+# History: 20050629 initial re(e)lease
+#          20060110 yogi.123: use cifs instead of smbfs
+#          20080808 Behni: integration of additional-mounts
+#
+
+PATH="/sbin:/bin:/usr/bin"
+
+SYSCONFIG=/etc/default/sysconfig
+
+for CONFIG in setup-shares rcS sysconfig globals; do
+        # Read configuration variable file if it is present
+        [ -r /etc/default/$CONFIG ] && . /etc/default/$CONFIG
+done
+
+LSB=no
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+[ -f /lib/lsb/init-functions ] && . /lib/lsb/init-functions && LSB=yes
+
+#Global vars
+TIMEOUT=20
+STATUSFILE="/tmp/param.$$"
+
+# retransmits before giving up
+NFS_RETRANS=3
+# timeout - values is in tenths of a second
+NFS_TIMEOUT=250
+
+if grep -q 12d51000 /proc/bus/pci/devices; then
+	BINDIR=/opt/bin
+	UMOUNT=$BINDIR/umount
+	SMBMOUNT=$BINDIR/smbmount
+else
+	UMOUNT=$(which umount)
+	SMBMOUNT=$(which smbmount)
+fi
+
+#
+# Functions
+#
+syntax () {
+cat << EOF
+Usage: `basename $0` [start | stop | reload | init] [mountnumber] [nolink]
+Options:
+     [start | stop | restart]
+     no option: start
+
+Description:
+     Starts ReelBox Samba (Windows Network) or NFS (Unix Network) Client
+EOF
+}
+
+#Startfunction
+fstart_smb () {
+	if ! grep -q cifs /proc/filesystems ; then
+		modprobe cifs
+		sleep 1
+	fi
+
+	[ ! -d $MOUNTPOINT ] && mkdir $MOUNTPOINT
+	grep -q "$MOUNTPOINT " /proc/mounts && $UMOUNT -lf $MOUNTPOINT
+
+	if [ "$SMB_SMBVERSION" = "smbfs" ]; then
+		$SMBMOUNT //${SMB_HOST}/"${SMB_SHARENAME}" ${MOUNTPOINT} -o username=${SMB_USERNAME},password=${SMB_PASSWORD},iocharset=utf8 2>$STATUSFILE >$STATUSFILE & PID=$!
+	else
+		mount -t cifs -o username=${SMB_USERNAME},password=${SMB_PASSWORD},uid=${MAP_UID},gid=${MAP_GID},iocharset=utf8 //${SMB_HOST}/"${SMB_SHARENAME}" ${MOUNTPOINT} 2>$STATUSFILE >$STATUSFILE & PID=$!
+	fi
+	timeout
+	grep -q $MOUNTPOINT /proc/mounts
+	ERROR=$?
+	if [ "$ERROR" = 0 ]; then
+		if [ "$SMB_SMBVERSION" = "smbfs" ]; then
+			[ $LSB = no ] && echo "Successfully mounted smbfs://${SMB_HOST}/${SMB_SHARENAME} to ${MOUNTPOINT}." || Syslog "Successfully mounted smbfs://${SMB_HOST}/${SMB_SHARENAME} to ${MOUNTPOINT}."
+		else
+			[ $LSB = no ] && echo "Successfully mounted cifs://${SMB_HOST}/${SMB_SHARENAME} to ${MOUNTPOINT}." || Syslog "Successfully mounted cifs://${SMB_HOST}/${SMB_SHARENAME} to ${MOUNTPOINT}."
+		fi
+		[ "$LINK" = "nolink" ] || set_links
+	else
+		if [ $ERRORTIMEOUT = "yes" ]; then
+			MESSAGE="timeout"
+		else
+			MESSAGE="no success"
+		fi
+		[ -e $STATUSFILE ] && MESSAGE="$MESSAGE: $(cat $STATUSFILE)"
+		[ $LSB = no ] && echo $MESSAGE || log_warning_msg $MESSAGE
+		rmdir $MOUNTPOINT
+		remove_links
+		return 1
+	fi
+}
+
+fstart_nfs () {
+	RW=rw
+	HS=soft
+	LOCK=lock
+	[ "$NFS_OPTIONRW" = "no" ] && RW=ro
+	[ "$NFS_OPTIONHS" = "hard" ] && HS=hard
+	[ "$NFS_OPTIONLOCK" = "no" ] && LOCK=nolock
+
+	[ -d $MOUNTPOINT ] || mkdir $MOUNTPOINT
+	grep -q "$MOUNTPOINT " /proc/mounts && $UMOUNT -lf $MOUNTPOINT
+
+	[ -e $STATUSFILE ] && rm $STATUSFILE
+	if [ "$NFS_NFSVERSION" = "4" ]; then
+		mount -t nfs4 -o rsize=${NFS_BLOCKSIZE},wsize=${NFS_BLOCKSIZE},${RW},proto=${NFS_NETWORKPROTOCOL},${HS} \
+			${NFS_HOST}:${NFS_SHARENAME} ${MOUNTPOINT} 2>$STATUSFILE & PID=$!
+	else
+		mount -t nfs -o rsize=${NFS_BLOCKSIZE},wsize=${NFS_BLOCKSIZE},${RW},${NFS_NETWORKPROTOCOL},${HS},${LOCK},nfsvers=${NFS_NFSVERSION},retrans=${NFS_RETRANS},timeo=${NFS_TIMEOUT} \
+			${NFS_HOST}:${NFS_SHARENAME} ${MOUNTPOINT} 2>$STATUSFILE & PID=$!
+	fi
+	timeout
+	grep -q $MOUNTPOINT /proc/mounts
+        ERROR=$?
+        if [ "$ERROR" = 0 ]; then
+		[ $LSB = no ] && echo "Successfully mounted nfs://${NFS_HOST}/${NFS_SHARENAME} to ${MOUNTPOINT}." || Syslog "Successfully mounted nfs://${NFS_HOST}/${NFS_SHARENAME} to ${MOUNTPOINT}."
+		[ "$LINK" = "nolink" ] || set_links
+	else
+		if [ $ERRORTIMEOUT = "yes" ]; then
+			MESSAGE="timeout"
+		else
+			MESSAGE="no success"
+		fi
+		[ -e $STATUSFILE ] && MESSAGE="$MESSAGE: $(cat $STATUSFILE)"
+		[ $LSB = no ] && echo $MESSAGE || log_warning_msg $MESSAGE
+		rmdir $MOUNTPOINT
+		remove_links
+		return 1
+	fi
+}
+
+fstart_afp () {
+	[ -d $MOUNTPOINT ] || mkdir $MOUNTPOINT
+	grep -q "$MOUNTPOINT " /proc/mounts && $UMOUNT -lf $MOUNTPOINT
+	
+	[ -e $STATUSFILE ] && rm $STATUSFILE
+	afp_client mount -u ${AFP_USERNAME} -p ${AFP_PASSWORD} ${AFP_HOST}:${AFP_SHARENAME} ${MOUNTPOINT} 2>$STATUSFILE & PID=$!
+	timeout
+	grep -q $MOUNTPOINT /proc/mounts
+        ERROR=$?
+        if [ "$ERROR" = 0 ]; then
+		[ $LSB = no ] && echo "Successfully mounted afp://${AFP_HOST}/${AFP_SHARENAME} to ${MOUNTPOINT}." || Syslog "Successfully mounted afp://${AFP_HOST}/${AFP_SHARENAME} to ${MOUNTPOINT}."
+		[ "$LINK" = "nolink" ] || set_links
+	else
+		if [ $ERRORTIMEOUT = "yes" ]; then
+			MESSAGE="timeout"
+		else
+			MESSAGE="no success"
+		fi
+		[ -e $STATUSFILE ] && MESSAGE="$MESSAGE: $(cat $STATUSFILE)"
+		[ $LSB = no ] && echo $MESSAGE || log_warning_msg $MESSAGE
+		rmdir $MOUNTPOINT
+		remove_links
+		return 1
+	fi
+}
+
+timeout () {
+	BREAKTIME=$(expr $(date +%s) + $TIMEOUT)
+	ERRORTIMEOUT=no
+	while [ -d /proc/$PID ]; do
+		if [ $(date +%s) -gt $BREAKTIME ]; then
+			kill $PID
+			ERRORTIMEOUT=yes
+			echo "mount aborted" >> $STATUSFILE
+			break
+		fi
+	done
+}
+
+#Stopfunction
+fstop () {
+	if grep -q "$MOUNTPOINT " /proc/mounts ; then
+		[ $LSB = no ] && echo "Stopping client $MOUNTNR." || log_daemon_msg "Stopping client $MOUNTNR."
+		TIMEOUT=3
+#		BREAKTIME=$(expr $(date +%s) + $TIMEOUT)
+		[ "$LINK" = "nolink" ] || remove_links
+		$UMOUNT -lf $MOUNTPOINT
+		ERROR=$?
+		[ -d $MOUNTPOINT ] && rmdir $MOUNTPOINT
+	else
+		[ $LSB = no ] && echo "Mount $MOUNTNR was not mounted." || log_warning_msg "Mount $MOUNTNR was not mounted."
+		[ "$LINK" = "nolink" ] || remove_links
+		[ -d $MOUNTPOINT ] && rmdir $MOUNTPOINT
+		ERROR=0
+		return 1
+	fi
+}
+
+#prepare values
+prep () {
+	case $TYPE in 
+		SMB)
+			for PARAM in SMB_HOST SMB_SHARENAME SMB_USERNAME SMB_PASSWORD SMB_SMBVERSION ; do
+				# SMB_HOST=$MOUNT1_SMB_HOST, ...
+				VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM | sed 's/ /\\ /g;')
+				eval $PARAM="$VAL"
+			done
+			PARAM=SMB_DISPLAYNAME
+			# DISPLAYNAME=$MOUNT1_SMB_DISPLAYNAME
+			VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM | sed 's/ /\\ /g;')
+			eval $(echo $PARAM | cut -c5-)=$VAL
+			;;
+		NFS)
+			for PARAM in NFS_HOST NFS_SHARENAME NFS_BLOCKSIZE NFS_OPTIONHS NFS_OPTIONLOCK NFS_OPTIONRW NFS_NETWORKPROTOCOL NFS_NFSVERSION; do
+				# NFS_HOST=$MOUNT2_NFS_HOST, ...
+				VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM)
+				eval $PARAM=$VAL
+			done
+			PARAM=NFS_DISPLAYNAME
+			# DISPLAYNAME=$MOUNT2_NFS_DISPLAYNAME
+			VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM)
+			eval $(echo $PARAM | cut -c5-)=$VAL
+			;;
+		AFP)
+			for PARAM in AFP_HOST AFP_SHARENAME AFP_USERNAME AFP_PASSWORD ; do
+				# AFP_HOST=$MOUNT3_AFP_HOST, ...
+				VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM)
+				eval $PARAM=$VAL
+			done
+			PARAM=AFP_DISPLAYNAME
+			# DISPLAYNAME=$MOUNT2_NFS_DISPLAYNAME
+			VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM)
+			eval $(echo $PARAM | cut -c5-)=$VAL
+			;;
+		esac
+		DISPLAYNAME=$(echo $DISPLAYNAME | sed 's/\ /_/g')
+}
+
+remove_links () {
+	/usr/sbin/link-shares stop ${MOUNTNR}
+}
+
+set_links () {
+	/usr/sbin/link-shares start ${MOUNTNR}
+}
+
+
+#
+# Main
+#
+
+BASE=""
+USEMOUNT=""
+LINK=""
+GREP=""
+
+if [ "$1" = "" ];then
+	SOPTION="start"
+else
+	SOPTION="$1"
+	shift
+fi
+if [ "$1" != "" ]; then
+	if [ "$1" = "nolink" ]; then
+		LINK=nolink
+	elif [ "$1" = "force" ]; then
+		LINK=force
+	else
+		BASE=$PREFIX
+		USEMOUNT=$1
+	fi
+	shift
+fi
+[ "$1" = "nolink" ] && LINK=nolink
+[ "$1" = "force" ] && LINK=force
+
+for DIR in $LOCAL_MEDIADIR; do
+	if [ -L $DIR ]; then
+		if readlink $DIR | grep -q $MOUNTBASE/$MOUNTPREFIX$DELIM ; then
+			MOUNTNR=$(readlink $DIR | awk -F / '{ print $3 }' | sed s#$MOUNTPREFIX$DELIM##;)
+			[ "$GREP" = "" ] || GREP=$GREP"|"
+			GREP=$GREP$PREFIX$MOUNTNR"_"
+#			echo "$DIR ist ein Netzwerk-Link. Nummer: $MOUNTNR -> $GREP"
+		fi
+	fi
+done
+
+LENGTH=$(echo $PREFIX | wc -c)
+case $SOPTION in
+	start)
+		for MOUNT in 	$(grep ^$PREFIX $SYSCONFIG | grep STARTCLIENT | grep "$BASE${USEMOUNT}_" | egrep "$GREP" ) \
+				$(grep ^$PREFIX $SYSCONFIG | grep STARTCLIENT | grep "$BASE${USEMOUNT}_" | egrep -v "$GREP" ); do
+			MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+			MOUNTPOINT="$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR"
+			TYPE=$(echo $MOUNT | cut -d= -f1 | cut -d_ -f2)
+			if [ $(echo $MOUNT | cut -d= -f2) = "\"yes\"" ]; then
+				prep
+				case $TYPE in
+					SMB)
+						[ $LSB = no ] && echo "Starting client $MOUNTNR ($DISPLAYNAME)" || log_daemon_msg "Starting client $MOUNTNR ($DISPLAYNAME)"
+						fstart_smb
+						[ $LSB = no ] || log_end_msg $ERROR
+						;;
+					NFS)
+						[ $LSB = no ] && echo "Starting client $MOUNTNR ($DISPLAYNAME)" || log_daemon_msg "Starting client $MOUNTNR ($DISPLAYNAME)"
+						fstart_nfs
+						[ $LSB = no ] || log_end_msg $ERROR
+						;;
+					AFP)
+						[ $LSB = no ] && echo "Starting client $MOUNTNR ($DISPLAYNAME)" || log_daemon_msg "Starting client $MOUNTNR ($DISPLAYNAME)"
+						fstart_afp
+						[ $LSB = no ] || log_end_msg $ERROR
+						;;
+				esac
+			else
+				[ $LSB = no ] && echo "Mount $MOUNTNR is turned off in sysconfig.\n" || log_warning_msg "Mount $MOUNTNR is turned off in sysconfig.\n"
+			fi
+		done
+                ;;
+	stop)
+		for MOUNT in	$(grep ^$PREFIX $SYSCONFIG | grep STARTCLIENT | grep "$BASE${USEMOUNT}_" | egrep -v "$GREP" ) \
+				$(grep ^$PREFIX $SYSCONFIG | grep STARTCLIENT | grep "$BASE${USEMOUNT}_" | egrep "$GREP" ); do
+			MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+			MOUNTPOINT="$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR"
+			TYPE=$(echo $MOUNT | cut -d= -f1 | cut -d_ -f2)
+			prep
+			if [ "$GREP" != "" ] && echo "$MOUNT" | egrep -q "$GREP" ; then
+				if [ "$LINK" = "force" ]; then
+					fstop
+				else
+					[ $LSB = no ] && echo "Skipping client $MOUNTNR (Mediadir for VDR). Option force needed." || log_warning_msg "Skipping client $MOUNTNR (Mediadir for VDR). Option force needed."
+					remove_links
+				fi
+				ERROR=0
+				[ $LSB = no ] || log_end_msg $ERROR
+			else
+				fstop
+				[ $LSB = no ] || log_end_msg $ERROR
+			fi
+		done
+		cycle=$( expr $cycle + 1 )
+                ;;
+	init)
+		for MOUNTNR in $(grep ^MEDIADEVICE $SYSCONFIG | grep -v MEDIADEVICE_ONLY_RECORDING | cut -d= -f2 | sed 's/\"//g;' | grep "/media/.mount" | sed 's#/media/.mount##'); do
+#			echo "MOUNTNR: $MOUNTNR"
+			if ! [ "$MOUNTNR" = "" ]; then
+				Syslog "$0 start $MOUNTNR nolink (init)"
+				$0 start $MOUNTNR nolink
+			fi
+		done
+		$0 bgprocess &
+		;;
+	bgprocess)
+		for MOUNT in	$(grep ^$PREFIX $SYSCONFIG | grep STARTCLIENT | grep "$BASE${USEMOUNT}_" | egrep "$GREP" ) \
+				$(grep ^$PREFIX $SYSCONFIG | grep STARTCLIENT | grep "$BASE${USEMOUNT}_" | egrep -v "$GREP" ); do
+			MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+			SKIP=no
+			for MEDIAMOUNTNR in $(grep ^MEDIADEVICE $SYSCONFIG | grep -v MEDIADEVICE_ONLY_RECORDING | cut -d= -f2 | sed 's/\"//g;' | grep "/media/.mount" | sed 's#/media/.mount##'); do
+				[ "$MOUNTNR" = "$MEDIAMOUNTNR" ] && SKIP=yes
+			done
+			if [ "$SKIP" = "no" ]; then
+				if [ -d /media/reel ]; then
+					Syslog "$0 start $MOUNTNR (bgprocess)"
+					$0 start $MOUNTNR
+				else
+					Syslog "$0 start $MOUNTNR nolink (bgprocess)"
+					$0 start $MOUNTNR nolink
+				fi
+			fi
+		done
+		;;
+	reload|restart)
+		$0 stop $USEMOUNT $LINK
+		sleep 1
+		$0 start $USEMOUNT $LINK
+		;;
+	linkcheck)
+		for MOUNT in $(grep ^$PREFIX $SYSCONFIG | grep "$BASE${USEMOUNT}_[SNA][MF][BSP]_STARTCLIENT"); do
+			MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+			MOUNTPOINT="$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR"
+			if [ $(echo $MOUNT | cut -d= -f2) = "\"yes\"" ] && ! grep -q $MOUNTPOINT /proc/mounts; then
+				echo "checking links for $MOUNTPOINT ..."
+				remove_links
+			fi
+		done
+		;;
+	-h)
+		syntax
+		exit 1
+		;;
+	*)
+		echo "Unknown option $SOPTION."
+		syntax
+		exit 2
+		;;
+esac
+[ -e $STATUSFILE ] && rm $STATUSFILE

@@ -1,0 +1,915 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-install\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-08 11:41+0100\n"
+"PO-Revision-Date: 2009-03-08 20:35+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "The ReelBox installation wizard"
+msgstr "Průvodce instalací"
+
+msgid "The channellist could not be installed automatically from the ReelBox Avantgarde."
+msgstr ""
+
+msgid "Channellist"
+msgstr "Seznam kanálů"
+
+msgid "Channelscan"
+msgstr "Hled. kanálů"
+
+msgid "We shall now scan for channels."
+msgstr "Nyní budou vyhledány kanály."
+
+msgid "This will take a few minutes."
+msgstr "Tato operace potrvá několik minut."
+
+msgid "Press OK to continue"
+msgstr "Pokračujte stisknutím tlačítka OK."
+
+msgid "MultiRoom"
+msgstr ""
+
+msgid "Scanning for ReelBox MultiRoom server on network. Please wait..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Počkejte prosím..."
+
+msgid "The MultiRoom system is already active."
+msgstr ""
+
+msgid "The MultiRoom system cannot be activated."
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is currently configured as recording server:"
+msgstr "Nalezeno zařízení ReelBox Avantgarde:"
+
+#, fuzzy
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server (the first one was used up to now):"
+msgstr "Nalezeno zařízení ReelBox Avantgarde:"
+
+#, fuzzy
+msgid "\tDisable MultiRoom"
+msgstr "Zakázat síť"
+
+msgid "Note:"
+msgstr "Poznámka:"
+
+msgid "* MultiRoom is not enabled!"
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is found, but has MultiRoom disabled, so cannot be used as recording server:"
+msgstr "Nalezeno zařízení ReelBox Avantgarde:"
+
+msgid "This ReelBox Avantgarde is found and will be used as recording server:"
+msgstr ""
+
+msgid "\tLeave MultiRoom unconfigured"
+msgstr ""
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server."
+msgstr ""
+
+#, fuzzy
+msgid "Please select one of them:"
+msgstr "Vyberte zařízení ReelBox Avantgarde:"
+
+#, fuzzy
+msgid "No ReelBox Avantgarde was found in the network."
+msgstr "Nalezeno zařízení ReelBox Avantgarde:"
+
+msgid "If you own an Avantgarde, turn it on and activate the MultiRoom System in Setup/Installation/MultiRoom."
+msgstr ""
+
+msgid "Rescan"
+msgstr ""
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Skip"
+msgstr "Přeskočit"
+
+msgid "Setting changes - please wait"
+msgstr "Nastavování změn - počkejte prosím"
+
+msgid "Storing failed! (UUID is missing)"
+msgstr ""
+
+msgid "Settings stored"
+msgstr ""
+
+msgid "Reception"
+msgstr "Příjem"
+
+msgid "Searching for NetCeiver in network. Please wait..."
+msgstr ""
+
+msgid "Searching for directly connected NetCeiver..."
+msgstr ""
+
+#, c-format
+msgid "Searching for NetCeiver in VLAN %d"
+msgstr ""
+
+msgid "Internal NetCeiver found"
+msgstr ""
+
+msgid "NetCeiver found in VLAN"
+msgstr ""
+
+msgid "System error!"
+msgstr "Systémová chyba!"
+
+#, fuzzy
+msgid "No NetCeiver found!"
+msgstr "NetCeiver nebyl nalezen!"
+
+msgid "Please check if the system cable is connected properly."
+msgstr "Zkontrolujte, zda je systémový kabel správně připojen."
+
+msgid "Harddisk"
+msgstr ""
+
+msgid "Internal harddisk found."
+msgstr ""
+
+msgid "Press OK to format now, otherwise the yellow buttown 'skip'."
+msgstr ""
+
+msgid ""
+"If this is the first usage of the harddisk, it must be formatted now. Formatting will DELETE ALL data on the harddisk.\n"
+" If you have used this harddisk before, you could skip this step."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' was already used before and may contain recordings and multimedia files."
+msgstr ""
+
+msgid "Do you want to mount it and use it as a device for your media files?"
+msgstr ""
+
+msgid "\tYes, mount it, preserve all recordings"
+msgstr ""
+
+msgid "\tNo, do not use the harddisk at all"
+msgstr ""
+
+msgid "You should mount this disk now if you want to use it for permanent timeshift even if you are not going to use it for your media files."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' is already in use for media files."
+msgstr ""
+
+msgid "No action needs to be taken."
+msgstr ""
+
+msgid "Press red key, if you want to format this harddisk:"
+msgstr ""
+
+msgid "CAUTION:"
+msgstr ""
+
+msgid "If you choose to format, ALL data on the internal harddisk will be deleted!"
+msgstr ""
+
+#, fuzzy
+msgid "Format"
+msgstr "Normální"
+
+msgid "Formatting in progress"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting"
+msgstr "Normální"
+
+msgid "Formatting in progress."
+msgstr ""
+
+#, fuzzy
+msgid "Please wait ..."
+msgstr "Počkejte prosím..."
+
+msgid "Time elapsed"
+msgstr ""
+
+msgid "Formatting complete"
+msgstr ""
+
+msgid "Formatting was successful."
+msgstr ""
+
+msgid "The harddisk is now prepared for recording."
+msgstr ""
+
+msgid "Press 'Next' to proceed with the installation."
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Not Formatting!"
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "Formatting failed!"
+msgstr ""
+
+msgid "Formating failed!"
+msgstr ""
+
+msgid "Mounting harddisk ..."
+msgstr ""
+
+#, fuzzy
+msgid "Please select the target for your recordings:"
+msgstr "Vyberte časové pásmo"
+
+msgid " I want to store my recordings ..."
+msgstr ""
+
+msgid " - on the local harddisk of this NetClient."
+msgstr ""
+
+#, fuzzy
+msgid " - on the harddisk of the ReelBox Avantgarde."
+msgstr "Chcete připojit pevný disk zařízení ReelBox Avantgarde?"
+
+msgid "Error"
+msgstr ""
+
+msgid "No Harddisk found."
+msgstr ""
+
+msgid "Recording is not possible."
+msgstr ""
+
+msgid "Handling"
+msgstr "Obsluha"
+
+#, fuzzy
+msgid "Please select a language"
+msgstr "Vyberte jazyk a časové pásmo"
+
+msgid "Please select a language and timezone"
+msgstr "Vyberte jazyk a časové pásmo"
+
+msgid "Setup.OSD$Language"
+msgstr "Jazyk"
+
+msgid "City/Region"
+msgstr "Město/region"
+
+msgid "Please select the prefered language using the"
+msgstr "Vyberte upřednostňovaný jazyk pomocí"
+
+msgid "cursor keys on the remote control."
+msgstr "kurzorových tlačítek na dálkovém ovladači."
+
+msgid "Then press OK to continue."
+msgstr "Pak pokračujte stisknutím tlačítka OK."
+
+msgid "Done"
+msgstr "Hotovo"
+
+msgid "Congratulations."
+msgstr "Gratulujeme."
+
+msgid "All required settings for the initial operation have"
+msgstr "Všechna požadovaná počáteční nastavení"
+
+msgid "been saved."
+msgstr "byla uložena."
+
+#, fuzzy
+msgid "Reel Multimedia wishes you a lot of fun with"
+msgstr "Reel Multimedia vám přeje mnoho zábavy se zařízením"
+
+msgid "your NetClient."
+msgstr ""
+
+msgid "your ReelBox."
+msgstr ""
+
+msgid "The Install prodecure wasn't completed"
+msgstr ""
+
+msgid "successfully."
+msgstr ""
+
+msgid "End"
+msgstr "Konec"
+
+msgid "In this step you can configure the Reel MultiRoom system."
+msgstr ""
+
+msgid "Enable MultiRoom"
+msgstr ""
+
+msgid "Use this Reelbox as recording server?"
+msgstr ""
+
+msgid "No. of Clients in the network"
+msgstr ""
+
+msgid "Scan for MultiRoom server now"
+msgstr ""
+
+#, c-format
+msgid "Configuring as server: %d%%"
+msgstr ""
+
+msgid "Network"
+msgstr "Síť"
+
+msgid "Changes done"
+msgstr "Změny provedeny"
+
+msgid "Network (WLAN)"
+msgstr ""
+
+msgid "setup plugin missing: cannot configure WLAN"
+msgstr ""
+
+msgid "Network disabled"
+msgstr "Síť je zakázána"
+
+msgid "Do you want to enable the network?"
+msgstr "Chcete síť povolit?"
+
+msgid "Yes"
+msgstr "Ano"
+
+msgid "No"
+msgstr "Ne"
+
+#, fuzzy
+msgid "Do you want to set up the network now?"
+msgstr "Chcete nastavit síť?"
+
+msgid "Disable Network"
+msgstr "Zakázat síť"
+
+msgid "These settings are retrieved by DHCP:"
+msgstr "Následující nastavení bylo načteno z DHCP:"
+
+msgid "IP Address"
+msgstr "IP adresa"
+
+msgid "Network mask"
+msgstr "Maska sítě"
+
+msgid "Gateway"
+msgstr "Brána"
+
+msgid "Nameserver"
+msgstr "Názvový server"
+
+msgid "Current settings:"
+msgstr "Aktuální nastavení:"
+
+msgid "Do you want to use these settings?"
+msgstr "Chcete použít toto nastavení?"
+
+msgid "Yes, store"
+msgstr ""
+
+msgid "No, configure network manually"
+msgstr "Ne, nakonfigurovat síť ručně"
+
+msgid "No, configure WiFi"
+msgstr ""
+
+msgid "Manual network setting"
+msgstr "Ruční nastavení sítě"
+
+msgid "Use DHCP"
+msgstr "Používat DHCP"
+
+msgid "no"
+msgstr "ne"
+
+msgid "yes"
+msgstr "ano"
+
+msgid "Hostname"
+msgstr "Název hostitele"
+
+msgid "Domain"
+msgstr "Doména"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Connection"
+msgstr "Připojení"
+
+msgid "Auto"
+msgstr "Automaticky"
+
+msgid "Progressive"
+msgstr "Progresivní"
+
+msgid "Interlaced"
+msgstr "Prokládané"
+
+msgid "Off"
+msgstr "Vypnuto"
+
+msgid "On"
+msgstr "Zapnuto"
+
+msgid "Component"
+msgstr "Komponentní"
+
+msgid "Select a video mode for your screen"
+msgstr "Vyberte zobrazovací režim obrazovky"
+
+msgid "TV connected by"
+msgstr "Připojení TV"
+
+msgid "Display Type"
+msgstr "Typ zobrazení"
+
+msgid "Digital Output"
+msgstr "Digitální výstup"
+
+msgid "Analog Output"
+msgstr "Analogový výstup"
+
+msgid "Analog Port"
+msgstr "Analogový port"
+
+msgid "fill to screen"
+msgstr "vyplnit obrazovku"
+
+msgid "fill to aspect"
+msgstr "zachovat poměr"
+
+msgid "crop to fill"
+msgstr "oříznout"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Řízení poměru stran"
+
+msgid "Resolution"
+msgstr "Rozlišení"
+
+msgid "Norm/Framerate"
+msgstr "Norma/snímková frekvence"
+
+msgid "Progressive/Interlaced"
+msgstr "Progresivní/prokládané"
+
+msgid "Normal"
+msgstr "Normální"
+
+msgid "Expert"
+msgstr "Rozšířené"
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Error: no menu got from reelice plugin"
+msgstr ""
+
+msgid "reelice plugin not found"
+msgstr ""
+
+#, fuzzy
+msgid "Keep these settings?"
+msgstr "Chcete použít toto nastavení?"
+
+msgid "Using old settings"
+msgstr ""
+
+#, fuzzy
+msgid "HDMI settings"
+msgstr "nastavení aktivováno."
+
+msgid "Mode"
+msgstr "Režim"
+
+#, fuzzy
+msgid "Output"
+msgstr "Analogový výstup"
+
+msgid "Aspect"
+msgstr ""
+
+#, fuzzy
+msgid "Aspect ratio"
+msgstr "Řízení poměru stran"
+
+#, fuzzy
+msgid "SCART settings"
+msgstr "nastavení aktivováno."
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr ""
+
+msgid "samba not installed!"
+msgstr ""
+
+msgid "not set"
+msgstr ""
+
+msgid "Installation Wizard"
+msgstr "Průvodce instalací"
+
+#, fuzzy
+msgid "None"
+msgstr "Hotovo"
+
+#, fuzzy
+msgid "TS"
+msgstr "NTSC"
+
+msgid "PES"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Init"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Pause"
+msgstr ""
+
+msgid "Trick"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Mpg2"
+msgstr ""
+
+msgid "h264"
+msgstr ""
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr ""
+
+msgid "Ntsc 443"
+msgstr ""
+
+msgid "Pal B IT"
+msgstr ""
+
+#, fuzzy
+msgid "PAL"
+msgstr "PAL50"
+
+msgid "Pal B Aus"
+msgstr ""
+
+msgid "Pal B NZ"
+msgstr ""
+
+msgid "Pal I"
+msgstr ""
+
+msgid "SECAM"
+msgstr ""
+
+msgid "Secam D"
+msgstr ""
+
+msgid "Pal D"
+msgstr ""
+
+msgid "Pal G"
+msgstr ""
+
+msgid "Pal H"
+msgstr ""
+
+msgid "Pal M"
+msgstr ""
+
+msgid "Pal 60"
+msgstr ""
+
+msgid "Pal N"
+msgstr ""
+
+msgid "Pal NC"
+msgstr ""
+
+msgid "Ntsc BT470"
+msgstr ""
+
+msgid "480p60"
+msgstr ""
+
+msgid "576p50"
+msgstr ""
+
+msgid "720p50"
+msgstr ""
+
+msgid "720p59"
+msgstr ""
+
+msgid "720p60"
+msgstr ""
+
+msgid "1080i50"
+msgstr ""
+
+msgid "1080i59"
+msgstr ""
+
+msgid "1080i60"
+msgstr ""
+
+msgid "1080p23"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p29"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "1:1"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "14:9"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "20:9"
+msgstr ""
+
+#, fuzzy
+msgid "Fill to Screen"
+msgstr "vyplnit obrazovku"
+
+#, fuzzy
+msgid "Crop to Fill"
+msgstr "oříznout"
+
+#, fuzzy
+msgid "Fill to Aspect"
+msgstr "zachovat poměr"
+
+msgid "NL X"
+msgstr ""
+
+msgid "NL Y"
+msgstr ""
+
+msgid "NL XY"
+msgstr ""
+
+msgid "DVI"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "CVBS DLY"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "YC"
+msgstr ""
+
+msgid "YPrPb"
+msgstr ""
+
+msgid "Deblock"
+msgstr ""
+
+msgid "Deblock & dering"
+msgstr ""
+
+#~ msgid "of"
+#~ msgstr "z"
+
+#, fuzzy
+#~ msgid "Internal harddisk found. Do you want to format it now?"
+#~ msgstr "Byl nalezen interní pevný disk. Chcete jej zformátovat?"
+
+#, fuzzy
+#~ msgid "Please wait!"
+#~ msgstr "Počkejte prosím..."
+
+#, fuzzy
+#~ msgid "Storing settings. Please wait..."
+#~ msgstr "Nastavování změn - počkejte prosím"
+
+#, fuzzy
+#~ msgid "Do you want to keep these settings?"
+#~ msgstr "Chcete použít toto nastavení?"
+
+#, fuzzy
+#~ msgid "Do you want to enable the Reel MultiRoom system?"
+#~ msgstr "Chcete síť povolit?"
+
+#, fuzzy
+#~ msgid ""
+#~ "Disables the MultiRoom-System.\n"
+#~ "Please press 'OK' to store the setting."
+#~ msgstr "Chcete použít toto nastavení?"
+
+#, fuzzy
+#~ msgid "No ReelBox Avantgarde was found on the network!"
+#~ msgstr "Nalezeno zařízení ReelBox Avantgarde:"
+
+#, fuzzy
+#~ msgid "If this is the first usage of the harddisk, it must be formatted now."
+#~ msgstr "Jedná-li se o první aktivaci pevného disku, je nutné jej nyní"
+
+#, fuzzy
+#~ msgid "    ... if so, please press OK to format."
+#~ msgstr "...pokračujte stisknutím tlačítka OK"
+
+#, fuzzy
+#~ msgid "Formatting harddisk. Please wait..."
+#~ msgstr "Nastavování změn - počkejte prosím"
+
+#, fuzzy
+#~ msgid "ReelBox Avantgarde found in network."
+#~ msgstr "Nalezeno zařízení ReelBox Avantgarde:"
+
+#~ msgid "Scanning Network..."
+#~ msgstr "Prohledávání sítě..."
+
+#~ msgid "Target storage for media"
+#~ msgstr "Cílové úložiště médií"
+
+#~ msgid "local"
+#~ msgstr "místní"
+
+#~ msgid "Avantgarde"
+#~ msgstr "Avantgarde"
+
+#~ msgid "Please Select an Avantgarde server"
+#~ msgstr "Vyberte server Avantgarde"
+
+#~ msgid "Area"
+#~ msgstr "Oblast"
+
+#~ msgid "SDTV"
+#~ msgstr "SDTV"
+
+#~ msgid "PC/VGA"
+#~ msgstr "PC/VGA"
+
+#~ msgid "Component (YUV)"
+#~ msgstr "Komponentní (YUV)"
+
+#~ msgid "Scart (RGB)"
+#~ msgstr "Scart (RGB)"
+
+#~ msgid "Select a video mode of your screen"
+#~ msgstr "Vyberte zobrazovací režim obrazovky"
+
+#~ msgid "Anamorphic+WSS"
+#~ msgstr "Anamorfní+WSS"
+
+#~ msgid "Anamorphic"
+#~ msgstr "Anamorfní"
+
+#~ msgid "Manual"
+#~ msgstr "Ručně"
+
+#~ msgid "Auto PAL50/PAL60"
+#~ msgstr "Auto PAL50/PAL60"
+
+#~ msgid "The adjustment above should only be changed by experienced"
+#~ msgstr "Toto nastavení by měli měnit jen zkušení"
+
+#~ msgid "users."
+#~ msgstr "uživatelé."
+
+#~ msgid "Incorrect attitudes can impair the television picture."
+#~ msgstr "Nesprávné nastavení může poškodit obraz TV."
+
+#~ msgid "Auto 75Hz+60Hz (VESA)"
+#~ msgstr "Auto 75Hz+60Hz (VESA)"
+
+#~ msgid "Auto 50Hz+60Hz (NON-VESA!)"
+#~ msgstr "Auto 50Hz+60Hz (není VESA!)"
+
+#~ msgid "Auto 67Hz+60Hz (NON-VESA!)"
+#~ msgstr "Auto 67Hz+60Hz (není VESA!)"
+
+#~ msgid "50Hz (NON-VESA!)"
+#~ msgstr "50Hz (není VESA!)"
+
+#~ msgid "60Hz (VESA)"
+#~ msgstr "60Hz (VESA)"
+
+#~ msgid "67Hz (NON-VESA!)"
+#~ msgstr "67Hz (není VESA!)"
+
+#~ msgid "75Hz (VESA)"
+#~ msgstr "75Hz (VESA)"
+
+#~ msgid "Framerate"
+#~ msgstr "Snímková frekvence"
+
+#~ msgid "DiSEqC disabled"
+#~ msgstr "DiSEqC zakázáno"
+
+#~ msgid "How many tuners are connected?"
+#~ msgstr "Kolik tunerů je připojeno?"
+
+#~ msgid "Tuners count"
+#~ msgstr "Počet tunerů"
+
+#~ msgid "Rotor settings will follow..."
+#~ msgstr "Následuje nastavení rotoru..."
+
+#~ msgid "Do you have a DiSEqC switch?"
+#~ msgstr "Máte přepínač DiSEqC?"
+
+#~ msgid "DiSEqC Type"
+#~ msgstr "Typ DiSEqC"
+
+#~ msgid "Number of LNBs"
+#~ msgstr "Počet LNB"
+
+#~ msgid "LNB Type"
+#~ msgstr "Typ LNB"
+
+#~ msgid "Sat positions must be unique!"
+#~ msgstr "Pozice satelitů musí být jedinečné!"
+
+#~ msgid "now. If you activated the harddisk bevore, you don't need to"
+#~ msgstr "zformátovat. Pokud jste již pevný disk aktivovali dříve,"
+
+#~ msgid "perform this step now."
+#~ msgstr "nemusíte tento krok provádět."
+
+#~ msgid "In this case press the 'yellow' button to skip to the next step."
+#~ msgstr "V tom případě stiskem žlutého tlačítka přejděte na další krok."
+
+#~ msgid "The device is rebooting to activate the"
+#~ msgstr "Zařízení bude restartováno, aby bylo"
+
+#~ msgid "Restarting ReelBox"
+#~ msgstr "Restartování zařízení ReelBox"

@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S83.0E
+2=G-Sat 12
+3=East
+4=83.0

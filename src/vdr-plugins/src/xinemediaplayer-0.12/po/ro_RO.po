@@ -1,0 +1,181 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-12-07 10:22+0100\n"
+"PO-Revision-Date: 2009-03-02 19:56+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Jump: "
+msgstr ""
+
+#, fuzzy
+msgid "Cannot play"
+msgstr "Nu pot reda fisier"
+
+msgid "file type"
+msgstr ""
+
+msgid "Waiting for server ..."
+msgstr ""
+
+msgid "Network read error"
+msgstr ""
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr ""
+
+msgid "Open Error"
+msgstr ""
+
+msgid "Only MPEG-1 format supported"
+msgstr ""
+
+msgid "VideoCodec not supported!"
+msgstr ""
+
+msgid "AudioCodec not supported!"
+msgstr ""
+
+msgid "Could not play file"
+msgstr "Nu pot reda fisier"
+
+#, fuzzy
+msgid "Please wait, Loading..."
+msgstr "Incarc..."
+
+msgid "Please check your network connection"
+msgstr ""
+
+msgid "Opening "
+msgstr "Deschidere"
+
+msgid "Chapter"
+msgstr "Capitol"
+
+msgid "Unable to get default CD device"
+msgstr "Nu pot accesez unitatea CD/DVD implicita"
+
+msgid "Unable open CD device"
+msgstr "Nu pot sa deschid unitatea CD/DVD"
+
+msgid "No tracks found in CD"
+msgstr "Nu am gasit piste pe CD/DVD"
+
+msgid "No audio tracks found"
+msgstr "Nu am gasit piste audio pe CD/DVD"
+
+msgid "Track"
+msgstr "Pista"
+
+msgid "Paused"
+msgstr ""
+
+msgid "Mute"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Repeat"
+msgstr "Repeta"
+
+msgid "Shuffle"
+msgstr "Amestecate"
+
+msgid "Overview"
+msgstr "Rezumat"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Options"
+msgstr ""
+
+msgid "shoutcast"
+msgstr "shoutcast"
+
+msgid "Add to favs"
+msgstr ""
+
+msgid "Volume"
+msgstr "Volum"
+
+msgid "Loading..."
+msgstr "Incarc..."
+
+msgid "Title"
+msgstr "Titlu"
+
+msgid "Artist"
+msgstr "Artist"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Gen"
+
+msgid "Comment"
+msgstr "Comentariu"
+
+msgid "Year"
+msgstr "An"
+
+msgid "Length"
+msgstr "Lungime"
+
+msgid "min"
+msgstr "minute"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Samplerate"
+
+msgid "ID3$Channels"
+msgstr "Canale"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-Layer"
+
+msgid "Copyrighted"
+msgstr "Copyrighted"
+
+msgid "Protected"
+msgstr "Protejat"
+
+msgid "File size"
+msgstr "Dimensiune"
+
+msgid "Last Modified"
+msgstr "Ultima modificare"
+
+msgid "Mediaplayer - Id3 Info:"
+msgstr "Mediaplayer - Id3 Info:"
+
+msgid "No Id3 info found!"
+msgstr "Nu am gasit info Id3!"
+
+#~ msgid "Function"
+#~ msgstr "Functie"

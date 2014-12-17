@@ -1,0 +1,499 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Dimitrios Dimitrakos <mail@dimitrios.de>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netcv\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-06-15 17:07+0200\n"
+"PO-Revision-Date: 2008-09-26 15:59+0200\n"
+"Last-Translator: Dimitrios Dimitrakos <mail@dimitrios.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "empty"
+msgstr ""
+
+msgid "DiSEqC list"
+msgstr ""
+
+msgid "Restarting NetCeiver..."
+msgstr ""
+
+msgid "Restarting VDR..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr ""
+
+msgid "Reloading diseqc.conf failed!"
+msgstr ""
+
+msgid "Settings stored"
+msgstr ""
+
+msgid "Reloading channels.conf failed"
+msgstr ""
+
+msgid "Reloading diseqc.conf failed"
+msgstr ""
+
+msgid "Error: Store failed! Error Number: "
+msgstr ""
+
+msgid "Error: Only 4 LNBs per cascade is allowed!"
+msgstr ""
+
+msgid "Error: Every DiSEqC list must have a name!"
+msgstr ""
+
+msgid "Error: Duplicate DiSEqC list name is not allowed!"
+msgstr ""
+
+msgid "Error: Every tuner must have a valid DiSEqC list!"
+msgstr ""
+
+msgid "Error: At least 1 tuner must be enabled!"
+msgstr ""
+
+msgid "Unknown Error: "
+msgstr ""
+
+msgid "DiSEqC disabled"
+msgstr ""
+
+msgid "Diseqc$Source"
+msgstr ""
+
+msgid "LNB Type"
+msgstr ""
+
+msgid "DiSEqC Mini"
+msgstr ""
+
+msgid "Number of LNBs"
+msgstr ""
+
+msgid "LNB"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Single Cable Router"
+msgstr ""
+
+msgid "Unique Slot Nr."
+msgstr ""
+
+msgid "Downlink freq. (MHz)"
+msgstr ""
+
+msgid "PIN (optional)"
+msgstr ""
+
+msgid "No pin"
+msgstr ""
+
+msgid "DiSEqC 1.0"
+msgstr ""
+
+msgid "DiSEqC 1.1"
+msgstr ""
+
+msgid "Multiswitch"
+msgstr ""
+
+msgid "Cascade"
+msgstr ""
+
+msgid "DiSEqC 1.2"
+msgstr ""
+
+msgid "Number of sources"
+msgstr ""
+
+msgid "Rotor (GotoX)"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "fine"
+msgstr ""
+
+msgid "coarse"
+msgstr ""
+
+msgid "maximum"
+msgstr ""
+
+msgid "Min Position"
+msgstr ""
+
+msgid "East"
+msgstr ""
+
+msgid "West"
+msgstr ""
+
+msgid "Max Position"
+msgstr ""
+
+msgid "Longitude"
+msgstr ""
+
+msgid "Latitude"
+msgstr ""
+
+msgid "North"
+msgstr ""
+
+msgid "South"
+msgstr ""
+
+msgid "Autofocus"
+msgstr ""
+
+msgid "DisiCon 4"
+msgstr ""
+
+msgid "DiSEqC mode:"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr ""
+
+msgid "NetCeiver Firmwareupdate is running!"
+msgstr ""
+
+msgid "No NetCeiver found!"
+msgstr ""
+
+msgid "Creating directory tmp failed!"
+msgstr ""
+
+msgid "Retrieving information about tuners failed!"
+msgstr ""
+
+msgid "Getting network interface failed!"
+msgstr ""
+
+msgid "sec"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "h"
+msgstr ""
+
+msgid "d"
+msgstr ""
+
+msgid "Tuner"
+msgstr ""
+
+msgid "DiSEqC settings"
+msgstr ""
+
+msgid "NetCeiver is being updated."
+msgstr ""
+
+msgid "Try again later."
+msgstr ""
+
+msgid "Error!"
+msgstr ""
+
+msgid "Failed to open directory "
+msgstr ""
+
+msgid "No file found in "
+msgstr ""
+
+msgid "Please select a setting for upload: "
+msgstr ""
+
+msgid "Finished!"
+msgstr ""
+
+msgid "Uploading failed!"
+msgstr ""
+
+msgid "Current"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "Alive"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Tuners"
+msgstr ""
+
+msgid "OS"
+msgstr ""
+
+msgid "App"
+msgstr ""
+
+msgid "Firmware"
+msgstr ""
+
+msgid "Hardware"
+msgstr ""
+
+msgid "Serial"
+msgstr ""
+
+msgid "System uptime"
+msgstr ""
+
+msgid "Process uptime"
+msgstr ""
+
+msgid "Dish settings"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Slot"
+msgstr ""
+
+msgid "Chip"
+msgstr ""
+
+msgid "Used"
+msgstr ""
+
+msgid "Lock"
+msgstr ""
+
+msgid "Frequency"
+msgstr ""
+
+msgid "Strenght"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "BER"
+msgstr ""
+
+msgid "UNC"
+msgstr ""
+
+msgid "electric$Current"
+msgstr ""
+
+msgid "Power save mode"
+msgstr ""
+
+msgid "Couldn't create tmp-path!"
+msgstr ""
+
+msgid "Internal Error! Sorry!"
+msgstr ""
+
+msgid "Loading data from NetCeiver failed!"
+msgstr ""
+
+msgid "Please check the Connection to NetCeiver!"
+msgstr ""
+
+msgid "Number of Tuners"
+msgstr ""
+
+msgid "Please choose the satellites you can receive:"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Static antenna"
+msgstr ""
+
+msgid "Single Cable System"
+msgstr ""
+
+msgid "Rotor antenna"
+msgstr ""
+
+msgid "Updating... please wait!"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Cable"
+msgstr ""
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
+msgid "Antenna type"
+msgstr ""
+
+msgid "Rotor"
+msgstr ""
+
+msgid "Experts"
+msgstr ""
+
+msgid "Unknown Error! Sorry!"
+msgstr ""
+
+msgid "Internal Error: DiSEqC not working"
+msgstr ""
+
+msgid "Internal Error: Loading netceiver.conf failed"
+msgstr ""
+
+msgid "Save changes?"
+msgstr ""
+
+msgid "No netcvrotor-Plugin found!"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Multi-Transponder-Decryption is"
+msgstr ""
+
+msgid "impossible because of mixed CAMs"
+msgstr ""
+
+msgid "Multi-Transponder"
+msgstr ""
+
+msgid "Signal (strength/snr)"
+msgstr ""
+
+msgid "Signal (ber/unc)"
+msgstr ""
+
+msgid "Update firmware"
+msgstr ""
+
+msgid "Load"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Add DiSEqC list"
+msgstr ""
+
+msgid "disable"
+msgstr ""
+
+msgid "enable"
+msgstr ""
+
+msgid "No tmp files available."
+msgstr ""
+
+msgid "Update progress: "
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "CAM settings"
+msgstr ""
+
+msgid "Tuner settings"
+msgstr ""
+
+msgid "CAM"
+msgstr ""
+
+msgid "not selected"
+msgstr ""
+
+msgid "Setting loaded"
+msgstr ""
+
+msgid "Loading failed! (Error: "
+msgstr ""
+
+msgid "Update finished"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "NetCeiver update available. Do you want to update?"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "There is a new firmware version for the NetCeiver available!"
+msgstr ""
+
+msgid "Current version:"
+msgstr ""
+
+msgid "New version:"
+msgstr ""
+
+msgid "If you want to use CA-modules, it is absolutely required to perform this update right now."
+msgstr ""
+
+msgid "Do you want to update the NetCeiver firmware now?"
+msgstr ""
+
+msgid "Caution:"
+msgstr ""
+
+msgid "Current recordings will be interrupted for a few minutes."
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Update failed!"
+msgstr ""
+
+msgid "internal error!"
+msgstr ""

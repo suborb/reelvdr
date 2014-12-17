@@ -1,0 +1,116 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-vlcclient\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:45+0200\n"
+"PO-Revision-Date: 2009-03-02 20:24+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Remote VLC"
+msgstr "VLC 'de la distanta' "
+
+msgid "Fetching recordings"
+msgstr "Primesc inregistrarile"
+
+msgid "Error fetching recordings"
+msgstr "Eroare la primire inregistrari"
+
+msgid "Play"
+msgstr "Redare"
+
+msgid "Open"
+msgstr "Deschide"
+
+msgid "Error while accessing recording!"
+msgstr "Eroare la accesarea inregistrarii!"
+
+msgid "Jump: "
+msgstr "Sari:"
+
+msgid "very low"
+msgstr "foarte jos"
+
+msgid "low"
+msgstr "jos"
+
+msgid "ok"
+msgstr "ok"
+
+msgid "good"
+msgstr "bun"
+
+msgid "very good"
+msgstr "foarte bun"
+
+msgid "IP of remote VLC"
+msgstr "IP-ul VLC de la distanta"
+
+msgid "Remote VLC Directory"
+msgstr "Director VLC 'de la distanta' "
+
+msgid "Streaming Resolution"
+msgstr "Rezolutia transmisiei"
+
+msgid "Stream DD (works only if movie has DD)"
+msgstr "Transmisie Dolby Digital(este activa numai daca filmul o are)"
+
+msgid "no"
+msgstr "nu"
+
+msgid "yes"
+msgstr "da"
+
+msgid "Sync on audio"
+msgstr "Sincronizare audio"
+
+msgid "Remote CPU Power"
+msgstr "Alimentare CPU 'de la distanta'"
+
+msgid "Deinterlace before encoding"
+msgstr "Deintretese inainte de encodare"
+
+msgid "Post processing quality"
+msgstr "Calitate Post-Procesare"
+
+msgid "Render subtitles into stream"
+msgstr "Introduce subtitle in transmisie"
+
+msgid "HQ-profile"
+msgstr "profil HQ (inalta calitate)"
+
+msgid "Interlace"
+msgstr "Intretesere"
+
+msgid "Interlaced motion estimation"
+msgstr "Estimare film intretesut"
+
+msgid "Pre-motion estimation"
+msgstr "Estimare Pre-motion"
+
+msgid "Hurry up"
+msgstr "Grabeste-te"
+
+msgid "Noise reduction"
+msgstr "Reducere zgomot"
+
+msgid "Strict standard compliance"
+msgstr "In conformitate stricta cu Standardul"
+
+msgid "VLC returned HTTP-Error 404"
+msgstr "VLC raporteaza Eroare-HTTP 404"
+
+msgid "ERROR: VLC-CLient: VLC returned nothing"
+msgstr "EROARE: Client-VLC: VLC nu trimite date"

@@ -1,0 +1,55 @@
+Media Manager - a plugin for the Video Disk Recorder (VDR).
+
+Written by:                  faultier <faultier@freenet.de>
+                             please use subject mediamanger otherwise your mail
+							 goes to trash
+
+Project's homepage:          http://freenet-homepage.de/quarks/mediamanager.html
+
+Latest version available at: http://freenet-homepage.de/quarks/mediamanager.html
+
+See the file COPYING for license information.
+
+Description:
+
+The "mediamanager" plugin autodetects CDs/DVDs inserted in your CD/DVD-Rom drive
+and starts a suitable compiled in handler or a registered plugin (if there is
+one which supports the mediamanager service interface).
+
+Menu:
+If there is no disc in your CD/DVD-Rom drive the mainmenuentry is Media Manager
+and shows informations about compiled in handlers and registered plugins. You
+can also (de)activate Media Manager here with the red button and use another plugin
+or open the tray (yellow button).
+In the other case it is replaced by the mainmenuentry of the handler or plugin
+and the menu popup.
+
+Currently mediamanager detects the following mediatypes:
+	blank discs
+	digital audio cd
+	Video DVD
+	SVCD
+	VCD
+	DVD with VDR recordings (VDR directory structure required)
+	CD/DVD containing audio files
+	CD/DVD containing image files
+
+Currently the following handlers are available:
+	media_vdrarchiv: plays DVDs with VDR recordings
+	media_cdda     : simple audio CD player based on libcdio
+
+
+Installation and Requirements:
+
+	* vdr >= 1.3.42
+	* libcdio >= 0.78.2 if you want compile media_cdda
+	* fstab entry for CD/DVD device
+	  for example: /dev/foo  /media/foo  auto  ro,noauto,user,exec  0  0
+	* at least read access for the CD/DVD device
+
+First edit COMPILE_HANDLERS:
+If you want to use 'media_cdda' handler put a line 'media_cdda' in it.
+By default only 'media_vdrarchiv' is compiled.
+
+Edit config.h for mount and umount command.
+

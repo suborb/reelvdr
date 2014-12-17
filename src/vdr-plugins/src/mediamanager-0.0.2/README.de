@@ -1,0 +1,57 @@
+Media Manager - ein Plugin für den Video Disk Recorder (VDR).
+
+von:                       faultier <faultier@freenet.de>
+                           bitte Betreff mediamanager sonst wird Ihre Mail
+						   sofort gelöscht.
+
+Projektseite:              http://freenet-homepage.de/quarks/mediamanager.html
+
+letzte Version erhältlich: http://freenet-homepage.de/quarks/mediamanager.html
+
+Bitte die Datei COPYING für Lizenzinformationen beachten.
+
+Beschreibung:
+
+"mediamanager" plugin erkennt automatisch CDs/DVDs im CD/DVD-Rom-Laufwerk
+und wählt einen geigneten "compiled in handler" oder ein registriertes Plugin
+(falls eines vorhanden ist, welches das Service Interface von mediamanager
+unterstützt) aus.
+
+Menüs:
+Ist keine CD/DVD im Laufwerk lautet der Menüeintrag Media Manager und zeigt
+Informationen über "compiled in handler" und registrierte Plugins. Hier
+besteht die Möglichkeit Media Manager zu (de)aktivieren (roter Button), um
+gegebenenfalls ein anderes Plugin zu benutzen und die Lade des Laufwerks zu
+öffnen (gelber Button).
+Im anderen Fall wird der Menüeintrag Media Manager ersetzt durch den
+Menüeintrag des "compiled in handler" bzw. des registrierten Plugins.
+Das Menü wird auch automatisch angezeigt.
+
+Im Moment erkennt mediamanager die folgenden Medien:
+	leere CD/DVD
+	Digital Audio CD
+	Video DVD
+	SVCD
+	VCD
+	DVD mit VDR Aufnahmen (VDR Verzeichnisstruktur muß vorhanden sein)
+	CD/DVD mit Audio Dateien
+	CD/DVD mit Bild Dateien
+
+Die folgenden "compiled in handler" sind verfügbar:
+	media_vdrarchiv: spielt DVDs mit VDR Aufnahmen ab
+	media_cdda     : einfacher Audio CD Spieler (benötigt libcdio)
+
+
+Installation und Abhängigkeiten:
+
+	* vdr >= 1.3.42
+	* libcdio >= 0.78.2 falls media_cdda compiliert werden soll
+	* fstab Eintrag für das CD/DVD device
+	  z.B: /dev/foo  /media/foo  auto  ro,noauto,user,exec  0  0
+	* zumindest Leserechte für das CD/DVD device
+
+Die Datei COMPILE_HANDLERS editieren:
+Soll 'media_cdda' compiliert werden muss eine Zeile 'media_cdda' eingefügt
+werden. Ansonsten wird nur 'media_vdrarchiv' eingebunden.
+
+Editiere config.h für mount und umount commands.

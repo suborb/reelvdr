@@ -1,0 +1,12 @@
+diff -Nur kernel-2.6.11.11-orig/drivers/ide/pci/sc1200.c kernel-2.6.11.11/drivers/ide/pci/sc1200.c
+--- kernel-2.6.11.11-orig/drivers/ide/pci/sc1200.c	2005-05-27 07:06:46.000000000 +0200
++++ kernel-2.6.11.11/drivers/ide/pci/sc1200.c	2005-06-26 22:01:51.000000000 +0200
+@@ -64,6 +64,8 @@
+ 		if (pci_clock == PCI_CLK_33A)
+ 			pci_clock = PCI_CLK_33;
+ 	}
++	// REELy ugly hack to make AMD Geode work correctly
++	pci_clock=PCI_CLK_66;
+ 	return pci_clock;
+ }
+ 

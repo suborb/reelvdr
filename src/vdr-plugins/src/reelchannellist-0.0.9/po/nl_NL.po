@@ -1,0 +1,328 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-14 14:48+0100\n"
+"PO-Revision-Date: 2011-11-14 21:03+0100\n"
+"Last-Translator: A Krook <tech@reelbox4all.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Current Transponder"
+msgstr "Huidige transponder"
+
+msgid "Favourites"
+msgstr "Favorieten"
+
+msgid "No favourite folders available"
+msgstr "Geen favorieten map beschikbaar"
+
+msgid "Info:"
+msgstr "Informatie:"
+
+msgid "Please select 'all Channels' to add channels to your favorites."
+msgstr "Kies 'alle kanalen' om kanalen aan de favorieten toe te voegen."
+
+msgid "No channels in this bouquet"
+msgstr "Geen kanalen in dit boeket"
+
+msgid "Channel List"
+msgstr "Kanalenlijst"
+
+msgid "Functions"
+msgstr "Funkties"
+
+msgid "Switching to channel failed"
+msgstr "Omschakelen naar kanaal mislukt"
+
+msgid "Enter new favourites folder name"
+msgstr "Geef nieuwe naam voor favorieten map"
+
+msgid "Folder name"
+msgstr "Map naam"
+
+msgid "Duplicate folder name. Please try another name."
+msgstr "Map naam niet uniek, probeer een andere naam aub."
+
+msgid "Invalid folder name"
+msgstr "Ongeldige naam voor map"
+
+msgid "You have no favourite folders. Please create one before you can add the channel"
+msgstr "U hebt geen favorieten map, maak eerst één waaraan vervolgens kanalen toegevoegd kunnen worden"
+
+#, c-format
+msgid "Select folder for %d channels"
+msgstr ""
+
+msgid "Create new folder"
+msgstr "Maak nieuwe map"
+
+msgid "Select folder with 'Ok'"
+msgstr "Kies map met 'OK' "
+
+msgid "Channel added to favourites"
+msgstr "Kanaal aan favorieten toegevoegd"
+
+msgid "Channel not added to favourites"
+msgstr "Kanaal niet aan favorieten toegevoegd"
+
+#, c-format
+msgid "For folder '%s' please choose one of the following options:"
+msgstr "Kies aub. één van de volgende opties voor de map '%s' :"
+
+#, c-format
+msgid "For channel '%s' please choose one of the following options:"
+msgstr "Kies aub. één van de volgende opties voor kanaal '%s' :"
+
+msgid "Rename folder"
+msgstr "Map hernoemen"
+
+msgid "Delete folder"
+msgstr "Map wissen"
+
+msgid "Move folder"
+msgstr "Map verplaatsen"
+
+msgid "CI-slot assignment for folder"
+msgstr "CI-slot toewijzen aan map"
+
+msgid "Move channel"
+msgstr "Kanaal verplaatsen"
+
+msgid "Delete channel"
+msgstr "Kanaal wissen"
+
+msgid "CI-slot assignment for channel"
+msgstr "CI-slot toewijzen aan kanaal"
+
+msgid "Delete channel from favourites?"
+msgstr "Kanaal uit favorieten wissen?"
+
+msgid "Channel deleted"
+msgstr "Kanaal gewist"
+
+msgid "Deletion of channel failed"
+msgstr "Kanaal wissen mislukt"
+
+msgid "Delete cancelled"
+msgstr "Wissen geannuleerd"
+
+msgid "Delete folder and all its channels?"
+msgstr "Map en alle kanalen erin, wissen?"
+
+msgid "Folder and its contents deleted"
+msgstr "Map inclusief inhoud gewist"
+
+msgid "Deletion of folder failed"
+msgstr "Wissen van map mislukt"
+
+msgid "Rename favourites folder"
+msgstr "Hernoem favoriten map"
+
+msgid "New folder name"
+msgstr "Nieuwe map naam"
+
+msgid "Press right key to enter folder name and Ok to rename."
+msgstr "Druk knop rechts om de mapnaam te benaderen en OK om te hernoemen "
+
+msgid "Renamed folder"
+msgstr "Map hernoemd"
+
+msgid "Rename failed"
+msgstr "Hernoemen mislukt"
+
+msgid "Sort by number"
+msgstr "Soteren op nummer"
+
+msgid "Sort by channel name"
+msgstr "Sorteer op kanaalnaam"
+
+msgid "Sort by provider name"
+msgstr "Sorteer op providernaam"
+
+msgid "Delete channels?"
+msgstr ""
+
+msgid "Deletion cancelled"
+msgstr ""
+
+msgid "A selected channel has timer. Remove timer and try again."
+msgstr ""
+
+#, c-format
+msgid "Deleted %d Channels"
+msgstr ""
+
+msgid "Radio Only"
+msgstr "Alleen radio"
+
+msgid "TV Only"
+msgstr "Alleen TV"
+
+msgid "Move to Fav"
+msgstr ""
+
+msgid "Delete selected"
+msgstr ""
+
+msgid "Unknown mode"
+msgstr ""
+
+msgid ""
+"No channels found.\n"
+"Press red key to list all channels."
+msgstr ""
+
+msgid "Select channels to delete"
+msgstr ""
+
+msgid "Select channels to add to Fav"
+msgstr ""
+
+msgid "All Channels"
+msgstr "Alle kanalen"
+
+msgid "Select channels with Ok. Then blue key for options."
+msgstr ""
+
+msgid "Providers"
+msgstr "Providers"
+
+msgid "Add provider"
+msgstr "Voeg provider toe"
+
+msgid "to favourites"
+msgstr "aan favorieten"
+
+msgid "CI-slot assignment for provider"
+msgstr "Wijs CI-slot toe aan provider"
+
+msgid "Provider added to favourites"
+msgstr "Provider aan favorieten toegevoegd"
+
+msgid "Error: Provider not added to favourites"
+msgstr "Fout: Provider niet aan favorieten toegevoegd"
+
+msgid "Sources"
+msgstr "Bronnen"
+
+#, c-format
+msgid "Add the %d selected channels to favourites with the option below:"
+msgstr ""
+
+msgid "Add multiple channels to Favourites"
+msgstr ""
+
+#, c-format
+msgid "Delete the %d selected channels:"
+msgstr ""
+
+msgid "Delete channels"
+msgstr ""
+
+msgid "Edit selected channel"
+msgstr ""
+
+msgid "Add selected channel to Favourites"
+msgstr "Voeg geselecteerd kanaal toe aan favorieten"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search for channel"
+msgstr "Zoek naar kanaal"
+
+msgid "Enter string to search"
+msgstr "Geef zoekcriteria"
+
+msgid "Search for"
+msgstr "Zoek naar"
+
+msgid "channel"
+msgstr "kanaal"
+
+msgid "bouquet"
+msgstr "boeket"
+
+msgid "provider"
+msgstr "provider"
+
+msgid "Choose CI slot for"
+msgstr "Kies CI-slot voor"
+
+msgid "CI-slot for"
+msgstr "CI-slot voor"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "Symbolrate"
+msgstr "Symbolrate"
+
+msgid "System-ID"
+msgstr "Systeem-ID"
+
+msgid "CI-Slot"
+msgstr "CI-Slot"
+
+msgid "Button$New"
+msgstr "Nieuw"
+
+msgid "No CAM at"
+msgstr "Geen CAM in"
+
+msgid "New channels"
+msgstr "Nieuwe kanalen"
+
+msgid "Channels"
+msgstr "Kanalen"
+
+msgid "Unknown source"
+msgstr "onbekende bron"
+
+msgid "Unknown Provider"
+msgstr ""
+
+msgid "Channel List: Move Channel"
+msgstr ""
+
+msgid "Select a channel with OK key"
+msgstr ""
+
+msgid "Up/Down to move channel. Exit key removes selection."
+msgstr ""
+
+msgid "Channel Info"
+msgstr "Kanaal informatie"
+
+msgid "Standard"
+msgstr "Standaard"
+
+msgid "Ok key in TV Mode"
+msgstr "OK toets tijdens TV modus"
+
+#~ msgid "exit this menu with Exit"
+#~ msgstr "verlaat dit menu met Exit"
+
+#~ msgid "Edit selected Channel"
+#~ msgstr "Editeer geselecteerd kanaal"
+
+#~ msgid "Select folder for:"
+#~ msgstr "Kies map voor:"
+
+#~ msgid "Zapping in favourites list"
+#~ msgstr "Zappen in de favorietenlijst"
+
+#~ msgid "Current folder"
+#~ msgstr "Huidige map"
+
+#~ msgid "All folders"
+#~ msgstr "Alle mappen"

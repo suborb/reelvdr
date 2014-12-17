@@ -1,0 +1,277 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-radio\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-03-17 14:45+0100\n"
+"PO-Revision-Date: 2008-09-26 13:22+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "only Text"
+msgstr "nur Text"
+
+msgid "Text+TagInfo"
+msgstr "Text+TagInfos"
+
+msgid "only, if some"
+msgstr "nur, wenn vorhanden"
+
+msgid "always"
+msgstr "immer"
+
+msgid "Top"
+msgstr "Oben"
+
+msgid "Bottom"
+msgstr "Unten"
+
+msgid "latest at Top"
+msgstr "aktuelle Oben"
+
+msgid "latest at Bottom"
+msgstr "aktuelle Unten"
+
+msgid "Black"
+msgstr "Schwarz"
+
+msgid "White"
+msgstr "Weiss"
+
+msgid "Red"
+msgstr "Rot"
+
+msgid "Green"
+msgstr "Grün"
+
+msgid "Yellow"
+msgstr "Gelb"
+
+msgid "Magenta"
+msgstr "Magenta"
+
+msgid "Blue"
+msgstr "Blau"
+
+msgid "Cyan"
+msgstr "Cyan"
+
+msgid "Transparent"
+msgstr "Transparent"
+
+msgid "about MainMenu"
+msgstr "über Hauptmenü"
+
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgid "only Taginfo"
+msgstr "nur TagInfos"
+
+msgid "RaSS only"
+msgstr "RaSS alleine"
+
+msgid "RaSS+Text mixed"
+msgstr "Text über RaSS"
+
+msgid "Activate"
+msgstr "RDSText einschalten"
+
+msgid "RDSText Function"
+msgstr "RDSText Funktion"
+
+msgid "RDSText OSD-Position"
+msgstr "RDSText Position"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "RDSText Titelzeile"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "RDSText Zeilen (1-5)"
+
+msgid "unknown program type"
+msgstr "Unbekannte Programmart"
+
+msgid "News"
+msgstr "Nachrichten"
+
+msgid "Current affairs"
+msgstr "Aktuelles"
+
+msgid "Information"
+msgstr "Info"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Education"
+msgstr "Bildung"
+
+msgid "Drama"
+msgstr "Hörspiel"
+
+msgid "Culture"
+msgstr "Kultur"
+
+msgid "Science"
+msgstr "Wissenschaft"
+
+msgid "Varied"
+msgstr "Diverses"
+
+msgid "Pop music"
+msgstr "Popmusik"
+
+msgid "Rock music"
+msgstr "Rockmusik"
+
+msgid "M.O.R. music"
+msgstr "Easy Listening u.ä."
+
+msgid "Light classical"
+msgstr "Leichte Klassik"
+
+msgid "Serious classical"
+msgstr "Ernste Klassik"
+
+msgid "Other music"
+msgstr "Sonstige Musik"
+
+msgid "Alarm"
+msgstr "Alarm (!)"
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radiotext"
+
+msgid "  [waiting ...]"
+msgstr "  [warte ...]"
+
+msgid "Title  :"
+msgstr "Titel        :"
+
+msgid "Artist :"
+msgstr "Interpret :"
+
+msgid "Records"
+msgstr "Archiv"
+
+msgid "with <0>"
+msgstr "mit  <0>"
+
+msgid "Playlist"
+msgstr "Titelliste"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Lottery"
+msgstr "Lotterie"
+
+msgid "Weather"
+msgstr "Wetter"
+
+msgid "Stockmarket"
+msgstr "Bösenkurse"
+
+msgid "Other"
+msgstr "Sonstiges"
+
+msgid "RTplus Memory  since"
+msgstr "RTplus Speicher  seit"
+
+msgid "Programme"
+msgstr "Pogramminfo"
+
+msgid "Station"
+msgstr "Sendername"
+
+msgid "Now"
+msgstr "Jetzt"
+
+msgid "...Part"
+msgstr "...Detail"
+
+msgid "Next"
+msgstr "Demnächst"
+
+msgid "Host"
+msgstr "Moderator"
+
+msgid "Edit.Staff"
+msgstr "Person(en)"
+
+msgid "Homepage"
+msgstr "Homepage"
+
+msgid "Interactivity"
+msgstr "Interaktiv (tu' was :)"
+
+msgid "Phone-Hotline"
+msgstr "Tel.-Hotline"
+
+msgid "Phone-Studio"
+msgstr "Tel.-Studio"
+
+msgid "Email-Hotline"
+msgstr "EMail-Hotline"
+
+msgid "Email-Studio"
+msgstr "EMail-Studio"
+
+msgid "Info"
+msgstr "weitere Information"
+
+msgid "NewsLocal"
+msgstr "Nachricht.Lokal"
+
+msgid "DateTime"
+msgstr "Datum-Zeit"
+
+msgid "Traffic"
+msgstr "Verkehr"
+
+msgid "Advertising"
+msgstr "Hinweis/Reklame"
+
+msgid "Url"
+msgstr "Url/Webseite"
+
+msgid "Exit"
+msgstr "Beenden"
+
+msgid "RTplus-File saved"
+msgstr "RTplus-Datei gespeichert"
+
+msgid "last seen Radiotext"
+msgstr "die letzten Radiotexte"
+
+msgid "Time"
+msgstr "Zeit"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Artist"
+msgstr "Interpret"
+
+msgid "Refresh Off"
+msgstr "Aktualis. Aus"
+
+msgid "Refresh On"
+msgstr "Aktualis. Ein"
+
+msgid "Back"
+msgstr "Zurück"

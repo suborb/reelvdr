@@ -1,0 +1,102 @@
+VDR Plugin 'setup' Revision History
+-----------------------------------
+2006-11-30
+-- addapted for own <vdr-dir>/tinyxml dir 
+2006-09-11
+-- using Execute from MainMenu (vdr/submenu.c)  
+2006-08-25
+-- New feature: From MainMenu it is able 
+   to  jump directly  into a Generic SetupMenu
+2006-06-13
+-- Moved System-Time entries form VDRs
+   cMenuSetupEPG to Timzeone Menu
+2006-05-18 Version 0.2.7
+-- Add Changed Config class to cSetupConfig  
+   implemented as singleton.  
+   Changed Execute script handling
+
+2006-05-12 Version 0.2.6
+-- Add SMB workgroup to cSetupMenuAbout
+-- Add cSetupMenuTimezone from Install-Wizard plugin
+-- Changed Childlock/PIN  handling
+
+2006-03-14 Version 0.2.5
+-- rewritten class plugins 
+   and class sysconfig 
+-- now using cMenuEditIpNumItem 
+   to editing  ip-addresses
+2006-03-02 Version 0.2.4
+-- Added Meminfo to AboutMenu
+   tiding up code.
+2006-04-01 Version 0.2.3
+-- Added AboutMenu 
+   this menu displays information only. 
+   setup.xml will not change automatically. 
+2005-11-24  
+-- Added LoadXmlPhrases class to 
+   get tr phrases over xml files
+2005-11-03  Version 0.2.1.reel-1
+-  Added plugin Menus in Setup plugin
+-  now if "name" attribute is given for plugin or system menus 
+   the translated system name will be used.
+-  removed the relative path for channel dir/list
+-  System and plugin menus can be used directly as single entry 
+   below <menus> tag.
+
+2005-10-06: Version 0.2.1
+-  fixed Bug: now changes are saved again in sysConfigFile
+
+2005-10-03: Version 0.2.0
+-  Added Setup Menü for plugin. Allowing to edit Menusuffix and Entry-Prefix)
+-  Changed minivdr-setup.xml format
+   all <menu>..</menu> tags are now within a <menus>..</menus> tag
+   New system attribute values for the Menu Tags:
+       VDRMenu     ( specifies the position of "Edit Vdr Menu")
+       ActPlugins  ( specifies the position of Activate Plugins-Menu)
+-  Added new type "Ip" for Entry holding IP-Addresses Digits and dots.
+-  Added new attribut "help1" Entry and Menu in minivdr-setup.xml
+-  Added new attribut "help2" Entry and Menu in minivdr-setup.xml
+-  The file sysconfig will now be created if it does not exist
+-  removed attribute "bootVDR", now using standard vdr Rebot mechanism
+-  Configurationfiles (minivdr-setup.xml and vdr-menu.xml) are now stored
+   "PluginConfigDirectory/setup"
+
+2005-06-19: Version 0.1.0
+- changed interaction with user, now the setup plugin behaves as usually known by VDR Users.
+  By pressing the OK Button the user may switch back to the previous menu.
+- fixed bug, if Directory <VDR-Configdir>/channels or <VDR-Configdir>/channels/*.conf are missing
+- do not remove plugins from "minivdr-setup.xml", when plugin is not in system
+- Allows to edit Plugin-Parameters
+- Support executing User Defined commands when walking through MiniVDR Setup Menu
+  specify new command attribute within menu tag
+- Know supports VDR Standard Setup Menu within Setup-Plugin Menu
+- Support paging plugin in Menu Acivate/Deactivbate Plugins
+
+2005-02-26: Version 0.0.5
+- Added new Attributes in minivdr-setup.xml to configure system dependent pathes
+- improved edit menu handling
+- fixed crash, when no network modules were found
+- now add also network modules in subdirectories
+- Show name of plugin in Pluginmenu
+
+2005-01-28: Version 0.0.4
+- Added Creation of new Menus
+- Added Editing of Menu-name
+- Added deltion of menu
+
+2005-01-23: Version 0.0.3
+- Added new entry types:
+    hex     - hexvalues in the form of AB:FF:12
+    numtext - String holding only digits
+- Added new feature ChildLock
+- Added SubMenu Patch for VDR
+- Added SubMenu Edit-Menu
+
+2005-01-05: Version 0.0.2
+- first released version
+- Enable/Disable Plugins
+- Added Menu / SubMenus
+
+2004-12-05: Version 0.0.1
+
+- Initial revision.

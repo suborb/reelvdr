@@ -1,0 +1,64 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Rellbox4all.com <info@reelbox4all.info>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-sleeptimer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-01-12 11:37+0100\n"
+"PO-Revision-Date: 2011-09-07 18:49+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Sleep-Timer for VDR"
+msgstr "Slaap-Timer voor VDR"
+
+msgid "SleepTimer"
+msgstr "Slaap-timer"
+
+msgid "Action"
+msgstr "Aktie"
+
+msgid "Shutdown"
+msgstr "Afsluiten"
+
+msgid "Mute"
+msgstr "Mute"
+
+msgid "Turning off in about one minute"
+msgstr "Wordt na ongeveer 1 minuut uitgeschakeld"
+
+msgid "Shutdown-Minutes"
+msgstr "Afsluiten-minuten"
+
+msgid "Shutdown-Time"
+msgstr "Afsluiten-tijd"
+
+#, c-format
+msgid "Disable Shutdown in %d minutes"
+msgstr "Afsluiten-afbreken in %d minuten"
+
+msgid "State:\tNot active"
+msgstr "State:\tNiet aktief"
+
+msgid "Abort Shutdown?"
+msgstr "Uitschakelen afbreken?"
+
+#, c-format
+msgid "Shutdown at %i:%.2i?"
+msgstr "Afsluiten op %i:%.2i?"
+
+#, c-format
+msgid "Shutdown in %d minutes?"
+msgstr "Afsluiten in %d minuten"
+
+#~ msgid "Abort Sleep-Timer?"
+#~ msgstr "Slaap-timer afbreken?"

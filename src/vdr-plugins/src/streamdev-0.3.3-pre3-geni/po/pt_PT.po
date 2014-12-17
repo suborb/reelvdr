@@ -1,0 +1,224 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paulo Lopes <pmml@netvita.pt>, 2001
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2008-10-01 16:06+0200\n"
+"PO-Revision-Date: 2008-09-30 14:40+0200\n"
+"Last-Translator: Paulo Lopes <pmml@netvita.pt>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr ""
+
+msgid "Streaming Client"
+msgstr ""
+
+msgid "VDR Streaming Server"
+msgstr ""
+
+msgid "Streaming Server"
+msgstr ""
+
+msgid "Streaming active"
+msgstr ""
+
+msgid "Pause Live TV"
+msgstr ""
+
+msgid "Common Settings"
+msgstr ""
+
+msgid "Maximum Number of Clients"
+msgstr ""
+
+msgid "Suspend behaviour"
+msgstr ""
+
+msgid "Client may suspend"
+msgstr ""
+
+msgid "VDR-to-VDR Server"
+msgstr ""
+
+msgid "Start VDR-to-VDR Server"
+msgstr ""
+
+msgid "VDR-to-VDR Server Port"
+msgstr ""
+
+msgid "Bind to IP"
+msgstr ""
+
+msgid "HTTP Server"
+msgstr ""
+
+msgid "Start HTTP Server"
+msgstr ""
+
+msgid "HTTP Server Port"
+msgstr ""
+
+msgid "HTTP Streamtype"
+msgstr ""
+
+msgid "Streaming Control"
+msgstr ""
+
+msgid "Remote Schedule"
+msgstr ""
+
+msgid "Remote Timers"
+msgstr ""
+
+msgid "Remote Recordings"
+msgstr ""
+
+msgid "Suspend Server"
+msgstr ""
+
+msgid "Synchronize EPG"
+msgstr ""
+
+msgid "Server is suspended"
+msgstr ""
+
+msgid "Couldn't suspend Server!"
+msgstr ""
+
+msgid "Edit remote timer"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "VPS"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Lifetime"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "First day"
+msgstr ""
+
+msgid "*** Invalid Channel ***"
+msgstr ""
+
+msgid "What's on now?"
+msgstr ""
+
+msgid "What's on next?"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Switch"
+msgstr ""
+
+msgid "Can't switch channel!"
+msgstr ""
+
+#, c-format
+msgid "Schedule - %s"
+msgstr ""
+
+msgid "Fetching recordings..."
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr ""
+
+msgid "Delete recording?"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "On/Off"
+msgstr ""
+
+msgid "Delete timer?"
+msgstr ""
+
+msgid "MTWTFSS"
+msgstr ""
+
+msgid "Start Client"
+msgstr ""
+
+msgid "Remote IP"
+msgstr ""
+
+msgid "Remote Port"
+msgstr ""
+
+msgid "Filter Streaming"
+msgstr ""
+
+msgid "Please restart VDR to activate changes"
+msgstr ""
+
+msgid "Recordings not in sync! Try again..."
+msgstr ""
+
+msgid "Couldn't delete recording! Try again..."
+msgstr ""
+
+msgid "Couldn't save timer! Try again..."
+msgstr ""
+
+msgid "Timers not in sync! Try again..."
+msgstr ""
+
+msgid "Server error! Try again..."
+msgstr ""
+
+msgid "Couldn't delete timer! Try again..."
+msgstr ""

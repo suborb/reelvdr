@@ -1,0 +1,48 @@
+#!/usr/bin/perl -w
+
+$HANDLER_NAME = $ARGV[0] || die "Usage: newhandler <name>\n";
+
+$T_i18n			= "tmpl/tmpl_i18n.include";
+$T_inc			= "tmpl/tmpl_Handler.include";
+$T_readme		= "tmpl/tmpl_README.macros.txt";
+$T_handler_c	= "tmpl/tmpl_handler.c";
+$T_handler_h	= "tmpl/tmpl_handler.h";
+$T_menu_c		= "tmpl/tmpl_menu.c";
+$T_menu_h		= "tmpl/tmpl_menu.h";
+$T_disc_c		= "tmpl/tmpl_disc.c";
+$T_disc_h		= "tmpl/tmpl_disc.h";
+$T_class		= "tmpl/tmpl_HandlerClassName";
+
+$H_name = ucfirst($HANDLER_NAME);
+$H_upper = uc($HANDLER_NAME);
+$H_lower = lc($HANDLER_NAME);
+
+$H_dir = "media_"."$H_lower";
+
+$H_i18n			= $H_dir . "/" . "i18n.include";
+$H_inc			= $H_dir . "/" . "Handler.include";
+$H_readme		= $H_dir . "/" . "README.macros.txt";
+$H_handler_c	= $H_dir . "/" . $H_lower . "_handler.c";
+$H_handler_h	= $H_dir . "/" . $H_lower . "_handler.h";
+$H_menu_c		= $H_dir . "/" . $H_lower . "_menu.c";
+$H_menu_h		= $H_dir . "/" . $H_lower . "_menu.h";
+$H_disc_c		= $H_dir . "/" . $H_lower . "_disc.c";
+$H_disc_h		= $H_dir . "/" . $H_lower . "_disc.h";
+$H_class		= $H_dir . "/" . "HandlerClassName";
+
+qx(mkdir -p $H_dir);
+
+qx(sed -e "s,#handler#,$H_lower,g" $T_inc > $H_inc);
+qx(sed -e "s,#HANDLERNAME#,$H_name,g" $T_class > $H_class);
+
+qx(sed -e "s,#dir#,$H_dir,g" $T_i18n > $H_i18n);
+qx(sed -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_readme > $H_readme);
+
+qx(sed -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_handler_c > $H_handler_c);
+qx(sed -e "s,#HANDLER#,$H_upper,g" -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_handler_h > $H_handler_h);
+
+qx(sed -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_menu_c > $H_menu_c);
+qx(sed -e "s,#HANDLER#,$H_upper,g" -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_menu_h > $H_menu_h);
+
+qx(sed -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_disc_c > $H_disc_c);
+qx(sed -e "s,#HANDLER#,$H_upper,g" -e "s,#HANDLERNAME#,$H_name,g" -e "s,#handler#,$H_lower,g" $T_disc_h > $H_disc_h);

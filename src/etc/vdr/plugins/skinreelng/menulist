@@ -1,0 +1,194 @@
+# CAREFUL IF YOU WANT TO EDIT. YOU MUST USE iso8859-15!
+#
+# Here you can define the type of menu
+# Enter with such syntax:
+# Title;Type[;flags;...]
+#
+# Title should be in English. In the runtime it'll be translated automatically.
+#
+# You may use Wildcard in Title, but use it only if no other way is possible!
+# Wildcard only works at end of the title, e.g.:
+# True: "Titlename*" => it will search after title, which begins with "Titlename"
+# Wrong: "Title*name" => it will search after title, which contains "Title*name"
+#
+# Following types are available:
+# menunormal, menucentered, setupnormal, setupcentered, help, bouquets, image, music, video
+#
+# Following flags are available:
+# ;imgnum      # The Numbers of Menuitem are shown as image
+# ;uppercase   # The text of Menuitem are upper cased
+
+#Menu
+Title$Menu*;menucentered;imgnum;uppercase # Wildcard because in mainmenu there are infos about Disksize in title
+Main Menu*;menucentered;imgnum;uppercase # Wildcard because in mainmenu there are infos about Disksize in title
+TV & Radio;menucentered;imgnum
+Music & Pictures;menucentered;imgnum
+Films & DVD;menucentered;imgnum
+Internet & Extras;menucentered;imgnum
+Additional Software;menucentered;imgnum
+
+###MediaCenter
+#MediaCenter;menucentered;imgnum
+My Pictures*;image
+My Images*;image
+My Music*;music
+My Videos*;video
+Media Manager;menucentered
+Choose action*;video
+Media Streaming;menucentered;imgnum
+Internet Service ;menucentered;imgnum
+Directory browser;music
+Music;music
+Mediaplayer*;music
+Music*;music;
+Found:*;music;
+iPod;music
+iPod -> *;music
+Musicplayer;normal
+#Filebrowser;menunormal;imgnum
+Filebrowser*;menunormal
+File informations;music
+Filebrowser Commands;menucentered;imgnum
+Playlist Commands;menucentered;imgnum
+Rename entry;menucentered
+Create directory;menucentered
+Internet Radio*;menunormal
+Playlist:*;menunormal
+Save playlist*;music
+Playlist actions;menucentered;imgnum
+Internet-Radio Function;menucentered;imgnum
+Internet Radio -*;menucentered
+
+Program Guide;menucentered;imgnum
+International EPG;menucentered;imgnum
+Timer Manager;menucentered;imgnum
+SleepTimer;menunormal
+
+Settings;menucentered;imgnum
+
+Extras;menucentered;imgnum
+Games;menucentered;imgnum
+Multifeed Options;multifeed
+
+#Setup
+Title$Setup*;setupcentered;imgnum;uppercase
+Installation;setupcentered;imgnum
+Basic Settings;setupcentered;imgnum
+Setup.OSD$Language;setupnormal
+OSD & Language;setupnormal
+OSD - Expertmenu;setupnormal
+Timezone*;setupnormal
+Front Panel;setupnormal
+EPG Services;setupnormal
+TVTV Service;setupnormal
+Antenna settings/DiSEqC;setupnormal
+Reception Settings;setupcentered;imgnum
+Installation Wizard*;setupnormal
+Setup*;setupnormal
+Network;setupnormal
+Network*;setupcentered;imgnum
+Global Settings;setupnormal
+Ethernet;setupnormal
+UMTS*;setupnormal
+Wireless LAN;setupnormal
+Wireless LAN: Functions;setupnormal
+WPA Settings;setupnormal
+WEP Settings;setupnormal
+Expert Settings;setupnormal
+Network Drives;setupnormal
+Network Drives*;setupnormal
+#Network Filesystem*;setupnormal
+Manual Network Connections;setupcentered;imgnum
+Windows Network Connection;setupnormal
+NFS Client;setupnormal
+Dynamic DNS;setupcentered;imgnum
+GnuDIP service;setupnormal
+DynDNS service;setupnormal
+Recording;setupnormal
+Video Recorder ;setupcentered;imgnum
+Permanent Timeshift;setupnormal
+Replay;setupnormal
+Common Interface;setupnormal
+Background Services;setupnormal
+Channelscan;setupnormal
+Channel Lists;setupcentered
+Channel lists functions;setupcentered;imgnum
+Software Update;setupnormal;imgnum
+NetCeiver;setupnormal
+NetCeiver / DiSEqC;setupnormal
+NetCeiver firmware update;setupnormal
+Remote Control / Automation;setupnormal
+System settings;setupnormal
+Energy Options;setupnormal
+System Information;setupnormal
+NetCeiver diagnostics;setupnormal
+
+#Plugins Menu
+Media Player;menucentered
+Title$Childlock;menucentered;imgnum
+
+#Plugin extrecmenu (Recording commands)
+Recording commands;menucentered;imgnum
+Recording info;video
+Move recording;video
+Rename;video
+Mark Commercials;menunormal
+Mark as New;menunormal
+Remove Archive Mark;menunormal
+Remove Crop Mark;menunormal
+Remove Archived Recording;menunormal
+Restore Archived Recording;menunormal
+Undelete Recordings - *;menunormal
+Convert to MPEG;menunormal
+
+#Plugin channelscan
+Channel lists*;setupnormal
+
+#Plugin epgsearch
+EPG Commands: *;menucentered;imgnum
+Search actions;menunormal;imgnum
+Search entries *;menunormal
+Search templates;menunormal
+Edit search;menunormal
+Edit timer;menunormal
+Edit blacklist;menunormal
+Edit template;menunormal
+Edit user-defined days of week;menunormal
+found recordings;menunormal
+Select directory;menunormal
+Timer conflicts -*;menunormal
+*Recordings;menunormal
+#Timers;menunormal
+
+#Plugin xepg
+External BBC-SKY EPG;menunormal
+
+#Plugin dvdswitch
+My DVDs*;menunormal
+Commands;menunormal;imgnum
+
+#Plugin extrecmenu
+Details;video
+Change title;video
+
+#Plugin ReelBlog
+Select Reelblog item;menunormal
+
+#Plugin ripit
+AudioCD copy;menunormal
+
+#Help
+Help*;help
+
+#Bouquets
+Bouquets;bouquets
+Edit Bouquets;bouquets
+Bouquet selection;bouquets
+
+#Standby Mode
+Power On/Off option;menucentered;imgnum
+
+#Noad
+Mark Commercials;menunormal
+
+

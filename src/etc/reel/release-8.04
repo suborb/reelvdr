@@ -1,0 +1,6 @@
+Distribution=Rubuntu testing release
+Release=10.08.x
+VersionString=100805
+Build=R@BUILD@
+BuildDate=@DATE@
+md5sum=

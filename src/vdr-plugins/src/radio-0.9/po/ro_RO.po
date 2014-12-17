@@ -1,0 +1,365 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Miha Setina <mihasetina@softhome.net>, 2000
+# Matjaz Thaler <matjaz.thaler@guest.arnes.si>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-radio\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 11:01+0100\n"
+"PO-Revision-Date: 2009-03-03 16:55+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "unknown program type"
+msgstr "tip necunoscut de program"
+
+msgid "News"
+msgstr "Stiri"
+
+msgid "Current affairs"
+msgstr "Afaceri Curente"
+
+msgid "Information"
+msgstr "Informatie (i)"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Education"
+msgstr "Educatie"
+
+msgid "Drama"
+msgstr "Drama"
+
+msgid "Culture"
+msgstr "Cultura"
+
+msgid "Science"
+msgstr "Stiinta"
+
+msgid "Varied"
+msgstr "Variat"
+
+msgid "Pop music"
+msgstr "Muzica Pop"
+
+msgid "Rock music"
+msgstr "Muzica  Rock "
+
+msgid "M.O.R. music"
+msgstr "Muzica  M.O.R. "
+
+msgid "Light classical"
+msgstr "Muzica Clasica Usoara"
+
+msgid "Serious classical"
+msgstr "Muzica Clasica Serioasa"
+
+msgid "Other music"
+msgstr "Muzica Diversa"
+
+msgid "Alarm"
+msgstr "Alarma"
+
+msgid "ext. Info"
+msgstr ""
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radiotext"
+
+msgid "  [waiting ...]"
+msgstr "  [astept ...]"
+
+msgid "Title :"
+msgstr ""
+
+msgid "Artist :"
+msgstr "Artist :"
+
+msgid "Records"
+msgstr "Inregistrare (i)"
+
+msgid "with <0>"
+msgstr "cu <0>"
+
+msgid "Rass-Image(s) saved from Archiv "
+msgstr ""
+
+msgid "Rass-Image(s) saved from Gallery"
+msgstr ""
+
+msgid "Rass-Image saved"
+msgstr ""
+
+msgid "Rass-Image failed"
+msgstr ""
+
+msgid "Playlist"
+msgstr "Playlist"
+
+msgid "Sports"
+msgstr "Sporturi"
+
+msgid "Lottery"
+msgstr "Loterie"
+
+msgid "Weather"
+msgstr "Vremea"
+
+msgid "Stockmarket"
+msgstr "Piata / Stocuri"
+
+msgid "Other"
+msgstr "Altele"
+
+msgid "extra Info  since"
+msgstr ""
+
+msgid "RTplus Memory  since"
+msgstr "Memorie RTplus inca de la"
+
+msgid "Programme"
+msgstr "Programe"
+
+msgid "Stat.Short"
+msgstr ""
+
+msgid "Station"
+msgstr "Post"
+
+msgid "Now"
+msgstr "Acum"
+
+msgid "...Part"
+msgstr "...Parte"
+
+msgid "Next"
+msgstr "Urmatorul"
+
+msgid "Host"
+msgstr "Gazda"
+
+msgid "Edit.Staff"
+msgstr "Edit.Staff"
+
+msgid "Homepage"
+msgstr "Pagina Acasa"
+
+msgid "Interactivity"
+msgstr "Interactiv (e)"
+
+msgid "Phone-Hotline"
+msgstr "Telefon  Relatii cu Publicul"
+
+msgid "Phone-Studio"
+msgstr "Telefon Studio"
+
+msgid "SMS-Studio"
+msgstr ""
+
+msgid "Email-Hotline"
+msgstr "Email Relatii cu Publicul"
+
+msgid "Email-Studio"
+msgstr "Emai Studio"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "NewsLocal"
+msgstr "Stiri Locale"
+
+msgid "DateTime"
+msgstr "Data si Timp"
+
+msgid "Traffic"
+msgstr "Trafic"
+
+msgid "Advertising"
+msgstr "Reclame"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Exit"
+msgstr "Esire"
+
+msgid "Info-File saved"
+msgstr ""
+
+msgid "RTplus-File saved"
+msgstr "Fisier RTplus salvat"
+
+msgid "last seen Radiotext"
+msgstr "ultimul RadioText vazut"
+
+msgid "Time"
+msgstr "Timp"
+
+msgid "Title"
+msgstr "Titlu"
+
+msgid "Artist"
+msgstr "Artist"
+
+msgid "Refresh Off"
+msgstr "Reimprospatare Oprita"
+
+msgid "Refresh On"
+msgstr "Reimprospatare Pornita"
+
+msgid "Back"
+msgstr "Inapoi"
+
+msgid "Radiochannels RDS-Text"
+msgstr ""
+
+msgid "RDS-Radiotext"
+msgstr ""
+
+msgid "Off"
+msgstr "Oprit"
+
+msgid "only Text"
+msgstr "numai TEXT"
+
+msgid "Text+TagInfo"
+msgstr "Text+TagInfo"
+
+msgid "only, if some"
+msgstr "numai daca exista"
+
+msgid "always"
+msgstr "intotdeauna"
+
+msgid "Top"
+msgstr "Sus"
+
+msgid "Bottom"
+msgstr "Jos"
+
+msgid "latest at Top"
+msgstr "ultimul sus"
+
+msgid "latest at Bottom"
+msgstr "ultimul jos"
+
+msgid "Black"
+msgstr "Negru"
+
+msgid "White"
+msgstr "Alb"
+
+msgid "Red"
+msgstr "Rosu"
+
+msgid "Green"
+msgstr "Verde"
+
+msgid "Yellow"
+msgstr "Galben"
+
+msgid "Magenta"
+msgstr "Magenta"
+
+msgid "Blue"
+msgstr "Albastru"
+
+msgid "Cyan"
+msgstr "Cyan"
+
+msgid "Transparent"
+msgstr "Transparent"
+
+msgid "about MainMenu"
+msgstr "despre Meniul Principal"
+
+msgid "Automatic"
+msgstr "Automatic"
+
+msgid "only Taginfo"
+msgstr "numai Taginfo"
+
+msgid "Rass only"
+msgstr ""
+
+msgid "Rass+Text mixed"
+msgstr ""
+
+msgid "Activate"
+msgstr "Activeaza"
+
+msgid "Use StillPicture-Function"
+msgstr ""
+
+msgid "Hide MainMenuEntry"
+msgstr ""
+
+msgid "RDSText Function"
+msgstr "Functii RDSText"
+
+msgid "RDSText OSD-Position"
+msgstr "Pozitie OSD RDSText"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "Titlu linie OSD RDSText"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "Randuri OSD RDSText (1-5)"
+
+msgid "RDSText OSD-Scrollmode"
+msgstr ""
+
+msgid "RDSText OSD-Taginfo"
+msgstr ""
+
+msgid "RDSText OSD-Skincolors used"
+msgstr ""
+
+msgid "RDSText OSD-Backgr.Color"
+msgstr ""
+
+msgid "RDSText OSD-Backgr.Transp."
+msgstr ""
+
+msgid "RDSText OSD-Foregr.Color"
+msgstr ""
+
+msgid "RDSText OSD-Timeout (0-1440 min)"
+msgstr ""
+
+msgid "RDSText OSD-Display"
+msgstr ""
+
+msgid "RDSText StatusMsg (lcdproc & co)"
+msgstr ""
+
+msgid "RDSText Rass-Function"
+msgstr ""
+
+msgid "External Info-Request by Internet"
+msgstr ""
+
+msgid "External Info-Request"
+msgstr ""
+
+#~ msgid "RaSS only"
+#~ msgstr "numai RaSS"
+
+#~ msgid "RaSS+Text mixed"
+#~ msgstr "RaSS+Text mixate"
+
+#~ msgid "Title  :"
+#~ msgstr "Titlu  :"

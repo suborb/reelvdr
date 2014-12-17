@@ -1,0 +1,185 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-06-11 17:09+0200\n"
+"PO-Revision-Date: 2009-06-21 00:58+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Jump: "
+msgstr ""
+
+msgid "Cannot play"
+msgstr "File non riproducibile!"
+
+msgid "file type"
+msgstr "Tipo File"
+
+msgid "Waiting for server ..."
+msgstr "In attesa del server..."
+
+msgid "Network read error"
+msgstr "Errore in lettura rete"
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr "Playlist non valida caricata dal server. Si passa alla successiva."
+
+msgid "Open Error"
+msgstr "Errore in apertura"
+
+msgid "Only MPEG-1 format supported"
+msgstr "Solo il formato MPEG-1 è supportato"
+
+msgid "VideoCodec not supported!"
+msgstr "Codec video non supportato!"
+
+msgid "AudioCodec not supported!"
+msgstr "Codec audio non supportato!"
+
+msgid "Could not play file"
+msgstr "File non riproducibile!"
+
+msgid "Please wait, Loading..."
+msgstr "Attendere, caricamento in corso..."
+
+msgid "Please check your network connection"
+msgstr "Verificare la connessione di rete"
+
+msgid "Opening "
+msgstr "Apertura in corso"
+
+msgid "Chapter"
+msgstr "Capitolo"
+
+msgid "Unable to get default CD device"
+msgstr "Impossibile rilevare dispositivo CD predefinito!"
+
+msgid "Unable open CD device"
+msgstr "Impossibile aprire dispositivo CD!"
+
+msgid "No tracks found in CD"
+msgstr "Nessuna traccia rilevata sul CD!"
+
+msgid "No audio tracks found"
+msgstr "Nessuna traccia audio trovata!"
+
+msgid "Track"
+msgstr "Traccia"
+
+msgid "Paused"
+msgstr "In pausa"
+
+msgid "Mute"
+msgstr "Mute"
+
+msgid "Replaymode: Normal"
+msgstr "Riproduzione: normale"
+
+msgid "Replaymode: Repeat"
+msgstr "Riproduzione: ripetuta"
+
+msgid "Replaymode: Shuffle"
+msgstr "Riproduzione: casuale"
+
+msgid "Shuffle"
+msgstr "Rip. casuale"
+
+msgid "Repeat"
+msgstr "Ripetere"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Overview"
+msgstr "Panoramica"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Options"
+msgstr "Opzioni"
+
+msgid "shoutcast"
+msgstr "Shoutcast"
+
+msgid "Add to favs"
+msgstr ""
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Loading..."
+msgstr "Caricamento in corso..."
+
+msgid "Title"
+msgstr "Titolo"
+
+msgid "Artist"
+msgstr "Artista"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Genere"
+
+msgid "Comment"
+msgstr "Commento"
+
+msgid "Year"
+msgstr "Anno"
+
+msgid "Length"
+msgstr "Durata"
+
+msgid "min"
+msgstr "Min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Samplerate"
+
+msgid "ID3$Channels"
+msgstr "Canali"
+
+msgid "Original"
+msgstr "Originale"
+
+msgid "MPEG-Layer"
+msgstr "Layer MPEG"
+
+msgid "Copyrighted"
+msgstr "Tutelato"
+
+msgid "Protected"
+msgstr "Protetto"
+
+msgid "File size"
+msgstr "Dimensione file"
+
+msgid "Last Modified"
+msgstr "Ultimo modificato"
+
+msgid "Mediaplayer - Id3 Info:"
+msgstr "Mediaplayer - Info id3: "
+
+msgid "No Id3 info found!"
+msgstr "Nessuna info id3 trovata!"

@@ -1,0 +1,97 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-06-22 18:03+0200\n"
+"PO-Revision-Date: 2011-09-07 18:54+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Web Browser"
+msgstr ""
+
+msgid "Smartbrowser"
+msgstr "Slimme browser"
+
+msgid "Webbrowser (Firefox)"
+msgstr ""
+
+msgid "KDE-Desktop"
+msgstr " KDE-bureaublad"
+
+msgid "Webbrowser (Chrome)"
+msgstr ""
+
+msgid "No browser available"
+msgstr "Geen browser beschikbaar"
+
+msgid "CRT"
+msgstr "CRT"
+
+msgid "LCD (RGB)"
+msgstr "LCD (RGB)"
+
+msgid "LCD (BGR)"
+msgstr "LCD (BGR)"
+
+msgid "Simple Browser"
+msgstr "Gewone browser"
+
+msgid "Webbrowser: Firefox"
+msgstr ""
+
+msgid "SNES-emu-only session"
+msgstr "Alleen SNES-emu-sessie"
+
+msgid "Webbrowser: Chrome"
+msgstr ""
+
+msgid "Center"
+msgstr "Midden"
+
+msgid "Full"
+msgstr "Volledig"
+
+msgid "Mode"
+msgstr "Modus"
+
+msgid "start URL"
+msgstr "Begin URL"
+
+msgid "font size in menu"
+msgstr "Letter-formaat in het menu"
+
+msgid "font size"
+msgstr "Letter-formaat"
+
+msgid "picture scaling (%)"
+msgstr "Beeldformaat (%)"
+
+msgid "transparency"
+msgstr "transparantie"
+
+msgid "margin horizontal"
+msgstr "horizontale marge "
+
+msgid "margin vertical"
+msgstr "verticale marge"
+
+msgid "optimize for"
+msgstr "optimaliseren voor"
+
+msgid "scaling mode"
+msgstr "schaal modus"
+
+#~ msgid "Webbrowser"
+#~ msgstr "Webbrowser"

@@ -1,0 +1,192 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2008-10-01 15:59+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr "Wtyczka Dpkg"
+
+msgid "Start Online Update"
+msgstr "Rozpocznij Aktualizacje Online"
+
+msgid "Updates available! Press OK to update now."
+msgstr "Aktualizacje oprogramowania dostępne! Nacisnij OK żeby aktualizować"
+
+msgid "Addon Plugin"
+msgstr "Wtyczka Dodatkowa"
+
+msgid "Optional Software "
+msgstr "Dodatkowe Oprogramowanie "
+
+msgid "Online Update"
+msgstr "Aktualizacja Online"
+
+msgid "Updating sources..."
+msgstr "Aktualizuje cele..."
+
+msgid "Updating packages..."
+msgstr "Aktualizuje paczki..."
+
+msgid "Rebooting, please wait..."
+msgstr "Restartuje...Prosze czekac!"
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Aktualizacje Oprogramowania przez łaczę online:"
+
+msgid "Upgrade"
+msgstr "Aktualizacja"
+
+msgid "Install"
+msgstr "Instalacja"
+
+msgid "Back"
+msgstr "Cofnąć"
+
+msgid "Skip"
+msgstr "Omiń"
+
+msgid "Packages"
+msgstr "Pakiety"
+
+msgid "Optional"
+msgstr "Dodatkowe"
+
+msgid "Sources"
+msgstr "Cele"
+
+#, fuzzy
+msgid "Please restart your ReelBox after the recording."
+msgstr "Prosze uruchomić ponownie swój Reelbox!"
+
+msgid "Reboot ?"
+msgstr "Restartować ?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr "Anuluje..."
+
+msgid "Press OK to abort update."
+msgstr "Nacisnij OK zeby anulowac aktualizacje."
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "Nie powiodły sie aktualizacje wszystkie! Szuka aktualizacji..."
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "Nie powiodło sie aktualizować wszystkie cele! Szuka nowych pakiet..."
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Cel jest aktualny. Szuka aktualizacji..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Cel jest aktualny. Szuka pakiet..."
+
+msgid "Failed to process all packages!"
+msgstr "Nie wszystkie pakiety powiodły się!"
+
+msgid "Failed"
+msgstr "Nie powiodło się"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Teraz wybierz aktualizacje do instalacji nowych pakiet."
+
+msgid "Following packages will be updated:"
+msgstr "Następujące pakiety bedą aktualizowane:"
+
+msgid "The software is up to date."
+msgstr "Oprogramowanie jest aktualne"
+
+msgid "No updates found."
+msgstr "Nie znaleziono aktualizacji"
+
+msgid "Downloading Packages..."
+msgstr "Ściąga Pakiety..."
+
+msgid "Processing Packages..."
+msgstr "Przetwarzanie Pakiet..."
+
+msgid "All changes successfull!"
+msgstr "Wszystkie zmiany udane!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Prosze uruchomić ponownie swój Reelbox!"
+
+msgid "Please go into deep standby,"
+msgstr "Prosze wyłaczyć aparat,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "zastaruj Reelboxa odnowa i spróbuj aktualizacje ponownie."
+
+msgid "Error"
+msgstr "Błąd"
+
+msgid "Load"
+msgstr "Ładuje"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Prosze sprawdzic swoje łacza internetowe."
+
+msgid "IGN"
+msgstr "IGN"
+
+msgid "Source list"
+msgstr "Lista celu"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "Undo"
+msgstr "Odwołać"
+
+msgid "Insert"
+msgstr "Dodaj"
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Unable to read from sources.list!"
+msgstr "Nie można czytac z sources.list!"
+
+msgid "Unable to write to surces.list!"
+msgstr "Nie można zapisac do surces.list!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Ustawienia Dpkg"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Dodatkowe Ustawienia Oprogramowania"
+
+#~ msgid "Recording is running !"
+#~ msgstr "Trwa Nagranie !"

@@ -1,0 +1,43 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Tobias Bratfisch <tobias@reel-multimedia.com>
+
+Project's homepage:          URL
+
+Latest version available at: svn://reelbox.org/unstable/vdr/vdr-plugins/src/vlcclient 
+
+See the file COPYING for license information.
+
+Description:
+
+A streaming client using VLC as server.
+VLC streams reencodes every video it can play on-the-fly to MPEG2-TS and streams
+it to this plugin - which replays it.
+
+What's needed:
+
+- A VLC >= version 0.8.5 running on another computer with option "--with-extraintf=http".
+
+How to use:
+
+You need a VLC (version >= 0.8.5 is needed) running on another computer.
+It must be startet with "--with-extraintf=http"". If you're running windows
+the easiest way to start with this option is to edit the shortcut to the application.
+Short description:
+  After installing VLC, right-click on "VLC media player" on your desktop, click on
+  "Properties", then select "Shortcut" and append ' --extraintf=http' to the "Target:"-line.
+  Then "Apply", "OK" - you're done.
+  Start it.
+If you're using linux simply start VLC with 'vlc --extraintf="http"'.
+If you're using MacOSX start your VLC by typing (assuming VLC is installed under /Applications) 
+  "/Applications/VLC.app/Contents/MacOS/VLC --extraintf=http".
+Finally set up the remote IP and directory at the setup-menu.
+Examples for the remote directory:
+  windows: "C:\"
+  linux: "/home/someuser/movies"
+  MacOSX: "/Users/someuser/Movies"
+That's it - now you should be able to watch every movie VLC can play using your VDR.
+
+Thanks to:
+- Martin Prochnow (for implementing patchfont* in extrectmenu - where I've taken it from)
+

@@ -1,0 +1,302 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreelng\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-12-04 16:52+0100\n"
+"PO-Revision-Date: 2009-03-06 15:23+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Sunday"
+msgstr "Neděle"
+
+msgid "Monday"
+msgstr "Pondělí"
+
+msgid "Tuesday"
+msgstr "Úterý"
+
+msgid "Wednesday"
+msgstr "Středa"
+
+msgid "Thursday"
+msgstr "Čtvrtek"
+
+msgid "Friday"
+msgstr "Pátek"
+
+msgid "Saturday"
+msgstr "Sobota"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Neplatný kanál ***"
+
+msgid "mins"
+msgstr "min."
+
+msgid "min"
+msgstr "min."
+
+msgid "en_US"
+msgstr "cs_CZ"
+
+msgid "TIMERS"
+msgstr "ČASOVAČE"
+
+msgid "Languages"
+msgstr "Jazyky"
+
+msgid "Size"
+msgstr "Velikost"
+
+msgid "Auxiliary information"
+msgstr "Dodatkové informace"
+
+msgid "Subtitles"
+msgstr "Titulky"
+
+msgid "Reel Classic"
+msgstr "Reel Classic"
+
+msgid "TrueType Font"
+msgstr "Písmo TrueType"
+
+msgid "No TTF support!"
+msgstr "Písma TrueType nejsou podporována!"
+
+msgid "Default OSD Font"
+msgstr "Výchozí písmo OSD"
+
+msgid "Default Fixed Size Font"
+msgstr "Výchozí neproporc. písmo"
+
+msgid "Default Small Font"
+msgstr "Výchozí malé písmo"
+
+msgid "General"
+msgstr "Obecné"
+
+msgid "Logos & Symbols"
+msgstr "Loga a symboly"
+
+msgid "Fonts"
+msgstr "Písma"
+
+msgid "Changes done"
+msgstr "Změny provedeny"
+
+msgid "elapsed"
+msgstr "uplynulý"
+
+msgid "remaining"
+msgstr "zbývající"
+
+msgid "percent"
+msgstr "procento"
+
+msgid "never"
+msgstr "nikdy"
+
+msgid "use size.vdr only"
+msgstr "použ. jen size.vdr"
+
+msgid "always"
+msgstr "vždy"
+
+msgid "Last line"
+msgstr "poslední řádek"
+
+msgid "Help buttons"
+msgstr "tlačítka nápovědy"
+
+msgid "Free last line"
+msgstr "volný poslední řádek"
+
+msgid "Try 8bpp single area"
+msgstr "Zkusit jedinou oblast 8bpp"
+
+msgid "Show info area in main menu"
+msgstr "Zobrazovat inf. oblast v hl. nabídce"
+
+msgid "Show auxiliary information"
+msgstr "Zobrazovat dodatkové informace"
+
+msgid "Show recording's size"
+msgstr "Zobrazovat velikost nahrávky"
+
+msgid "Show remaining/elapsed time"
+msgstr "Zobrazovat zbývající/uplynulý čas"
+
+msgid "Show VPS"
+msgstr "Zobrazovat VPS"
+
+msgid "Show progressbar"
+msgstr "Zobrazovat ukazatel průběhu"
+
+msgid "Show messages in menu on"
+msgstr "Místo zobrazení zpráv v nabídce"
+
+msgid "pixel algo"
+msgstr "pixelový alg."
+
+msgid "ratio algo"
+msgstr "poměrový alg."
+
+msgid "zoom image"
+msgstr "zvětšit obr."
+
+msgid "Flushing channel logo cache..."
+msgstr "Vyprazdňování mezipaměti log kanálů..."
+
+msgid "Show symbols"
+msgstr "Zobrazovat symboly"
+
+msgid "  Show symbols in menu"
+msgstr "  Zobrazovat symboly v nabídce"
+
+msgid "  Show symbols in replay"
+msgstr "  Zobrazovat symboly při přehrávání"
+
+msgid "  Show symbols in messages"
+msgstr "  Zobrazovat symboly ve zprávách"
+
+msgid "  Show symbols in audio"
+msgstr "  Zobrazovat symboly ve zvuku"
+
+msgid "Show symbols in lists"
+msgstr "Zobrazovat symboly v seznamech"
+
+msgid "Show marker in lists"
+msgstr "Zobrazovat značku v seznamech"
+
+msgid "Show status symbols"
+msgstr "Zobrazovat stavové symboly"
+
+msgid "  Show flags"
+msgstr "  Zobrazovat vlajky"
+
+msgid "Show event/recording images"
+msgstr "Zobrazit obrázky událostí/nahrávek"
+
+msgid "  Resize images"
+msgstr "  Změnit velikost obrázků"
+
+msgid "  Image width"
+msgstr "  Šířka obrázku"
+
+msgid "  Image height"
+msgstr "  Výška obrázku"
+
+msgid "  Image format"
+msgstr "  Formát obrázku"
+
+msgid "Show channel logos"
+msgstr "Zobrazovat loga kanálů"
+
+msgid "  Identify channel by"
+msgstr "  Identifikace kanálu"
+
+msgid "name"
+msgstr "název"
+
+msgid "data"
+msgstr "data"
+
+msgid "Channel logo cache size"
+msgstr "Velikost mezipaměti log kanálů"
+
+msgid "Button$Flush cache"
+msgstr "Vypr. mezip."
+
+msgid "Name"
+msgstr "Název"
+
+msgid "Width"
+msgstr "Šířka"
+
+msgid "No TrueType fonts installed!"
+msgstr "Nejsou nainstalována žádná písma TrueType!"
+
+msgid "Font Sizes"
+msgstr "Velikosti písem"
+
+msgid "Fixed Font"
+msgstr "Neproporcionální písmo"
+
+msgid "Button$Set"
+msgstr "Nastavit"
+
+msgid "OSD title"
+msgstr "Nadpis OSD"
+
+msgid "Messages"
+msgstr "Zprávy"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Help keys"
+msgstr "Tlačítka nápovědy"
+
+msgid "Channelinfo: title"
+msgstr "Informace o kanálu: název"
+
+msgid "Channelinfo: subtitle"
+msgstr "Informace o kanálu: podtitul"
+
+msgid "Channelinfo: language"
+msgstr "Informace o kanálu: jazyk"
+
+msgid "List items"
+msgstr "Položky seznamu"
+
+msgid "Info area: timers title"
+msgstr "Informační oblast: název časovače"
+
+msgid "Info area: timers text"
+msgstr "Informační oblast: text časovače"
+
+msgid "Info area: warning title"
+msgstr "Informační oblast: název upozornění"
+
+msgid "Info area: warning text"
+msgstr "Informační oblast: text upozornění"
+
+msgid "Details: title"
+msgstr "Podrobnosti: název"
+
+msgid "Details: subtitle"
+msgstr "Podrobnosti: podtitul"
+
+msgid "Details: date"
+msgstr "Podrobnosti: datum"
+
+msgid "Details: text"
+msgstr "Podrobnosti: text"
+
+msgid "Replay: times"
+msgstr "Přehrávání: časy"
+
+msgid "ReelNG skin"
+msgstr "Vzhled ReelNG"
+
+msgid "Channel:"
+msgstr "Kanál:"
+
+msgid "Search pattern:"
+msgstr "Schéma hledání:"
+
+msgid "Timer check"
+msgstr "Kontrola časovače"
+
+msgid "No timer check"
+msgstr "Bez kontroly časovače"
+

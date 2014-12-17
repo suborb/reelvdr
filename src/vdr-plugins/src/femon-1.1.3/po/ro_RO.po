@@ -1,0 +1,378 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-femon\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-17 15:10+0200\n"
+"PO-Revision-Date: 2009-02-27 16:19+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Femon not available while replaying"
+msgstr "Femon nu este disponibil in timpul reluarii"
+
+msgid "basic"
+msgstr "primar"
+
+msgid "transponder"
+msgstr "transponder"
+
+msgid "stream"
+msgstr "stream"
+
+msgid "AC-3"
+msgstr "AC-3"
+
+msgid "Classic"
+msgstr "Clasic"
+
+msgid "Elchi"
+msgstr "Elchi"
+
+msgid "DeepBlue"
+msgstr "DeepBlue"
+
+msgid "Moronimo"
+msgstr "Moronimo"
+
+msgid "Enigma"
+msgstr "Enigma"
+
+msgid "EgalsTry"
+msgstr "EgalsTry"
+
+msgid "Duotone"
+msgstr "Duotone"
+
+msgid "SilverGreen"
+msgstr "SilverGreen"
+
+msgid "Default display mode"
+msgstr "Modul initial de afisaj"
+
+msgid "Position"
+msgstr "Pozitie"
+
+msgid "bottom"
+msgstr "parte de jos"
+
+msgid "top"
+msgstr "partea de sus"
+
+msgid "Height"
+msgstr "Inaltime"
+
+msgid "Horizontal offset"
+msgstr "Offset orizontal"
+
+msgid "Use SVDRP service"
+msgstr "Foloseste serviciul SVDRP"
+
+msgid "SVDRP service port"
+msgstr "Portul pentru serviciul SVDRP"
+
+msgid "SVDRP service IP"
+msgstr "IP-ul pentru serviciul SVDRP"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Transponder Information"
+msgstr "Informatii transponder"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid"
+msgstr "Apid"
+
+msgid "Dpid"
+msgstr "Dpid"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "CA"
+msgstr "CA"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Nid"
+msgstr "Nid"
+
+msgid "Tid"
+msgstr "Tid"
+
+msgid "Rid"
+msgstr "Rid"
+
+msgid "Satellite Card"
+msgstr "Card Satelit"
+
+msgid "Frequency"
+msgstr "Frecventa"
+
+msgid "Source"
+msgstr "Sursa"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "Polarization"
+msgstr "Polarizare"
+
+msgid "Inversion"
+msgstr "Inversiune"
+
+msgid "CoderateH"
+msgstr "Rata Coduri H"
+
+msgid "Cable Card"
+msgstr "Card Cablu"
+
+msgid "Modulation"
+msgstr "Modulatie"
+
+msgid "Terrestrial Card"
+msgstr "Card Terestru"
+
+msgid "Transmission"
+msgstr "Transmisie"
+
+msgid "Bandwidth"
+msgstr "Latime de banda"
+
+msgid "Coderate"
+msgstr "Rata Coduri"
+
+msgid "Hierarchy"
+msgstr "Ierarhie"
+
+msgid "Guard"
+msgstr "Interval de garda"
+
+msgid "Stream Information"
+msgstr "Informatii Stream"
+
+msgid "Video Stream"
+msgstr "Video Stream"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Aspect Ratio"
+msgstr "Ratie Apect"
+
+msgid "Frame Rate"
+msgstr "Numar cadre"
+
+msgid "Hz"
+msgstr "Hz"
+
+msgid "Video Format"
+msgstr "Format Video"
+
+msgid "Resolution"
+msgstr "Rezolutie"
+
+msgid "Audio Stream"
+msgstr "Audio Stream"
+
+msgid "MPEG Layer"
+msgstr "MPEG"
+
+msgid "Sampling Frequency"
+msgstr "Frecventa Sample-uri"
+
+msgid "AC-3 Stream"
+msgstr "AC-3 Stream"
+
+msgid "kHz"
+msgstr "kHz"
+
+msgid "Frame Size"
+msgstr "Dimensiune cadru"
+
+msgid "Bit Stream Mode"
+msgstr "Modul Bit Stream"
+
+msgid "Audio Coding Mode"
+msgstr "Modul Codare Audio"
+
+msgid "Center Mix Level"
+msgstr "Nivel Mix Centru"
+
+msgid "Surround Mix Level"
+msgstr "Nivel Mix Surround"
+
+msgid "Dolby Surround Mode"
+msgstr "Modul Dolby Surround"
+
+msgid "Low Frequency Effects"
+msgstr "Bass"
+
+msgid "On"
+msgstr "Pornit"
+
+msgid "Off"
+msgstr "Oprit"
+
+msgid "Dialogue Normalization"
+msgstr "Normalizare Dialoguri"
+
+msgid "Free to Air"
+msgstr "La liber"
+
+msgid "Fixed"
+msgstr "Fixat"
+
+msgid "Analog"
+msgstr "Analog"
+
+msgid "SECA/Mediaguard"
+msgstr "SECA/Mediaguard"
+
+msgid "Viaccess"
+msgstr "Viaccess"
+
+msgid "Irdeto"
+msgstr "Irdeto"
+
+msgid "NDS"
+msgstr "NDS"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "CryptoWorks"
+msgstr "CryptoWorks"
+
+msgid "PowerVu"
+msgstr "PowerVu"
+
+msgid "Nagra"
+msgstr "Nagra"
+
+msgid "BetaCrypt"
+msgstr "BetaCrypt"
+
+msgid "SkyCrypt"
+msgstr "SkyCrypt"
+
+msgid "None"
+msgstr "Nimic"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "MHz"
+msgstr "MHz"
+
+msgid "reserved"
+msgstr "rezervat"
+
+msgid "unknown"
+msgstr "necunoscut"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Complete Main (CM)"
+msgstr "Complet Principal (CM)"
+
+msgid "Music and Effects (ME)"
+msgstr "Muzica si Efecte (ME)"
+
+msgid "Visually Impaired (VI)"
+msgstr "Vizual nesincronizat (VI)"
+
+msgid "Hearing Impaired (HI)"
+msgstr "Audio nesincronizat (HI)"
+
+msgid "Dialogue (D)"
+msgstr "Dialog (D)"
+
+msgid "Commentary (C)"
+msgstr "Comentariu (C)"
+
+msgid "Emergency (E)"
+msgstr "Urgenta (E)"
+
+msgid "Voice Over (VO)"
+msgstr "Voce in prim-plan (VO)"
+
+msgid "Karaoke"
+msgstr "Karaoke"
+
+msgid "Ch1"
+msgstr "Canal 1"
+
+msgid "Ch2"
+msgstr "Canal 1"
+
+msgid "C"
+msgstr "C"
+
+msgid "L"
+msgstr "L"
+
+msgid "R"
+msgstr "R"
+
+msgid "S"
+msgstr "S"
+
+msgid "SL"
+msgstr "SL"
+
+msgid "SR"
+msgstr "SR"
+
+msgid "dB"
+msgstr "dB"
+
+msgid "not indicated"
+msgstr "nu este indicat"
+
+msgid "no"
+msgstr "nu"
+
+msgid "yes"
+msgstr "da"
+
+msgid "free"
+msgstr "liber"
+
+msgid "Mbit/s"
+msgstr "Mbit/s"
+
+msgid "kbit/s"
+msgstr "kbit/s"
+
+msgid "DVB Signal Information Monitor (OSD)"
+msgstr "Monitor informatii semnal (OSD)"
+
+msgid "Signal Information"
+msgstr "Informatii semnal"
+

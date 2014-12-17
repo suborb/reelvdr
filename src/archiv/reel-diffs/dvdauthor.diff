@@ -1,0 +1,22 @@
+--- configure.ac.org	2007-02-24 19:46:17.000000000 +0100
++++ configure.ac	2007-04-17 11:55:20.000000000 +0200
+@@ -27,7 +27,7 @@
+ 	setmode \
+ )
+ 
+-AC_CHECK_PROGS(MAGICKCONFIG, [Magick-config GraphicsMagick-config])
++AC_CHECK_PROGS(MAGICKCONFIG, [youwontfindme])
+ 
+ usemagick=0
+ if test -n "$MAGICKCONFIG"; then
+--- configure.org	2007-04-12 15:22:04.000000000 +0200
++++ configure	2007-04-17 11:58:21.000000000 +0200
+@@ -4778,7 +4778,7 @@
+ done
+ 
+ 
+-for ac_prog in Magick-config GraphicsMagick-config
++for ac_prog in youwontfindme
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2

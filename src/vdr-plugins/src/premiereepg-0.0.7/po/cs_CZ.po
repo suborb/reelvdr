@@ -1,0 +1,64 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-premiereepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-01-11 18:06+0100\n"
+"PO-Revision-Date: 2009-03-04 14:00+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Parses extended Premiere EPG data"
+msgstr "Analyzuje rozšířená data Premiere EPG"
+
+msgid "Sky EPG"
+msgstr ""
+
+msgid "PremiereEPG"
+msgstr "PremiereEPG"
+
+msgid "off"
+msgstr "vypnuto"
+
+msgid "Tag option events"
+msgstr "Označit volitelné události"
+
+msgid "Show order information"
+msgstr "Zobrazit informace o objednání"
+
+msgid "Show rating information"
+msgstr "Zobrazit informace o přístupnosti"
+
+msgid "Fix EPG data"
+msgstr "Opravit data EPG"
+
+msgid "Ordernumber"
+msgstr "Objednací číslo"
+
+msgid "Price"
+msgstr "Cena"
+
+msgid "Ordering"
+msgstr "Objednání"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "WWW"
+msgstr "WWW"
+
+msgid "Rating"
+msgstr "Přístupnost"
+
+msgid "years"
+msgstr "let"
+
+#~ msgid "Premiere EPG"
+#~ msgstr "Premiere EPG"

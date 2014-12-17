@@ -1,0 +1,24 @@
+#!/bin/bash
+# harmony.fm-Playlist
+# $1 = outfile
+
+### Variabel
+Name="harmony.fm [www.harmonyfm.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.harmonyfm.de/index.php"
+
+# Artist/Title
+all=`grep -A6 'id="channelOnAir"' /tmp/playlist`
+artist=${all//*$'<p>'/}; artist=${artist/$' mit '*/}
+title=${all//*$' mit '/}; title=${title/$'<'\/'p>'*/}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

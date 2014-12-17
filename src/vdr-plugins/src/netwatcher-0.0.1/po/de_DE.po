@@ -1,0 +1,45 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netwatcher\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-01 20:16+0200\n"
+"PO-Revision-Date: 2009-04-20 15:53+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Warning"
+msgstr "Warnung"
+
+msgid "Warning!"
+msgstr "Warnung!"
+
+msgid "No available DVB tuners for Live TV streaming found."
+msgstr "Es wurden keine freien DVB-Tuner für den Live-TV-Betrieb gefunden."
+
+msgid "In order to watch Live TV on your NetClient, please check your MultiRoom configuration.The appropriate setup screen is to be found on your ReelBox Avantgarde  via \"Setup / Installation / MultiRoom-Setup\"."
+msgstr "Um TV sehen zu können, überprüfen Sie bitte die MultiRoom-Einstellungen. Die Einstellungen finden Sie im Setup-Menü der Reelbox Avantgarde unter \"Setup / Installation / MultiRoom-Setup\""
+
+msgid "System Cable is not connected. You will not be able to watch Live TV."
+msgstr "Das Systemkabel ist nicht eingesteckt. Sie können kein TV sehen."
+
+msgid "NetClient is NOT connected to your local network. Without an active network connection, you will not be able to watch Live TV or stream other media files through the network."
+msgstr "Der NetClient ist aktuell nicht mit Ihrem Netzwerk verbunden. Ohne aktive Netzwerkverbindung können Sie kein Live TV sehen und auch keine anderen Mediendateien über das Netzwerk empfangen."
+
+msgid "Please check if the network cable is connected properly to the NetClient and to your switch / router or NetCeiver."
+msgstr "Bitte überprüfen Sie, ob das Netzwerkkabel am NetClient sowie am Router / Switch bzw. am NetCeiver richtig eingesteckt ist."
+
+msgid "Press \"OK\" to close this message window."
+msgstr "Drücken Sie \"OK\" um diesen Hinweis zu schließen."
+
+msgid "MultiRoom is temporary inactive!"
+msgstr "MultiRoom ist temporär inaktiv!"
+
+msgid "MultiRoom is active!"
+msgstr "MultiRoom ist aktiv!"

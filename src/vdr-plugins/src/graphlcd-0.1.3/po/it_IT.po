@@ -1,0 +1,138 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2009-06-20 15:39+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "GenFebMarAprMagGiuLugAgoSetOttNovDic"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Musica"
+
+msgid "File"
+msgstr "File"
+
+msgid "Image"
+msgstr "Immagine"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Replay"
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Sì"
+
+msgid "not in menu"
+msgstr "Non nel menu"
+
+msgid "compressed"
+msgstr "Compresso"
+
+msgid "auto"
+msgstr "Auto"
+
+msgid "medium"
+msgstr "Medio"
+
+msgid "large"
+msgstr "Grande"
+
+msgid "never"
+msgstr "Mai"
+
+msgid "once"
+msgstr "Una volta"
+
+msgid "always"
+msgstr "Sempre"
+
+msgid "Show Date/Time"
+msgstr "Mostrare data/ora"
+
+msgid "Show Channel"
+msgstr "Mostrare canale"
+
+msgid "Show Logo"
+msgstr "Mostrare logo"
+
+msgid "Show Symbols"
+msgstr "Mostrare simboli"
+
+msgid "Show ET Symbols"
+msgstr "Mostrare simboli ET"
+
+msgid "Show Program"
+msgstr "Mostrare programma"
+
+msgid "Show Timebar"
+msgstr "Mostrare timebar"
+
+msgid "Show Menu"
+msgstr "Mostrare menu"
+
+msgid "Show Messages"
+msgstr "Mostrare messaggi"
+
+msgid "Show Volume"
+msgstr "Mostrare volume"
+
+msgid "Show free Tuner"
+msgstr "Mostrare tuner liberi"
+
+msgid "Identify replay type"
+msgstr "Determinare tipo replay"
+
+msgid "Modify replay string"
+msgstr "Modificare stringa replay"
+
+msgid "Scroll text lines"
+msgstr "Scorrimento testo"
+
+msgid "Scroll speed"
+msgstr "Velocità scorrimento"
+
+msgid "Scroll time interval"
+msgstr "Intervallo scorrimento"
+
+msgid "Brightness on user activity"
+msgstr "Luminosità su utente attivo"
+
+msgid "Brightness on user inactivity"
+msgstr "Luminosità su utente non attivo"
+
+msgid "Brightness delay [s]"
+msgstr "Ritardo luminosità [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Mostrare orologio su utente non attivo"
+
+msgid "Unknown title"
+msgstr "Titolo sconosciuto"
+

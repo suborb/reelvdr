@@ -1,0 +1,373 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-femon\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-17 15:10+0200\n"
+"PO-Revision-Date: 2008-09-26 12:32+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Femon not available while replaying"
+msgstr "Signalinfo nicht verfügbar bei Wiedergabe"
+
+msgid "basic"
+msgstr "Standard"
+
+msgid "transponder"
+msgstr "Transponder"
+
+msgid "stream"
+msgstr "Stream"
+
+msgid "AC-3"
+msgstr "AC-3"
+
+msgid "Classic"
+msgstr "Klassischer"
+
+msgid "Elchi"
+msgstr "Elchi"
+
+msgid "DeepBlue"
+msgstr "DeepBlue"
+
+msgid "Moronimo"
+msgstr "Moronimo"
+
+msgid "Enigma"
+msgstr "Enigma"
+
+msgid "EgalsTry"
+msgstr "EgalsTry"
+
+msgid "Duotone"
+msgstr "Duotone"
+
+msgid "SilverGreen"
+msgstr "SilverGreen"
+
+msgid "Default display mode"
+msgstr "Standard Anzeigemodus"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "bottom"
+msgstr "unten"
+
+msgid "top"
+msgstr "oben"
+
+msgid "Height"
+msgstr "Höhe"
+
+msgid "Horizontal offset"
+msgstr "Horizontaler Offset"
+
+msgid "Use SVDRP service"
+msgstr "SVDRP Dienst verwenden"
+
+msgid "SVDRP service port"
+msgstr "SVDRP Port"
+
+msgid "SVDRP service IP"
+msgstr "SVDRP IP"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Transponder Information"
+msgstr "Transponderinformation"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid"
+msgstr "Audio-PID"
+
+msgid "Dpid"
+msgstr "Dpid"
+
+msgid "Tpid"
+msgstr "Tpid"
+
+msgid "CA"
+msgstr "CA"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Nid"
+msgstr "Nid"
+
+msgid "Tid"
+msgstr "Tid"
+
+msgid "Rid"
+msgstr "Rid"
+
+msgid "Satellite Card"
+msgstr "Satellitenkarte"
+
+msgid "Frequency"
+msgstr "Frequenz"
+
+msgid "Source"
+msgstr "Quelle"
+
+msgid "Srate"
+msgstr "Symbolrate"
+
+msgid "Polarization"
+msgstr "Polarisation"
+
+msgid "Inversion"
+msgstr "Inversion"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "Cable Card"
+msgstr "Kabelkarte"
+
+msgid "Modulation"
+msgstr "Modulation"
+
+msgid "Terrestrial Card"
+msgstr "Terrestrische Karte"
+
+msgid "Transmission"
+msgstr "Übertragung"
+
+msgid "Bandwidth"
+msgstr "Bandbreite"
+
+msgid "Coderate"
+msgstr "Kodierungsrate"
+
+msgid "Hierarchy"
+msgstr "Hierarchie"
+
+msgid "Guard"
+msgstr "Schutz"
+
+msgid "Stream Information"
+msgstr "Streaminformation"
+
+msgid "Video Stream"
+msgstr "Video Stream"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Aspect Ratio"
+msgstr "Seitenverhältnis"
+
+msgid "Frame Rate"
+msgstr "Bildrate"
+
+msgid "Hz"
+msgstr "Hz"
+
+msgid "Video Format"
+msgstr "Bildformat"
+
+msgid "Resolution"
+msgstr "Auflösung"
+
+msgid "Audio Stream"
+msgstr "Audio Stream"
+
+msgid "MPEG Layer"
+msgstr "MPEG Layer"
+
+msgid "Sampling Frequency"
+msgstr "Abtastrate"
+
+msgid "AC-3 Stream"
+msgstr "AC-3 Stream"
+
+msgid "kHz"
+msgstr "kHz"
+
+msgid "Frame Size"
+msgstr "Frame Größe"
+
+msgid "Bit Stream Mode"
+msgstr "Bitstream Modus"
+
+msgid "Audio Coding Mode"
+msgstr "Audiokodierung"
+
+msgid "Center Mix Level"
+msgstr "Center Mix Pegel"
+
+msgid "Surround Mix Level"
+msgstr "Surround Mix Pegel"
+
+msgid "Dolby Surround Mode"
+msgstr "Dolby Surround Modus"
+
+msgid "Low Frequency Effects"
+msgstr "Tieftöner Effekte"
+
+msgid "On"
+msgstr "Ein"
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "Dialogue Normalization"
+msgstr "Dialog Normalisierung"
+
+msgid "Free to Air"
+msgstr "Frei empfangbar"
+
+msgid "Fixed"
+msgstr "Fest"
+
+msgid "Analog"
+msgstr "Analog"
+
+msgid "SECA/Mediaguard"
+msgstr "SECA/Mediaguard"
+
+msgid "Viaccess"
+msgstr "Viaccess"
+
+msgid "Irdeto"
+msgstr "Irdeto"
+
+msgid "NDS"
+msgstr "NDS"
+
+msgid "Conax"
+msgstr "Conax"
+
+msgid "CryptoWorks"
+msgstr "CryptoWorks"
+
+msgid "PowerVu"
+msgstr "PowerVu"
+
+msgid "Nagra"
+msgstr "Nagra"
+
+msgid "BetaCrypt"
+msgstr "BetaCrypt"
+
+msgid "SkyCrypt"
+msgstr "SkyCrypt"
+
+msgid "None"
+msgstr "Keine"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "MHz"
+msgstr "MHz"
+
+msgid "reserved"
+msgstr "belegt"
+
+msgid "unknown"
+msgstr "unbekannt"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Complete Main (CM)"
+msgstr "Complete Main (CM)"
+
+msgid "Music and Effects (ME)"
+msgstr "Musik und Effekte (ME)"
+
+msgid "Visually Impaired (VI)"
+msgstr "Sehbehindert (VI)"
+
+msgid "Hearing Impaired (HI)"
+msgstr "Hörbehindert (HI)"
+
+msgid "Dialogue (D)"
+msgstr "Dialog (D)"
+
+msgid "Commentary (C)"
+msgstr "Kommentar (C)"
+
+msgid "Emergency (E)"
+msgstr "Notfall (E)"
+
+msgid "Voice Over (VO)"
+msgstr "Überlagerte Stimme (VO)"
+
+msgid "Karaoke"
+msgstr "Karaoke"
+
+msgid "Ch1"
+msgstr "Kan1"
+
+msgid "Ch2"
+msgstr "Kan2"
+
+msgid "C"
+msgstr "C"
+
+msgid "L"
+msgstr "L"
+
+msgid "R"
+msgstr "R"
+
+msgid "S"
+msgstr "S"
+
+msgid "SL"
+msgstr "SL"
+
+msgid "SR"
+msgstr "SR"
+
+msgid "dB"
+msgstr "dB"
+
+msgid "not indicated"
+msgstr "nicht angegeben"
+
+msgid "no"
+msgstr "nein"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "free"
+msgstr "frei"
+
+msgid "Mbit/s"
+msgstr "Mbit/s"
+
+msgid "kbit/s"
+msgstr "kbit/s"
+
+msgid "DVB Signal Information Monitor (OSD)"
+msgstr "DVB Signal Informationsanzeige (OSD)"
+
+msgid "Signal Information"
+msgstr "Signalinformationen"

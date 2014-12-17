@@ -1,0 +1,2 @@
+harddisks=/dev/sda
+hdparm_opts=-M128

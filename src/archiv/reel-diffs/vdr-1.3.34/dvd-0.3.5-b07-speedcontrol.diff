@@ -1,0 +1,135 @@
+diff -Nur dvd-0.3.5-b07/control-dvd.c dvd-0.3.5-b07s/control-dvd.c
+--- dvd-0.3.5-b07/control-dvd.c	2005-01-11 22:28:23.000000000 +0100
++++ dvd-0.3.5-b07s/control-dvd.c	2005-01-16 22:41:20.000000000 +0100
+@@ -20,6 +20,7 @@
+ #include "tools-dvd.h"
+ #include "player-dvd.h"
+ #include "control-dvd.h"
++#include "dvddev.h"
+ 
+ #define MENUTIMEOUT     120 // seconds
+ #define MAXWAIT4EPGINFO  10 // seconds
+@@ -54,6 +55,7 @@
+     inputHide=true;
+     forceDvdNavigation=false;
+ 
++    cDVD::SpeedControl(2);
+     player->setController(this);
+ 
+     cStatus::MsgReplaying(this, "DVD");
+@@ -68,6 +70,7 @@
+     dvd_active = false;
+     delete player;
+     player = NULL;
++    cDVD::SpeedControl(0);
+ }
+ 
+ bool cDvdPlayerControl::Active(void)
+diff -Nur dvd-0.3.5-b07/dvd.c dvd-0.3.5-b07s/dvd.c
+--- dvd-0.3.5-b07/dvd.c	2004-06-30 08:18:24.000000000 +0200
++++ dvd-0.3.5-b07s/dvd.c	2005-01-16 22:29:02.000000000 +0100
+@@ -91,7 +91,7 @@
+       cControl::Launch(new cDvdPlayerControl);
+     else {
+     }
+-    
++
+     return NULL;
+ }
+ 
+diff -Nur dvd-0.3.5-b07/dvddev.c dvd-0.3.5-b07s/dvddev.c
+--- dvd-0.3.5-b07/dvddev.c	2004-06-30 08:18:24.000000000 +0200
++++ dvd-0.3.5-b07s/dvddev.c	2005-01-16 22:25:40.000000000 +0100
+@@ -21,6 +21,7 @@
+ #endif
+ 
+ #include "dvddev.h"
++#include <vdr/tools.h>
+ 
+ #ifndef __QNXNTO__
+ #include <linux/cdrom.h>
+@@ -70,6 +71,73 @@
+   return result;
+ }
+ 
++bool cDVD::SpeedControl(int speed)
++{
++  int fd;
++  unsigned long rw_size;
++  unsigned char buffer[28];
++  struct cdrom_generic_command cgc;
++  struct request_sense sense;
++
++  fd = open(cDVD::DeviceName(), O_RDONLY | O_NONBLOCK);
++  if (fd < 0) {
++    esyslog("SpeedControl() Can't open device %s", cDVD::DeviceName());
++    return false;
++  }
++
++  memset(&cgc, 0, sizeof(cgc));
++  memset(&sense, 0, sizeof(sense));
++  memset(&buffer, 0, sizeof(buffer));
++
++  /* SET STREAMING command */
++  cgc.cmd[0] = 0xb6;
++  /* 28 byte parameter list length */
++  cgc.cmd[10] = 28;
++
++  cgc.sense = &sense;
++  cgc.buffer = buffer;
++  cgc.buflen = sizeof(buffer);
++  cgc.data_direction = CGC_DATA_WRITE;
++  cgc.quiet = 1;
++
++  if (speed == 0) buffer[0] = 4;// set Restore Drive Defaults
++
++  buffer[8] = 0xff;
++  buffer[9] = 0xff;
++  buffer[10] = 0xff;
++  buffer[11] = 0xff;
++  rw_size = 177 * speed;
++
++  /* read size */
++  buffer[12] = (rw_size >> 24) & 0xff;
++  buffer[13] = (rw_size >> 16) & 0xff;
++  buffer[14] = (rw_size >>  8) & 0xff;
++  buffer[15] = rw_size & 0xff;
++
++  /* read time 1 sec. */
++  buffer[18] = 0x03;
++  buffer[19] = 0xE8;
++
++  /* write size */
++  buffer[20] = (rw_size >> 24) & 0xff;
++  buffer[21] = (rw_size >> 16) & 0xff;
++  buffer[22] = (rw_size >>  8) & 0xff;
++  buffer[23] = rw_size & 0xff;
++
++  /* write time 1 sec. */
++  buffer[26] = 0x03;
++  buffer[27] = 0xE8;
++
++  if (ioctl(fd, CDROM_SEND_PACKET, &cgc) != 0)
++    if (ioctl(fd, CDROM_SELECT_SPEED, speed) != 0) {
++      esyslog("SpeedControl() Command failed");
++      return false;
++    }
++
++  close(fd);
++  return true;
++}
++
+ void cDVD::SetDeviceName(const char *DeviceName)
+ {
+   deviceName = strdup(DeviceName);
+diff -Nur dvd-0.3.5-b07/dvddev.h dvd-0.3.5-b07s/dvddev.h
+--- dvd-0.3.5-b07/dvddev.h	2004-06-11 17:27:05.000000000 +0200
++++ dvd-0.3.5-b07s/dvddev.h	2005-01-16 22:21:21.000000000 +0100
+@@ -20,6 +20,7 @@
+ public:
+   cDVD(void);
+   ~cDVD();
++  static bool SpeedControl(int speed);
+   static void SetDeviceName(const char *DeviceName);
+   static const char *DeviceName(void);
+   static bool DriveExists(void);

@@ -1,0 +1,175 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare Tododream Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-pin\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-11-27 15:04+0100\n"
+"PO-Revision-Date: 2008-09-26 13:28+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Recordings"
+msgstr "Grabaciones"
+
+msgid "1 Activate childlock"
+msgstr "1 Activar control paterno"
+
+msgid "2 Add current channel to protection list"
+msgstr "2 Añadir canal actual a lista protegida"
+
+msgid "3 Add current broadcast to protection list"
+msgstr "3 Añadir proveedor actual a lista protegida"
+
+msgid "4 Edit channel locks"
+msgstr "4 Editar canales bloqueados"
+
+msgid "5 Edit broadcast locks"
+msgstr "5 Editar proveedores bloqueados"
+
+msgid "6 Unlock setup"
+msgstr "6 Desbloquear config."
+
+msgid "6 Lock setup"
+msgstr "6 Bloquear config."
+
+msgid "Note:"
+msgstr "Nota"
+
+msgid "Please activate Childlock by pressing (1)."
+msgstr "Activa protección paterla presionando (1)."
+
+msgid "Activated pin protection"
+msgstr "Protección PIN activada"
+
+msgid "Please setup a pin code first!"
+msgstr "¡ Ponga un códogo PIN primero!"
+
+msgid "Protected channels"
+msgstr "Canales protegidos"
+
+msgid "Protected broadcasts"
+msgstr "Proveedores protegidos"
+
+msgid "Plugin protections"
+msgstr "Protecciones Plugin"
+
+msgid "locked"
+msgstr "Bloq."
+
+msgid "unlocked"
+msgstr "Desbloq."
+
+msgid "already in list"
+msgstr "Ya en lista"
+
+msgid "added to protection list"
+msgstr "añadido a lista proteg."
+
+msgid "No locked channels present."
+msgstr ""
+
+msgid "Use the green button to lock channels."
+msgstr ""
+
+#, fuzzy
+msgid "No locked broadcasts present."
+msgstr "Proveedores protegidos"
+
+msgid "Use the green button to lock broadcasts."
+msgstr ""
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Lock / Unlock"
+msgstr "Bloq./Desbloq."
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "On/Off"
+msgstr ""
+
+msgid "- new -"
+msgstr "- nuevo-"
+
+msgid "Remove entry?"
+msgstr "¿Borrar entrada?"
+
+msgid "Lock active"
+msgstr "Bloq. activo"
+
+msgid "Start"
+msgstr "Empezar"
+
+msgid "Stop"
+msgstr "Parar"
+
+msgid "Keyword"
+msgstr "Clave"
+
+msgid "Search mode"
+msgstr "Modo búsq."
+
+msgid "Setup your pin code: "
+msgstr "Ponga su cod. PIN:"
+
+msgid "Pin Code: "
+msgstr "Codigo PIN: "
+
+msgid "Pin code successfully setup"
+msgstr "Cód. PIN correcto"
+
+msgid "Code accepted"
+msgstr "Cód. aceptado"
+
+msgid "Invalid Code !"
+msgstr "¡Cód. inválido!"
+
+msgid "Title$Childlock"
+msgstr "Protecc. paterna"
+
+msgid "Please enter pin code first"
+msgstr "Entre el cód. PIN primero"
+
+msgid "channel is protected"
+msgstr "Canal protegico"
+
+msgid "broadcast is protected"
+msgstr "Proveedor protegido"
+
+msgid "is protected"
+msgstr "está protegido"
+
+msgid "Pin code"
+msgstr "Cód. PIN"
+
+msgid "Skip protected channel silent"
+msgstr ""
+
+msgid "Open menu after pin request"
+msgstr "Abrir menú después de poner PIN"
+
+msgid "Pin inactivity time [min]"
+msgstr "Inactividad PIN (min)"
+
+msgid "Autoprotection of recordings"
+msgstr "Autoprotección grabaciones"
+
+msgid "Ignoring invalid pin"
+msgstr "Ignorando PIN inválido"
+
+msgid "Childlock plugin"
+msgstr "Plugin Protecció paterna"
+
+msgid "Parental Control"
+msgstr "Protección Paterna"
+
+#~ msgid "Add"
+#~ msgstr "Añad."

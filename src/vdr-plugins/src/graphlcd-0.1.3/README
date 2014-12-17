@@ -1,0 +1,231 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by Carsten Siebholz (c.siebholz AT t-online.de>
+From 0.0.8 on maintained by Andreas 'powARman' Regel (andreas.regel AT powarman.de)
+
+Project's homepage: http://graphlcd.berlios.de/
+      before 0.0.8: http://c.siebholz.bei.t-online.de/
+
+See the file COPYING for license information.
+
+
+Description:
+------------
+graphlcd is a plugin for the Video Disc Recorder and shows information
+about the current state of VDR on displays supported by the GraphLCD
+driver library.
+
+
+Installation and Configuration:
+-------------------------------
+1. Install and configure the GraphLCD base package.
+
+2. Unpack the tarball to .../VDR/PLUGINS/src directory
+
+3. Compile the plugin
+
+  make plugins (from VDR's source directory)
+ or
+  make all (from the plugin's source directory)
+
+4. Copy the 'graphlcd' subdirecory to <VDRconfigDir>/plugins/
+   Afterwards, the structure should look like this:
+
+  VDR config directory (eg: /video)
+   |
+   +- plugins
+   |   |
+   |   +- graphlcd   (contains logonames.alias)
+   |   |   |
+   |   |   +-- fonts (contains *.fnt files)
+   |   |   |
+   .   .   +-- logos (contains *.glcd files)
+   .   .
+
+5. If you are using VDR 1.3 or higher, you will have to recreate the
+   link to logonames.alias:
+
+  ln -sf logonames.alias.13 logonames.alias
+
+6. Start VDR with the plugin.
+   You have to specify your the path and name of the driver library's
+   configuration file and the name of your display in the config file
+   on the command line.
+   Possible options are:
+     -c CONFIG,   --config=CONFIG    file name and path of the configuration file
+     -d DISPLAY,  --display=DISPLAY  name of the display
+
+   -c: Sets the file path and name of the driver library's config file.
+       If this parameter is not given the default '/etc/graphlcd.conf'
+       will be used.
+   -d: Sets the name of the section in the config file that specifies
+       the display used for the plugin's output. If this parameter is
+       not given, the first section will be used.
+
+   Examples:
+     vdr -P 'graphlcd -c /video/graphlcd.conf -d ks0108'
+     vdr -P 'graphlcd -c /etc/graphlcd.conf'
+
+
+Channel Logos
+-------------
+To be able to see logos for the channels, you can create a *.glcd file
+in the 'logos' directory. This file can be created with the convpic
+tool from the GraphLCD base package. The size of the image must be
+64x48 (for the *_l.glcd files) or 40x29 (for the *_m.glcd files).
+Normally, the plugin looks for a file with the name
+<ChannelID>_<Size>.glcd, where <ChannelID> is the ID of the channel
+like used by VDR itself and <Size> is a character depending of the
+size of the logo. (l for large size logos and m for medium size logos).
+To keep an overview over the logos it instead would be better to name
+them <ChannelName>_<Size>.glcd and use the file logonames.alias for the
+relation between channel ID and channel name.
+
+example: ZDF_l.glcd
+
+
+Setup Parameters:
+-----------------
+Plugin active:
+  This is something like a 'main switch' for the plugin. If it's set to NO,
+  the output to the LCD will be suspended.
+  (Possible values: 'no', 'yes')
+
+Show Date/Time:
+  Enables/disables the date/time bar.
+  (Possible values: 'no', 'yes', 'not in menu')
+
+Show Channel:
+  Enables/disables the channel bar.
+  (Possible values: 'no', 'yes')
+
+Show Logo:
+  Enables/disables the channel logo.
+  (Possible values: 'no', 'auto', 'medium', 'large')
+
+Show Symbols:
+  Enables/disables the symbols for teletext, dolby digital, 2-channel audio,
+  encryption and recordings.
+  (Possible values: 'no', 'yes', 'compressed')
+
+Show ET Symbols:
+  Enables/disables external triggered symbols.
+  graphlcd is able to show some symbols, that can be switched on and off by
+  external progams (like vbox). Therefore it reads a file
+  (/tmp/graphlcd_symbols). The format of this file is very simple: It might
+  have one or more lines. Each line triggers one symbol. The format of each
+  line is [ASCII-Char][0|1].
+  example:
+    V1
+    X0
+  This example enables the symbol 'V' and disables the symbol 'X'. To get an
+  idea, why the symbols are represented by those ASCII-Characters, look into
+  sym*.fon and sym*.bmp (in ./tools/crtfont/fonts/ directory): You will see,
+  that the symbols are nothing more than a special font and each symbol
+  stands for a character.
+  (Possible values: 'no', 'yes')
+
+Show Program:
+  Enables/disables the time, title and subtitle of the current program.
+  (Possible values: 'no', 'yes')
+
+Show Timebar:
+  Enables/disables the timebar (under the start and end time of the current
+  program).
+  (Possible values: 'no', 'yes')
+
+Show Menu:
+  Enables/disables the menu.
+  (Possible values: 'no', 'yes')
+
+Show Messages:
+  Enables/disables displaying messages.
+  (Possible values: 'no', 'yes')
+
+Show Color Buttons:
+  Enables/disables the 4 colered buttons.
+  (Possible values: 'no', 'yes')
+
+Show Volume:
+  Enables/disables the volume bar.
+  (Possible values: 'no', 'yes')
+
+Show free cards:
+  enables/disables the display of the free cards as empty rectangles with one
+  icon for each card.
+  (Possible values: 'no', 'yes')
+
+Identify replay type:
+  Based on the replay's name the plugins tries to identify the type of replay,
+  e.g. if it is a VDR, DVD or MP3 replay.
+  (Possible values: 'no', 'yes')
+
+Modify replay string:
+  Enables/disables replay string modification (Identify replay type has to
+  be enabled for this). Based on the replay type graphlcd tries to 'improve'
+  the replay name string, e.g. extracts and capitalizes DVD titles.
+  (Possible values: 'no', 'yes')
+
+Show Logo on Replay:
+  Enables/disables the replay-dependent logo (Identify replay type has to
+  be enabled for this).
+  (Possible values: 'no', 'auto', 'medium', 'large')
+
+Scroll text lines:
+  Enables/disables the scrolling of text lines if they don't fit on screen.
+  (used by program information and replay text)
+  (Possible values: 'never', 'once', 'always')
+
+Scroll speed:
+  Sets the scroll speed in pixels per update.
+  (Possible values: 1 <= x <= 10)
+
+Scroll time interval:
+  Sets the time between scroller updates in milliseconds.
+  (Possible values: 100 <= x <= 2000)
+
+
+Changing Fonts:
+---------------
+It's very easy to change the fonts that are used by graphlcd.
+The plugin uses 4 fonts:
+- a large font, that is used for
+        the title of the current program and for
+        the title of the recording (during replay).
+- a normal font, that is used for
+        the date/time bar,
+        the channel bar,
+        the starttime, endtime and the subtitle of the current program,
+        the times in the replay screen,
+        the title and the items in the menus,
+        the popup-messages and for
+        the text items like the content of a recording.
+- a small font, that is only used for the text of the 4 colored buttons.
+- a symbol font, that contains the symbols.
+
+Because smaller displays should use smaller fonts, the displays will be
+classified in 3 categories. Each category should have all 4 fonts.
+The name of the font files depend on the category and on the font:
+  small displays  ( vertical size < 64 ):
+    f_s_l.fnt  : large font
+    f_s_n.fnt  : normal font
+    f_s_s.fnt  : small font
+    f_s_sym.fnt: symbols
+  medium displays ( vertical size 64..127 ):
+    f_m_l.fnt  : large font
+    f_m_n.fnt  : normal font
+    f_m_s.fnt  : small font
+    f_m_sym.fnt: symbols
+  large displays  ( vertical size >= 128 ):
+    f_l_l.fnt  : large font
+    f_l_n.fnt  : normal font
+    f_l_s.fnt  : small font
+    f_l_sym.fnt: symbols
+
+To change the fonts you only have to change the related symbolic link to
+another font file.
+If you use another already existing font or if you want to create a new
+one by yourself does not matter. If you want to create a new one or if
+you want to modify an existing font, look into /tools/crtfont in the
+GraphLCD base package and read the README.
+

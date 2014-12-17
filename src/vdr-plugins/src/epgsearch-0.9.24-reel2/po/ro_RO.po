@@ -1,0 +1,1290 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-epgsearch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-10-04 12:23+0200\n"
+"PO-Revision-Date: 2009-03-10 19:16+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+
+msgid "Channel groups"
+msgstr "Grupuri canale"
+
+#, fuzzy
+msgid "Channel group used by:"
+msgstr "Grup canal folosit de:"
+
+msgid "Edit$Delete group?"
+msgstr "Sterg Grup ?"
+
+msgid "Edit channel group"
+msgstr "Editare grup canale"
+
+msgid "Group name"
+msgstr "Nume Grup"
+
+msgid "Button$Invert selection"
+msgstr "Inverseaza selectia"
+
+msgid "Button$All yes"
+msgstr "Toate Da"
+
+msgid "Button$All no"
+msgstr "Toate Nu"
+
+msgid "Group name is empty!"
+msgstr "Numele grupului este gol!"
+
+msgid "Group name already exists!"
+msgstr "Numele grupului exista deja!"
+
+msgid "Direct access to epgsearch's conflict check menu"
+msgstr "Acces direct la meniul 'verificare conflicte' din 'cautare epg'"
+
+msgid "Timer conflicts"
+msgstr "Conflicte Temporizator"
+
+msgid "Conflict info in main menu"
+msgstr "Informatii conflict in meniul principal"
+
+msgid "next"
+msgstr "urmatorul"
+
+#, c-format
+msgid "%d timer conflict(s)! First at %s. Show them?"
+msgstr "%d conflict(e) temporizator! Primul la %s. Le afisez ?"
+
+msgid "search the EPG for repeats and more"
+msgstr "Cauta (in) EPG dupa repetari s.a"
+
+msgid "TV-Guide (EPG)"
+msgstr "Ghidul-Tv (EPG)"
+
+msgid "Direct access to epgsearch's search menu"
+msgstr "Acces direct la meniul cautare epg"
+
+msgid "Search-Timer Manager"
+msgstr "Cautare - Manager Temporizatoare"
+
+msgid "EpgSearch-Search in main menu"
+msgstr "Cautare EPG - Cautare in Meniul Principal"
+
+msgid "Button$Help"
+msgstr "Ajutor"
+
+msgid "Standard"
+msgstr "Standard"
+
+#, fuzzy
+msgid "Button$Commands"
+msgstr "Comenzi"
+
+msgid "Button$Search"
+msgstr "Cautare"
+
+msgid "pipes"
+msgstr "tevi"
+
+msgid "graphical"
+msgstr "grafic"
+
+msgid "never"
+msgstr "niciodata"
+
+msgid "always"
+msgstr "intotdeauna"
+
+msgid "smart"
+msgstr "destept"
+
+msgid "before user-def. times"
+msgstr "inainte de 'timpi definiti de utilizator'"
+
+msgid "after user-def. times"
+msgstr "dupa  'timpi definiti de utilizator'"
+
+msgid "before 'next'"
+msgstr ""
+
+msgid "Standard EPG"
+msgstr "EPG Standard"
+
+msgid "Use 'OK Button' for opening and closing menus"
+msgstr ""
+
+msgid "General"
+msgstr "General"
+
+msgid "EPG menus"
+msgstr "Meniuri EPG"
+
+msgid "User-defined EPG times"
+msgstr "'Timpi definiti de utilizator' Epg"
+
+msgid "Timer programming"
+msgstr "Programare Temporizatoare"
+
+msgid "Search and search timers"
+msgstr "Cautare si cautare temporizatoare"
+
+msgid "Timer conflict checking"
+msgstr "Verificare conflicte temporizatoare"
+
+msgid "Main menu entry"
+msgstr "Intrare meniul principal"
+
+msgid "Help$The name of the main menu entry which defaults to 'Programm guide'."
+msgstr "Numele intrarii din Meniul Principal care duce la 'Ghidul Programelor'"
+
+msgid "Start menu"
+msgstr "Meniul Start"
+
+msgid "Help$Choose between 'Overview - Now' and 'Schedule' as start menu when this plugin is called."
+msgstr "Alege intre 'Rezumat - Acum' si 'Programare', ca meniu de start cand este activat pluginul."
+
+msgid "Ok key"
+msgstr "Tasta OK"
+
+msgid ""
+"Help$Choose here the behaviour of key 'Ok'. You can use it to display the summary or to switch to the corresponding channel.\n"
+"Note: the functionality of key 'blue' (Switch/Info/Search) depends on this setting."
+msgstr ""
+"Alege aici comportamentul tastei 'OK'.O puteti folosi pentru a afisa rezumatul, sau pentru a comuta pe canalul corespunzator.\n"
+"Nota: functionalitatea tastei 'albastru' (Comuta/Info/Cautare) depinde de aceasta setare."
+
+msgid "Show channel numbers"
+msgstr "Arata numere Canale"
+
+msgid ""
+"Help$Display channel numbers in 'Overview - Now'.\n"
+"\n"
+"(To completely define your own menu look please inspect the MANUAL)"
+msgstr ""
+"Afisaza umere canal in 'Rezumat - Acum'.\n"
+"\n"
+"(Penru a defini complet modul in care va arata meniul dvs, cititi MANUALUL)"
+
+#, fuzzy
+msgid "Show bouquet separators"
+msgstr "Arata separatoare canale"
+
+msgid "Help$Display VDR channel groups as separators between your channels in 'Overview - Now'."
+msgstr "Afisare grupul de canale ca separator intre canalele dvs in 'Rezumat - Acum'."
+
+msgid "Show day separators"
+msgstr "Arata separatoare canale"
+
+msgid "Help$Display a separator line at day break in 'Schedule'."
+msgstr "Afisare o linie separatoare la sfarsitul zilei in 'Programare'."
+
+msgid "Show radio channels"
+msgstr "Arata posturi Radio"
+
+msgid "Help$Show also radio channels."
+msgstr "Arata deasemenea posturile Radio."
+
+msgid "Limit channels from 1 to"
+msgstr "Limiteaza canalele de la 1 la"
+
+msgid "Help$If you have a large channel set you can speed up things when you limit the displayed channels with this setting. Use '0' to disable the limit."
+msgstr "Daca aveti multe canale setate, puteti mari viteza, daca limitati numarul de canale ce vor fi afisate, cu aceasta setare. Folosete '0 pentru a dezactiva limita'"
+
+msgid "'One press' timer creation"
+msgstr "Functia de creeare temporizator 'O apasare'"
+
+msgid "Help$When a timer is created with 'Record' you can choose between an immediate creation of the timer or the display of the timer edit menu."
+msgstr "Cand un temporizator este creat cu 'Inregistrare' puteti alege intre, creearea imediata a temporizatorului, sau, afisarea meniului de editare."
+
+msgid "Time interval for FRew/FFwd [min]"
+msgstr "Intervalul de timp pentru 'Derulare inainte/Derulare inapoi'"
+
+msgid ""
+"Help$Choose here the time interval which should be used for jumping through the EPG by pressing FRew/FFwd.\n"
+"\n"
+"(If you don't have those keys, you can toggle to this functionality pressing '0' and get '<<' and '>>' on the keys green and yellow)"
+msgstr ""
+"Alege aici intervalul de timp care trebuie folosit pentru a sari prin EPG apasand Derulare inapoi/Derulare inainte.\n"
+"\n"
+"(Daca nu aveti aceste taste,puteti folosi aceasta functionalitate apasand '0' si '<<' sau '>>' pe tastele 'verde' si 'galben' )"
+
+msgid "Toggle Green/Yellow"
+msgstr "Comuta Verde/Glben"
+
+msgid "Help$Specify if green and yellow shall also be switched when pressing '0'."
+msgstr "Specifica daca verde si galben trebuie comutate cand se apasa '0'"
+
+msgid "Show favorites menu"
+msgstr "Arata meniul Favorite"
+
+msgid ""
+"Help$A favorites menu can display a list of your favorite broadcasts. Enable this if you want an additional menu besides 'Now' and 'Next'\n"
+"Any search can be used as a favorite. You only have to set the option 'Use in favorites menu' when editing a search."
+msgstr ""
+"Meniul favorite poate afisa o lista cu posturile favorite. Activeaza aceasta in meniul aditional linga  'Acum' si 'Urmatorul'\n"
+"Orice cautare poate fi folosita ca o favorita. Trebuie doar aleasa optiunea 'Foloseste in meniul Favorite' cand editati o cautare."
+
+msgid "for the next ... hours"
+msgstr "pentru urmatoarele ... ore"
+
+msgid "Help$This value controls the timespan used to display your favorites."
+msgstr "Aceasta valoare controleza perioada de timp folosita pentru a afisa favorite."
+
+msgid "Use user-defined time"
+msgstr "Foloseste timp 'definit de utilizator'"
+
+msgid "Help$Besides 'Now' and 'Next' you can specify up to 4 other times in the EPG which can be used by repeatedly pressing the green key, e.g. 'prime time', 'late night',..."
+msgstr "Pe langa  'Acum' si 'Urmatorul' puteti specifica pana la 4 alti timpi in EPG care pot fi folositi apasand repetat tasta verde . ex. 'prime time', 'noaptea tarziu',..."
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Help$This is the description for your user-defined time as it will appear as label on the green button."
+msgstr "Aceasta este descrierea pentru 'timp definit de utilizator' asa cum apare ca eticheta pe butonul verde."
+
+msgid "Time"
+msgstr "Timp"
+
+msgid "Help$Specify the user-defined time here in 'HH:MM'."
+msgstr "Specifica aici 'timpul definit de utilizator' in 'OO:MM'."
+
+msgid "Default recording dir"
+msgstr "Directorul implicit inregistrare"
+
+msgid "Help$When creating a timer you can specify here a default recording directory."
+msgstr "Cand creeati un temporizator puteti specifica aici, directorul implicit pentru inregistrare."
+
+msgid "Add episode to manual timers"
+msgstr "Adauga episod la temporizatoare manuale"
+
+msgid ""
+"Help$If you create a timer for a series, you can automatically add the episode name.\n"
+"\n"
+"- never: no addition\n"
+"- always: always add episode name if present\n"
+"- smart: add only if event lasts less than 80 mins."
+msgstr ""
+"Daca creeati un temporizator pentru o serie, puteti automat sa adaugati numele episodului.\n"
+"\n"
+"- niciodata: nu adauga\n"
+"- intotdeauna: adauga intotdeauna nume episod, numai daca este prezent\n"
+"- inteligent: adauga numai daca evenimentul dureaza mai putin de 80 minute."
+
+msgid "Button$Select"
+msgstr "Selecteaza"
+
+msgid "Default timer check method"
+msgstr "Metoda implicita de verificare temporizatoare"
+
+msgid "Use search timers"
+msgstr "Foloseste temporizatoare cautare"
+
+msgid "Help$'Search timers' can be used to automatically create timers for events that match your search criterions."
+msgstr "'Cautare temporizatoare' pote fi folosit sa creeze automat temporizatoare pentru evenimentele care se potrivesc criteriilor dvs de cautare."
+
+msgid "  Update interval [min]"
+msgstr "  Interval update [min]"
+
+msgid "Help$Specify here the time intervall to be used when searching for events in the background."
+msgstr "Specifica aici intervalul de timp ce va fi utilizat cand se cauta evenimente in fundal."
+
+msgid "Help$Specify here the default lifetime of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Specifica aici durata de viata implicita a temporizatorelor/inregistrarilor create cu acest plugin. Aceasta valoare poate fi ajustata pentru fiecare cautare."
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Interval de timp la start (min)"
+
+msgid "Help$Specify here the default start recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Specifica aici marginea implicita temporizator/inregistrare  la pornirea inregistrarii create cu acest plugin. Aceasta valoare poate fi ajustata pentru fiecare cautare."
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Interval de timp la sfarsit (min)"
+
+msgid "Help$Specify here the default stop recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Specifica aici marginea implicita temporizator/inregistrare  la oprirea inregistrarii create cu acest plugin. Aceasta valoare poate fi ajustata pentru fiecare cautare."
+
+msgid "No announcements when replaying"
+msgstr "Fara instiintari cand este in 'reluare'"
+
+msgid "Help$Set this to 'yes' if you don't like to get any announcements of broadcasts if you currently replay anything."
+msgstr "Seteaza cu 'da' daca nu doriti sa primiti nici-o instiintare a transmisiilor, daca, curent,  efectuati o reluare."
+
+msgid "Recreate timers after deletion"
+msgstr "Recreere temporizatoare dupa stergere"
+
+msgid "Help$Set this to 'yes' if you want timers to be recreated with the next search timer update after deleting them."
+msgstr "Seteaza cu 'da' daca doriti sa recreati temporizatorul la urmatorul 'temporizator cautare update', dupa ce-l stergeti"
+
+msgid "Without PayTV channels"
+msgstr "Fara canalele Tv cu plata"
+
+msgid "Help$Set this to 'yes' if don't want to see events on PayTV channels when searching for repeats."
+msgstr "Seteaza cu 'da' daca nu doresti sa vezi evenimentele de pe canalele criptate, atunci cand cauti dupa repetari."
+
+msgid "Search templates"
+msgstr "Cautare sabloane"
+
+msgid "Help$Here you can setup templates for your searches."
+msgstr "Aici poti stabili sabloane pentru cautari"
+
+msgid "Blacklists"
+msgstr "Lista Neagra"
+
+msgid "Help$Here you can setup blacklists which can be used within a search to exclude events you don't like."
+msgstr "Aici puteti seta lista neagra, care poate fi folosita la o cautare,  pentru a exclude ce nu va place."
+
+msgid "Button$Setup"
+msgstr "Configuraţie"
+
+msgid "Ignore below priority"
+msgstr "Ignora mai jos de prioritate"
+
+msgid "Help$If a timer with priority below the given value will fail it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Daca un temporizator cu prioritate mai jos decat cea data, va esua nu va fi clasificat ca important. Sant  importante numai conflictele care au ca efect, un mesaj OSD, despre conflict  dupa o verificare automata conflicte."
+
+msgid "Ignore conflict duration less ... min."
+msgstr "Ignora conflictele cu durata mai mica de ... minute."
+
+msgid "Help$If a conflicts duration is less then the given number of minutes it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Daca durata unui conflict este mai mica decat numarul de minute nu va fi considerata importanta. Sant considerate importante numai acelea care au ca efect un mesaj OSD, dupa o verificare automata conflicte."
+
+msgid "Only check within next ... days"
+msgstr "Verifica numai urmatoarele ... zile"
+
+msgid "Help$This value reduces the conflict check to the given range of days. All other conflicts are classified as 'not yet important'."
+msgstr "Aceasta valoare reduce verificare conflict la plaja de zile specificata. Toate celelate conflicte sant clasificate ca 'neimportante'."
+
+msgid "--- Automatic checking ---"
+msgstr "--- Verificare Automata ---"
+
+msgid "After each timer programming"
+msgstr "Dupa fiecare programare temporizatoare"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each manual timer programming. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if this timer is involved in any conflict."
+msgstr "Seteaza cu 'da' daca verificare conflicte trebuie efectuata dupa ficare programare manuala temporizator. In cazul unui conflict, veti primi imediat un mesaj informativ. Mesajul este afisat numai daca acest temporizator este implicat in orice conflict"
+
+msgid "When a recording starts"
+msgstr "Cand incepe o inregistrare"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed when a recording starts. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if the conflict is within the next 2 hours."
+msgstr "Seteaza cu 'da' daca verificare conflicte trebuie efectuat cand incepe o inregistrare. In cazul unui conflict vei primi imediat un mesaj de informare, despre conflict. Acest mesaj este afisat numai daca conflictul apare in urmatoarele 2 ore."
+
+msgid "After each search timer update"
+msgstr "Dupa fiecare temporizator cautare update"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each search timer update."
+msgstr "Seteaza 'da' daca verificarea conflicte trebuie efectuata dupa fiecare cautare de update."
+
+msgid "every ... minutes"
+msgstr "fiecare ... minute"
+
+msgid ""
+"Help$Specify here the time intervall to be used for an automatic conflict check in the background.\n"
+"('0' disables an automatic check)"
+msgstr ""
+"Specifica aici intervalul de timp, care va fi utilizat in fundal,  pentru verificare automata conflicte.\n"
+"('0'dezactiveaza o verificare automata)"
+
+msgid "if conflicts within next ... minutes"
+msgstr "daca conflictul apare in urmatoarele ... minute"
+
+msgid "Help$If the next conflict will appear in the given number of minutes you can specify here a shorter check intervall to get more OSD notifications about it."
+msgstr "Daca urmatorul conflict, va aparea in numarul de minute precizat, puteti specifica aici un interval de verificare mai scurt, pentru a primi notificari OSD despre el.  "
+
+msgid "Avoid notification when replaying"
+msgstr "Evita notificarile cand se reda"
+
+msgid "Help$Set this to 'yes' if the don't want to get OSD messages about conflicts if you currently replay something. Nevertheless messages will be displayed if the first upcoming conflict is within the next 2 hours."
+msgstr "Seteaza cu 'da' daca nu doresti sa primesti mesaje OSD, despre conflicte, in timp ce se reda ceva.Totusi mesajele vor fi afisate daca primul conflict, care urmeaza, este in urmatoarele 2 ore."
+
+msgid "Direct access to epgsearch's timers menu"
+msgstr "Acces direct la meniul temporizatoare cautare in epg"
+
+msgid "Timer Manager"
+msgstr "Manager Temporizatoare"
+
+msgid "This version of EPGSearch does not support this service!"
+msgstr "Aceasta versiune a Cautare EPG nu suporta acest service!"
+
+msgid "EPGSearch does not exist!"
+msgstr "Cautare EPG nu exista!"
+
+msgid "Start/Stop time has changed"
+msgstr ""
+
+msgid "Title/episode has changed"
+msgstr ""
+
+msgid "No new timers were added."
+msgstr "Nu au fost adaugate temporizatoare noi."
+
+msgid "No timers were modified."
+msgstr "Nu au fost modificate temporizatoare."
+
+msgid "No timers were deleted."
+msgstr "Nici-un timer nu a fost sters."
+
+#, c-format
+msgid "%d new broadcast"
+msgstr "%d transmisii noi"
+
+msgid "Button$by channel"
+msgstr "dupa canal"
+
+msgid "Button$by time"
+msgstr "dupa timp"
+
+msgid "Button$Episode"
+msgstr "Episod"
+
+msgid "Button$Title"
+msgstr "Titlu"
+
+#, fuzzy
+msgid "announce details"
+msgstr "detalii anunt: %s"
+
+msgid "announce again"
+msgstr "anunta din nou"
+
+msgid "with next update"
+msgstr "cu urmatorul update"
+
+msgid "again from"
+msgstr "din nou de la"
+
+msgid "Search timer"
+msgstr "Temporizator cautare"
+
+msgid "Edit blacklist"
+msgstr "Editare lista neagra"
+
+msgid "phrase"
+msgstr "fraza"
+
+msgid "all words"
+msgstr "toate cuvintele"
+
+msgid "at least one word"
+msgstr "cu cel putin un cuvant"
+
+msgid "match exactly"
+msgstr "potrivire exacta"
+
+msgid "regular expression"
+msgstr "expresie regulara"
+
+msgid "fuzzy"
+msgstr "fuzzy"
+
+msgid "user-defined"
+msgstr "sefinit de utilizator"
+
+msgid "interval"
+msgstr "interval"
+
+msgid "channel group"
+msgstr "gupul de canale"
+
+msgid "only FTA"
+msgstr "numai libere"
+
+msgid "Search term"
+msgstr "Termen de cautat"
+
+msgid "Search mode"
+msgstr "Mod de cautare"
+
+msgid "Tolerance"
+msgstr "Toleranta"
+
+msgid "Match case"
+msgstr "Cazul 'Potrivire'"
+
+msgid "Use title"
+msgstr "Foloseste titlu"
+
+msgid "Use subtitle"
+msgstr "Foloseste subtitlu"
+
+msgid "Use description"
+msgstr "Foloseste descriere"
+
+msgid "Use extended EPG info"
+msgstr "Foloseste informatii extinse EPG"
+
+#, fuzzy
+msgid "Ignore missing categories"
+msgstr "Compara categorii"
+
+msgid "Use channel"
+msgstr "Foloseste canal"
+
+msgid "  from channel"
+msgstr "  de la canal"
+
+msgid "  to channel"
+msgstr "  la canal"
+
+msgid "Channel group"
+msgstr "Grup canal"
+
+msgid "Use time"
+msgstr "Foloseste timp"
+
+msgid "  Start after"
+msgstr "  Porneste dupa"
+
+msgid "  Start before"
+msgstr "  Porneste inainte de"
+
+msgid "Use duration"
+msgstr "Foloseste durata"
+
+msgid "  Min. duration"
+msgstr "  Durata minima"
+
+msgid "  Max. duration"
+msgstr "  Durata maxima"
+
+msgid "Use day of week"
+msgstr "Foloseste zilele saptamanii"
+
+#, fuzzy
+msgid "Day of week"
+msgstr "  Zilele saptamanii"
+
+msgid "Button$Templates"
+msgstr "Sabloane"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal Invalid ***"
+
+msgid "Please check channel criteria!"
+msgstr "Va rog sa verificati criteriile canal!"
+
+msgid "Edit$Delete blacklist?"
+msgstr "Sterg Lista neagra ?"
+
+msgid "Create searchtimer"
+msgstr "Creeaza temporizator cautare"
+
+msgid "List searchtimers"
+msgstr "Listeaza temporizatoarele de cautare"
+
+msgid "Search for repeats"
+msgstr "Cauta dupa repetari"
+
+msgid "Search in EPG"
+msgstr ""
+
+msgid "List recordings of this broadcast"
+msgstr "Listeaza inregistrarile acestei transmisii"
+
+msgid "Mark as 'already recorded'?"
+msgstr "Marchez ca 'deja inregistrat' ?"
+
+msgid "Activate/deactivate automatic switch?"
+msgstr "Activez/dezactivez cautare automata ?"
+
+msgid "Ignore this broadcast"
+msgstr "Ignora aceasta tramisie"
+
+msgid "EPG Commands"
+msgstr "Comenzi EPG"
+
+msgid "Already running!"
+msgstr "Ruleaza deja!"
+
+msgid "Add to switch list?"
+msgstr "Adaug la lista de comutare ?"
+
+msgid "Delete from switch list?"
+msgstr "Sterg din lista de comutare ?"
+
+msgid "Button$Details"
+msgstr "Detalii"
+
+msgid "Button$Filter"
+msgstr "Filtru"
+
+msgid "Button$Show all"
+msgstr "Arata-le pe toate"
+
+msgid "conflicts"
+msgstr "conflicte"
+
+msgid "no conflicts!"
+msgstr "nici-un conflict!"
+
+msgid "no important conflicts!"
+msgstr "nici-un conflict important!"
+
+msgid "C"
+msgstr "C"
+
+msgid "Button$Repeats"
+msgstr "Repeta"
+
+msgid "Button$Functions"
+msgstr "Functii"
+
+msgid "no check"
+msgstr "nu verifica"
+
+msgid "by channel and time"
+msgstr "dupa canal si timp"
+
+msgid "by event ID"
+msgstr "dupa ID eveniment"
+
+msgid "Select directory"
+msgstr "Selecteaza director"
+
+msgid "Button$Level"
+msgstr "Nivel"
+
+msgid "Timers"
+msgstr "Temporizatoare"
+
+msgid "No timers present."
+msgstr "Nu sant temporizatoare prezente."
+
+#, fuzzy
+msgid "Info:"
+msgstr "Info"
+
+msgid "Use the green button to create a new timer."
+msgstr ""
+
+msgid "Button$Delete"
+msgstr "Şterge"
+
+msgid "Button$New"
+msgstr "Nou"
+
+#, fuzzy
+msgid "Button$Off"
+msgstr "Pornit/Oprit"
+
+#, fuzzy
+msgid "Button$On"
+msgstr "Deschide"
+
+msgid "Delete timer?"
+msgstr "Sterg temporizator ?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Temporizatorul inregistreaza - chiar doriti sa sterg ?"
+
+msgid "Delete switchtimer?"
+msgstr ""
+
+msgid "Directory"
+msgstr "Director"
+
+msgid "Event"
+msgstr "Eveniment"
+
+msgid "Favorites"
+msgstr "Favorite"
+
+msgid "Search results"
+msgstr "Rezultatele cautarii"
+
+msgid "° EPG for :"
+msgstr "° EPG pentru :"
+
+msgid "Button$Timer"
+msgstr "Temporizator"
+
+msgid "Timer conflict! Show?"
+msgstr "Conflict timere! Afisez ?"
+
+msgid "New timer"
+msgstr ""
+
+msgid "Please confirm changes with OK"
+msgstr ""
+
+msgid "Channel not in list. Please choose another."
+msgstr ""
+
+msgid ""
+"\n"
+"No epg data available for this channel.\n"
+"Switch to channel to get epg data."
+msgstr ""
+
+msgid "Please select a programme for switchtimer:"
+msgstr ""
+
+msgid "low"
+msgstr "scazut"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "inalt"
+
+msgid "Timer type"
+msgstr ""
+
+msgid "Recording"
+msgstr ""
+
+msgid "SwitchTimer"
+msgstr ""
+
+msgid "Channel"
+msgstr "Canal"
+
+msgid "Next date"
+msgstr ""
+
+msgid "Repeat"
+msgstr "Repeta"
+
+msgid "  Day of Week"
+msgstr "  Zilele saptamanii."
+
+msgid "First day"
+msgstr "Prima zi"
+
+msgid "unlimited"
+msgstr "nelimitat"
+
+msgid "Child protection"
+msgstr "Protectie copii"
+
+msgid "Timer check"
+msgstr "Verificare temporizatoare"
+
+msgid "recording with device"
+msgstr "inregistrare cu dispozitiv"
+
+msgid "File"
+msgstr "Fisier"
+
+msgid "Button$With subtitle"
+msgstr "Cu subtitrare"
+
+msgid "Button$Without subtitle"
+msgstr "Fara subtitrare"
+
+msgid "Week Day"
+msgstr "Saptamana Zi"
+
+msgid "Button$Reset"
+msgstr "Repornire"
+
+msgid "Please, select a program to set switch timer"
+msgstr ""
+
+msgid "Button$Extended"
+msgstr "Extins"
+
+msgid "Button$Simple"
+msgstr "Simplu"
+
+msgid "Use blacklists"
+msgstr "Foloseste Lista neagra"
+
+msgid "Edit$Search text too short - use anyway?"
+msgstr "Textul de cautat prea scurt - il folosesc oricum ?"
+
+msgid "Button$by name"
+msgstr "dupa nume"
+
+msgid "Button$by date"
+msgstr "dupa data"
+
+msgid "Button$Delete all"
+msgstr "Sterg toate"
+
+msgid "Recordings"
+msgstr "Inregistrari"
+
+msgid "Edit$Delete entry?"
+msgstr "Sterg inregistrare"
+
+msgid "Edit$Delete all entries?"
+msgstr "Sterg toate inregistrarile ?"
+
+msgid "Summary"
+msgstr "Sumar"
+
+msgid "Auxiliary info"
+msgstr "Info Auxiliar"
+
+#, fuzzy
+msgid "Button$Aux info"
+msgstr "Toate Nu"
+
+msgid "Search actions"
+msgstr "Actiuni cautare"
+
+msgid "Execute search"
+msgstr "Executa cautare"
+
+msgid "Use as search timer on/off"
+msgstr "Foloseste ca temporizator cautare pornit/oprit"
+
+msgid "Trigger search timer update"
+msgstr "Declansare temporizator cautare update"
+
+msgid "Show recordings done"
+msgstr "Arata inregistrarile terminate"
+
+msgid "Delete created timers?"
+msgstr "Sterg temporizatoarele creeate ?"
+
+msgid "Timer conflict check"
+msgstr "Verificare conflicte temporizatoare"
+
+msgid "Disable associated timers too?"
+msgstr "Dezactivez si temporizatoarele asociate ?"
+
+msgid "Activate associated timers too?"
+msgstr "Activez si temporizatoarele asociate ?"
+
+msgid "Search timers activated in setup."
+msgstr "Cauta temporizatoare activate in setup."
+
+msgid "Run search timer update?"
+msgstr "Rulez temporizator cautare update ?"
+
+#, fuzzy
+msgid "ERROR: Could not trigger search timer update!"
+msgstr "Declansare temporizator cautare update"
+
+#, fuzzy
+msgid "Search timer update triggered."
+msgstr "Temporizator cautare update gata!"
+
+msgid "Delete all timers created from this search?"
+msgstr "Sterg toate temporizatoarele create de la aceasta cautare ?"
+
+msgid "Copy this entry?"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "No searchtimers present."
+msgstr "Nu sunt prezenta temporizatoare cautare."
+
+msgid "Use the green button to create a new searchtimer."
+msgstr ""
+
+msgid "Search entries"
+msgstr "Cauta intrari"
+
+msgid "active"
+msgstr "activ"
+
+msgid "Execute"
+msgstr "Executa"
+
+msgid "Button$Actions"
+msgstr "Actiuni"
+
+msgid "Edit$Delete search?"
+msgstr "Sterg cautare ?"
+
+msgid "Expert"
+msgstr "Expert"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Edit search"
+msgstr "Editare cautare"
+
+msgid "Record"
+msgstr "Înregistr."
+
+msgid "Announce only"
+msgstr "Numai anunturi"
+
+msgid "Switch only"
+msgstr "Numai comutare"
+
+msgid "Selection"
+msgstr "Selectie"
+
+msgid "all"
+msgstr "toate"
+
+#, fuzzy
+msgid "count recordings"
+msgstr "inregistrari gasite"
+
+msgid "count days"
+msgstr ""
+
+msgid "Template name"
+msgstr "Nume sablon"
+
+msgid "Help$Specify the name of the template."
+msgstr ""
+
+#, fuzzy
+msgid "Help$Specify here the term to search for."
+msgstr "Specifica aici intervalul de timp ce va fi utilizat cand se cauta evenimente in fundal."
+
+msgid ""
+"Help$The following search modes exist:\n"
+"\n"
+"- phrase: searches for sub terms\n"
+"- all words: all single words must appear\n"
+"- at least one word: at least one single word must appear\n"
+"- match exactly: must match exactly\n"
+"- regular expression: match a regular expression\n"
+"- fuzzy searching: searches approximately"
+msgstr ""
+
+msgid "Help$This sets the tolerance of fuzzy searching. The value represents the allowed errors."
+msgstr ""
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if your search should match the case."
+msgstr "Seteaza 'da' daca verificarea conflicte trebuie efectuata dupa fiecare cautare de update."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the title of an event."
+msgstr "Seteaza cu 'da' daca doriti sa recreati temporizatorul la urmatorul 'temporizator cautare update', dupa ce-l stergeti"
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the episode of an event."
+msgstr "Seteaza cu 'da' daca doriti sa recreati temporizatorul la urmatorul 'temporizator cautare update', dupa ce-l stergeti"
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the summary of an event."
+msgstr "Seteaza cu 'da' daca doriti sa recreati temporizatorul la urmatorul 'temporizator cautare update', dupa ce-l stergeti"
+
+msgid "Help$The summary of an event, can contain additional information like 'Genre', 'Category', 'Year',... called 'EPG categories' within EPGSearch. External EPG providers often deliver this information. This allows refining a search and other nice things, like searching for the 'tip of the day'. To use it set this to 'Yes'."
+msgstr ""
+
+msgid "Help$The file epgsearchcats.conf specifies the search mode for this entry. One can search by text or by value. You can also edit a list of predefined values in this file that can be selected here."
+msgstr ""
+
+msgid "Help$If a selected category is not part of the summary of an event this normally excludes this event from the search results. To avoid this, set this option to 'Yes', but please handle this with care to avoid a huge amount of results."
+msgstr ""
+
+msgid "Use in favorites menu"
+msgstr "Foloseste in meniul favorite"
+
+msgid "Result menu layout"
+msgstr "Rezltat aranjare meniu"
+
+msgid "Use as search timer"
+msgstr "Foloseste ca temporizator cautare"
+
+msgid "Action"
+msgstr "Actiune"
+
+msgid "Switch ... minutes before start"
+msgstr "Comuta ... minuta inainte de start"
+
+msgid "Unmute sound"
+msgstr ""
+
+msgid "  Series recording"
+msgstr "  Inregistrare serie"
+
+msgid "Delete recordings after ... days"
+msgstr "Sterge inregistrarile dupa ... zile"
+
+msgid "Keep ... recordings"
+msgstr "Pastreaza inregistrariler ... zile"
+
+msgid "Pause when ... recordings exist"
+msgstr "Pauza cand exista ... inregistrari"
+
+msgid "Avoid repeats"
+msgstr "Evita repetarile"
+
+msgid "Allowed repeats"
+msgstr "Repetari permise"
+
+msgid "Only repeats within ... days"
+msgstr "Numai repetarile cu ... zile"
+
+msgid "Compare title"
+msgstr "Compara titlu"
+
+msgid "Compare subtitle"
+msgstr "Compara subtitrare"
+
+msgid "Compare summary"
+msgstr "Compara rezumat"
+
+msgid "Compare categories"
+msgstr "Compara categorii"
+
+msgid "VPS"
+msgstr "VPS"
+
+#, fuzzy
+msgid "Auto delete"
+msgstr "Şterge"
+
+#, fuzzy
+msgid "after ... recordings"
+msgstr "Pastreaza inregistrariler ... zile"
+
+msgid "after ... days after first rec."
+msgstr ""
+
+msgid "Button$Edit"
+msgstr "Editare"
+
+msgid "Edit user-defined days of week"
+msgstr "Editare zilele saptamanii definete de utilizator"
+
+msgid "Compare"
+msgstr "Compara"
+
+msgid "Select blacklists"
+msgstr "Selecteaza lista neagra"
+
+msgid "Values for EPG category"
+msgstr "Valori pentru categoria EPG"
+
+msgid "Button$Apply"
+msgstr "Aplica"
+
+msgid "less"
+msgstr ""
+
+msgid "less or equal"
+msgstr ""
+
+msgid "greater"
+msgstr ""
+
+msgid "greater or equal"
+msgstr ""
+
+msgid "equal"
+msgstr ""
+
+msgid "not equal"
+msgstr ""
+
+#, fuzzy
+msgid "Activation of search timer"
+msgstr "Listeaza temporizatoarele de cautare"
+
+#, fuzzy
+msgid "Last day"
+msgstr "Prima zi"
+
+msgid "Button$all channels"
+msgstr "toate canalele"
+
+msgid "Button$only FTA"
+msgstr "numai cele libere"
+
+msgid "Button$Timer preview"
+msgstr "Previzualizare temporizator"
+
+#, fuzzy
+msgid "no broadcast found"
+msgstr "- nici-o transmisie gasita -"
+
+msgid "Blacklist results"
+msgstr "Rezultate lista neagra"
+
+msgid "found recordings"
+msgstr "inregistrari gasite"
+
+msgid "- no recording found -"
+msgstr "- nici-o inregistrare gasita -"
+
+msgid "Error while accessing recording!"
+msgstr "Eroare la accesarea inregistrarilor!"
+
+#, fuzzy
+msgid "No templates present."
+msgstr "Nu sant temporizatoare prezente."
+
+#, fuzzy
+msgid "Use the yellow button to create a new template."
+msgstr "Foloseste butonul galben pentru a crea un nou temporizator cautare"
+
+msgid "Edit$Delete template?"
+msgstr "Sterg sablon ?"
+
+msgid "Overwrite existing entries?"
+msgstr "Rescriu intrarile existente ?"
+
+msgid "Edit entry"
+msgstr "Editare intrare"
+
+msgid "action at"
+msgstr "actiune la"
+
+msgid "Unknown channel"
+msgstr ""
+
+msgid "Switch list"
+msgstr "Lista comutari"
+
+#, fuzzy
+msgid "Edit template"
+msgstr "Sterg sablon ?"
+
+msgid ">>> no info! <<<"
+msgstr ">>> nici-o informatie! <<<"
+
+msgid "Overview"
+msgstr ""
+
+msgid "Button$Favorites"
+msgstr "Favorite"
+
+msgid "Button$Schedule"
+msgstr "Program"
+
+msgid "Quick search for broadcasts"
+msgstr "Cutare rapida transmisii"
+
+msgid "Quick search"
+msgstr "Cautare rapida"
+
+msgid "Show in main menu"
+msgstr "Arata in meniul principal"
+
+#, c-format
+msgid "%d new broadcast(s) found! Show them?"
+msgstr "%d statii (e) gasita (e)! Afisez ?"
+
+msgid "Search timer update done!"
+msgstr "Temporizator cautare update gata!"
+
+msgid "Programming timer failed!"
+msgstr "Esuare programare temporizator!"
+
+#~ msgid "Edit timer"
+#~ msgstr "Editare temporizator"
+
+#~ msgid "Use the blue button to create a new timer."
+#~ msgstr "Foloseste butonul albastru pentru a crea un nou temporizator."
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#~ msgid "Use the yellow button to create a new searchtimer."
+#~ msgstr "Foloseste butonul galben pentru a crea un nou temporizator cautare"
+
+#~ msgid "Red key"
+#~ msgstr "Tasta Rosie"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Record' or 'Commands') you like to have on the red key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Alege care functie standard (Inregistrare sau Comenzi), doriti sa o folositi cu tasta 'rosie'.\n"
+#~ "(Poate fi comutata cu tasta 0)"
+
+#~ msgid "Blue key"
+#~ msgstr "Tasta Albastra"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Switch'/'Info' or 'Search') you like to have on the blue key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Alegeti care functie standard(Comuta/Info/Cautare), doriti sa o folositi cu tasta 'albastru'.\n"
+#~ "(Poate fi comutata cu 0)"
+
+#, fuzzy
+#~ msgid "No search templates present."
+#~ msgstr "Nu sunt prezenta temporizatoare cautare."
+
+#, fuzzy
+#~ msgid "Use the green button to create a new template."
+#~ msgstr "Foloseste butonul albastru pentru a crea un nou temporizator."
+
+#~ msgid "Show channel separators"
+#~ msgstr "Arata separatoare canal"
+
+#~ msgid "no"
+#~ msgstr "nu"
+
+#~ msgid "yes"
+#~ msgstr "da"
+
+#~ msgid "Switch"
+#~ msgstr "Comută"
+
+#~ msgid "Button$Now"
+#~ msgstr "Acum"
+
+#~ msgid "Use VDR's timer edit menu"
+#~ msgstr "Foloseste meniul de editare temporizatoare VDR"
+
+#~ msgid ""
+#~ "Help$This plugin has it's own timer edit menu extending the original one with some extra functionality like\n"
+#~ "- an addtional directory entry\n"
+#~ "- user-defined days of week for repeating timers\n"
+#~ "- adding an episode name\n"
+#~ "- support for EPG variables (see MANUAL)"
+#~ msgstr ""
+#~ "Acest plugin are propriul meniu de editare temporizator extinzand pe cel original cu cateva functionalitati ca\n"
+#~ "- o intrare aditionala 'director\n"
+#~ "- zilele saptamanii 'definite de utilizator' pentru temporizatoare care se repeta\n"
+#~ "- adaugare nume episod\n"
+#~ "- suport pentru variabile EPG (vezi MANUALUL)"
+
+#~ msgid "Button$Record"
+#~ msgstr "Înregistr."
+
+#~ msgid "Can't switch channel!"
+#~ msgstr "Nu pot comuta pe canal!"
+
+#~ msgid "Button$Switch"
+#~ msgstr "Comută"
+
+#~ msgid "EPG -"
+#~ msgstr "EPG -"
+
+#~ msgid "Button$Next"
+#~ msgstr "Următor"
+
+#~ msgid "Active"
+#~ msgstr "Activ"
+
+#~ msgid "Day"
+#~ msgstr "Zi"
+
+#~ msgid "Start"
+#~ msgstr "Start"
+
+#~ msgid "Stop"
+#~ msgstr "Stop"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritate"
+
+#~ msgid "Lifetime"
+#~ msgstr "Durata de viata"
+
+#~ msgid "Button$Default"
+#~ msgstr "Implicit"
+
+#~ msgid "EPG"
+#~ msgstr "EPG"

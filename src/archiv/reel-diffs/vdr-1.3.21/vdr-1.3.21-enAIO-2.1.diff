@@ -1,0 +1,1049 @@
+diff -Nru vdr-1.3.21-vanilla/HISTORY-enAIO vdr-1.3.21-enaio/HISTORY-enAIO
+--- vdr-1.3.21-vanilla/HISTORY-enAIO	1970-01-01 02:00:00.000000000 +0200
++++ vdr-1.3.21-enaio/HISTORY-enAIO	2005-02-13 18:22:49.984993472 +0200
+@@ -0,0 +1,62 @@
++History enAIO:
++--------------
++
++20-05-2004: Version 1.0
++
++- Initial revision based on following patches:
++  * Easyinput Patch by Marcel Schaeben / Patrick Maier
++  * Rename Recordings Patch by Torsten Kunkel
++  * Menu Selection Patch by Peter Dittmann
++  * Recording Length Patch by Tobias Faust
++  * Show Weekdays Patch by Oskar Signell
++
++23-05-2004: Version 1.1
++
++- Updated for vdr-1.3.8 (aka. removed Show Weekdays Patch).
++
++06-06-2004: Version 1.2
++
++- Added VDRAdmin changes from Recording Length Patch v0.3.
++
++20-06-2004: Version 1.3
++
++- Updated for vdr-1.3.11 (Rename Recordings Patch).
++- Added "Main Menu command position" feature.
++  Thanks to Olaf Henkel for his excellent weekly rants :)
++
++11-09-2004: Version 1.4
++
++- Removed centering from the recording length field.
++
++06-11-2004: Version 1.5
++
++- Updated for vdr-1.3.15.
++- Added the missing progress bar feature for "What's on now?"
++  menu (enable only for iso8859-1/15 charsets):
++  "Setup / EPG / Show progress bar"
++
++09-11-2004: Version 1.6
++
++- Changed the minute abbreviation from acute accent to apostrophe.
++
++30-12-2004: Version 1.7
++
++- Fixed a memory leak in Recording Length Patch.
++  Thanks to Ralf1970 @ VDRPortal.
++
++10-01-2005: Version 1.8
++
++- Updated for vdr-1.3.18.
++- Fixed the spelling of menu items in Recording Length Patch.
++
++20-01-2005: Version 1.9
++
++- Added 'text2skin' modifications (Thanks to Sascha Volkenandt).
++
++24-01-2005: Version 2.0
++
++- Fixed a crash bug in Rename Recordings Patch (Thanks to Darren Salt).
++
++13-02-2005: Version 2.1
++
++- Modified the constructor of cMenuWhatsOnItem (Thanks to Anssi Hannula).
+diff -Nru vdr-1.3.21-vanilla/config.c vdr-1.3.21-enaio/config.c
+--- vdr-1.3.21-vanilla/config.c	2005-02-05 12:43:04.000000000 +0200
++++ vdr-1.3.21-enaio/config.c	2005-02-13 18:22:49.986993168 +0200
+@@ -300,6 +300,11 @@
+   CurrentChannel = -1;
+   CurrentVolume = MAXVOLUME;
+   CurrentDolby = 0;
++  ShowRecDate = 1;
++  ShowRecTime = 1;
++  ShowRecLength = 0;
++  MenuCmdPosition = 0;
++  ShowProgressBar = 0;
+ }
+ 
+ cSetup& cSetup::operator= (const cSetup &s)
+@@ -456,6 +461,11 @@
+   else if (!strcasecmp(Name, "CurrentChannel"))      CurrentChannel     = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentVolume"))       CurrentVolume      = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentDolby"))        CurrentDolby       = atoi(Value);
++  else if (!strcasecmp(Name, "ShowRecDate"))         ShowRecDate        = atoi(Value);
++  else if (!strcasecmp(Name, "ShowRecTime"))         ShowRecTime        = atoi(Value);
++  else if (!strcasecmp(Name, "ShowRecLength"))       ShowRecLength      = atoi(Value);
++  else if (!strcasecmp(Name, "MenuCmdPosition"))     MenuCmdPosition    = atoi(Value);
++  else if (!strcasecmp(Name, "ShowProgressBar"))     ShowProgressBar    = atoi(Value);
+   else
+      return false;
+   return true;
+@@ -519,6 +529,11 @@
+   Store("CurrentChannel",     CurrentChannel);
+   Store("CurrentVolume",      CurrentVolume);
+   Store("CurrentDolby",       CurrentDolby);
++  Store("ShowRecDate",        ShowRecDate);
++  Store("ShowRecTime",        ShowRecTime);
++  Store("ShowRecLength",      ShowRecLength);
++  Store("MenuCmdPosition",    MenuCmdPosition);
++  Store("ShowProgressBar",    ShowProgressBar);
+ 
+   Sort();
+ 
+diff -Nru vdr-1.3.21-vanilla/config.h vdr-1.3.21-enaio/config.h
+--- vdr-1.3.21-vanilla/config.h	2005-02-08 13:22:14.000000000 +0200
++++ vdr-1.3.21-enaio/config.h	2005-02-13 18:22:49.989992712 +0200
+@@ -23,6 +23,8 @@
+ #define VDRVERSION  "1.3.21"
+ #define VDRVERSNUM   10321  // Version * 10000 + Major * 100 + Minor
+ 
++#define ENAIOVERSION 21
++
+ #define MAXPRIORITY 99
+ #define MAXLIFETIME 99
+ 
+@@ -254,6 +256,7 @@
+   int CurrentChannel;
+   int CurrentVolume;
+   int CurrentDolby;
++  int ShowRecDate, ShowRecTime, ShowRecLength, MenuCmdPosition, ShowProgressBar;
+   int __EndData__;
+   cSetup(void);
+   cSetup& operator= (const cSetup &s);
+diff -Nru vdr-1.3.21-vanilla/i18n.c vdr-1.3.21-enaio/i18n.c
+--- vdr-1.3.21-vanilla/i18n.c	2005-02-12 12:26:51.000000000 +0200
++++ vdr-1.3.21-enaio/i18n.c	2005-02-13 18:22:50.000991040 +0200
+@@ -5220,6 +5220,132 @@
+     "ST:TNG konsool",
+     "ST:TNG konsol",
+   },
++  { "Rename recording",
++    "Aufzeichnung umbenennen",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "Nime‰ tallenne",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "ø’‡’ÿ‹’›ﬁ“–‚Ï ◊–ﬂÿ·Ï",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++  },
++  { "Setup.OSD$Main Menu command position",
++    "Befehle Position im Hauptmen¸",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "Komentojen sijainti p‰‰valikossa",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "¿–◊‹’È’›ÿ’ ⁄ﬁ‹–›‘ “ ”€–“›ﬁ‹ ‹’›Ó",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++  },
++  { "Setup.EPG$Show progress bar",
++    "Zeitbalken anzeigen",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "N‰yt‰ aikajana",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++  },
++  { "Setup.Recording$Show date",
++    "Aufnahmedatum anzeigen",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "N‰yt‰ tallenteen p‰iv‰ys",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "øﬁ⁄–◊Î“–‚Ï ‘–‚„",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++  },
++  { "Setup.Recording$Show time",
++    "AufnahmeZeit anzeigen",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "N‰yt‰ tallenteen ajankohta",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "øﬁ⁄–◊Î“–‚Ï “‡’‹Ô ◊–ﬂÿ·ÿ",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++  },
++  { "Setup.Recording$Show length",
++    "L‰nge der Aufnahme anzeigen",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "N‰yt‰ tallenteen kesto",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "",//TODO
++    "øﬁ⁄–◊Î“–‚Ï ﬂ‡ﬁ‘ﬁ€÷ÿ‚’€Ï›ﬁ·‚Ï ◊–ﬂÿ·ÿ",
++    "",//TODO
++    "",//TODO
++    "",//TODO
++  },
+   { NULL }
+   };
+ 
+diff -Nru vdr-1.3.21-vanilla/menu.c vdr-1.3.21-enaio/menu.c
+--- vdr-1.3.21-vanilla/menu.c	2005-02-06 13:33:13.000000000 +0200
++++ vdr-1.3.21-enaio/menu.c	2005-02-13 18:22:50.009989672 +0200
+@@ -13,6 +13,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <math.h>
+ #include "channels.h"
+ #include "config.h"
+ #include "cutter.h"
+@@ -954,14 +955,33 @@
+ // --- cMenuWhatsOnItem ------------------------------------------------------
+ 
+ class cMenuWhatsOnItem : public cOsdItem {
++private:
++  static const char * const ProgressBar[7];
+ public:
+   const cEvent *event;
+   const cChannel *channel;
+   cMenuWhatsOnItem(const cEvent *Event, cChannel *Channel);
++  cMenuWhatsOnItem(const cEvent *Event, cChannel *Channel, bool Now);
++};
++
++const char * const cMenuWhatsOnItem::ProgressBar[7] =
++{
++  "[      ]",
++  "[|     ]",
++  "[||    ]",
++  "[|||   ]",
++  "[||||  ]",
++  "[||||| ]",
++  "[||||||]"
+ };
+ 
+ cMenuWhatsOnItem::cMenuWhatsOnItem(const cEvent *Event, cChannel *Channel)
+ {
++  cMenuWhatsOnItem(Event, Channel, false);
++}
++
++cMenuWhatsOnItem::cMenuWhatsOnItem(const cEvent *Event, cChannel *Channel, bool Now)
++{
+   event = Event;
+   channel = Channel;
+   char *buffer = NULL;
+@@ -969,7 +989,14 @@
+   char t = Timers.GetMatch(Event, &TimerMatch) ? (TimerMatch == tmFull) ? 'T' : 't' : ' ';
+   char v = event->Vps() && (event->Vps() - event->StartTime()) ? 'V' : ' ';
+   char r = event->IsRunning() ? '*' : ' ';
+-  asprintf(&buffer, "%d\t%.*s\t%s\t%c%c%c\t%s", channel->Number(), 6, channel->ShortName(true), *event->GetTimeString(), t, v, r, event->Title());
++  if (Now && Setup.ShowProgressBar) {
++     int progress = (int)roundf( (float)(time(NULL) - event->StartTime()) / (float)(event->Duration()) * 6.0 );
++     if (progress < 0) progress = 0;
++     else if (progress > 6) progress = 6;
++     asprintf(&buffer, "%.*s\t%.*s\t%s\t %c%c%c\t%s", 10, channel->ShortName(true), 5, *event->GetTimeString(), ProgressBar[progress], t, v, r, event->Title());
++     }
++  else
++     asprintf(&buffer, "%.*s\t%.*s\t%c%c%c\t%s", 10, channel->ShortName(true), 5, *event->GetTimeString(), t, v, r, event->Title());
+   SetText(buffer, false);
+ }
+ 
+@@ -993,7 +1020,7 @@
+ const cEvent *cMenuWhatsOn::scheduleEvent = NULL;
+ 
+ cMenuWhatsOn::cMenuWhatsOn(const cSchedules *Schedules, bool Now, int CurrentChannelNr)
+-:cOsdMenu(Now ? tr("What's on now?") : tr("What's on next?"), CHNUMWIDTH, 7, 6, 4)
++:cOsdMenu(Now ? tr("What's on now?") : tr("What's on next?"), 12, 6, 4, 4)
+ {
+   for (cChannel *Channel = Channels.First(); Channel; Channel = Channels.Next(Channel)) {
+       if (!Channel->GroupSep()) {
+@@ -1001,7 +1028,7 @@
+          if (Schedule) {
+             const cEvent *Event = Now ? Schedule->GetPresentEvent() : Schedule->GetFollowingEvent();
+             if (Event)
+-               Add(new cMenuWhatsOnItem(Event, Channel), Channel->Number() == CurrentChannelNr);
++               Add(new cMenuWhatsOnItem(Event, Channel, Now), Channel->Number() == CurrentChannelNr);
+             }
+          }
+       }
+@@ -1459,12 +1486,61 @@
+   SetText(buffer, false);
+ }
+ 
++// --- cMenuRenameRecording --------------------------------------------------
++
++class cMenuRenameRecording : public cOsdMenu {
++private:
++  int lifetime;
++  int priority;
++  char name[MaxFileName];
++  cRecording *recording;
++public:
++  cMenuRenameRecording(cRecording *Recording);
++  ~cMenuRenameRecording();
++  virtual eOSState ProcessKey(eKeys Key);
++  };
++
++cMenuRenameRecording::cMenuRenameRecording(cRecording *Recording)
++:cOsdMenu(tr("Rename recording"), 12)
++{
++  recording = Recording;
++  priority = recording->priority;
++  lifetime = recording->lifetime;
++  strn0cpy(name, recording->Name(), sizeof(name));
++
++  Add(new cMenuEditStrItem(tr("Name"),      name,     sizeof(name), tr(FileNameChars)));
++  Add(new cMenuEditIntItem(tr("Priority"), &priority, 0,            MAXPRIORITY      ));
++  Add(new cMenuEditIntItem(tr("Lifetime"), &lifetime, 0,            MAXLIFETIME      ));
++}
++
++cMenuRenameRecording::~cMenuRenameRecording()
++{
++}
++
++eOSState cMenuRenameRecording::ProcessKey(eKeys Key)
++{
++  eOSState state = cOsdMenu::ProcessKey(Key);
++
++  if (state == osUnknown) {
++     if (Key == kOk) {
++        if (recording->Rename(name, &priority, &lifetime)) {
++           Recordings.Load();
++           return osRecordings;
++           }
++        else
++           Skins.Message(mtError, tr("Error while accessing recording!"));
++        }
++     return osContinue;
++     }
++  return state;
++}
++
+ // --- cMenuRecordings -------------------------------------------------------
+ 
+ int cMenuRecordings::helpKeys = -1;
+ 
+ cMenuRecordings::cMenuRecordings(const char *Base, int Level, bool OpenSubMenus)
+-:cOsdMenu(Base ? Base : tr("Recordings"), 6, 6)
++:cOsdMenu(Base ? Base : tr("Recordings"), 6, 6, 6)
+ {
+   base = Base ? strdup(Base) : NULL;
+   level = Setup.RecordingDirs ? Level : -1;
+@@ -1665,6 +1741,19 @@
+   return osContinue;
+ }
+ 
++eOSState cMenuRecordings::Rename(void)
++{
++  if (HasSubMenu() || Count() == 0)
++     return osContinue;
++  cMenuRecordingItem *ri = (cMenuRecordingItem *)Get(Current());
++  if (ri && !ri->IsDirectory()) {
++     cRecording *recording = GetRecording(ri);
++     if (recording)
++        return AddSubMenu(new cMenuRenameRecording(recording));
++     }
++  return osContinue;
++}
++
+ eOSState cMenuRecordings::ProcessKey(eKeys Key)
+ {
+   bool HadSubMenu = HasSubMenu();
+@@ -1677,6 +1766,7 @@
+        case kGreen:  return Rewind();
+        case kYellow: return Delete();
+        case kBlue:   return Summary();
++       case k0:      return Rename();
+        case k1...k9: return Commands(Key);
+        default: break;
+        }
+@@ -1774,6 +1864,7 @@
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Scroll pages"),           &data.MenuScrollPage));
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Sort timers"),            &data.SortTimers));
+   Add(new cMenuEditBoolItem(tr("Setup.OSD$Recording directories"),  &data.RecordingDirs));
++  Add(new cMenuEditBoolItem(tr("Setup.OSD$Main Menu command position"), &data.MenuCmdPosition, tr("bottom"), tr("top")));
+   SetCurrent(Get(current));
+   Display();
+ }
+@@ -1850,6 +1941,7 @@
+   Add(new cMenuEditIntItem( tr("Setup.EPG$EPG scan timeout (h)"),      &data.EPGScanTimeout));
+   Add(new cMenuEditIntItem( tr("Setup.EPG$EPG bugfix level"),          &data.EPGBugfixLevel, 0, MAXEPGBUGFIXLEVEL));
+   Add(new cMenuEditIntItem( tr("Setup.EPG$EPG linger time (min)"),     &data.EPGLinger, 0));
++  Add(new cMenuEditBoolItem(tr("Setup.EPG$Show progress bar"),         &data.ShowProgressBar));
+   Add(new cMenuEditBoolItem(tr("Setup.EPG$Set system time"),           &data.SetSystemTime));
+   if (data.SetSystemTime)
+      Add(new cMenuEditTranItem(tr("Setup.EPG$Use time from transponder"), &data.TimeTransponder, &data.TimeSource));
+@@ -2157,6 +2249,9 @@
+   Add(new cMenuEditIntItem( tr("Setup.Recording$Instant rec. time (min)"),   &data.InstantRecordTime, 1, MAXINSTANTRECTIME));
+   Add(new cMenuEditIntItem( tr("Setup.Recording$Max. video file size (MB)"), &data.MaxVideoFileSize, MINVIDEOFILESIZE, MAXVIDEOFILESIZE));
+   Add(new cMenuEditBoolItem(tr("Setup.Recording$Split edited files"),        &data.SplitEditedFiles));
++  Add(new cMenuEditBoolItem(tr("Setup.Recording$Show date"),                 &data.ShowRecDate));
++  Add(new cMenuEditBoolItem(tr("Setup.Recording$Show time"),                 &data.ShowRecTime));
++  Add(new cMenuEditBoolItem(tr("Setup.Recording$Show length"),               &data.ShowRecLength));
+ }
+ 
+ // --- cMenuSetupReplay ------------------------------------------------------
+@@ -2398,6 +2493,35 @@
+   //XXX -> skin function!!!
+   SetTitle(buffer);
+ 
++  if (Setup.MenuCmdPosition) {
++  // Replay control:
++
++  if (replaying)
++     Add(new cOsdItem(tr(" Stop replaying"), osStopReplay));
++
++  // Record control:
++
++  if (cRecordControls::StopPrimary()) {
++     char *buffer = NULL;
++     asprintf(&buffer, "%s%s", STOP_RECORDING, ON_PRIMARY_INTERFACE);
++     Add(new cOsdItem(buffer, osStopRecord));
++     free(buffer);
++     }
++
++  const char *s = NULL;
++  while ((s = cRecordControls::GetInstantId(s)) != NULL) {
++        char *buffer = NULL;
++        asprintf(&buffer, "%s%s", STOP_RECORDING, s);
++        Add(new cOsdItem(buffer, osStopRecord));
++        free(buffer);
++        }
++
++  // Editing control:
++
++  if (cCutter::Active())
++     Add(new cOsdItem(tr(" Cancel editing"), osCancelEdit));
++  }
++
+   // Basic menu items:
+ 
+   Add(new cOsdItem(hk(tr("Schedule")),   osSchedule));
+@@ -2424,6 +2548,7 @@
+   if (Commands.Count())
+      Add(new cOsdItem(hk(tr("Commands")),  osCommands));
+ 
++  if (!Setup.MenuCmdPosition) {
+   // Replay control:
+ 
+   if (replaying)
+@@ -2450,6 +2575,7 @@
+ 
+   if (cCutter::Active())
+      Add(new cOsdItem(tr(" Cancel editing"), osCancelEdit));
++  }
+ 
+   // Color buttons:
+ 
+diff -Nru vdr-1.3.21-vanilla/menu.h vdr-1.3.21-enaio/menu.h
+--- vdr-1.3.21-vanilla/menu.h	2005-01-08 17:48:57.000000000 +0200
++++ vdr-1.3.21-enaio/menu.h	2005-02-13 18:22:50.011989368 +0200
+@@ -135,6 +135,7 @@
+   eOSState Delete(void);
+   eOSState Summary(void);
+   eOSState Commands(eKeys Key = kNone);
++  eOSState Rename(void);
+ public:
+   cMenuRecordings(const char *Base = NULL, int Level = 0, bool OpenSubMenus = false);
+   ~cMenuRecordings();
+diff -Nru vdr-1.3.21-vanilla/menuitems.c vdr-1.3.21-enaio/menuitems.c
+--- vdr-1.3.21-vanilla/menuitems.c	2004-11-21 15:24:10.000000000 +0200
++++ vdr-1.3.21-enaio/menuitems.c	2005-02-13 18:22:50.015988760 +0200
+@@ -15,6 +15,8 @@
+ #include "skins.h"
+ #include "status.h"
+ 
++#define SHIFTTIMEOUT 2
++
+ const char *FileNameChars = " abcdefghijklmnopqrstuvwxyz0123456789-.#~";
+ 
+ // --- cMenuEditItem ---------------------------------------------------------
+@@ -243,6 +245,9 @@
+   pos = -1;
+   insert = uppercase = false;
+   newchar = true;
++  ieCurChr = 0;
++  lastKey = kNone;
++  lastActivity = time(NULL);
+   Set();
+ }
+ 
+@@ -320,12 +325,24 @@
+ 
+ eOSState cMenuEditStrItem::ProcessKey(eKeys Key)
+ {
++  const char c1[] = "-.#~,/_@1";
++  const char c2[] = "abc‰Â·2";
++  const char c3[] = "defÈ3";
++  const char c4[] = "ghi4";
++  const char c5[] = "jkl5";
++  const char c6[] = "mnoˆÒÛ6";
++  const char c7[] = "pqrs7";
++  const char c8[] = "tuv¸˙8";
++  const char c9[] = "wxyz9";
++  const char c0[] = " 0";
++
+   switch (Key) {
+     case kRed:   // Switch between upper- and lowercase characters
+                  if (pos >= 0 && (!insert || !newchar)) {
+                     uppercase = !uppercase;
+                     value[pos] = uppercase ? toupper(value[pos]) : tolower(value[pos]);
+                     }
++                 lastKey = Key;
+                  break;
+     case kGreen: // Toggle insert/overwrite modes
+                  if (pos >= 0) {
+@@ -333,6 +350,7 @@
+                     newchar = true;
+                     SetHelpKeys();
+                     }
++                 lastKey = Key;
+                  break;
+     case kYellow|k_Repeat:
+     case kYellow: // Remove the character at current position; in insert mode it is the character to the right of cursor
+@@ -350,6 +368,7 @@
+                        uppercase = isupper(value[pos]);
+                     newchar = true;
+                     }
++                 lastKey = Key;
+                  break;
+     case kLeft|k_Repeat:
+     case kLeft:  if (pos > 0) {
+@@ -359,6 +378,7 @@
+                     }
+                  if (!insert && isalpha(value[pos]))
+                     uppercase = isupper(value[pos]);
++                 lastKey = Key;
+                  break;
+     case kRight|k_Repeat:
+     case kRight: if (pos < length - 2 && pos < int(strlen(value)) ) {
+@@ -376,6 +396,7 @@
+                     uppercase = isupper(value[pos]);
+                  if (pos == 0)
+                     SetHelpKeys();
++                 lastKey = Key;
+                  break;
+     case kUp|k_Repeat:
+     case kUp:
+@@ -396,9 +417,151 @@
+                     }
+                  else
+                     return cMenuEditItem::ProcessKey(Key);
++                 lastKey = Key;
++                 break;
++    case k0|k_Repeat ... k9|k_Repeat:
++    case k0 ... k9: if ((Key != lastKey) || ((Key == lastKey) && (time(NULL) - lastActivity > SHIFTTIMEOUT)) ) {
++                    ieCurChr = 0;
++                    if (!newchar) {
++                       // kRight
++                       if (pos < length - 2 && pos < int(strlen(value)) ) {
++                          if (++pos >= int(strlen(value))) {
++                             if (pos >= 2 && value[pos - 1] == ' ' && value[pos - 2] == ' ')
++                                pos--; // allow only two blanks at the end
++                             else {
++                                value[pos] = ' ';
++                                value[pos + 1] = 0;
++                                }
++                             }
++                          }
++                       newchar = true;
++                       if (!insert && isalpha(value[pos]))
++                          uppercase = isupper(value[pos]);
++                       }
++                    }
++                 // kUp/kDown
++                 if (pos >= 0) {
++                    if (insert && newchar) {
++                       // create a new character in insert mode
++                       if (int(strlen(value)) < length - 1) {
++                          memmove(value + pos + 1, value + pos, strlen(value) - pos + 1);
++                          value[pos] = ' ';
++                          }
++                       }
++                    }
++                 else
++                    return cMenuEditItem::ProcessKey(Key);
++                 switch (Key) {
++                    case k1:
++                         if (uppercase)
++                            value[pos] = toupper(c1[ieCurChr]);
++                         else
++                            value[pos] =         c1[ieCurChr];
++                         if (c1[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k2:
++                         if (uppercase)
++                            value[pos] = toupper(c2[ieCurChr]);
++                         else
++                            value[pos] =         c2[ieCurChr];
++                         if (c2[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k3:
++                         if (uppercase)
++                            value[pos] = toupper(c3[ieCurChr]);
++                         else
++                            value[pos] =         c3[ieCurChr];
++                         if (c3[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k4:
++                         if (uppercase)
++                            value[pos] = toupper(c4[ieCurChr]);
++                         else
++                            value[pos] =         c4[ieCurChr];
++                         if (c4[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k5:
++                         if (uppercase)
++                            value[pos] = toupper(c5[ieCurChr]);
++                         else
++                            value[pos] =         c5[ieCurChr];
++                         if (c5[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k6:
++                         if (uppercase)
++                            value[pos] = toupper(c6[ieCurChr]);
++                         else
++                            value[pos] =         c6[ieCurChr];
++                         if (c6[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k7:
++                         if (uppercase)
++                            value[pos] = toupper(c7[ieCurChr]);
++                         else
++                            value[pos] =         c7[ieCurChr];
++                         if (c7[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k8:
++                         if (uppercase)
++                            value[pos] = toupper(c8[ieCurChr]);
++                         else
++                            value[pos] =         c8[ieCurChr];
++                         if (c8[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k9:
++                         if (uppercase)
++                            value[pos] = toupper(c9[ieCurChr]);
++                         else
++                            value[pos] =         c9[ieCurChr];
++                         if (c9[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    case k0:
++                         if (uppercase)
++                            value[pos] = toupper(c0[ieCurChr]);
++                         else
++                            value[pos] =         c0[ieCurChr];
++                         if (c0[ieCurChr+1] == 0)
++                            ieCurChr = 0;
++                         else
++                            ieCurChr++;
++                         break;
++                    default:
++                         break;
++                    }
++                 lastKey = Key;
++                 newchar = false;
++                 lastActivity = time(NULL);
+                  break;
+     case kOk:    if (pos >= 0) {
+                     pos = -1;
++                    lastKey = Key;
+                     newchar = true;
+                     stripspace(value);
+                     SetHelpKeys();
+diff -Nru vdr-1.3.21-vanilla/menuitems.h vdr-1.3.21-enaio/menuitems.h
+--- vdr-1.3.21-vanilla/menuitems.h	2004-11-21 15:23:00.000000000 +0200
++++ vdr-1.3.21-enaio/menuitems.h	2005-02-13 18:22:50.017988456 +0200
+@@ -82,6 +82,9 @@
+   char *allowed;
+   int pos;
+   bool insert, newchar, uppercase;
++  int ieCurChr;
++  eKeys lastKey;
++  time_t lastActivity;
+   void SetHelpKeys(void);
+   virtual void Set(void);
+   char Inc(char c, bool Up);
+diff -Nru vdr-1.3.21-vanilla/osdbase.c vdr-1.3.21-enaio/osdbase.c
+--- vdr-1.3.21-vanilla/osdbase.c	2005-01-07 18:16:41.000000000 +0200
++++ vdr-1.3.21-enaio/osdbase.c	2005-02-13 18:22:50.019988152 +0200
+@@ -71,6 +71,8 @@
+ {
+   isMenu = true;
+   digit = 0;
++  key_nr = -1;
++  lastActivity = time(NULL);
+   hasHotkeys = false;
+   title = NULL;
+   SetTitle(Title);
+@@ -109,7 +111,7 @@
+         digit = -1; // prevents automatic hotkeys - input already has them
+      if (digit >= 0) {
+         digit++;
+-        snprintf(buffer, sizeof(buffer), " %c %s", (digit < 10) ? '0' + digit : ' ' , s);
++        snprintf(buffer, sizeof(buffer), " %2d%s %s", digit, (digit > 9) ? "" : " ", s);
+         s = buffer;
+         }
+      }
+@@ -343,18 +345,60 @@
+      }
+ }
+ 
++#define MENUKEYTIMEOUT 1
++
+ eOSState cOsdMenu::HotKey(eKeys Key)
+ {
+-  for (cOsdItem *item = First(); item; item = Next(item)) {
++  bool match = false;
++  bool highlight = false;
++  int  item_nr;
++  int  i;
++
++  if (Key == kNone) {
++     if ((time(NULL) - lastActivity) >= MENUKEYTIMEOUT)
++        Key = kOk;
++     else
++        return osContinue;
++     }
++  else {
++     lastActivity = time(NULL);
++     }
++  for (cOsdItem *item = Last(); item; item = Prev(item)) {
+       const char *s = item->Text();
+-      if (s && (s = skipspace(s)) != NULL) {
+-         if (*s == Key - k1 + '1') {
++      i = 0;
++      item_nr = 0;
++      if (s && (s = skipspace(s)) != '\0' && '0' <= s[i] && s[i] <= '9') {
++         do {
++            item_nr = item_nr * 10 + (s[i] - '0');
++            }
++         while ( !((s[++i] == '\t')||(s[i] == ' ')) && (s[i] != '\0') && ('0' <= s[i]) && (s[i] <= '9'));
++         if ((Key == kOk) && (item_nr == key_nr)) {
+             current = item->Index();
+             cRemote::Put(kOk, true);
++            key_nr = -1;
+             break;
+             }
++         else if (Key != kOk) {
++            if (!highlight && (item_nr == (Key - k0))) {
++               highlight = true;
++               current = item->Index();
++               }
++            if (!match && (key_nr == -1) && ((item_nr / 10) == (Key - k0))) {
++               match = true;
++               key_nr = (Key - k0);
++               }
++            else if (((key_nr == -1) && (item_nr == (Key - k0))) || (!match && (key_nr >= 0) && (item_nr == (10 * key_nr + Key - k0)))) {
++               current = item->Index();
++               cRemote::Put(kOk, true);
++               key_nr = -1;
++               break;
++               }
++            }
+          }
+       }
++  if ((!match) && (Key != kNone)) {
++     key_nr = -1;
++     }
+   return osContinue;
+ }
+ 
+@@ -393,7 +437,8 @@
+         }
+      }
+   switch (Key) {
+-    case k1...k9: return hasHotkeys ? HotKey(Key) : osUnknown;
++    case kNone:
++    case k0...k9: return hasHotkeys ? HotKey(Key) : osUnknown;
+     case kUp|k_Repeat:
+     case kUp:   CursorUp();   break;
+     case kDown|k_Repeat:
+diff -Nru vdr-1.3.21-vanilla/osdbase.h vdr-1.3.21-enaio/osdbase.h
+--- vdr-1.3.21-vanilla/osdbase.h	2004-04-30 16:40:11.000000000 +0300
++++ vdr-1.3.21-enaio/osdbase.h	2005-02-13 18:22:50.020988000 +0200
+@@ -95,6 +95,8 @@
+   char *status;
+   int digit;
+   bool hasHotkeys;
++  int key_nr;
++  time_t lastActivity;
+ protected:
+   cSkinDisplayMenu *DisplayMenu(void) { return displayMenu; }
+   const char *hk(const char *s);
+diff -Nru vdr-1.3.21-vanilla/recording.c vdr-1.3.21-enaio/recording.c
+--- vdr-1.3.21-vanilla/recording.c	2005-02-12 12:17:47.000000000 +0200
++++ vdr-1.3.21-enaio/recording.c	2005-02-13 18:22:50.025987240 +0200
+@@ -47,6 +47,7 @@
+ #define RESUMEFILESUFFIX  "/resume%s%s.vdr"
+ #define SUMMARYFILESUFFIX "/summary.vdr"
+ #define MARKSFILESUFFIX   "/marks.vdr"
++#define INDEXFILESUFFIX   "/index.vdr"
+ 
+ #define MINDISKSPACE 1024 // MB
+ 
+@@ -490,7 +491,7 @@
+   return fileName;
+ }
+ 
+-const char *cRecording::Title(char Delimiter, bool NewIndicator, int Level) const
++const char *cRecording::Title(char Delimiter, bool NewIndicator, int Level, bool Original) const
+ {
+   char New = NewIndicator && IsNew() ? '*' : ' ';
+   free(titleBuffer);
+@@ -503,6 +504,7 @@
+         s++;
+      else
+         s = name;
++     if (Original) {
+      asprintf(&titleBuffer, "%02d.%02d%c%02d:%02d%c%c%s",
+                             t->tm_mday,
+                             t->tm_mon + 1,
+@@ -512,6 +514,55 @@
+                             New,
+                             Delimiter,
+                             s);
++        }
++     else {
++        struct tIndex { int offset; uchar type; uchar number; short reserved; };
++        tIndex *index;
++        char RecLength[21], RecDate[6], RecTime[6], RecDelimiter[2];
++        if (Setup.ShowRecLength) {
++           char *filename = NULL;
++           int last = -1;
++           index = NULL;
++           if (FileName()) {
++              filename = MALLOC(char, strlen(FileName()) + strlen(INDEXFILESUFFIX) + 1);
++              if (filename) {
++                 strcpy(filename, FileName());
++                 char *pFileExt = filename + strlen(filename);
++                 strcpy(pFileExt, INDEXFILESUFFIX);
++                 int delta = 0;
++                 if (access(filename, R_OK) == 0) {
++                    struct stat buf;
++                    if (stat(filename, &buf) == 0) {
++                       delta = buf.st_size % sizeof(tIndex);
++                       if (delta) {
++                          delta = sizeof(tIndex) - delta;
++                          esyslog("ERROR: invalid file size (%ld) in '%s'", buf.st_size, filename);
++                          }
++                       last = (buf.st_size + delta) / sizeof(tIndex) - 1;
++                       char hour[2], min[3];
++                       snprintf(RecLength, sizeof(RecLength), "%s", *IndexToHMSF(last, true));
++                       snprintf(hour, sizeof(hour), "%c", RecLength[0]);
++                       snprintf(min, sizeof(min), "%c%c", RecLength[2], RecLength[3]);	  
++                       snprintf(RecLength, sizeof(RecLength), "%d'", (atoi(hour) * 60) + atoi(min));
++                       }
++                    }
++                 free(filename);
++                 }
++              }
++           }
++        snprintf(RecDate, sizeof(RecDate), "%02d.%02d", t->tm_mday, t->tm_mon + 1);
++        snprintf(RecTime, sizeof(RecTime), "%02d:%02d", t->tm_hour, t->tm_min);
++        snprintf(RecDelimiter, sizeof(RecDelimiter), "%c", Delimiter);
++        asprintf(&titleBuffer, "%s%s%s%c%s%s%s%s",
++                               (Setup.ShowRecDate ? RecDate                               : ""),
++                               (Setup.ShowRecDate ? Setup.ShowRecTime ? RecDelimiter : "" : ""),
++                               (Setup.ShowRecTime ? RecTime                               : ""),
++                               New,
++                               (Setup.ShowRecTime   ? RecDelimiter : Setup.ShowRecDate ? RecDelimiter : ""),
++                               (Setup.ShowRecLength ? RecLength    : ""),
++                               (Setup.ShowRecLength ? RecDelimiter : ""),
++                               s);
++        }
+      // let's not display a trailing '~':
+      stripspace(titleBuffer);
+      s = &titleBuffer[strlen(titleBuffer) - 1];
+@@ -616,6 +667,38 @@
+   return RemoveVideoFile(FileName());
+ }
+ 
++bool cRecording::Rename(char *newName, int *newPriority, int *newLifetime)
++{
++  bool result = true;
++  char *newFileName;
++  struct tm tm_r;
++  struct tm *t = localtime_r(&start, &tm_r);
++#ifdef VFAT
++  char *localNewName = ExchangeChars(strdup(newName), true);
++  asprintf(&newFileName, NAMEFORMAT, VideoDirectory, localNewName, t->tm_year + 1900, t->tm_mon + 1, t->tm_mday, t->tm_hour, t->tm_min, *newPriority, *newLifetime);
++  free (localNewName);
++#else
++  asprintf(&newFileName, NAMEFORMAT, VideoDirectory, ExchangeChars(newName, true), t->tm_year + 1900, t->tm_mon + 1, t->tm_mday, t->tm_hour, t->tm_min, *newPriority, *newLifetime);
++#endif
++  if (strcmp(FileName(), newFileName)) {
++     if (access(newFileName, F_OK) == 0) {
++        isyslog("recording %s already exists", newFileName);
++        }
++     else {
++        isyslog("renaming recording %s to %s", FileName(), newFileName);
++        result = MakeDirs(newFileName, true);
++        if (result)
++           result = RenameVideoFile(FileName(), newFileName);
++        if (result) {
++           free(fileName);
++           fileName = strdup(newFileName);
++           }
++        }
++     }
++  free(newFileName);
++  return result;
++}
++
+ // --- cRecordings -----------------------------------------------------------
+ 
+ cRecordings Recordings;
+@@ -822,8 +905,6 @@
+ //XXX+ somewhere else???
+ // --- cIndexFile ------------------------------------------------------------
+ 
+-#define INDEXFILESUFFIX     "/index.vdr"
+-
+ // The number of frames to stay off the end in case of time shift:
+ #define INDEXSAFETYLIMIT 150 // frames
+ 
+diff -Nru vdr-1.3.21-vanilla/recording.h vdr-1.3.21-enaio/recording.h
+--- vdr-1.3.21-vanilla/recording.h	2005-01-16 17:11:31.000000000 +0200
++++ vdr-1.3.21-enaio/recording.h	2005-02-13 18:22:50.028986784 +0200
+@@ -53,7 +53,7 @@
+   virtual int Compare(const cListObject &ListObject) const;
+   const char *Name(void) const { return name; }
+   const char *FileName(void) const;
+-  const char *Title(char Delimiter = ' ', bool NewIndicator = false, int Level = -1) const;
++  const char *Title(char Delimiter = ' ', bool NewIndicator = false, int Level = -1, bool Original = false) const;
+   const char *Summary(void) const { return summary; }
+   const char *PrefixFileName(char Prefix);
+   int HierarchyLevels(void) const;
+@@ -66,6 +66,9 @@
+   bool Remove(void);
+        // Actually removes the file from the disk
+        // Returns false in case of error
++  bool Rename(char *newName, int *newPriority, int *newLifetime);
++       // Changes the file name
++       // Returns false in case of error
+   };
+ 
+ class cRecordings : public cList<cRecording> {
+diff -Nru vdr-1.3.21-vanilla/svdrp.c vdr-1.3.21-enaio/svdrp.c
+--- vdr-1.3.21-vanilla/svdrp.c	2004-12-26 14:23:55.000000000 +0200
++++ vdr-1.3.21-enaio/svdrp.c	2005-02-13 18:22:50.031986328 +0200
+@@ -816,7 +816,7 @@
+   else if (recordings) {
+      cRecording *recording = Recordings.First();
+      while (recording) {
+-           Reply(recording == Recordings.Last() ? 250 : -250, "%d %s", recording->Index() + 1, recording->Title(' ', true));
++           Reply(recording == Recordings.Last() ? 250 : -250, "%d %s", recording->Index() + 1, recording->Title(' ', true, -1, true));
+            recording = Recordings.Next(recording);
+            }
+      }
+diff -Nru vdr-1.3.21-vanilla/tools.c vdr-1.3.21-enaio/tools.c
+--- vdr-1.3.21-vanilla/tools.c	2005-02-05 12:10:30.000000000 +0200
++++ vdr-1.3.21-enaio/tools.c	2005-02-13 18:22:50.034985872 +0200
+@@ -556,7 +556,7 @@
+      time(&t);
+   struct tm tm_r;
+   tm *tm = localtime_r(&t, &tm_r);
+-  snprintf(buffer, sizeof(buffer), "%s %2d.%02d %02d:%02d", *WeekDayName(tm->tm_wday), tm->tm_mday, tm->tm_mon + 1, tm->tm_hour, tm->tm_min);
++  snprintf(buffer, sizeof(buffer), "%s %02d.%02d %02d:%02d", *WeekDayName(tm->tm_wday), tm->tm_mday, tm->tm_mon + 1, tm->tm_hour, tm->tm_min);
+   return buffer;
+ }
+ 

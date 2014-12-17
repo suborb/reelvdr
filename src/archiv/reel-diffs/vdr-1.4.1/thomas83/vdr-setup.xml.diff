@@ -1,0 +1,10 @@
+--- vdr-setup.xml	2006-08-09 13:17:24.000000000 +0200
++++ vdr-setup.xml-new	2006-08-15 12:20:22.319591056 +0200
+@@ -13,7 +13,6 @@
+ <menu name="Installation" command="/bin/true">
+ 	<menu plugin="install" />
+ 	<menu name="LNB / DiSEqC" system="LNB" />
+-	<menu plugin="rotor" />
+ 	<menu plugin="femon" />
+ 	<menu plugin="channelscan" />
+ 	<menu plugin="formathd" />

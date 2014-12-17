@@ -1,0 +1,142 @@
+#
+# searches for a disk-image on a USB device to recover internal USB-Stick
+#                      -*- shell-script -*-
+#
+# V 0.1 - 26.03.12 by RC
+#
+# TODO: let red led blink during flashing or any other response
+#
+
+
+. /scripts/functions
+
+loglevel=1  # 0=errors 1=info 2=more info 3=debug 4=more debug
+
+Log () {
+        if [ $1 -le $loglevel ] ; then
+                shift
+                if [ "$1" = "-c" ]; then
+		    shift
+		    $@
+		else
+		    echo $* >&2
+                fi
+                #logger -t $MyName -s $*
+        fi
+}
+
+
+Log "initramfs: Checking for a recovery-image on USB devices..."
+tstart=$(date +%s)
+
+Log 3 "disks by label:"
+Log 3 -c ls -l /dev/disk/by-label/
+
+Log 3 "disks by path:"
+Log 3 -c ls -l /dev/disk/by-path/
+
+Log 3 "disks by id:"
+Log 3 -c ls -l /dev/disk/by-id/
+
+Log 3 "blkids:"
+Log 3 -c blkid
+
+root_dev=""
+device_list=""
+image=""
+
+REELFPCTRL=/sbin/reelfpctl1
+
+$REELFPCTRL -blinkled 2
+
+GetRootDevice () {
+    root_dev=$(blkid | grep ReelBox_ICE | cut -f1 -d: | tr -d [0-9])
+    root_dev_count=$(echo $root_dev | wc -l)
+
+    if [ $root_dev_count = 0 ] ; then
+	    Log 0 "no device found labeled ReelBox_ICE. Don\'t know where to write the image."
+	    Log 0 "You will have to manually restore the stick. Sorry."
+	    exit 2
+    fi
+
+    if [ $root_dev_count -gt 1 ] ; then
+	    Log 0 "found more than one device labeled ReelBox_ICE. Don\'t know where to write the image."
+	    Log 0 "You will have to manually restore the stick. Sorry."
+	    exit 2
+    fi
+    Log 2 "Root device we will boot from: $root_dev"
+}
+
+GetDevices () {
+    #get devices in system. we dont need to check the root device and its partitions
+    device_list=$(blkid | grep -v $root_dev |cut -f1 -d:)
+}
+
+SearchImage () {
+    Debug "device to check for image: $device_list"
+    for dev in $device_list ; do
+	    Log 3 "checking for image on $dev"
+	    #TODO: possibly only check removeable disks, this could speed up booting speed
+	    #it's intended here to not do a fsck before. Therefor some fs could not be useable
+	    #but speeds up things
+	    [ -d /mnt ] || mkdir /mnt
+	    mount $dev /mnt
+	    #we only need the latest image (by name)
+	    image=$(ls /mnt/*.img.gz /mnt/*.img.bz2 2>/dev/null | sort | tail -1)
+	    if [ -s "$image" ] ; then
+		    log_success_msg "found recovery image $image on $dev"
+		    #todo: md5sum check
+		    return `true`
+		    break
+	    else
+		    Log 3 "no image on device $dev"
+		    umount /mnt
+	    fi
+    done
+    return `false`
+}
+
+WaitForDevice () {
+    j=0
+    while [ $j -lt $1 ] ; do
+	j=$((j+1))
+	sleep 1
+	echo "slept $j secs"
+    done
+    Log 3 "done waiting for devices"
+}
+
+
+#
+# Main
+#
+
+WaitForDevice 0
+GetRootDevice
+GetDevices
+SearchImage
+
+if [ -s "$image" ] ; then
+	log_begin_msg "writing `basename $image` -> $root_dev. Dont stop this process, dont power off the box"
+	case ${image##*.} in
+	    gz)
+		"zcat $image > $root_dev"
+		;;
+	    bz2)
+		"bzcat $image > $root_dev"
+		;;
+	esac
+	#rename file so it is not written on next reboot
+	mv $image $image.done
+	#echo "Don ewriting new image. Rebooting now."
+	#reboot
+	umount /mnt
+	log_end_msg "Done writing new image. Continuing boot."
+else
+	log_warning_msg "no useable recovery image found"
+	tend=$(date +%s)
+	tlast=$(($tend-$tstart))
+fi
+
+$REELFPCTRL -clearled 6
+Log 2 "recovery-tool took $tlast seconds"

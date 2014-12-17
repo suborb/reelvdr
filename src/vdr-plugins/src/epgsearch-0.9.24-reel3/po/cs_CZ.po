@@ -1,0 +1,1310 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-epgsearch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-11-22 07:16+0000\n"
+"PO-Revision-Date: 2009-03-08 19:09+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel groups"
+msgstr "Channel groups"
+
+#, fuzzy
+msgid "Channel group used by:"
+msgstr "Skupina kanálů používána:"
+
+msgid "Edit$Delete group?"
+msgstr "Odstranit skupinu?"
+
+msgid "Edit channel group"
+msgstr "Upravit skupinu kanálů"
+
+msgid "Group name"
+msgstr "Název skupiny"
+
+msgid "Button$Invert selection"
+msgstr "Invertovat výběr"
+
+msgid "Button$All yes"
+msgstr "Vše ano"
+
+msgid "Button$All no"
+msgstr "Vše ne"
+
+msgid "Group name is empty!"
+msgstr "Název skupiny je prázdný!"
+
+msgid "Group name already exists!"
+msgstr "Název skupiny již existuje!"
+
+#, c-format
+msgid "%d timer conflict(s)! First at %s. Show them?"
+msgstr "%d konfliktů časovačů! První v %s. Zobrazit?"
+
+msgid "Direct access to epgsearch's conflict check menu"
+msgstr "Přímý přístup k nabídce kontroly konfliktů modulu epgsearch"
+
+msgid "Timer conflicts"
+msgstr "Konflikty časovačů"
+
+msgid "Conflict info in main menu"
+msgstr "Inf. o konfliktu v hlavní nabídce"
+
+msgid "next"
+msgstr "další"
+
+msgid "search the EPG for repeats and more"
+msgstr "Hledat v EPG reprízy a další"
+
+msgid "TV-Guide (EPG)"
+msgstr "TV průvodce (EPG)"
+
+msgid "Direct access to epgsearch's search menu"
+msgstr "Přímý přístup k nabídce hledání modulu epgsearch"
+
+msgid "Search-Timer Manager"
+msgstr "Správce časovačů hledání"
+
+msgid "EpgSearch-Search in main menu"
+msgstr "Hledání v EPG v hlavní nabídce"
+
+msgid "Button$Help"
+msgstr "Nápověda"
+
+msgid "Standard"
+msgstr "Standardní"
+
+#, fuzzy
+msgid "Button$Commands"
+msgstr "Příkazy"
+
+msgid "Button$Search"
+msgstr "Hledat"
+
+msgid "pipes"
+msgstr "čárky"
+
+msgid "graphical"
+msgstr "grafický"
+
+msgid "never"
+msgstr "nikdy"
+
+msgid "always"
+msgstr "vždy"
+
+msgid "smart"
+msgstr "inteligentní"
+
+msgid "before user-def. times"
+msgstr "před uživ. časy"
+
+msgid "after user-def. times"
+msgstr "po uživ. časech"
+
+msgid "before 'next'"
+msgstr ""
+
+msgid "Standard EPG"
+msgstr "Standardní EPG"
+
+msgid "Use 'OK Button' for opening and closing menus"
+msgstr ""
+
+msgid "General"
+msgstr "Obecné"
+
+msgid "EPG menus"
+msgstr "Nabídky EPG"
+
+msgid "User-defined EPG times"
+msgstr "Uživatelské časy EPG"
+
+msgid "Timer programming"
+msgstr "Programování časovačů"
+
+msgid "Search and search timers"
+msgstr "Hledání a časovače hledání"
+
+msgid "Timer conflict checking"
+msgstr "Kontrola konfliktů časovačů"
+
+msgid "Main menu entry"
+msgstr "Položka hlavní nabídky"
+
+msgid "Help$The name of the main menu entry which defaults to 'Programm guide'."
+msgstr "Název položky hlavní nabídky, ve výchozím nastavení Programový průvodce"
+
+msgid "Start menu"
+msgstr "Počáteční nabídka"
+
+msgid "Help$Choose between 'Overview - Now' and 'Schedule' as start menu when this plugin is called."
+msgstr "Zvolte počáteční nabídku tohoto modulu: Přehled - nyní nebo Program."
+
+msgid "Ok key"
+msgstr "Tlačítko OK"
+
+msgid ""
+"Help$Choose here the behaviour of key 'Ok'. You can use it to display the summary or to switch to the corresponding channel.\n"
+"Note: the functionality of key 'blue' (Switch/Info/Search) depends on this setting."
+msgstr ""
+"Zvolte chování tlačítka OK. Lze pomocí něj zobrazit shrnutí nebo přepnout na příslušný kanál.\n"
+"Poznámka: Na tomto nastavení závisí funkce modrého tlačítka (Přepnout/Informace/Hledat)."
+
+msgid "Show channel numbers"
+msgstr "Zobrazovat čísla kanálů"
+
+msgid ""
+"Help$Display channel numbers in 'Overview - Now'.\n"
+"\n"
+"(To completely define your own menu look please inspect the MANUAL)"
+msgstr ""
+"Zobrazovat na obrazovce Přehled - nyní čísla kanálů.\n"
+"\n"
+"(Pokyny k vytvoření vlastního vzhledu nabídky najdete v příručce.)"
+
+#, fuzzy
+msgid "Show bouquet separators"
+msgstr "Zobrazovat oddělovače dní"
+
+msgid "Help$Display VDR channel groups as separators between your channels in 'Overview - Now'."
+msgstr "Zobrazovat skupiny kanálů VDR jako oddělovače mezi kanály na obrazovce Přehled - nyní."
+
+msgid "Show day separators"
+msgstr "Zobrazovat oddělovače dní"
+
+msgid "Help$Display a separator line at day break in 'Schedule'."
+msgstr "Zobrazovat na obrazovce Program oddělovače dní."
+
+msgid "Show radio channels"
+msgstr "Zobrazovat rádiové kanály"
+
+msgid "Help$Show also radio channels."
+msgstr "Zobrazovat také rádiové kanály."
+
+msgid "Limit channels from 1 to"
+msgstr "Omezit kanály od 1 do"
+
+msgid "Help$If you have a large channel set you can speed up things when you limit the displayed channels with this setting. Use '0' to disable the limit."
+msgstr "Máte-li mnoho kanálů, lze tímto nastavením omezit zobrazené kanály a tím urychlit systém. Zadáním hodnoty 0 limit zakážete."
+
+msgid "'One press' timer creation"
+msgstr "Vytvoření časovače jedním stisknutím"
+
+msgid "Help$When a timer is created with 'Record' you can choose between an immediate creation of the timer or the display of the timer edit menu."
+msgstr "Zvolte, zda při vytváření časovače pomocí tlačítka Nahrát má být okamžitě vytvořen časovač nebo se má zobrazit nabídka pro úpravu časovačů."
+
+msgid "Time interval for FRew/FFwd [min]"
+msgstr "Časový interval pro FRew/FFwd (min.)"
+
+msgid ""
+"Help$Choose here the time interval which should be used for jumping through the EPG by pressing FRew/FFwd.\n"
+"\n"
+"(If you don't have those keys, you can toggle to this functionality pressing '0' and get '<<' and '>>' on the keys green and yellow)"
+msgstr ""
+"Zvolte časový interval, který má být použit při procházení EPG pomocí tlačítka FRew nebo FFwd.\n"
+"\n"
+"(Pokud tato tlačítka nemáte, lze na tuto funkci přepnout stisknutím tlačítka 0. Na zeleném a žlutém tlačítku se pak zobrazí << a >>.)"
+
+msgid "Toggle Green/Yellow"
+msgstr "Přepnout zelené/žluté"
+
+msgid "Help$Specify if green and yellow shall also be switched when pressing '0'."
+msgstr "Zadejte, zda při stisknutí tlačítka 0 má být přepnuto také zelené a žluté tlačítko."
+
+msgid "Show favorites menu"
+msgstr "Zobrazit nabídku Oblíbené"
+
+msgid ""
+"Help$A favorites menu can display a list of your favorite broadcasts. Enable this if you want an additional menu besides 'Now' and 'Next'\n"
+"Any search can be used as a favorite. You only have to set the option 'Use in favorites menu' when editing a search."
+msgstr ""
+"V nabídce Oblíbené může být zobrazen seznam vašich oblíbených pořadů. Tuto možnost povolte, chcete-li získat další nabídku kromě položek Nyní a Další.\n"
+"Jako oblíbenou položku lze použít kterékoli hledání. Stačí při úpravě hledání nastavit možnost Použít v nabídce Oblíbené."
+
+msgid "for the next ... hours"
+msgstr "pro dalších ... hodin"
+
+msgid "Help$This value controls the timespan used to display your favorites."
+msgstr "Tato hodnota řídí časový interval použitý k zobrazení oblíbených položek."
+
+msgid "Use user-defined time"
+msgstr "Použít uživatelský čas"
+
+msgid "Help$Besides 'Now' and 'Next' you can specify up to 4 other times in the EPG which can be used by repeatedly pressing the green key, e.g. 'prime time', 'late night',..."
+msgstr "Kromě položek Nyní a Další lze v EPG zadat až čtyři další časy, které je možné použít opakovaným stisknutím zeleného tlačítka, např. hlavní čas, noc atd."
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Help$This is the description for your user-defined time as it will appear as label on the green button."
+msgstr "Toto je popis uživatelského času, který bude zobrazen jako popisek zeleného tlačítka."
+
+msgid "Time"
+msgstr "Čas"
+
+msgid "Help$Specify the user-defined time here in 'HH:MM'."
+msgstr "Zde zadejte uživatelský čas ve formát HH:MM."
+
+msgid "Default recording dir"
+msgstr "Výchozí adresář nahrávání"
+
+msgid "Help$When creating a timer you can specify here a default recording directory."
+msgstr "Při vytváření časovače zde můžete zadat výchozí adresář pro nahrávání."
+
+msgid "Add episode to manual timers"
+msgstr "Přidat k ručním časovačům epizodu"
+
+msgid ""
+"Help$If you create a timer for a series, you can automatically add the episode name.\n"
+"\n"
+"- never: no addition\n"
+"- always: always add episode name if present\n"
+"- smart: add only if event lasts less than 80 mins."
+msgstr ""
+"Pokud vytváříte časovač seriálu, lze automaticky přidat název epizody.\n"
+"\n"
+"- nikdy: bez přidání\n"
+"- vždy: vždy přidat název epizody, je-li k dispozici\n"
+"- inteligentní: přidat, jen pokud událost trvá méně než 80 minut"
+
+msgid "Button$Select"
+msgstr "Vybrat"
+
+msgid "Default timer check method"
+msgstr "Výchozí metoda kontroly časovačů"
+
+msgid "Use search timers"
+msgstr "Používat časovače hledání"
+
+msgid "Help$'Search timers' can be used to automatically create timers for events that match your search criterions."
+msgstr "Pomocí časovačů hledání lze automaticky vytvářet časovače událostí, které odpovídají kritériím hledání."
+
+msgid "  Update interval [min]"
+msgstr "  Interval aktualizace (min.)"
+
+msgid "Help$Specify here the time intervall to be used when searching for events in the background."
+msgstr "Zde zadejte časový interval, který má být použit při hledání událostí na pozadí."
+
+msgid "Help$Specify here the default lifetime of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Zde zadejte výchozí životnost časovačů a nahrávek vytvořených tímto modulem. Tuto hodnotu lze také upravit pro každé hledání."
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Časová rezerva na začátku (min.)"
+
+msgid "Help$Specify here the default start recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Zde zadejte výchozí časovou rezervu na začátku nahrávání pro časovače a nahrávky vytvořené tímto modulem. Tuto hodnotu lze také upravit pro každé hledání."
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Časová rezerva na konci (min.)"
+
+msgid "Help$Specify here the default stop recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Zde zadejte výchozí časovou rezervu na konci nahrávání pro časovače a nahrávky vytvořené tímto modulem. Tuto hodnotu lze také upravit pro každé hledání."
+
+msgid "No announcements when replaying"
+msgstr "Bez oznámení při přehrávání"
+
+msgid "Help$Set this to 'yes' if you don't like to get any announcements of broadcasts if you currently replay anything."
+msgstr "Pokud při přehrávání nemají být oznamovány pořady, nastavte možnost ano."
+
+msgid "Show pip on announcements"
+msgstr ""
+
+msgid "Help$Set this to 'yes' if you want to show up the pip window with the announced channel."
+msgstr ""
+
+msgid "Recreate timers after deletion"
+msgstr "Znovu vytvořit časovače po odstranění"
+
+msgid "Help$Set this to 'yes' if you want timers to be recreated with the next search timer update after deleting them."
+msgstr "Chcete-li, aby odstraněné časovače byly při další aktualizaci časovače hledání znovu vytvořeny, nastavte možnost ano."
+
+msgid "Without PayTV channels"
+msgstr "Bez placených kanálů"
+
+msgid "Help$Set this to 'yes' if don't want to see events on PayTV channels when searching for repeats."
+msgstr "Pokud při hledání repríz nemají být zobrazovány události na placených kanálech, nastavte možnost ano."
+
+msgid "Search templates"
+msgstr "Šablony hledání"
+
+msgid "Help$Here you can setup templates for your searches."
+msgstr "Zde můžete vytvořit šablony hledání."
+
+msgid "Blacklists"
+msgstr "Černé listiny"
+
+msgid "Help$Here you can setup blacklists which can be used within a search to exclude events you don't like."
+msgstr "Zde můžete vytvořit černé listiny, které budou použity při hledání k vyloučení nežádoucích událostí."
+
+msgid "Button$Setup"
+msgstr "Nastavení"
+
+msgid "Ignore below priority"
+msgstr "Ignorovat s prioritou pod"
+
+msgid "Help$If a timer with priority below the given value will fail it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Dojde-li ke konfliktu časovače s nižší než uvedenou prioritou, nebude tento konflikt klasifikován jako důležitý. Na displeji budou zobrazeny pouze zprávy o důležitých konfliktech, zjištěných při automatické kontrole konfliktů."
+
+msgid "Ignore conflict duration less ... min."
+msgstr "Ignorovat konflikt kratší než ... min."
+
+msgid "Help$If a conflicts duration is less then the given number of minutes it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Je-li doba trvání konfliktu kratší než uvedený počet minut, nebude tento konflikt klasifikován jako důležitý. Na displeji budou zobrazeny pouze zprávy o důležitých konfliktech, zjištěných při automatické kontrole konfliktů."
+
+msgid "Only check within next ... days"
+msgstr "Kontrolovat jen během příštích ... dní"
+
+msgid "Help$This value reduces the conflict check to the given range of days. All other conflicts are classified as 'not yet important'."
+msgstr "Tato hodnota omezí kontrolu konfliktů na uvedený počet dní. Všechny ostatní konflikty budou klasifikovány jako dosud nedůležité."
+
+msgid "--- Automatic checking ---"
+msgstr "--- Automatická kontrola ---"
+
+msgid "After each timer programming"
+msgstr "Po každém naprogramování časovače"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each manual timer programming. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if this timer is involved in any conflict."
+msgstr "Má-li být kontrola konfliktů prováděna po každém ručním naprogramování časovače, nastavte hodnotu ano. V případě, že dojde ke konfliktu, budete o něm ihned informováni zprávou. Tato zpráva bude zobrazena, jen pokud daný časovač figuruje v nějakém konfliktu."
+
+msgid "When a recording starts"
+msgstr "Na začátku nahrávání"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed when a recording starts. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if the conflict is within the next 2 hours."
+msgstr "Má-li být kontrola konfliktů prováděna na začátku nahrávání, nastavte hodnotu ano. V případě, že dojde ke konfliktu, budete o něm ihned informováni zprávou. Tato zpráva bude zobrazena, jen pokud konflikt nastane během příštích dvou hodin."
+
+msgid "After each search timer update"
+msgstr "Po každé aktualizaci časovače hledání"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each search timer update."
+msgstr "Má-li být kontrola konfliktů prováděna po každé aktualizaci časovače hledání, nastavte možnost ano."
+
+msgid "every ... minutes"
+msgstr "každých ... minut"
+
+msgid ""
+"Help$Specify here the time intervall to be used for an automatic conflict check in the background.\n"
+"('0' disables an automatic check)"
+msgstr ""
+"Zde zadejte časový interval, který má být použit pro automatickou kontrolu konfliktů na pozadí.\n"
+"(Hodnota 0 automatickou kontrolu zakáže.)"
+
+msgid "if conflicts within next ... minutes"
+msgstr "je-li konflikt během příštích ... minut"
+
+msgid "Help$If the next conflict will appear in the given number of minutes you can specify here a shorter check intervall to get more OSD notifications about it."
+msgstr "Pokud k dalšímu konfliktu dojde v uvedeném počtu minut, můžete zde zadat kratší interval kontroly, aby se v OSD zobrazilo více upozornění."
+
+msgid "Avoid notification when replaying"
+msgstr "Neupozorňovat při přehrávání"
+
+msgid "Help$Set this to 'yes' if the don't want to get OSD messages about conflicts if you currently replay something. Nevertheless messages will be displayed if the first upcoming conflict is within the next 2 hours."
+msgstr "Chcete-li zakázat zobrazování zpráv OSD o konfliktech během přehrávání, nastavte možnost ano. Zprávy se však budou zobrazovat, jestliže nejbližší konflikt nastane během příštích dvou hodin."
+
+msgid "Direct access to epgsearch's timers menu"
+msgstr "Přímý přístup k nabídce časovačů modulu epgsearch"
+
+msgid "Timer Manager"
+msgstr "Správce časovačů"
+
+msgid "This version of EPGSearch does not support this service!"
+msgstr "V této verzi modulu EPGSearch není tato služba podporována!"
+
+msgid "EPGSearch does not exist!"
+msgstr "Modul EPGSearch neexistuje!"
+
+msgid "Start/Stop time has changed"
+msgstr ""
+
+msgid "Title/episode has changed"
+msgstr ""
+
+msgid "No new timers were added."
+msgstr "Nebyly přidány žádné nové časovače."
+
+msgid "No timers were modified."
+msgstr "Nebyly změněny žádné časovače."
+
+msgid "No timers were deleted."
+msgstr "Nebyly odstraněny žádné časovače."
+
+#, c-format
+msgid "%d new broadcast"
+msgstr "%d nových pořadů"
+
+msgid "Button$by channel"
+msgstr "podle kanálu"
+
+msgid "Button$by time"
+msgstr "podle času"
+
+msgid "Button$Episode"
+msgstr "Epizoda"
+
+msgid "Button$Title"
+msgstr "Název"
+
+#, fuzzy
+msgid "announce details"
+msgstr "podrobnosti oznámení: %s"
+
+msgid "announce again"
+msgstr "oznámit znovu"
+
+msgid "with next update"
+msgstr "při příští aktualizaci"
+
+msgid "again from"
+msgstr "znovu od"
+
+msgid "Search timer"
+msgstr "Časovač hledání"
+
+msgid "Edit blacklist"
+msgstr "Upravit černou listinu"
+
+msgid "phrase"
+msgstr "fráze"
+
+msgid "all words"
+msgstr "všechna slova"
+
+msgid "at least one word"
+msgstr "nejméně jedno slovo"
+
+msgid "match exactly"
+msgstr "přesná shoda"
+
+msgid "regular expression"
+msgstr "regulární výraz"
+
+msgid "fuzzy"
+msgstr "přibližně"
+
+msgid "user-defined"
+msgstr "uživatelský"
+
+msgid "interval"
+msgstr "interval"
+
+msgid "channel group"
+msgstr "skupina kanálů"
+
+msgid "only FTA"
+msgstr "jen bezplatné"
+
+msgid "Search term"
+msgstr "Hledaný výraz"
+
+msgid "Search mode"
+msgstr "Režim hledání"
+
+msgid "Tolerance"
+msgstr "Tolerance"
+
+msgid "Match case"
+msgstr "Velká/malá"
+
+msgid "Use title"
+msgstr "Použít název"
+
+msgid "Use subtitle"
+msgstr "Použít podtitul"
+
+msgid "Use description"
+msgstr "Použít popis"
+
+msgid "Use extended EPG info"
+msgstr "Použít rozšířené inf. EPG"
+
+#, fuzzy
+msgid "Ignore missing categories"
+msgstr "Porovnat kategorie"
+
+msgid "Use channel"
+msgstr "Použít kanál"
+
+msgid "  from channel"
+msgstr "  od kanálu"
+
+msgid "  to channel"
+msgstr "  do kanálu"
+
+msgid "Channel group"
+msgstr "Skupina kanálů"
+
+msgid "Use time"
+msgstr "Použít čas"
+
+msgid "  Start after"
+msgstr "  Začátek po"
+
+msgid "  Start before"
+msgstr "  Začátek před"
+
+msgid "Use duration"
+msgstr "Použít délku"
+
+msgid "  Min. duration"
+msgstr "  Min. délka"
+
+msgid "  Max. duration"
+msgstr "  Max. délka"
+
+msgid "Use day of week"
+msgstr "Použít den týdne"
+
+#, fuzzy
+msgid "Day of week"
+msgstr "  Den týdne"
+
+msgid "Button$Templates"
+msgstr "Šablony"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Neplatný kanál ***"
+
+msgid "Please check channel criteria!"
+msgstr "Zkontrolujte kritéria kanálů!"
+
+msgid "Edit$Delete blacklist?"
+msgstr "Odstranit černou listinu?"
+
+msgid "Create searchtimer"
+msgstr "Vytvořit časovač hledání"
+
+msgid "List searchtimers"
+msgstr "Vypsat časovače hledání"
+
+msgid "Search for repeats"
+msgstr "Hledat reprízy"
+
+msgid "List recordings of this broadcast"
+msgstr "Vypsat nahrávky tohoto pořadu"
+
+msgid "Mark as 'already recorded'?"
+msgstr "Označit jako již nahrané?"
+
+msgid "Activate/deactivate automatic switch?"
+msgstr "Aktivovat/deaktivovat automatické přepnutí?"
+
+msgid "Ignore this broadcast"
+msgstr "Ignorovat tento pořad"
+
+msgid "EPG Commands"
+msgstr "Příkazy EPG"
+
+msgid "Search"
+msgstr ""
+
+msgid "Already running!"
+msgstr "Již běží!"
+
+msgid "Add to switch list?"
+msgstr "Přidat do seznamu přepnutí?"
+
+msgid "Delete from switch list?"
+msgstr "Odstranit ze seznamu přepnutí?"
+
+msgid "Button$Details"
+msgstr "Podrobnosti"
+
+msgid "Button$Filter"
+msgstr "Filtr"
+
+msgid "Button$Show all"
+msgstr "Zobrazit vše"
+
+msgid "conflicts"
+msgstr "konflikty"
+
+msgid "no conflicts!"
+msgstr "žádné konflikty!"
+
+msgid "no important conflicts!"
+msgstr "žádné důležité konflikty!"
+
+msgid "C"
+msgstr "C"
+
+msgid "Button$Repeats"
+msgstr "Reprízy"
+
+msgid "Button$Functions"
+msgstr "Funkce"
+
+msgid "no check"
+msgstr "bez kontroly"
+
+msgid "by channel and time"
+msgstr "podle kanálu a času"
+
+msgid "by event ID"
+msgstr "podle ID události"
+
+msgid "Select directory"
+msgstr "Vybrat adresář"
+
+msgid "Button$Level"
+msgstr "Úroveň"
+
+msgid "Timers"
+msgstr "Časovače"
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Tomorrow"
+msgstr ""
+
+msgid "No timers present."
+msgstr "Nejsou k dispozici žádné časovače."
+
+#, fuzzy
+msgid "Info:"
+msgstr "Informace"
+
+msgid "Use the green button to create a new timer."
+msgstr ""
+
+msgid "Button$Delete"
+msgstr "Odstranit"
+
+msgid "Button$New"
+msgstr "Nový"
+
+#, fuzzy
+msgid "Button$Off"
+msgstr "Zap/vyp"
+
+#, fuzzy
+msgid "Button$On"
+msgstr "Otevřít"
+
+msgid "Delete timer?"
+msgstr "Odstranit časovač?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Časovač stále nahrává - opravdu odstranit?"
+
+msgid "Delete switchtimer?"
+msgstr ""
+
+msgid "Directory"
+msgstr "Adresář"
+
+msgid "Event"
+msgstr "Událost"
+
+msgid "Favorites"
+msgstr "Oblíbené"
+
+msgid "Search results"
+msgstr "Výsledky hledání"
+
+msgid "No EPG data available"
+msgstr ""
+
+msgid "Button$Timer"
+msgstr "Časovač"
+
+msgid "Timer conflict! Show?"
+msgstr "Konflikt časovačů! Zobrazit?"
+
+msgid "New timer"
+msgstr ""
+
+msgid "Please confirm changes with OK"
+msgstr ""
+
+msgid "Channel not in list. Please choose another."
+msgstr ""
+
+msgid ""
+"\n"
+"No epg data available for this channel.\n"
+"Switch to channel to get epg data."
+msgstr ""
+
+msgid "Please select a programme for switchtimer:"
+msgstr ""
+
+msgid "low"
+msgstr "nízká"
+
+msgid "normal"
+msgstr "normální"
+
+msgid "high"
+msgstr "vysoká"
+
+msgid "Timer type"
+msgstr ""
+
+msgid "Recording"
+msgstr ""
+
+msgid "SwitchTimer"
+msgstr ""
+
+msgid "Channel"
+msgstr "Kanál"
+
+msgid "Next date"
+msgstr ""
+
+msgid "Repeat"
+msgstr "Repríza"
+
+msgid "  Day of Week"
+msgstr "  Den týdne"
+
+msgid "First day"
+msgstr "První den"
+
+msgid "unlimited"
+msgstr "bez omezení"
+
+msgid "Child protection"
+msgstr "Ochrana dětí"
+
+msgid "[Standard]"
+msgstr ""
+
+msgid "Timer check"
+msgstr "Kontrola časovače"
+
+msgid "recording with device"
+msgstr "nahrávání se zařízením"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Button$With subtitle"
+msgstr "S titulky"
+
+msgid "Button$Without subtitle"
+msgstr "Bez titulků"
+
+msgid "Week Day"
+msgstr "Den týdne"
+
+msgid "Button$Reset"
+msgstr "Vynulovat"
+
+msgid "Please, select a program to set switch timer"
+msgstr ""
+
+msgid "Switchtimer to this programme already present"
+msgstr ""
+
+msgid "Button$Extended"
+msgstr "Rozšířené"
+
+msgid "Button$Simple"
+msgstr "Jednoduché"
+
+msgid "Use blacklists"
+msgstr "Použít černé listiny"
+
+msgid "Edit$Search text too short - use anyway?"
+msgstr "Hledaný text je příliš krátký - přesto použít?"
+
+msgid "Button$by name"
+msgstr "podle názvu"
+
+msgid "Button$by date"
+msgstr "podle data"
+
+msgid "Button$Delete all"
+msgstr "Odstranit vše"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "Edit$Delete entry?"
+msgstr "Odstranit položku?"
+
+msgid "Edit$Delete all entries?"
+msgstr "Odstranit všechny položky?"
+
+msgid "Summary"
+msgstr "Shrnutí"
+
+msgid "Auxiliary info"
+msgstr "Dodatkové informace"
+
+#, fuzzy
+msgid "Button$Aux info"
+msgstr "Vše ne"
+
+msgid "No searchtimers present."
+msgstr "Nejsou k dispozici žádné časovače hledání."
+
+msgid "Use the green button to create a new searchtimer."
+msgstr ""
+
+msgid "Search entries"
+msgstr "Položky hledání"
+
+msgid "active"
+msgstr "aktivní"
+
+msgid "Execute"
+msgstr "Spustit"
+
+msgid "Button$Actions"
+msgstr "Akce"
+
+msgid "Edit$Delete search?"
+msgstr "Odstranit hledání?"
+
+msgid "Delete all timers created from this search?"
+msgstr "Odstranit všechny časovače vytvořené z tohoto hledání?"
+
+msgid "Search actions"
+msgstr "Akce hledání"
+
+msgid "Execute search"
+msgstr "Spustit hledání"
+
+msgid "Use as search timer on/off"
+msgstr "Použít jako časovač hledání - zap/vyp"
+
+msgid "Trigger search timer update"
+msgstr "Aktualizovat časovač hledání"
+
+msgid "Show recordings done"
+msgstr "Zobrazit dokončené nahrávky"
+
+msgid "Delete created timers?"
+msgstr "Odstranit vytvořené časovače?"
+
+msgid "Timer conflict check"
+msgstr "Kontrola konfliktů časovačů"
+
+msgid "Disable associated timers too?"
+msgstr "Zakázat také příslušné časovače?"
+
+msgid "Activate associated timers too?"
+msgstr "Aktivovat také příslušné časovače?"
+
+msgid "Search timers activated in setup."
+msgstr "Časovače hledání byly aktivovány v nastavení."
+
+msgid "Run search timer update?"
+msgstr "Spustit aktualizaci časovačů hledání?"
+
+#, fuzzy
+msgid "ERROR: Could not trigger search timer update!"
+msgstr "Aktualizovat časovač hledání"
+
+#, fuzzy
+msgid "Search timer update triggered."
+msgstr "Aktualizace časovače hledání dokončena!"
+
+msgid "Copy this entry?"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Expert"
+msgstr "Rozšířené"
+
+msgid "Normal"
+msgstr "Normální"
+
+msgid "Edit search"
+msgstr "Upravit hledání"
+
+msgid "Record"
+msgstr "Nahrát"
+
+msgid "Announce only"
+msgstr "Pouze oznámit"
+
+msgid "Switch only"
+msgstr "Pouze přepnout"
+
+msgid "Selection"
+msgstr "Výběr"
+
+msgid "all"
+msgstr "vše"
+
+#, fuzzy
+msgid "count recordings"
+msgstr "nalezených nahrávek"
+
+msgid "count days"
+msgstr ""
+
+msgid "Template name"
+msgstr "Název šablony"
+
+msgid "Help$Specify the name of the template."
+msgstr ""
+
+#, fuzzy
+msgid "Help$Specify here the term to search for."
+msgstr "Zde zadejte časový interval, který má být použit při hledání událostí na pozadí."
+
+msgid ""
+"Help$The following search modes exist:\n"
+"\n"
+"- phrase: searches for sub terms\n"
+"- all words: all single words must appear\n"
+"- at least one word: at least one single word must appear\n"
+"- match exactly: must match exactly\n"
+"- regular expression: match a regular expression\n"
+"- fuzzy searching: searches approximately"
+msgstr ""
+
+msgid "Help$This sets the tolerance of fuzzy searching. The value represents the allowed errors."
+msgstr ""
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if your search should match the case."
+msgstr "Má-li být kontrola konfliktů prováděna po každé aktualizaci časovače hledání, nastavte možnost ano."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the title of an event."
+msgstr "Chcete-li, aby odstraněné časovače byly při další aktualizaci časovače hledání znovu vytvořeny, nastavte možnost ano."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the episode of an event."
+msgstr "Chcete-li, aby odstraněné časovače byly při další aktualizaci časovače hledání znovu vytvořeny, nastavte možnost ano."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the summary of an event."
+msgstr "Chcete-li, aby odstraněné časovače byly při další aktualizaci časovače hledání znovu vytvořeny, nastavte možnost ano."
+
+msgid "Help$The summary of an event, can contain additional information like 'Genre', 'Category', 'Year',... called 'EPG categories' within EPGSearch. External EPG providers often deliver this information. This allows refining a search and other nice things, like searching for the 'tip of the day'. To use it set this to 'Yes'."
+msgstr ""
+
+msgid "Help$The file epgsearchcats.conf specifies the search mode for this entry. One can search by text or by value. You can also edit a list of predefined values in this file that can be selected here."
+msgstr ""
+
+msgid "Help$If a selected category is not part of the summary of an event this normally excludes this event from the search results. To avoid this, set this option to 'Yes', but please handle this with care to avoid a huge amount of results."
+msgstr ""
+
+msgid "Use in favorites menu"
+msgstr "Použít v nabídce Oblíbené"
+
+msgid "Result menu layout"
+msgstr "Rozložení nabídky výsledků"
+
+msgid "Use as search timer"
+msgstr "Použít jako časovač hledání"
+
+msgid "Action"
+msgstr "Akce"
+
+msgid "Switch ... minutes before start"
+msgstr "Přepnout ... minut před začátkem"
+
+msgid "Unmute sound"
+msgstr ""
+
+msgid "  Series recording"
+msgstr "  Nahrávka seriálu"
+
+msgid "Delete recordings after ... days"
+msgstr "Odstranit nahrávky po ... dnech"
+
+msgid "Keep ... recordings"
+msgstr "Uchovat ... nahrávek"
+
+msgid "Pause when ... recordings exist"
+msgstr "Pozastavit, existuje-li ... nahrávek"
+
+msgid "Avoid repeats"
+msgstr "Vynechat reprízy"
+
+msgid "Allowed repeats"
+msgstr "Povolené reprízy"
+
+msgid "Only repeats within ... days"
+msgstr "Pouze reprízy během ... dní"
+
+msgid "Compare title"
+msgstr "Porovnat název"
+
+msgid "Compare subtitle"
+msgstr "Porovnat podtitul"
+
+msgid "Compare summary"
+msgstr "Porovnat shrnutí"
+
+msgid "Compare categories"
+msgstr "Porovnat kategorie"
+
+msgid "VPS"
+msgstr "VPS"
+
+#, fuzzy
+msgid "Auto delete"
+msgstr "Odstranit"
+
+#, fuzzy
+msgid "after ... recordings"
+msgstr "Uchovat ... nahrávek"
+
+msgid "after ... days after first rec."
+msgstr ""
+
+msgid "Button$Edit"
+msgstr "Upravit"
+
+msgid "Edit user-defined days of week"
+msgstr "Upravit uživatelské dny týdne"
+
+msgid "Compare"
+msgstr "Porovnat"
+
+msgid "Select blacklists"
+msgstr "Vybrat černé listiny"
+
+msgid "Values for EPG category"
+msgstr "Hodnoty kategorie EPG"
+
+msgid "Button$Apply"
+msgstr "Použít"
+
+msgid "less"
+msgstr ""
+
+msgid "less or equal"
+msgstr ""
+
+msgid "greater"
+msgstr ""
+
+msgid "greater or equal"
+msgstr ""
+
+msgid "equal"
+msgstr ""
+
+msgid "not equal"
+msgstr ""
+
+#, fuzzy
+msgid "Activation of search timer"
+msgstr "Vypsat časovače hledání"
+
+#, fuzzy
+msgid "Last day"
+msgstr "První den"
+
+msgid "Button$all channels"
+msgstr "všechny kanály"
+
+msgid "Button$only FTA"
+msgstr "jen bezplatné"
+
+msgid "Button$Timer preview"
+msgstr "Náhled časovače"
+
+#, fuzzy
+msgid "no broadcast found"
+msgstr "- nebyl nalezen žádný pořad -"
+
+msgid "Blacklist results"
+msgstr "Výsledky černé listiny"
+
+msgid "found recordings"
+msgstr "nalezených nahrávek"
+
+msgid "- no recording found -"
+msgstr "- nebyly nalezeny žádné nahrávky -"
+
+msgid "Error while accessing recording!"
+msgstr "Chyba při přístupu k nahrávce!"
+
+#, fuzzy
+msgid "No templates present."
+msgstr "Nejsou k dispozici žádné časovače."
+
+#, fuzzy
+msgid "Use the yellow button to create a new template."
+msgstr "Nový časovač hledání vytvoříte žlutým tlačítkem."
+
+msgid "Edit$Delete template?"
+msgstr "Odstranit šablonu?"
+
+msgid "Overwrite existing entries?"
+msgstr "Přepsat existující položky?"
+
+msgid "Edit entry"
+msgstr "Upravit položku"
+
+msgid "action at"
+msgstr "akce v"
+
+msgid "Unknown channel"
+msgstr ""
+
+msgid "Switch list"
+msgstr "Seznam přepnutí"
+
+msgid "Edit template"
+msgstr "Odstranit šablonu?"
+
+msgid ">>> no info! <<<"
+msgstr ">>> žádné informace! <<<"
+
+msgid "Overview"
+msgstr ""
+
+msgid "Button$Favorites"
+msgstr "Oblíbené"
+
+msgid "Button$Schedule"
+msgstr "Program"
+
+msgid "Quick search for broadcasts"
+msgstr "Rychlé hledání pořadů"
+
+msgid "Quick search"
+msgstr "Rychlé hledání"
+
+msgid "Show in main menu"
+msgstr "Zobrazit v hlavní nabídce"
+
+#, c-format
+msgid "%d new broadcast(s) found! Show them?"
+msgstr "Nalezeno %d nových pořadů! Zobrazit?"
+
+msgid "Search timer update done!"
+msgstr "Aktualizace časovače hledání dokončena!"
+
+msgid "Programming timer failed!"
+msgstr "Programování časovače se nezdařilo!"
+
+#~ msgid "° EPG for :"
+#~ msgstr "  EPG pro:"
+
+#~ msgid "Edit timer"
+#~ msgstr "Upravit časovač"
+
+#~ msgid "Use the blue button to create a new timer."
+#~ msgstr "Nový časovač vytvoříte modrým tlačítkem."
+
+#~ msgid "Button$Info"
+#~ msgstr "Informace"
+
+#~ msgid "Use the yellow button to create a new searchtimer."
+#~ msgstr "Nový časovač hledání vytvoříte žlutým tlačítkem."
+
+#~ msgid "Red key"
+#~ msgstr "Červené tlačítko"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Record' or 'Commands') you like to have on the red key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Zvolte standardní funkci červeného tlačítka (Nahrát nebo Příkazy).\n"
+#~ "(Lze přepnout tlačítkem 0.)"
+
+#~ msgid "Blue key"
+#~ msgstr "Modré tlačítko"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Switch'/'Info' or 'Search') you like to have on the blue key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Zvolte standardní funkci modrého tlačítka (Přepnout/Informace nebo Hledat).\n"
+#~ "(Lze přepnout tlačítkem 0.)"
+
+#, fuzzy
+#~ msgid "No search templates present."
+#~ msgstr "Nejsou k dispozici žádné časovače hledání."
+
+#, fuzzy
+#~ msgid "Use the green button to create a new template."
+#~ msgstr "Nový časovač vytvoříte modrým tlačítkem."
+
+#~ msgid "Show channel separators"
+#~ msgstr "Zobrazovat oddělovače kanálů"
+
+#~ msgid "no"
+#~ msgstr "ne"
+
+#~ msgid "yes"
+#~ msgstr "ano"
+
+#~ msgid "Switch"
+#~ msgstr "Přepnout"
+
+#~ msgid "Button$Now"
+#~ msgstr "Nyní"
+
+#~ msgid "Use VDR's timer edit menu"
+#~ msgstr "Použít nabídku úprav časovače VDR"
+
+#~ msgid ""
+#~ "Help$This plugin has it's own timer edit menu extending the original one with some extra functionality like\n"
+#~ "- an addtional directory entry\n"
+#~ "- user-defined days of week for repeating timers\n"
+#~ "- adding an episode name\n"
+#~ "- support for EPG variables (see MANUAL)"
+#~ msgstr ""
+#~ "Tento modul obsahuje vlastní nabídku úprav časovače, která rozšiřuje původní nabídku o některé další funkce, jako například:\n"
+#~ "- další položka adresáře\n"
+#~ "- uživatelské dny týdne pro opakované časovače\n"
+#~ "- přidání názvu epizody\n"
+#~ "- podpora proměnných EPG (viz příručku)"
+
+#~ msgid "Button$Record"
+#~ msgstr "Nahrát"
+
+#~ msgid "Can't switch channel!"
+#~ msgstr "Kanál nelze přepnout!"
+
+#~ msgid "Button$Switch"
+#~ msgstr "Přepnout"
+
+#~ msgid "EPG -"
+#~ msgstr "EPG -"
+
+#~ msgid "Button$Next"
+#~ msgstr "Další"
+
+#~ msgid "Active"
+#~ msgstr "Aktivní"
+
+#~ msgid "Day"
+#~ msgstr "Den"
+
+#~ msgid "Start"
+#~ msgstr "Začátek"
+
+#~ msgid "Stop"
+#~ msgstr "Konec"
+
+#~ msgid "Priority"
+#~ msgstr "Priorita"
+
+#~ msgid "Lifetime"
+#~ msgstr "Životnost"
+
+#~ msgid "Button$Default"
+#~ msgstr "Výchozí"
+
+#~ msgid "EPG"
+#~ msgstr "EPG"

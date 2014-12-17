@@ -1,0 +1,575 @@
+diff -ruN vdr-1.4.1-2/CONTRIBUTORS vdr-1.4.1-3/CONTRIBUTORS
+--- vdr-1.4.1-2/CONTRIBUTORS	2006-07-23 11:48:51.000000000 +0200
++++ vdr-1.4.1-3/CONTRIBUTORS	2006-08-05 14:06:11.000000000 +0200
+@@ -220,6 +220,8 @@
+  for reporting a problem with channel up/down switching on single card systems
+  for fixing the PremiereContentTransmissionDescriptor in 'libsi'
+  for reporting a double fdopen() in cPipe::Open()
++ for suggesting to increase the APIVERSION to allow plugins that relied on the
++ cStatus::MsgSetVolume() bug to react properly
+ 
+ Ulrich Röder <roeder@efr-net.de>
+  for pointing out that there are channels that have a symbol rate higher than 27500
+@@ -277,6 +279,8 @@
+  for a patch that contained a fix for checking toFile in cCuttingThread::Action()
+  for improving cUnbufferedFile
+  for fixing calculating the cache size in cUnbufferedFile::Read()
++ for making the /video/.update file be touched _after_ an editing process is finished
++ in order to avoid excessive disk access
+ 
+ Werner Fink <werner@suse.de>
+  for making I/O more robust by handling EINTR
+@@ -577,6 +581,8 @@
+  for reporting a problem with the "Press any key on the RC unit" step when learning
+  LIRC remote control codes
+  for suggesting to reduce the logging for the SVDRP GRAB command
++ for reporting that the shutdown script is given a reboot time in the past if there
++ is a recording going on or about to start, and the user insists in shutting down now
+ 
+ Jeremy Hall <jhall@UU.NET>
+  for fixing an incomplete initialization of the filter parameters in eit.c
+@@ -1450,6 +1456,10 @@
+  for adding "-fPIC" to the compiler options in Make.config.template when compiling
+  plugins
+  for reporting a missing '--vfat' in the vdr.1 man page
++ for fixing deleting the last character of a string menu item in insert mode
++ for reporting that the shutdown message "Recording in ... minutes, shut down anyway?"
++ may have been given with a negative number of minutes
++ for fixing getting the next active timer when shutting down
+ 
+ Sven Kreiensen <svenk@kammer.uni-hannover.de>
+  for his help in keeping 'channels.conf.terr' up to date
+@@ -1871,6 +1881,7 @@
+  the jump instead of closing the display
+  for reporting that the log message "deleting plugin: ..." is irritating when
+  calling "vdr --help"
++ for fixing cDevice::ToggleMute()
+ 
+ Pekka Mauno <pekka.mauno@iki.fi>
+  for fixing cSchedule::GetFollowingEvent() in case there is currently no present
+@@ -1958,3 +1969,4 @@
+ 
+ Frank Schmirler <vdr@schmirler.de>
+  for fixing handling client side termination of SVDRP connections
++ for fixing assigning schedules to channels in case there is no initial EPG information
+diff -ruN vdr-1.4.1-2/HISTORY vdr-1.4.1-3/HISTORY
+--- vdr-1.4.1-2/HISTORY	2006-07-23 11:47:48.000000000 +0200
++++ vdr-1.4.1-3/HISTORY	2006-08-06 11:20:04.000000000 +0200
+@@ -4834,3 +4834,27 @@
+   have a dedicated minimum or maximum limit (suggested by Andy Grobb). Looping is
+   only done for normal keypresses, not for repeated ones. This allows the user to
+   scroll the value all the way to the limit by keeping the key pressed.
++
++2006-08-06: Version 1.4.1-3
++
++- Fixed assigning schedules to channels in case there is no initial EPG information
++  (thanks to Frank Schmirler).
++- Increased the APIVERSION to allow plugins that relied on the cStatus::MsgSetVolume()
++  bug to react properly (suggested by Stefan Huelswitt).
++- Fixed cDevice::ToggleMute() (thanks to Christoph Haubrich).
++- Fixed deleting the last character of a string menu item in insert mode (thanks
++  to Udo Richter).
++- The /video/.update file is now touched _after_ an editing process is finished
++  in order to avoid excessive disk access (thanks to Artur Skawina).
++- Fixed handling the running status of EPG events before the currently running one,
++  in case they are added after the current event (cont'd from version 1.4.1-2).
++- Modified the shutdown mechanism, so that the shutdown script is never given a
++  time in the past (reported by Helmut Auer). If a timer is currently recording,
++  or a recording would start within the next 30 minutes (default for the "Min.
++  event timeout" setup parameter), and the user insists in shutting down now, the
++  reboot time given to the shutdown script will correspond to a time that is
++  "Min. event timeout" minutes (default is 30) in the future.
++- Avoiding shutdown message "Recording in ... minutes, shut down anyway?" with
++  a negative number of minutes (reported by Udo Richter).
++- Fixed getting the next active timer when shutting down (thanks to Udo Richter).
++- Modified the cSVDRP::Close() function to avoid code duplication.
+diff -ruN vdr-1.4.1-2/INSTALL vdr-1.4.1-3/INSTALL
+--- vdr-1.4.1-2/INSTALL	2006-05-01 15:35:40.000000000 +0200
++++ vdr-1.4.1-3/INSTALL	2006-07-30 12:57:25.000000000 +0200
+@@ -171,7 +171,7 @@
+ receives a SIGTERM when the computer is actually shut down. So in case
+ the shutdown fails, or the shutdown program for some reason decides not to
+ perform a shutdown, VDR will stay up and running and will call the shutdown
+-program again after another MinUserInactivity minutes.
++program again after another five minutes.
+ 
+ If there are currently no timers active, both parameters will be '0'.
+ In that case the program shall not set the hardware for automatic restart
+@@ -191,11 +191,10 @@
+ key). The shutdown program may use this information to decide whether or
+ not to actually perform the system shutdown.
+ 
+-If a timer is currently recording, the parameters will reflect the start
+-time of that timer. This means that the first parameter will be a time in
+-the past, and the second parameter will be a negative number. This only
+-happens if the user presses the "Power" key while a timer is currently
+-recording.
++If a timer is currently recording, or a recording would start within the
++next 30 minutes (default for the "Min. event timeout" setup parameter), and
++the user insists in shutting down now, the first and second parameter will
++correspond to a time that is "Min. event timeout" minutes in the future.
+ 
+ Before the shutdown program is called, the user will be prompted to inform
+ him that the system is about to shut down. If any remote control key is
+diff -ruN vdr-1.4.1-2/config.h vdr-1.4.1-3/config.h
+--- vdr-1.4.1-2/config.h	2006-06-24 11:08:46.000000000 +0200
++++ vdr-1.4.1-3/config.h	2006-07-29 11:56:04.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: config.h 1.262 2006/06/24 09:08:46 kls Exp $
++ * $Id: config.h 1.264 2006/07/29 09:56:04 kls Exp $
+  */
+ 
+ #ifndef __CONFIG_H
+@@ -21,13 +21,13 @@
+ 
+ // VDR's own version number:
+ 
+-#define VDRVERSION  "1.4.1-2"
++#define VDRVERSION  "1.4.1-3"
+ #define VDRVERSNUM   10401  // Version * 10000 + Major * 100 + Minor
+ 
+ // The plugin API's version number:
+ 
+-#define APIVERSION  "1.4.1"
+-#define APIVERSNUM   10401  // Version * 10000 + Major * 100 + Minor
++#define APIVERSION  "1.4.2"
++#define APIVERSNUM   10402  // Version * 10000 + Major * 100 + Minor
+ 
+ // When loading plugins, VDR searches them by their APIVERSION, which
+ // may be smaller than VDRVERSION in case there have been no changes to
+diff -ruN vdr-1.4.1-2/cutter.c vdr-1.4.1-3/cutter.c
+--- vdr-1.4.1-2/cutter.c	2006-02-12 11:07:23.000000000 +0100
++++ vdr-1.4.1-3/cutter.c	2006-07-30 12:22:08.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: cutter.c 1.15 2006/02/12 10:07:23 kls Exp $
++ * $Id: cutter.c 1.16 2006/07/30 10:22:08 kls Exp $
+  */
+ 
+ #include "cutter.h"
+@@ -171,6 +171,7 @@
+                  LastMark = true;
+               }
+            }
++     Recordings.TouchUpdate();
+      }
+   else
+      esyslog("no editing marks found!");
+@@ -205,7 +206,7 @@
+         // XXX
+         editedVersionName = strdup(evn);
+         Recording.WriteInfo();
+-        Recordings.AddByName(editedVersionName);
++        Recordings.AddByName(editedVersionName, false);
+         cuttingThread = new cCuttingThread(FileName, editedVersionName);
+         return true;
+         }
+diff -ruN vdr-1.4.1-2/device.c vdr-1.4.1-3/device.c
+--- vdr-1.4.1-2/device.c	2006-07-22 16:06:11.000000000 +0200
++++ vdr-1.4.1-3/device.c	2006-07-29 12:03:56.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: device.c 1.133 2006/07/22 14:06:11 kls Exp $
++ * $Id: device.c 1.134 2006/07/29 10:03:56 kls Exp $
+  */
+ 
+ #include "device.h"
+@@ -751,12 +751,12 @@
+   mute = !mute;
+   //XXX why is it necessary to use different sequences???
+   if (mute) {
+-     SetVolume(0, mute);
++     SetVolume(0, true);
+      Audios.MuteAudio(mute); // Mute external audio after analog audio
+      }
+   else {
+      Audios.MuteAudio(mute); // Enable external audio before analog audio
+-     SetVolume(0, mute);
++     SetVolume(OldVolume, true);
+      }
+   volume = OldVolume;
+   return mute;
+diff -ruN vdr-1.4.1-2/eit.c vdr-1.4.1-3/eit.c
+--- vdr-1.4.1-2/eit.c	2006-07-22 11:21:59.000000000 +0200
++++ vdr-1.4.1-3/eit.c	2006-08-05 12:01:21.000000000 +0200
+@@ -8,7 +8,7 @@
+  * Robert Schneider <Robert.Schneider@web.de> and Rolf Hakenes <hakenes@hippomi.de>.
+  * Adapted to 'libsi' for VDR 1.3.0 by Marcel Wiesweg <marcel.wiesweg@gmx.de>.
+  *
+- * $Id: eit.c 1.119 2006/07/22 09:21:59 kls Exp $
++ * $Id: eit.c 1.120 2006/08/05 10:01:21 kls Exp $
+  */
+ 
+ #include "eit.h"
+@@ -94,6 +94,8 @@
+          pEvent->SetStartTime(SiEitEvent.getStartTime());
+          pEvent->SetDuration(SiEitEvent.getDuration());
+          }
++      if (newEvent)
++         pSchedule->AddEvent(newEvent);
+       if (Tid == 0x4E) { // we trust only the present/following info on the actual TS
+          if (SiEitEvent.getRunningStatus() >= SI::RunningStatusNotRunning)
+             pSchedule->SetRunningStatus(pEvent, SiEitEvent.getRunningStatus(), channel);
+@@ -240,9 +242,6 @@
+       delete ExtendedEventDescriptors;
+       delete ShortEventDescriptor;
+ 
+-      if (newEvent)
+-         pSchedule->AddEvent(newEvent);
+-
+       pEvent->SetComponents(Components);
+ 
+       pEvent->FixEpgBugs();
+diff -ruN vdr-1.4.1-2/epg.c vdr-1.4.1-3/epg.c
+--- vdr-1.4.1-2/epg.c	2006-07-22 12:13:34.000000000 +0200
++++ vdr-1.4.1-3/epg.c	2006-08-05 12:04:17.000000000 +0200
+@@ -7,7 +7,7 @@
+  * Original version (as used in VDR before 1.3.0) written by
+  * Robert Schneider <Robert.Schneider@web.de> and Rolf Hakenes <hakenes@hippomi.de>.
+  *
+- * $Id: epg.c 1.77 2006/07/22 10:13:34 kls Exp $
++ * $Id: epg.c 1.79 2006/08/05 10:04:17 kls Exp $
+  */
+ 
+ #include "epg.h"
+@@ -647,7 +647,7 @@
+ cSchedule::cSchedule(tChannelID ChannelID)
+ {
+   channelID = ChannelID;
+-  hasRunning = false;;
++  hasRunning = false;
+   modified = 0;
+   presentSeen = 0;
+ }
+@@ -738,6 +738,7 @@
+ 
+ void cSchedule::SetRunningStatus(cEvent *Event, int RunningStatus, cChannel *Channel)
+ {
++  hasRunning = false;
+   for (cEvent *p = events.First(); p; p = events.Next(p)) {
+       if (p == Event) {
+          if (p->RunningStatus() > SI::RunningStatusNotRunning || RunningStatus > SI::RunningStatusNotRunning)
+@@ -745,9 +746,9 @@
+          }
+       else if (RunningStatus >= SI::RunningStatusPausing && p->StartTime() < Event->StartTime())
+          p->SetRunningStatus(SI::RunningStatusNotRunning);
++      if (p->RunningStatus() >= SI::RunningStatusPausing)
++         hasRunning = true;
+       }
+-  if (RunningStatus >= SI::RunningStatusPausing)
+-     hasRunning = true;
+ }
+ 
+ void cSchedule::ClrRunningStatus(cChannel *Channel)
+@@ -775,7 +776,7 @@
+   // Make sure there are no RunningStatusUndefined before the currently running event:
+   if (hasRunning) {
+      for (cEvent *p = events.First(); p; p = events.Next(p)) {
+-         if (p->RunningStatus() > SI::RunningStatusNotRunning)
++         if (p->RunningStatus() >= SI::RunningStatusPausing)
+             break;
+          p->SetRunningStatus(SI::RunningStatusNotRunning);
+          }
+@@ -1035,6 +1036,9 @@
+   if (!p) {
+      p = new cSchedule(ChannelID);
+      Add(p);
++     cChannel *channel = Channels.GetByChannelID(ChannelID);
++     if (channel)
++        channel->schedule = p;
+      }
+   return p;
+ }
+diff -ruN vdr-1.4.1-2/menuitems.c vdr-1.4.1-3/menuitems.c
+--- vdr-1.4.1-2/menuitems.c	2006-07-23 11:42:17.000000000 +0200
++++ vdr-1.4.1-3/menuitems.c	2006-07-30 11:09:30.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: menuitems.c 1.46 2006/07/23 09:42:17 kls Exp $
++ * $Id: menuitems.c 1.47 2006/07/30 09:09:30 kls Exp $
+  */
+ 
+ #include "menuitems.h"
+@@ -313,7 +313,7 @@
+         SetValue(buf);
+         return;
+         }
+-     width -= font->Width('>'); // assuming '<' and '>' have the same with
++     width -= font->Width('>'); // assuming '<' and '>' have the same width
+      int w = 0;
+      int i = 0;
+      int l = strlen(buf);
+@@ -395,6 +395,8 @@
+                     if (strlen(value) > 1) {
+                        if (!insert || pos < int(strlen(value)) - 1)
+                           memmove(value + pos, value + pos + 1, strlen(value) - pos);
++                       else if (insert && pos == int(strlen(value)) - 1)
++                          value[pos] = ' '; // in insert mode, deleting the last character replaces it with a blank to keep the cursor position
+                        // reduce position, if we removed the last character
+                        if (pos == int(strlen(value)))
+                           pos--;
+diff -ruN vdr-1.4.1-2/recording.c vdr-1.4.1-3/recording.c
+--- vdr-1.4.1-2/recording.c	2006-04-29 15:22:20.000000000 +0200
++++ vdr-1.4.1-3/recording.c	2006-07-30 12:23:46.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: recording.c 1.148 2006/04/29 13:22:20 kls Exp $
++ * $Id: recording.c 1.149 2006/07/30 10:23:46 kls Exp $
+  */
+ 
+ #include "recording.h"
+@@ -970,7 +970,7 @@
+   return NULL;
+ }
+ 
+-void cRecordings::AddByName(const char *FileName)
++void cRecordings::AddByName(const char *FileName, bool TriggerUpdate)
+ {
+   LOCK_THREAD;
+   cRecording *recording = GetByName(FileName);
+@@ -978,7 +978,8 @@
+      recording = new cRecording(FileName);
+      Add(recording);
+      ChangeState();
+-     TouchUpdate();
++     if (TriggerUpdate)
++        TouchUpdate();
+      }
+ }
+ 
+diff -ruN vdr-1.4.1-2/recording.h vdr-1.4.1-3/recording.h
+--- vdr-1.4.1-2/recording.h	2006-04-09 15:47:11.000000000 +0200
++++ vdr-1.4.1-3/recording.h	2006-07-30 12:24:07.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: recording.h 1.54 2006/04/09 13:47:11 kls Exp $
++ * $Id: recording.h 1.55 2006/07/30 10:24:07 kls Exp $
+  */
+ 
+ #ifndef __RECORDING_H
+@@ -133,7 +133,7 @@
+   bool StateChanged(int &State);
+   void ResetResume(const char *ResumeFileName = NULL);
+   cRecording *GetByName(const char *FileName);
+-  void AddByName(const char *FileName);
++  void AddByName(const char *FileName, bool TriggerUpdate = true);
+   void DelByName(const char *FileName);
+   int TotalFileSizeMB(void); ///< Only for deleted recordings!
+   };
+diff -ruN vdr-1.4.1-2/svdrp.c vdr-1.4.1-3/svdrp.c
+--- vdr-1.4.1-2/svdrp.c	2006-07-22 15:59:43.000000000 +0200
++++ vdr-1.4.1-3/svdrp.c	2006-08-06 11:17:58.000000000 +0200
+@@ -10,7 +10,7 @@
+  * and interact with the Video Disk Recorder - or write a full featured
+  * graphical interface that sits on top of an SVDRP connection.
+  *
+- * $Id: svdrp.c 1.98 2006/07/22 13:59:43 kls Exp $
++ * $Id: svdrp.c 1.99 2006/08/06 09:17:58 kls Exp $
+  */
+ 
+ #include "svdrp.h"
+@@ -378,17 +378,19 @@
+ 
+ cSVDRP::~cSVDRP()
+ {
+-  Close();
++  Close(true);
+   free(cmdLine);
+ }
+ 
+-void cSVDRP::Close(bool Timeout)
++void cSVDRP::Close(bool SendReply, bool Timeout)
+ {
+   if (file.IsOpen()) {
+-     //TODO how can we get the *full* hostname?
+-     char buffer[BUFSIZ];
+-     gethostname(buffer, sizeof(buffer));
+-     Reply(221, "%s closing connection%s", buffer, Timeout ? " (timeout)" : "");
++     if (SendReply) {
++        //TODO how can we get the *full* hostname?
++        char buffer[BUFSIZ];
++        gethostname(buffer, sizeof(buffer));
++        Reply(221, "%s closing connection%s", buffer, Timeout ? " (timeout)" : "");
++        }
+      isyslog("closing SVDRP connection"); //TODO store IP#???
+      file.Close();
+      DELETENULL(PUTEhandler);
+@@ -401,7 +403,7 @@
+      length = strlen(s);
+   if (safe_write(file, s, length) < 0) {
+      LOG_ERROR;
+-     file.Close();
++     Close();
+      return false;
+      }
+   return true;
+@@ -423,10 +425,8 @@
+                  cont = '-';
+               char number[16];
+               sprintf(number, "%03d%c", abs(Code), cont);
+-              if (!(Send(number) && Send(s, n ? n - s : -1) && Send("\r\n"))) {
+-                 Close();
++              if (!(Send(number) && Send(s, n ? n - s : -1) && Send("\r\n")))
+                  break;
+-                 }
+               s = n ? n + 1 : NULL;
+               }
+         free(buffer);
+@@ -1530,7 +1530,7 @@
+   else if (CMD("STAT"))  CmdSTAT(s);
+   else if (CMD("UPDT"))  CmdUPDT(s);
+   else if (CMD("VOLU"))  CmdVOLU(s);
+-  else if (CMD("QUIT"))  Close();
++  else if (CMD("QUIT"))  Close(true);
+   else                   Reply(500, "Command unrecognized: \"%s\"", Cmd);
+ }
+ 
+@@ -1570,7 +1570,7 @@
+                  }
+               else if (c == 0x04 && numChars == 0) {
+                  // end of file (only at beginning of line)
+-                 Close();
++                 Close(true);
+                  }
+               else if (c == 0x08 || c == 0x7F) {
+                  // backspace or delete (last character)
+@@ -1590,20 +1590,14 @@
+                  }
+               lastActivity = time(NULL);
+               }
+-           else if (r < 0) {
++           else if (r <= 0) {
+               isyslog("lost connection to SVDRP client");
+               Close();
+               }
+-           else {
+-              isyslog("SVDRP client closed connection");
+-              //TODO give cSVDRP::Close() an extra parameter to avoid this code duplication
+-              file.Close();
+-              DELETENULL(PUTEhandler);
+-              }
+            }
+      if (Setup.SVDRPTimeout && time(NULL) - lastActivity > Setup.SVDRPTimeout) {
+         isyslog("timeout on SVDRP connection");
+-        Close(true);
++        Close(true, true);
+         }
+      return true;
+      }
+diff -ruN vdr-1.4.1-2/svdrp.h vdr-1.4.1-3/svdrp.h
+--- vdr-1.4.1-2/svdrp.h	2005-12-30 15:46:38.000000000 +0100
++++ vdr-1.4.1-3/svdrp.h	2006-08-06 10:51:09.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: svdrp.h 1.27 2005/12/30 14:46:38 kls Exp $
++ * $Id: svdrp.h 1.28 2006/08/06 08:51:09 kls Exp $
+  */
+ 
+ #ifndef __SVDRP_H
+@@ -50,7 +50,7 @@
+   char *cmdLine;
+   time_t lastActivity;
+   static char *grabImageDir;
+-  void Close(bool Timeout = false);
++  void Close(bool SendReply = false, bool Timeout = false);
+   bool Send(const char *s, int length = -1);
+   void Reply(int Code, const char *fmt, ...) __attribute__ ((format (printf, 3, 4)));
+   void PrintHelpTopics(const char **hp);
+diff -ruN vdr-1.4.1-2/timers.c vdr-1.4.1-3/timers.c
+--- vdr-1.4.1-2/timers.c	2006-05-25 16:36:37.000000000 +0200
++++ vdr-1.4.1-3/timers.c	2006-08-05 14:03:36.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: timers.c 1.61 2006/05/25 14:36:37 kls Exp $
++ * $Id: timers.c 1.62 2006/08/05 12:03:36 kls Exp $
+  */
+ 
+ #include "timers.h"
+@@ -351,7 +351,7 @@
+          if (DayMatches(t0)) {
+             time_t a = SetTime(t0, begin);
+             time_t b = a + length;
+-            if ((!day || a >= day) && t <= b) {
++            if ((!day || a >= day) && t < b) {
+                startTime = a;
+                stopTime = b;
+                break;
+@@ -647,6 +647,7 @@
+ {
+   cTimer *t0 = NULL;
+   for (cTimer *ti = First(); ti; ti = Next(ti)) {
++      ti->Matches();
+       if ((ti->HasFlags(tfActive)) && (!t0 || ti->StopTime() > time(NULL) && ti->Compare(*t0) < 0))
+          t0 = ti;
+       }
+diff -ruN vdr-1.4.1-2/vdr.c vdr-1.4.1-3/vdr.c
+--- vdr-1.4.1-2/vdr.c	2006-06-18 10:49:20.000000000 +0200
++++ vdr-1.4.1-3/vdr.c	2006-08-05 12:46:38.000000000 +0200
+@@ -22,7 +22,7 @@
+  *
+  * The project's page is at http://www.cadsoft.de/vdr
+  *
+- * $Id: vdr.c 1.276 2006/06/18 08:49:20 kls Exp $
++ * $Id: vdr.c 1.278 2006/08/05 10:46:38 kls Exp $
+  */
+ 
+ #include <getopt.h>
+@@ -1015,16 +1015,18 @@
+                   }
+                if (cPluginManager::Active(tr("shut down anyway?")))
+                   break;
+-               cTimer *timer = Timers.GetNextActiveTimer();
+-               time_t Next  = timer ? timer->StartTime() : 0;
+-               time_t Delta = timer ? Next - time(NULL) : 0;
+-               if (Next && Delta <= Setup.MinEventTimeout * 60) {
+-                  char *buf;
+-                  asprintf(&buf, tr("Recording in %ld minutes, shut down anyway?"), Delta / 60);
+-                  bool confirm = Interface->Confirm(buf);
+-                  free(buf);
+-                  if (!confirm)
+-                     break;
++               if (!cRecordControls::Active()) {
++                  cTimer *timer = Timers.GetNextActiveTimer();
++                  time_t Next  = timer ? timer->StartTime() : 0;
++                  time_t Delta = timer ? Next - time(NULL) : 0;
++                  if (Next && Delta <= Setup.MinEventTimeout * 60) {
++                     char *buf;
++                     asprintf(&buf, tr("Recording in %ld minutes, shut down anyway?"), Delta / 60);
++                     bool confirm = Interface->Confirm(buf);
++                     free(buf);
++                     if (!confirm)
++                        break;
++                     }
+                   }
+                ForceShutdown = true;
+                break;
+@@ -1166,6 +1168,12 @@
+                     else
+                        LastActivity = 1;
+                     }
++                 if (timer && Delta < Setup.MinEventTimeout * 60 && ForceShutdown) {
++                    Delta = Setup.MinEventTimeout * 60;
++                    Next = Now + Delta;
++                    timer = NULL;
++                    dsyslog("reboot at %s", *TimeToString(Next));
++                    }
+                  if (!Next || Delta > Setup.MinEventTimeout * 60 || ForceShutdown) {
+                     ForceShutdown = false;
+                     if (timer)

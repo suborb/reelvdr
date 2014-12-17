@@ -1,0 +1,506 @@
+--- i18n.c.org	2005-06-24 16:16:39.000000000 +0200
++++ i18n.c	2005-07-05 13:47:45.000000000 +0200
+@@ -235,7 +235,7 @@
+     "Aufzeichnungen",
+     "Posnetki",
+     "Registrazioni",
+-    "Opnames",
++    "Opname's",
+     "Gravações",
+     "Enregistrements",
+     "Opptak",
+@@ -1519,7 +1519,7 @@
+     "Inversion",
+     "Inverzija",
+     "Inversion",
+-    "Inversion",
++    "Inversie",
+     "Inversion",
+     "Inversion",
+     "Inversion",
+@@ -1540,7 +1540,7 @@
+     "Bandwidth",
+     "Pasovna sirina",
+     "Bandwidth",
+-    "Bandwidth",
++    "Bandbreedte",
+     "Bandwidth",
+     "Bande passante",
+     "Bandwidth",
+@@ -1603,7 +1603,7 @@
+     "Modulation",
+     "Modulacija",
+     "Modulation",
+-    "Modulation",
++    "Modulatie",
+     "Modulation",
+     "Modulation",
+     "Modulation",
+@@ -1624,7 +1624,7 @@
+     "Transmission",
+     "Prenos",
+     "Transmission",
+-    "Transmission",
++    "Transmissie",
+     "Transmission",
+     "Transmission",
+     "Transmission",
+@@ -1793,7 +1793,7 @@
+     "VPS",
+     "",// TODO
+     "VPS",
+-    "",// TODO
++    "VPS",
+     "",// TODO
+     "VPS",
+     "",// TODO
+@@ -2298,7 +2298,7 @@
+     "Kein Audio verfügbar!",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Geen audio beschikbaar",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -2467,7 +2467,7 @@
+     "Sonstiges",
+     "Ostalo",
+     "Generici",
+-    "Overig",
++    "Overige",
+     "Outros",
+     "Divers",
+     "Forskjellig",
+@@ -2573,7 +2573,7 @@
+     "Oberfläche",
+     "",// TODO
+     "Superficie Skin",
+-    "",// TODO
++    "Setup Skin",
+     "",// TODO
+     "Skin",
+     "",// TODO
+@@ -2594,7 +2594,7 @@
+     "Thema",
+     "",// TODO
+     "Tema",
+-    "",// TODO
++    "Thema",
+     "",// TODO
+     "Thème",
+     "",// TODO
+@@ -2615,7 +2615,7 @@
+     "Links",
+     "",// TODO
+     "Sinistra",
+-    "",// TODO
++    "Links",
+     "",// TODO
+     "Gauche",
+     "",// TODO
+@@ -2636,7 +2636,7 @@
+     "Oben",
+     "",// TODO
+     "Cima",
+-    "",// TODO
++    "Boven",
+     "",// TODO
+     "Haut",
+     "",// TODO
+@@ -2720,7 +2720,7 @@
+     "Kleine Schrift benutzen",
+     "",// TODO
+     "Utilizzare caratteri piccoli",
+-    "",// TODO
++    "Kleine letters gebruiken",
+     "",// TODO
+     "Utiliser les petits caractères",
+     "",// TODO
+@@ -2741,7 +2741,7 @@
+     "nie",
+     "",// TODO
+     "mai",
+-    "",// TODO
++    "nooit",
+     "",// TODO
+     "jamais",
+     "",// TODO
+@@ -2762,7 +2762,7 @@
+     "je nach Oberfläche",
+     "",// TODO
+     "in base alla superficie",
+-    "",// TODO
++    "skin afhankelijk",
+     "",// TODO
+     "Dépend du skin",
+     "",// TODO
+@@ -2783,7 +2783,7 @@
+     "immer",
+     "",// TODO
+     "sempre",
+-    "",// TODO
++    "altijd",
+     "",// TODO
+     "toujours",
+     "",// TODO
+@@ -2825,7 +2825,7 @@
+     "Anzeigedauer für Kanal-Info (s)",
+     "",// TODO
+     "",// TODO
+-    "",// TODO
++    "tijdsduur kanaalinfo",
+     "",// TODO
+     "Durée affichage infos chaînes (s)",
+     "",// TODO
+@@ -2909,7 +2909,7 @@
+     "Aufnahmeverzeichnisse",
+     "Direktoriji za posnetke",
+     "Directory di registrazione",
+-    "Opname directories",
++    "Opname directorie's",
+     "Directorias de gravação",
+     "Dossiers d'enregistrements",
+     "Kataloger til opptak",
+@@ -2972,7 +2972,7 @@
+     "Alte EPG-Daten anzeigen (min)",// TODO
+     "",// TODO
+     "Visualizzazione dati vecchi (min)",
+-    "",// TODO
++    "Oude EPG-Data's tonen (min)",
+     "",// TODO
+     "Montrer l'EPG plus vieux de m min",
+     "",// TODO
+@@ -3035,7 +3035,7 @@
+     "Bevorzugte Sprachen",
+     "",// TODO
+     "Lingue preferite",
+-    "",// TODO
++    "Voorkeur Talen",// TODO
+     "",// TODO
+     "Langues préférées",
+     "",// TODO
+@@ -3056,7 +3056,7 @@
+     "Bevorzugte Sprache",
+     "",// TODO
+     "Lingua preferita",
+-    "",// TODO
++    "Voorkeur Talen",
+     "",// TODO
+     "Langue préférée",
+     "",// TODO
+@@ -3119,7 +3119,7 @@
+     "Dolby Digital Ton benutzen",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Dolby Digitaal gebruiken",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -3140,7 +3140,7 @@
+     "Kanäle aktualisieren",
+     "",// TODO
+     "Aggiornare i canali",
+-    "",// TODO
++    "Kanaal aktualiseren",
+     "",// TODO
+     "Mettre à jour les chaînes",
+     "",// TODO
+@@ -3161,7 +3161,7 @@
+     "nur Namen",
+     "",// TODO
+     "solo nomi",
+-    "",// TODO
++    "alleen namen",
+     "",// TODO
+     "Seulement les noms",
+     "",// TODO
+@@ -3182,7 +3182,7 @@
+     "Namen und PIDs",
+     "",// TODO
+     "nomi e PIDs",
+-    "",// TODO
++    "namen en PIDs",
+     "",// TODO
+     "Noms et PIDs",
+     "",// TODO
+@@ -3203,7 +3203,7 @@
+     "neue Kanäle hinzufügen",
+     "",// TODO
+     "aggiungere canali nuovi",
+-    "",// TODO
++    "voeg nieuwe kanalen toe",
+     "",// TODO
+     "Ajouter les nouvelles chaînes",
+     "",// TODO
+@@ -3224,7 +3224,7 @@
+     "neue Transponder hinzufügen",
+     "",// TODO
+     "aggiungere transponder nuovi",
+-    "",// TODO
++    "voeg nieuwe transponder's toe",
+     "",// TODO
+     "Ajouter les nouveaux transpondeurs",
+     "",// TODO
+@@ -3245,7 +3245,7 @@
+     "",//TODO
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Audio talen",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -3266,7 +3266,7 @@
+     "",//TODO
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Audio talen",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -3371,7 +3371,7 @@
+     "GotoX benutzen",
+     "",
+     "",
+-    "",
++    "GotoX gebruiken",
+     "",
+     "Utiliser Aller à X",
+     "",
+@@ -3392,7 +3392,7 @@
+     "Längengrad",
+     "",
+     "",
+-    "",
++    "Lengtegraad",
+     "",
+     "Longitude",
+     "",
+@@ -3413,7 +3413,7 @@
+     "Ost oder West",
+     "",
+     "",
+-    "",
++    "Oost of West",
+     "",
+     "Est ou Ouest",
+     "",
+@@ -3434,7 +3434,7 @@
+     "Ost",
+     "",
+     "",
+-    "",
++    "Oost",
+     "",
+     "Est",
+     "",
+@@ -3455,7 +3455,7 @@
+     "West",
+     "",
+     "",
+-    "",
++    "West",
+     "",
+     "Ouest",
+     "",
+@@ -3476,7 +3476,7 @@
+     "Breitengrad",
+     "",
+     "",
+-    "",
++    "Breedtegraad",
+     "",
+     "Latitude",
+     "",
+@@ -3497,7 +3497,7 @@
+     "Süd oder Nord",
+     "",
+     "",
+-    "",
++    "Zuid of Noord",
+     "",
+     "Sud ou Nord",
+     "",
+@@ -3518,7 +3518,7 @@
+     "Süd",
+     "",
+     "",
+-    "",
++    "Zuid",
+     "",
+     "Sud",
+     "",
+@@ -3539,7 +3539,7 @@
+     "Nord",
+     "",
+     "",
+-    "",
++    "Noord",
+     "",
+     "Nord",
+     "",
+@@ -3749,7 +3749,7 @@
+     "VPS benutzen",
+     "",// TODO
+     "Utilizzare VPS",
+-    "",// TODO
++    "Gebruik VPS",
+     "",// TODO
+     "Utiliser le VPS",
+     "",// TODO
+@@ -3770,7 +3770,7 @@
+     "Zeitpuffer bei VPS (s)",
+     "",// TODO
+     "Margine VPS",
+-    "",// TODO
++    "Marge bij VPS",
+     "",// TODO
+     "Marge VPS",
+     "",// TODO
+@@ -4151,7 +4151,7 @@
+     "Eine Taste auf der FB drücken",
+     "Pritisnite tipko na upravljalcu",
+     "Premere un tasto dell'unita` RC",
+-    "Druk op een willekeurige knop",
++    "Druk willekeurige toets op de AB",
+     "Pressione qualquer tecla do telecomando",
+     "Appuyer sur une touche de la télécommande",
+     "Trykk en av tastene på fjernkontrollen",
+@@ -4172,7 +4172,7 @@
+     "FB Code erkannt!",
+     "IR koda sprejeta!",
+     "Codice RC rilevato!",
+-    "Afstandsbediening code herkend!",
++    "AB code herkend!",
+     "Código do telecomando detectado!",
+     "Code de la télécommande détecté!",
+     "Fjernkontroll-kodetype funnet!",
+@@ -4193,7 +4193,7 @@
+     "Keine Taste drücken...",
+     "Ne pritiskajte tipk...",
+     "Non premere alcun tasto...",
+-    "Druk niet op een knop...",
++    "Druk geen enkele toets...",
+     "Não pressione nada...",
+     "N'appuyer sur aucune touche ...",
+     "Ikke trykk på noen av tastene...",
+@@ -4235,7 +4235,7 @@
+     "Taste für '%s' drücken",
+     "Pritisnite tipko za '%s'",
+     "Premere il tasto per '%s'",
+-    "Druk knop voor '%s'",
++    "Druk toets voor '%s'",
+     "Pressione tecla para '%s'",
+     "Appuyer sur la touche '%s'",
+     "Trykk tasten for '%s'",
+@@ -4382,7 +4382,7 @@
+     "'Auf' speichert, 'Ab' bricht ab",
+     "'Gor' za potrditev, 'Dol' za prekinitev",
+     "'Su' per salvare, 'Giu' per annullare",
+-    "'Omhoog' te bewaren, 'Omlaag' voor annuleren",
++    "'Omhoog' bewaren, 'Omlaag' annuleren",
+     "'Cima' para Salvar, 'Baixo' para Cancelar",
+     "Appuyer sur 'Haut' pour sauvegarder, 'Bas' pour annuler",
+     "Trykk 'Opp' for å lagre, 'Ned' for å avbryte",
+@@ -4719,7 +4719,7 @@
+     "Vorlauf",
+     "Hitro naprej",
+     "Avanti Veloce",
+-    "Vooruitspoelen",
++    "Snel vooruit",
+     "",// TODO
+     "Avance rapide",
+     "",// TODO
+@@ -4740,7 +4740,7 @@
+     "Rücklauf",
+     "Hitro nazaj",
+     "Indietro Veloce",
+-    "Terugspoelen",
++    "Snel terug",
+     "",// TODO
+     "Retour rapide",
+     "",// TODO
+@@ -4887,7 +4887,7 @@
+     "Audio",
+     "",// TODO
+     "",// TODO
+-    "",// TODO
++    "Audio",
+     "",// TODO
+     "",// TODO
+     "",// TODO
+@@ -5371,7 +5371,7 @@
+     "Klassischer VDR",
+     "",// TODO
+     "VDR Classico",
+-    "",// TODO
++    "Klassieke VDR",
+     "",// TODO
+     "",// TODO
+     "",// TODO
+@@ -5392,7 +5392,7 @@
+     "ST:TNG Konsolen",
+     "",// TODO
+     "Consolles ST:TNG",
+-    "",// TODO
++    "ST:TNG Console",
+     "",// TODO
+     "",// TODO
+     "",// TODO
+@@ -5413,7 +5413,7 @@
+     "Aufzeichnung umbenennen",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Hernoem opname",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -5434,7 +5434,7 @@
+     "Befehle Position im Hauptmenü",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Command positie in Hoofdmenu",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -5455,7 +5455,7 @@
+     "Zeitbalken anzeigen",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Toon voortgangs balk",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -5476,7 +5476,7 @@
+     "Aufnahmedatum anzeigen",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Toon datum",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -5497,7 +5497,7 @@
+     "AufnahmeZeit anzeigen",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Toon tijd",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+@@ -5518,7 +5518,7 @@
+     "Länge der Aufnahme anzeigen",
+     "",//TODO
+     "",//TODO
+-    "",//TODO
++    "Toon lengte",
+     "",//TODO
+     "",//TODO
+     "",//TODO

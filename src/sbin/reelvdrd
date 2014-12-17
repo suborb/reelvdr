@@ -1,0 +1,797 @@
+#!/bin/bash
+# Control script for ReelVDR
+# Controls standby, deep standby and wakeup
+#
+# VERSNUM 20110420
+#
+
+trap ReReadConfigs SIGHUP
+trap Terminate SIGINT SIGPIPE SIGTERM SIGIO
+
+
+SYSCONFIG="/etc/default/sysconfig"
+REELVDRCONFIG="/etc/reel/reelvdr"
+
+. $SYSCONFIG
+. $REELVDRCONFIG
+
+#export proxy settings for vdr
+. /usr/sbin/proxy_settings
+
+#
+# Global vars
+#
+
+. /etc/default/globals
+
+[ -r /tmp/.mediadir ] && . /tmp/.mediadir
+RECORDINGSDIR=/media/reel/recordings
+LIVEBUFFERDIR=/media/reel/recordings
+SVDRP="-p 2001"
+
+SHUTDOWN_TIMEOUT=10
+CONFIG=/etc/vdr
+DVDDIR="/media/dvd"
+DVDDEV="/dev/dvd"
+if RbMini ; then
+	HDDEV="/dev/sdf"
+else
+	HDDEV="/dev/sda"
+fi
+
+DVDIMAGES="/media/reel/video/dvd"
+
+#
+#Programs, vdr and plugins
+#
+
+. /etc/reel/platform/*.inc
+
+#REELHWCTL=/sbin/reelhwctl
+#BSPD=bspd
+#INITCI=/usr/sbin/init_ci
+REELFPCTL="$REELFPCTL -nowait"
+REELHWCTL=/bin/true
+#HDCONTROL=/usr/sbin/hdctrld
+POWERSAVE=/sbin/reelpowersave
+#FPLEDS=/etc/init.d/fpleds
+
+
+BSPD=/bin/true
+INITCI=/bin/true
+
+[ -z "$VDR" ] && VDR=/usr/sbin/vdr
+[ -z "$VDRPLUGINDIR" ] && VDRPLUGINDIR="/usr/lib/vdr"
+[ -z "$DS_ENABLE" ] && DS_ENABLE="no"
+[ -z "$DS_TIMEOUT" ] && DS_TIMEOUT="0"
+[ "$DS_TIMEOUT_NEW" = "241" ] && DS_ENABLE="no"
+[ -z "$HOME" ] && export HOME="/root"
+[ -z "$LOCALEDIR" ] && export LOCALEDIR="/usr/share/locale"
+OUTPUT_LAST_RESORT="-Pdummydevice"
+
+umask 002
+
+#
+# Global functions
+#
+
+# definitions used in functions
+STANDBY_LED=1
+REMOTE_LED=2
+RECORD_LED=4
+POWER_LED=8
+ALL_LED=15
+
+NOCLOCK=0
+CLOCK=1
+
+#set -x
+
+CheckUpdates () {
+    if [ "$UPDATECHECK_ENABLE" = "yes" ]; then
+    (
+	LANG=C
+	echo "CheckUpdates: sleeping 120s for vdr to come up."
+	sleep 120
+	echo "CheckUpdates: starting check"
+	echo -e "n\nn\nn\nn\nn\nn\nn\nn\nn\nn" > /tmp/sayno
+	# check 4 updates updates, -s means simulate
+	#aptitude update
+	pkg_count=`aptitude -s -y dist-upgrade  | grep "packages upgraded," | cut -f1 -d" "`
+	if [ "$pkg_count" -gt 0 ] ; then
+		Syslog "$pkg_count Updates available. Asking to install them..."
+		svdrpsend.sh "PLUG dpkg ASKUP"
+	else
+		Syslog "ReelBox is up-to-date."
+	fi
+    ) >/dev/null 2>&1 &
+    fi
+}
+
+Eject () {
+	case "$1" in
+		"")
+			mount.sh eject
+			;;
+		shutdown)
+			if RbLite || [ "$DVD_TRAY" = "yes" ] ; then
+				eject -t -p /dev/dvd &
+				rm /tmp/cdopen
+			else
+				eject -r &
+			fi
+			;;
+		close)
+			#close CD-Tray
+			eject -t -p /dev/dvd &
+			rm /tmp/cdopen
+			;;
+		*)
+			Syslog "unknown action Eject $1"
+			;;
+	esac
+}
+
+FPPrepareStandby () {
+	case $FPDISPBRIGHT in
+		off)	BRIGHT=0 ;;
+		min)	BRIGHT=8 ;;
+		low)	BRIGHT=16 ;;
+		med)	BRIGHT=32 ;;
+		high)	BRIGHT=64 ;;
+		max)	BRIGHT=128 ;;
+		*)	BRIGHT=8 ;;
+	esac
+	$REELFPCTL -setclock -brightness $BRIGHT -blinkled $(($STANDBY_LED+$RECORD_LED))
+	#$FPLEDS standby
+}
+
+FPSetDeepStandby () {
+	SetWakeup
+	SetWOL
+	$REELFPCTL -clearled $ALL_LED -blinkled $(($POWER_LED+$STANDBY_LED))
+}
+
+FPSetDeepStandby_old () {
+	SetWakeup
+	case $FPSLEDBR in
+		off)	BRIGHT=0 ;;
+		min)	BRIGHT=1 ;;
+		low)	BRIGHT=2 ;;
+		med)	BRIGHT=4 ;;
+		high)	BRIGHT=8 ;;
+		max)	BRIGHT=16 ;;
+		*)	BRIGHT=8 ;;
+	esac
+	$REELFPCTL -clearled $ALL_LED -setledbrightness $BRIGHT -setled $POWER_LED
+
+	# Tell FP to shutdown system in n secs
+	$REELFPCTL -setclock -shutdown $SHUTDOWN_TIMEOUT
+	$REELFPCTL -brightness 0   # -shutdown 1
+}
+
+FPSetStandby () {
+	$FPLEDS standby
+	$REELFPCTL -clearled $ALL_LED -setled $(($STANDBY_LED+$POWER_LED))
+}
+
+GetLivebufferDir () {
+	#LiveBuffer enabled?
+	if [ $(grep 'LiveBuffer =' /etc/vdr/setup.conf | head -1 | awk '{ print $3 }') = 1 ]; then
+		for hd in hd hd0 hd1 hd2 hd3 hd4 hd5 hd6 hd7 hd8 hd9 ; do
+			#test for space
+			if [ -d /media/$hd ] ; then
+				diskfree=`df -l /media/$hd | tail -1 | awk '{ print $4 }'`
+				if [ $diskfree -ge $((1024*1024)) ] ; then  #1GB
+					LIVEBUFFERDIR=/media/$hd/recordings
+					break
+				fi
+			fi
+		done
+		[ -z $diskfree ] && diskfree=0
+		[ "$1" != "-q" ] && Syslog "Using $LIVEBUFFERDIR for permanent timeshift buffer. Has $(($diskfree / 1024))MB free space."
+	else
+		Syslog "LiveBuffer disabled in setup.conf"
+	fi
+}
+
+GetOptPlugins () {
+	OPTPLUGINS=""
+	PREOPTPLUGINS=""
+	#APIVERSION=`basename  $VDRPLUGINDIR/*reelbox.so* | cut -d. -f 3-`
+	APIVERSION=`$VDR -V -L /tmp | grep ^vdr | cut -f2 -d/ | cut -f1 -d\)`
+	for i in /etc/reel/p.*.conf ; do
+		pluginname=`echo $i | cut -d. -f2`
+		PRELOAD=false
+		LOAD_PLUGIN=false
+		PLUGIN_OPTIONS=""
+		. $i
+		if $LOAD_PLUGIN ; then
+			if [ -f $VDRPLUGINDIR/libvdr-$pluginname.so.$APIVERSION ]; then
+				if $PRELOAD ; then
+					PREOPTPLUGINS="$PREOPTPLUGINS $PLUGIN_OPTIONS"
+				else
+					OPTPLUGINS="$OPTPLUGINS $PLUGIN_OPTIONS"
+				fi
+			else
+				Syslog "ERROR: plugin $pluginname not found. Needs update?"
+			fi
+		fi
+	done
+}
+
+GetWakeup () {
+	# Get the wakeup reason
+	if [ -f /var/run/.reelbox.wakeup ]; then
+		WAKEUP=`cat /var/run/.reelbox.wakeup`
+		#rm /var/run/.reelbox.wakeup
+	else
+		WAKEUP=0
+	fi
+	Syslog "wakeup reason was: $WAKEUP"
+}
+
+
+InitCi () {
+	#disabled for now
+	return 0
+	$INITCI
+	echo "==> sleep 2"
+	sleep 2
+}
+
+
+PrepareActive () {
+	#this is for un-doing powersave mode and preparing tuners, output hardware etc.
+	$HDCONTROL -o DVI	# will be set correctly by rb-pi on startup
+	#sleep 2
+	$HDCONTROL -s
+}
+
+
+Powersave () {
+	$HDCONTROL -v off	# video off
+	$HDCONTROL -V 0		# mute
+	$HDCONTROL -k
+}
+
+
+SetAc3OverHdmi () {
+	Syslog "SetAc3OverHdmi: This function is outdated'!' Don't use it'!!!'"
+}
+
+
+SetOutput () {
+    if [ -z "$OUTPUTDEV" ] ; then
+        Syslog "No Output device set. Using dummydevice."
+        OUTPUTDEV=$OUTPUT_LAST_RESORT
+    else
+        Syslog "Using output device $OUTPUTDEV"
+    fi
+}
+
+
+SetSkin () {
+	case $SKIN in
+		Reel)
+			SKINPLUG=""
+			;;
+		Enigma)
+			SKINPLUG="-Pskinenigmang"
+			;;
+		none|"")
+			SKINPLUG=""
+			;;
+		*)
+			SKINPLUG=""
+			Syslog "Output skin $SKIN unknown. Check $REELVDRCONFIG."
+			;;
+	esac
+}
+
+SetTunerDevices () {
+	TUNERDEV=""
+	i=0
+	while ( echo "" > /dev/dvb/adapter$i/dvr0 ) 2>/dev/null ; do
+		TUNERDEV="$TUNERDEV -D$i"
+		let i++
+	done
+}
+
+SetWakeup () {
+	# Tell FP to wakeup at x
+	# TODO: make calls for non-reelbox-fp
+	if [ "$1" = "" ]; then
+		wakeuptime=`cat /tmp/vdr.wakeup`
+	else
+		wakeuptime=$1
+	fi
+
+	# make sure wakeuptime for fp is in the future. Is 60s enough?
+	now=`date +%s`
+	if [ $wakeuptime -lt $now ] ; then
+		wakeuptime=$(($now+60))
+	fi
+
+	if [ $wakeuptime = 2147483647 ]; then
+		$REELFPCTL -toptext "" -displaymode $CLOCK
+	else
+		$REELFPCTL -toptext "TIMER" -displaymode $CLOCK
+	fi
+	Syslog "Setting wakeuptime to $wakeuptime"
+	$REELFPCTL -wakeup $wakeuptime
+}
+
+SetWOL () {
+    if ! RbIce ; then
+	if [ "$WOL_ENABLE" = "no" ] ; then
+		$REELFPCTL -pwrctl 13000001
+	else
+		$REELFPCTL -pwrctl 13000000
+	fi
+    fi
+}
+
+Wait4TunerDevs () {
+	if [ -s /var/run/mcli.pid ] ; then
+		count=0
+		while [ ! -d /dev/dvb/adapter0 ] ; do
+			Syslog "Waiting for /dev/dvb/adapter0"
+			echo "==> sleep 1"
+			sleep 1
+			if [ $((count++)) -gt 7 ]; then
+				Syslog "DVB adapters don't come up. Starting anyway."
+				break
+			fi
+		done
+	fi
+}
+
+WakeUpAVG () {
+	# if in client-mode
+	if [ $(grep 'ReelboxMode =' /etc/vdr/setup.conf| awk '{ print $3 }') = 1 ] && [ "$WOL_WAKEUP_SERVER" != "no" ]; then
+		# wake the AVG
+		SERVER_MAC=$(grep NetServerMAC /etc/vdr/setup.conf|awk '{ print $3 }')
+		Syslog "Wakeup call for ReelBox Server $SERVER_MAC"
+		$(which wakeonlan) && wakeonlan $SERVER_MAC
+	fi
+}
+
+Test () {
+	# TODO: write test procedure for init script here
+	echo "OK"
+	exit 0
+}
+
+
+MainLoop () {
+#set -x
+while [ ! -e /tmp/vdr.deepstandby ]; do
+
+	# wake up the AVG server if in client mode
+	WakeUpAVG
+
+	$REELHWCTL -spdif-in bsp -video-mute 15
+	$REELFPCTL -clearled $ALL_LED -brightness 240
+
+	if [ "$BLACKDISP" = "yes" ] ; then
+		$REELFPCTL -contrast 205
+	else
+		$REELFPCTL -contrast 240
+	fi
+
+	$FPLEDS
+	# /etc/init.d/spdif_out start
+
+	killall shutdownwd.sh
+
+	# disable clock when coming from standby
+	$REELFPCTL -displaymode $NOCLOCK
+
+	[ -f /tmp/vdr.shutdown ] && rm /tmp/vdr.shutdown
+	[ -f /tmp/vdr.standby ] && rm /tmp/vdr.standby
+
+	#some special checks on first boot
+	if [ -f /tmp/.isboot ] || [ -f /var/run/.isboot ] || [ "$BOOT" = "true" ] ; then
+		#started by rcS/init.d
+		rm /tmp/.isboot /var/run/.isboot 2>/dev/null
+
+		GetWakeup
+		case $WAKEUP in
+			01)
+				Syslog "Wakeup: is power cycle"
+				TIMER_WAKEUP="--timerwakeup" # vdr should shutdown after the recording is done
+				POWER_CYCLE="--powercycle"   # vdr does not go into quickstandby immediately
+				;;
+			02)
+				Syslog "Wakeup: frontpanel reset (three finger salute)"
+				TIMER_WAKEUP="--timerwakeup" # vdr should shutdown after the recording is done
+				POWER_CYCLE="--powercycle"   # vdr does not go into quickstandby immediately
+				;;
+			05)
+				Syslog "Wakeup: is timer wakeup"'!'
+				TIMER_WAKEUP="--timerwakeup"
+				unset POWER_CYCLE
+				sed -i s/NextWakeupTime.*/"NextWakeupTime = $(($(date +%s)+60))"/ $CONFIG/setup.conf
+				;;
+			*)
+				Syslog "Wakeup: by user, i.e. remote"
+				sed -i s/NextWakeupTime.*/"NextWakeupTime = 0"/ $CONFIG/setup.conf
+				unset TIMER_WAKEUP
+				unset POWER_CYCLE
+				;;
+		esac
+
+		if [ "$POWERSAVINGS" = "no" ]; then
+			unset TIMER_WAKEUP
+			unset POWER_CYCLE
+		fi
+
+		# always enable diseqc
+		sed s/"DiSEqC = .*"/"DiSEqC = 1"/ -i /etc/vdr/setup.conf
+
+		#wait for dvb devices to come up
+		Wait4TunerDevs
+	else
+		#started from while-loop or by user
+		# this resets hd standby timer to value in /etc/default/sysconfig
+		# /etc/init.d/hdstb -d &
+
+		# init CI Modules:
+		# prepare active mode
+		PrepareActive
+	fi
+
+	[ -d "$DVDIMAGES" ] || mkdir -p "$DVDIMAGES"
+
+	CheckUpdates # runs in background
+	SetSkin
+	GetLivebufferDir
+	GetOptPlugins
+        SetOutput
+
+	# setting Tuner device(s)
+	if $MCLI_ENABLED ; then
+		# this is only used with mcli daemon
+		echo "WARN: mcli daemon is enabled."
+		SetTunerDevices
+
+		if [ "$TUNERDEV" = "" ]; then
+			Syslog "WARNING: no Tunerdevices found. You won't be able to watch TV."
+		fi
+		TUNERDEV="$TUNERDEV -D$i"	# the last one is the device for the reelbox pi and
+						# *must* always be there
+		Syslog "Devices used: $TUNERDEV"
+	fi
+
+	# remove vdr.records from tmp
+        test -f /tmp/vdr.records && rm /tmp/vdr.records
+
+	# make sure /media/reel/recordings exists, else vdr exits!
+	if [ ! -d ${RECORDINGSDIR} ]; then
+		Syslog "RecordingsDir set as ${RECORDINGSDIR} does not exist!"
+		mkdir -p /tmp #make sure /tmp is present
+		ln -sfv /tmp ${RECORDINGSDIR}
+	fi
+
+	# now starting vdr
+	eval "$VDR \
+	--config=$CONFIG \
+	--shutdown=/usr/sbin/mvdrshutdown \
+	--video=$RECORDINGSDIR \
+	--buffer=$LIVEBUFFERDIR \
+	$TUNERDEV \
+	-kchannels.conf \
+	-L $VDRPLUGINDIR \
+	-E /var/tmp/epg.data \
+	-r /usr/sbin/reccommand.sh \
+	-w 60 -l 3 \
+	--vfat \
+	--localedir="$LOCALEDIR" \
+	$TIMER_WAKEUP \
+	$POWER_CYCLE \
+	$SVDRP \
+	$PREOPTPLUGINS \
+	$OUTPUTDEV \
+	$SKINPLUG \
+	$REMOTE \
+	-Psetup \
+	-Pextrecmenu \
+	-Pundelete \
+	-Pfilebrowser \
+	-Pepgsearch \
+	-Pepgtimers \
+	-Pepgsearchonly \
+	-Pfemon \
+	-Parghdirector \
+	-P 'osdteletext -d /tmp/tmpfs/vtx' \
+	-P 'sleeptimer -e /usr/sbin/sleeptimer.sh' \
+	-Ppremiereepg \
+	-Pinstall \
+	-Pnetcv \
+	-Pbgprocess \
+	$OPTPLUGINS"
+        #wait $!
+
+	EXIT_STATUS=$?
+
+	killall shutdownwd.sh
+
+	# vdr tells us the exit reason, lets use it...
+	case $EXIT_STATUS in
+		0)
+			# normal exit on user demand or inactivity
+			# seems we are going to standby
+			echo
+			logger -s "VDR exited normal."
+			test -f /tmp/vdr.records && rm /tmp/vdr.records
+			;;
+	        1)
+			logger -s "VDR exit because watchdog has bitten. Restarting VDR"
+			test -f /tmp/vdr.deepstandby && rm /tmp/vdr.deepstandby
+			test -f /tmp/vdr.records && rm /tmp/vdr.records
+			;;
+		*)
+			# either HD-Player, VDR, or one of the plugins crashed
+			echo
+			logger -s 'VDR crashed!!!'
+			test -f /tmp/vdr.records && rm /tmp/vdr.records
+		;;
+		# now let the loop do the rest
+	esac
+
+	# sysconfig could have been changed by user, so we need to re-source it every time vdr exits
+	ReReadConfigs
+
+	#User could have pressed "Exit" on shutdown so we also have to test for .deepstandby
+	if [ -f /tmp/vdr.shutdown ] || [ -f /tmp/vdr.deepstandby ] ; then
+		#test -f /tmp/vdr.deepstandby && rm /tmp/vdr.deepstandby
+		Syslog "Preparing standby"
+		unset TIMER_WAKEUP
+		unset POWER_CYCLE
+		FPPrepareStandby
+		SetWakeup
+		Powersave
+
+		# save epg
+		#/usr/sbin/epg_backup.sh save  # TODO: still needed??
+
+		#delete temporary directories from burn plugin
+		for i in `find $RECORDINGSDIR/ -name "vdr-burn*"` ; do
+			rm -rfv "$i"
+		done
+
+		eval $(grep ReelboxMode /etc/vdr/setup.conf | tr -d " ")
+		if [ "$ReelboxMode" == "" ] || [ "$ReelboxMode" == "0" ] || [ "$ReelboxMode" == "2" ]; then
+			#this is a server or standalone mode
+			#finally remove deleted recordings
+			for i in `find $RECORDINGSDIR/ -name "*.del"` ; do
+				rm -rfv "$i"
+				#the directory is now leftover
+				vestigedir=`dirname $i`
+				if [ "`ls $vestigedir`" = "" ] ; then
+					rmdir $vestigedir
+				fi
+			done
+
+			#maybe there are still empty directories
+			# -empty doesn't work with busybox :( TODO: find another way
+			for i in `find $RECORDINGSDIR/ -empty -type d` ; do
+				[ "$i" != "$RECORDINGSDIR" ] && rmdir $i
+			done
+		fi
+
+		# cleanup livebuffer dir
+		if [ -d $LIVEBUFFERDIR/LiveBuffer ] ; then
+			rm -f $LIVEBUFFERDIR/LiveBuffer/*.vdr
+		fi
+
+		# we set HD-standby timeout to 15sec to make sure HD goes down
+		# again if it has to write something while in standby
+		# this will be corrected to the right value when vdr comes up again
+		# TODO: fix this for Netclient / AVG
+		/sbin/hdparm -S24 $HDDEV
+
+		sync &
+
+		now=`date +%s`
+
+		if [ "$DS_TIMEOUT_NEW" == "" ]; then
+			# use old setting, new one has never been set
+			MAX_IDLE_TIME=$(($DS_TIMEOUT*60*60))
+		else
+			MAX_IDLE_TIME=$(($DS_TIMEOUT_NEW*60))
+		fi
+
+		let dstandbytime=$now+$MAX_IDLE_TIME
+		Syslog "DEBUG: MAX_IDLE_TIME: $MAX_IDLE_TIME, dstandbytime: $dstandbytime"
+		wakeup=`cat /tmp/vdr.wakeup`
+
+		if [ `date +%s` -ge $wakeup ]; then
+			logger -s "Wakeuptime reached"
+			rm /tmp/vdr.standby /tmp/vdr.shutdown /tmp/vdr.deepstandby
+			TIMER_WAKEUP="--timerwakeup"
+		fi
+
+
+		if [ ! -f /tmp/vdr.deepstandby ]; then
+			FPSetStandby
+			touch /tmp/vdr.standby
+			rm /tmp/vdr.shutdown
+			Syslog "standby reached"
+		fi
+
+		#standby loop
+		while [ -e /tmp/vdr.standby ] ; do
+			RbMini && FPSetStandby
+			# Allow changes of wakeuptime
+			wakeup=`cat /tmp/vdr.wakeup`
+			now=`date +%s`
+			if [ $now -ge $wakeup ]; then
+				Syslog "Wakeuptime reached"
+				rm /tmp/vdr.standby /tmp/vdr.shutdown /tmp/vdr.deepstandby
+				TIMER_WAKEUP="--timerwakeup"
+			fi
+
+			if [ $DS_ENABLE = yes ] && [ $now -ge $dstandbytime ]; then
+				Syslog "time for deep-standby reached."
+				touch /tmp/vdr.deepstandby
+				break
+			fi
+			sleep 1
+		done
+	fi
+
+	if [ -f /tmp/vdr.deepstandby ]; then
+		Syslog "found a /tmp/vdr.deepstandby (user pressed 'Exit'), going to deep standby"
+		# at this point, vdr is already off.
+		# we have to create vdr.standby again because otherwise /etc/init.d/reelvdr
+		#  would wait 15s for vdr to terminate without any need
+		touch /tmp/vdr.standby
+	fi
+done
+
+Syslog "Reelbox going down."
+# Now lets dive into deep standby (aka poweroff)
+
+FPSetDeepStandby
+
+#if [ "$DS_EJECT_ENABLE" = "yes" ] ; then
+    Eject shutdown
+#fi
+
+
+# FIXME system goes down unattended. check why.
+# Set Clock - TODO: still needed???
+hwclock -w -u
+if [ -f /var/tmp/reboot ]; then
+    Syslog "rebooting system now."
+    reboot
+else
+    Syslog "Shutting down system now."
+    poweroff
+fi
+}
+
+
+ReReadConfigs () {
+	#this is beeing executed when the script receives a SIGHUP
+
+	#echo "=> in ReRead()"
+	. $SYSCONFIG
+	. $REELVDRCONFIG
+
+	[ "$DS_TIMEOUT_NEW" = "241" ] && DS_ENABLE="no"
+
+}
+
+Syntax () {
+cat << EOF
+Usage: `basename $0` [ -b|--bufferdir | -c|--console | -d|--daemon ]
+Description:
+     run ReelBox-VDR in a loop
+
+Options:
+     -c|--console:  run in foreground (default)
+     -d|--daemon:   run as daemon in background
+
+Actions:
+     -b|--livebufferdir:    evaluate buffer dir for permanent timeshift (needed by setup)
+
+EOF
+}
+
+Terminate () {
+	#this is beeing executed when the script receives a SIGTERM or SIGKILL
+	#i.e. from the init system on system shutdown
+
+	# TODO: cancel a shutdown if timer is within next 5min?
+
+	echo "=> in Terminate()..."
+
+	killall -1 vdr
+        Powersave
+	Eject shutdown
+	SetWakeup
+	SetWOL
+	if [ -f /var/tmp/reboot ]; then
+	    $REELFPCTL -displaymode $NOCLOCK -clearlcd -showpnm "/etc/reel/images/reboot/reboot.pnm"
+   	else
+	    $FPLEDS standby
+	fi
+	echo "`basename $0:` Exiting now."
+	exit 0
+}
+
+
+#
+# Main
+#
+
+if [ `id -u` != 0 ]; then
+	Syslog "You are not root. Go away."
+	exit 1
+fi
+
+. /etc/reel/platform/*.inc
+
+rm /tmp/vdr.shutdown 2>/dev/null
+rm /tmp/vdr.deepstandby 2>/dev/null
+rm /tmp/vdr.wakeup 2>/dev/null
+rm /var/tmp/reboot 2>/dev/null
+
+# clear leds
+$REELFPCTL -clearled $ALL_LED
+
+if [ "$RECORDINGSDIR" = "" ] ; then
+	# TODO: this is obsolet.  Check if it can be removed.
+	if [ -d /media/hd/recordings ] ; then
+		RECORDINGSDIR=/media/hd/recordings
+	else
+		RECORDINGSDIR=/var/run/recordings
+		mkdir $RECORDINGSDIR
+	fi
+	export RECORDINGSDIR
+	echo
+	echo "WARNING: RECORDINGSDIR is not set. set it with 'export RECORDINGSDIR=/path/to/videodir'"
+	echo "using $RECORDINGSDIR."
+fi
+
+if [ $# = 0 ]; then
+	set -- --console
+fi
+
+case $1 in
+	--test)
+		Test
+		shift
+		;;
+	-b|--livebufferdir)
+		GetLivebufferDir -q
+		if [ $LIVEBUFFERDIR = /media/reel/recordings ]; then
+			#nothing useful found
+			exit 1
+		else
+			echo $LIVEBUFFERDIR
+		fi
+		;;
+	-c|--console)
+		MainLoop
+		;;
+	-d|--daemon)
+		if [ -c /dev/tty10 ] ; then
+			output=/dev/tty10
+		else
+			output=/dev/null
+		fi
+		MainLoop > $output 2>&1 &
+		echo $! > /var/run/${MyName}.pid
+		;;
+	-h|--help)
+		Syntax
+		;;
+	*)
+		echo "Unknown option $1"
+		;;
+esac
+

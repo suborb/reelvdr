@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S96.0W
+2=Sirius FM 5
+3=West
+4=96.0

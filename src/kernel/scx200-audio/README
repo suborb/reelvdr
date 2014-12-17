@@ -1,0 +1,173 @@
+AMD Geode(TM) GX Processor and AMD Geode(TM) CS5535 Companion Device
+Linux ALSA Audio Driver Release Notes
+Version 01.00.0500
+Release Date: 25 Aug 05
+
+--------------------------------------------------------------------------------
+PRODUCT INFORMATION  
+--------------------------------------------------------------------------------
+Developed under Linux Kernel 2.6.11 
+
+This product includes: 
+- os_inc.c
+- os_inc.h
+- amd_geode.c
+- amd_geode.h
+- configure.ac
+- Makefile.in
+- README (this file)
+- AUTHORS
+- COPYING
+
+Features
+--------
+- Playback of audio files in all formats including MP3 files
+- Recording of audio files in all formats
+- AC97 interface 
+- Compatible with AD1819 codec
+- Compatible with 2.6.x Kernel
+
+
+Applications Tested:
+
+Playback:
+
+- XMMS
+- gmplayer (1.06pre-RPKM-3.4.2 over OSS )
+- noatun
+- aumix
+- XINE player
+- alsaplayer
+- QuakeII 
+- aplay
+- sox play
+
+Recording:  
+- arecord
+- sox rec 
+
+Dependencies 
+------------
+- Linux Kernel 2.6.11
+- ALSA rel. 1.6
+- kernel patch v01.01.0302 or later (AC97 support,pcm_oss.c patch).
+- To support OSS-based applications which use MMAP (like quake2) it's necessary
+to patch the file pcm_oss.c in the kernel tree at "/linux-2.6.11/sound/core/oss"
+Without this, the application is not able to open the driver correctly!
+
+
+Functional Changes
+------------------
+New Release
+
+Defects Corrected
+-----------------
+Issue #2825 - MIC Mixer at 0,  MIC not muted [ALSA]		
+Issue #3761 - linux 2.6 l-16.001-036 ALSA garbled playback of recorded cd,line,mic files		
+Known Errata
+------------
+None
+
+--------------------------------------------------------------------------------
+VALIDATION ENVIRONMENT
+--------------------------------------------------------------------------------
+Validated on a DB533, Rev A.1 Rework B
+ - Memory:	128MB @ 333MHz DDR
+ - BIOS:	Osprey GeodeROM 1.31.13
+ - Operating System:	Gentoo 2004.3	
+ - Graphics Driver:	GX Xorg Graphics Driver v02.09.0202
+ - Audio Driver:	GX / 5535 ALSA Audio Driver v01.01.0500
+ - Kernel CPU Patch:	GX / 5535 2.6.11 Kernel Patch v02.00.0100
+ - CRT:	NEC MultiSync FP2141SB
+ - Keyboard/Mouse:	PS/2	
+
+--------------------------------------------------------------------------------
+INSTALLATION INSTRUCTIONS  
+--------------------------------------------------------------------------------
+
+Kernel Configuration
+---------------------
+- In order to use audio drivers under Linux, the ALSA
+  modules have to be installed.  
+
+  How to build the Kernel with the ALSA installed:
+
+     1.  Type: "cd /usr/src/linux"
+     2.  Type: "make menuconfig"
+     3.  Select "Loadable module support" and un-check 
+         "Module versioning support" if set.
+     4.  Select "Device Drivers" option
+     5.  Select "Sound" 
+     6.  Select "Advanced Linux Sound Architecture" 
+     7.  Select "PCI Devices"
+     8.  Check "AC97" (press M to include as a module) 
+     9.  From the main menu select exit, when prompted to save config, 
+         say yes."  This will separate the enabling sound step from the 
+         exit/save step and the build step.
+         Save configuration and exit
+     10  Type "make bzImage".  This will make the new kernel image.
+     11. Type "make modules"
+     12. Type "make modules_install".  This installs the modules on the system.
+     13. Replace the system image on /boot with the bzImage that you generated
+         It can be found at /usr/src/linux/arch/i386/boot
+
+
+Compiling and installing the driver (standalone):
+-----------------------------------------------------------------------    
+- After unpacking the tarball, which contain the files listed above
+  in a plain directory,  run :
+  1. autoconf  (builds .configure)
+  2. ./configure --with-kernel-path= "your path to the kernel sources"
+  3. make install
+
+    You need to have root permissions to build and install the driver.
+  Follow the instructions of the install script
+  The built driver will be located in the local directory as well as in
+  /lib/modules/$kernel-path/kernel/drivers/misc
+  (Make sure that module support is enabled in the kernel configuration)
+         
+  !!!! Additionally it's required to build the kernel with enabled ALSA - ac97 driver.
+  When the ac97 driver is not available, the amd_geode audio driver cannot be loaded!!
+  (see above) 
+
+- run alsaconf  
+
+The OSS emulation documentation can be found under $(KERNELDIR)/Documentation/sound/oss
+or on the internet at http://www.alsa-project.org/~iwai/OSS-Emulation.html
+
+--------------------------------------------------------------------------------
+RELEASE HISTORY (Previous Version)
+--------------------------------------------------------------------------------
+None
+
+================================================================================
+Copyright
+---------
+© 2005 Advanced Micro Devices, Inc. All rights reserved.
+The contents of this document are provided in connection with Advanced Micro
+Devices, Inc. ("AMD") products. AMD makes no representations or warranties
+with respect to the accuracy or completeness of the contents of this
+publication and reserves the right to make changes to specifications and
+product descriptions at any time without notice. No license, whether express,
+implied, arising by estoppel or otherwise, to any intellectual property rights
+is granted by this publication. Except as set forth in AMD's Standard Terms
+and Conditions of Sale, AMD assumes no liability whatsoever, and disclaims any
+express or implied warranty, relating to its products including, but not
+limited to, the implied warranty of merchantability, fitness for a particular
+purpose, or infringement of any intellectual property right. AMD's products
+are not designed, intended, authorized or warranted for use as components in
+systems intended for surgical implant into the body, or in other applications
+intended to support or sustain life, or in any other application in which the
+failure of AMD's product could create a situation where personal injury, death,
+or severe property or environmental damage may occur. AMD reserves the right
+to discontinue or make changes to its products at any time without notice.
+
+
+Trademarks
+----------
+AMD, the AMD Arrow logo, and combinations thereof, and Geode are trademarks 
+of Advanced Micro Devices, Inc.
+
+Other product names used in this publication are for identification purposes
+only and may be trademarks of their respective companies.
+================================================================================

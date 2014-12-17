@@ -1,0 +1,243 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-03-01 16:03+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Jump: "
+msgstr ""
+
+msgid "Cannot play"
+msgstr "No s'ha pogut reproduir el fitxer"
+
+msgid "file type"
+msgstr "tipus de fitxer"
+
+msgid "Waiting for server ..."
+msgstr "S'està esperant el servidor..."
+
+msgid "Network read error"
+msgstr "S'ha produït un error de xarxa"
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr "Llista de reproducció al servidor no vàlida. S'està reproduint la següent."
+
+msgid "Open Error"
+msgstr "S'ha produït un error en obrir el fitxer"
+
+msgid "Only MPEG-1 format supported"
+msgstr "Només és suportat el format MPEG-1"
+
+msgid "VideoCodec not supported!"
+msgstr "Còdec de vídeo no suportat!"
+
+msgid "AudioCodec not supported!"
+msgstr "Còdec d'àudio no suportat"
+
+msgid "Could not play file"
+msgstr "No s'ha pogut reproduir el fitxer"
+
+msgid "Please wait, Loading..."
+msgstr "Si us plau, espereu. S'està carregant..."
+
+msgid "Please check your network connection"
+msgstr "Si us plau, comproveu la connexió de xarxa"
+
+msgid "Opening "
+msgstr "S'està obrint "
+
+msgid "Chapter"
+msgstr "Capítol"
+
+msgid "Unable to get default CD device"
+msgstr "No es pot detectar la unitat de CD per defecte"
+
+msgid "Unable open CD device"
+msgstr "No es pot obrir la unitat de CD"
+
+msgid "No tracks found in CD"
+msgstr "No s'han trobat pistes al CD"
+
+msgid "No audio tracks found"
+msgstr "No s'han trobat pistes d'àudio"
+
+msgid "Track"
+msgstr "Pista"
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid ""
+"Media library playlist is empty.\n"
+"Please press RED key for selecting files."
+msgstr ""
+
+msgid "Replaymode: Normal"
+msgstr "Mode de reprod.: Normal"
+
+msgid "Replaymode: Repeat"
+msgstr "Mode de reprod.: Repeteix"
+
+msgid "Replaymode: Shuffle"
+msgstr "Mode de reprod.: Mescla"
+
+msgid "Paused"
+msgstr "En pausa"
+
+msgid "Mute"
+msgstr "Silenci"
+
+msgid "Shuffle"
+msgstr "Mescla"
+
+msgid "Repeat"
+msgstr "Repeteix"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Filelist"
+msgstr ""
+
+msgid "Functions"
+msgstr ""
+
+msgid "shoutcast"
+msgstr "shoutcast"
+
+msgid "Add to favs"
+msgstr ""
+
+msgid "Exit mediaplayer?"
+msgstr ""
+
+msgid "Volume"
+msgstr "Volum"
+
+msgid "Loading..."
+msgstr "S'està carregant..."
+
+msgid "Delete selected item"
+msgstr ""
+
+msgid "Clear playlist"
+msgstr ""
+
+msgid "Save playlist"
+msgstr ""
+
+msgid "Save playlist as..."
+msgstr ""
+
+msgid "Burn playlist to CD..."
+msgstr ""
+
+msgid "Copy all playlist items to new folder..."
+msgstr ""
+
+msgid "Select a playlist..."
+msgstr ""
+
+msgid "Mediaplayer Functions"
+msgstr ""
+
+msgid "Deleting playlist item..."
+msgstr ""
+
+msgid "Playlist item deleted"
+msgstr ""
+
+msgid "Deleting playlist item: failed"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Directory"
+msgstr ""
+
+msgid "Title"
+msgstr "Títol"
+
+msgid "Artist"
+msgstr "Intèrpret"
+
+msgid "Album"
+msgstr "Àlbum"
+
+msgid "Genre"
+msgstr "Gènere"
+
+msgid "Comment"
+msgstr "Comentaris"
+
+msgid "Year"
+msgstr "Any"
+
+msgid "Length"
+msgstr "Durada"
+
+msgid "min"
+msgstr "min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Freqüència de mostratge"
+
+msgid "ID3$Channels"
+msgstr "Canals"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "MPEG-Layer"
+msgstr "Capa MPEG"
+
+msgid "Copyrighted"
+msgstr "Amb copyright"
+
+msgid "Protected"
+msgstr "Protegit"
+
+msgid "File size"
+msgstr "Mida del fitxer"
+
+msgid "Last Modified"
+msgstr "Darrera modificació"
+
+msgid "Mediaplayer ID3 Info:"
+msgstr ""
+
+msgid "No Id3 info found!"
+msgstr "No s'ha trobat informació Id3!"
+
+#~ msgid "Mediaplayer - Id3 Info:"
+#~ msgstr "Mediaplayer - Id3 Info:"
+
+#~ msgid "Overview"
+#~ msgstr "Llista"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "Options"
+#~ msgstr "Opcions"
+
+#~ msgid "Function"
+#~ msgstr "Funció"
+
+#~ msgid "Could not play file!"
+#~ msgstr "No s'ha pogut reproduir el fitxer!"

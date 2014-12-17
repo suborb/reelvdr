@@ -1,0 +1,3 @@
+# Rules for ReelBox frontpanel - link serial device for frontpanel as soon as it appears
+
+KERNEL=="ttyS1", SUBSYSTEM=="tty", ACTION=="add",    RUN+="/sbin/dev_frontpanel.sh"

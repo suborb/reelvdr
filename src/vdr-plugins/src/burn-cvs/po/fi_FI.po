@@ -1,0 +1,456 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-burn\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 09:40+0200\n"
+"PO-Revision-Date: 2008-09-26 12:25+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "Versatile convert-and-burn plugin"
+msgstr "Siirry \"Polta DVD-levy\"-laajennokseen"
+
+#, fuzzy
+msgid "Burn Recordings to DVD"
+msgstr "Tallenne on liian lyhyt"
+
+msgid "iso8859-15"
+msgstr ""
+
+msgid "Burn job active"
+msgstr "Polttotehtävä aktiivinen"
+
+msgid "Burn"
+msgstr "Lista"
+
+msgid "Please enter the burn plugin"
+msgstr "Siirry \"Polta DVD-levy\"-laajennokseen"
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Aseta tyhjä levy asemaan ja paina 'OK'"
+
+msgid "Job still active - really cancel?"
+msgstr "Tehtävää suoritetaan yhä - perutaanko?"
+
+#, fuzzy
+msgid "Burning DVD"
+msgstr "Tallenne on liian lyhyt"
+
+msgid "done"
+msgstr ""
+
+#, fuzzy
+msgid "DVD with menus"
+msgstr "DVD:n nimi"
+
+#, fuzzy
+msgid "DVD without menus"
+msgstr "DVD:n nimi"
+
+#, fuzzy
+msgid "Archive disk"
+msgstr "Arkistotunnus"
+
+msgid "ISO file only"
+msgstr ""
+
+msgid "Disc"
+msgstr ""
+
+msgid "ISO file and Disc"
+msgstr ""
+
+#, fuzzy
+msgid "No chapters"
+msgstr "Kappaleet"
+
+msgid "Use editing marks"
+msgstr ""
+
+msgid "Every 5 minutes"
+msgstr ""
+
+msgid "Every 10 minutes"
+msgstr ""
+
+msgid "Every 15 minutes"
+msgstr ""
+
+msgid "Every 30 minutes"
+msgstr ""
+
+msgid "Every hour"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "Couldn't convert character sets!"
+msgstr ""
+
+#, fuzzy
+msgid "Couldn't open image file!"
+msgstr "Indeksin lukeminen epäonnistui!"
+
+#, fuzzy
+msgid "Couldn't create new image!"
+msgstr "Indeksin lukeminen epäonnistui!"
+
+#, fuzzy
+msgid "Couldn't render menu images!"
+msgstr "Indeksin lukeminen epäonnistui!"
+
+#, fuzzy
+msgid "Couldn't save image file!"
+msgstr "Indeksin lukeminen epäonnistui!"
+
+msgid "Recording too big for disc type!"
+msgstr "Tallenne ei mahdu levytyypille!"
+
+msgid "Disc too big for disc type!"
+msgstr "Levy ei mahdu levytyypille!"
+
+msgid "A job failed!"
+msgstr "Polttaminen epäonnistui!"
+
+msgid "A job was finished successfully."
+msgstr "Polttaminen onnistui."
+
+msgid "Recordings"
+msgstr "tallenteet"
+
+msgid "Options"
+msgstr "Tehtävän asetukset"
+
+msgid "Title of recording"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+msgid "Move down"
+msgstr "Alaspäin"
+
+msgid "Track$Off"
+msgstr "Poissa"
+
+msgid "Track$On"
+msgstr "Päällä"
+
+msgid "Language code"
+msgstr "Kielitunnus"
+
+msgid "Choose title"
+msgstr ""
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "Tallenteita: %1$d, yhteensä: %2$.1f MB"
+
+msgid "Write DVD"
+msgstr "Polta DVD-levy"
+
+msgid "Select recordings for burning with 'OK'"
+msgstr ""
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr ""
+
+msgid "Only archive disk possible"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Button$Burn"
+msgstr ""
+
+msgid "Select recording with > OK <"
+msgstr ""
+
+msgid "Analyzing recording..."
+msgstr "Analysoidaan tallennetta..."
+
+msgid "Job"
+msgstr "tehtävä"
+
+msgid "DVD title"
+msgstr "DVD:n nimi"
+
+msgid "Archive-ID"
+msgstr "Arkistotunnus"
+
+msgid "Recordings scheduled to be burnt are:"
+msgstr ""
+
+msgid "No recordings marked"
+msgstr "Ei valittuja tallenteita"
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please press the blue key to select recording."
+msgstr ""
+
+msgid "Remove"
+msgstr "Poista"
+
+msgid "Details"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Cancel"
+msgstr "Peru"
+
+msgid "No video track selected!"
+msgstr "Yhtään kuvaraitaa ei ole valittu!"
+
+msgid "No audio track selected!"
+msgstr "Yhtään ääniraitaa ei ole valittu!"
+
+msgid "Not enough free disk space!"
+msgstr "Liian vähän vapaata levytilaa!"
+
+msgid "Remove recording from list?"
+msgstr "Poistetaanko tallenne listalta?"
+
+msgid "Remove all recordings from list?"
+msgstr ""
+
+msgid "Status"
+msgstr "status"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Tehtävää suoritetaan (poltto: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Tehtävää suoritetaan (konvertointi: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Tehtävää suoritetaan (poltto)"
+
+msgid "Job active (Converting)"
+msgstr "Tehtävää suoritetaan (konvertointi)"
+
+msgid "No active or waiting jobs present"
+msgstr "Ei aktiivisia eikä odottavia tehtäviä"
+
+msgid "Canceled jobs"
+msgstr "Perutut tehtävät"
+
+msgid "Erroneous jobs"
+msgstr "Epäonnistuneet tehtävät"
+
+#, fuzzy
+msgid "Button$Recordings"
+msgstr "tallenteet"
+
+msgid "Restart"
+msgstr "Aloita uudelleen"
+
+msgid "Retry"
+msgstr "Yritä uudelleen"
+
+#, fuzzy
+msgid "Button$Remove"
+msgstr "Poista"
+
+msgid "Replace current job?"
+msgstr "Korvataanko nykyinen tehtävä?"
+
+msgid "Remove job from list?"
+msgstr "Poistetaanko tehtävä listalta?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Yhteensä: %1$.1f MB %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(joudutaan pienentämään)"
+
+msgid "Aspect ratio"
+msgstr "Kuvasuhde"
+
+msgid "Previous page"
+msgstr "Edellinen sivu"
+
+msgid "Next page"
+msgstr "Seuraava sivu"
+
+msgid "Play movie"
+msgstr "Toista tallenne"
+
+#, fuzzy
+msgid "Button$Back"
+msgstr "Peru"
+
+msgid "Couldn't read index"
+msgstr "Indeksin lukeminen epäonnistui!"
+
+msgid "Couldn't browse recording"
+msgstr "Tallenteen selaaminen epäonnistui!"
+
+msgid "mp2"
+msgstr ""
+
+msgid "dolby"
+msgstr "dolby"
+
+#, fuzzy
+msgid "Couldn't read marks"
+msgstr "Indeksin lukeminen epäonnistui!"
+
+msgid "Recording is too short"
+msgstr "Tallenne on liian lyhyt"
+
+msgid "Disk type"
+msgstr "Levyn tyyppi"
+
+msgid "Write to"
+msgstr ""
+
+msgid "Burn speed"
+msgstr "Polttonopeus"
+
+msgid "unlimited"
+msgstr "ei rajoitusta"
+
+msgid "Skin"
+msgstr "Ulkoasu"
+
+msgid "Chapters"
+msgstr "Kappaleet"
+
+msgid "Cut"
+msgstr "Leikkaa"
+
+msgid "Skip empty titlemenu"
+msgstr "Ohita tyhjä nimikevalikko"
+
+msgid "Skip short mainmenu"
+msgstr "Ohita lyhyt päävalikko"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Yleiset asetukset -----------------------------------------------"
+
+msgid "Remove path component"
+msgstr "Poista polku"
+
+msgid "Eject disc after burn"
+msgstr ""
+
+msgid "Demux using"
+msgstr "Demuksausohjelmisto"
+
+msgid "Requant using"
+msgstr "Requant-ohjelmisto"
+
+msgid "Preserve logfiles"
+msgstr "Säilytä lokitiedostot"
+
+msgid "Spare language code"
+msgstr "Oletuskielitunnus"
+
+msgid "Status in main menu"
+msgstr "Näytä status päävalikossa"
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Oletusasetukset tehtäville ---------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Tehtävävalikon asetukset ----------------------------------------"
+
+msgid "Offer disk type"
+msgstr "Tarjoa levyn tyyppiä"
+
+msgid "Offer chapters"
+msgstr "Tarjoa kappaleita"
+
+msgid "Offer target"
+msgstr "Tarjoa kohdetta"
+
+#, fuzzy
+msgid "Offer burn speed"
+msgstr "Polttonopeus"
+
+msgid "Offer cutting"
+msgstr "Tarjoa leikkausta"
+
+msgid "Offer skip titlemenu"
+msgstr "Tarjoa nimikevalikon ohitusta"
+
+msgid "Offer skip mainmenu"
+msgstr "Tarjoa päävalikon ohitusta"
+
+#, fuzzy
+msgid "Job options"
+msgstr "Tehtävän asetukset"
+
+msgid "Please select burn options below:"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+msgid "skip"
+msgstr ""
+
+msgid "Button$Start"
+msgstr ""
+
+msgid "Default"
+msgstr "Oletus"
+
+msgid "Video track"
+msgstr "Kuvaraita"
+
+msgid "Audio track"
+msgstr "Ääniraita"
+
+msgid "Subtitle track"
+msgstr ""
+
+msgid "page"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#~ msgid "No recordings marked for burning"
+#~ msgstr "Tallenteita ei ole merkitty poltettavaksi"
+
+#, fuzzy
+#~ msgid "Write to Disc"
+#~ msgstr "Polta DVD-levy"
+
+#~ msgid "analog"
+#~ msgstr "analoginen"
+
+#~ msgid "Disk content"
+#~ msgstr "Kohde"
+
+#, fuzzy
+#~ msgid "Format DVD"
+#~ msgstr "Polta DVD-levy"
+
+#, fuzzy
+#~ msgid "Building DVD"
+#~ msgstr "Tallenne on liian lyhyt"
+
+#~ msgid "Back"
+#~ msgstr "Takaisin"

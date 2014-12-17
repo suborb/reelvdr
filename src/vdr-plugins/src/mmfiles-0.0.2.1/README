@@ -1,0 +1,15 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Sundararaj, Balaji  <balaji.sundararaj@reel-multimedia.com>
+
+Project's homepage:          URL
+
+Latest version available at: svn://reelbox.org/testing/src/vdr-plugins/src/
+
+See the file COPYING for license information.
+
+Description:
+    This plugin scans given directory trees for video and audio files. It also recognises VDR recordings and Dvd rips.
+    The plugin should watch these directories and automatically add new media files to its cache.
+
+    To be used with djmount, so that all Upnp devices' media files are shown in VDR.

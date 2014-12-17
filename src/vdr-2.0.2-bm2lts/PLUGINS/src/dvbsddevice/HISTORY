@@ -1,0 +1,47 @@
+VDR Plugin 'dvbsddevice' Revision History
+-----------------------------------------
+
+2009-12-28: Version 0.0.1
+
+- Initial revision.
+
+2010-01-04: Version 0.0.2
+
+- Calling the MakePrimaryDevice() function of the base class to allow
+  the cDevice to stop displaying subtitles.
+- Added support for DVB cards with multiple fontends.
+
+2010-01-30: Version 0.0.3
+
+- The PCR pid is now recorded for channels where this is different from the
+  video PID.
+
+2011-04-17: Version 0.0.4
+
+- Removed an obsolete local variable in dvbsdffosd.c (thanks to Paul Menzel).
+
+2011-08-27: Version 0.0.5
+
+- Added option --outputonly to use the device only for output (thanks to Udo Richter).
+
+2012-03-07: Version 0.0.6
+
+- Removed the call to EITScanner.UsesDevice(this) from dvbsddevice.c, because
+  the code following these calls is only executed if LiveView is true, which is
+  never the case when the EITScanner switches to a channel.
+
+2012-12-27: Version 0.0.7
+
+- Adapted Makefile to changes introduced in recent VDR versions.
+
+2013-01-12: Version 0.0.8
+
+- Adapted Makefile to changes introduced in recent VDR versions.
+
+2013-01-25: Version 0.0.9
+
+- Returning 0 from cDvbSdFfDevice::NumProvidedSystems() if option --outputonly is given.
+
+2013-03-31: Version 2.0.0
+
+- Official release.

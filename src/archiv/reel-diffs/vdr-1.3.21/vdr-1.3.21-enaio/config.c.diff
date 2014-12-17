@@ -1,0 +1,39 @@
+diff -Nru vdr-1.3.21-vanilla/config.c vdr-1.3.21-enaio/config.c
+--- vdr-1.3.21-vanilla/config.c	2005-02-05 12:43:04.000000000 +0200
++++ vdr-1.3.21-enaio/config.c	2005-02-13 18:22:49.986993168 +0200
+@@ -300,6 +300,11 @@
+   CurrentChannel = -1;
+   CurrentVolume = MAXVOLUME;
+   CurrentDolby = 0;
++  ShowRecDate = 1;
++  ShowRecTime = 1;
++  ShowRecLength = 0;
++  MenuCmdPosition = 0;
++  ShowProgressBar = 0;
+ }
+ 
+ cSetup& cSetup::operator= (const cSetup &s)
+@@ -456,6 +461,11 @@
+   else if (!strcasecmp(Name, "CurrentChannel"))      CurrentChannel     = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentVolume"))       CurrentVolume      = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentDolby"))        CurrentDolby       = atoi(Value);
++  else if (!strcasecmp(Name, "ShowRecDate"))         ShowRecDate        = atoi(Value);
++  else if (!strcasecmp(Name, "ShowRecTime"))         ShowRecTime        = atoi(Value);
++  else if (!strcasecmp(Name, "ShowRecLength"))       ShowRecLength      = atoi(Value);
++  else if (!strcasecmp(Name, "MenuCmdPosition"))     MenuCmdPosition    = atoi(Value);
++  else if (!strcasecmp(Name, "ShowProgressBar"))     ShowProgressBar    = atoi(Value);
+   else
+      return false;
+   return true;
+@@ -519,6 +529,11 @@
+   Store("CurrentChannel",     CurrentChannel);
+   Store("CurrentVolume",      CurrentVolume);
+   Store("CurrentDolby",       CurrentDolby);
++  Store("ShowRecDate",        ShowRecDate);
++  Store("ShowRecTime",        ShowRecTime);
++  Store("ShowRecLength",      ShowRecLength);
++  Store("MenuCmdPosition",    MenuCmdPosition);
++  Store("ShowProgressBar",    ShowProgressBar);
+ 
+   Sort();
+ 

@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S148.0E
+2=Measat 2
+3=East
+4=148.0

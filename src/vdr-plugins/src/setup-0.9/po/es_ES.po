@@ -1,0 +1,2183 @@
+# ReelVDR setup plugin
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# AUTHOR AUTHOR <EMAIL@ADDRESS>, YEAR.
+# PACO50=-Tododream. Marzo 2009
+# elpajare- Tododream. Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-setup\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-01-10 10:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Request"
+msgstr ""
+
+msgid "Automatic power saving"
+msgstr ""
+
+msgid "inactive"
+msgstr "Inactivo"
+
+msgid "active"
+msgstr "Activo"
+
+msgid " Standby after (min)"
+msgstr ""
+
+msgid " Poweroff after (min)"
+msgstr ""
+
+msgid "immediately"
+msgstr ""
+
+msgid "Warning:"
+msgstr "Atención:"
+
+msgid "Will cause problems with the MultiRoom-System when Clients are active and try to access the ReelBox. "
+msgstr ""
+
+msgid "Therefore, do not turn off the ReelBox."
+msgstr ""
+
+msgid "Should therefore remain on 'Quick'."
+msgstr ""
+
+msgid "Standard (ext3)"
+msgstr ""
+
+msgid "Recording (jfs)"
+msgstr "Grabando (jfs)"
+
+#, fuzzy
+msgid "Recording (xfs)"
+msgstr "Grabando (jfs)"
+
+msgid "Windows Compatible (vFat)"
+msgstr ""
+
+msgid "Format"
+msgstr "Formatear"
+
+msgid "Confirm formatting"
+msgstr "Confirmar formateo"
+
+msgid "Name:"
+msgstr ""
+
+msgid "Device:"
+msgstr ""
+
+msgid "Free space:"
+msgstr "Espacio libre:"
+
+msgid "Partition size:"
+msgstr "Tamaño partición:"
+
+msgid "Filesystem:"
+msgstr "Sistema de archivos"
+
+#, fuzzy, c-format
+msgid "Formatting will destroy all data on \"%s\"!"
+msgstr "¡El formateo borrará todos los datos de la partición %s!"
+
+msgid "Press 'Red' to start formatting now or 'Exit' to cancel formatting."
+msgstr ""
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Select Filesystem Type"
+msgstr ""
+
+msgid "Filesystem"
+msgstr ""
+
+msgid "Please select the filesystem according to the porpuse of the device."
+msgstr ""
+
+msgid "Press 'Ok' to continue or 'Exit' to cancel now."
+msgstr ""
+
+msgid "Starting format in 3 seconds"
+msgstr "Comienza formateo en 3 segundos"
+
+#, fuzzy
+msgid "Formatting in progress, please wait..."
+msgstr "Formateando, espere..."
+
+msgid "Formatting completed successfully."
+msgstr ""
+
+msgid "Error: formatting failed"
+msgstr ""
+
+msgid "Unable to format. Missing command"
+msgstr "Imposible formatear. Falta comando"
+
+msgid "Formatting started"
+msgstr "Formateo comenzado"
+
+msgid "Canceled"
+msgstr "Cancelado"
+
+msgid "TV & Radio"
+msgstr ""
+
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Internet & Extras"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+msgid "Additional Software"
+msgstr ""
+
+msgid "Installation"
+msgstr "Instalación"
+
+msgid "Basic Settings"
+msgstr "Ajustes básicos"
+
+msgid "Video Recorder "
+msgstr "Videograbador "
+
+msgid "Background Services"
+msgstr "Servicios en segundo plano"
+
+msgid "System Settings"
+msgstr "Ajustes del sistema"
+
+msgid "Video Settings"
+msgstr "Ajustes de video"
+
+msgid "Audio Settings"
+msgstr "Ajustes de audio"
+
+msgid "Reception Settings"
+msgstr "Ajustes de recepción"
+
+msgid "OSD & Language"
+msgstr "Idiomas y OSD"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Timezone & Clock"
+msgstr "Zona horaria y reloj"
+
+msgid "EPG Services"
+msgstr "Servicios EPG"
+
+msgid "International EPG"
+msgstr "EPG internacional"
+
+msgid "Energy Options"
+msgstr "Opciones de apagado"
+
+msgid "Reset to factory defaults"
+msgstr ""
+
+msgid "Edit Channels"
+msgstr "Modificar Canales"
+
+msgid "TVTV Service"
+msgstr "Servicio TVTV"
+
+msgid "Network Settings"
+msgstr "Ajustes de Red"
+
+msgid "UMTS Settings"
+msgstr "Ajustes UMTS"
+
+msgid "Enable UMTS to connect your ReelBox to the"
+msgstr ""
+
+msgid "internet using UMTS connection."
+msgstr ""
+
+msgid "Enable UMTS"
+msgstr "Permitir UMTS"
+
+msgid "UMTS Provider"
+msgstr "Proveedor UMTS"
+
+msgid "Common Interfaces"
+msgstr "Interfaz común"
+
+msgid "Energy Saving Mode"
+msgstr "Modo de ahorro energético"
+
+msgid " Activate after (h)"
+msgstr "Activar depués de (h)"
+
+msgid "Eject Media on Shutdown"
+msgstr "Expulsar disco al apagar"
+
+msgid "Channel Lists"
+msgstr "Lista de Canales"
+
+msgid "Global Settings"
+msgstr "Configuración global"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "Domain"
+msgstr "Dominio"
+
+msgid "Gateway"
+msgstr "Puerta de enlace"
+
+msgid "Nameserver"
+msgstr "Nombre del servidor"
+
+msgid "Use Proxy"
+msgstr "Usar Proxy"
+
+msgid "Streaming Clients"
+msgstr ""
+
+msgid "Setup type of external streaming devices and stream quality"
+msgstr ""
+
+msgid "You can select between 'Tablet' for"
+msgstr ""
+
+msgid "Tablet / Smartphone devices or 'TS' for"
+msgstr ""
+
+msgid "default settings *Standard to stream"
+msgstr ""
+
+msgid "LiveTV to your device."
+msgstr ""
+
+msgid "Stream Type"
+msgstr ""
+
+msgid "Client Speed"
+msgstr ""
+
+msgid "Select client connection type for best stream"
+msgstr ""
+
+msgid "quality"
+msgstr ""
+
+msgid "Ethernet Settings"
+msgstr "Config. Ethernet"
+
+msgid "Enable Ethernet"
+msgstr "Activar Ethernet 1"
+
+msgid "Enable Ethernet 1"
+msgstr "Activar Ethernet 1"
+
+msgid "Enable Ethernet 2"
+msgstr "Activar Ethernet 2"
+
+msgid " Use DHCP"
+msgstr "Usar DHCP"
+
+msgid " IP Address"
+msgstr "Dirección IP"
+
+msgid " Network mask"
+msgstr "Máscara de Red"
+
+msgid "NetCeiver bridge"
+msgstr "Puente del NetCeiver"
+
+msgid "Enable Wake-on-LAN"
+msgstr "Permitir Wake-on-LAN"
+
+msgid "Wakeup ReelBox Avantgarde on startup"
+msgstr "Despertar ReelBox Avantgarde al encender"
+
+msgid "Export Harddisk for Windows"
+msgstr "Export. disco duro para Windows"
+
+msgid "Workgroup"
+msgstr "Grupo de trabajo"
+
+msgid "Enable UPnP service"
+msgstr "Permitir servicio UPnP"
+
+msgid "Use Windows Client"
+msgstr "Utilizar cliente Windows"
+
+msgid "Windows Network Connection"
+msgstr "Conexión Red Windows"
+
+msgid "Windows Server"
+msgstr "Servidor Windows"
+
+msgid "Sharename"
+msgstr "Nombre para compartir"
+
+msgid "DVD archive directory"
+msgstr "Directorio archivo DVD"
+
+msgid "Use NFS Client"
+msgstr "Usar cliente NFS"
+
+msgid "NFS Client"
+msgstr "Cliente NFS"
+
+msgid "Expert Settings"
+msgstr "Config. expertos"
+
+msgid "Host/IP"
+msgstr "Host/IP"
+
+msgid "Allow writing"
+msgstr "Permitir escritura"
+
+msgid "Use locking"
+msgstr "Utilizar bloqueo"
+
+msgid "Buffersize"
+msgstr "Tamaño del buffer"
+
+msgid "Mark Blocks after Recording"
+msgstr "Marcar anuncios al acabar grabación"
+
+msgid "Playback Settings"
+msgstr "Ajustes reproducción"
+
+msgid "Harddisk/Media device"
+msgstr "Mecanismos dico duro/Media"
+
+msgid "Channel Scan"
+msgstr "Escanear canales"
+
+msgid "Installation Wizard"
+msgstr "Instalación inicial sencilla"
+
+msgid "Use tvtv service"
+msgstr "Usar servicio tvtv"
+
+msgid "GnuDIP service"
+msgstr "Servicio GnuDIP"
+
+msgid "DynDNS service"
+msgstr "Servicio DynDNS"
+
+msgid "Use GnuDIP service"
+msgstr "Usar servicio GnuDIP"
+
+msgid "Use DynDNS service"
+msgstr "Usar servicio DynDNS"
+
+msgid "DynDNS hostname"
+msgstr "Nombre de dominio DynDNS"
+
+msgid "Recording settings"
+msgstr "Ajustes de grabación"
+
+msgid "LEDs while operating"
+msgstr "Estado LEDs en funcionamiento"
+
+msgid "LEDs in Standby"
+msgstr "Estado LEDs en Standby"
+
+#, fuzzy
+msgid "Turn off LEDs in Standby"
+msgstr "Estado LEDs en Standby"
+
+msgid "Color"
+msgstr "Color"
+
+msgid "Front Panel"
+msgstr "Panel Frontal"
+
+msgid "Brightness"
+msgstr "Brillo"
+
+msgid "Brightness Status LEDs"
+msgstr "Brillo LEDs indicadores"
+
+msgid "Display Brightness"
+msgstr "Brillo panel frontal"
+
+msgid "LC Display Type"
+msgstr "Tipo de panel frontal"
+
+msgid "Black Series"
+msgstr "Series negras"
+
+msgid "External Reel Display Module"
+msgstr ""
+
+msgid "off"
+msgstr "Off"
+
+msgid "blue"
+msgstr "Azul"
+
+msgid "red"
+msgstr "Rojo"
+
+msgid "min"
+msgstr "Min"
+
+msgid "low"
+msgstr "Bajo"
+
+msgid "med"
+msgstr "Med"
+
+msgid "high"
+msgstr "Alto"
+
+msgid "max"
+msgstr "Máx"
+
+msgid "Update from CD/DVD"
+msgstr "Actualizar desde CD/DVD"
+
+msgid "Software update"
+msgstr "Actualización del software"
+
+msgid "Software Update"
+msgstr "Actualización del software"
+
+msgid "Update-check on system start"
+msgstr "Comprobar nueva versión al inicio"
+
+msgid "Manual Network Connections"
+msgstr "Conexión manual de Red"
+
+msgid "Dynamic DNS"
+msgstr "DNS dinámico"
+
+msgid "Remote Control / Automation"
+msgstr "Mando / Automatización"
+
+msgid "Enable Control via RS232"
+msgstr "Permitir control vía RS232"
+
+msgid "  Port speed (baud)"
+msgstr "  Veloc. puerto (baud)"
+
+msgid "default (115.200)"
+msgstr "Por defecto (115.200)"
+
+msgid "Enable Control via UDP"
+msgstr "Permitir control vía UDP"
+
+msgid "UDP Port"
+msgstr "Puerto UDP"
+
+msgid "Disable Bluetooth Support"
+msgstr "Desactivar soporte Bluetooth"
+
+msgid "Software Update and Installation, Serial Remote control"
+msgstr "Actualización soft e instalación, control remoto puerto serie"
+
+msgid "Update the ReelBox software by Internet"
+msgstr "Actualizar nuestro software por Internet"
+
+msgid "Install additional features"
+msgstr "Instalar características adicionales"
+
+msgid "Basic settings in just a few steps"
+msgstr "Configuraciones básicas en pocos pasos"
+
+msgid "Remote control through serial port or network"
+msgstr "Control remoto a través del puerto de serie o Red"
+
+msgid "Set up the Reel MultiRoom"
+msgstr ""
+
+msgid "Video and Audio Settings, OSD, Timezone, Front panel, Energy options"
+msgstr "Ajustes video y audio, OSD, zona horaria, panel frontal y apagado"
+
+msgid "Adjust automatic standby and poweroff"
+msgstr ""
+
+msgid "Video output, Resolution, Screen format etc."
+msgstr "Salida de video, resolución, formato de pantalla..."
+
+msgid "Audio output and format, Audio/Video delay etc."
+msgstr "Salida audio y formato, retraso audio/video..."
+
+msgid "Picture adjustments: Brightness, Contrast, Gamma"
+msgstr "Ajustes de la imágen: brillo, contraste y gamma"
+
+msgid "Set your language and on-screen-display options"
+msgstr "Escoger idioma y opciones del OSD"
+
+msgid "Time zone and source for automatic setting of system time"
+msgstr "Zona horaria y fuente para actualizar fecha y hora del sistema"
+
+msgid "LED color and brightness, LCD brightness"
+msgstr "Color LEDs y brillo, brillo del LCD"
+
+msgid "Adjust Energy saving options"
+msgstr "Ajustar opciones de ahorro de energía"
+
+msgid "Set up local Network and Internet, connect Network storage"
+msgstr "Ajustar Red local e Internet, conexiones de Red"
+
+msgid "Setup Wireless network: SSID, Encryption etc."
+msgstr "Ajustar Red inalámbrica: SSID, encriptación..."
+
+msgid "Set up LAN ports, DHCP/IP settings"
+msgstr "Ajustar puertos LAN, datos DHCP/IP"
+
+msgid "Host name, Domain, Gateway, Proxy, Wake-on-LAN, Dynamic DNS Services"
+msgstr "Nombre huésped, dominio, puerta de enlace, proxy,wake-on-LAN ..."
+
+msgid "Search and administer network shares"
+msgstr "Buscar y administrar redes de intercambio"
+
+msgid "Setup UMTS dial-up network connection"
+msgstr "Ajustar la conexión de red UMTS"
+
+msgid "Settings for Timeshift, Recordings, Playback, Media storage"
+msgstr "Ajustes grabación contínua, registros, playback, medios de almacenamiento"
+
+msgid "Settings for Timeshift"
+msgstr "Ajustes grabación contínua"
+
+msgid "Lead in & out time, VPS, Automatic marking of ads, Audio tracks"
+msgstr "Ajustar tiempo in/out, VPS, marcado automático anuncios, pistas audio"
+
+msgid "Playback options for TV recordings"
+msgstr "Opciones de reproducción para grabaciones de TV"
+
+msgid "Set up drive for Media files and Recordings"
+msgstr "Ajustar dispositivo para grabaciones y archivos-media"
+
+msgid "Configure background services and tasks"
+msgstr "Ajustar servicios en segundo plano y tareas"
+
+msgid "Channel scan & lists, DiSEqC settings, Common Interface, Signal information"
+msgstr "Búsqueda de canales y Listas, ajustar DiSEcQ, C.Interfaz, información señal"
+
+msgid "Channel lists, DiSEqC settings, Signal information"
+msgstr "Listas de canales, ajustar DiSEcQ, información señal"
+
+msgid "Automatic or manual channel scan"
+msgstr "Búsqueda automática o manual de canales"
+
+msgid "Choose a preconfigured channel list"
+msgstr "Escoger una lista de canales existente"
+
+msgid "Receiveable satellite positions, Number of active tuners / LNBs"
+msgstr "Satélites recibibles, número de sintonizadores activos / LNBs"
+
+msgid "Test and adjust your rotor"
+msgstr "Probar y ajustar el motor"
+
+msgid "Overview and configuration of Common Interface modules"
+msgstr "Vista general y configuración de los módulos CI"
+
+msgid "Details on Signal strength & quality, Video & audio bit rates etc."
+msgstr "Detalles de fuerza y calidad de la señal, bitrates audio y vídeo..."
+
+msgid "Advanced setup for system programs"
+msgstr "Ajuste avanzado para programas del sistema"
+
+msgid "Information on Hardware, Network and System health"
+msgstr "Información del estado del hardware, Red y Sistema"
+
+msgid "Settings needed to serve Reel NetClients"
+msgstr "Configuraciones necesarias para servir Reel NetClients"
+
+msgid "Enable NetCeiver bridge"
+msgstr "Activar puente del NetCeiver"
+
+msgid " Bridge NetCeiver to"
+msgstr "Puente NetCeiver a"
+
+msgid "Use VLAN for NetCeiver"
+msgstr "Usar VLAN para NetCeiver"
+
+msgid " VLAN ID"
+msgstr "VLAN ID"
+
+msgid "Prepare harddisk for use in the ReelBox"
+msgstr ""
+
+msgid "Can cause problems when MultiRoom"
+msgstr "Puede causar problemas con MultiRoom"
+
+msgid "is on and should not be activated."
+msgstr "funcionando y no debe activarse"
+
+msgid "Free To Air"
+msgstr ""
+
+msgid "no"
+msgstr "No"
+
+msgid "internal CAM"
+msgstr ""
+
+msgid "No CI at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "encrypted"
+msgstr ""
+
+msgid "Setup.OSD$Language"
+msgstr ""
+
+msgid "Setup.OSD$Optional languages"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "Setup.OSD$ Optional language"
+msgstr ""
+
+msgid "Permanent Timeshift"
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr ""
+
+msgid "Channel list"
+msgstr ""
+
+msgid "Title$Menu"
+msgstr ""
+
+msgid "Disk"
+msgstr ""
+
+msgid "free"
+msgstr ""
+
+msgid "Title$Main Menu"
+msgstr ""
+
+msgid " Stop replaying"
+msgstr ""
+
+msgid "Button$Recordings"
+msgstr ""
+
+msgid "EPG"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Button$Multifeed"
+msgstr ""
+
+msgid " Cancel editing"
+msgstr ""
+
+msgid "Functions"
+msgstr "Funciones"
+
+msgid "Stop recording?"
+msgstr ""
+
+msgid "Cancel editing?"
+msgstr ""
+
+msgid "yes"
+msgstr "Si"
+
+msgid "channelinfo"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Favourites"
+msgstr ""
+
+msgid "Favourit folders"
+msgstr ""
+
+msgid "channellist"
+msgstr ""
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+msgid "Setup.OSD$OSD color"
+msgstr ""
+
+msgid "Setup.OSD$Default font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Random menu placement"
+msgstr ""
+
+msgid "Setup.OSD$Show preview videos"
+msgstr ""
+
+msgid "Setup.OSD$Show expert menu options"
+msgstr ""
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr ""
+
+msgid "Setup.OSD$  Program +/- keys"
+msgstr ""
+
+msgid "Channell./Bouquets"
+msgstr ""
+
+msgid "Expertmenu"
+msgstr ""
+
+msgid "OSD Settings - Expert options"
+msgstr ""
+
+msgid "Setup.OSD$Default font"
+msgstr ""
+
+msgid "Setup.OSD$Small font"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font"
+msgstr ""
+
+msgid "Setup.OSD$Small font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Use small font"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr ""
+
+msgid "Setup.Recording$Mark Commercials after Recording"
+msgstr ""
+
+msgid "Setup.Recording$  Prefer new 'markad'"
+msgstr ""
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "at the end"
+msgstr ""
+
+msgid "to bouquets"
+msgstr ""
+
+msgid "permanent"
+msgstr ""
+
+msgid "daily"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Initial Volume (%)"
+msgstr ""
+
+msgid "EPG$  Last channel for EPG scan"
+msgstr ""
+
+msgid "EPG$  Start new scan after"
+msgstr ""
+
+msgid "EPG$  Max concurrent transponders"
+msgstr ""
+
+msgid "EPG$  Max busy devices"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr ""
+
+msgid "Button$Scan EPG"
+msgstr ""
+
+msgid "EPG scan started in background"
+msgstr ""
+
+msgid "With Permanent Timeshift you can pause a running broadcast and proceed it later on."
+msgstr ""
+
+msgid "Permanent Timeshift has been disabled."
+msgstr ""
+
+msgid "This plugin has no setup parameters!"
+msgstr ""
+
+msgid "System Information"
+msgstr "Información del sistema"
+
+msgid "Network"
+msgstr "Red"
+
+msgid "Signal"
+msgstr "Señal"
+
+msgid "Unknown device"
+msgstr ""
+
+msgid "Device Type:"
+msgstr "Tipo dispositivo"
+
+msgid "Software Version:"
+msgstr "Versión del soft"
+
+msgid "Software date:"
+msgstr "Fecha del soft"
+
+msgid "Stand-alone"
+msgstr "Independiente"
+
+msgid "Client"
+msgstr "Cliente"
+
+msgid "Server"
+msgstr "Servidor de datos"
+
+msgid "Hotel"
+msgstr "Hotel"
+
+#, fuzzy
+msgid "(MultiRoom inactive)"
+msgstr "Multi-room (inactivo)"
+
+#, fuzzy
+msgid "MultiRoom Mode:"
+msgstr "Ajustes opción MultiRoom"
+
+msgid "Tuner Slot 1:"
+msgstr "Sintoniz. ranura 1"
+
+msgid "Tuner Slot 2:"
+msgstr "Sintoniz. ranura 2"
+
+#, c-format
+msgid "Tuners Slot %d:"
+msgstr "Ranura sintoniz.%d"
+
+msgid "Unconfigured"
+msgstr "Sin configurar"
+
+msgid "RAM:"
+msgstr "RAM"
+
+msgid "Recording capacity"
+msgstr "Capacidad de grabación"
+
+msgid "Free"
+msgstr "Libre"
+
+#, c-format
+msgid "Drive %d:"
+msgstr "Disco %d"
+
+msgid "installed"
+msgstr "Instalado"
+
+msgid "not installed"
+msgstr "No instalado"
+
+msgid "CPU Temperature:"
+msgstr "Temp. CPU"
+
+msgid "Mainboard Temp.:"
+msgstr "Temp. placa base"
+
+msgid "Details"
+msgstr "Detalles"
+
+msgid "Windows workgroup:"
+msgstr "Grupo de trabajo Windows"
+
+msgid "Hostname:"
+msgstr "Hostname"
+
+msgid "Interface Name:"
+msgstr "Nombre interfaz"
+
+msgid "   IP Address:"
+msgstr "   Dirección IP"
+
+msgid "   Network mask:"
+msgstr "   Máscara de Red"
+
+msgid "   IPv6 Address:"
+msgstr "   Dirección IPv6"
+
+msgid "   Hardware Address:"
+msgstr "   Dirección hard."
+
+msgid "Online connectivity:"
+msgstr "Conectividad online"
+
+msgid "checking"
+msgstr "Comprobando"
+
+msgid "online"
+msgstr "Online"
+
+msgid "DNS failure"
+msgstr "Fallo de DNS"
+
+msgid "routing failure"
+msgstr "Fallo de enrutamiento"
+
+msgid "failure"
+msgstr "Fallo"
+
+msgid "enabled"
+msgstr "Conectado"
+
+msgid "disabled"
+msgstr "Desconectado"
+
+msgid "samba not installed!"
+msgstr "¡Samba no instalado!"
+
+msgid "not set"
+msgstr "Sin ajustar"
+
+msgid "Do you want store recordings here?"
+msgstr "¿Quiere guardar grabaciones aquí?"
+
+msgid "Permament timeshift disabled!"
+msgstr "¡Grabación cont. permanente desactivada!"
+
+msgid "Settings stored"
+msgstr "Configuración guardada"
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Really reset?"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Use the red button to reset to factory defaults."
+msgstr ""
+
+msgid "All settings will be lost!"
+msgstr ""
+
+msgid "Resetting ReelBox to factory defaults..."
+msgstr ""
+
+#, fuzzy
+msgid "Rebooting..."
+msgstr "¡Reiniciando!"
+
+msgid "MultiRoom - Error!"
+msgstr "Error MultiRoom"
+
+msgid "Delete Menu?"
+msgstr "¿Borrar menú?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Arriba/abajo para situar - OK para mover"
+
+msgid "Into"
+msgstr "Dentro"
+
+msgid "Before"
+msgstr "Antes"
+
+msgid "After"
+msgstr "Después"
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Move"
+msgstr "Mover"
+
+msgid "Broadcast"
+msgstr "Emisora"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "Please select your timezone"
+msgstr "Seleccione su zona horaria"
+
+msgid "Area"
+msgstr "Área"
+
+msgid "City/Region"
+msgstr "Ciudad/región"
+
+msgid "Setup.EPG$Set system time by"
+msgstr "Ajustar hora del sistema con"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "Usar hora del transponder"
+
+msgid "Setting changes - please wait..."
+msgstr "Guardando cambios..."
+
+msgid "Error - changes unsuccessful"
+msgstr "Error: Cambios no aceptados"
+
+msgid "Changes done"
+msgstr "Cambios aceptados"
+
+msgid "on"
+msgstr "On"
+
+msgid "Help"
+msgstr "Ayuda"
+
+msgid "No help available"
+msgstr "No hay ayuda disponible"
+
+msgid "Configuration error"
+msgstr "Error de configuración"
+
+msgid "Media Device"
+msgstr "Dispositivo Media"
+
+msgid "Wireless LAN"
+msgstr "LAN inalámbrica"
+
+msgid "No wlan device found!"
+msgstr "¡No hay dispositivo WLAN!"
+
+msgid "Network Drives"
+msgstr "Dispositivos de Red"
+
+msgid "Database is being initialized, retry later please!"
+msgstr "Se está inicializando la base de datos, pruebe más tarde..."
+
+msgid "Database Setup"
+msgstr "Config. Base de Datos"
+
+msgid "Menu Edit"
+msgstr "Editar menú"
+
+msgid "Please stop recording and retry"
+msgstr "Parar grabación y volver a intentar"
+
+msgid "Title$Setup"
+msgstr "Configuración"
+
+msgid "Error in configuration files"
+msgstr "Error en archivos de config."
+
+msgid "Wrong PIN entered"
+msgstr "El PIN es erróneo"
+
+msgid "Plugins Enable / Disable"
+msgstr "Activar/desactivar Plugins"
+
+msgid "Loading external plugins"
+msgstr "Cargando Plugins externos"
+
+msgid "protected"
+msgstr "Protegido"
+
+msgid "Plugin-Parameter"
+msgstr "Parametros-Plugins"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid " abcdefghijklmnopqrstuvwxyz0123456789-.!/"
+msgstr ""
+
+msgid "change menu name"
+msgstr "Cambiar nombre menú"
+
+msgid "MultiRoom Setup"
+msgstr "Ajustes opción MultiRoom"
+
+msgid "MultiRoom Setup (Expert)"
+msgstr "Ajustes opción MultiRoom (Expertos)"
+
+msgid "MultiRoom Setup (Tuner)"
+msgstr ""
+
+msgid "MultiRoom-System"
+msgstr "Sistema MultiRoom"
+
+msgid "MultiRoom Mode"
+msgstr ""
+
+msgid "In Server Mode your recordings and NetCeiver/tuners are available to all clients on the network"
+msgstr ""
+
+msgid "MultiRoom option not available. Plugin is missing."
+msgstr "MultiRoom no disponible. Plugin no instalado"
+
+msgid "Please press OK to continue"
+msgstr "Pulsar OK para continuar"
+
+msgid "TV-Output on Avantgarde"
+msgstr "Salida TV en Avantgarde"
+
+msgid "Number of NetClients"
+msgstr "Número de Netclients"
+
+msgid "Connection via"
+msgstr "Conexión via"
+
+msgid "Bridge NetCeiver to"
+msgstr "Puente NetCeiver a"
+
+msgid "Use VLAN"
+msgstr "Usar VLAN"
+
+msgid "VLAN ID"
+msgstr ""
+
+msgid "NetClient-Mode"
+msgstr "Modo NetClient"
+
+msgid "Receiver-Type"
+msgstr "Tipo de receptor"
+
+msgid "Stream-Server"
+msgstr "Servidor de datos"
+
+msgid "Recording-Server"
+msgstr "Servidor de grabación"
+
+msgid "Error: Database Server is not installed!"
+msgstr "Error:Servidor base de datos no instalado"
+
+msgid "Error: Database vdr doesn't exist!"
+msgstr "Error: Base datos VDR no existe"
+
+msgid "Error: my.cnf is not set properly! (bind-address wrong)"
+msgstr "Error: mi conf.no es correcta (bind-address erronea)"
+
+msgid "Error: Connection to database failed!"
+msgstr "Error: Fallo conexión base de datos "
+
+msgid "Error: Cannot login with reeluser!"
+msgstr "Error: No se puede conectar con reeluser"
+
+msgid ""
+"Error: MySQL-Server is not installed.\n"
+"\n"
+"Please press \"Fix it\" to install MySQL-Server. It may take some minutes."
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"\n"
+"Please press \"Fix it\" to initialize the database."
+msgstr ""
+"Error: Database mal instalada.\n"
+"\n"
+"Presionar \"Fix it\" para inicializar base de datos."
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"Access will be possible from this box but not from others in the network. \n"
+"\n"
+"Please press \"Fix it\" to make database accessible from network."
+msgstr ""
+"Error: Permisos de acceso a base de datos incorrectos.\n"
+"Acceso posible desde este aparato pero no desde otros en Red. \n"
+"\n"
+"Presione \"Fix it\" para hacer accesible base de datos desde la Red."
+
+msgid "Error: Connection to DB failed. Check if mysqld is running"
+msgstr "Error: Conexión errónea con DB. Comprobar si mysqld está activo"
+
+msgid ""
+"Error: Cannot login with reeluser to mysql.\n"
+"\n"
+"Please press \"Fix it\" to create account reeluser."
+msgstr ""
+"Error: No podemos conectar con reeluser a mysql.\n"
+"\n"
+"Presionar \"Fix it\" para crear una cuenta reeluser."
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"\n"
+"Please press \"Fix it\" to create missing tables."
+msgstr ""
+"Error: Base de datos mal instalada.\n"
+"\n"
+"Presionar \"Fix it\" para crear las tablas perdidas."
+
+#, fuzzy
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"\n"
+"Please press \"Fix it\" to set permissions for reeluser."
+msgstr ""
+"Error: Permisos de acceso a base de datos incorrectos.\n"
+"\n"
+"Presionar \"Fix it\" para dar permisos a reeluser."
+
+msgid ""
+"Error: An unknown error occured.\n"
+"Try to reset Database."
+msgstr ""
+"Error: Ha ocurrido un error desconocido.\n"
+"Intente resetear base de datos."
+
+msgid "Fix it"
+msgstr "Corríjalo"
+
+msgid "Please wait..."
+msgstr "Espere por favor..."
+
+msgid "MySQL-Server successfully installed."
+msgstr "Mi SQL-Server instalado correctamente"
+
+msgid "Couldn't install MySQL-Server!"
+msgstr "¡No se puede instalar Mi SQL-Server!"
+
+msgid "Database successfully created."
+msgstr "Base de datos creada correctamente"
+
+msgid "Couldn't create Database!"
+msgstr "¡No se puede crear base de datos!"
+
+msgid "Database successfully configured."
+msgstr "bBase de datos config. correctamente"
+
+msgid "Couldn't configure Database!"
+msgstr "¡No se puede config. base de datos!"
+
+msgid "Account reeluser successfully created."
+msgstr "Cuenta Reeluser creada correctamente"
+
+msgid "Couldn't create reeluser account!"
+msgstr "¡No se puede crear cuenta Reeluser!"
+
+msgid "Missing tables successfully created."
+msgstr "Tablas perdidas creadas correctamente."
+
+msgid "Couldn't create missing tables!"
+msgstr "¡No se pueden crear tablas perdidas!"
+
+msgid "Error: Initializing database failed!"
+msgstr "Error:¡Inicialización base de datos fallida!"
+
+msgid "Error: Connecting database failed!"
+msgstr "Error: ¡Conexión base de datos fallida!"
+
+msgid "Error: Clearing database failed!"
+msgstr "Error:¡Borrado base de datos fallido!"
+
+msgid "Changes saved"
+msgstr "Cambios guardados"
+
+msgid "direct"
+msgstr "Directo"
+
+msgid "network"
+msgstr "Red"
+
+msgid "Tuner"
+msgstr "Sintonizador"
+
+msgid "Expert"
+msgstr "Expertos"
+
+msgid "x Satellite "
+msgstr "x Satélite"
+
+msgid "x Terrestrial "
+msgstr "x Terrestre"
+
+msgid "x Cable "
+msgstr "x Cable"
+
+msgid "Available tuners in MultiRoom Network"
+msgstr ""
+
+msgid ""
+"Error: MySQL-Server is not installed.\n"
+"Disable MultiRoom, then enable it again to try the install again. Or try installing the package 'mysql-server' manually"
+msgstr ""
+"Error: Myi servidor SQL no está instalado.\n"
+"Desactivar MultiRoom, y activarlo de nuevo y tratar de instalarlo otra vez. O instalar el paquete 'mysql-server' manualmente"
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"Disable MultiRoom, then enable it again to try to initialize the database again. "
+msgstr ""
+"Error: Base de Datos mal instalada.\n"
+"Desactivar MultiRoom, activarlo de nuevo y probar de inicializar la Base de Datos otra vez. "
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"Access will be possible from this box but not from others in the network. Change 'bind-address' in /etc/mysql/my.cnf."
+msgstr ""
+"Error: Permisos de acceso a la Base de Datos incorrectos.\n"
+"Acceso posible de este aparato pero no desde otros en la Red. Cambiar 'bind-address' en /etc/mysql/my.cnf."
+
+msgid "Error: Cannot login with reeluser to mysql. Try re-installing mysql-server."
+msgstr "Error: No se puede acceder con reeluser a mysql. Pruebe reinstalar el server mysql de nuevo."
+
+msgid ""
+"Error: An unknown error occured.\n"
+"Disable MultiRoom, manually deinstall mysql-server, then enable MultiRoom again."
+msgstr ""
+"Error: Ha ocurrido un error desconocido.\n"
+"Desactive MultiRoom, desinstalar manualmente el servidor mysql, y activar de nuevo MultiRoom."
+
+msgid "Using mixed tuner types with NetClients is not"
+msgstr "El empleo de sintonizadores mixtos con NetClients todavía"
+
+msgid "yet supported."
+msgstr "no está soportado"
+
+msgid "Enable the MultiRoom-System to connect NetClients in the network with your ReelBox Avantgarde and to provide TV-signals to the NetClients."
+msgstr "Permitir sistema Multi-room para conectar Netclients en Red con Reelbox Avantgarde y suministrarles señal de TV"
+
+msgid "TV-Programs are now available in your network. Please configure your network components according to the installation guide."
+msgstr "Señal de TV disponible en su Red. Configure sus componentes de Red de acuerdo con la Guía de instalación"
+
+msgid "MultiRoom setup will now be completed if you confirm the settings with 'Ok'. You can then continue with the installation of the NetClients."
+msgstr "La configuración MultiRoom se completará si confirma con 'OK'. Podrá continuar después con la instalación de los NetClients."
+
+msgid "Caution: For this configuration there are not"
+msgstr "Atención: Para esta configuración no hay suficientes"
+
+msgid "enough tuners available for LiveTV and recording."
+msgstr "sintonizadores disponibles para TV y grabaciones"
+
+msgid "simultaneously."
+msgstr "simultáneamente"
+
+msgid "TV-Output will be disabled after 5 minutes. All tuners are exclusively available to NetClients."
+msgstr "La salida de TV se desconectará en 5 minutos. Todos los sintonizadores estarán disponibles sólo para NetClients"
+
+msgid "enough tuners for providing"
+msgstr "Suficientes sintonizadores para suministrar"
+
+msgid "TV-Signals for all NetClients simultaneously."
+msgstr "simultáneamente señal de TV a todos los Netclient"
+
+msgid "Caution: In the selected configuration there are"
+msgstr "Atención: Con esta configuración no hay suficientes"
+
+msgid "not enough tuners available to be able to provide"
+msgstr "sintonizadores para suministrar señal de TV"
+
+msgid "TV-signals to all NetClients at the same time."
+msgstr "para todos los Netclients a la vez"
+
+msgid "Please extend the number of tuners to be able"
+msgstr "Aumente el número de sintonizadores disponibles"
+
+msgid "to use all NetClients simultaneously."
+msgstr "para usar todos los Netclient a la vez"
+
+msgid "Using this configuration i.e. one of"
+msgstr "Con esta configuración sólo estas"
+
+msgid "these actions is possible:"
+msgstr "acciones son posibles:"
+
+msgid "1x TV-Recording through NetClient or"
+msgstr "1x Grabar programa TV con Netclient o"
+
+msgid "1x Live-TV through NetClient"
+msgstr "1x Ver programa en directo con Netclient"
+
+msgid "Using this configuration these simultanous"
+msgstr "Con esta configuración sólo estas"
+
+msgid "actions are possible:"
+msgstr "acciones son posibles:"
+
+msgid "TV-Recordings through NetClients"
+msgstr "Grabar programa TV con Netclients"
+
+msgid " or Avantgarde"
+msgstr "o con Avantgarde"
+
+msgid "Live-TV through NetClients"
+msgstr "TV en directo con Netclient"
+
+msgid "NetworkConnectPlur$Please connect your NetClients with the network switch."
+msgstr "Conecte sus NetClients con el cable de Red"
+
+msgid "NetworkConnectSing$Please connect your NetClient with the network switch."
+msgstr "Conecte su NetClient con el cable de Red"
+
+#, c-format
+msgid "DirectConnect$Please connect your NetClient to the port labeled \"Ethernet %i\"."
+msgstr "Conecte su NetClient al puerto \"Ethernet %i\"."
+
+msgid "Number of tuners assigned locally:"
+msgstr ""
+
+msgid "Satellite (DVB-S)"
+msgstr "Satélite (DVB-S)"
+
+msgid "Satellite (DVB-S2)"
+msgstr "Satélite (DVB-S2"
+
+msgid "Cable"
+msgstr "Cable"
+
+msgid "Terrestrial"
+msgstr "Terrestre"
+
+msgid "Tuners available for the whole MultiRoom-System:"
+msgstr "Sintonizadores disponibles para el sistema MultiRoom:"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid ""
+"bridge_on$TV-data is now available in the network for the NetClients.\n"
+"Please note that you also have to enable VLAN and configure the switches inside your network if you experience problems with your network."
+msgstr ""
+"La señal de TV está disponible para los NetClients.\n"
+"Debe habilitar también VLAN y reconfigurar las conexiones internas de su Red si tiene dificultades."
+
+msgid ""
+"bridge_off$Activate the network bridge to provide TV-signals to your home network.\n"
+"Warning: As soon as you activate the bridge, network components like WLAN routers will possibly not work correct any longer. Thus also enable VLAN and configure your switches according to the installation guide."
+msgstr ""
+"Activar el puente de Red para tener señal de TV en nuestra res local.\n"
+"Atención: Tan pronto como active el puente, los componentes tipo routers WLAN dejarán de funcionar correctamente. Entonces, debe activar VLAN y configurar los dispositivos de acuerdo con la Guía de instalación."
+
+msgid "Dummytext$"
+msgstr ""
+
+msgid "vlan_on$VLAN ist now active. You can now set up your network switches."
+msgstr "vlan_on$VLAN está activada. Ahora puede configurar sus dispositivos de Red"
+
+msgid ""
+"vlan_off$VLANs are used to separate the network traffic into multiple virtual Networks. With this option you can limit the traffic of the NetCeiver to one VLAN.\n"
+"To reasonably use VLANs you also need VLAN capable switches. You can receive preconfigured switches for the Reel MultiRoom System at your local dealer."
+msgstr ""
+"VLANs se usan para separar el tráfico de Red en múltiples redes virtuales. Con esta opción se puede limitar el tráfico del NetCeiver a un VLAN. \n"
+"Para usar los VLAN se necesitan dispositivos apropiados. Puede obtener dispositivos preconfigurados para el sistema Reel MultiRoom en su distribuidor local"
+
+msgid "bridge_id$Each VLAN is referenced by its own unique ID. It is recommended to use the ID '2' for NetCeiver and NetClients."
+msgstr "Cada VLAN está identificada por una única ID. Se recomienda usar la ID'2' para el NetCeiver y los NetClients"
+
+msgid "Number of tuners to use on your Avantgarde:"
+msgstr "Número de sintonizadores disponibles en su Avantgarde"
+
+msgid "Not available!"
+msgstr "No disponible"
+
+msgid "No Avantgarde"
+msgstr "No hay Avantgarde"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "MultiRoom is inactive."
+msgstr "Multi-room inactivo."
+
+msgid "Connection to ReelBox Avantgarde is disabled. Recording will be done locally."
+msgstr "La conexión con ReelBox Avantgarde está desactivada. Las grabaciones se harán localmente."
+
+msgid "MultiRoom is disabled and no harddisk was found - only LiveTV is available!"
+msgstr "MultiRoom desactivado y sin disco duro....sólo está disponible señal de TV"
+
+msgid "Recording and timeshift are disabled."
+msgstr "Grabaciones y programaciones desactivados"
+
+msgid "MultiRoom is active. Recording will be done by the ReelBox Avantgarde."
+msgstr "MultiRoom está activo. Las grabaciones se harán en la Avantgarde."
+
+msgid ""
+"Error: The ReelBox Avantgarde is not accessible now.\n"
+"Possible reasons are: network hardware error, wrong network settings, Avantgarde is off.\n"
+"Please check the system settings and the network or select a different recording server."
+msgstr ""
+"ReelBox Avantgarde no está accesible ahora.\n"
+"Posibles razones:Error conexiones de Red, configuración Red errónea o Avantgarde apagado.\n"
+"Repase las conexiones y las confguraciones o seleccione otro servidor de grabaciones."
+
+msgid "If confirm now, MultiRoom will be deactivated."
+msgstr "Si confirma ahora, el Multi-room se desactivará."
+
+msgid "Connection to the ReelBox Avantgarde will be disabled. Recording will be done locally."
+msgstr "Se cortará la conexión con ReelBox Avantgarde. Grabaciones locales sólamente"
+
+msgid "If confirm now, MultiRoom will be disabled. No harddisk was found - only LiveTV will be available."
+msgstr "Si confirma ahora, el MultiRoor de desactivará.Sin disco duro - sólo estrá disponible señal de TV"
+
+msgid "Recording and timeshift will be disabled."
+msgstr "Grabaciones y programaciones desactivados"
+
+msgid "If confirm now, MultiRoom will be activated. Recording will be done by the ReelBox Avantgarde."
+msgstr "Si confirma ahora, el MultiRoom será activoado. Las grabaciones se harán en la Avantgarde."
+
+#, c-format
+msgid "The ReelBox Avantgarde with the IP address \"%s\" will be used for MultiRoom services."
+msgstr "La siguiente dirección IP %s se usrá para MultiRoom."
+
+msgid "Please select a ReelBox Avantgarde."
+msgstr "Seleccionar un ReelBox Avantgarde"
+
+msgid "DummyText RECEIVER_TYPE_TEXT MCLI$"
+msgstr ""
+
+msgid "DummyText RECEIVER_TYPE_TEXT Streamdev$"
+msgstr ""
+
+msgid "Error!"
+msgstr ""
+
+msgid "Please check the network settings and the network connection else please search in network."
+msgstr "Compruebe las configuraciones y conexiones de Red."
+
+msgid "Initializing database..."
+msgstr "Inicializando base de datos..."
+
+msgid "Save changes?"
+msgstr "¿Guerdar cambios?"
+
+msgid "Storing settings - please wait..."
+msgstr "Guardando configuración, espere..."
+
+msgid "Invalid settings: Client without Server!"
+msgstr "¡Config. inválida: Cliente sin Servidor!"
+
+msgid "Some Timer is being edited, cannot save settings."
+msgstr "Algún Programador está siendo editado. No se puede guardar config."
+
+msgid "Internet connection not available!"
+msgstr "¡No hay conexión a Internet!"
+
+msgid "Saving Settings..."
+msgstr "Guardando configuración"
+
+msgid "Restarting network..."
+msgstr "Buscar Red de nuevo"
+
+msgid "Database status"
+msgstr "Estado base de datos"
+
+msgid "Clear Database"
+msgstr "Borar base de datos"
+
+msgid "Clear Table ..."
+msgstr "Borrar Tabla ..."
+
+msgid "Change Database Password ..."
+msgstr "Cambiar contaseña base de datos"
+
+msgid "Local IP-Address unknown!"
+msgstr "Dirección IP local desconocida"
+
+msgid "MultiRoom (inactive)"
+msgstr "Multi-room (inactivo)"
+
+msgid "Error: Connection to ReelBox Avantgarde failed!"
+msgstr "Error: ¡Conexión con Avantgarde fallida!"
+
+#, fuzzy
+msgid "Wakeup Avantgarde"
+msgstr "No hay Avantgarde"
+
+msgid "Please enter the number of tuners to use:"
+msgstr "Entre el número de sintonizadores:"
+
+msgid "Error! Something went wrong in the Avahi-Plugin!"
+msgstr "Error: Algo ha ido mal con el Avahi-Plugin"
+
+msgid "Selection"
+msgstr "Selección"
+
+msgid "search"
+msgstr "Buscar"
+
+msgid "Following ReelBox Avantgarde is found in network."
+msgstr "¡No se ha encontrado ReelBox Avantgarde en Red!"
+
+msgid "Following ReelBox Avantgarde are found in network."
+msgstr "Se han encontrado los siguientesReelBox Avantgardeen Red."
+
+msgid "Please select a ReelBox Avantgarde for MultiRoom services:"
+msgstr "Seleccionar un ReelBox Avantgarde para servicios MultiRoom:"
+
+msgid "Note:"
+msgstr "Nota:"
+
+msgid "No ReelBox Avantgarde found in network."
+msgstr "No se ha encontrado ReelBox Avantgarde en Red"
+
+msgid "Rescan"
+msgstr "Buscar de nuevo"
+
+#, c-format
+msgid "The ReelBox Avantgarde (%s) which is currently configured as MultiRoom Server was not found on the network."
+msgstr "La siguiente dirección IP %s se usaría para MultiRoom no se ha encontrado en Red."
+
+msgid "If your ReelBox Avantgarde is configured to use DHCP, we strongly recommend using fixed IP addresses."
+msgstr "Si su reelBox vantgarde está configurada para usar DHCP, recomendamos expresamente usar IP fija"
+
+msgid "No ReelBox Avantgarde is currently configured."
+msgstr "No se ha encontrado ReelBox Avantgarde configurada"
+
+msgid "Search for ReelBox Avantgarde on the network"
+msgstr "Buscando ReelBox Avantgarde en Red"
+
+msgid "Continue with MultiRoom deactivated"
+msgstr "Continuar con Multi-room desactivado."
+
+msgid "Please test:"
+msgstr ""
+
+msgid "Please select a share:"
+msgstr "Seleccionar un servidor:"
+
+msgid "Please press OK to store settings."
+msgstr "Pulsar OK para guardar config."
+
+msgid "AllowedCharsNetShares$ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_-.,#~^$+@{}"
+msgstr ""
+
+msgid "Currently no active connections"
+msgstr "No hay conexiones activas"
+
+msgid "Do you want to use Network Shares? Press OK."
+msgstr "¿Quiere usar intercambios por Red? Apriete OK"
+
+msgid "Button$Disable"
+msgstr "Desactivar"
+
+msgid "Button$Enable"
+msgstr "Activar"
+
+msgid "Do you want to remove the connection?"
+msgstr "¿Quiere eliminar el intercambo?"
+
+msgid "Recording won't be possible on this share. Continue?"
+msgstr ""
+
+msgid "Scanning..."
+msgstr "Buscando..."
+
+msgid "Scanning complete."
+msgstr "Búsqueda completa."
+
+msgid "Scanning failed!"
+msgstr "¡Búsqueda fallida!"
+
+msgid "Found shares:"
+msgstr "Encontrar servidores:"
+
+msgid "Stop"
+msgstr ""
+
+msgid "Host"
+msgstr "Huésped"
+
+msgid "Share name"
+msgstr "Nombre intercambio"
+
+msgid "Share Number"
+msgstr "Número intercambio"
+
+msgid "Display name"
+msgstr "Mostrar nombre"
+
+msgid "Username"
+msgstr "Usuario"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Pictures"
+msgstr "Imágenes"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "Videos"
+msgstr "Vídeos"
+
+msgid "Recordings"
+msgstr "Grabaciones"
+
+msgid "Do you want to use the guest account?"
+msgstr "¿Quiere usar una cuenta de huésped?"
+
+msgid "NFS Version"
+msgstr "Versión NFS"
+
+msgid "Protocol"
+msgstr "Protocolo"
+
+msgid "Block size"
+msgstr "Tamaño bloque"
+
+msgid "hard/soft"
+msgstr "Hard/soft"
+
+msgid "soft"
+msgstr "Soft"
+
+msgid "hard"
+msgstr "Hard"
+
+msgid "Lock"
+msgstr "Fijar"
+
+msgid "Read/Write"
+msgstr "Leer/escribir"
+
+msgid "Readonly"
+msgstr "Sólo leer"
+
+msgid "Read&Write"
+msgstr "Escribir"
+
+msgid "Please enter Username & Password,"
+msgstr "Introduzca el usuario y contraseña"
+
+msgid "which is needed for browsing the shares."
+msgstr "necesarios para buscar intercambios"
+
+msgid "Please enter username & password!"
+msgstr "¡Introduzca usuario y contraseña!"
+
+msgid "Please select the device for storing your media files:"
+msgstr "Seleccione dispositivo para guardar los archivos-Media"
+
+msgid "Drive\tDevice\t\tSize\tFree\tType"
+msgstr ""
+
+msgid "Recording"
+msgstr "Grabaciones"
+
+msgid "All media"
+msgstr ""
+
+msgid "(removable)"
+msgstr "(extraible)"
+
+msgid "MultiRoom Server"
+msgstr ""
+
+msgid "Note: MultiRoom will be disabled."
+msgstr "Multi-room se desactivará."
+
+msgid "Unmount"
+msgstr ""
+
+msgid "Mount"
+msgstr ""
+
+msgid "timeshift off"
+msgstr "Grab.contínua perman.desactivada"
+
+msgid "timeshift on"
+msgstr "Grab.contínua perman.activada"
+
+msgid "Resize partition"
+msgstr "Cambiar tamaño partición"
+
+msgid "Rebooting!"
+msgstr "¡Reiniciando!"
+
+msgid "Unable to mount. Missing command"
+msgstr ""
+
+msgid "unmounting"
+msgstr ""
+
+msgid "mounting"
+msgstr ""
+
+msgid "Warning, recording is running!"
+msgstr "Atención, grabación en curso"
+
+msgid "Mounting device failed"
+msgstr "Montaje dispositivo fallido"
+
+msgid "Warning, device may be to small for recordings!"
+msgstr "Atención: Dispositivo demasiado pequeño para grabaciones"
+
+msgid "Warning, few space is left on this device!"
+msgstr "Atención: Queda poco espacio en el dispositivo"
+
+msgid "Resize partition now?"
+msgstr "Cambiar tamaño partición"
+
+msgid "Resizing - please wait..."
+msgstr "Cambiando tamaño, espere..."
+
+msgid "Do you want to reboot the ReelBox now?"
+msgstr "¿Quiere reiniciar la reelBox ahora?"
+
+msgid "Resizing failed!"
+msgstr "¡Cambio de tamaño fallido!"
+
+msgid "Warning, device may be too small for recording!"
+msgstr "Atención: Dispositivo demasiado pequeño para grabaciones"
+
+msgid "Load settings, please wait..."
+msgstr "Cargando configuración, espere..."
+
+msgid "Scanning networks, please wait..."
+msgstr "Buscando Redes, espere..."
+
+msgid "Following hardware was found."
+msgstr "Se ha encontrado el siguiente hardware."
+
+msgid "Please choose a WLAN device:"
+msgstr "Escoja el dispositivo WLAN"
+
+msgid "Rescan WLAN"
+msgstr "Buscar de nuevo WLAN"
+
+msgid "Skip"
+msgstr ""
+
+msgid "Device"
+msgstr "Dispositivo"
+
+msgid "Interface"
+msgstr "Interfaz"
+
+msgid "Sorry, no WLAN networks found. Check the antenna, check WLAN settings and try to search again."
+msgstr ""
+
+msgid "Following WLAN networks are found."
+msgstr "Se han encontrado las siguientesredes WLAN"
+
+msgid "Please choose a WLAN network:"
+msgstr "Escoja Red WLAN"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Network:"
+msgstr "Red"
+
+msgid "(E)SSID"
+msgstr ""
+
+msgid "Security:"
+msgstr "Seguridad"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "WEP-Key"
+msgstr "Clave WEP"
+
+msgid "WPA-Key"
+msgstr "Clave WPA"
+
+msgid "WPA2-Key"
+msgstr "Clave WPA2"
+
+msgid "WLAN settings successfully stored"
+msgstr "¡Datos WLAN guardados!"
+
+msgid "Security"
+msgstr "Seguridad"
+
+msgid "IP Address"
+msgstr "Dirección IP"
+
+msgid "Subnet"
+msgstr "Subred"
+
+msgid ""
+"Please press OK to store the settings now.\n"
+"\n"
+"You can also manually set an IP address here."
+msgstr ""
+
+msgid "Running DHCP, please wait..."
+msgstr "Iniciando DHCP, espere..."
+
+msgid "Retrieving IP from DHCP failed!"
+msgstr "¡Recuperación IP de DHCP fallida!"
+
+msgid "Storing settings, please wait..."
+msgstr "Guardando configuración, espere..."
+
+msgid "Keylength must be at least 10 chars!"
+msgstr "¡Longit. clave debe tener mínimo 10 caracteres!"
+
+msgid "Keylength must be at least 8 chars!"
+msgstr "¡Longit. clave debe tener mínimo 8 caracteres!"
+
+msgid "Authentication failed"
+msgstr "Autentificación fallida"
+
+msgid "Please enter SSID!"
+msgstr "¡Entre SSID!"
+
+msgid "Store settings?"
+msgstr "¿Guardar config.?"
+
+msgid "Wireless LAN: Functions"
+msgstr "LAN inálambrica: Funciones"
+
+msgid "Retrieve DHCP"
+msgstr "Recuperar DHCP"
+
+msgid "Reset WLAN settings"
+msgstr "Reiniciar config. WLAN"
+
+msgid "Turn WLAN off"
+msgstr "Desactivar WLAN"
+
+msgid "Open"
+msgstr "Abrir"
+
+#~ msgid "Active tuners"
+#~ msgstr "Sintoniz. activos"
+
+#~ msgid "Load EPG"
+#~ msgstr "Cargar EPG"
+
+#~ msgid "Enable WLAN"
+#~ msgstr "Activar WLAN"
+
+#~ msgid "System Help"
+#~ msgstr "Ayuda del sistema"
+
+#~ msgid "Permanent timeshift"
+#~ msgstr "Grabación contínua permanente"
+
+#~ msgid "Drive\t\tDevice\tSize\tFree\tType"
+#~ msgstr "Unidad\t\tDispositivo\tTamaño\tLibre\tMedia"
+
+#, fuzzy
+#~ msgid "Energy savings mode"
+#~ msgstr "Modo de ahorro energético"
+
+#, fuzzy
+#~ msgid " Automatic Standby after (min)"
+#~ msgstr "Activar depués de (h)"
+
+#, fuzzy
+#~ msgid " Automatic Poweroff after (min)"
+#~ msgstr "Activar depués de (h)"
+
+#~ msgid "All files and folders will be lost after formatting"
+#~ msgstr "Todos los archivos se perderán después del formateo"
+
+#~ msgid "Device Name:"
+#~ msgstr "Nombre dispositivo"
+
+# TB: broken...
+# msgid "Formatting will destroy all data in %s partition!"
+# msgstr "Presionar 'Exit' para cancelar formateo"
+#, fuzzy
+#~ msgid "Press 'Red' to start formatting"
+#~ msgstr "Presionar tecla Roja para iniciar formateo"
+
+#, fuzzy
+#~ msgid "    or 'Exit' to cancel formatting."
+#~ msgstr "     O Exit para cancelar formateo"
+
+#~ msgid "Press 'Exit' to cancel formatting"
+#~ msgstr "Presioner 'Exit' para cancelar el formateo"
+
+#~ msgid "Select 'Partition Type'"
+#~ msgstr "Seleccionar 'Tipo de Partición'"
+
+#~ msgid "Partition Type"
+#~ msgstr "Tipo de partición"
+
+#, fuzzy
+#~ msgid "directly"
+#~ msgstr "Directo"
+
+#, fuzzy
+#~ msgid "Reset Settings"
+#~ msgstr "Ajustes de recepción"
+
+#, fuzzy
+#~ msgid "Resetting..."
+#~ msgstr "¿Guardar config.?"
+
+#~ msgid "CAUTION:"
+#~ msgstr "ATENCIÓN"
+
+#~ msgid "Please enter encryption key"
+#~ msgstr "Entre la clave de encriptación"
+
+#~ msgid "Please reboot ReelBox"
+#~ msgstr "Reinicie su ReelBox"
+
+#, fuzzy
+#~ msgid ""
+#~ "Error: The ReelBox Avantgarde is not accessible now.\n"
+#~ "Possible reasons are: network hardware error, wrong network settings, Avantgarde is off.\n"
+#~ msgstr "ReelBox Avantgarde no está accesible ahora. Repase las confguraciones."
+
+#, fuzzy
+#~ msgid "Energy Saving Mode is not"
+#~ msgstr "Modo de ahorro energético"
+
+#, fuzzy
+#~ msgid "MultiRoom is temporarily disabled."
+#~ msgstr "Multi-room inactivo."
+
+#~ msgid "Recording only"
+#~ msgstr "Sólo grabación"
+
+#~ msgid "All"
+#~ msgstr "Todo"
+
+#~ msgid "Only Recording"
+#~ msgstr "Sólo grabando"
+
+#, fuzzy
+#~ msgid "Attention:"
+#~ msgstr "Extensión HD"
+
+#, fuzzy
+#~ msgid "MultiRoom"
+#~ msgstr "Ajustes opción MultiRoom"
+
+#, fuzzy
+#~ msgid "Storing settings... please wait."
+#~ msgstr "Guardando configuración, espere..."
+
+#~ msgid "Please wait!"
+#~ msgstr "Espere..."
+
+#~ msgid "Please wait"
+#~ msgstr "Espere..."
+
+#~ msgid "Rescan network"
+#~ msgstr "Buscar Red de nuevo"
+
+#, fuzzy
+#~ msgid "DUMMYTEXT_Database vdr doesn't exist$"
+#~ msgstr "No instalado"
+
+#, fuzzy
+#~ msgid "Changes saved (100%)"
+#~ msgstr "Cambios guardados"
+
+#, fuzzy
+#~ msgid "Checking online connection, please wait..."
+#~ msgstr "Buscando Redes, espere..."
+
+#~ msgid "not online (routing failed)"
+#~ msgstr "Offline (fallo routing)"
+
+#~ msgid "not online (dns failed)"
+#~ msgstr "Offline (fallo DNS)"
+
+#~ msgid "Resize and then reboot?"
+#~ msgstr "¿Cambiar tamaño y reiniciar?"
+
+#~ msgid "Using this configuration there is e.g. one of"
+#~ msgstr "Con esta configuración sólo una de estas"
+
+#~ msgid "actions are possible simultaneously:"
+#~ msgstr "acciones son posibles a la vez:"
+
+#, fuzzy
+#~ msgid "Network plural$"
+#~ msgstr "Red"
+
+#, fuzzy
+#~ msgid "Network singular$"
+#~ msgstr "Ajustes de la Red"
+
+#~ msgid "TV-Output will be disabled after 5 minutes."
+#~ msgstr "La salida de TV se desconectará en 5 minutos"
+
+#~ msgid "NetCeiver"
+#~ msgstr "NetCeiver"
+
+#~ msgid "Loading recordings failed!"
+#~ msgstr "¡Error al cargar grabaciones!"
+
+#, fuzzy
+#~ msgid "Bridge = on"
+#~ msgstr "NetCeiver"
+
+#, fuzzy
+#~ msgid "VLAN off"
+#~ msgstr "Desactivar WLAN"
+
+#~ msgid "Mode"
+#~ msgstr "Modo"
+
+#~ msgid "No NetServer/Avantgarde"
+#~ msgstr "Sin servidor Red/Avantgarde"

@@ -1,0 +1,455 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvdswitch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 13:48+0200\n"
+"PO-Revision-Date: 2011-09-04 14:50+0100\n"
+"Last-Translator: Dutch ReelBox4all team <tech@reelbox4all.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Reading DVD"
+msgstr "DVD lezen"
+
+msgid "Writing DVD"
+msgstr "Scrijven van DVD"
+
+msgid "Copying DVD"
+msgstr "DVD kopieeren"
+
+msgid "Please insert DVD: "
+msgstr "Plaats een DVD:"
+
+msgid "Commands"
+msgstr "Commando's"
+
+msgid "Burn image"
+msgstr "Brand een image"
+
+msgid "Rename image"
+msgstr "Hernoem image"
+
+msgid "Open DVD-tray"
+msgstr "DVD-Lade openen"
+
+msgid "Close DVD-tray"
+msgstr "Sluit DVD lade"
+
+msgid "Delete cache"
+msgstr "Wis cache"
+
+msgid "Format DVD-RW"
+msgstr "Formatteer DVD-RW"
+
+msgid "Directory management"
+msgstr "Directory beheer"
+
+msgid "Success..."
+msgstr "Gelukt..."
+
+msgid "Directory Management"
+msgstr "Directory beheer"
+
+msgid "Select Directory"
+msgstr "Selecteer directory"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "Select"
+msgstr "Kiezen"
+
+msgid "Rename"
+msgstr "Hernoemen"
+
+msgid "Delete"
+msgstr "Wissen"
+
+msgid "Move"
+msgstr "Verplaatsen"
+
+msgid "Edit Directories"
+msgstr "Edit directories"
+
+msgid "no Rights!"
+msgstr "geen rechten!"
+
+msgid "really delete?"
+msgstr "werkelijk wissen?"
+
+msgid "Directory not empty. however delete?"
+msgstr "Directory niet leeg. Toch wissen?"
+
+msgid "no rights!"
+msgstr "geen rechten!"
+
+msgid "no rights to create"
+msgstr "geen rechten om iets aan te maken"
+
+msgid "Directory exists"
+msgstr "Directory bestaat reeds"
+
+msgid "no rights to rename"
+msgstr "geen rechten om te hernoemen"
+
+msgid "Insert"
+msgstr "Invoegen"
+
+msgid "Specified Writescript not exist!"
+msgstr "Gespecificeerde schrijfscript bestaat niet!"
+
+msgid "Cannot execute Writescript!"
+msgstr "Kan schrijfscript niet uitvoeren!"
+
+msgid "Burn Now?"
+msgstr "Nu branden?"
+
+msgid "Read DVD"
+msgstr "Lees DVD"
+
+msgid "Specified Readscript not exist!"
+msgstr "Gespecificeerde leesscript bestaat niet!"
+
+msgid "Cannot execute Readscript!"
+msgstr "Kan leesscript niet uitvoeren!"
+
+msgid "Now Read?"
+msgstr "Nu lezen?"
+
+msgid "Image-File"
+msgstr "Image-bstand"
+
+msgid "Image-Directory"
+msgstr "Image-directory"
+
+msgid "Previously seen DVDs"
+msgstr "Eerder gebruikte DVD's"
+
+msgid "Archives DVDs and plays it from Harddisk"
+msgstr "Archiveer DVD's en speel ze vanaf de harde schijf"
+
+msgid "Archive Video-DVD"
+msgstr "Archiveer Video-DVD"
+
+msgid "Image Directory not readable or does not exist"
+msgstr "Image directory is niet leesbaar of bestaat niet"
+
+msgid "DVD-Plugin not found! Function deactivated!"
+msgstr "DVD-plugin niet gevonden! Funktie uitgeschakeld!"
+
+msgid "Directory with 'VIDEO_TS' Folder"
+msgstr "Directory met 'VIDEO_TS' map"
+
+msgid "Directory"
+msgstr "Directory"
+
+msgid "File with '.iso' Extension"
+msgstr "Bestand met '.iso' extentie"
+
+msgid "Iso-Image"
+msgstr "Iso-image"
+
+msgid "My DVDs"
+msgstr "Mijn DVD's"
+
+msgid "free"
+msgstr "vrij"
+
+msgid "DVD found in drive."
+msgstr "DVD in de speler gevonden."
+
+msgid "Info:"
+msgstr "Informatie:"
+
+msgid "Use the red button to create a archive."
+msgstr "Maak een archief met behulp van de rode knop."
+
+msgid "No DVD found in drive."
+msgstr "Geen DVD in de speler gevonden."
+
+msgid "Insert a DVD to create a archive"
+msgstr "Leg een DVD in om het archief te maken"
+
+msgid "to change"
+msgstr "te veranderen"
+
+msgid "File exists in Directory"
+msgstr "Bestand bestaat reeds in de directory"
+
+msgid "Please wait. Searching for DVD images"
+msgstr "Moment aub. Zoeken naar DVD images"
+
+msgid "without Category"
+msgstr "zonder kategorie"
+
+#, c-format
+msgid "(Size %03.1f GB)\t"
+msgstr "(Grootte %03.1f GB)\t"
+
+msgid "DVD-Drive"
+msgstr "DVD-speler"
+
+msgid "insert Media"
+msgstr "Voer medium in"
+
+msgid "no Rights to rename"
+msgstr "geen rechten om te hernoemen"
+
+msgid "RIP a DVD"
+msgstr "Rip een DVD"
+
+msgid "All Images"
+msgstr "Alle image's"
+
+msgid "All with Cat."
+msgstr "Alle met cat."
+
+msgid "Directories"
+msgstr "Directorie's"
+
+msgid "Image-Type"
+msgstr "Image type"
+
+msgid "File-Type"
+msgstr "Bestands-type"
+
+msgid "none"
+msgstr "geen"
+
+msgid "ascending"
+msgstr "oplopend"
+
+msgid "descending"
+msgstr "aflopend"
+
+msgid "none Function"
+msgstr "geen Funktie"
+
+msgid "Dir. Management"
+msgstr "Dir. Beheer"
+
+msgid "Tray open"
+msgstr "Lade openen"
+
+msgid "Tray close"
+msgstr "Lade sluiten"
+
+msgid "Play"
+msgstr "Afspelen"
+
+msgid "Image rename"
+msgstr "Image hernoemen"
+
+msgid "Image move"
+msgstr "Image verplaatsen"
+
+msgid "Image delete"
+msgstr "Image wissen"
+
+msgid "Image burn"
+msgstr "Image branden"
+
+msgid "Image read"
+msgstr "Image lezen"
+
+msgid "Dir.Mgmt."
+msgstr "Dir.beheer"
+
+msgid "Open"
+msgstr "Open"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Burn"
+msgstr "Branden"
+
+msgid "Copy"
+msgstr "Kopieer"
+
+msgid "Use -> and <- for opening and closing menus"
+msgstr "Gebruik -> en <- om de menu's te openenen en te sluiten"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Generic Settings"
+msgstr "Algemene Instellingen"
+
+msgid "\tImagetypes"
+msgstr "\tImagetype"
+
+msgid "\tView free DiskSpace"
+msgstr "\tToon vrije DiskRuimte"
+
+msgid "Display Settings"
+msgstr "Toon instellingen"
+
+msgid "\tDisplay Mode"
+msgstr "\tDisplay mode"
+
+msgid "\t  Category Type"
+msgstr "\t  Categorie Type"
+
+msgid "\t  invisible empty Dir's/Cat."
+msgstr "\t  lege Dir's/Cat. niet tonen"
+
+msgid "\tAlphabetic Sort"
+msgstr "\tSorteer op alfabet"
+
+msgid "\tvisible DVD-Drive"
+msgstr "\tvisualiseer DVD-speler"
+
+msgid "Special Display Settings"
+msgstr "Speciale display instellingen"
+
+msgid "\tvisible Image-Type Col"
+msgstr "\tzichtbare Image-Type Col"
+
+msgid "\t  Width for Image-Col"
+msgstr "\t   Breedte voor Image-Col"
+
+msgid "\tchar for Cat.Line"
+msgstr "\tkarakter voor Cat.Line"
+
+msgid "\t  Count before Cat.Name"
+msgstr "\t  Getal voor Cat.Name"
+
+msgid "\tSpaces before/after Cat.Name"
+msgstr "\tSpatie's voor/achter Cat.Name"
+
+msgid "\tCutText for Subcat"
+msgstr "\tCutText voor Subcat "
+
+msgid "Navigation"
+msgstr "Navigatie"
+
+msgid "\tCat.Jump by Left/Right"
+msgstr "\tCat.Sprong bij Links/Rechts"
+
+msgid "Key allocation"
+msgstr "Toets toewijzing"
+
+msgid "\tKey 1"
+msgstr "\tToets 1"
+
+msgid "\tKey 2"
+msgstr "\tToets 2"
+
+msgid "\tKey 3"
+msgstr "\tToets 3"
+
+msgid "\tKey 4"
+msgstr "\tToets 4"
+
+msgid "\tKey 5"
+msgstr "\tToets 5"
+
+msgid "\tKey 6"
+msgstr "\tToets 6"
+
+msgid "\tKey 7"
+msgstr "\tToets 7"
+
+msgid "\tKey 8"
+msgstr "\tToets 8"
+
+msgid "\tKey 9"
+msgstr "\tToets 9"
+
+msgid "\tKey 0"
+msgstr "\tToets 0"
+
+msgid "\tKey Green"
+msgstr "\tToets groen"
+
+msgid "\tKey Yellow"
+msgstr "\tToets geel"
+
+msgid "\tKey OK"
+msgstr "\tToets OK"
+
+msgid "to adjust"
+msgstr "in te stellen"
+
+msgid "Imagetypes"
+msgstr "Image type"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "really delete Entry?"
+msgstr "Ingave werkelijk wissen?"
+
+msgid "File"
+msgstr "Bestand"
+
+msgid "Description:"
+msgstr "Omschrijving:"
+
+msgid "Type-Title:"
+msgstr "Type-titel:"
+
+msgid "Image Type"
+msgstr "Image type"
+
+msgid "Directory contains:"
+msgstr "Directory bevat:"
+
+msgid "File Extension:"
+msgstr "Bestand extentie's:"
+
+msgid "Hide Extension"
+msgstr "Verberg extentie's"
+
+msgid "'Description' must not empty!"
+msgstr "'Omschrijving' mag niet leeg zijn!"
+
+msgid "'Type-Title' must not empty!"
+msgstr "'Type-titel' mag niet leeg zijn!"
+
+msgid "'Directory contains' must not empty!"
+msgstr "'Dir inhoud' mag niet leeg zijn!"
+
+msgid "'File Extension' must not empty!"
+msgstr "'Bestands extentie' mag niet leeg zijn!"
+
+#~ msgid "Image Directory not readable or not exist"
+#~ msgstr "Image directory niet leesbaar of bestaat niet"
+
+#~ msgid "5 Delete cache"
+#~ msgstr "5 Wis de cache"
+
+#~ msgid "New:"
+#~ msgstr "Nieuw:"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+#~ msgstr " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+
+#~ msgid "Rename:"
+#~ msgstr "Hernoemen:"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+#~ msgstr " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+
+#~ msgid "\tImage Dir."
+#~ msgstr "\tImage Dir."
+
+#~ msgid "\tchange Character"
+#~ msgstr "\tverander Karakter"
+
+#~ msgid "DVD-Tray close"
+#~ msgstr "DVD-lade sluiten"
+
+#~ msgid "Rip a DVD"
+#~ msgstr "Rip een DVD"

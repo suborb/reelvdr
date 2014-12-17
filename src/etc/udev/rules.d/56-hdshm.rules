@@ -1,0 +1,9 @@
+# Udev rules file for Reel Multimedia products.
+
+#ACTION!="add", GOTO="hdshm_rules_end"
+KERNEL=="hdshm", OWNER="root", GROUP="root", MODE="0666"
+
+# Check for Reel extension-HD (0x1905 0x8100). #does not work, check why
+#SYSFS{idVendor}=="1905", SYSFS{idProduct}=="8100", OWNER="reel", GROUP="reel", MODE="0666"
+
+LABEL="hdshm_rules_end"

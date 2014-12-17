@@ -1,0 +1,7 @@
+TODO for formathd
+=================
+
+- easy and customizeable support for filesystem (should be configureable by the systems integrator)
+- let the user select what hd to format (currently only hdc)
+- support externel USB+FW drives (sdX)
+- more translations

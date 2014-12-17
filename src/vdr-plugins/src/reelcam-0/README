@@ -1,0 +1,32 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Tobias Bratfisch <tobias@reel-multimedia.com>
+
+Project's homepage:          URL
+
+Latest version available at: URL
+
+See the file COPYING for license information.
+
+Description:
+
+This plugin manages the CAMs of the Reelbox.
+
+How it works:
+=============
+
+Basically it cheats VDR.
+
+There are 2 CI-Slots, 1 built-in Neotion CAM and up to 4 tuners in the reelbox.
+Each of the CI/CAMs can be associated with each tuner.
+In addition, the supply of power to the CAMs can be switched off and on and the
+state of CAMs (being plugged in or not) can be queried.
+As VDR and the DVB drivers are unable to handle dynamic CAM<->tuner association
+we chose this way:
+All CAMs are on DVB-driver side associated with adapter0, so VDR is able to
+access the CAM-Menus on this adapter.
+On each channel switch, the plugin compares the caIDs of the channel, the
+capabilites of the CAMs and then switches the needed CAM to the tuner doing
+the channel switch.
+
+

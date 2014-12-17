@@ -1,0 +1,58 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bgprocess\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-23 09:49+0200\n"
+"PO-Revision-Date: 2009-03-03 17:21+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Cutting"
+msgstr "In curs de taiere"
+
+msgid "Collects and lists background processes and their status"
+msgstr "Colectez info despre procesele din fundal si despre starea lor"
+
+msgid "Activity"
+msgstr "Activitate"
+
+#, c-format
+msgid "%d background process (%d%%)"
+msgstr " %d procese in fundal (%d%%)"
+
+msgid "Background processes"
+msgstr "Procesele din fundal"
+
+msgid " No process completed"
+msgstr " Nici-un proces completat"
+
+msgid "Completed processes"
+msgstr "Procese completate"
+
+msgid "Clear list"
+msgstr "Goleste lista"
+
+msgid "Running"
+msgstr "In desfasurare"
+
+msgid " No background process running"
+msgstr " Nu ruleaza nici-un proces in fundal"
+
+msgid "Running processes"
+msgstr "Procese in desfasurare"
+
+msgid "Completed"
+msgstr "Completate"
+

@@ -1,0 +1,62 @@
+vdr-radio plugin: externe script-files
+--------------------------------------
+
+Externe Script- oder Programm-Files haben die Funktion, falls im plugin-Setup
+aktiviert (Externe Info-Abfrage = ja), fehlende Songinfos über externe Quellen 
+wie Internetabfragen zu holen.
+
+Das Script/Programm muß hierfür im Plugin-Config-Verzeichnis existieren
+($VDRCONFIG/plugins/radio, beachte auch plugin-Startparameter '-f <DIR>'),
+für den vdr ausführbar sein und die folgende Namenssyntax aufweisen:
+
+  radioinfo-TID-APID
+  (wobei TID = channel-TID, APID = 1.AudioPid entspr. der vdr channels.conf)
+
+Das Script/Programm wird dann mit 1 Parameter = Dateiname Ausgabedatei im 
+Datenverzeichnis ($VDRCONFIG/plugins/radio, beachte auch plugin-Parameter -d <DIR>)
+aufgerufen; die Ausgabedatei soll dann Textzeilen im folgendem Format enthalten:
+
+  1.Zeile = Senderkennung
+  2.Zeile = Interpret
+  3.Zeile = Titel
+
+Wenn die Sender zeitweise keine Songinfos anzeigen (z.B. Fritz) sollte
+Interpret und/oder Titel solange mit z.B. "---" gesetzt werden, da sonst 
+bei leeren Informationen ein "Error, no Songinfo" im OSD angezeigt wird.
+
+
+Folgende Script-Beispiele (www-Abfragen) werden mitgeliefert
+(die Programme bash/wget/grep sowie teilw. tail/tac/iconv werden benötigt):
+
+ [Astra 19.2]
+  - Rockantenne			= radioinfo-7-304
+  - sunshine live		= radioinfo-7-336
+  - Antenne Bayern 		= radioinfo-7-352
+  - radio top40			= radioinfo-1113-353
+  - ffn digital			= radioinfo-1113-354
+  - Hit Radio FFH		= radioinfo-1113-1024
+  - planet radio		= radioinfo-1113-1030
+  - harmony.fm			= radioinfo-1113-1036
+  - oe3 orf				= radioinfo-1115-433
+  - Truckradio			= radioinfo-1115-442
+  - MDR Jump			= radioinfo-1093-541
+  - SPUTNIK				= radioinfo-1093-551
+  - radioeins			= radioinfo-1093-841
+  - Fritz				= radioinfo-1093-851
+ [Hotbird 13.0]
+  - SRG-DRS 1			= radioinfo-8500-211
+  - SRG-DRS 2			= radioinfo-8500-212
+  - SRG-DRS 3			= radioinfo-8500-213
+  - SRG-DRS Virus		= radioinfo-8500-214
+  - Radio Swiss Classic	= radioinfo-8500-224
+  - Radio Swiss Pop		= radioinfo-8500-225
+  - Radio Swiss Jazz	= radioinfo-8500-226
+ [Astra 23.5]
+  - Truckradio			= radioinfo-15027-5120
+
+
+Weitere erfolgreich getestete Scripte werden gerne übernommen :-)
+
+
+Viel Spaß...
+Uwe <egal at egal-vdr dot de>

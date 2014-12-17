@@ -1,0 +1,273 @@
+#!/bin/sh
+
+# Author: Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>
+# Version: 1.1
+#
+# 2011-04-01 (RC):
+#            - wait for network drives to come up (if mediadir is on a remote drive)
+# 2011-02-17 (RC):
+#            - use mountpoints starting with hd, not hd0
+# 2010-03-05 (RC):
+#            - fix correct linking of recordingsdir for network drives (NAS) if
+#              (1) no harddisk is present and (2) only recordings are imported
+#            - create recordings dir on network drives on first-time installation
+# 2009-09-25 (RC):
+#            - first version, extracted from /etc/init.d/reelvdr to make it accessible from outside init (i.e. setup)
+#            - add mounting of tmpfs to /media
+#            - heavy rewriting
+#
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+# Read system configuration file if it is present
+[ -r /etc/default/sysconfig ] && . /etc/default/sysconfig
+
+# Read global definitions and functions
+[ -r /etc/default/globals ] && . /etc/default/globals
+
+
+# Global vars
+
+HDMP=/media/hd
+NFS_MP=/media/nfs
+NETWORK_RECORDING=false
+MEDIADIR=/media/reel
+MR=/media/reel
+MAXWAIT=7
+
+# functions
+
+HasLocalHD () {
+	# TODO: do a real test if it is a HD (speed, size...)
+	#       do *not* test the mountpoint but the device...
+	# size is larger than 100M
+	[ `df $HDMP 2>/dev/null | tail -n 1 | awk '{print $2}'` -gt 102400 ]
+}
+
+
+prepare_drive ()
+{
+#set -x
+	# last resort
+	RECORDINGSDIR=$MEDIADIR/recordings
+
+	if [ -z "$MEDIADEVICE" ]; then
+		# MEDIADEVICE not configured, so check for internal HD
+		# HD already mounted to HD MP?
+		if grep -q " /media/hd " /proc/mounts ; then
+			MEDIADIR=$HDMP
+			RECORDINGSDIR="$HDMP/recordings"
+		else
+			Syslog "WARNING: No harddisk found and no media device configured. Recording will not be possible."
+		fi
+
+		#if [ ! -d $RECORDINGSDIR ]; then
+		#	install -d $RECORDINGSDIR
+		#fi
+	else
+		# a mediadevice is configured
+		# if $MEDIADEVICE is in the form UUID=... convert it to /dev/xyzN
+		if echo $MEDIADEVICE | grep -q UUID ; then
+			# MEDIADEVICE is in the form UUID=... so we have to find the real devicename
+			eval $MEDIADEVICE
+			if [ -b /dev/disk/by-uuid/$UUID ] ;then
+				MEDIADEVICE="/dev/$(ls -l /dev/disk/by-uuid/$UUID | cut -f2 -d">" | cut -f 3 -d/)"
+			else
+				Syslog "ERROR (1) $MEDIADEVICE is not there, maybe has been removed?"
+				# TODO: add checks for a valid media drive
+			fi
+			if ! grep -q $UUID /etc/fstab ; then
+				Syslog "ERROR (2) $MEDIADEVICE is not in /etc/fstab, please run setup again"
+				MAXWAIT=0
+			fi
+		fi
+
+		# already mounted?
+		MMP=`grep "$MEDIADEVICE" /proc/mounts | head -n 1 | cut -f2 -d" "`
+		# wait for init/upstart to do the mounts
+		c=0;
+                while [ -z $MMP ]; do
+                    if ps ax | grep fsck | grep -q $MEDIADEVICE ; then
+                        Syslog "fsck for $MEDIADEVICE is still running after $c secs."
+                    fi
+                    sleep 1
+                    c=`expr $c + 1`
+                    if [ $c -ge ${MAXWAIT} ]; then
+                        Syslog "Timeout: waited ${MAXWAIT}sec for mount to come up, continuing anyway. (3)"
+                        break
+                    fi
+                    MMP=`grep "$MEDIADEVICE" /proc/mounts | head -n 1 | cut -f2 -d" "`
+                done
+                Syslog "waited $c sec for mount $MEDIADEVICE to come up."
+		if [ -z "$MMP" ] ; then
+			# not mounted
+			if echo $MEDIADEVICE | grep -q mount ; then
+                            echo "mediadevice $MEDIADEVICE is a network device"
+                            #wait for automounter
+                            c=0
+                            while [ ! -f /tmp/automounter.suspend ]; do
+                                sleep 1
+                                c=`expr $c + 1`
+                                if [ $c -ge ${MAXWAIT} ]; then
+                                    Syslog "ERROR (4) waited ${MAXWAIT}sec for remote fs to come up, continuing anyway."
+                                    break
+                                fi
+                            done
+                            #check again
+                            MMP=`grep "$MEDIADEVICE" /proc/mounts | head -n 1 | cut -f2 -d" "`
+                            if [ -n "$MMP" ] ; then
+                                #set mountpoint
+                                Syslog "waited ${c}sec for mountpoint to come up."
+                                exec $0
+                            else
+                                #last resort TODO: shall we look for a local drive?
+                                RECORDINGSDIR=$MEDIADIR/recordings
+                                Syslog "WARNING: Mounting $MEDIADEVICE failed (1). Using $RECORDINGSDIR as last resort"
+                            fi
+			else
+                                    if HasLocalHD ; then
+                                            MEDIADIR=$HDMP
+                                    #else
+                                            #MEDIADIR=/tmp
+                                    fi
+                                    RECORDINGSDIR=$MEDIADIR/recordings
+                                    Syslog "ERROR (5): $MEDIADEVICE did not come up after $c secs. Using $RECORDINGSDIR as last resort"
+                        fi
+		else
+			# mounted
+			# shall the MEDIADEVICE be used for recording or all media
+			if [ "$MEDIADEVICE_ONLY_RECORDING" = "yes" ]; then
+				if HasLocalHD ; then
+					MEDIADIR=$HDMP
+					RECORDINGSDIR=$MMP
+				else
+					echo "no local HD"
+					# overwrites MEDIADEVICE_ONLY_RECORDING!
+					Syslog "Error: there is no valid MEDIADIR and no local harddisk found."
+					#MEDIADIR=$MR
+					RECORDINGSDIR=$MMP
+				fi
+				[ -d "$RECORDINGSDIR/recordings" ] && RECORDINGSDIR="$RECORDINGSDIR/recordings"
+			else
+				MEDIADIR=$MMP
+				RECORDINGSDIR=$MEDIADIR/recordings
+			fi
+		fi
+	fi
+	export MEDIADIR RECORDINGSDIR
+	Syslog "MEDIADIR is $MEDIADIR, RECORDINGSDIR is $RECORDINGSDIR"
+	# 2>/dev/null
+	echo "MEDIADIR=$MEDIADIR" > /tmp/.mediadir
+	echo "RECORDINGSDIR=$RECORDINGSDIR" >> /tmp/.mediadir
+
+#set -x
+	grep -q /media/reel /proc/mounts && umount -f /media/reel # paranoia
+	rm -rf /media/reel
+	install -m 2775 -d /media/reel
+
+	# check directory for pictures and music
+	# note that $MEDIADIR is /media/reel when no $MEDIADEVICE configured an no HD present
+	for dir in music pictures video ; do
+		[ -d $MEDIADIR/$dir ] || install -d -m2775 -g ftpusers $MEDIADIR/$dir
+
+		if [ "$MEDIADIR" != "/media/reel" ]; then
+			ln -sf $MEDIADIR/$dir /media/reel/
+		fi
+	done
+
+	if [ "$RECORDINGSDIR" = "/media/reel/recordings" ]; then
+		#last resort
+		[ -d /media/reel/recordings ] || install -d -m2775 -g ftpusers $RECORDINGSDIR
+	else
+		[ -d /media/reel/recordings ] || ln -sf $RECORDINGSDIR /media/reel/recordings
+		[ -d /media/reel/recordings ] || install -d -m2775 -g ftpusers $RECORDINGSDIR
+	fi
+
+	# link external shares - we don't have to wait for that
+}
+
+
+prepare_mediamountpoint () {
+#set -x
+	# create tmpfs on /media
+	MOUNTS=/media
+	if ! grep -q "tmpfs /media" /proc/mounts ; then
+		# /media is on the root partition, we dont want that
+
+		# temporarily mv everything that is already mounted on /mount/... to /mnt/...
+		for m in `cat /proc/mounts | awk '{print $2}' | grep ^/media/ | uniq` ; do
+			mp=$(echo $m | cut -f3 -d/ )
+			#echo "DEBUG: moving $m to /mnt/$mp"
+			[ -d /mnt/$mp ] || install -d -m 000 /mnt/$mp
+			mount --move $m /mnt/$mp && \
+				MOVED="$MOVED $m"
+		done
+
+		# mount /media with a writeable filesystem large enough to keep the epg data
+		echo "Creating tmpfs on $MOUNTS"
+		mount -t tmpfs -o size=10M tmpfs $MOUNTS
+
+		# mv everything back from /mnt/... to /media/...
+		for m in $MOVED ; do
+			mp=$(echo $m | cut -f3 -d/ )
+			#echo "DEBUG: moving back /mnt/$mp to /media/$mp"
+			[ -d /media/$mp ] || install -d -m 000 /media/$mp
+			mount --move /mnt/$mp /media/$mp
+			rmdir /mnt/$mp
+		done
+
+		# creating basic directories
+		for i in configs dvd ; do
+			install -d -m 000 $MOUNTS/$i
+		done
+		install -m 2775 -d /media/reel || ( sleep 5 ; Syslog "creating /media/reel failed" ; exit 2 )
+		install -m 2775 -d /media/reel/recordings
+		chmod 2775 $MOUNTS/configs
+		ln -s /etc/vdr/channels.conf $MOUNTS/configs/active_channels.conf
+		ln -s /etc/vdr/plugins/reelchannellist/favourites.conf $MOUNTS/configs/
+		ln -s /etc/default/sysconfig $MOUNTS/configs/
+		ln -s /etc/vdr $MOUNTS/configs/
+	fi
+#set +x
+}
+
+link_shares () {
+	# fix links for external shares again
+	if [ -f /tmp/automounter.suspend ]; then
+		link-shares restart
+	else
+		link-shares start
+	fi
+}
+
+
+#
+# Main
+#
+
+#TODO: help etc.
+case $1 in
+	-p|--prepare-mediadir)
+		prepare_mediamountpoint
+		;;
+	-h)
+		echo "$0 [ start | upstart | --prepare-mediadir ]"
+		echo "    --prepare-mediadir: sets up /media to be a tmpfs"
+		echo
+		;;
+	upstart)
+		MAXWAIT=60
+		prepare_mediamountpoint
+		prepare_drive
+		#link_shares
+		touch /media/reel/recordings/.update
+		;;
+	*)
+		prepare_mediamountpoint
+		prepare_drive
+		link_shares
+		touch /media/reel/recordings/.update
+		;;
+esac
+

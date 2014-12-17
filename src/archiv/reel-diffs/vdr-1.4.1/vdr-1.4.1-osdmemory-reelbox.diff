@@ -1,0 +1,13 @@
+diff -u vdr-1.4.1-pl3/dvbosd.c vdr-1.4.1/dvbosd.c
+--- vdr-1.4.1-pl3/dvbosd.c	2006-01-28 15:24:04.000000000 +0100
++++ vdr-1.4.1/dvbosd.c	2006-08-03 13:51:50.000000000 +0200
+@@ -18,7 +18,8 @@
+ // --- cDvbOsd ---------------------------------------------------------------
+ 
+ #define MAXNUMWINDOWS 7 // OSD windows are counted 1...7
+-#define MAXOSDMEMORY  92000 // number of bytes available to the OSD (for unmodified DVB cards)
++//RC: done in Makefile
++//#define MAXOSDMEMORY  92000 // number of bytes available to the OSD (for unmodified DVB cards)
+ 
+ class cDvbOsd : public cOsd {
+ private:

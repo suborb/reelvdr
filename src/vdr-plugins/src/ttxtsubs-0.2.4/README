@@ -1,0 +1,101 @@
+vdr-ttxtsubs - a teletext subtitle plugin for the Linux Video Disk Recorder
+===========================================================================
+
+About
+-----
+
+Description:
+  This plug-in implements displaying, recording and replaying teletext
+  based subtitles using the on screen display.
+
+Current Maintainer:
+  Tobias Grimm <vdr@e-tobi.net>
+
+Original Author:
+  Ragnar Sundblad <ragge@nada.kth.se>
+
+Homepage:
+  http://projects.vdr-developer.org/projects/show/plg-ttxtsubs
+
+Old homepage:
+  http://www.nada.kth.se/~ragge/vdr/ttxtsubs/
+
+Copyright:
+  (C) 2003 - 2008 Ragnar Sundblad
+  (C) 2009 - 2011 Tobias Grimm
+
+License:
+  This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License, or (at your
+  option) any later version.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+  more details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program (see file `COPYING`); if not, write to the
+  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+  MA 02110-1301 USA
+
+
+Introduction
+------------
+
+This plug-in is for VDR >= 1.7.6. It currently needs a some changes to the VDR
+code in order to work. A patch file is included in patches/ which can be safely
+applied even if you don't use the ttxtsubs plug-in. For your convenience, the
+patch is also available as a set of logical chunks, each covering a specific
+feature.
+
+The main responsibilities of the VDR patch are to enable the reception of the
+teletext data stream and to discover the subtitle pages. So even without the
+plug-in, the patch will allow you to record teletext subtitles, which e.g. can
+be shown in 3'rd partly players like VLC.
+
+
+Usage
+-----
+
+Important: In order to be able to receive the teletext subtitles, you must
+enable the teletext subtitle support in VDR's setup. You will find this setting
+in the DVB section of the setup.
+
+Ideally the available subtitle pages / languages will be auto-detected. But this
+might not be possible with all broadcasters. Especially the German broadcasters
+don't care very much about the DVB standard in this regard and you have to
+configure the subtitle page(s) for each channel manually.
+
+In order to do so, you have to stop VDR and edit the channels.conf. After the
+Tpid entry, you can add tuples of language codes and page numbers like this:
+
+    ...:201+150=deu,151=fin...
+
+!!! This format has changed in version 0.2.4 for VDR 1.7.21 (see HISTORY) !!!
+
+See `man 5 vdr` for a detailed description of the channels.conf.
+
+Future versions of the plug-in will provide an OSD setup for this setting, but
+right now you are on your own.
+
+To see the subtitles, you also must select the subtitle languages you would
+like to see in the plug-ins OSD setup. In the future this might get somehow
+merged with VDRs built-in DVB-subtitle selection.
+
+In the plug-ins setup you can also configure some parameters which control how
+the subtitles will be displayed.
+
+
+Additional notes
+----------------
+
+A Note about reported problems with Digitainer II:
+
+If you own a Digitainer II, you may run into an issue with the OSD and a
+corrupted main menu. OlvierH reported, that the following setting at leas
+partially solves this:
+
+Advanced Chipset Features - AGP &P2P Bridge Control - VGA Share Memory Size: 64M
+(default is 32M)

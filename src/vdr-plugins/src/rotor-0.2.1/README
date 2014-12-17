@@ -1,0 +1,41 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Thomas Bergwinkl <Bergwinkl.Thomas@vr-web.de>
+
+See the file COPYING for license information.
+
+Description:
+With this plugin you can control a diseqc motor.
+
+For the plugin a patch for vdr is now mandatory: vdr-1.3.xx-Rotor.diff (see patches directory)
+
+In the setup-menu of the plugin you have to select the card which is connected with the motor. For the GotoX-function you have to set the right values for latitude and longitude. 
+
+By pressing the red button in the setup menu you reach the configure menu. There you can decide which cards are connected to the lnb of the steerable dish.
+Furthermore you can edit the satellite-table, which is stored to rotor.conf:
+1. Assign a position number to satellite
+2. With the red botton you can assign another satellite. So when switching to a channel of this satellite the plugin sends the same commands as for the assigned satellite.
+3. When selected 'no action' the plugin doesn't send any diseqc command for this satellite on channel switch.
+
+In the plugin-menu you see on the top the signalstrength of the currently tuned channel. 
+
+Drive East 	: starts driving the rotor eastwards
+Drive West 	: starts driving the rotor west
+Halt	    	: stopps any movement of the rotor
+Recalc (xx)	: recalculates all stored positions according to the given position
+Goto xx    	: rotor drives to position number xx
+Store xx   	: the current position will be stored to position number xx	
+XX Steps East	: rotor moves XX steps eastwards
+XX Steps West	: rotor moves XX steps westwards
+
+If you want to use the GotoX function you have to select the satellite you want to aim to (e.g. "S13.0E - Hotbird 1-(5)-6") and then press OK. But this can, of course, only work, when the right values for longitude and latitude (of your location) are configured in the setup menu. If your rotor isn't adjusted correctly to "true south" you can try a little bit different values for longitude. 
+
+Frequency & Symbolrate: Here you can select a frequency, polarization (by pressing left/right) and symbolrate you want to tune to (by pressing OK) and see what signal-strength you get there. To this transponder will also be tuned to, after commands like store, goto , drive east, ...
+
+Scan Transponder: If you press OK on Scan Transponder, vdr will switch to the selected transponder and scan for channels.
+
+It is also possible to use the GotoX function on channel switch instead of the commands in diseqc.conf (without patching vdr). For this you have to enable the "Use GotoX on channel switch" option in the setup menu.
+
+Problems with text2skin and skins which uses true type fonts
+------------------------------------------------------------
+There is a patch for text2skin in the patches directory. With it text2skin uses the standard vdr font to draw the plugin osd menu.

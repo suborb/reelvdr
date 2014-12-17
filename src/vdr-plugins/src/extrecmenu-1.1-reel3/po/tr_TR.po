@@ -1,0 +1,546 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Oktay Yolgeçen <oktay_73@yahoo.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2008-10-01 14:50+0200\n"
+"Last-Translator: Oktay Yolgeçen <oktay_73@yahoo.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delete recording?"
+msgstr "Kayiti Sil?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+msgid "Directory Selector"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
+msgid "Rec Dir"
+msgstr ""
+
+msgid "Button$Create"
+msgstr "Kayıtı Sil"
+
+msgid "Cannot move into its own sub folder"
+msgstr ""
+
+msgid "Cannot write into directory"
+msgstr ""
+
+msgid "Moving Recording"
+msgstr ""
+
+msgid "Moving Directories"
+msgstr ""
+
+msgid "Move failed. Not enough free space"
+msgstr ""
+
+#, fuzzy
+msgid "Copying started"
+msgstr "Kayıtı Durdur"
+
+msgid "Cannot copy into its own sub folder"
+msgstr ""
+
+msgid "Copy failed. Not enough free space"
+msgstr ""
+
+msgid "Create directory"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "To create a new directory press 'OK':"
+msgstr ""
+
+msgid "Directory Name"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Directory will only be shown with"
+msgstr ""
+
+#, fuzzy
+msgid "recordings inside."
+msgstr "Kayit Bilgiler"
+
+msgid "Created"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr ""
+
+msgid "External Media"
+msgstr ""
+
+msgid "Please select the drive where to move the recording:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+msgid "Could not open media"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr ""
+
+msgid "Title"
+msgstr "Baş Isim"
+
+msgid "Episode"
+msgstr "Episod"
+
+msgid "Invalid title!"
+msgstr "Geçersiz Isim"
+
+msgid "Invalid episode!"
+msgstr "Geçersiz Episod"
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Name"
+msgstr "Isim"
+
+msgid "Invalid filename!"
+msgstr "Geçersiz Data Isim"
+
+msgid "Creating directories failed!"
+msgstr ""
+
+msgid "New folder"
+msgstr "Yeni Dosya"
+
+msgid "Button$Cancel"
+msgstr "Iptal"
+
+msgid "Button$Move"
+msgstr "Taşı"
+
+msgid "Move recording"
+msgstr "Kayıtı Durdur"
+
+msgid "[base dir]"
+msgstr ""
+
+msgid "Target filesystem filled - try anyway?"
+msgstr ""
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr ""
+
+msgid "Can't get filesystem information"
+msgstr ""
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+msgid "low"
+msgstr "Düşük"
+
+msgid "normal"
+msgstr "Normal"
+
+msgid "high"
+msgstr "Yüksek"
+
+msgid "Priority"
+msgstr "Öncelik"
+
+msgid "Lifetime"
+msgstr "Ömrü"
+
+msgid "unlimited"
+msgstr "Sınırsız"
+
+msgid "Info:"
+msgstr "Bilgi"
+
+msgid "In this menu you can adjust the point in time"
+msgstr ""
+
+msgid "a recording gets deleted automatically."
+msgstr ""
+
+msgid "Recording info"
+msgstr "Kayit Bilgiler"
+
+msgid "Button$Play"
+msgstr "Göster"
+
+msgid "Button$Rewind"
+msgstr "Baslangıç"
+
+msgid "Large picture"
+msgstr ""
+
+msgid "Path"
+msgstr ""
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "Size"
+msgstr ""
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "Kayıtı Durdur"
+
+msgid "Error while mounting DVD!"
+msgstr ""
+
+msgid "Recordings"
+msgstr "Kayitlar"
+
+msgid "free"
+msgstr ""
+
+msgid "Button$Functions"
+msgstr "Fonksiyonlar"
+
+msgid "Total"
+msgstr ""
+
+msgid "Last recording"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr ""
+
+msgid "PIN code: "
+msgstr ""
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr ""
+
+msgid "DVD plugin is not installed!"
+msgstr ""
+
+msgid "No DVD in drive!"
+msgstr ""
+
+msgid "Recording not found on DVD!"
+msgstr ""
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr ""
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr ""
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr ""
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Kayiti Sil?"
+
+msgid "Timer still recording - really delete?"
+msgstr ""
+
+msgid "Error while deleting recording!"
+msgstr ""
+
+msgid "Recording commands"
+msgstr "Kayit Komutlari"
+
+msgid "Sort by date"
+msgstr ""
+
+msgid "Sort by name"
+msgstr "Kisa Isim"
+
+msgid "Show title"
+msgstr ""
+
+msgid "Show directory name"
+msgstr ""
+
+msgid "Invalid PIN"
+msgstr "Geçersiz PIN"
+
+msgid "PIN Aborted"
+msgstr ""
+
+msgid "Cancel moving?"
+msgstr ""
+
+#, fuzzy
+msgid "Cancel editing?"
+msgstr "Kanal"
+
+msgid "ascending"
+msgstr ""
+
+msgid "descending"
+msgstr ""
+
+msgid "Show recording date"
+msgstr ""
+
+msgid "Show recording time"
+msgstr ""
+
+msgid "Show recording length"
+msgstr ""
+
+msgid "Show nr. of new recordings of a directory"
+msgstr ""
+
+msgid "Show alternative to new marker"
+msgstr ""
+
+msgid "Show free disk space for each file system"
+msgstr ""
+
+msgid "Sorting"
+msgstr ""
+
+msgid "Hide main menu entry"
+msgstr ""
+
+msgid "Replace original recordings menu"
+msgstr ""
+
+msgid "Jump to last played recording"
+msgstr ""
+
+msgid "Show recordings menu after playback"
+msgstr ""
+
+msgid "Patch font"
+msgstr ""
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+msgid "Limit bandwidth when moving recordings"
+msgstr ""
+
+msgid "Use cutter queue"
+msgstr ""
+
+msgid "Undelete Recordings"
+msgstr ""
+
+msgid "No recordings to undelete!"
+msgstr ""
+
+msgid "Button$Remove"
+msgstr ""
+
+msgid "Button$Undelete"
+msgstr ""
+
+msgid "Remove recording from disk?"
+msgstr ""
+
+msgid "Removing recording ..."
+msgstr ""
+
+msgid "Sorry, undeleting recording failed"
+msgstr ""
+
+msgid "Button$Back"
+msgstr "Geri"
+
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr ""
+
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr ""
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr ""
+
+msgid "Recording already in cutter queue!"
+msgstr ""
+
+msgid "No editing marks defined!"
+msgstr ""
+
+msgid "Added recording to cutter queue"
+msgstr ""
+
+msgid "Not enough space on harddisk!"
+msgstr ""
+
+msgid "Rename/Move failed!"
+msgstr ""
+
+msgid "Cutter queue not empty"
+msgstr ""
+
+msgid "Move recordings in progress"
+msgstr ""
+
+msgid "Can't start editing process!"
+msgstr ""
+
+msgid "Cutting"
+msgstr ""
+
+#, fuzzy
+msgid "Moving"
+msgstr "Kayıtı Durdur"
+
+msgid "started"
+msgstr ""
+
+#, fuzzy
+msgid "Cancelled"
+msgstr "Kanal"
+
+msgid "Completed"
+msgstr ""
+
+#, fuzzy
+msgid "Copying"
+msgstr "Kayıtı Durdur"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "Kayıtı Durdur"
+
+msgid "Copy failed!"
+msgstr ""
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr ""
+
+msgid "ExtRecMenu does not exist!"
+msgstr ""
+
+msgid "Extended recordings menu"
+msgstr ""
+
+#, fuzzy
+msgid "Rename"
+msgstr "Isim"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "Kayıtı Durdur"
+
+msgid "Mark as new"
+msgstr ""
+
+#~ msgid "Button$Open"
+#~ msgstr "Acik"
+
+#, fuzzy
+#~ msgid "moving recording"
+#~ msgstr "Kayıtı Durdur"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Kayıtı Sil"
+
+#, fuzzy
+#~ msgid "Set Title"
+#~ msgstr "Baş Isim"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Ayrıntılar"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Düzenle"

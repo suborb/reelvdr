@@ -1,0 +1,77 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-osdteletext\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-04 10:05+0200\n"
+"PO-Revision-Date: 2009-02-27 16:26+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Channel (press OK): "
+msgstr "Canal(apasa OK)"
+
+msgid "Page"
+msgstr "Pagina"
+
+msgid "not found"
+msgstr "Nu am gasit"
+
+msgid "Teletext"
+msgstr "Teletext"
+
+msgid "Red key"
+msgstr "Tasta rosie"
+
+msgid "Green key"
+msgstr "Tasta verde"
+
+msgid "Yellow key"
+msgstr "Tasta galbena"
+
+msgid "Blue key"
+msgstr "Tasta albastra"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Half page"
+msgstr "Jumatate de pagina"
+
+msgid "Change channel"
+msgstr "Schimba canal"
+
+msgid "Switch background"
+msgstr "Comuta fundal"
+
+msgid "Jump to..."
+msgstr "Sari la..."
+
+msgid "Background transparency"
+msgstr "Transparenta fundal"
+
+msgid "Show clock"
+msgstr "Arata ceas"
+
+msgid "Auto-update pages"
+msgstr "Auto-updatare pagini"
+
+msgid "OSD height"
+msgstr "Inaltime OSD"
+
+msgid "OSD width"
+msgstr "Latime OSD"
+
+msgid "  Page number"
+msgstr "  Pagina numarul"

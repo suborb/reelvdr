@@ -1,0 +1,197 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arthur Konovalov <kasjas@hot.ee>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-formatdisk\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-26 12:19+0200\n"
+"PO-Revision-Date: 2008-07-09 14:54+0200\n"
+"Last-Translator: Arthur Konovalov <kasjas@hot.ee>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Prepare disk: confirm formatting"
+msgstr ""
+
+msgid "The storage medium "
+msgstr ""
+
+msgid " will be prepared. Please press the red key or choose another action:"
+msgstr ""
+
+msgid "\tFormat disk"
+msgstr ""
+
+msgid "\tMount harddisk"
+msgstr ""
+
+msgid "\tCreate boot disk"
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid ""
+"The storage medium is going to be formatted.\n"
+"All data will be destroyed."
+msgstr ""
+
+msgid "The storage medium will not be formatted but integrated into the system to be used as the medium disk."
+msgstr ""
+
+msgid ""
+"CAUTION: All data will be destroyed.\n"
+"A fresh copy of the operating system will be installed. Needs internet connection."
+msgstr ""
+
+msgid "\tCancel"
+msgstr ""
+
+msgid "With pressing 'OK' you will cancel this process."
+msgstr ""
+
+msgid "Please wait, the setup for the storage media is running"
+msgstr ""
+
+msgid "installing basic structure"
+msgstr ""
+
+msgid "integrating disk"
+msgstr ""
+
+msgid "Process done."
+msgstr ""
+
+msgid "The storage medium has been successfully integrated. Please press the red key to continue"
+msgstr ""
+
+msgid "The integration of the storage medium has failed"
+msgstr ""
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "All recordings will be lost! Continue anyway ?"
+msgstr ""
+
+msgid "Press the red key to continue"
+msgstr ""
+
+msgid "\tType of target disk"
+msgstr ""
+
+msgid "\tSource of software"
+msgstr ""
+
+msgid "Prepare disk: perform actions"
+msgstr ""
+
+msgid "Harddisk"
+msgstr ""
+
+msgid "SSD"
+msgstr ""
+
+msgid "USB Flash Drive"
+msgstr ""
+
+msgid "Internet"
+msgstr ""
+
+msgid "Local disk"
+msgstr ""
+
+msgid "Some optimizations are made according to the type of the installation media. So please select the correct type of the device."
+msgstr ""
+
+msgid "If you select to install the image from local source, the local harddisk oder USB-device will be copied. Select 'Internet' to download and install a fresh software image from the net."
+msgstr ""
+
+msgid "Please select the image source"
+msgstr ""
+
+msgid "Please select your media type"
+msgstr ""
+
+msgid "Please wait, creating boot disk can take a while (up to 30mins). Do not close this menu."
+msgstr ""
+
+msgid "checking devices"
+msgstr ""
+
+msgid "connected to internet"
+msgstr ""
+
+msgid "check internet connection!"
+msgstr ""
+
+msgid "creating boot disk"
+msgstr ""
+
+msgid "creating media partitions"
+msgstr ""
+
+msgid "creating media directories"
+msgstr ""
+
+msgid "Updating system settings"
+msgstr ""
+
+msgid ""
+"Boot disk created successfully.\n"
+"To use the new boot disk please shutdown and REMOVE the old USB stick/harddisk and start the ReelBox again."
+msgstr ""
+
+msgid "Creating boot disk failed. Please try again"
+msgstr ""
+
+msgid "Please make sure the ReelBox is connected to the internet."
+msgstr ""
+
+msgid "Shutdown"
+msgstr ""
+
+msgid "partitioning"
+msgstr ""
+
+msgid "formatting"
+msgstr ""
+
+msgid "The storage medium has been sucessfully integrated. The harddisk is ready for use now."
+msgstr ""
+
+msgid "The integration of the storage medium has failed. Please try again after rebooting the system."
+msgstr ""
+
+msgid "Button$Reboot"
+msgstr ""
+
+msgid "Shutdown now?"
+msgstr ""
+
+msgid "Please wait, shutting down"
+msgstr ""
+
+msgid "Prepare disk: Choose disk"
+msgstr ""
+
+msgid "Sorry. No applicable storage medium was detected."
+msgstr ""
+
+msgid "The following storage media have been detected. Please select the medium to be configured:"
+msgstr ""
+
+msgid "is already mounted on the system"
+msgstr ""
+
+msgid "has not yet been configured for the ReelBox"
+msgstr ""
+
+msgid "Prepare disk"
+msgstr ""

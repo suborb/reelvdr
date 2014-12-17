@@ -1,0 +1,40 @@
+#!/bin/sh
+
+DAEMON=/usr/sbin/automounter
+NAME=setup-shares
+DESC="automounter /"
+PIDFILE=/var/run/automounter.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+test -x $DAEMON || exit 0
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	[ -x /usr/sbin/migrate_mounts ] && /usr/sbin/migrate_mounts
+	log_daemon_msg "Starting $DESC" $NAME
+	/usr/sbin/setup-shares init
+	$DAEMON >/dev/null 2>/dev/null & 
+	echo $! > $PIDFILE
+	log_end_msg 0
+	;;
+  stop)
+	log_daemon_msg "Stopping $DESC" $NAME
+	[ -r  $PIDFILE ] && kill $(cat $PIDFILE)
+	rm -f $PIDFILE 2>/dev/null
+	/usr/sbin/link-shares stop
+	/usr/sbin/setup-shares stop force
+	log_end_msg 0
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

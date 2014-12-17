@@ -1,0 +1,26 @@
+#!/bin/bash
+# ffn digital-Playlist
+# $1 = outfile
+
+### Variabel
+Name="ffn digital [www.ffn.de]"
+### 
+
+# get...
+#wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://212.59.34.242/ffnlive/musik/playlist.php"
+all=`wget -q --tries=2 --timeout=5 -O - "http://www.ffn.de/nowPlaying.php?r=0.788960352540016"`
+
+# Artist/Title
+artist=${all//*$'interpret='/}; artist=${artist//$'&titel'*/}
+title=${all//*$'titel='/}; title=${title//$'&uhrzeit'*/}
+# temp. no Info
+artist=${artist:='---'}; titel=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

@@ -1,0 +1,203 @@
+diff -ruN vdr-1.4.1-4/CONTRIBUTORS vdr-1.4.1-5/CONTRIBUTORS
+--- vdr-1.4.1-4/CONTRIBUTORS	2006-08-13 10:58:50.000000000 +0200
++++ vdr-1.4.1-5/CONTRIBUTORS	2006-08-20 12:46:02.000000000 +0200
+@@ -1626,6 +1626,7 @@
+  thread.c caused a compiler warning with g++ 4.1.1
+  for fixing converting the port number in the "connect from..." log message of SVDRP
+  for reporting that there are places where ntohs() is assigned to different types
++ for adapting cThread::ThreadId() to recent kernels
+ 
+ Steffen Beyer <cpunk@reactor.de>
+  for fixing setting the colored button help after deleting a recording in case the next
+@@ -1808,6 +1809,8 @@
+ Petri Hintukainen <Petri.Hintukainen@hut.fi>
+  for suggesting to disable the use of "fadvise" in cUnbufferedFile because there
+  have been several reports that it causes more problems than it solves
++ for suggesting to add --remove-destination to the 'cp' command for binaries in
++ the Makefile to avoid a crash in case a new version is installed on a running system
+ 
+ Marcel Schaeben <mts280@gmx.de>
+  for his "Easy Input" patch
+@@ -1980,3 +1983,7 @@
+ Jörn Reder <joern@zyn.de>
+  for reporting that a recording may unnecessarily block a device with a CAM, while
+  it could record on the primary device as well
++
++Tomas Berglund <tomber@telia.com>
++ for reporting a problem with sticky PIDs in CAMs when switching between encrypted
++ channels on the same transponder
+diff -ruN vdr-1.4.1-4/HISTORY vdr-1.4.1-5/HISTORY
+--- vdr-1.4.1-4/HISTORY	2006-08-13 10:58:17.000000000 +0200
++++ vdr-1.4.1-5/HISTORY	2006-08-20 13:54:56.000000000 +0200
+@@ -4874,3 +4874,17 @@
+   Oliver Endriss).
+ - Added a log error message to cPlugin::ConfigDirectory() in case a plugin calls it
+   from a separate thread (reported by Udo Richter).
++
++2006-08-20: Version 1.4.1-5
++
++- Replaced the "quick workaround for additional live audio PIDs" in
++  cDvbDevice::SetChannelDevice() with an actual solution in
++  cDvbDevice::SetAudioTrackDevice() in order to prevent sticky PIDs in CAMs,
++  which caused long switching times or completely blank screens when switching
++  between encrypted channels on the same transponder (reported by Tomas Berglund).
++- Adapted cThread::ThreadId() to recent kernels (thanks to Ville Skyttä).
++- Added --remove-destination to the 'cp' command for binaries in the Makefile to
++  avoid a crash in case a new version is installed on a running system (suggested
++  by Petri Hintukainen).
++- Fixed handling "Ca Info" in case the CAM sends this again if the smart card is
++  replaced with a different one.
+diff -ruN vdr-1.4.1-4/Makefile vdr-1.4.1-5/Makefile
+--- vdr-1.4.1-4/Makefile	2006-06-02 16:45:33.000000000 +0200
++++ vdr-1.4.1-5/Makefile	2006-08-20 12:44:22.000000000 +0200
+@@ -4,7 +4,7 @@
+ # See the main source file 'vdr.c' for copyright information and
+ # how to reach the author.
+ #
+-# $Id: Makefile 1.94 2006/06/02 14:45:33 kls Exp $
++# $Id: Makefile 1.95 2006/08/20 10:44:22 kls Exp $
+ 
+ .DELETE_ON_ERROR:
+ 
+@@ -201,7 +201,7 @@
+ 
+ install-bin: vdr
+ 	@mkdir -p $(BINDIR)
+-	@cp vdr runvdr $(BINDIR)
++	@cp --remove-destination vdr runvdr $(BINDIR)
+ 
+ # Configuration files:
+ 
+@@ -223,7 +223,7 @@
+ 
+ install-plugins: plugins
+ 	@mkdir -p $(PLUGINLIBDIR)
+-	@cp $(PLUGINDIR)/lib/lib*-*.so.$(APIVERSION) $(PLUGINLIBDIR)
++	@cp --remove-destination $(PLUGINDIR)/lib/lib*-*.so.$(APIVERSION) $(PLUGINLIBDIR)
+ 
+ # Source documentation:
+ 
+diff -ruN vdr-1.4.1-4/ci.c vdr-1.4.1-5/ci.c
+--- vdr-1.4.1-4/ci.c	2006-08-12 12:14:27.000000000 +0200
++++ vdr-1.4.1-5/ci.c	2006-08-20 13:38:33.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: ci.c 1.44 2006/08/12 10:14:27 kls Exp $
++ * $Id: ci.c 1.45 2006/08/20 11:38:33 kls Exp $
+  */
+ 
+ #include "ci.h"
+@@ -985,6 +985,7 @@
+      switch (Tag) {
+        case AOT_CA_INFO: {
+             dbgprotocol("%d: <== Ca Info", SessionId());
++            numCaSystemIds = 0;
+             int l = 0;
+             const uint8_t *d = GetData(Data, l);
+             while (l > 1) {
+@@ -992,13 +993,14 @@
+                   dbgprotocol(" %04X", id);
+                   d += 2;
+                   l -= 2;
+-                  if (numCaSystemIds < MAXCASYSTEMIDS) {
++                  if (numCaSystemIds < MAXCASYSTEMIDS)
+                      caSystemIds[numCaSystemIds++] = id;
+-                     caSystemIds[numCaSystemIds] = 0;
+-                     }
+-                  else
++                  else {
+                      esyslog("ERROR: too many CA system IDs!");
++                     break;
++                     }
+                   }
++            caSystemIds[numCaSystemIds] = 0;
+             dbgprotocol("\n");
+             }
+             state = 2; // got ca info
+diff -ruN vdr-1.4.1-4/config.h vdr-1.4.1-5/config.h
+--- vdr-1.4.1-4/config.h	2006-08-12 11:10:11.000000000 +0200
++++ vdr-1.4.1-5/config.h	2006-08-14 11:49:22.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: config.h 1.265 2006/08/12 09:10:11 kls Exp $
++ * $Id: config.h 1.266 2006/08/14 09:49:22 kls Exp $
+  */
+ 
+ #ifndef __CONFIG_H
+@@ -21,7 +21,7 @@
+ 
+ // VDR's own version number:
+ 
+-#define VDRVERSION  "1.4.1-4"
++#define VDRVERSION  "1.4.1-5"
+ #define VDRVERSNUM   10401  // Version * 10000 + Major * 100 + Minor
+ 
+ // The plugin API's version number:
+diff -ruN vdr-1.4.1-4/dvbdevice.c vdr-1.4.1-5/dvbdevice.c
+--- vdr-1.4.1-4/dvbdevice.c	2006-06-11 11:03:55.000000000 +0200
++++ vdr-1.4.1-5/dvbdevice.c	2006-08-14 11:38:32.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: dvbdevice.c 1.159 2006/06/11 09:03:55 kls Exp $
++ * $Id: dvbdevice.c 1.160 2006/08/14 09:38:32 kls Exp $
+  */
+ 
+ #include "dvbdevice.h"
+@@ -853,11 +853,6 @@
+         esyslog("ERROR: failed to set PIDs for channel %d on device %d", Channel->Number(), CardIndex() + 1);
+         return false;
+         }
+-     //XXX quick workaround for additional live audio PIDs:
+-     if (ciHandler) {
+-        ciHandler->SetPid(Channel->Apid(1), true);
+-        ciHandler->SetPid(Channel->Dpid(0), true);
+-        }
+      if (IsPrimaryDevice())
+         AddPid(Channel->Tpid(), ptTeletext);
+      CHECK(ioctl(fd_audio, AUDIO_SET_MUTE, true)); // actually one would expect 'false' here, but according to Marco Schlüßler <marco@lordzodiac.de> this works
+@@ -927,8 +922,14 @@
+      if (IS_AUDIO_TRACK(Type) || (IS_DOLBY_TRACK(Type) && SetAudioBypass(true))) {
+         if (pidHandles[ptAudio].pid && pidHandles[ptAudio].pid != TrackId->id) {
+            DetachAll(pidHandles[ptAudio].pid);
++           if (ciHandler)
++              ciHandler->SetPid(pidHandles[ptAudio].pid, false);
+            pidHandles[ptAudio].pid = TrackId->id;
+            SetPid(&pidHandles[ptAudio], ptAudio, true);
++           if (ciHandler) {
++              ciHandler->SetPid(pidHandles[ptAudio].pid, true);
++              ciHandler->StartDecrypting();
++              }
+            }
+         }
+      else if (IS_DOLBY_TRACK(Type)) {
+diff -ruN vdr-1.4.1-4/thread.c vdr-1.4.1-5/thread.c
+--- vdr-1.4.1-4/thread.c	2006-06-24 12:10:58.000000000 +0200
++++ vdr-1.4.1-5/thread.c	2006-08-20 12:20:44.000000000 +0200
+@@ -4,7 +4,7 @@
+  * See the main source file 'vdr.c' for copyright information and
+  * how to reach the author.
+  *
+- * $Id: thread.c 1.56 2006/06/24 10:10:58 kls Exp $
++ * $Id: thread.c 1.57 2006/08/20 10:20:44 kls Exp $
+  */
+ 
+ #include "thread.h"
+@@ -316,11 +316,9 @@
+   return emergencyExitRequested = true; // yes, it's an assignment, not a comparison!
+ }
+ 
+-_syscall0(pid_t, gettid)
+-
+ tThreadId cThread::ThreadId(void)
+ {
+-  return gettid();
++  return syscall(__NR_gettid);
+ }
+ 
+ void cThread::SetMainThreadId(void)

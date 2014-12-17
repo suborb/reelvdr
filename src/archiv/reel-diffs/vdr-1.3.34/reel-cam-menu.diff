@@ -1,0 +1,232 @@
+diff -Nur vdr-1.3.34-pl19/ci.c vdr-1.3.34/ci.c
+--- vdr-1.3.34-pl19/ci.c	2005-10-05 14:06:24.000000000 +0200
++++ vdr-1.3.34/ci.c	2005-10-05 16:32:35.000000000 +0200
+@@ -328,6 +328,7 @@
+ }
+ 
+ #define CAM_READ_TIMEOUT  3500 // ms
++#define CAM_POLL_RETRIES  5
+ 
+ int cCiTransportConnection::RecvTPDU(void)
+ {
+@@ -337,7 +338,16 @@
+   lastResponse = ERROR;
+   int ret;
+ 
+-  if (poll(pfd, 1, CAM_READ_TIMEOUT)!=EINTR && poll(pfd, 1, CAM_READ_TIMEOUT) > 0 && (pfd[0].revents & POLLIN) && tpdu->Read(fd) == OK && tpdu->Tcid() == tcid) {
++  // GA: Sometimes poll returns -1 (-EPERM) for absolutely no reason (kernel race???)
++
++  for(int n=0;n<CAM_POLL_RETRIES;n++) {
++     ret=poll(pfd, 1, CAM_READ_TIMEOUT);
++     if (ret!=-EPERM)
++	     break;
++     usleep(1000);
++  }
++
++  if ( ret> 0 && (pfd[0].revents & POLLIN) && tpdu->Read(fd) == OK && tpdu->Tcid() == tcid) {
+      switch (state) {
+        case stIDLE:     break;
+        case stCREATION: if (tpdu->Tag() == T_CTC_REPLY) {
+@@ -422,6 +432,7 @@
+                   return OK;
+                   }
+                }
++	   Reset(); // GA
+            return ERROR;
+            }
+         }
+@@ -464,9 +475,12 @@
+ {
+   fd = Fd;
+   numSlots = NumSlots;
+-//  for (int s = 0; s < numSlots; s++) // TB: already done by driver
+-//      ResetSlot(s);                  // TB
++
++  for (int s = 0; s < numSlots; s++)
++//	  ResetSlot(s);
++	  tc[s].Reset(); // GA
+   cCondWait::SleepMs(2000);
++
+ }
+ 
+ cCiTransportConnection *cCiTransportLayer::NewConnection(int Slot)
+@@ -1616,6 +1630,7 @@
+ {
+   cMutexLock MutexLock(&mutex);
+   cCiApplicationInformation *api = (cCiApplicationInformation *)GetSessionByResourceId(RI_APPLICATION_INFORMATION, Slot);
++  esyslog("%p  \n", api);
+   return api ? api->EnterMenu() : false;
+ }
+ 
+diff -Nur vdr-1.3.34-pl19/config.c vdr-1.3.34/config.c
+--- vdr-1.3.34-pl19/config.c	2005-10-05 14:05:57.000000000 +0200
++++ vdr-1.3.34/config.c	2005-10-05 16:32:35.000000000 +0200
+@@ -310,6 +310,7 @@
+   ShowRecLength = 0;
+   MenuCmdPosition = 0;
+   ShowProgressBar = 0;
++  CAMEnabled=7;
+ }
+ 
+ cSetup& cSetup::operator= (const cSetup &s)
+@@ -475,6 +476,7 @@
+   else if (!strcasecmp(Name, "ShowRecLength"))       ShowRecLength      = atoi(Value);
+   else if (!strcasecmp(Name, "MenuCmdPosition"))     MenuCmdPosition    = atoi(Value);
+   else if (!strcasecmp(Name, "ShowProgressBar"))     ShowProgressBar    = atoi(Value);
++  else if (!strcasecmp(Name, "CAMEnabled"))          CAMEnabled         = atoi(Value);
+   else
+      return false;
+   return true;
+@@ -547,6 +549,7 @@
+   Store("ShowRecLength",      ShowRecLength);
+   Store("MenuCmdPosition",    MenuCmdPosition);
+   Store("ShowProgressBar",    ShowProgressBar);
++  Store("CAMEnabled",         CAMEnabled);
+ 
+   Sort();
+ 
+diff -Nur vdr-1.3.34-pl19/config.h vdr-1.3.34/config.h
+--- vdr-1.3.34-pl19/config.h	2005-10-05 14:05:57.000000000 +0200
++++ vdr-1.3.34/config.h	2005-10-05 16:32:35.000000000 +0200
+@@ -263,6 +263,7 @@
+   int CurrentVolume;
+   int CurrentDolby;
+   int ShowRecDate, ShowRecTime, ShowRecLength, MenuCmdPosition, ShowProgressBar;
++  int CAMEnabled;
+   int __EndData__;
+   cSetup(void);
+   cSetup& operator= (const cSetup &s);
+diff -Nur vdr-1.3.34-pl19/menu.c vdr-1.3.34/menu.c
+--- vdr-1.3.34-pl19/menu.c	2005-10-05 14:05:57.000000000 +0200
++++ vdr-1.3.34/menu.c	2005-10-06 12:32:20.000000000 +0200
+@@ -9,6 +9,7 @@
+ 
+ #include <map>
+ #include <string>
++#include <sys/ioctl.h>
+ #include "menu.h"
+ #include <ctype.h>
+ #include <limits.h>
+@@ -2725,18 +2726,32 @@
+   cCiHandler *ciHandler;
+   int slot;
+ public:
+-  cMenuSetupCICAMItem(int Device, cCiHandler *CiHandler, int Slot);
++  cMenuSetupCICAMItem(int Device, cCiHandler *CiHandler, int Slot, int state, int enabled);
+   cCiHandler *CiHandler(void) { return ciHandler; }
+   int Slot(void) { return slot; }
+   };
+ 
+-cMenuSetupCICAMItem::cMenuSetupCICAMItem(int Device, cCiHandler *CiHandler, int Slot)
++cMenuSetupCICAMItem::cMenuSetupCICAMItem(int Device, cCiHandler *CiHandler, int Slot, int state, int enabled)
+ {
+   ciHandler = CiHandler;
+   slot = Slot;
+   char buffer[32];
+   const char *CamName = CiHandler->GetCamName(slot);
+-  snprintf(buffer, sizeof(buffer), "%s%d %d\t%s", tr("Setup.CICAM$CICAM DVB"), Device + 1, slot + 1, CamName ? CamName : "-");
++  if (!CamName) {
++	  if (state&(3<<(16+2*slot)))
++	            CamName = "Init or Error";
++	       else
++		    CamName = "-";
++  }
++
++  // GA: CAM enable/disable
++  if (!(enabled&(1<<slot))) {
++	  if (state&(1<<slot))
++		  CamName = "--CAM disabled--";
++	  else
++		  CamName = "--OFF--";
++  }
++  snprintf(buffer, sizeof(buffer), "%s%d %d\t%s", tr("Setup.CICAM$CICAM DVB"), Device + 1, slot + 1, CamName);
+   SetText(buffer);
+ }
+ 
+@@ -2744,25 +2759,43 @@
+ private:
+   eOSState Menu(void);
+   eOSState Reset(void);
++  eOSState Switch(void);
++  void Update(int);
+ public:
+   cMenuSetupCICAM(void);
+   virtual eOSState ProcessKey(eKeys Key);
+   };
+ 
+-cMenuSetupCICAM::cMenuSetupCICAM(void)
+-{
++#define IOCTL_REEL_CI_GET_STATE _IOR('d', 0x45, int)
++
++void cMenuSetupCICAM::Update(int cur) {
++  int fd,state=0;
++  fd = open("/dev/reelfpga0", O_RDWR);
++  if (fd) {
++      state=ioctl(fd,IOCTL_REEL_CI_GET_STATE,0);
++      close(fd);
++  }
+   SetSection(tr("CICAM"));
+-  for (int d = 0; d < cDevice::NumDevices(); d++) {
++  for (int d = 0; d < 1 /*cDevice::NumDevices() */; d++) {
+       cDevice *Device = cDevice::GetDevice(d);
+       if (Device) {
+          cCiHandler *CiHandler = Device->CiHandler();
+          if (CiHandler) {
+             for (int Slot = 0; Slot < CiHandler->NumSlots(); Slot++)
+-                Add(new cMenuSetupCICAMItem(Device->CardIndex(), CiHandler, Slot));
++		    Add(new cMenuSetupCICAMItem(Device->CardIndex(), CiHandler, Slot, state, data.CAMEnabled));
+             }
+          }
+       }
+-  SetHelp(tr("Menu"), tr("Reset"));
++ // GA: Best way without knowing object
++  for(int i=0;i<=cur;i++)
++	  CursorDown();
++
++  SetHelp(tr("Menu"), tr("Reset"),tr("On/Off"),tr("Update"));
++}
++
++cMenuSetupCICAM::cMenuSetupCICAM(void)
++{
++  Update(0);
+ }
+ 
+ eOSState cMenuSetupCICAM::Menu(void)
+@@ -2797,14 +2830,36 @@
+   return osContinue;
+ }
+ 
++eOSState cMenuSetupCICAM::Switch(void)  // GA
++{
++  cMenuSetupCICAMItem *item = (cMenuSetupCICAMItem *)Get(Current());
++  if (item) 
++	  data.CAMEnabled^=(1<<item->Slot());
++  return osEnd;
++}
++
+ eOSState cMenuSetupCICAM::ProcessKey(eKeys Key)
+ {
+   eOSState state = cMenuSetupBase::ProcessKey(Key);
+-
++  int cur;
+   if (state == osUnknown) {
+      switch (Key) {
+        case kRed:    return Menu();
+        case kGreen:  return Reset();
++       case kYellow:
++	       cur=Current();
++	       Switch();
++	       Clear();
++	       Update(cur);
++	       Display();
++	       Store();
++	       return osContinue;
++       case kBlue:
++	       cur=Current();
++	       Clear();
++	       Update(cur);
++	       Display();
++	       return osContinue;
+        default: break;
+        }
+      }

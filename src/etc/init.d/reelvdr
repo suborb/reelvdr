@@ -1,0 +1,437 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          reelvdr
+# Required-Start:    $local_fs $remote_fs
+# Required-Stop:     $local_fs $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      S 0 1 6
+# Short-Description: Example initscript
+# Description:       This file should be used to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+# Author: Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>
+# Version: 1.99
+#
+# 2009-05-08 (RC):
+#            - fix problem using the mediadevice when it is on a network drive (nfs, smb)
+#            - workaround when mediadevice is only used for recordings (MEDIADEVICE_ONLY_RECORDING="yes")
+#              and recordings are in subdirectory
+#            - suppress local hd from being mounted twice (UUID is examined now)
+#            - only use the local drive if it is larger than 100MB (should it be at least 1GB?)
+#            - disable NFS client (is replaced by network-automounter since a long time now)
+#            - fix typos giving the wrong messages
+#            - introduced several new probs
+#
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+DESC="ReelVdr"
+NAME=reelvdrd
+DAEMON=/usr/sbin/$NAME
+DAEMON_ARGS="--daemon"
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+# Read system configuration file if it is present
+[ -r /etc/default/sysconfig ] && . /etc/default/sysconfig
+
+# Load the VERBOSE setting and other rcS variables
+[ -f /etc/default/rcS ] && . /etc/default/rcS
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+. /etc/default/globals
+
+#set -x
+
+prepare_tmpfs () {
+	if ! grep -q "tmpdir /tmp tmpfs" /proc/mounts ; then
+		# use 1/4 of total mem
+		memtotal=`grep MemTotal /proc/meminfo | awk '{print $2}'`
+		mem=$(($memtotal/4))
+		echo "Using $(($mem/1024))M of memory as /tmp space"
+		[ -d /tmp ] || mkdir /tmp
+		mount -t tmpfs "tmpdir" /tmp -omode=1777,nodev,nosuid,size=${mem}k
+	fi
+
+	# prepare tmp directories for filebrowser
+	TMP_DIRS="/tmp/browsercache /var/cache/images"
+	for i in $TMP_DIRS ; do
+		[ -d "$i" ] || mkdir "$i"
+	done
+
+	# prepare tmp directory for dvdswitch
+	mkdir -p /tmp/DVDROOT
+}
+
+
+
+# this is outdated. call external script "setup-mediadir" instead
+HDMP=/media/hd
+NFS_MP=/media/nfs
+NETWORK_RECORDING=false
+
+# this is outdated. call external script "setup-mediadir" instead
+HasLocalHD () {
+	# TODO: do a real test if it is a HD (speed, size...)
+	#       do *not* test the mountpoint but the device...
+	# size is larger than 100M
+	[ `df $HDMP 2>/dev/null | tail -n 1 | awk '{print $2}'` -gt 102400 ]
+}
+
+# this is outdated. call external script "setup-mediadir" instead
+prepare_mediadrive_old () {
+#
+#set -x
+	# last resort
+	MEDIADIR=/tmp
+	RECORDINGSDIR=$MEDIADIR/recordings
+
+	if [ ! -z "$MEDIADEVICE" ]; then
+		MP=/media/reel
+		if [ "$MEDIADEVICE_ONLY_RECORDING" = "yes" ]; then
+			if HasLocalHD ; then
+				echo "HAS local HD"
+				MP=$HDMP/recordings  # /media/hd
+				MEDIADIR=$HDMP
+				RECORDINGSDIR=$MP
+			else
+				echo "no local HD"
+				# overwrites MEDIADEVICE_ONLY_RECORDING!
+				Syslog "Error: there is no valid MEDIADIR. Using RECORDING-dir as MEDIADIR."
+				MEDIADIR=$MP
+				RECORDINGSDIR=$MEDIADIR/recordings
+			fi
+		else
+			MEDIADIR=$MP
+			RECORDINGSDIR=$MEDIADIR/recordings
+		fi
+
+		# already mounted?
+		if echo $MEDIADEVICE | grep -q UUID ; then
+			# MEDIADEVICE is in the form UUID=... so we have to find the real devicename
+			eval $MEDIADEVICE
+			if [ -b /dev/disk/by-uuid/$UUID ] ;then
+				MEDIADEVICE="/dev/$(ls -l /dev/disk/by-uuid/$UUID | cut -f2 -d">" | cut -f 3 -d/)"
+			else
+				Syslog "$MEDIADEVICE is not there, maybe has been removed?"
+				# TODO: add checks for a valid media drive
+				# TODO2: check if this works on NetClient
+				MEDIADEVICE="/media/hd"
+			fi
+		fi
+
+		MMP=`grep "$MEDIADEVICE" /proc/mounts | head -n 1 | cut -f2 -d" "`
+		if [ -z "$MMP" ] ; then
+			# not mounted
+			echo n | fsck -y "$MEDIADEVICE"	# TODO: only for local devices
+			[ -d $MP ] || install -d -m 000 $MP/recordings
+			if ! mount "$MEDIADEVICE" $MP/ ; then
+				# mount failed, look for local HD
+				if HasLocalHD ; then
+					MEDIADIR=$HDMP
+				else
+					MEDIADIR=/tmp
+				fi
+				RECORDINGSDIR=$MEDIADIR/recordings
+				Syslog "WARNING: Mounting $MEDIADEVICE failed. Using $RECORDINGSDIR as last resort"
+			fi
+		else
+			# mounted
+			if [ "$MEDIADEVICE_ONLY_RECORDING" = "yes" ]; then
+				MEDIADIR=/media/hd
+				RECORDINGSDIR=$MMP
+				[ -d "$RECORDINGSDIR/recordings" ] && RECORDINGSDIR="$RECORDINGSDIR/recordings"
+			else
+				MEDIADIR=$MMP
+				RECORDINGSDIR=$MEDIADIR/recordings
+			fi
+		fi
+	else
+		# old behaviour, for later removal (rm @ 08.04.2009)
+
+		# mounted to MP?
+		if grep -q " /media/hd " /proc/mounts ; then
+			MEDIADIR=$HDMP
+			RECORDINGSDIR="$HDMP/recordings"
+		else
+			Syslog "WARNING: No harddisk found or wrong device in sysconfig. Using $RECORDINGSDIR as last resort"
+		fi
+
+		if [ ! -d $RECORDINGSDIR ]; then
+			install -d $RECORDINGSDIR
+		fi
+	fi
+	export MEDIADIR RECORDINGSDIR
+	Syslog "MEDIADIR is $MEDIADIR, RECORDINGSDIR is $RECORDINGSDIR" 2>/dev/null
+	echo "MEDIADIR=$MEDIADIR" > /tmp/.mediadir
+	echo "RECORDINGSDIR=$RECORDINGSDIR" >> /tmp/.mediadir
+
+	# check directory for pictures and music
+	for dir in music pictures recordings video; do
+		[ -d $MEDIADIR/$dir ] || install -d -m2775 -g ftpusers $MEDIADIR/$dir
+		rm -f /media/reel/$dir
+	done
+
+
+	# link everything in place
+	install -m 2775 -d /media/reel
+	[ -d /media/reel/recordings ] || ln -sf $RECORDINGSDIR /media/reel/recordings
+	for dir in music pictures video; do
+		ln -sf $MEDIADIR/$dir /media/reel/
+        done
+
+}
+
+prepare_nfs () {
+	if [ ! -d $NFS_MP ] ; then
+		install -d -m 000 /media/nfs
+	fi
+
+	#start the nfs-client
+	/usr/sbin/nfs_client >/dev/null 2>&1 &
+
+	#prepare symlinks for nfs and in future DVD
+	if [ ! -L $RECORDINGSDIR/nfs ] ; then
+		ln -s /media/nfs $RECORDINGSDIR/nfs
+	fi
+}
+
+clean_mediadir ()
+{
+	rm -f $MEDIADIR/music $MEDIADIR/pictures $MEDIADIR/video $RECORDINGSDIR || true
+}
+
+stop_nfs () {
+	/usr/sbin/nfs_client stop >/dev/null 2>&1 &
+}
+
+SetWOL () {
+	REELFPCTL="/sbin/reelfpctl -nowait"
+	if [ "$WOL_ENABLE" = "no" ] ; then
+		$REELFPCTL -pwrctl 13000001
+	else
+		$REELFPCTL -pwrctl 13000000
+	fi
+}
+
+#
+# Function that starts the daemon/service
+#
+do_start()
+{
+	# Return
+	#   0 if daemon has been started
+	#   1 if daemon was already running
+	#   2 if daemon could not be started
+
+	prepare_tmpfs
+
+	#TODO: should go to to its own init script
+	if [ "$START_NFSCL" = "yes" ] ; then
+		prepare_nfs
+	fi
+
+	# outdated, use external setup-mediadir instead:
+	# prepare_mediadrive_old
+	setup-mediadir
+
+	# Link network drives to the harddisk. This has to be done after the
+	# mediadir/recordingsdir is set up and before reelvdr starts
+	# link-shares start
+
+
+	if false ; then   # obsolete since automounter
+	#if [ "$START_NFSCL" = "yes" ] ; then
+		if ! echo $MEDIADEVICE | grep -q nfs ; then
+			#mediadevice is not on a nfs link, avoid recursive symlinks
+			ln -sf $NFS_MP/music      $MEDIADIR/music/network
+			ln -sf $NFS_MP/pictures   $MEDIADIR/pictures/network
+			ln -sf $NFS_MP/video      $MEDIADIR/video/network
+			ln -sf $NFS_MP/recordings $RECORDINGSDIR/network
+		elif [ "$MEDIADEVICE_ONLY_RECORDING" = "yes" ]; then
+			ln -sf $NFS_MP/music      $MEDIADIR/music/network
+                        ln -sf $NFS_MP/pictures   $MEDIADIR/pictures/network
+                        ln -sf $NFS_MP/recordings $MEDIADIR/video/network
+		fi
+	fi
+
+	touch /tmp/.isboot
+
+	start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null \
+		|| return 1
+	start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_ARGS \
+		|| return 2
+	# Add code here, if necessary, that waits for the process to be ready
+	# to handle requests from services started subsequently which depend
+	# on this one.  As a last resort, sleep for some time.
+}
+
+do_test ()
+{
+#	prepare_tmp
+	prepare_hd
+	start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null \
+		|| return 1
+}
+
+
+#
+# Function that stops the daemon/service
+#
+do_stop()
+{
+	# Return
+	#   0 if daemon has been stopped
+	#   1 if daemon was already stopped
+	#   2 if daemon could not be stopped
+	#   other if a failure occurred
+	echo -n " * Shutting down vdr: "
+	if [ -f /tmp/vdr.standby ]; then
+		echo "already in standby. Nothing to do."
+		#just to be shure...
+		killall -9 vdr 2> /dev/null
+	else
+		killall -15 vdr 2> /dev/null
+		count=15
+		while [ ! -f /tmp/vdr.standby ]; do
+			echo -n "$count "
+			sleep 1
+			count=$(expr $count - 1)
+			[ $count -le 0 ] && break
+		done
+		if [ ! -f /tmp/vdr.standby ]; then
+			echo
+			echo -n "   VDR does not terminate. Killing it. "
+			touch /tmp/vdr.standby
+			killall -9 vdr 2>/dev/null
+		fi
+		echo "done."
+	fi
+
+	start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile $PIDFILE --name $NAME
+	RETVAL="$?"
+	[ "$RETVAL" = 2 ] && return 2
+	# Wait for children to finish too if this is a daemon that forks
+	# and if the daemon is only ever run from this initscript.
+	# If the above conditions are not satisfied then add some other code
+	# that waits for the process to drop all resources that could be
+	# needed by services started subsequently.  A last resort is to
+	# sleep for some time.
+	start-stop-daemon --stop --quiet --oknodo --retry=0/30/KILL/5 --exec $DAEMON
+	[ "$?" = 2 ] && return 2
+	# Many daemons don't delete their pidfiles when they exit.
+	rm -f $PIDFILE
+
+	#stop_nfs
+	clean_mediadir
+	#/etc/init.d/setup-shares stop
+
+	SetWOL
+
+	# remove MySQL-Service from Avahi
+	rm /etc/avahi/services/reel-avg-mysql.service 2> /dev/null
+
+	if [ $(runlevel | awk '{print $2}') = 0 ]; then
+		if RbMini ; then
+			(
+			# power off after 20 secs
+			sleep 20
+			echo "$0: power off now"
+			sync
+			reelfpctl -clearled 7 -setled 2
+			reelfpctl -shutdown 0
+			) &
+		else
+			# reboot after 45 sec if RB doesnt power off itself
+			reelfpctl -watchdog 45
+		fi
+	fi
+
+	return "$RETVAL"
+}
+
+#
+# Function that sends a SIGHUP to the daemon/service
+#
+do_reload() {
+	#
+	# If the daemon can reload its configuration without
+	# restarting (for example, when it is sent a SIGHUP),
+	# then implement that here.
+	#
+	start-stop-daemon --stop --signal 1 --quiet --pidfile $PIDFILE --name $NAME
+	return 0
+}
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
+	do_start
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  stop)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC" "$NAME"
+	do_stop
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  test)
+	do_test
+	;;
+  #reload|force-reload)
+	#
+	# If do_reload() is not implemented then leave this commented out
+	# and leave 'force-reload' as an alias for 'restart'.
+	#
+	#log_daemon_msg "Reloading $DESC" "$NAME"
+	#do_reload
+	#log_end_msg $?
+	#;;
+  restart|force-reload)
+	#
+	# If the "reload" option is implemented then remove the
+	# 'force-reload' alias
+	#
+	log_daemon_msg "Restarting $DESC" "$NAME"
+	do_stop
+	while [ -f /tmp/vdr.shutdown ] && [ ! -f /tmp/vdr.standby ]; do
+		sleep 1
+	done
+	case "$?" in
+	  0|1)
+		do_start
+		case "$?" in
+			0) log_end_msg 0 ;;
+			1) log_end_msg 1 ;; # Old process is still running
+			*) log_end_msg 1 ;; # Failed to start
+		esac
+		;;
+	  *)
+	  	# Failed to stop
+		log_end_msg 1
+		;;
+	esac
+	;;
+  *)
+	#echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
+	exit 3
+	;;
+esac
+
+:

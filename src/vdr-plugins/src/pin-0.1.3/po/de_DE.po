@@ -1,0 +1,184 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-pin\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-11-27 15:04+0100\n"
+"PO-Revision-Date: 2008-10-02 10:47+0100\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Recordings"
+msgstr "Aufnahmen"
+
+msgid "1 Activate childlock"
+msgstr "1 Kindersicherung aktivieren"
+
+msgid "2 Add current channel to protection list"
+msgstr "2 Aktuellen Kanal sperren"
+
+msgid "3 Add current broadcast to protection list"
+msgstr "3 Aktuelle Sendung sperren"
+
+msgid "4 Edit channel locks"
+msgstr "4 Gesperrte Kanäle bearbeiten"
+
+msgid "5 Edit broadcast locks"
+msgstr "5 Gesperrte Sendungen bearbeiten"
+
+msgid "6 Unlock setup"
+msgstr "6 Setup entsperren"
+
+msgid "6 Lock setup"
+msgstr "6 Setup sperren"
+
+msgid "Note:"
+msgstr "Hinweis:"
+
+msgid "Please activate Childlock by pressing (1)."
+msgstr "Aktivieren Sie die Kindersicherung mit der Taste (1)."
+
+msgid "Activated pin protection"
+msgstr "Kindersicherung aktiviert"
+
+msgid "Please setup a pin code first!"
+msgstr "Bitte zuerst Pin Code konfigurieren!"
+
+msgid "Protected channels"
+msgstr "Gesperrte Kanäle"
+
+msgid "Protected broadcasts"
+msgstr "Gesperrte Sendungen"
+
+msgid "Plugin protections"
+msgstr "Sperren / Entsperren"
+
+msgid "locked"
+msgstr "gesperrt"
+
+msgid "unlocked"
+msgstr "entsperrt"
+
+msgid "already in list"
+msgstr "bereits in der Liste"
+
+msgid "added to protection list"
+msgstr "hinzugefügt"
+
+msgid "No locked channels present."
+msgstr "Keine gesperrten Kanäle vorhanden."
+
+msgid "Use the green button to lock channels."
+msgstr "Mit der grünen Taste können Sie Kanäle sperren."
+
+msgid "No locked broadcasts present."
+msgstr "Keine gesperrten Sendungen vorhanden."
+
+msgid "Use the green button to lock broadcasts."
+msgstr "Mit der grünen Taste können Sie Sendungen sperren."
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Lock / Unlock"
+msgstr "Sperren / Entsperren"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "On/Off"
+msgstr "An/Aus"
+
+msgid "- new -"
+msgstr "- neu -"
+
+msgid "Remove entry?"
+msgstr "Eintrag entfernen?"
+
+msgid "Lock active"
+msgstr "Sperre aktiv"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Keyword"
+msgstr "Suchbegriff"
+
+msgid "Search mode"
+msgstr "Suchmodus"
+
+msgid "Setup your pin code: "
+msgstr "Bitte Pin Code festlegen:"
+
+msgid "Pin Code: "
+msgstr "Bitte Pin eingeben:"
+
+msgid "Pin code successfully setup"
+msgstr "Pin Code erfolgreich festgelegt."
+
+msgid "Code accepted"
+msgstr "Eingabe angenommen"
+
+msgid "Invalid Code !"
+msgstr "Falsche Eingabe !"
+
+msgid "Title$Childlock"
+msgstr "Kindersicherung"
+
+msgid "Please enter pin code first"
+msgstr "Bitte zuerst Pin Code eingeben"
+
+msgid "channel is protected"
+msgstr "Kanal gesperrt"
+
+msgid "broadcast is protected"
+msgstr "Sendung gesperrt"
+
+msgid "is protected"
+msgstr "ist gesperrt"
+
+msgid "Pin code"
+msgstr "Pincode"
+
+msgid "Skip protected channel silent"
+msgstr "Gesperrte Kanäle ohne Meldung überspringen"
+
+msgid "Open menu after pin request"
+msgstr "Menü nach Eingabe des Pin öffnen"
+
+msgid "Pin inactivity time [min]"
+msgstr "Sperre aktivieren nach Inaktivität [min]"
+
+msgid "Autoprotection of recordings"
+msgstr "Automatischer Schutz der Aufnahmen"
+
+msgid "Ignoring invalid pin"
+msgstr "Ungültiger code"
+
+msgid "Childlock plugin"
+msgstr "Plugin zur Kindersicherung"
+
+msgid "Parental Control"
+msgstr "Kindersicherung "
+
+#~ msgid "Add"
+#~ msgstr "Hinzu"
+
+#~ msgid "7 Unlock setup"
+#~ msgstr "7 Setup entsperren"
+
+#~ msgid "7 Lock setup"
+#~ msgstr "7 Setup sperren"
+
+#~ msgid "6 Edit plugin locks"
+#~ msgstr "6 Systemeinstellungen bearbeiten"

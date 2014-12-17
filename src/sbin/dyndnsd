@@ -1,0 +1,140 @@
+#!/bin/sh
+
+if [ -f /etc/sysconfig ] ; then
+	. /etc/sysconfig
+else
+	. /etc/default/sysconfig
+fi
+
+if [ -f /etc/reel/globals ] ; then
+	. /etc/reel/globals
+else
+	. /etc/default/globals
+fi
+
+#
+# Global vars
+#
+delta=$((20*60))
+loglevel=3
+MyName=`basename $0`
+
+# functions
+Syntax () {
+cat << EOF
+Usage: $MyName [ -d | -h | -t | -u ]
+Description:
+     ReelBox dyndns daemon
+
+Options:
+     no option,
+     -h		give help
+     -d		run as daemon in background
+     -t		terminate a running daemon
+     -u		update dns entries now
+
+EOF
+}
+
+
+GetCurIp () {
+	Log 3 "checking current ip"
+	wget -q -O - http://checkip.dyndns.org/index.html | awk {'print $6'}| sed 's/<.*$//'
+}
+
+SetHostsEntry () {
+	if grep -q $DDNSHOST /etc/hosts ; then
+		sed -i "s/.* $DDNSHOST/$newIp $DDNSHOST/" /etc/hosts
+	else
+		echo "$newIp $DDNSHOST" >> /etc/hosts
+	fi
+}
+
+SetNewIp () {
+	temp=`wget -q http://$DDNSUSER:$DDNSPASS@members.dyndns.org/nic/update?hostname=$DDNSHOST -q -O -`
+	ret=$?
+	if [ $ret = 0 ]; then
+		echo $temp | awk {'print $2'}
+		ret=$?
+	fi
+	return $ret
+}
+
+MainLoop () {
+	Log 3 "MainLoop ()"
+	myIP=""
+	while true ; do
+		newIp=`GetCurIp`
+		ret=$?
+		Log 3 "myIP: $myIP newIp: $newIp"
+		if [ $ret = 0 ] ; then
+			if [ "$myIP" != "$newIp" ] ; then
+				SetNewIp
+				if [ $? = 0 ] ; then
+					Log 1 "Updated IP to $newIp"
+					myIP=$newIp
+					SetHostsEntry
+				else
+					Log 1 "IP update failed!"
+				fi
+			fi
+		else
+			Log 0 "Checking current IP failed. check network."
+		fi
+		sleep $delta
+	done
+}
+
+
+#
+# Main
+#
+
+for i in $DDNSHOST $DDNSUSER $DDNSPASS ; do
+	if [ -z "$i" ] ; then
+		Log 0 "$MyName not configured. Exiting."
+		exit 1
+	fi
+done
+
+
+case $1 in
+	-d)
+		#daemonize
+		if [ "$USE_DYNDNS" = "yes" ] ; then
+			MainLoop >/dev/null 2>&1 &
+			echo $! > /var/run/$MyName
+		else
+			Log 0 "dyndns turned of in $Sysconfig"
+		fi
+		;;
+	-t|-k)
+		if [ -f /var/run/$MyName ] ; then
+			Log 1 "Terminating running $MyName"
+			kill `cat /var/run/$MyName`
+			rm /var/run/$MyName
+		else
+			Log 1 "$MyName not running"
+			exit 1
+		fi
+		;;
+	-u)
+		#update immediate
+		newIp=`GetCurIp`
+		if [ $? = 0 ] ; then
+			Log 1 "new IP is $newIp"
+			Log 3 "setting new IP"
+			SetNewIp
+			[ $? = 0 ] && Log 3 "successful"
+			SetHostsEntry
+		fi
+		;;
+	restart)
+		$0 -t
+		$0 -d
+		;;
+	*|-h)
+		Syntax
+		exit 1
+		;;
+esac

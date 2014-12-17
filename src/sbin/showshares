@@ -1,0 +1,388 @@
+#!/bin/sh
+
+[ -e /etc/default/sysconfig ] || exit 1
+for CONFIG in showshares sysconfig globals ; do
+        # Read configuration variable file if it is present
+        [ -r /etc/default/$CONFIG ] && . /etc/default/$CONFIG
+done
+
+scanports="T:139,548,2049,U:2049"
+#Samba	139/tcp
+#NFS	2049/tcp 2049/udp
+#Mac	548
+
+hidden=no
+TIMEOUT=3
+STATUSFILE="/tmp/param.$$"
+AUTHFILE="/tmp/auth.$$"
+
+IFS="
+"
+
+syntax () {
+cat << EOF
+Usage: `basename $0` [ -u username -p password ] [ -h ip ] [ --closed ] [ --status ] [ --hostname ] [ -v ]
+       `basename $0` [ --help ]
+     -u,--username:  Useraccount for Server
+     -p,--password:  Password for username
+     -h,--host,--ip: hostname or IP-adress/-range for scan
+     --closed:       show ports which state is closed, too
+     -v:             be verbose (max four level: -v -v -v -v)
+     --status:       Show progessinfo
+     --hostname:     show hostname instead of ip
+     --help:         This text
+
+Description:
+     find shares at local network
+
+     Syntax: Values are separated by tabulator
+     <ip>	<port>	[<share>	[<protocol>	<version> <rights>]]
+
+     smb/cifs (windows network):
+     <ip>	<139>	<share>
+     or
+     <ip>	<139>
+     [FOUND-AUTH]	<139>
+     FOUND-AUTH (Vista): `basename $0` -u user -p passwd -h <ip>
+     <ip>	<139>	<share>
+
+     nfs (Network Fils System):
+     <ip>	<2049>	<share>	<protocol>	<version>	<rights>
+     protocol: udp/tcp
+     nfsversion: 3, 4, 2
+
+     afp (macintosh):
+     <ip>	<548>	NEEDAUTH
+     [FOUND-AUTH]	<548>
+     FOUND-AUTH: `basename $0` -u user -p passwd -h <ip>
+     <ip>	<548>	<share>
+EOF
+exit
+}
+
+percentstat="no"
+ipprefix=""
+ipprefixauth=""
+username=""
+password=""
+showhost="no"
+scanip=0
+verbose=0
+
+Echo () {
+   /bin/echo -e $*
+}
+
+# ReelBox Lite: BSP15 exist?
+if grep -q 12d51000 /proc/bus/pci/devices; then
+	BINDIR=/opt/bin
+	NMAP=$BINDIR/nmap
+	SMBCLIENT=$BINDIR/smbclient
+	AFPCMD=$BINDIR/afpcmd
+	SHOWMOUNT=$BINDIR/showmount
+	RPCINFO=$BINDIR/rpcinfo
+	DELIM="	" # Tabulator
+else
+	NMAP=$(which nmap)
+	SMBCLIENT=$(which smbclient)
+	AFPCMD=$(which afpcmd)
+	SHOWMOUNT=$(which showmount)
+	RPCINFO=$(which rpcinfo)
+	DELIM="\t"
+fi
+
+while [ $# -gt 0 ]; do
+	case "$1" in
+		--status|-s)
+			percentstat="yes"
+			ipprefix="[FOUND]$DELIM"
+			ipprefixauth="[FOUND-AUTH]$DELIM"
+			percentprefix="[PROGRESS]$DELIM"
+			;;
+		--username|-u)
+			shift
+			[ $# -eq 0 ] && syntax
+			username=$1
+			;;
+		--password|-p)
+			shift
+			[ $# -eq 0 ] && syntax
+			password=$1
+			;;
+		--ip|--host|-h)
+			shift
+			[ $# -eq 0 ] && syntax
+			scanip=$1
+			;;
+		--closed)
+			SHOWCLOSED=yes
+			;;
+		-v|--verbose)
+			verbose=$(($verbose + 1))
+			;;
+		--hostname)
+			showhost="yes"
+			;;
+		*)
+			syntax
+			;;
+	esac
+        shift
+done
+! [ "$username" = "" ] && [ "$password" = "" ] && syntax
+[ "$FORCEIP" = "yes" ] && showhost="no"
+
+[ "$percentstat" = "yes" ] && Echo "${percentprefix}0%"
+
+timeout () {
+	BREAKTIME=$(expr $(date +%s) + $TIMEOUT)
+	ERRORTIMEOUT=no
+	while [ -d /proc/$PID ]; do
+		if [ $(date +%s) -gt $BREAKTIME ]; then
+			kill $PID
+			ERRORTIMEOUT=yes
+			echo "aborted" >> $STATUSFILE
+			break
+		fi
+	done
+}
+
+check_smb () {
+	foundshare="yes"
+	param="-N"
+	[ -e $AUTHFILE ] && rm $AUTHFILE
+	if ! [ "$username" = "" ]; then
+		echo "username = $username" > $AUTHFILE
+		echo "password = $password" >> $AUTHFILE
+		param="-A$AUTHFILE"
+	fi
+	[ "$verbose" -ge "3" ] && echo "$SMBCLIENT $param -L $ip -g 2> /dev/null"
+	[ "$verbose" -ge "3" ] && $SMBCLIENT $param -L $ip -g 2> /dev/null
+	for shareline in $($SMBCLIENT $param -L $ip -g 2> /dev/null); do
+		if echo $shareline | grep -q "^Error returning browse list"; then
+			Echo "$ipprefixauth$ip$DELIM$port"
+			break
+		fi
+		if echo $shareline | grep -q "^Disk"; then
+			share=$(echo $shareline | grep "^Disk" | cut -d\| -f2)
+			if [ "$hidden" = "yes" ]; then
+				Echo "$ipprefix$ip$hostnameoutput$DELIM$port$DELIM$share"
+			elif echo $share | grep -qv "\$$" ; then
+				Echo "$ipprefix$ip$hostnameoutput$DELIM$port$DELIM$share"
+			fi
+		fi
+	done
+	[ -e $AUTHFILE ] && rm $AUTHFILE
+}
+
+check_afp () {
+	foundshare="yes"
+	if [ "$username" = "" ]; then
+		Echo "$ipprefixauth$ip$DELIM$port"
+		
+	else
+		IFS=" 
+" # Space and Enter
+		[ -e $STATUSFILE ] && rm $STATUSFILE
+		[ "$verbose" -ge "3" ] && echo "$AFPCMD afp://$username:$password@$ip 2>/dev/null"
+		$AFPCMD afp://$username:$password@$ip 2>/dev/null >$STATUSFILE & PID=$!
+		timeout
+		[ "$verbose" -ge "3" ] && cat $STATUSFILE
+		for share in $(cat $STATUSFILE | cut -d\  -f10- | sed 's/,//g;'); do
+			if [ $share != "" ]; then
+				Echo "$ipprefix$ip$hostnameoutput$DELIM$port$DELIM$share"
+			fi
+		done
+		IFS="
+" # Enter
+	fi
+}
+
+check_nfs () {
+	if ! [ "$foundnfstype" = "tcp" ]; then
+		[ -e $STATUSFILE ] && rm $STATUSFILE
+		$RPCINFO -p $ip 2>/dev/null | grep $port | grep $protocol | awk '{ print $2 }' >$STATUSFILE & PID=$!
+		timeout
+		for nfsversion in 3 4 2; do
+			if grep -q $nfsversion $STATUSFILE; then
+				break
+			fi
+		done
+		if [ "$ERRORTIMEOUT" = "no" ]; then
+			[ -e $STATUSFILE ] && rm $STATUSFILE
+			[ "$verbose" -ge "3" ] && echo "$SHOWMOUNT -e $ip --no-headers 2>/dev/null"
+			$SHOWMOUNT -e $ip --no-headers 2>/dev/null >$STATUSFILE & PID=$!
+			timeout
+			if [ "$ERRORTIMEOUT" = "no" ]; then
+				[ "$verbose" -ge "3" ] && cat $STATUSFILE
+				for share in $(cat $STATUSFILE); do
+					foundshare="yes"
+					foundnfstype=$protocol
+					mountpoint=$(echo $share | awk '{ print $1 }')
+					[ "$nfsversion" = "4" ] && mountpoint=$(dirname $mountpoint)
+					rights=$(echo $share | awk '{ print $2 }')
+					Echo "$ipprefix$ip$hostnameoutput$DELIM$port$DELIM$mountpoint$DELIM$protocol$DELIM$nfsversion$DELIM$rights"
+					[ "$nfsversion" = "4" ] && break
+				done
+			fi
+		fi
+	fi
+}
+
+scan_iprange () {
+	[ "$verbose" -ge "3" ] && echo -n "\n"
+	[ "$verbose" -ge "1" ] && echo "\niprange: $iprange"
+
+	lines=$(echo $iprange | $NMAP -sS -sU -iL - -oG - -p $scanports 2> /dev/null | grep -v "^#")
+	halfpercent=$(echo "scale=$decimals; ( $n - 0.5 * $m ) * 100 / $hostcount / $num_scan + $percentbase" | bc)
+	percent=$(echo "scale=$decimals; $n * 100 / $hostcount / $num_scan + $percentbase" | bc)
+#	echo "halfpercent: ( $n - 0.5 * $m ) * 100 / $hostcount / $num_scan + $percentbase = $halfpercent"
+#	echo "percent:       $n              * 100 / $hostcount / $num_scan + $percentbase = $percent"
+	[ "$percentstat" = "yes" ] && Echo "$percentprefix$halfpercent%"
+	for line in $lines; do
+		foundnfstype=""
+		ipold=$ip
+		ip=$(echo $line | cut -d\  -f2)
+		[ "$verbose" -ge "2" ] && [ "$ip" != "$ipold" ] && echo -n "\n"
+		hostname=$(echo $line | cut -d\( -f2 | cut -d\) -f1)
+		[ "$verbose" -ge "1" ] && echo "hostname: $hostname"
+		if ! [ "$hostname" = "" ] && [ "$showhost" = "yes" ]; then
+			hostnameoutput="/$hostname"
+		else
+			hostnameoutput=""
+		fi
+		ports=$(echo $line | cut -d\	 -f2)
+		for portline in $(echo $ports | sed 's/Ports: //;' | sed 's/, /\n/g;'); do
+			port=$(echo $portline | cut -d/ -f1)
+			status=$(echo $portline | cut -d/ -f2)
+			protocol=$(echo $portline | cut -d/ -f3)
+			if ([ "$SHOWCLOSED" = "yes" ] || [ "$status" = "open" ] || [ "$status" = "open|filtered" ]); then
+				[ "$verbose" -ge "2" ] && echo "ip: $ip - portline: $portline"
+				case "$port" in
+					139|445) # SMB
+						check_smb
+					;;
+					548) # Mac (afpovertcp)
+						check_afp
+					;;
+					2049) # NFS
+						check_nfs
+					;;
+				esac
+			else
+				[ "$verbose" -ge "4" ] && echo "ip: $ip - portline: $portline"
+			fi
+		done
+	done
+	[ "$percentstat" = "yes" ] && Echo "$percentprefix$percent%"
+}
+
+ip2dec () {
+	octet1=$(echo $ipd | cut -d. -f1)
+	octet2=$(echo $ipd | cut -d. -f2)
+	octet3=$(echo $ipd | cut -d. -f3)
+	octet4=$(echo $ipd | cut -d. -f4)
+	dec=$(( ($octet1<<24) + ($octet2<<16) + ($octet3<<8) + $octet4 ))
+}
+
+dec2ip () {
+	dec2hex=$(echo "obase=16;$dec" | bc)
+	while [ "$(echo -n $dec2hex | wc -c)" -lt "8" ]; do
+		dec2hex="0$dec2hex"
+	done
+	h1=$(echo $dec2hex | cut -c1-2)
+	h2=$(echo $dec2hex | cut -c3-4)
+	h3=$(echo $dec2hex | cut -c5-6)
+	h4=$(echo $dec2hex | cut -c7-8)
+	octet1=$(echo "ibase=16;$h1" | bc)
+	octet2=$(echo "ibase=16;$h2" | bc)
+	octet3=$(echo "ibase=16;$h3" | bc)
+	octet4=$(echo "ibase=16;$h4" | bc)
+	ipd="$octet1.$octet2.$octet3.$octet4"
+}
+
+get_netadr_and_hostcount () {
+	ipd=$netmask
+	ip2dec
+	nm1=$octet1
+	nm2=$octet2
+	nm3=$octet3
+	nm4=$octet4
+
+	ipd=$destip
+	ip2dec 
+	ip1=$octet1
+	ip2=$octet2
+	ip3=$octet3
+	ip4=$octet4
+
+	netadr="$(( $ip1 & $nm1 )).$(( $ip2 & $nm2 )).$(( $ip3 & $nm3 )).$(( $ip4 & $nm4 ))"
+	[ "$verbose" -ge "2" ] && echo "Netadress : $netadr"
+	[ "$verbose" -ge "2" ] && echo "Netmask: $netmask"
+	hostcount=$(( (255-$nm1<<24) + (255-$nm2<<16) + (255-$nm3<<8) + (255-$nm4) -1 ))
+	[ "$verbose" -ge "2" ] && echo "Number of Hosts: $hostcount"
+}
+
+######################
+#
+# Main
+#
+######################
+
+scan=0
+foundshare="no"
+percent=0
+decimals=2
+increment=26
+if [ "$scanip" = "0" ]; then
+	noeth0="grep -v DUMMY"
+	RbAvg && noeth0="grep -v eth0"
+	destip_list=$(netstat -rn | grep -v ^0.0.0.0 | grep -v ^169.254.0.0 | grep -v ^239.0.0.0 | grep 0.0.0.0 | grep -v ^192.168.99.128 | eval $noeth0 | awk '{ print $1  " " $3 }' | sort | uniq)
+#destip_list="10.10.0.4 255.255.255.0"
+	num_scan=$(netstat -rn | grep -v ^0.0.0.0 | grep -v ^169.254.0.0 | grep -v ^239.0.0.0 | grep 0.0.0.0 | grep -v ^192.168.99.128 | eval $noeth0 | awk '{ print $1 }' | uniq | wc -l)
+	[ $num_scan = 0 ] && num_scan=1
+	interval=$(echo "scale=$decimals; 5 / $num_scan" | bc)
+	[ "$verbose" -ge "1" ] && echo "destip_list:\n$destip_list"
+	[ "$verbose" -ge "1" ] && echo "num_scan: $num_scan\n"
+	for destline in $destip_list; do
+		destip=$(echo $destline | cut -d\  -f1)
+		netmask=$(echo $destline | cut -d\  -f2)
+		get_netadr_and_hostcount
+		ipd=$netadr
+		ip2dec
+		decmax=$(( $dec + $hostcount))
+		percentbase=$(echo "scale=$decimals; 100 / $num_scan * $scan" | bc)
+		n=0
+		while [ $n -lt $hostcount ]; do
+			m=0
+			iprange=""
+			while [ $m -lt $increment ]; do
+				dec=$( expr $dec + 1 )
+				dec2ip
+				iprange="$iprange $ipd"
+				[ $dec -eq $decmax ] && break
+				m=$( expr $m + 1 )
+			done
+			
+			n=$( expr $n + $increment )
+			[ $n -gt $hostcount ] && n=$hostcount
+			scan_iprange
+		done
+		scan=$(expr $scan + 1)
+	done
+else
+	n=1
+	m=1
+	num_scan=1
+	percentbase=100
+	iprange=$scanip
+	interval=50
+	hostcount=1
+	scan_iprange
+fi
+
+if [ "$foundshare" = "yes" ]; then
+	echo "completed"
+else
+	echo "failed"
+fi

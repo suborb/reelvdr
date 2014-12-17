@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-05-30 16:11+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Media Player"
+msgstr ""
+
+msgid "Recordings"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Images"
+msgstr ""
+
+msgid "Videos"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Images"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "Browser"
+msgstr ""
+
+msgid "Rotor"
+msgstr ""
+
+msgid "My Recordings"
+msgstr ""
+
+msgid "Play CD/DVD"
+msgstr ""
+
+msgid "Internet radio"
+msgstr ""
+
+msgid "Play Ipod"
+msgstr ""
+
+msgid "Audio Player2"
+msgstr ""
+
+msgid "Music & media player"
+msgstr ""
+
+msgid "Audio Player"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Image Player"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "MediaplayerDvd"
+msgstr ""
+
+msgid "Video Library"
+msgstr ""
+
+msgid "Movie & media player"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""

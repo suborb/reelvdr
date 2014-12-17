@@ -1,0 +1,81 @@
+Req.:
+ssh & scp
+
+Install :
+Make sure you can connect without a passwordphrase.
+If you dont know howto setup your System , i tell you 
+"ONE" way (no attention about security ,etc) in short words.
+You will find better HowTos on internet.
+To do this with root is the badest way you can do it but easiest ;).
+
+VDR    = Hostname of your VDR (or IP number)
+CLIENT = Hostname of your Pentium VIII_XP with GF10000 and 3 TB Ram (or IP number)
+
+
+Open a console on VDR.
+
+login as root:
+#~ su ( hit ENTER and type your rootpassword)
+
+#~ ssh-keygen -t dsa
+If you will be asked for passphrase , hit ENTER (no password).
+
+#~ Generating public/private dsa/rsa key pair.
+#~ Enter file in which to save the key (/root/.ssh/id_dsa):
+#~ Enter passphrase (empty for no passphrase):
+#~ Enter same passphrase again:
+#~ ..blablabla
+
+#~ cd .ssh
+#~ ls
+#~ id_dsa id_dsa.pub
+
+Now let us copy the PUBLIC KEY! to the CLIENT :
+#~ scp id_dsa.pub root@CLIENT:.ssh/tmp.dsa
+
+This will only work if you have running sshd on CLIENT.
+You will asked for a password. Its the root password from CLIENT.
+The directory /root/.ssh should exists before you scp the file.
+If not (ON CLIENT SIDE):
+#~ cd /root ; mkdir .ssh; chmod 700 .ssh
+
+Now open up a console on CLIENT.
+#~ cd /root/.ssh
+#~ cat ~/.ssh/tmp.dsa >> authorized_keys
+#~ rm tmp.dsa
+
+Now you can use ssh and scp without a password.
+To test it :
+Go to VDR and type :
+#~ ssh root@client
+
+Not working :
+Check Firewall !
+Is ssh daemon running on CLIENT ?
+Another session is open ?
+Configure ssh and sshd (maybe (/etc/ssh) )
+Search for another HOWTO ;) !
+
+Its working:
+Search for a better HOWTO and use an useraccount.
+Btw, as user its the same way but better use tunneling ,etc. or
+i'll visit you. :P
+
+Now go to VDR and setup Ripit like this ;
+Encode remotely : Yes
+Remote Options : --sshlist root@CLIENT --scp
+
+If you have mounted your CLIENT , you dont need --scp
+BUT make sure you have the same path for the output.
+If you have setup that ripit use /vdr_daten/mp3/rips,
+same directoy structure should exists on CLIENT.
+Read the Readme from ripIT for further infos.
+If you want to do this with more than one CLIENT:
+Remote Options : --sshlist root@CLIENT,user1@CLIENT2,user2@BEDROOM --scp
+
+Your VDR will transfer the wavs to the CLIENT , where the encoder do
+the job. After that , it will get back the MP3 and delete the folder.
+Best way is to copy the same ripit.pl on all computer and check if
+you have the same same encoder,etc there.
+
+bye (works here like a charme..thx to authors of ripIT)

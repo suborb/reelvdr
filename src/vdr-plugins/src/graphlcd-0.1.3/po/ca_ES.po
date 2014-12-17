@@ -1,0 +1,130 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-01-12 11:37+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "GenFebMarAbrMaiJunJulAgoSetOctNovDes"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "File"
+msgstr "Fitxer"
+
+msgid "Image"
+msgstr "Imatge"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Reprodueix"
+
+msgid "no"
+msgstr "no"
+
+msgid "yes"
+msgstr "sí"
+
+msgid "not in menu"
+msgstr "no és al menú"
+
+msgid "compressed"
+msgstr "comprimit"
+
+msgid "auto"
+msgstr "auto"
+
+msgid "medium"
+msgstr "mitjà"
+
+msgid "large"
+msgstr "gran"
+
+msgid "never"
+msgstr "mai"
+
+msgid "once"
+msgstr "una vegada"
+
+msgid "always"
+msgstr "sempre"
+
+msgid "Show Date/Time"
+msgstr "Mostra Data/Hora"
+
+msgid "Show Channel"
+msgstr "Mostra el canal"
+
+msgid "Show Logo"
+msgstr "Mostra el logotip"
+
+msgid "Show Symbols"
+msgstr "Mostra els símbols"
+
+msgid "Show ET Symbols"
+msgstr "Mostra els símbols ET"
+
+msgid "Show Program"
+msgstr "Mostra el programa"
+
+msgid "Show Timebar"
+msgstr "Mostra la barra de temps"
+
+msgid "Show Menu"
+msgstr "Mostra el menú"
+
+msgid "Show Messages"
+msgstr "Mostra els missatges"
+
+msgid "Show Volume"
+msgstr "Mostra el volum"
+
+msgid "Show free Tuner"
+msgstr "Mostra el sintonitzador lliure"
+
+msgid "Identify replay type"
+msgstr "Identifica el temps de reproducció"
+
+msgid "Modify replay string"
+msgstr "Mostra la cadena de reproducció"
+
+msgid "Scroll text lines"
+msgstr "Desplaça el text"
+
+msgid "Scroll speed"
+msgstr "Velocitat de desplaçament"
+
+msgid "Scroll time interval"
+msgstr "Durada del desplaçament"
+
+msgid "Brightness on user activity"
+msgstr "Brillantor (usuari actiu)"
+
+msgid "Brightness on user inactivity"
+msgstr "Brillantor (sense activitat)"
+
+msgid "Brightness delay [s]"
+msgstr "Retard brillantor [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Mostra el rellotge (sense activitat)"
+
+msgid "Unknown title"
+msgstr "Títol desconegut"

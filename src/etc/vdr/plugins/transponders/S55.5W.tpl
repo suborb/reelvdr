@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S55.5W
+2=Galaxy 11
+3=West
+4=55.5

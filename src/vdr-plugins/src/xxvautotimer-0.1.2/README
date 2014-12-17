@@ -1,0 +1,53 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Ralf Dotzert <ranga@.vdrtools.de>
+
+Project's homepage:          http://www.vdrtools.de
+
+Latest version available at: http://www.vdrtools.de
+
+See the file COPYING for license information.
+
+Description:
+============
+
+This is a plugin for the Video Disk Recorder (VDR) to edit Autotimers of XXV
+via VDR on-screen-display (OSD). XXV stores the Autotimers in a mysql database.
+
+The following command line parameters may be specified:
+
+-f <xxv configurationfile>  respectively --xxvconfigfile <xxv configurationfile>
+
+If the configurationfile is specified, the necessary config parameters are read
+from the specified XXV configuration file. Otherwise the parameters must be set
+in the setup menu.
+
+The following parameters can be changed via the plugins setup menu:
+
+
+ignore recurrences: set defulat value for "ignore recurrences"
+
+XXV Version < 0.30:   if this switch is enabled, only the parameters of XXV 0.20 are managed
+
+These paramters may be set only, if no xxv config file was specified in the comand line parameter:
+Database          :  Name of the XXV database (default: "xxv")
+DatabaseUser      :  Database user (default: "root")
+DatabasePasswd    :  Passwd of the XXV database (default: "")
+DatabasePort      :  Port of the mysql Database (default: 3304)
+Host              :  Host providing the XXV database (default: "localhost")
+TelnetPort        :  Port for telnet connection (default: 8001)
+                     To use this Feature, you have to set no authentication to localhost within xxvd.cfg
+                     for example:
+                        [USER]
+                          active=y
+                          noAuth=192.168.0.0/24, 127.0.0.1/32
+Lifetime          :  Default Lifetime of Recording
+Priority          :  Default Priority
+afterminutes      :  Default time buffer after recording
+prevminutes       :  Default time buffer before recording
+
+
+Restrictions:
+=============
+
+VDR Version 1.3.x is required!

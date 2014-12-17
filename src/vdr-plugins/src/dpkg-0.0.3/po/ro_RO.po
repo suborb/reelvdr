@@ -1,0 +1,195 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2009-03-03 17:15+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Dpkg Plugin"
+msgstr "Plugin Dpkg"
+
+msgid "Start Online Update"
+msgstr "Start Online Update"
+
+msgid "Updates available! Press OK to update now."
+msgstr "Uddate-uri disponibile ! Apasa ok pentru a updata acum."
+
+msgid "Addon Plugin"
+msgstr "Plugin Addon"
+
+msgid "Optional Software "
+msgstr "Software Optional"
+
+msgid "Online Update"
+msgstr "Update Online "
+
+msgid "Updating sources..."
+msgstr "Updatez surse..."
+
+msgid "Updating packages..."
+msgstr "Updatez pachete..."
+
+msgid "Rebooting, please wait..."
+msgstr "Repornesc... Va rog asteptati !"
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Update software online prin conexiunea:"
+
+msgid "Upgrade"
+msgstr "Upgrade"
+
+msgid "Install"
+msgstr "Instaleaza"
+
+msgid "Back"
+msgstr "Inapoi"
+
+msgid "Skip"
+msgstr "Sari"
+
+msgid "Packages"
+msgstr "Pachete"
+
+msgid "Optional"
+msgstr "Optional"
+
+msgid "Sources"
+msgstr "Surse"
+
+#, fuzzy
+msgid "Please restart your ReelBox after the recording."
+msgstr "Va rog reporniti ReelBox!"
+
+msgid "Reboot ?"
+msgstr "Repornire ?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr "Anulare..."
+
+msgid "Press OK to abort update."
+msgstr "Apasa OK pentru a abandona update"
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "Esuare updatare toate sursele!Caut dupa update..."
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "Esuare updatare toate sursele!Caut dupa pachete..."
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Surse neactualizate.Cautare dupa update-uri..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Surse neactualizate.Cautare dupa pachete..."
+
+msgid "Failed to process all packages!"
+msgstr "Esuare procesare toate pachetele!"
+
+msgid "Failed"
+msgstr "Esuare"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Acum selectati upgrade pentru a instala noile pachete."
+
+msgid "Following packages will be updated:"
+msgstr "Urmatoarele pachete vor fi updatate:"
+
+msgid "The software is up to date."
+msgstr "Softul este neactualizat."
+
+msgid "No updates found."
+msgstr "Nu am gasit update."
+
+msgid "Downloading Packages..."
+msgstr "Dowloadez pachete..."
+
+msgid "Processing Packages..."
+msgstr "Procesez pachete..."
+
+msgid "All changes successfull!"
+msgstr "Modificari efectuate cu succes!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Va rog reporniti ReelBox!"
+
+msgid "Please go into deep standby,"
+msgstr "Va rog intrati in stand-by,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "reporniti ReelBox si incercati din nou."
+
+msgid "Error"
+msgstr "Eroare"
+
+msgid "Load"
+msgstr "Incarca"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Va rog verificati conixiunea la internet."
+
+msgid "IGN"
+msgstr "IGN"
+
+msgid "Source list"
+msgstr "Lista surse"
+
+msgid "Save"
+msgstr "Salvare"
+
+msgid "Undo"
+msgstr "Revenire"
+
+msgid "Insert"
+msgstr "Introduce"
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Unable to read from sources.list!"
+msgstr "Nu am putut sa citesc din sources.list!"
+
+msgid "Unable to write to surces.list!"
+msgstr "Nu am putut sa scriu in sources.list!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Dpkg Setup"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Setup Software Optional"
+
+#~ msgid "Recording is running !"
+#~ msgstr "Inregistrare in desfasurare !"

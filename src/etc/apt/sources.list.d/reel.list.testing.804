@@ -1,0 +1,3 @@
+#Reelbox software
+deb http://packages.reelbox.org/software/rubuntu 804 testing testing-opt all
+

@@ -1,0 +1,82 @@
+Plugin radio for vdr >= 1.6.0
+
+MPEG-Standbilder als Beispiele beigefügt (siehe SubDir ../config/mpgestill),
+(überarbeitete Vorlage von kleo @ vdrportal);
+zur Benutzung kopiere/installiere nach $VDRCONFIG/plugins/radio (-f <DIR>).
+
+Externe Scriptabfragen für Titel/Interpret-Infos unter ../config/scripts),
+(für Funktion/Aufbau siehe ../config/scripts/LIESMICH.Scripts);
+zur Benutzung kopiere/installiere nach $VDRCONFIG/plugins/radio (-f <DIR>).
+
+
+----------------------------
+Grundsätzlich zur Bedienung:
+----------------------------
+Wenn im OSD entweder der Radiotext/Info oder der RaSS-Archivhinweis aktiv ist,
+kann mit der Taste 'Zurück' das OSD getoggelt werden, soll heißen:
+RaSS-Hinweis/Radiotext -> kein OSD -> RaSS-Hinweis/Radiotext usw.
+
+-----------------------------
+Bedienung/Tasten RTplus-Menu:
+-----------------------------
+Wenn im OSD der Radiotext/Info zu sehen ist, kann mit der Taste '0'
+das zusätzliche RTplus-Menu + evtl. weitere aufgerufen werden.
+Die Übersicht wird automatisch alle 60 Sekunden aktualisiert;
+evtl. Untermenus ca. alle 20s, wenn aktiviert.
+
+Tasten in den Menus:
+ 0			= Aktualisieren
+ OK/Zurück 	= Schließen 
+ 8			= RTplus-Infos speichern (nur im 1.Menu)
+
+-----------------------------
+Bedienung/Tasten RaSS-Archiv:
+-----------------------------
+Wenn im OSD der Hinweis 'Archiv verfügbar' zu sehen ist, kann mit der Taste '0'
+das zusätzliche RaSS-Archiv aufgerufen werden.
+
+Auf der linken Seite erscheint das Archiv-Menu mit den Bedienungstasten 0-9/OK,
+dabei bedeuten folgende Symbole:
+
+ |=| 		= Seiten vorhanden 		(0-9)
+ | | xx		= Gallery, xx Anzahl Bilder	(OK)
+  > 		= Standort
+
+Folgende zusätzliche Tasten stehen zur Verfügung:
+
+ Auf/Ab			= Scrollen innerhalb Archivmenu (0-9/OK)
+ Links/Rechts	= Scrollen innerhalb der Subseiten/Gallery
+ Rot			= Speichert angezeigte Seite als JPEG-Bild (1024x576)
+ Grün			= Speichert alle Subseiten/Gallery als JPEG-Bilder (1024x576),
+		  		  - Seitenname   = RaSS_Sendername-Seitennr_MonatTagStundeMinute.jpg
+		  		  - Gallerynamen = RaSS_Sendername-GallerySeitennr_MonatTag.jpg
+ Gelb			= todo, was ?
+ Blau/Exit		= Archiv verlassen
+    
+Alle anderen Tasten schließen das RaSS-Archiv ebenso.
+
+Hinweis: Die JPEG-Speicherung/Wandlung erfolgt nur, wenn auf dem System
+	 das Programm 'ffmpeg' installiert ist. 
+
+
+--------------
+SVDRP-Befehle:
+--------------
+ RTINFO 	= Ausgabe der Radiotext Information
+ RTCLOSE 	= Radiotext-OSD schließen. Erneutes Öffnen nur über Menü oder Kanalwechsel
+ RTTCLOSE 	= Radiotext-OSD zeitweise schließen. Wiederöffnen automatisch nach OSD-Timeout
+
+----------------
+Ausrufparameter:
+----------------
+ -f <DIR>	--files=<DIR> 	   Bilderverzeichnis (Standard: $VDRCONFIG/plugins/radio)
+ -d <DIR> 	--data=<DIR> 	   Datenverzeichnis temporär (Standard: /tmp/vdr-radio.XXXXXX)
+ -l <DATEI> --live=<DATEI> 	   benutze <DATEI> im Livemodus (Standard: $VDRCONFIG/plugins/radio/radio.mpg)
+ -r <DATEI> --replay=<DATE>    benutze <DATEI> im Wiedergabemodus (Standard: $VDRCONFIG/plugins/radio/replay.mpg)
+ -e 1       --encrypted=1      benutze Transfermode auch bei verschlüsselten Sendern
+ -v <LEVEL> --verbose=<LEVEL>  Console-Printouts: 0 keine Meldungen, 1 RDS-Text+Tags (Voreinstellung), 2 +RDS-Telegram/Debug,
+ 							   3 +RawData 0xfd, |=16 Rass-Info, |=32 TMC-Info
+
+
+Viel Spaß...
+Uwe <egal at egal-vdr dot de>

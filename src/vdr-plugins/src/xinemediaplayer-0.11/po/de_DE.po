@@ -1,0 +1,183 @@
+# xinemediaplayer language source file.
+# Copyright (C) 2008-09 Reel Multimedia <info@reel-multimedia.com>
+# This file is distributed under the same license as the VDR package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-06-11 17:09+0200\n"
+"PO-Revision-Date: 2008-10-02 11:13+0100\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Jump: "
+msgstr "Springen: "
+
+msgid "Cannot play"
+msgstr "Datei kann nicht abgespielt werden"
+
+msgid "file type"
+msgstr "Dateityp"
+
+msgid "Waiting for server ..."
+msgstr "Warte auf Server..."
+
+msgid "Network read error"
+msgstr "Netzwerkfehler"
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr "Der Server hat eine ungültige Playlist gesendet. Springe zur nächsten."
+
+msgid "Open Error"
+msgstr "Fehler beim öffnen"
+
+msgid "Only MPEG-1 format supported"
+msgstr "Es wird nur MPEG-1 unterstützt"
+
+msgid "VideoCodec not supported!"
+msgstr "Video-Codec wird nicht unterstützt!"
+
+msgid "AudioCodec not supported!"
+msgstr "Audio-Codec wird nicht unterstützt!"
+
+msgid "Could not play file"
+msgstr "Datei kann nicht abgespielt werden"
+
+msgid "Please wait, Loading..."
+msgstr "Auswahl wird geladen..."
+
+msgid "Please check your network connection"
+msgstr "Bitte überprüfen Sie ihre Netzwerkverbindung"
+
+msgid "Opening "
+msgstr "Verbinde mit "
+
+msgid "Chapter"
+msgstr "Kapitel"
+
+msgid "Unable to get default CD device"
+msgstr "Kein Standard-CD-Gerät gefunden"
+
+msgid "Unable open CD device"
+msgstr "CD-Gerät kann nicht geöffnet werden"
+
+msgid "No tracks found in CD"
+msgstr "Keine Audiotrack auf CD gefunden"
+
+msgid "No audio tracks found"
+msgstr "Keine Audiotracks gefunden"
+
+msgid "Track"
+msgstr "Titel"
+
+msgid "Paused"
+msgstr "Pause aktiviert"
+
+msgid "Mute"
+msgstr "Stumm"
+
+msgid "Replaymode: Normal"
+msgstr "Modus: Normal"
+
+msgid "Replaymode: Repeat"
+msgstr "Modus: Wiederholen"
+
+msgid "Replaymode: Shuffle"
+msgstr "Modus: Zufall"
+
+msgid "Shuffle"
+msgstr "Zufall"
+
+msgid "Repeat"
+msgstr "Wiederholen"
+
+msgid "Normal"
+msgstr "Standard"
+
+msgid "Overview"
+msgstr "Übersicht"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Options"
+msgstr "Optionen"
+
+msgid "shoutcast"
+msgstr "Shoutcast"
+
+msgid "Add to favs"
+msgstr "In Favoriten"
+
+msgid "Volume"
+msgstr "Lautstärke"
+
+msgid "Loading..."
+msgstr "Auswahl wird geladen..."
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Artist"
+msgstr "Künstler"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Genre"
+msgstr "Genre"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Year"
+msgstr "Jahr"
+
+msgid "Length"
+msgstr "Länge"
+
+msgid "min"
+msgstr ""
+
+msgid "Bitrate"
+msgstr ""
+
+msgid "Samplerate"
+msgstr ""
+
+msgid "ID3$Channels"
+msgstr "Kanäle"
+
+msgid "Original"
+msgstr ""
+
+msgid "MPEG-Layer"
+msgstr ""
+
+msgid "Copyrighted"
+msgstr "Kopiergeschützt"
+
+msgid "Protected"
+msgstr "Geschützt"
+
+msgid "File size"
+msgstr "Dateigröße"
+
+msgid "Last Modified"
+msgstr "Letzte Änderung"
+
+msgid "Mediaplayer - Id3 Info:"
+msgstr ""
+
+msgid "No Id3 info found!"
+msgstr "Keine Id3-Informationen vorhanden!"
+
+#~ msgid "Unsupported file format"
+#~ msgstr "Dateiformat wird nicht unterstützt"
+
+#~ msgid "Could not play file!"
+#~ msgstr "Konnte Datei nicht abspielen!"

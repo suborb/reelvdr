@@ -1,0 +1,487 @@
+#!/bin/sh
+
+#set -x
+
+PATH="/sbin:/bin:/usr/bin"
+
+SYSCONFIG=/etc/default/sysconfig
+LOGGING=no
+
+for CONFIG in setup-shares rcS link-shares sysconfig globals; do
+	# Read configuration variable file if it is present
+	[ -r /etc/default/$CONFIG ] && . /etc/default/$CONFIG
+done
+
+LSB=no
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+[ -f /lib/lsb/init-functions ] && . /lib/lsb/init-functions && LSB=yes
+
+#Global vars
+AMSUSPENDFILE=/tmp/automounter.suspend
+AMCHECKFILE=/tmp/automounter.suspendckeck
+AMSLEEP=60
+
+if grep -q 12d51000 /proc/bus/pci/devices; then
+	FIND=/opt/bin/find
+else
+	FIND=$(which find)
+fi
+
+#
+# Functions
+#
+syntax () {
+cat << EOF
+Usage:
+     `basename $0` [start|stop|restart] [mountnumber] [recordings | music | pictures | video | dvd | allmedia]
+     `basename $0` start|stop|restart mountpoint [recordings | music | pictures | video | dvd | allmedia]
+     `basename $0` start|stop mediadevice recordings|music|pictures|video|dvd
+     `basename $0` check
+     `basename $0` -h|--help
+
+Options:
+     no option: start
+
+     start:     Set medialink(s) to networkmount(s). With "mediadevice": Set Mediadevice
+     stop:      Remove medialink(s) to networkmount(s). With "mediadevice": Remove Mediadevice
+     restart:   For mediadirs @ networkmounts only: start, stop, check
+     check:     Remove dead links for configured but not mounted shares (automounter)
+     -h|--help: This Usage
+
+     mountnumber: only for specified networkmount
+     mountpoint:  only for specified mountpoint (e.g. USB- oder eSata-Shares). Not implementet jet.
+     allmedia:    all mediatypes (automounter suspended max. 60sec.). Used if no media is specified.
+     recordings,music,pictures,video,dvd: only for specified media (automounter suspended max. 60sec.)
+
+Description:
+     Sets/Remove links for mediadir(s) at networkmount(s) or mountpoint
+     Sets/Remove link for mediadevice at mountpoint
+
+Subdir for linking:
+     Caseinsensitive searching for $MOUNT*_NAS_*DIR (sysconfig) and this subdirs.
+     The share will linked directly, if no subdir was found.
+EOF
+
+grep ^NAS_ /etc/default/setup-shares | sed 's/ /|/g' | sed 's/NAS_/     /'| tr [:upper:] [:lower:] | sed 's/=/: /' | sed 's/"//g'
+}
+
+#prepare values
+prep () {
+	DVDS=""
+	for PARAM in 	${TYPE}_DISPLAYNAME ${TYPE}_PICTURES ${TYPE}_VIDEOS ${TYPE}_MUSIC ${TYPE}_RECORDINGS ${TYPE}_DVDS \
+			${TYPE}_NAS_PICTUREDIR ${TYPE}_NAS_VIDEODIR ${TYPE}_NAS_MUSICDIR ${TYPE}_NAS_RECORDINGDIR ${TYPE}_NAS_DVDDIR ${TYPE}_$ADDMEDIA; do
+		# DISPLAYNAME=$MOUNT1_SMB_DISPLAYNAME, ...
+		if ! [ "$PARAM" = "${TYPE}_" ]; then
+			VAL=$(eval echo \$${PREFIX}${MOUNTNR}_$PARAM | sed 's/ /\\ /g;')
+			eval $(echo $PARAM | cut -c5-)=$VAL
+		fi
+	done
+	[ "$DVDS" = "" ] && DVDS=$VIDEOS
+	DISPLAYNAME=$(echo $DISPLAYNAME | sed 's/\ /_/g')
+	if echo $DISPLAYNAME | grep -q "_$"; then
+		DISPLAYNAME=$(echo $DISPLAYNAME | sed 's#_*$##;')
+		sed -i s#${PREFIX}${MOUNTNR}_${TYPE}_DISPLAYNAME=.*#${PREFIX}${MOUNTNR}_${TYPE}_DISPLAYNAME=\"$DISPLAYNAME\"# $SYSCONFIG
+		Log " Displayname hat am Ende \"_\". Wird korrigiert: $(eval echo \$${PREFIX}${MOUNTNR}_${TYPE}_DISPLAYNAME) -> $DISPLAYNAME"
+		Syslog "Displayname hat am Ende \"_\". Wird korrigiert: $(eval echo \$${PREFIX}${MOUNTNR}_${TYPE}_DISPLAYNAME) -> $DISPLAYNAME"
+	fi
+}
+
+prep2 () {
+	NAS2_PICTURES=$(echo $NAS_PICTUREDIR $NAS_PICTURES .)
+	NAS2_VIDEOS=$(echo $NAS_VIDEODIR $NAS_VIDEOS .)
+	NAS2_MUSIC=$(echo $NAS_MUSICDIR $NAS_MUSIC .)
+	NAS2_RECORDINGS=$(echo $NAS_RECORDINGDIR $NAS_RECORDINGS .)
+	NAS2_DVDS=$(echo $NAS_DVDDIR $NAS_DVDS .)
+}
+
+remove_links () {
+	n=1
+	IFS=" "
+	for MEDIA in $LOCAL_MEDIAVAR $MOUNTBASE; do
+		if [ "$MEDIATYPE" = "$MEDIA" ] || [ "$MEDIATYPE" = "ALLMEDIA" ]; then
+			if [ "$MEDIA" = "$MOUNTBASE" ]; then
+				DIR=$MOUNTBASE
+			else
+				DIR="$(echo $LOCAL_MEDIADIR | cut -d\  -f$n)/"
+			fi
+#			echo "DIR $MEDIA $DIR"
+			IFS="
+"
+			# remove links from old RMM-mountsystem
+			for LINK in $($FIND $DIR -maxdepth 1 -name '[ns][fm][sb]' -type l -ls | awk '{ print $11 }'); do
+				rm "$LINK"
+				Log " rm $LINK (remove links from old RMM-mountsystem)"
+			done
+
+			# remove links from old additional-mounts
+			for LINK in $($FIND $DIR -maxdepth 1 -name '.addmount*' -type l -ls | awk '{ print $11 }'); do
+				rm "$LINK"
+				Log " rm $LINK (remove links from old additional-mounts)"
+			done
+
+			# remove old IPbased Links
+			for LINK in $($FIND $DIR -maxdepth 1 -type l -ls | grep $MOUNTPOINT | awk '{ print $11 }'); do
+				if ! [ $LINK = $MEDIADIR ]; then
+					get_ip_from_link
+					if [ "$HASIP" != "no" ]; then
+						if [ "$HASIP" = "$ETHIP" ] || ! ping -c 1 -t 1 $HASIP > /dev/null ; then
+							Log " rm $LINK -> $(readlink $LINK)"
+							rm $LINK
+							if [ $? = 0 ]; then # Den Fehlerfall kann es eigentlich nicht geben, aber man weiss ja nie ;-)
+								if echo $DIR | grep -q recordings; then
+									UPDATERECS=yes
+								fi
+							fi
+						fi
+					fi
+				fi
+			done
+
+			# remove actual links
+			if [ -L "$MOUNTBASE/$DISPLAYNAME" ]; then
+				Log " rm $MOUNTBASE/$DISPLAYNAME"
+				rm $MOUNTBASE/$DISPLAYNAME
+			fi
+#echo "DIR=$DIR DISPLAYNAME=$DISPLAYNAME"
+			for FILE in $(ls -a $DIR.$ETHIP-$DISPLAYNAME 2>/dev/null ); do
+				NUMOFLINKS=$(ls $DIR.*-$DISPLAYNAME | wc -l)
+#echo "FILE=$FILE DISPLAYNAME=$DISPLAYNAME NUMOFLINKS=$NUMOFLINKS"
+				rm "$FILE" && Log " rm $FILE (Statusfile)"
+				for FILE2 in $(ls $DIR | grep $DISPLAYNAME); do
+					if [ -L "$DIR$FILE2" ]; then
+						LINK=$DIR$FILE2
+#echo "LINK=$LINK MEDIA=$MEDIA"
+						SUBLINK=$(readlink $LINK)
+#echo "SUBLINK=$SUBLINK = $MOUNTBASE/.$MEDIA-$DISPLAYNAME"
+					 	if [ "$SUBLINK" = "$MOUNTBASE/.$MEDIA-$DISPLAYNAME" ]; then
+							if [ "$NUMOFLINKS" = "1" ]; then
+								rm "$LINK"
+								Log " rm $LINK -> $SUBLINK (LINK)"
+								if echo $( echo $LOCAL_MEDIADIR | cut -d\  -f$n) | grep -q recordings; then
+									UPDATERECS=yes
+								fi
+							fi
+							while [ -L "$SUBLINK" ]; do
+								SUBLINK2=$(readlink $SUBLINK)
+								rm "$SUBLINK"
+								Log " rm $SUBLINK -> $SUBLINK2 (SUBLINK)"
+								if echo $( echo $LOCAL_MEDIADIR | cut -d\  -f$n) | grep -q recordings; then
+									UPDATERECS=yes
+								fi
+								SUBLINK=$SUBLINK2
+							done
+						fi
+					fi
+				done
+			done
+
+		fi
+		n=$( expr $n + 1 )
+	done
+}
+
+get_ip_from_link () {
+	HASIP=no
+	IPFROMDEST="$(readlink $LINK | cut -d/ -f3 | cut -d\- -f2 | egrep "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$")"
+	if [ "$IPFROMDEST" != "" ]; then
+		HASIP="$IPFROMDEST"
+	else
+		IPFROMNAME="$(basename "$LINK" | cut -d\- -f2 | egrep "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$")"
+		if [ "$IPFROMNAME" != "" ]; then
+			HASIP="$IPFROMNAME"
+		fi
+	fi
+}
+
+set_links_mountbase () {
+	[ -d "$MOUNTPOINT" ] && ln -sf "$MOUNTPOINT" "$MOUNTBASE/$DISPLAYNAME"
+}
+
+set_links_mediadevice () {
+	if [ "$MEDIADEVICE2" = "mediadevice" ]; then
+		n=1
+		for MEDIA in $LOCAL_MEDIAVAR; do
+#			echo "MEDIA=$MEDIA MEDIATYPE=$MEDIATYPE"
+			if [ "$MEDIATYPE" = "$MEDIA" ]; then
+				MOUNTPOINT=$(eval echo \$MEDIADEVICE_$MEDIA)
+				EXISTLINK=$(echo $LOCAL_MEDIADIR | cut -d\  -f$n)
+				EXISTLINK=$MEDIADIR/$(basename $EXISTLINK)
+				if [ -L $EXISTLINK ] && [ -d "$MOUNTPOINT" ]; then
+					finddir2link
+					rm $EXISTLINK
+					ln -s "$MOUNTPOINT/$DIR$SUBDIR" "$EXISTLINK"
+					Log " linke $MOUNTPOINT/$DIR$SUBDIR -> $EXISTLINK"
+					if echo $( echo $LOCAL_MEDIADIR | cut -d\  -f$n) | grep -q recordings; then
+						UPDATERECS=yes
+					fi
+				fi
+			fi
+			n=$( expr $n + 1 )
+		done
+	fi
+}
+
+set_links_mediadirs () {
+	if [ ! "$DISPLAYNAME" = "" ]; then
+		n=1
+		for MEDIA in $LOCAL_MEDIAVAR; do
+			if [ "$MEDIATYPE" = "$MEDIA" ] || [ "$MEDIATYPE" = "ALLMEDIA" ]; then
+				if [ "$(eval echo \$$MEDIA)" = "yes" ]; then
+					EXISTLINK=$(echo $LOCAL_MEDIADIR | cut -d\  -f$n)/$DISPLAYNAME
+					EXISTLINK=$(echo $EXISTLINK | sed 's#/$##g;')
+					if [ -e $EXISTLINK ] && [ ! -L $EXISTLINK ]; then
+						Log " rename $EXISTLINK -> $EXISTLINK.org"
+						mv $EXISTLINK $EXISTLINK.org
+					fi
+					finddir2link
+					link_subdir
+				fi
+			fi
+			n=$( expr $n + 1 )
+		done
+	fi
+}
+
+finddir2link () {
+	for NAS_DIR in $(eval echo \${NAS2_$(echo $LOCAL_MEDIAVAR | cut -d\  -f$n)}); do
+		NAS_DIR="$(eval echo $NAS_DIR)"
+		NAS_DIR_BASE=$(basename $NAS_DIR)
+		NAS_DIR="$NAS_DIR/"
+		NAS_DIR_LOW=$(echo $NAS_DIR | tr [:upper:] [:lower:])
+		DIR=$(dirname $NAS_DIR)
+		if [ $DIR = "." ]; then
+			DIR=""
+		else
+			DIR=$DIR/
+		fi
+#		echo "DIR: $DIR NAS_DIR: $NAS_DIR"
+		if [ -d $MOUNTPOINT/$DIR ]; then
+			for SUBDIR in $(ls -a $MOUNTPOINT/$DIR | grep -i $NAS_DIR_BASE); do
+				SUBDIR_LOW=$(echo $SUBDIR | tr [:upper:] [:lower:])
+#				echo "SUBDIR: $DIR$SUBDIR_LOW/ = $NAS_DIR_LOW"
+				if [ "$DIR$SUBDIR_LOW/" = "$NAS_DIR_LOW" ] && [ -d $MOUNTPOINT/$DIR$SUBDIR ]; then
+#					echo "Ergebnis: $MOUNTPOINT/$DIR$SUBDIR"
+					break 2
+				fi
+			done
+		fi
+	done
+}
+
+link_subdir () {
+#	echo "MOUNTNR: $MOUNTNR $MOUNTPOINT $MEDIADEVICE , $MEDIA: $(eval echo \$MEDIADEVICE_$MEDIA)"
+	if [ -d "$MOUNTPOINT" ]; then
+		if [ "$MOUNTPOINT" = "$MEDIADEVICE" ] || [ "$MOUNTPOINT" = "$(eval echo \$MEDIADEVICE_$MEDIA)" ]; then
+			Log " Link auf das Mediadevice nicht zulässig: $MOUNTPOINT, $MEDIA"
+		else
+			touch $( echo $LOCAL_MEDIADIR | cut -d\  -f$n)/.$ETHIP-$DISPLAYNAME
+			LINKNAME="$( echo $LOCAL_MEDIADIR | cut -d\  -f$n)/$DISPLAYNAME"
+			if ls -l $( echo $LOCAL_MEDIADIR | cut -d\  -f$n)/ | grep -q $MOUNTBASE/.$MEDIA-$DISPLAYNAME$ ; then
+				Log " Link auf $MOUNTPOINT/$DIR$SUBDIR schon vorhanden"
+			else
+				I=0
+				while [ -L $LINKNAME ] ; do
+					[ $(readlink $LINKNAME) = "$MOUNTBASE/.$MEDIA-$DISPLAYNAME" ] && break 2
+					LINKNAME="$LINKNAME"_
+					I=$(( $I + 1 ))
+					[ "$I" = "10" ] && break
+				done
+			fi
+#			echo "ln -sf $MOUNTPOINT/$DIR$SUBDIR $MOUNTBASE/.$MEDIA-$DISPLAYNAME"
+			[ -e "$MOUNTBASE/.$MEDIA-$DISPLAYNAME" ] || ln -sf "$MOUNTPOINT/$DIR$SUBDIR" "$MOUNTBASE/.$MEDIA-$DISPLAYNAME"
+#			echo "ln -sf  $MOUNTBASE/.$MEDIA-$DISPLAYNAME $LINKNAME"
+			[ -e "$LINKNAME" ] || ln -sf "$MOUNTBASE/.$MEDIA-$DISPLAYNAME" "$LINKNAME"
+			Log " linke $LINKNAME -> $MOUNTBASE/.$MEDIA-$DISPLAYNAME -> $MOUNTPOINT/$DIR$SUBDIR"
+			if echo $( echo $LOCAL_MEDIADIR | cut -d\  -f$n) | grep -q recordings; then
+				UPDATERECS=yes
+			fi
+		fi
+	fi
+}
+
+search_linkcycles () {
+	SEARCHDIR="$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR/"
+	if [ -d $SEARCHDIR ]; then
+		for LINK in $($FIND $SEARCHDIR -maxdepth 2 -type l) ; do
+			TEST=$(readlink $LINK | cut -d/ -f-3)
+			if [ "$TEST/" = "$SEARCHDIR" ]; then
+				rm $LINK
+				Log " rm $LINK (search_linkcycles)"
+				if echo $( echo $LOCAL_MEDIADIR | cut -d\  -f$n) | grep -q recordings; then
+					UPDATERECS=yes
+				fi
+			fi
+		done
+	fi
+}
+
+Log () {
+	[ $LOGGING = "yes" ] && echo "$(date +%s.%N) $ETHIP $1" >> $LOG
+}
+
+
+#
+# Main
+#
+
+BASE=""
+USEMOUNT=""
+MEDIADEVICE2="" 
+MEDIATYPE=allmedia
+AMSUSPEND=no
+NETMOUNT="[SNA][MF][BSP]_STARTCLIENT"
+
+PARAMETER=$@
+
+if [ "$1" = "" ];then
+	SOPTION="start"
+else
+	SOPTION="$1"
+	shift
+fi
+
+while [ $# -gt 0 ]; do
+	case $1 in
+		recordings|music|pictures|video|dvd|allmedia|videos|dvds)
+			MEDIATYPE=$1
+			[ $MEDIATYPE = "video" ] && MEDIATYPE=videos
+			[ $MEDIATYPE = "dvd" ] && MEDIATYPE=dvds
+			AMSUSPEND=yes
+			;;
+		mediadevice)
+			MEDIADEVICE2="mediadevice"
+			PREFIX=MEDIADEVICE
+			BASE=$PREFIX
+			AMSUSPEND=yes
+			;;
+		*)
+			if [ -d "$1" ]; then
+				echo "Mountpoint not implementet jet."
+				MOUNTPOINT=$1
+				NETMOUNT=""
+				exit 2
+			else
+				USEMOUNT=$1
+			fi
+			;;
+	esac
+	shift
+done
+
+MEDIATYPE_LOW=$MEDIATYPE
+MEDIATYPE=$(echo $MEDIATYPE | awk '{ print toupper($1) }')
+
+[ "$MEDIADEVICE2" = "mediadevice" ] && NETMOUNT=$MEDIATYPE
+
+#echo "SOPTION $SOPTION - USEMOUNT $USEMOUNT - MEDIATYPE $MEDIATYPE"
+
+if [ $AMSUSPEND = "yes" ] && [ $SOPTION = "stop" ]; then
+	touch -d "1 jan 1970 utc + $(expr $(date +%s) + $AMSLEEP) secs" $AMCHECKFILE
+	if ps axo pid,comm | grep -q $(cat /var/run/automounter.pid); then
+		while ! [ -e "$AMSUSPENDFILE" ]; do
+			sleep 1
+			echo sleeping
+		done
+	fi
+fi
+[ $AMSUSPEND = "yes" ] && [ $SOPTION = "start" ] && rm -f $AMCHECKFILE
+
+UPDATERECS=no
+LENGTH=$(echo $PREFIX | wc -c)
+
+ETH_DEVICES="br0 eth0 eth1 eth2 ath0 wlan0"
+for ETHDEV in $ETH_DEVICES; do
+	ETHIP=$(ifconfig $ETHDEV 2> /dev/null | grep 'inet ' | cut -d ':' -f 2 | cut -d ' ' -f 1)
+	[ "$ETHIP" != "" ] && break
+done
+LOG=/media/reel/recordings/link-shares-$ETHIP.log
+Log "$0 $PARAMETER (PID=$$ PPID=$PPID)"
+
+#if ls -l /media/ | grep ^l | grep mount | egrep -v "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$" > /dev/null ; then
+#	Log "Migrationsmodus"
+#	MIGRATION=yes
+#	HOSTMOUNT="-$HOSTNAME"
+#	[ $SOPTION = "start" ] && SOPTION=restart
+#else    
+#	HOSTMOUNT="-$ETHIP"
+#fi 
+
+case $SOPTION in
+	start|stop)
+		[ "$MEDIATYPE" = "VIDEOS" ] && [ ! "$MEDIADEVICE2" = "mediadevice" ] && $0 $SOPTION $USEMOUNT dvd  # TODO: zu unflexibel 
+#		echo "grep ^$PREFIX $SYSCONFIG | grep \"$BASE${USEMOUNT}_$NETMOUNT\""
+		for MOUNT in $(grep ^$PREFIX $SYSCONFIG | grep "$BASE${USEMOUNT}_$NETMOUNT"); do
+			MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+			if [ "$MEDIADEVICE2" = "mediadevice" ]; then
+				MOUNTPOINT=$(echo $MOUNT | cut -d= -f2 | sed 's/\"//g') 
+			else
+				MOUNTPOINT="$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR"
+			fi
+#			echo "MOUNTPOINT $MOUNTPOINT - MOUNTNR $MOUNTNR - MOUNT $MOUNT"
+			TYPE=$(echo $MOUNT | cut -d= -f1 | cut -d_ -f2)
+			case $SOPTION in
+				start)
+					if [ "$MEDIADEVICE2" = "mediadevice" ]; then
+						[ $LSB = no ] && echo "Linking Mediadevice $MOUNTPOINT ($MEDIATYPE_LOW)" || Syslog "Linking Mediadevice $MOUNTPOINT ($MEDIATYPE_LOW)"
+						Log "Linking Mediadevice $MOUNTPOINT ($MEDIATYPE_LOW)"
+						prep2
+						set_links_mediadevice
+					elif [ $(echo $MOUNT | cut -d= -f2) = "\"yes\"" ]; then
+						[ $LSB = no ] && echo "Linking $MOUNTPOINT ($MEDIATYPE_LOW)" || Syslog "Linking $MOUNTPOINT ($MEDIATYPE_LOW)"
+						Log "Linking $MOUNTPOINT ($MEDIATYPE_LOW)"
+						prep
+						prep2
+						set_links_mountbase
+						set_links_mediadirs
+						search_linkcycles
+					fi
+					;;
+				stop)
+					if [ "$MEDIADEVICE2" = "mediadevice" ]; then
+						[ $LSB = no ] && echo "Unlinking Mediadevice $MOUNTPOINT ($MEDIATYPE_LOW)" || Syslog "Unlinking Mediadevice $MOUNTPOINT ($MEDIATYPE_LOW)"
+						Log "Unlinking Mediadevice $MOUNTPOINT ($MEDIATYPE_LOW)"
+						MEDIATYPE=$(echo $MEDIATYPE | sed 's/DVDS/DVD/' | sed 's/VIDEOS/VIDEO/')
+						[ -L $(eval echo \$${MEDIATYPE}DIR) ] && rm $(eval echo \$${MEDIATYPE}DIR) && Log " rm $(eval echo \$${MEDIATYPE}DIR) (mediadevice)"
+					else
+						[ $LSB = no ] && echo "Unlinking $MOUNTPOINT ($MEDIATYPE_LOW)" || Syslog "Unlinking $MOUNTPOINT ($MEDIATYPE_LOW)"
+						Log "Unlinking $MOUNTPOINT ($MEDIATYPE_LOW)"
+						prep
+						prep2
+						remove_links
+					fi
+					;;
+			esac
+		done
+
+		# cause vdr to re-read videodir
+		Log " Aufnahmen neu einlesen? UPDATERECS=$UPDATERECS"
+		[ "$UPDATERECS" = "yes" ] && touch $RECORDINGSDIR/.update
+                ;;
+	restart)
+		$0 stop $USEMOUNT $MEDIATYPE_LOW
+		sleep 1
+		$0 start $USEMOUNT $MEDIATYPE_LOW
+		$0 check
+		;;
+	check)
+		# remove links from activated, but not mounted shares (automounter)
+		for MOUNT in $(grep ^$PREFIX $SYSCONFIG | grep "$BASE${USEMOUNT}_[SNA][MF][BSP]_STARTCLIENT"); do
+			MOUNTNR=$(echo $MOUNT | cut -d_ -f1 | cut -c$LENGTH-)
+			MOUNTPOINT="$MOUNTBASE/$MOUNTPREFIX$DELIM$MOUNTNR"
+			if [ $(echo $MOUNT | cut -d= -f2) = "\"yes\"" ] && ! grep -q $MOUNTPOINT /proc/mounts; then
+				echo "remove dead links for $MOUNTPOINT ..."
+				remove_links
+			fi
+		done
+		;;
+	-h|--help)
+		syntax
+		exit 1
+		;;
+	*)
+		echo "Unknown option $SOPTION."
+		syntax
+		exit 2
+		;;
+esac

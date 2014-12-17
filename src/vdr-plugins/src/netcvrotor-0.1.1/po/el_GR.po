@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: netcvrotor 0.1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-19 11:57+0200\n"
+"PO-Revision-Date: 2008-10-22 18:07+0200\n"
+"Last-Translator: RMM Team <reelbox-devel@mailings.reelbox.org>\n"
+"Language-Team: RMM Team <reelbox-devel@mailings.reelbox.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Rotor settings"
+msgstr ""
+
+msgid "no rotor available"
+msgstr ""
+
+msgid "Go to position"
+msgstr ""
+
+msgid "Transponders"
+msgstr ""
+
+msgid "Perform transponder scan"
+msgstr ""
+
+msgid "Please select the rotor position"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "STR"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "moving rotor"
+msgstr ""
+
+msgid "Status: Rotor stopped. Current deviation: "
+msgstr ""
+
+msgid "Status: Rotor is moving to a cached position"
+msgstr ""
+
+msgid "Status: Rotor is moving to an uncached position"
+msgstr ""
+
+msgid "Status: Rotor is doing autofocus"
+msgstr ""
+
+msgid "Lock: yes"
+msgstr ""
+
+msgid "Lock: no"
+msgstr ""
+
+msgid "Rotor interface for NetCeiver"
+msgstr ""
+
+msgid "Rotor Setup"
+msgstr ""

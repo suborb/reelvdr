@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# runvdr: Loads the DVB driver and runs VDR
+#
+# If VDR exits abnormally, the driver will be reloaded
+# and VDR restarted.
+#
+# Set the environment variable VDRUSR to the user id you
+# want VDR to run with. If VDRUSR is not set, VDR will run
+# as 'root', which is not necessarily advisable.
+#
+# Since this script loads the DVB driver, it must be started
+# as user 'root'.
+#
+# Any command line parameters will be passed on to the
+# actual 'vdr' program.
+#
+# See the main source file 'vdr.c' for copyright information and
+# how to reach the author.
+
+DVBDIR="../DVB/driver"
+DVBREM="$DVBDIR/../apps/av7110_loadkeys"
+VDRPRG="./vdr"
+VDRCMD="$VDRPRG -w 60 -Premote $*"
+
+LSMOD="`/sbin/lsmod | grep -w '^dvb' | wc -l`"
+KILL="/usr/bin/killall -q -TERM"
+
+# Load driver if it hasn't been loaded already:
+if [ $LSMOD -eq 0 ] ; then
+   (cd $DVBDIR; make insmod)
+   fi
+
+while (true) do
+      # next line is _not_ required if autodetect mode is used
+      $DVBREM/av7110_loadkeys $DVBREM/hauppauge.rc5 > /proc/av7110_ir 
+      su $VDRUSR -c "$VDRCMD"
+      if test $? -eq 0 -o $? -eq 2; then exit; fi
+      date
+      echo "restarting VDR"
+      $KILL $VDRPRG
+      sleep 10
+      (cd $DVBDIR; make rmmod; make insmod)
+      date
+      done

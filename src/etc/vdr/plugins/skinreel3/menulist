@@ -1,0 +1,248 @@
+# CAREFUL IF YOU WANT TO EDIT. YOU MUST USE iso8859-15!
+#
+# Here you can define the type of menu
+# Enter with such syntax:
+# Title;Type[;flags;...]
+#
+# Title should be in English. In the runtime it'll be translated automatically.
+#
+# You may use Wildcard in Title, but use it only if no other way is possible!
+# Wildcard only works at end of the title, e.g.:
+# True: "Titlename*" => it will search after title, which begins with "Titlename"
+# Wrong: "Title*name" => it will search after title, which contains "Title*name"
+#
+# Following types are available:
+# menunormal, menucentered, setupnormal, setupcentered, help, bouquets, image, music, video
+#
+# Following flags are available:
+# ;imgnum      # The Numbers of Menuitem are shown as image
+# ;uppercase   # The text of Menuitem are upper cased
+
+#Menu
+Main Menu*;menugimmick;imgnum;uppercase # Wildcard because in mainmenu there are infos about Disksize in title
+Title$Menu*;menucentered;imgnum;uppercase # Wildcard because in mainmenu there are infos about Disksize in title
+TV & Radio;tvradio
+Music & Pictures;musicpictures
+Films & DVD;filmsdvd
+Internet & Extras;internetextras
+Additional Software;optsoftware
+Multimedia;systemsettings
+
+###MediaCenter
+#MediaCenter;menucentered;imgnum
+My Pictures*;image
+My Images*;image
+My Music*;music
+My Videos*;video
+Media Manager;menucentered
+Choose action*;video
+Media Streaming;menucentered;imgnum
+Internet Service ;menucentered;imgnum
+Directory browser;music
+Mediaplayer*;menunormal
+Music Browser*;music;linespace=180
+Music;music
+Music*;music;
+Found:*;music;
+iPod;music
+iPod -> *;music
+Musicplayer;normal
+
+#Filebrowser;menunormal;imgnum
+Create directory;menunormal
+Filebrowser*;menunormal
+File informations;music
+Filebrowser Commands;menunormal;imgnum
+Insert in playlist*;menunormal
+Internet-Radio Functions;menunormal;imgnum
+Internet Radio -*;menucentered
+Internet Radio;internetradio
+Internet Radio*;music
+Playlist actions;menunormal;imgnum
+Playlist Commands;menunormal;imgnum
+Playlist:*;menunormal
+Rename entry;menunormal
+Open playlist*;music
+Save playlist*;music
+Save playlist as;menunormal
+Copy playlist*;menunormal
+
+Program Guide;menucentered;imgnum
+International EPG;menucentered;imgnum
+Timer Manager;menucentered;imgnum
+SleepTimer;poweroff
+
+
+Extras;menucentered;imgnum
+Games;menucentered;imgnum
+Multifeed Options;multifeed
+
+#Setup
+Title$Setup;setupcentered;smallbuttons
+Setup*;setupnormal
+#Settings;setupcentered;imgnum
+Settings*;setupnormal
+Installation;setupcentered;smallbuttons
+Basic Settings;setupcentered;smallbuttons
+Setup.OSD$Language;setupnormal
+OSD & Language;setupnormal
+OSD - Expertmenu;setupnormal
+Timezone*;setupnormal
+Front Panel;setupnormal
+EPG Services;setupnormal
+TVTV Service;setupnormal
+Antenna settings/DiSEqC;setupnormal
+Reception Settings;setupcentered;smallbuttons
+Installation Wizard*;setupnormal
+Installation Wizard *;setupnormal
+Network;setupnormal
+Network Settings;setupcentered;smallbuttons
+Network Drives*;setupnormal
+Network*;setupcentered;smallbuttons
+Global Settings;setupnormal
+Ethernet;setupnormal
+UMTS*;setupnormal
+Wireless LAN*;setupnormal
+WPA Settings;setupnormal
+WEP Settings;setupnormal
+Expert Settings;setupnormal
+Network Drives;setupnormal
+#Network Filesystem*;setupnormal
+Manual Network Connections;setupnormal;imgnum
+Windows Network Connection;setupnormal
+NFS Client;setupnormal
+Dynamic DNS;setupcentered;imgnum
+GnuDIP service;setupnormal
+DynDNS service;setupnormal
+Recording;setupnormal
+Video Recorder ;setupcentered;smallbuttons
+Permanent Timeshift;setupnormal
+Replay;setupnormal
+Prepare disk:*;setupnormal
+Common Interface;setupnormal
+Background Services;setupnormal
+Channelscan;setupnormal
+Channel Lists;setupnormal
+Channel lists functions;menunormal;imgnum
+Software Update;setupnormal;imgnum
+NetCeiver;setupnormal
+Antenna settings;setupnormal
+Rotor Setup;setupnormal
+NetCeiver firmware update;setupnormal
+Remote Control / Automation;setupnormal
+System Settings;systemsettings
+Settings: System Settings;systemsettings
+Energy Options;setupnormal
+System Information;setupnormal
+NetCeiver diagnostics;setupnormal
+MultiRoom Setup*;setupnormal
+MultiRoom - Error!;setupnormal
+Factory defaults;setupnormal
+Streaming Clients;setupnormal
+
+#Plugins Menu
+Media Player;menucentered
+Title$Childlock;menucentered;imgnum
+
+#Plugin extrecmenu (Recording commands)
+Recording commands;menunormal;imgnum
+Directory commands;menunormal;imgnum
+Recording info;video
+Move recording;video
+Rename directory;video
+Rename;video
+Childlock*;video
+Mark Commercials;menunormal
+Mark as New;menunormal
+Remove Archive Mark;menunormal
+Remove Crop Mark;menunormal
+Remove Archived Recording;menunormal
+Restore Archived Recording;menunormal
+Undelete Recordings*;menunormal
+Convert to MPEG (TS);menunormal
+Compress recording;menunormal
+New folder;video
+Directory Selector:*;video
+Select Media;video
+
+#Plugin channelscan
+Channel lists*;setupnormal
+
+#Plugin epgsearch
+EPG Commands: *;menunormal;imgnum
+Search actions;menunormal;imgnum
+Search entries;menunormal
+Search templates;menunormal
+Edit search;menunormal
+Edit timer*;menunormal
+New timer;menunormal
+Edit blacklist;menunormal
+Edit template;menunormal
+Edit user-defined days of week;menunormal
+found recordings;menunormal
+Select directory*;menunormal
+Timer conflicts -*;menunormal
+*Recordings;menunormal
+Activation of search timer;menunormal
+Timers;menunormal
+Description:*;menunormal
+Search results*;menunormal
+
+#Plugin xepg
+External BBC-SKY EPG;menunormal
+
+#Plugin dvdswitch
+My DVDs*;menunormal
+Commands;menunormal;imgnum
+
+#Plugin extrecmenu
+Details;video
+Change title;video
+Search Recordings;menunormal
+
+#Plugin ReelBlog
+Select Reelblog item;menunormal
+
+#Plugin ripit
+Archive Audio-CD*;music
+Audio-CD*;music
+
+#Plugin burn
+#DVD brennen*;filmsdvd
+Write DVD - Job;video
+Write DVD - Job options;video
+Edit recording details;video
+
+#Help
+Help*;help
+
+#Bouquets
+Bouquets;bouquets
+Edit Bouquets;bouquets
+Bouquet selection;bouquets
+Customize Bouquets;bouquets
+
+#Channels
+Channellist: set filters;menunormal;imgnum
+
+#Standby Mode
+Power Off ReelBox;poweroff
+
+#Noad
+Mark Commercials;menunormal
+
+#Plugin reelchannellist
+Functions: Select *;menunormal
+Functions: search *;menunormal
+Functions: Create *;menunormal
+Functions: Rename *;menunormal
+Functions: Move Channel;menunormal
+Functions: Move favourites bouquet;menunormal
+Functions: Favourites;menunormal;imgnum
+Functions: Provider*;menunormal;imgnum
+Functions: Channel *;menunormal;imgnum
+Functions: CI-slot assignment;menunormal;imgnum
+Sources;menunormal
+Providers;menunormal
+Channel List:*;menunormal
+

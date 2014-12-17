@@ -1,0 +1,48 @@
+#
+# User defined Makefile options for the Video Disk Recorder
+#
+# Copy this file to 'Make.config' and change the parameters as necessary.
+#
+# See the main source file 'vdr.c' for copyright information and
+# how to reach the author.
+#
+# $Id: Make.config.template 2.3 2011/03/13 13:41:12 kls Exp $
+
+### The C compiler and options:
+
+CC       = gcc
+CFLAGS   = -g -O3 -Wall
+
+CXX      = g++
+CXXFLAGS = -g -O3 -Wall -Woverloaded-virtual -Wno-parentheses
+
+ifdef PLUGIN
+CFLAGS   += -fPIC
+CXXFLAGS += -fPIC
+endif
+
+### The directory environment:
+
+#DVBDIR   = /usr/src/v4l-dvb/linux
+MANDIR   = /usr/local/man
+BINDIR   = /usr/local/bin
+
+LOCDIR   = ./locale
+PLUGINDIR= ./PLUGINS
+PLUGINLIBDIR= $(PLUGINDIR)/lib
+VIDEODIR = /video
+CONFDIR  = $(VIDEODIR)
+
+### The remote control:
+
+LIRC_DEVICE = /dev/lircd
+RCU_DEVICE  = /dev/ttyS1
+
+## Define if you want vdr to not run as root
+#VDR_USER = vdr
+
+### You don't need to touch the following:
+
+ifdef DVBDIR
+INCLUDES += -I$(DVBDIR)/include
+endif

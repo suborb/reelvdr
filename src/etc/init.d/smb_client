@@ -1,0 +1,134 @@
+#!/bin/sh
+#
+# Reelbox Samba Client Start/Stop
+#
+# (C) 2005 by Reel Multimedia AG http://www.reelbox.org
+# Author: RollerCoaster@reel-multimedia.com
+# Licence: GPL2
+# History: 20050629 initial re(e)lease
+#          20060110 yogi.123: use cifs instead of smbfs
+#
+
+PATH="/sbin:/bin:/usr/bin"
+
+NAME=smb_client
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+# Load the VERBOSE setting and other rcS variables
+[ -f /etc/default/rcS ] && . /etc/default/rcS
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+
+
+
+# Source sysconfig
+. /etc/default/sysconfig
+. /etc/default/globals
+
+#Global vars
+if [ "$1" = "" ];then
+	SOPTION="start"
+else
+	SOPTION="$1"
+fi
+
+
+KERNMODS=""
+
+MOUNTPOINT="/media/smb"
+MEDIADIR="/media/hd"
+
+MAP_UID=reel
+MAP_GID=ftpusers
+
+#
+# Functions
+#
+syntax () {
+cat << EOF
+Usage: `basename $0` [start | stop | reload]
+Options:
+     [start | stop | reload]
+     no option: start
+
+Description:
+     Starts ReelBox Samba (Windows Network) Client
+EOF
+}
+
+#Startfunction
+fstart () {
+if [ "$START_SMBCL" = "yes" ];then
+	#smbmount //$SAMBA_PC/$SAMBA_SHARECL $MOUNTPOINT -o username=$SMB_USER,password=$SMB_PASSWORD
+	#modprobe nls_cp437
+	if ! grep -q cifs /proc/filesystems ; then
+		modprobe cifs
+		sleep 1
+	fi
+	[ ! -d $MOUNTPOINT ] && mkdir $MOUNTPOINT
+	#kill the mount after 45s
+	( sleep 45 ; killall mount ) &
+
+	mount -t cifs -o username=$SMB_USER,password=$SMB_PASSWORD,uid=$MAP_UID,gid=$MAP_GID //$SAMBA_PC/$SAMBA_SHARECL $MOUNTPOINT
+	if [ $? = 0 ] ; then
+		Syslog "successfully mounted cifs://$SAMBA_PC/$SAMBA_SHARECL to $MOUNTPOINT"
+	else
+		rmdir $MOUNTPOINT
+		return 1
+	fi
+
+	if [ -f $MOUNTPOINT/$NAS_DVDDIR ] && [ ! -f $MEDIADIR/video/$NAS_DVDDIR ]; then
+		ln -s $MOUNTPOINT/$NAS_DVDDIR $MEDIADIR/video/
+	fi
+fi
+}
+
+#Stopfunction
+fstop () {
+	#we umount everything, just to be shure...
+	#rm $VIDEOTARGET
+	umount $MOUNTPOINT
+	rmdir $MOUNTPOINT
+}
+
+#
+# Main
+#
+
+
+case $SOPTION in
+	start)
+		if [ "$START_SMBCL" = "yes" ];then
+			log_daemon_msg "Starting samba client"
+			fstart
+			log_end_msg $?
+		else
+			log_warning_msg "Samba is turned off in sysconfig."
+			exit 1
+		fi
+		;;
+	stop)
+		fstop
+		;;
+	restart)
+		fstop
+		sleep 1
+		fstart
+		/usr/sbin/nas_dvdlink.sh &
+		;;
+	-h)
+		syntax
+		exit 0
+		;;
+	*)
+		echo "Unknown option $SOPTION."
+		syntax
+		exit 2
+		;;
+esac
+
+exit 0

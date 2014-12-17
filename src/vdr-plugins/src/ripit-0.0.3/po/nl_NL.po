@@ -1,0 +1,157 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ripit\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 16:14+0200\n"
+"PO-Revision-Date: 2011-09-07 18:41+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "user defined"
+msgstr "gebruiker gedefinieerd"
+
+msgid "low"
+msgstr "laag"
+
+msgid "standard"
+msgstr "standaard"
+
+msgid "great"
+msgstr "geweldig"
+
+msgid "best"
+msgstr "beste"
+
+msgid "Destination format"
+msgstr "Bestemmings formaat"
+
+msgid "Hide mainmenu entry"
+msgstr "Verberg het hoofdmenu"
+
+msgid "Shutdown when finished"
+msgstr "Afsluiten indien gereed"
+
+msgid "Verbose output"
+msgstr "Verbose output"
+
+msgid "Fast mode"
+msgstr "Snelle modus"
+
+msgid "Eject CD when finished"
+msgstr "CD uitwerpen na beëindigen taak"
+
+msgid "Presets"
+msgstr "Voorkeuzes"
+
+msgid "Min. bitrate"
+msgstr "Min. bitrate"
+
+msgid "Max. bitrate"
+msgstr "Max. bitrate"
+
+msgid "More encoder settings"
+msgstr "Meer instellingen voor de encoder"
+
+msgid "Device"
+msgstr "Apparaat"
+
+msgid "Directory for ripped tracks"
+msgstr "Directory voor de geripte nummers"
+
+msgid "Priority of task (nice)"
+msgstr "Taak prioriteit (nice)"
+
+msgid "Encode remotely"
+msgstr "Externe decodering"
+
+msgid "Options for remote encoding"
+msgstr "Instellingen voor externe decodering"
+
+msgid "Abort"
+msgstr "Afbreken"
+
+msgid "No CD found in drive."
+msgstr "Geen CD in drive gevonden."
+
+msgid "Info:"
+msgstr "Informatie:"
+
+msgid "Please insert an audio CD to archive it."
+msgstr "Plaats een CD om deze te archiveren."
+
+msgid "CD found in drive."
+msgstr "CD in drive gedetecteerd."
+
+msgid "Please select archive format and quality and press RED to start archiving your audio CD."
+msgstr "Selecteer archief-formaat en kwaliteit en druk ROOD om het proces te starten."
+
+msgid "Quality"
+msgstr "Kwaliteit"
+
+msgid "Copy"
+msgstr "Kopiëren"
+
+msgid "Ripped: \t"
+msgstr "Geript: \t"
+
+msgid "completed"
+msgstr "klaar"
+
+msgid "Ripping: \t"
+msgstr "Rippen: \t"
+
+msgid "Encoded: \t"
+msgstr "Gecodeerde: \t"
+
+msgid "Encoding: \t"
+msgstr "bezig met gecodeerde \t"
+
+msgid "Completed"
+msgstr "Klaar"
+
+msgid "Aborted"
+msgstr "Afgebroken"
+
+msgid "No medium found"
+msgstr "Geen media gevonden"
+
+msgid "Searching CDDB entry, please wait"
+msgstr "Zoeken CDDB bestand, even geduld a.u.b."
+
+msgid "Total Tracks: "
+msgstr "Nummers totaal: "
+
+msgid "Reading CD"
+msgstr "Lees CD"
+
+msgid "PROCESS MANUALLY ABORTED"
+msgstr "PROCES HANDMATIG GEANNULEERD"
+
+msgid "Encoding tracks"
+msgstr "Gecodeerde nummers"
+
+msgid "Ripping and Encoding tracks"
+msgstr "Rippen & gecodeerde van de nummers"
+
+msgid "Audio-CD ripper"
+msgstr "Audio-CD ripper"
+
+msgid "Archive Audio-CD"
+msgstr "Archiveer Audio-CD"
+
+msgid "Audio-CD archive "
+msgstr "Audio-cd archief"
+
+#~ msgid "No ripping in progress"
+#~ msgstr "rippen niet actief"

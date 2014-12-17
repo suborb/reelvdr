@@ -1,0 +1,191 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Oktay Yolgeçen <oktay_73@yahoo.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2008-10-01 15:59+0200\n"
+"Last-Translator: Oktay Yolgeçen <oktay_73@yahoo.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr "DPKG Eklenti"
+
+msgid "Start Online Update"
+msgstr "Online Güncelleme Başla "
+
+msgid "Updates available! Press OK to update now."
+msgstr "Güncelleme Bulundu! OK?"
+
+msgid "Addon Plugin"
+msgstr ""
+
+msgid "Optional Software "
+msgstr "Option Software"
+
+msgid "Online Update"
+msgstr "Online Güncelleme"
+
+msgid "Updating sources..."
+msgstr "Sourcesler Yükleniyor"
+
+msgid "Updating packages..."
+msgstr "Paketler Yükleniyor"
+
+msgid "Rebooting, please wait..."
+msgstr "System Yeni Start - Lütven Bekleyiniz!"
+
+msgid "Execute aptitude upgrade"
+msgstr ""
+
+msgid "Execute apt upgrade"
+msgstr ""
+
+msgid "Execute base install"
+msgstr ""
+
+msgid "Execute forced aptitude upgrade"
+msgstr ""
+
+msgid "Execute forced apt upgrade"
+msgstr ""
+
+msgid "Software update via online connection:"
+msgstr "Software Güncelleme Online Bağlantu Üzerinden"
+
+msgid "Upgrade"
+msgstr "Güncelleştirme"
+
+msgid "Install"
+msgstr "Tesis Et"
+
+msgid "Back"
+msgstr "Geri"
+
+msgid "Skip"
+msgstr "Atla"
+
+msgid "Packages"
+msgstr "Paketler"
+
+msgid "Optional"
+msgstr "Optionlar"
+
+msgid "Sources"
+msgstr "Sorcesler"
+
+#, fuzzy
+msgid "Please restart your ReelBox after the recording."
+msgstr "Lütven Yeni System Start Yapin!"
+
+msgid "Reboot ?"
+msgstr "System Yeni Start?"
+
+msgid "Button$Continue"
+msgstr ""
+
+msgid "Aborting..."
+msgstr ""
+
+msgid "Press OK to abort update."
+msgstr "OK - Update Başlat"
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr ""
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr ""
+
+msgid "Sources up to date. Searching for updates..."
+msgstr ""
+
+msgid "Sources up to date. Searching for packages..."
+msgstr ""
+
+msgid "Failed to process all packages!"
+msgstr ""
+
+msgid "Failed"
+msgstr "Hata Var!"
+
+msgid "Now select upgrade to install the new packages."
+msgstr ""
+
+msgid "Following packages will be updated:"
+msgstr ""
+
+msgid "The software is up to date."
+msgstr "Software Versionuz Yeni Durumda"
+
+msgid "No updates found."
+msgstr "Update Bulunamadi"
+
+msgid "Downloading Packages..."
+msgstr "Software Paketler Indiriliyor..."
+
+msgid "Processing Packages..."
+msgstr "Paketler Yükleniyor"
+
+msgid "All changes successfull!"
+msgstr "Bütün Degisiklikler Bitmistir!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Lütven Yeni System Start Yapin!"
+
+msgid "Please go into deep standby,"
+msgstr "Lütven Derin Uyku Moduna Giriniz"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "Lütven Yeni System Startan Sonra Tekrar Deneyiniz!"
+
+msgid "Error"
+msgstr "Hata Var!"
+
+msgid "Load"
+msgstr "Yükleniyor"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Lütven Internet Bağlantinizi Kontröl Ediniz"
+
+msgid "IGN"
+msgstr ""
+
+msgid "Source list"
+msgstr "Source Lis"
+
+msgid "Save"
+msgstr "Hafisa"
+
+msgid "Undo"
+msgstr ""
+
+msgid "Insert"
+msgstr "Bindir"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Unable to read from sources.list!"
+msgstr ""
+
+msgid "Unable to write to surces.list!"
+msgstr ""
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "DPKG Setup"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Optional Software Setup"
+
+#~ msgid "Recording is running !"
+#~ msgstr "Kayit Yapiliyor !"

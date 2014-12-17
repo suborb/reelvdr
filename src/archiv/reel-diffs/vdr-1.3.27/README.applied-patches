@@ -1,0 +1,38 @@
+# Patch-list for vdr 1.3.27
+# apply all these patches to a vanilla vdr and you'll have a vdr like in
+# svn
+ 
+vdr-1.3.27-enAIO-2.4r.diff
+vdr-1.3.21_27-Setup-0.1.0.diff
+vdr-1.3.22-Fd_Frontend.diff
+diseqc-0.9.diff
+vdr-1.3.27-nl-up.diff
+reel-reduced-buffers.diff
+reel-Makefile-opt.diff
+vdr-1.3.23-dvbspu.c.diff  (dvd--0.3.6_b03) (is this really needed?)
+vdr--k.diff
+
+reel-ca-slots.diff
+reel-changed-keys.diff
+reel-keyconf-v2.diff
+reel-branding.diff
+reel-ga-channel-hash.diff
+reel-remux-speedup.diff
+vdr-reelboxbase.diff
+keysinmacro.diff
+#reel-interface-fix.diff
+reel-misc.diff
+vdr-director.diff
+vdr-1.3.28-threadactive.diff
+vdr-1.3.24_add_DolbyInRecordings_switch.diff
+vdr-channelswitch-ok.diff
+vdr-1.3.27-auto-shutdown.diff
+vdr-4channelscan.diff (channelscan 0.1.0)
+vdr-1.3.27-timer-info-0.1c.diff
+vdr-1.3.27-reelcam.diff
+reelskin.diff
+reel-sortrecordings.diff
+reel-no-long-lists.diff
+
+suggestions:
++timercmds-0.1 (epgsearch)

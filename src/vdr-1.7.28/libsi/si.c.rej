@@ -1,0 +1,24 @@
+--- libsi/si.c	2008-03-05 17:00:55.000000000 +0000
++++ libsi/si.c	2008-09-26 23:30:48.567187538 +0100
+@@ -415,6 +418,21 @@
+       return;
+       }
+    bool singleByte;
++
++
++   if ( from[0] == 0x1f ) {
++       char *temp = freesat_huffman_decode(from, len);
++       if (temp ) {
++           len = strlen(temp);
++           len = len < size - 1 ? len : size - 1;
++           strncpy(buffer, temp, len);
++           buffer[len] = 0;
++           free(temp);
++           return;
++       }
++   }
++
++
+    const char *cs = getCharacterTable(from, len, &singleByte);
+    // FIXME Need to make this UTF-8 aware (different control codes).
+    // However, there's yet to be found a broadcaster that actually

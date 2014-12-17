@@ -1,0 +1,60 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-loadepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2008-02-10 08:58+0100\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Load EPG Data sent to Mediahighway receivers"
+msgstr "Lataa ohjelmisto-opas (Mediahighway)"
+
+msgid "LoadEPG"
+msgstr "Lataa ohjelmisto-opas"
+
+#, fuzzy
+msgid "Card not available"
+msgstr "EPG-tietoja ei ole saatavilla"
+
+msgid "Select a provider and press Ok"
+msgstr "Paina 'OK' valittuasi palveluntarjoajan"
+
+msgid "Wait load epg data"
+msgstr "Odota ohjelmisto-oppaan latautumista"
+
+msgid "No epg data available"
+msgstr "EPG-tietoja ei ole saatavilla"
+
+#, fuzzy
+msgid "No data epg available"
+msgstr "EPG-tietoja ei ole saatavilla"
+
+msgid "Use file channels equivalences"
+msgstr "Suodata päällekkäiset kanavat"
+
+msgid "No"
+msgstr "ei"
+
+msgid "Yes"
+msgstr "kyllä"
+
+msgid "DVB-S device for scanning"
+msgstr "Käytä DVB-korttia"
+
+msgid "Invalid provider number"
+msgstr "Virheellinen palveluntarjoajan valinta"
+
+msgid "The plugin is already active"
+msgstr "Laajennos on jo aktiivinen"

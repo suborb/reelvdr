@@ -1,0 +1,25 @@
+/CONTRIBUTORS/1.9/Tue Apr 12 16:38:57 2005//
+/COPYING/1.2/Fri Jun 11 15:26:51 2004//
+/HISTORY/1.52/Fri Aug 19 17:57:41 2005//
+/Makefile/1.3/Thu Jun 17 05:33:40 2004//
+/README/1.13/Fri Jul 15 17:57:23 2005//
+/ca52.c/1.15/Wed Jun  1 17:51:24 2005//
+/ca52.h/1.5/Sun Jan 23 18:28:32 2005//
+/common-dvd.h/1.7/Sat Jun 11 15:10:12 2005//
+/control-dvd.c/1.14/Tue Apr 12 16:26:48 2005//
+/control-dvd.h/1.6/Mon Jul 19 09:09:43 2004//
+/dvd.c/1.5/Wed Jun 30 06:18:24 2004//
+/dvd.h/1.13/Sat Apr 16 21:19:58 2005//
+/dvddev.c/1.5/Wed Jun 30 06:18:24 2004//
+/dvddev.h/1.3/Fri Jun 11 15:27:05 2004//
+/dvdspu.c/1.3/Mon Jan 31 20:29:16 2005//
+/dvdspu.h/1.2/Mon Jan 31 20:29:16 2005//
+/i18n.c/1.22/Sun Apr 17 09:08:27 2005//
+/i18n.h/1.4/Wed Jun  9 19:30:32 2004//
+/mpegtypes.h/1.2/Fri Apr 15 19:30:02 2005//
+/player-dvd.c/1.102/Fri Aug 19 17:57:02 2005//
+/player-dvd.h/1.27/Sun Apr  3 11:51:43 2005//
+/setup-dvd.c/1.11/Sun Apr 10 13:44:14 2005//
+/setup-dvd.h/1.7/Wed Jan  5 16:32:21 2005//
+/tools-dvd.h/1.11/Mon Jan 24 20:51:19 2005//
+D/patches////

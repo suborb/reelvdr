@@ -1,0 +1,11 @@
+diff -ubw reelbox-0.9.0/ReelSkin.c /rb/testing/src/vdr/vdr-plugins/src/reelbox-0.9.0/ReelSkin.c
+--- reelbox-0.9.0/ReelSkin.c	2006-08-09 13:13:38.000000000 +0200
++++ /rb/testing/src/vdr/vdr-plugins/src/reelbox-0.9.0/ReelSkin.c	2006-07-29 21:18:09.000000000 +0200
+@@ -1145,6 +1145,7 @@
+           }
+ #endif
+         }
++      SetEditableWidth(x4 - x3 - 5 - Tab(1));
+     }
+     
+     void ReelSkinMenu::SetEvent(const cEvent *Event)

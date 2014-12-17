@@ -1,0 +1,92 @@
+JumpPlay patch for VDR
+----------------------
+
+This patch changes the replay behaviour for recordings that contain editing
+marks. It allows to immediately continue the replay after jumping forward to
+the next mark, and to automatically jump over the commercial break to the next
+"start" mark, if an "end" mark is reached.
+
+The features of this patch can be turned on or off with parameters in the replay
+setup. See MANUAL for description of this parameters: "Jump&Play", "Play&Jump",
+"Pause at last mark" and "Reload marks".
+
+
+* History
+
+  2003-07-04: jumpandrun.diff - the Noad <theNoad@SoftHome.net>
+    Jump&Play
+
+  2003-12-06: Version 0.0 - Torsten Kunkel <vdr@tkunkel.de>
+    Play&Jump (only if progressbar is visible)
+    Setup parameters Jump&Play and Play&Jump in the replay setup
+
+  2004-01-20: Version 0.1 - Thomas Günther <tom@toms-cafe.de>
+    Jump&Play:
+      - fixed speed after jump
+      - fixed removing of marks
+    Play&Jump:
+      - jump only on "end" marks
+
+  2004-01-27: Version 0.2 - Thomas Günther <tom@toms-cafe.de>
+    Jump&Play:
+      - fixed double jump
+    Play&Jump:
+      - fixed mark detection: fuzzy detection (until 3 seconds after mark)
+      - jump without progressbar
+      - mode "progressbar only" for old behaviour
+
+  2004-01-31: Version 0.3 - Thomas Günther <tom@toms-cafe.de>
+    Jump&Play:
+      - fixed display frames
+    Play&Jump:
+      - fixed end of playing at last mark
+
+  2004-07-11: Version 0.4 - Thomas Günther <tom@toms-cafe.de>
+    Jump&Play:
+      - don't play after jump to end
+    Play&Jump:
+      - don't prevent jumping after hide or show
+    Less conflicts with other patches (Elchi/AutoPID)
+
+  2004-08-21: Version 0.5 - Thomas Günther <tom@toms-cafe.de>
+    Play&Jump:
+      - exact jumps, replay like edited recording (no fuzzy mark detection)
+      - jump to first mark if replay starts at the beginning
+      - check jump marks with '8' key
+      - mode "progressbar only" removed
+    Description in README.jumpplay
+
+  2004-12-28: Version 0.6 - Thomas Günther <tom@toms-cafe.de>
+    Adapted noad extensions (from the Noad <theNoad@SoftHome.net>) to
+    jumpplay-0.5:
+      - cyclic reloading of marks found by noad online-scan
+      - don't stop after the last mark in case of live-recordings
+    New setup parameter "Load marks interval (s)"
+    Updated description in README.jumpplay
+
+  2006-04-14: Version 0.7 - Thomas Günther <tom@toms-cafe.de>
+    Fixed jump to first mark (crashed with plugin extrecmenu-0.9)
+    Added version define JUMPPLAYVERSNUM
+    Added placeholders for Czech language texts
+    Cleaned up i18n entries (support only VDR >= 1.3.29)
+    Improved description of i18n placeholders - hoping for real language texts
+
+  2006-05-12: Version 0.8 - Thomas Günther <tom@toms-cafe.de>
+    Fixed segfault in dvbplayer thread while the replaycontrol thread is
+    reloading the marks (thanks to horchi at vdrportal.de for reporting this -
+    see http://vdrportal.de/board/thread.php?postid=450463#post450463):
+    New class cMarksReload checks the timestamp of marks.vdr in 10 seconds
+    intervals, so the marks in the threads dvbplayer and replaycontrol can be
+    reloaded independently
+    Changed setup parameter "Load marks interval (s)" to "Reload marks"
+    Updated description in README.jumpplay
+
+  2006-05-28: Version 0.9 - Thomas Günther <tom@toms-cafe.de>
+    New setup parameter "Pause at last mark"
+    Updated description in README.jumpplay
+    Moved parameters description to MANUAL
+
+  2009-03-31: Version 1.0 - Thomas Günther <tom@toms-cafe.de>
+    Play&Jump:
+      - set resume position to 0 if replay stops at the first mark
+    Added French language texts (thanks to Michaël Nival)

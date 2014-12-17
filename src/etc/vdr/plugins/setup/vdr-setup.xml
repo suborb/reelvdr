@@ -1,0 +1,339 @@
+<setup sysconfigFile="/etc/default/sysconfig"
+		bootLinux="/sbin/reboot"
+		bootVDR="mvdrshutdown"
+		VDRlibDir="/opt/lib/vdr"
+		credits="credits" >
+
+<plugins sysconfig="PLUGINLIST">
+	<plugin name="tvonscreen" info="tvonscreen" active="no" />
+</plugins>
+
+<mainmenus>
+	<menu name="TVTV&#32;Service" command="/usr/sbin/reeltvtvd setup">
+		<entry name="Use tvtv service" sysconfig="TVTV" type="bool" value="no"/>
+		<entry name="tvtv server" sysconfig="TVTVServer" type="selection" value="www.tvtv.de">
+			<value>www.tvtv.de</value> <value>www.tvtv.co.uk</value>
+		</entry>
+		<entry name="Username" sysconfig="TVTVUsername" type="text" value="" />
+		<entry name="Password" sysconfig="TVTVPasswd" type="text" value="" />
+	</menu>
+	<menu name="System-Settings" system="Plugins" />
+
+	<menu name="Multimedia" command="/bin/true">
+		<menu plugin="xinemediaplayer" info="Play music, films and create playlists" />
+		<menu plugin="audioplayer" info="Play music, manage and copy music files" />
+		<menu plugin="imageplayer" info="Watch pictures, manage and copy picture files" />
+		<menu plugin="shoutcast" info="Listen to internet radio, manage and add radio stations" />
+		<menu plugin="videoplayer" info="Watch movies, manage and copy movie files" />
+		<menu plugin="extrecmenu" info="Watch TV recordings, cut, manage and copy TV recordings" />
+		<menu plugin="burn" info="Burn TV recordings on CD or DVD" />
+		<menu plugin="dvdswitch" info="Copy a Video-DVD to the movie library" />
+		<menu plugin="ripit" info="Copy an Audio CD to the music library"/>
+	</menu>
+</mainmenus>
+
+<menus>
+	<menu name="Installation" command="/bin/true" info="Software Update and Installation, Serial Remote control" help="setup_setinst.hlp">
+		<menu plugin="dpkg" info="Update the ReelBox software by Internet" />
+		<menu plugin="dpkgopt" info="Install additional features" />
+		<!--
+		<menu name="Software Update">
+			<menu name="Update from CD/DVD" execute="/usr/sbin/reel-update.sh cd_update >/var/log/update.log 2>&amp;1 &amp;"/>
+		</menu>
+		-->
+
+		<menu plugin="install" info="Basic settings in just a few steps" />
+
+	    <if_equal name="RBAVGIORII">
+		<menu name="Remote Control / Automation" command="restart reelbox-control" info="Remote control through serial port or network">
+			<entry id="30" name="Enable Control via RS232" sysconfig="USE_SERIAL_REMOTE" type="bool" value="no" />
+			<if_equal id="30" value="yes" >
+				<entry name="  Port speed (baud)" sysconfig="SERIAL_SPEED" type="selection" tr="true" value="default">
+					<value>9.600</value> <value>19.200</value> <value>38.400</value>
+					<value>57.600</value> <value>default (115.200)</value>
+				</entry>
+			</if_equal>
+
+			<!--
+			<entry id="31" name="Enable Control via UDP" sysconfig="USE_UDP_REMOTE" type="bool" value="no" />
+			<if_equal id="31" value="yes" >
+				<entry name="  UDP Port" sysconfig="USE_UDP_REMOTE_PORT" type="number" value="2003" />
+			</if_equal>
+			-->
+                        <!--entry name="Disable Bluetooth Support" sysconfig="BLUETOOTH_OFF" type="bool" value="no" command="/usr/sbin/bluetooth_start.sh" /-->
+		</menu>
+	    </if_equal>
+
+		<menu name="MultiRoom Setup" system="MultiRoom" info="Set up the Reel MultiRoom" />
+	</menu>
+
+	<menu name="Basic Settings" command="/bin/true" info="Video and Audio Settings, OSD, Timezone, Front panel, Energy options">
+		<menu name="Video Settings" system="Video" info="Video output, Resolution, Screen format etc." />
+		<menu name="Audio Settings" system="Audio" info="Audio output and format, Audio/Video delay etc." />
+		<if_equal name="RBAVG">
+		    <menu plugin="reelbox" info="Picture adjustments: Brightness, Contrast, Gamma" />
+		</if_equal>
+
+		<menu name="OSD &amp; Language" system="OSD" info="Set your language and on-screen-display options" />
+
+		<menu name="Timezone &amp; Clock" system = "Timezone" info="Time zone and source for automatic setting of system time" />
+
+		<menu name="Front&#32;Panel" command="/usr/sbin/fpleds" info="LED color and brightness, LCD brightness" >
+		    <if_equal name="HASFP">
+			    <entry name="LEDs while operating" type="constant text" />
+				<entry name="Color" sysconfig="FPCOLOR" type="selection" tr="true" value="blue">
+					<value>blue</value> <value>red</value> <value>pink</value>
+				</entry>
+
+				<entry name="Brightness" sysconfig="FPCLEDBR" type="selection" tr="true" value="med">
+					<value>off</value> <value>min</value> <value>low</value>
+					<value>med</value> <value>high</value> <value>max</value>
+				</entry>
+
+				<entry name="Brightness Status LEDs" sysconfig="FPSLEDBR" type="selection" tr="true" value="med">
+					<value>off</value> <value>min</value> <value>low</value>
+					<value>med</value> <value>high</value> <value>max</value>
+				</entry>
+
+				<entry type="space"> </entry>
+
+			    <entry name="LEDs in Standby" type="constant text" />
+				<entry name="Color" sysconfig="FPCOLORSTB" type="selection" tr="true" value="blue">
+					<value>blue</value> <value>red</value> <value>pink</value>
+				</entry>
+
+				<entry name="Brightness" sysconfig="FPCLEDBRSTB" type="selection" tr="true" value="med">
+					<value>off</value> <value>min</value> <value>low</value>
+					<value>med</value> <value>high</value> <value>max</value>
+				</entry>
+
+				<entry name="Display Brightness" sysconfig="FPDISPBRIGHT" type="selection" tr="true" value="off">
+					<value>off</value> <value>min</value> <value>low</value>
+					<value>med</value> <value>high</value> <value>max</value>
+				</entry>
+
+				<entry type="space"> </entry>
+
+			    <entry name="LC Display Type" type="constant text" />
+				<entry name="Black Series" sysconfig="BLACKDISP" type="selection" tr="true" value="no">
+					<value>no</value> <value>yes</value>
+				</entry>
+		    </if_equal>
+		    <if_equal name="HASNOFP">
+			    <entry name="LEDs in Standby" type="constant text" />
+				<entry name="Turn off LEDs in Standby" sysconfig="FPLEDSTBOFF" type="bool" value="no"/>
+				<entry type="space"> </entry>
+			    <entry name="External Reel Display Module" type="constant text" />
+				<entry name="Brightness Status LEDs" sysconfig="FPSLEDBR" type="selection" tr="true" value="med">
+					<value>off</value> <value>min</value> <value>low</value>
+					<value>med</value> <value>high</value> <value>max</value>
+				</entry>
+		    </if_equal>
+		</menu>
+
+		<menu name="Energy Options" info="Adjust automatic standby and poweroff" system="EnergyOptions" />
+
+		<!--	<entry name="Eject Media on Shutdown" sysconfig="DS_EJECT_ENABLE" type="bool" value="no" /> -->
+
+		<menu name="Factory defaults" info="Reset to factory defaults" system="ResetSettings" />
+	</menu>
+
+	<menu name="Network Settings" info="Set up local Network and Internet, connect Network storage" help="setup_network.hlp" command="/usr/sbin/setup-net restart">
+
+		<menu name="Ethernet" command="/usr/sbin/setup-net restart" info="Set up LAN ports, DHCP/IP settings" >
+		    <if_equal name="HASETH1">
+			<entry id="10" name="Enable Ethernet 1" sysconfig="ETH1" type="bool" value="yes" />
+			<if_equal id="10" value="yes" >
+				<entry id="11" name=" Use DHCP" sysconfig="ETH1_USE_DHCP" type="bool" value="no" />
+				<if_equal id="11" value="no" >
+					<entry name=" IP Address" sysconfig="ETH1_IP" type="ip" value="192.168.1.175" />
+					<entry name=" Network mask" sysconfig="ETH1_NETMASK" type="ip" value="255.255.255.0" />
+				</if_equal>
+				<entry type="space" />
+
+				<entry id="25" name="Enable NetCeiver bridge" sysconfig="NC_BRIDGE" type="bool" value="no" />
+				<if_equal id="25" value="yes" >
+					<if_equal name="AVGI">
+						<entry name=" Bridge NetCeiver to" sysconfig="ETH0_BRIDGE" type="selection" value="Ethernet 1" >
+							<value>Ethernet 1</value>
+							<value>Ethernet 2</value>
+						</entry>
+					</if_equal>
+				</if_equal>
+				<entry type="space" />
+
+				<entry id="26" name="Use VLAN for NetCeiver" sysconfig="VLAN" type="bool" value="no" />
+				<if_equal id="26" value="yes" >
+					<entry name=" VLAN ID" sysconfig="VLAN_ID" type="selection" value="2" >
+						<value>2</value><value>3</value><value>4</value><value>5</value>
+						<value>6</value><value>7</value><value>8</value><value>9</value>
+					</entry>
+				</if_equal>
+			</if_equal>
+			<if_equal name="AVGI">
+				<entry id="21" name="Enable Ethernet 2" sysconfig="ETH2" type="bool" value="no" />
+				<if_equal id="21" value="yes" >
+					<entry id="22" name=" Use DHCP" sysconfig="ETH2_USE_DHCP" type="bool" value="no" />
+					<if_equal id="22" value="no" >
+						<entry name=" IP Address" sysconfig="ETH2_IP" type="ip" value="192.168.0.176" />
+						<entry name=" Network mask" sysconfig="ETH2_NETMASK" type="ip" value="255.255.255.0" />
+					</if_equal>
+				</if_equal>
+				<entry type="space" />
+			</if_equal>
+		    </if_equal>
+
+		    <if_equal name="NOETH1">
+                        <entry name="Ethernet Settings" type="constant text" />
+			<entry id="12" name=" Use DHCP" sysconfig="ETH0_USE_DHCP" type="bool" value="no" />
+			<if_equal id="12" value="no" >
+				<entry name=" IP Address" sysconfig="ETH0_IP" type="ip" value="192.168.1.175" />
+				<entry name=" Network mask" sysconfig="ETH0_NETMASK" type="ip" value="255.255.255.0" />
+			</if_equal>
+			<!--/if_equal-->
+
+			<entry type="space" />
+
+			<entry id="27" name="Use VLAN" sysconfig="VLAN" type="bool" value="no" />
+			<if_equal id="27" value="yes" >
+				<entry name=" VLAN ID" sysconfig="VLAN_ID" type="selection" value="2" >
+					<value>2</value><value>3</value><value>4</value><value>5</value>
+					<value>6</value><value>7</value><value>8</value><value>9</value>
+				</entry>
+			</if_equal>
+		    </if_equal>
+			<!--entry type="space" /-->
+		</menu>
+
+	    <if_equal name="NORBNCL">
+		<menu name="Wireless LAN" system="WLAN" info="Setup Wireless network: SSID, Encryption etc." />
+	    </if_equal>
+
+		<menu name="Global Settings" command="/usr/sbin/setup-net restart" info="Host name, Domain, Gateway, Proxy, Wake-on-LAN, Dynamic DNS Services" >
+			<entry name="Hostname" sysconfig="HOSTNAME" type="text" value="ReelBox" />
+			<entry name="Domain" sysconfig="DOMAIN" type="text" value="local" />
+			<entry name="Gateway" sysconfig="GATEWAY" type="ip" value="0.0.0.0" />
+			<entry name="Nameserver" sysconfig="NAMESERVER" type="ip" value="" />
+			<entry id="111" name="Use Proxy" sysconfig="USE_PROXY" type="bool" value="no" />
+			<if_equal id="111" value="yes">
+				<entry name="Proxy IP" sysconfig="PROXY_IP" type="ip" value="192.168.0.5" />
+				<entry name="Proxy Port" sysconfig="PROXY_PORT" type="number" value="8080" />
+			</if_equal>
+
+		    <if_equal name="NORBNCL">
+			<entry name="Enable Wake-on-LAN" sysconfig="WOL_ENABLE" type="bool" value="yes" />
+			<entry id="130" name="Export Harddisk for Windows" sysconfig="START_SMBSRV" type="bool"
+						value="no" command="/usr/sbin/setup-samba restart"/>
+				<if_equal id="130" value="yes" >
+					<entry name="Workgroup" sysconfig="SAMBA_WORKGRP" type="text"
+						value="ReelNet" command="/usr/sbin/setup-samba restart"/>
+				</if_equal>
+			<entry name="Enable UPnP service" sysconfig="UPNP_ENABLE" type="bool" value="yes"
+					command="setup-mediatomb setup" />
+			<entry type="space"/>
+		    </if_equal>
+
+			<!-- <menu name="Dynamic DNS" info="(?)" >
+				<menu name="GnuDIP service" command="/usr/sbin/gnudipd restart">
+					<entry id="140" name="Use GnuDIP service" sysconfig="USE_GNUDIP" type="bool" value="no" />
+					<if_equal id="140" value="yes" >
+						<entry name="Username" sysconfig="GNUDIPUSER" type="text" value="Username" />
+						<entry name="Password" sysconfig="GNUDIPPASS" type="text" value="Password" />
+						<entry name="GnuDIP Domain" sysconfig="GNUDIPDOMN" type="text" value="mydom.net" />
+						<entry name="GnuDIP Server" sysconfig="GNUDIPSRV" type="text" value="www.mydom.net" />
+					</if_equal>
+				</menu>
+				<menu name="DynDNS service" command="/usr/sbin/dyndnsd restart">
+					<entry id="145" name="Use DynDNS service" sysconfig="USE_DYNDNS" type="bool" value="no" />
+					<if_equal id="145" value="yes" >
+						<entry name="Username" sysconfig="DDNSUSER" type="text" value="Username" />
+						<entry name="Password" sysconfig="DDNSPASS" type="text" value="Password" />
+						<entry name="DynDNS hostname" sysconfig="DDNSHOST" type="text" value="myhost" />
+					</if_equal>
+				</menu>
+			</menu>
+			-->
+		</menu>
+
+		<menu name="Network Drives" system="NetworkFilesystem" info="Search and administer network shares" />
+
+	    <if_equal name="NORBNCL">
+		<!--menu name="UMTS Settings" command="/usr/sbin/setup-umts restart" info="Setup UMTS dial-up network connection" >
+		<entry name="Enable UMTS to connect your ReelBox to the" type="constant text" />
+		<entry name="internet using UMTS connection." type="constant text" />
+		<entry type="space"> </entry>
+			<entry id="32" name="Enable UMTS" sysconfig="UMTS" type="bool" value="no" command="/usr/sbin/setup-umts restart" />
+			<if_equal id="32" value="yes" >
+				<entry id="33" name="UMTS Provider" sysconfig="UMTS_PROVIDER" type="selection" value="-" >
+					<value>-</value><value>D1</value><value>D2</value><value>O2</value><value>EPlus</value><value>A1-Austria</value><value>Orange-Austria</value><value>Planet3-Austria</value><value>YESSS-Austria</value><value>Swisscom</value>
+				</entry>
+				<if_equal id="33" value="O2" >
+				<entry name="UMTS APN" sysconfig="UMTS_APN" type="selection" value="-" >
+						<value>internet</value><value>surfo2</value>
+				</entry>
+				</if_equal>
+				<entry id="34" name="UMTS PIN" sysconfig="UMTS_PIN" type="bool" value="no" />
+				<if_equal id="34" value="yes" >
+					<entry name="PIN Nr." sysconfig="MY_UMTS_PIN" type="numtext" value="1234" />
+				</if_equal>
+			</if_equal>
+		</menu-->
+
+		<menu name="Streaming Clients"  command="UpdateStreamType.sh" info="Setup type of external streaming devices and stream quality">
+			<entry name="You can select between 'Tablet' for" type="constant text" />
+			<entry name="Tablet / Smartphone devices or 'TS' for" type="constant text" />
+			<entry name="default settings *Standard to stream" type="constant text" />
+			<entry name="LiveTV to your device." type="constant text" />
+			<entry type="space"> </entry>
+			<entry id="098" name="Stream Type" sysconfig="STREAM_TYPE" type="selection" value="TS">
+				<value>TS </value> <value>Tablet</value>
+			</entry>
+			<if_equal id="098" value="Tablet">
+			    <entry id="099" name="Client Speed" sysconfig="STREAM_QUALITY" type="selection" value="UMTS">
+				<if_equal name="RBAVG">
+				<value>DSL1000 </value> <value>DSL2000 </value> <value>DSL3000 </value> <value>DSL3500 </value>
+				<value>DSL6000 </value> <value>DSL16000 </value> <value>LAN10 </value>
+				<value>WLAN11 </value>
+				<value>WLAN54 </value>
+				<value>UMTS </value>
+				<value>IPAQ </value>
+				</if_equal>
+				<value>iPhone </value>
+				<value>iPad </value>
+			    </entry>
+			    <entry type="space"> </entry>
+			    <entry type="space"> </entry>
+			    <entry type="space"> </entry>
+			    <entry type="space"> </entry>
+			    <entry type="space"> </entry>
+			    <entry name="Info:" type="constant text" />
+			    <entry name="Select client connection type for best stream" type="constant text" />
+			    <entry name="quality" type="constant text" />
+			</if_equal>
+		</menu>
+	    </if_equal>
+	</menu>
+
+	<menu name="Video Recorder " help="setup_video.hlp" info="Settings for Timeshift, Recordings, Playback, Media storage">
+		<menu name="Permanent Timeshift" system="Timeshift" info="Settings for Timeshift" />
+		<menu name="Recording settings" system="Record" info="Lead in &amp; out time, VPS, Automatic marking of ads, Audio tracks"/>
+		<menu name="Playback Settings" system="Replay" info="Playback options for TV recordings" />
+		<menu name="Harddisk/Media device" system="RecordingDevice" info="Set up drive for Media files and Recordings"/>
+		<entry type="space" />
+		<menu plugin="formatdisk" info="Prepare harddisk for use in the ReelBox" />
+	</menu>
+
+	<menu name="Background Services" system="Misc" info="Configure background services and tasks"/>
+
+	<menu name="Reception Settings" info="Channel scan &amp; lists, DiSEqC settings, Common Interface, Signal information">
+		<menu plugin="channelscan" info="Automatic or manual channel scan"/>
+		<menu name="Channel Lists" system="ChannelList" info="Choose a preconfigured channel list"/>
+		<menu plugin="netcv" info="Receiveable satellite positions, Number of active tuners / LNBs"/>
+		<!--menu plugin="netcvrotor" info="Test and adjust your rotor"/-->
+		<menu plugin="mcli" info="Overview and configuration of Common Interface modules"/>
+		<menu plugin="femon" info="Details on Signal strength &amp; quality, Video &amp; audio bit rates etc."/>
+	</menu>
+
+	<menu name="System Settings" info="Advanced setup for system programs" help="setup_systein.hlp" system="Plugins" />
+</menus>
+</setup>

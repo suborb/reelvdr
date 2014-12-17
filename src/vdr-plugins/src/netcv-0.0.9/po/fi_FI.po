@@ -1,0 +1,532 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netcv\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-06-15 17:07+0200\n"
+"PO-Revision-Date: 2009-01-30 15:54+0200\n"
+"Last-Translator: Saku Vainikainen\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "empty"
+msgstr "tyhjä"
+
+msgid "DiSEqC list"
+msgstr "DiSEqC-asetukset"
+
+msgid "Restarting NetCeiver..."
+msgstr "Vastaanotin käynnistetään uudelleen..."
+
+msgid "Restarting VDR..."
+msgstr "Käynnistetään uudelleen..."
+
+msgid "Please wait..."
+msgstr "Odota..."
+
+msgid "Reloading diseqc.conf failed!"
+msgstr "DiSEqC-asetusten lataaminen ei onnistu!"
+
+msgid "Settings stored"
+msgstr "Asetukset tallennettu"
+
+msgid "Reloading channels.conf failed"
+msgstr "Kanava-asetusten lataaminen ei onnistu"
+
+msgid "Reloading diseqc.conf failed"
+msgstr "DiSEqC-asetusten lataaminen ei onnistu"
+
+msgid "Error: Store failed! Error Number: "
+msgstr "Virhe! Tallennus ei onnistu: "
+
+msgid "Error: Only 4 LNBs per cascade is allowed!"
+msgstr "Virhe: tuki enintään 4 ketjutetulle mikropäälle!"
+
+msgid "Error: Every DiSEqC list must have a name!"
+msgstr "Virhe: DiSEqC-asetuksilla täytyy olla nimet!"
+
+msgid "Error: Duplicate DiSEqC list name is not allowed!"
+msgstr "Virhe: Saman nimisiä DiSEqC-asetuksia ei voi käyttää!"
+
+msgid "Error: Every tuner must have a valid DiSEqC list!"
+msgstr "Virhe: Kaikille virittimille tarvitaan DiSEqC-asetukset!"
+
+msgid "Error: At least 1 tuner must be enabled!"
+msgstr "Virhe: vähintään 1 viritin oltava käytössä!"
+
+msgid "Unknown Error: "
+msgstr "Järjestelmävirhe:"
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC ei käytössä"
+
+msgid "Diseqc$Source"
+msgstr "signaalikaista"
+
+msgid "LNB Type"
+msgstr "Mikropään tyyppi"
+
+msgid "DiSEqC Mini"
+msgstr ""
+
+msgid "Number of LNBs"
+msgstr "Mikropäiden lukumäärä"
+
+msgid "LNB"
+msgstr "mikropää"
+
+msgid "Type"
+msgstr "Tyyppi"
+
+msgid "Single Cable Router"
+msgstr ""
+
+msgid "Unique Slot Nr."
+msgstr ""
+
+msgid "Downlink freq. (MHz)"
+msgstr ""
+
+msgid "PIN (optional)"
+msgstr ""
+
+msgid "No pin"
+msgstr ""
+
+msgid "DiSEqC 1.0"
+msgstr ""
+
+msgid "DiSEqC 1.1"
+msgstr ""
+
+msgid "Multiswitch"
+msgstr "monikytkin"
+
+msgid "Cascade"
+msgstr "ketjutettu"
+
+msgid "DiSEqC 1.2"
+msgstr ""
+
+msgid "Number of sources"
+msgstr "Signaalikaistojen lukumäärä"
+
+msgid "Rotor (GotoX)"
+msgstr "GotoX-moottori"
+
+msgid "off"
+msgstr "ei käytössä"
+
+msgid "fine"
+msgstr "hienojakoinen"
+
+msgid "coarse"
+msgstr "karkea"
+
+msgid "maximum"
+msgstr "paras"
+
+msgid "Min Position"
+msgstr "Alin korkeus"
+
+msgid "East"
+msgstr "itäistä"
+
+msgid "West"
+msgstr "läntistä"
+
+msgid "Max Position"
+msgstr "Ylin korkeus"
+
+msgid "Longitude"
+msgstr "pituutta"
+
+msgid "Latitude"
+msgstr "leveyttä"
+
+msgid "North"
+msgstr "pohjoista"
+
+msgid "South"
+msgstr "eteläistä"
+
+msgid "Autofocus"
+msgstr "Automaattinen kohdistus"
+
+msgid "DisiCon 4"
+msgstr ""
+
+msgid "DiSEqC mode:"
+msgstr "DiSEqC:n versio:"
+
+msgid "no"
+msgstr "ei käytössä"
+
+msgid "yes"
+msgstr "käytössä"
+
+msgid " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.#~,/_@1\tabcäå2\tdef3\tghi4\tjkl5\tmnoö6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Save"
+msgstr "Tallenna"
+
+msgid "Antenna settings"
+msgstr "Vastaanottimen asetukset"
+
+msgid "NetCeiver Firmwareupdate is running!"
+msgstr "Vastaanottimen ohjelmistoa päivitetään!"
+
+msgid "No NetCeiver found!"
+msgstr "Vastaanotinta ei löydy!"
+
+msgid "Creating directory tmp failed!"
+msgstr "Väliaikaistiedostojen kansiota ei löydy!"
+
+msgid "Retrieving information about tuners failed!"
+msgstr "Virittimien tietoja ei löydy!"
+
+msgid "Getting network interface failed!"
+msgstr "Verkkoliitäntää ei löydy!"
+
+msgid "sec"
+msgstr "sek"
+
+msgid "min"
+msgstr "min"
+
+msgid "h"
+msgstr "h"
+
+msgid "d"
+msgstr ""
+
+msgid "Tuner"
+msgstr "Viritin"
+
+msgid "DiSEqC settings"
+msgstr "DiSEqC-asetukset"
+
+msgid "NetCeiver is being updated."
+msgstr "Vastaanottimen ohjelmistoa päivitetään."
+
+msgid "Try again later."
+msgstr "Yritä myöhemmin uudestaan."
+
+msgid "Error!"
+msgstr "Järjestelmävirhe!"
+
+msgid "Failed to open directory "
+msgstr "Kansion avaaminen ei onnistu"
+
+msgid "No file found in "
+msgstr "Tiedostoa ei löydy kansiosta "
+
+msgid "Please select a setting for upload: "
+msgstr "Valitse ladattavat asetukset:"
+
+msgid "Finished!"
+msgstr "Valmis!"
+
+msgid "Uploading failed!"
+msgstr "Lataaminen ei onnistu!"
+
+msgid "Current"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr "Vastaanottimen tiedot"
+
+msgid "Alive"
+msgstr "Toiminnassa"
+
+msgid "Yes"
+msgstr "kyllä"
+
+msgid "No"
+msgstr "ei"
+
+msgid "Tuners"
+msgstr "Virittimien lukumäärä"
+
+msgid "OS"
+msgstr "Käyttöjärjestelmän versio"
+
+msgid "App"
+msgstr "Sovelluksen versio"
+
+msgid "Firmware"
+msgstr "Ohjelmiston versio"
+
+msgid "Hardware"
+msgstr "Laitteiston versio"
+
+msgid "Serial"
+msgstr "Sarjanumero"
+
+msgid "System uptime"
+msgstr "Vastaanotin ollut toiminnassa"
+
+msgid "Process uptime"
+msgstr "Sovellus ollut toiminnassa"
+
+msgid "Dish settings"
+msgstr "Lautasantennin asetukset"
+
+msgid "State"
+msgstr "Virittimen tärkeys"
+
+msgid "Slot"
+msgstr "Paikka"
+
+msgid "Chip"
+msgstr ""
+
+msgid "Used"
+msgstr "Käytetty"
+
+msgid "Lock"
+msgstr "Lukittunut signaaliin"
+
+msgid "Frequency"
+msgstr "Signaalin taajuus"
+
+msgid "Strenght"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "BER"
+msgstr ""
+
+msgid "UNC"
+msgstr ""
+
+msgid "electric$Current"
+msgstr ""
+
+msgid "Power save mode"
+msgstr ""
+
+msgid "Couldn't create tmp-path!"
+msgstr "Väliaikaistiedostojen kansiota ei löydy!"
+
+msgid "Internal Error! Sorry!"
+msgstr "Järjestelmävirhe!"
+
+#, fuzzy
+msgid "Loading data from NetCeiver failed!"
+msgstr "Tiedonsiirto vastaanottimesta ei onnistu!"
+
+msgid "Please check the Connection to NetCeiver!"
+msgstr "Tarkista yhteys vastaanottimeen!"
+
+#, fuzzy
+msgid "Number of Tuners"
+msgstr "Virittimien lukumäärä"
+
+msgid "Please choose the satellites you can receive:"
+msgstr "Valitse vastaanotettavat satelliitit:"
+
+msgid "Back"
+msgstr "Takaisin"
+
+msgid "Skip"
+msgstr "Ohita"
+
+msgid "Static antenna"
+msgstr "Kiinteä lautanen"
+
+msgid "Single Cable System"
+msgstr ""
+
+msgid "Rotor antenna"
+msgstr "Moottoroitu lautanen"
+
+msgid "Updating... please wait!"
+msgstr "Päivitetään..."
+
+msgid "Satellite"
+msgstr "Satelliittiverkon viritin"
+
+msgid "Cable"
+msgstr "Kaapeliverkon viritin"
+
+msgid "Terrestrial"
+msgstr "Antenniverkon viritin"
+
+msgid "on"
+msgstr "käytössä"
+
+msgid "Antenna type"
+msgstr "Antennin tyyppi"
+
+msgid "Rotor"
+msgstr "Lautasmoottori"
+
+msgid "Experts"
+msgstr "Tarkat asetukset"
+
+msgid "Unknown Error! Sorry!"
+msgstr "Järjestelmävirhe!"
+
+#, fuzzy
+msgid "Internal Error: DiSEqC not working"
+msgstr "DiSEqC ei toimi!"
+
+#, fuzzy
+msgid "Internal Error: Loading netceiver.conf failed"
+msgstr "DiSEqC-asetusten lataaminen ei onnistu"
+
+msgid "Save changes?"
+msgstr "Tallennetaanko asetukset?"
+
+msgid "No netcvrotor-Plugin found!"
+msgstr "Lautasmoottorin ohjaustoimintoa ei löydy!"
+
+#, fuzzy
+msgid "Status"
+msgstr "Virittimen tärkeys"
+
+msgid "Multi-Transponder-Decryption is"
+msgstr ""
+
+msgid "impossible because of mixed CAMs"
+msgstr ""
+
+msgid "Multi-Transponder"
+msgstr ""
+
+msgid "Signal (strength/snr)"
+msgstr "Signaalin voimakkuus (snr)"
+
+msgid "Signal (ber/unc)"
+msgstr "Signaalin häiriöt (ber/unc)"
+
+msgid "Update firmware"
+msgstr "Päivitä ohjelmisto"
+
+msgid "Load"
+msgstr "Lataa"
+
+msgid "Clear"
+msgstr "Tyhjennä"
+
+msgid "Add DiSEqC list"
+msgstr "Lisää DiSEqc-listaus"
+
+msgid "disable"
+msgstr "Poista"
+
+msgid "enable"
+msgstr "Käytä"
+
+msgid "No tmp files available."
+msgstr "Väliaikaistiedosto ei ole käytettävissä."
+
+msgid "Update progress: "
+msgstr "Päivityksen edistyminen:"
+
+msgid "Information"
+msgstr "Vastaanottimen tiedot"
+
+#, fuzzy
+msgid "CAM settings"
+msgstr "DiSEqC-asetukset"
+
+msgid "Tuner settings"
+msgstr "Virittimen asetukset"
+
+msgid "CAM"
+msgstr ""
+
+msgid "not selected"
+msgstr "ei käytössä"
+
+msgid "Setting loaded"
+msgstr "Asetukset ladattu"
+
+msgid "Loading failed! (Error: "
+msgstr "Lataaminen ei onnistu! (Virhe: "
+
+msgid "Update finished"
+msgstr "Päivitys tehty"
+
+msgid "Priority"
+msgstr "tärkeysluokka"
+
+msgid "normal"
+msgstr "käytössä"
+
+msgid "disabled"
+msgstr "ei käytössä"
+
+msgid "NetCeiver update available. Do you want to update?"
+msgstr "Päivitetäänkö vastaanottimen ohjelmisto?"
+
+msgid "NetCeiver firmware update"
+msgstr "Vastaanottimen ohjelmistopäivitys"
+
+#, fuzzy
+msgid "There is a new firmware version for the NetCeiver available!"
+msgstr "Vastaanottimelle on julkaistu uudempi ohjelmistoversio!"
+
+msgid "Current version:"
+msgstr "Nykyinen versio:"
+
+msgid "New version:"
+msgstr "Uusi versio:"
+
+msgid "If you want to use CA-modules, it is absolutely required to perform this update right now."
+msgstr ""
+
+#, fuzzy
+msgid "Do you want to update the NetCeiver firmware now?"
+msgstr "Päivitetäänkö vastaanottimen ohjelmisto?"
+
+msgid "Caution:"
+msgstr "Huom:"
+
+msgid "Current recordings will be interrupted for a few minutes."
+msgstr "Käynnissä olevat nauhoitukset katkeavat päivityksen ajaksi."
+
+msgid "Update"
+msgstr "Päivitä"
+
+msgid "Update failed!"
+msgstr "Päivitys ei onnistunut!"
+
+msgid "internal error!"
+msgstr "Sisäinen virhe!"
+
+#~ msgid "Button$ABC/abc"
+#~ msgstr "ABC/abc"
+
+#~ msgid "Button$Overwrite"
+#~ msgstr "Korvaa"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Poista"
+
+#~ msgid "Delete"
+#~ msgstr "Poista"
+
+#, fuzzy
+#~ msgid "Normal"
+#~ msgstr "käytössä"
+
+#~ msgid "Current power"
+#~ msgstr "Käytetty teho"
+
+#~ msgid "No DiSEqC-Settings available!"
+#~ msgstr "DiSEqC-asetuksia ei löydy!"

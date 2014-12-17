@@ -1,0 +1,4 @@
+@set UPDATED 10 July 2005
+@set UPDATED-MONTH July 2005
+@set EDITION 0.76
+@set VERSION 0.76

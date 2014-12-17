@@ -1,0 +1,439 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-burn\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 09:40+0200\n"
+"PO-Revision-Date: 2011-09-07 17:39+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Versatile convert-and-burn plugin"
+msgstr "Veelzijdige converteer-en-brand plugin"
+
+msgid "Burn Recordings to DVD"
+msgstr "Opnames op DVD branden"
+
+msgid "iso8859-15"
+msgstr "iso8859-15"
+
+msgid "Burn job active"
+msgstr "Branden aktief"
+
+msgid "Burn"
+msgstr "Branden"
+
+msgid "Please enter the burn plugin"
+msgstr "Kies aub de brand plugin."
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Plaats aub een lege disk en druk Ok"
+
+msgid "Job still active - really cancel?"
+msgstr "Opdracht nog bezig - echt afbreken?"
+
+msgid "Burning DVD"
+msgstr "Branden van DVD bezig"
+
+msgid "done"
+msgstr "gereed"
+
+msgid "DVD with menus"
+msgstr "DVD met menu's"
+
+msgid "DVD without menus"
+msgstr "DVD zonder menu's"
+
+msgid "Archive disk"
+msgstr "Archiveer schijf"
+
+msgid "ISO file only"
+msgstr "Alleen ISO bestand"
+
+msgid "Disc"
+msgstr "Schijf"
+
+msgid "ISO file and Disc"
+msgstr "ISO bestand en schijf"
+
+msgid "No chapters"
+msgstr "Geen hoofdstukken"
+
+msgid "Use editing marks"
+msgstr "Gebruik markeringen"
+
+msgid "Every 5 minutes"
+msgstr "Elke 5 min."
+
+msgid "Every 10 minutes"
+msgstr "Elke 10 min."
+
+msgid "Every 15 minutes"
+msgstr "Elke 15 min."
+
+msgid "Every 30 minutes"
+msgstr "Elke 30 min."
+
+msgid "Every hour"
+msgstr "Ieder uur"
+
+msgid "none"
+msgstr "geen"
+
+msgid "Couldn't convert character sets!"
+msgstr "Kon karakter sets niet converteren"
+
+msgid "Couldn't open image file!"
+msgstr "Kon image bestand niet openen"
+
+msgid "Couldn't create new image!"
+msgstr "Kon nieuwe image niet maken"
+
+msgid "Couldn't render menu images!"
+msgstr "Kon menu afbeeldingen niet maken"
+
+msgid "Couldn't save image file!"
+msgstr "Kon image bestand niet opslaan"
+
+msgid "Recording too big for disc type!"
+msgstr "Opname te groot voor deze disk!"
+
+msgid "Disc too big for disc type!"
+msgstr "Disk te groot voor disk type!"
+
+msgid "A job failed!"
+msgstr "Een opdracht is mislukt!"
+
+msgid "A job was finished successfully."
+msgstr "Een opdracht is met succes afgerond."
+
+msgid "Recordings"
+msgstr "Opnamen"
+
+msgid "Options"
+msgstr "Optie's"
+
+msgid "Title of recording"
+msgstr "Opname titel"
+
+msgid "Edit recording details"
+msgstr "Pas opname details aan"
+
+msgid "Move down"
+msgstr "Beweeg naar beneden"
+
+msgid "Track$Off"
+msgstr "Uit"
+
+msgid "Track$On"
+msgstr "Aan"
+
+msgid "Language code"
+msgstr "Taalcode"
+
+msgid "Choose title"
+msgstr "Kies titel"
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "Opnamen: %1$d, totale grootte: %2$.1f MB"
+
+msgid "Write DVD"
+msgstr "Schrijf DVD"
+
+msgid "Select recordings for burning with 'OK'"
+msgstr "Kies de te branden opname's met 'OK'"
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr "Voorkeur media: %s"
+
+msgid "Only archive disk possible"
+msgstr "Alleen archiveren van de schijf is mogelijk "
+
+msgid "Info"
+msgstr "Informatie"
+
+msgid "Button$Burn"
+msgstr "Branden"
+
+msgid "Select recording with > OK <"
+msgstr "Selecteer opname met > OK <"
+
+msgid "Analyzing recording..."
+msgstr "Analiseer opname..."
+
+msgid "Job"
+msgstr "Opdracht"
+
+msgid "DVD title"
+msgstr "DVD titel"
+
+msgid "Archive-ID"
+msgstr "Archief ID"
+
+msgid "Recordings scheduled to be burnt are:"
+msgstr "Geplande te branden opname's :"
+
+msgid "No recordings marked"
+msgstr "Geen opname's gemarkeerd"
+
+msgid "Info:"
+msgstr "Informatie:"
+
+msgid "Please press the blue key to select recording."
+msgstr "Druk de blauwe knop om een opname te kiezen."
+
+msgid "Remove"
+msgstr "Verwijder"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Button$Cancel"
+msgstr "Annuleer"
+
+msgid "No video track selected!"
+msgstr "Geen videospoor geselecteerd"
+
+msgid "No audio track selected!"
+msgstr "Geen audiospoor geselecteerd"
+
+msgid "Not enough free disk space!"
+msgstr "Niet genoeg schijfruimte vrij!"
+
+msgid "Remove recording from list?"
+msgstr "Opname uit de lijst verwijderen?"
+
+msgid "Remove all recordings from list?"
+msgstr "Alle opname's van de lijst verwijderen?"
+
+msgid "Status"
+msgstr "Status"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Opdracht actief (Branden: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Opdracht actief (Converteren: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Opdracht actief (Branden)"
+
+msgid "Job active (Converting)"
+msgstr "Opdracht actief (Converteren)"
+
+msgid "No active or waiting jobs present"
+msgstr "Geen aktieve of geplande opdrachten aanwezig"
+
+msgid "Canceled jobs"
+msgstr "Afgebroken opdrachten"
+
+msgid "Erroneous jobs"
+msgstr "Fout uitgevoerde opdrachten"
+
+msgid "Button$Recordings"
+msgstr "Opnamen"
+
+msgid "Restart"
+msgstr "Herstart"
+
+msgid "Retry"
+msgstr "Probeer opnieuw"
+
+msgid "Button$Remove"
+msgstr "Verwijder"
+
+msgid "Replace current job?"
+msgstr "Huidige opdracht vervangen?"
+
+msgid "Remove job from list?"
+msgstr "Opdracht uit de lijst verwijderen?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Totale grootte: %1$.1f MB %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(zal worden gecomprimeerd)"
+
+msgid "Aspect ratio"
+msgstr "Aspect verhouding"
+
+msgid "Previous page"
+msgstr "Vorige pagina"
+
+msgid "Next page"
+msgstr "Volgende pagina"
+
+msgid "Play movie"
+msgstr "Speel film af"
+
+msgid "Button$Back"
+msgstr "Terug"
+
+msgid "Couldn't read index"
+msgstr "Kon index niet lezen"
+
+msgid "Couldn't browse recording"
+msgstr "Kon opname niet vinden"
+
+msgid "mp2"
+msgstr "mp2"
+
+msgid "dolby"
+msgstr "dolby"
+
+msgid "Couldn't read marks"
+msgstr "Kon markeringen niet lezen"
+
+msgid "Recording is too short"
+msgstr "Opname is te kort"
+
+msgid "Disk type"
+msgstr "Disk type"
+
+msgid "Write to"
+msgstr "Schrijf naar"
+
+msgid "Burn speed"
+msgstr "Brandsnelheid"
+
+msgid "unlimited"
+msgstr "ongelimiteerd"
+
+msgid "Skin"
+msgstr "Skin"
+
+msgid "Chapters"
+msgstr "Hoofdstukken"
+
+msgid "Cut"
+msgstr "Knip"
+
+msgid "Skip empty titlemenu"
+msgstr "Sla lege titelmenu's over"
+
+msgid "Skip short mainmenu"
+msgstr "Sla korte hoofdmenu's over"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Basis instellingen -----------------------------------------------"
+
+msgid "Remove path component"
+msgstr "Verwijder pad component "
+
+msgid "Eject disc after burn"
+msgstr "Werp schijf uit na het branden"
+
+msgid "Demux using"
+msgstr "Demux met behulp van "
+
+msgid "Requant using"
+msgstr "Requant met behulp van"
+
+msgid "Preserve logfiles"
+msgstr "Behoud van logbestanden"
+
+msgid "Spare language code"
+msgstr "Reserve taalcode "
+
+msgid "Status in main menu"
+msgstr "Status in het hoofdmenu "
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Standaard brand-opties ------------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Overige brand-opties --------------------------------------------"
+
+msgid "Offer disk type"
+msgstr "'schijftype' aanbieden"
+
+msgid "Offer chapters"
+msgstr "'hoofdstukken' aanbieden"
+
+msgid "Offer target"
+msgstr "'doel' aanbieden"
+
+msgid "Offer burn speed"
+msgstr "'brandsnelheid' aanbieden"
+
+msgid "Offer cutting"
+msgstr "'knippen' aanbieden"
+
+msgid "Offer skip titlemenu"
+msgstr "'titelmenu overslaan' aanbieden"
+
+msgid "Offer skip mainmenu"
+msgstr "'hoofdmenu overslaan' aanbieden"
+
+msgid "Job options"
+msgstr "Opdracht optie's"
+
+msgid "Please select burn options below:"
+msgstr "Kies één van de onderstaande brand-opties:"
+
+msgid "show"
+msgstr "toon"
+
+msgid "skip"
+msgstr "sla over"
+
+msgid "Button$Start"
+msgstr "Start"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Video track"
+msgstr "Videospoor"
+
+msgid "Audio track"
+msgstr "Audiospoor"
+
+msgid "Subtitle track"
+msgstr "Ondertitel spoor"
+
+msgid "page"
+msgstr "pagina"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+#~ msgid "No recordings marked for burning"
+#~ msgstr "Er zijn geen opnamen gemarkeerd om te branden"
+
+#~ msgid "Create ISO only"
+#~ msgstr "Maak alleen een ISO"
+
+#~ msgid "Write to Disc"
+#~ msgstr "Schrijf naar disk"
+
+#~ msgid "Create ISO and write"
+#~ msgstr "Maak een ISO en brand deze"
+
+#~ msgid "analog"
+#~ msgstr "analoog"
+
+#~ msgid "Disk content"
+#~ msgstr "Disk inhoud"
+
+#, fuzzy
+#~ msgid "Format DVD"
+#~ msgstr "Schrijf DVD"
+
+#~ msgid "-------------------------------------------------------- Job defaults -----------------------------------------------------"
+#~ msgstr "--------------------------------------------------------Job standaard----------------------------------------------------"

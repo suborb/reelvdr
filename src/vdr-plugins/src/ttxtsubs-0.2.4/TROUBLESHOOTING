@@ -1,0 +1,284 @@
+General troubleshooting
+-----------------------
+
+Don't see any subtitles?
+
+  1. Do you really have the patch for VDR applied and are you really running
+     this patched VDR version?
+  2. Do you have the teletext subtitle option in VDR's setup menu in the DVB
+     section enabled?
+  3. Are you sure your broadcaster supports automatic detection of the subtitle
+     pages? If not, you must manually configure the subtitle pages in the
+     channels.conf!
+  4. Are you sure the current broadcasting does have subtitles at all? No
+     channel sends subtitles 24/7, so please make sure the current broadcasting
+     really contains subtitles. You may want to check this with the OSDTeletext
+     plug-in by manually going to the subtitle page.
+  5. Do you have selected the subtitle languages you want to see in
+     the plug-ins setup?
+
+Nothing works, want to report a bug?
+
+Please report bugs to:
+
+ http://projects.vdr-developer.org/projects/plg-ttxtsubs/issues
+
+...and include the following information:
+
+ - VDR version, plug-in version, patch version
+ - VDR's channels.conf and setup.conf
+ - Syslog and stderr messages
+ - If possible the complete patched VDR source tree
+ - If possible a small 5min-recording which should contain subtitles. You can
+   use a service like e.g. use a duckload.com to upload this (the bug-tracker
+   does not allow attachments larger than 5 MB). You should include the delete
+   link, so we can remove the recording after downloading it. 
+
+
+Advanced troubleshooting
+-------------------------
+
+The following describes some more detailed troubleshooting procedures but
+is partially deprecated (Especially the references to the ttxtsubs output
+on STDERR or the syslog):
+
+Ttxtsubs is made to be fully automatic with no other user settable
+settings than preferred subtitling language or languages and a few
+appearance options. This is how set top boxes work, and, in my
+opinion, how these things should work. Users should not have to know
+anything about PIDs, encodings or other strange information as in this
+case teletext page numbers.
+
+Sadly, some channels do not provide the information necessary for
+automatic subtitle decoders to do it's work, and some do but do it
+wrong. There has also been bugs in ttxtsubs that made it incorrectly
+parse the information it gets, I of course hope those are gone by now.
+
+If you think there are subtitles on a channel but ttxtsubs doesn't
+show them, you may want to read the text below.
+
+
+Troubleshooting ttxtsubs
+------------------------
+
+A good thing to check first is how another set top box behaves. If the
+other set top box automatically finds and displays teletext subtitles
+while ttxtsubs don't, there is probably a problem in ttxtsubs. If the
+channel in question is a French, please see the French channel problem
+section below.
+
+If neither the set top box nor ttxtsubs automatically finds the
+subtitles but you can get them by manually entering the teletext page
+number for them on your TV set or your DVB decoder, chances are that
+the subtitles aren't announced in the channel's "service information",
+at least not correctly. You can double check this using dvbsnoop, see
+below.
+
+To find the subtitles, a DVB receiver as ttxtsubs scans the channel's
+"Service Information". This meta data contains information about what
+PIDs to use for receiving the channel, such as what PID to use for
+video and what audio PID should be used for what language. VDR 1.3 and
+up uses the Service Information for automatic video and audio PID
+setup just as a typical set top box does.
+
+For teletext with or without subtitles, the Service Information
+contains information about what PID and what teletext page to use for
+what language and purpose. A typical set of information for a channel
+with Norwegian and Swedish teletext with subtitles could look like
+this:
+ PID   Language  Teletext Page  Purpose
+ 4711  nor       200            Initial page for teletext browsing
+ 4711  nor       299            Subtitles
+ 4711  nor       298            Subtitles for hearing impaired
+ 4711  swe       300            Initial page for teletext browsing
+ 4711  swe       399            Subtitles
+ 4711  swe       398            Subtitles for hearing impaired
+In this case, a receiver set up for Norwegian subtitles for hearing
+impaired would use PID 4711 and teletext page 298 for subtitles. If
+the user pushes the button for interactive teletext information
+browsing, the set top box should start with presenting page 200 which
+is supposed to be an index page in Norwegian.
+Note that the PID may be different for each language and purpose. This
+is one reason why ttxtsubs has to find out the PID itself and doesn't
+care at all about how you set up the channel's TPid.
+
+To find out what ttxtsubs is doing, you must currently (0.0.5pre2)
+look at the stderr output in the shell where you run VDR. In a future
+version, it may instead show this in the VDR menus in a more user
+friendly manner. At the end of this text you can find some typical
+messages from ttxtsubs with explanations.
+
+You can use dvbsnoop, http://dvbsnoop.sourceforge.net, to check what
+the service information really says.
+First dump pid 0 to find the Program Map PID for your channel:
+  $ dvbsnoop -n 1 0
+and get for example:
+    Program_number: 5060 (0x13c4)
+    reserved: 7 (0x07)
+    Program_map_PID: 5060 (0x13c4)
+The entry you are looking for is the one with a Program_number the
+same as the Sid number in VDR.
+If you don't know the program number, you can dump pid 17 and
+look for the channel name you want and get the Service_id number:
+  $ dvbsnoop -n 1 17
+You may need to do this several times to find your channel (or use a
+number larger than 1 after -n).
+In this case the program map PID is the same as the Program Number.
+
+When you know the program map PID, dump it:
+  $ dvbsnoop -n 1 5060
+and look for
+          DVB-DescriptorTag: 86 (0x56)  [= teletext_descriptor]
+Again, you may need to do this several times to find this information
+(or use a number larger than 1 after -n).
+On a well behaved channel with teletext subtitles you should see
+something like this:
+...
+    Elementary_PID: 1024 (0x0400)
+...
+            DVB-DescriptorTag: 86 (0x56)  [= teletext_descriptor]
+            Descriptor_length: 30 (0x1e)
+               ISO639_language_code:  swe
+               Teletext_type: 1 (0x01)  [= initial teletext page]
+               Teletext_magazine_number: 1 (0x01)
+               Teletext_page_number: 0 (0x00)
+
+               ISO639_language_code:  swe
+               Teletext_type: 2 (0x02)  [= teletext subtitle page]
+               Teletext_magazine_number: 6 (0x06)
+               Teletext_page_number: 146 (0x92)
+
+               ISO639_language_code:  swe
+               Teletext_type: 5 (0x05)  [= teletext subtitle page for hearing impaired people]
+               Teletext_magazine_number: 7 (0x07)
+               Teletext_page_number: 146 (0x92)
+....
+This is the information that a DVB decoder uses to find the
+subtitles. If you find a DVB-DescriptorTag of 69 (0x45) =
+VBI_data_descriptor or 70 (0x46) = VBI_teletext_descriptor that you
+think could point out the subtitles, please contact the
+author. Ttxtsubs currently doesn't decode those as I have never seen
+them, but it is probably easy to implement. If there is no information
+for subtitles but there are subtitles in the teletext stream, please
+ask the TV company to fix it, see next section.
+
+
+If you want to watch a channel that has teletext subtitles but the
+subtitles aren't announced in the Service Information, contact the TV
+company and ask them to correct this. If you politely inform them
+about the problem, they may very well correct it. After all, it is in
+their interrest to have satisfied viewers. Don't take "you will have
+to enter the subtitles page number on your TV set" as an answer - this
+is just to sad an user experience and is not how it is supposed to
+work with DVB. Try to convince them that this is what you and the
+standard and the viewers want. Here is a template for such a letter:
+-----
+Sirs,
+
+Your TV channel [CHANNEL NAME] that can be found on DVB
+[Satellite/Cable network/Terrestrial network] [SATELLITE POS/NETWORK
+NAME] with video PID [NNN], audio PID [NNN] and teletext PID [NNN] has
+teletext subtitles on page[s] [NNN[, NNN...]]. Sadly, the DVB service
+information for your channel does not announce the subtitles, so my
+DVB receiver can not find them and display them.
+
+I hereby ask you to update your channel's service information to
+also announce the existence of the subtitles. Since your service
+information already announce the existence of the teletext PID, only a
+small addition is needed to also announce the teletext subtitle
+page[s].
+
+For further information about the service information descriptor that
+is needed, please see the standard document ETSI EN 300 468, paragraph
+6.2.40. You can download this document for free from www.etsi.org.
+
+By sending a teletext subtitles descriptor according to this
+specification, my and other decoders that are using it will be able to
+automatically pick them up and present the subtitles to the viewer.
+-----
+
+
+There is a known problem with some French channels. Because of some
+old specification interpretation mistake, some channels send the
+teletext page number in decimal coded as binary, and not as the
+standard says in hexadecimal. Since there are set top boxes sold that
+has the same bug so that they can work with there channels, they are
+reluctant to correct this. The service information for those channels
+typically say that the subtitles are on page 858 or 859 when they
+really are on page 888 or 889. To still be able to use those channels,
+you can in ttxtsubs turn on the "Workaround for some French chns"
+option which will remap numbers in the X5Y range into X8Y. Since this
+would also remap the page number for a channel that really is using
+for example page 859, this is an option that is off by default.  If
+you see this problem, please contact the channel provider and make
+them understand that time will only make it harder to correct this
+mistake as more decoders with this bug will be out there and software
+updates for older set top boxes will be harder and harder to get.
+Some channels do what they can to gradually correct this by sending
+both a descriptor for French subtitles on page 859 (whish is
+interpreted as page 889 on the old non standard decoders), and as
+French for the Hearing Impaired on page 889 which is the setting that
+can be used on standard compliant decoders.
+(For the technically interrested: The hundreds figure is in teletext
+called "magazine" and is sent separately from the 8 bit "page
+number". Each magazine can actually have up to 256 pages and the page
+number is really in hex, but only the 100 pages which use only the
+figures 0-9 are normally seen by the user as only those numbers can be
+entered on the remote control keyboard. 59 hex is 89 decimal, and here
+is where something went wrong.)
+
+
+Note that some channels don't use teletext subtitles but instead use
+DVB subtitles, which is something different. DVB subtitles are sent as
+bitmaps, somewhat like DVD subtitles. You can find a plugin for DVB
+subtitles here: http://www.saunalahti.fi/~opvirtan/vdr/subtitles/
+
+
+Typical ttxtsubs messages and explanations
+------------------------------------------
+
+=====
+ttxtsubs: Found selected subtitles on PID 1024, page 792
+-----
+The subtitles for the language that you have selected is at teletext
+page 792 on teletext PID 1024.
+
+=====
+ttxtsubs: Found non HI subtitles on PID 976, page 199
+-----
+You have selected subtitles for the hearing impaired, but on this
+channel there are no such subtitles. Ttxtsubs uses the non hearing
+impaired subtitles for the selected language instead.
+
+=====
+ttxtsubs: Wanted subtitle language(s) not found on channel, available languages:
+          889: fra (Subtitles)
+-----
+Subtitles for the language you have selected is not available on this
+channel, but there are other alternatives, in this case French.
+
+=====
+ttxtsubs: Wanted subtitle language(s) not found on channel, available languages:
+          100: swe (Initial Page (The teletext start page, not a subtitles page!))
+-----
+This means that there is a start page for interactive teletext
+browsing announced, but no subtitles. There may still be subtitles in
+the teletext stream, but ttxtsubs won't find them since they are not
+announced correctly. If so, double check that this is the case and
+then contact the TV company, see above.
+
+=====
+ttxtsubs: No teletext subtitles on channel.
+-----
+No teletext stream at all was announced for this channel.
+
+=====
+ttxtsubs: Service Information read: timeout!
+-----
+No Service Information data could be found for 250 ms (a quarter of a
+second). This could be an indication of bad reception, but may also be
+because the cards tuner, a motorized antenna or a LNB hasn't yet
+settled for the new channel. Ttxtsubs will retry for up to 10
+seconds. Ttxtsubs will cache whatever it finally finds out about the
+channel, so you will only see this happening at the most once for each
+channel and vdr run.

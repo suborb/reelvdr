@@ -1,0 +1,361 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-radio\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 11:01+0100\n"
+"PO-Revision-Date: 2009-03-04 16:23+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "unknown program type"
+msgstr "neznámý typ programu"
+
+msgid "News"
+msgstr "Zprávy"
+
+msgid "Current affairs"
+msgstr "Aktuality"
+
+msgid "Information"
+msgstr "Informace"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Education"
+msgstr "Vzdělávání"
+
+msgid "Drama"
+msgstr "Rozhlasová hra"
+
+msgid "Culture"
+msgstr "Kultura"
+
+msgid "Science"
+msgstr "Věda"
+
+msgid "Varied"
+msgstr "Různé"
+
+msgid "Pop music"
+msgstr "Pop"
+
+msgid "Rock music"
+msgstr "Rock"
+
+msgid "M.O.R. music"
+msgstr "Střední proud"
+
+msgid "Light classical"
+msgstr "Lehká klasická"
+
+msgid "Serious classical"
+msgstr "Vážná klasická"
+
+msgid "Other music"
+msgstr "Jiná hudba"
+
+msgid "Alarm"
+msgstr "Poplach"
+
+msgid "ext. Info"
+msgstr ""
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radiotext"
+
+msgid "  [waiting ...]"
+msgstr "  [systém čeká...]"
+
+msgid "Title :"
+msgstr ""
+
+msgid "Artist :"
+msgstr "Interpret:"
+
+msgid "Records"
+msgstr "Archiv"
+
+msgid "with <0>"
+msgstr "pomocí 0"
+
+msgid "Rass-Image(s) saved from Archiv "
+msgstr ""
+
+msgid "Rass-Image(s) saved from Gallery"
+msgstr ""
+
+msgid "Rass-Image saved"
+msgstr ""
+
+msgid "Rass-Image failed"
+msgstr ""
+
+msgid "Playlist"
+msgstr "Seznam stop"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Lottery"
+msgstr "Loterie"
+
+msgid "Weather"
+msgstr "Počasí"
+
+msgid "Stockmarket"
+msgstr "Burza"
+
+msgid "Other"
+msgstr "Ostatní"
+
+msgid "extra Info  since"
+msgstr ""
+
+msgid "RTplus Memory  since"
+msgstr "Paměť RTplus od"
+
+msgid "Programme"
+msgstr "Program"
+
+msgid "Stat.Short"
+msgstr ""
+
+msgid "Station"
+msgstr "Stanice"
+
+msgid "Now"
+msgstr "Nyní"
+
+msgid "...Part"
+msgstr "... díl"
+
+msgid "Next"
+msgstr "Další"
+
+msgid "Host"
+msgstr "Moderátor"
+
+msgid "Edit.Staff"
+msgstr "Redakce"
+
+msgid "Homepage"
+msgstr "Domovská stránka"
+
+msgid "Interactivity"
+msgstr "Interaktivita"
+
+msgid "Phone-Hotline"
+msgstr "Telefon - hotline"
+
+msgid "Phone-Studio"
+msgstr "Telefon - studio"
+
+msgid "SMS-Studio"
+msgstr ""
+
+msgid "Email-Hotline"
+msgstr "E-mail - hotline"
+
+msgid "Email-Studio"
+msgstr "E-mail - studio"
+
+msgid "Info"
+msgstr "Informace"
+
+msgid "NewsLocal"
+msgstr "Místní zprávy"
+
+msgid "DateTime"
+msgstr "Datum a čas"
+
+msgid "Traffic"
+msgstr "Doprava"
+
+msgid "Advertising"
+msgstr "Reklama"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Exit"
+msgstr "Konec"
+
+msgid "Info-File saved"
+msgstr ""
+
+msgid "RTplus-File saved"
+msgstr "RTplus - soubor uložen"
+
+msgid "last seen Radiotext"
+msgstr "naposledy zobrazený radiotext"
+
+msgid "Time"
+msgstr "Čas"
+
+msgid "Title"
+msgstr "Název"
+
+msgid "Artist"
+msgstr "Interpret"
+
+msgid "Refresh Off"
+msgstr "Aktual.vyp."
+
+msgid "Refresh On"
+msgstr "Aktual.zap."
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Radiochannels RDS-Text"
+msgstr ""
+
+msgid "RDS-Radiotext"
+msgstr ""
+
+msgid "Off"
+msgstr "Vypnuto"
+
+msgid "only Text"
+msgstr "pouze text"
+
+msgid "Text+TagInfo"
+msgstr "text+taginfo"
+
+msgid "only, if some"
+msgstr "pouze, je-li"
+
+msgid "always"
+msgstr "vždy"
+
+msgid "Top"
+msgstr "Nahoře"
+
+msgid "Bottom"
+msgstr "Dole"
+
+msgid "latest at Top"
+msgstr "nejnovější nahoře"
+
+msgid "latest at Bottom"
+msgstr "nejnovější dole"
+
+msgid "Black"
+msgstr "Černá"
+
+msgid "White"
+msgstr "Bílá"
+
+msgid "Red"
+msgstr "Červená"
+
+msgid "Green"
+msgstr "Zelená"
+
+msgid "Yellow"
+msgstr "Žlutá"
+
+msgid "Magenta"
+msgstr "Purpurová"
+
+msgid "Blue"
+msgstr "Modrá"
+
+msgid "Cyan"
+msgstr "Azurová"
+
+msgid "Transparent"
+msgstr "Průhledná"
+
+msgid "about MainMenu"
+msgstr "o hlavní nabídce"
+
+msgid "Automatic"
+msgstr "Automaticky"
+
+msgid "only Taginfo"
+msgstr "pouze taginfo"
+
+msgid "Rass only"
+msgstr ""
+
+msgid "Rass+Text mixed"
+msgstr ""
+
+msgid "Activate"
+msgstr "Aktivovat"
+
+msgid "Use StillPicture-Function"
+msgstr ""
+
+msgid "Hide MainMenuEntry"
+msgstr ""
+
+msgid "RDSText Function"
+msgstr "Funkce RDSText"
+
+msgid "RDSText OSD-Position"
+msgstr "RDSText OSD - pozice"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "RDSText OSD - záhlaví"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "RDSText OSD - řádky (1-5)"
+
+msgid "RDSText OSD-Scrollmode"
+msgstr ""
+
+msgid "RDSText OSD-Taginfo"
+msgstr ""
+
+msgid "RDSText OSD-Skincolors used"
+msgstr ""
+
+msgid "RDSText OSD-Backgr.Color"
+msgstr ""
+
+msgid "RDSText OSD-Backgr.Transp."
+msgstr ""
+
+msgid "RDSText OSD-Foregr.Color"
+msgstr ""
+
+msgid "RDSText OSD-Timeout (0-1440 min)"
+msgstr ""
+
+msgid "RDSText OSD-Display"
+msgstr ""
+
+msgid "RDSText StatusMsg (lcdproc & co)"
+msgstr ""
+
+msgid "RDSText Rass-Function"
+msgstr ""
+
+msgid "External Info-Request by Internet"
+msgstr ""
+
+msgid "External Info-Request"
+msgstr ""
+
+#~ msgid "RaSS only"
+#~ msgstr "pouze RaSS"
+
+#~ msgid "RaSS+Text mixed"
+#~ msgstr "RaSS+text"
+
+#~ msgid "Title  :"
+#~ msgstr "Název:"

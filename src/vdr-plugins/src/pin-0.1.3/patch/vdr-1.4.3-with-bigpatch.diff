@@ -1,0 +1,32 @@
+--- ../plain/vdr-1.4.3-with-all_but-new-pin-stuff//i18n.c	2006-11-27 20:18:09.000000000 +0100
++++ i18n.c	2006-11-27 20:34:37.000000000 +0100
+@@ -7607,8 +7607,8 @@
+     "",// TODO
+     "",// TODO
+   },
+-  { "Child protection",                        // PIN PATCH
+-    "Kinderschutz",
++  { "Childlock",                        // PIN PATCH
++    "Kindersicherung",
+     "",//TODO
+     "",//TODO
+     "",//TODO
+--- ../plain/vdr-1.4.3-with-all_but-new-pin-stuff//menu.c	2006-11-27 20:19:07.000000000 +0100
++++ menu.c	2006-11-27 20:27:19.000000000 +0100
+@@ -784,7 +784,15 @@
+      Add(new cMenuEditBitItem( tr("Switch only"),  &data.flags, tfSwitchOnly));
+      Add(new cMenuEditIntItem( tr("Priority"),     &data.priority, 0, MAXPRIORITY));
+      Add(new cMenuEditIntItem( tr("Lifetime"),     &data.lifetime, 0, MAXLIFETIME));
+-     Add(new cMenuEditBoolItem( tr("Child protection"),&data.fskProtection));  // PIN PATCH
++     // PIN PATCH
++     if (cOsd::pinValid) Add(new cMenuEditBoolItem(tr("Child protection"),&data.fskProtection));
++     else { 
++        char* buf = 0;
++        asprintf(&buf, "%s\t%s", tr("Child protection"), data.fskProtection ? tr("yes") : tr("no")); 
++        Add(new cOsdItem(buf));
++        free(buf);
++        }
++
+      char* p = strrchr(data.file, '~');
+      if (p) {
+         p++;

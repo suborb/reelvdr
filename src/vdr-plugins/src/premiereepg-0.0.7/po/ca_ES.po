@@ -1,0 +1,64 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-premiereepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-01-11 18:06+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Parses extended Premiere EPG data"
+msgstr "Analitza la informació addicional de l'EPG de Premiere"
+
+msgid "Sky EPG"
+msgstr ""
+
+msgid "PremiereEPG"
+msgstr "Premiere EPG"
+
+msgid "off"
+msgstr "off"
+
+msgid "Tag option events"
+msgstr "Marca les opcions dels esdeveniments"
+
+msgid "Show order information"
+msgstr "Mostra la informació de compra"
+
+msgid "Show rating information"
+msgstr "Mostra la informació del preu"
+
+msgid "Fix EPG data"
+msgstr "Fixa les dades EPG"
+
+msgid "Ordernumber"
+msgstr "Compra núm."
+
+msgid "Price"
+msgstr "Preu"
+
+msgid "Ordering"
+msgstr "Compra"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "WWW"
+msgstr "WWW"
+
+msgid "Rating"
+msgstr "Preu"
+
+msgid "years"
+msgstr "anys"
+
+#~ msgid "Premiere EPG"
+#~ msgstr "Premiere EPG"

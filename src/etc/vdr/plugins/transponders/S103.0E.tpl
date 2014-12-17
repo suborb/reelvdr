@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S103.0E
+2=Express A2
+3=East
+4=103.0

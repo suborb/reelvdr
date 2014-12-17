@@ -1,0 +1,9 @@
+[SATTYPE]
+1=S40.0E
+2=Express AM1
+3=East
+4=40.0
+[EMPTY]
+0=2
+1=11022,V
+2=11038,V

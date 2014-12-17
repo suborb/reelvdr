@@ -1,0 +1,27 @@
+#!/bin/bash
+# OE3-Playlist
+# $1 = outfile
+
+### Variabel
+Name="OE3 [oe3.ORF.at]"
+### 
+
+# get...
+wget -q --tries=1 --timeout=10 -O /tmp/playlist "http://solutions.orf.at/orf/hitservice/index.cgi?view=tracklist"
+
+# Artist/Title
+title=`grep -A2 'class="playlisttop"' /tmp/playlist`
+title=${title/*$'<b>'/}; title=${title/$'<'\/'b>'*/}
+artist=`grep -A4 'class="playlisttop"' /tmp/playlist`
+artist=${artist/*$'   '/}
+# temp. no Info
+artist=${artist:='...'}; titel=${title:='...'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

@@ -1,0 +1,452 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvdswitch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 13:48+0200\n"
+"PO-Revision-Date: 2009-03-014:11+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Reading DVD"
+msgstr "Citesc DVD"
+
+msgid "Writing DVD"
+msgstr "Scriu DVD"
+
+#, fuzzy
+msgid "Copying DVD"
+msgstr "Citesc DVD"
+
+msgid "Please insert DVD: "
+msgstr "Va ror introduceti DVD:"
+
+msgid "Commands"
+msgstr "Comenzi"
+
+msgid "Burn image"
+msgstr "Scrie imagine disc"
+
+msgid "Rename image"
+msgstr "Redenumeste imagine"
+
+msgid "Open DVD-tray"
+msgstr "Deschide sertar DVD"
+
+msgid "Close DVD-tray"
+msgstr "Inchide sertar"
+
+msgid "Delete cache"
+msgstr "Sterge cache"
+
+msgid "Format DVD-RW"
+msgstr "Formatare DVD-Rescriptibil"
+
+msgid "Directory management"
+msgstr "Management Director"
+
+msgid "Success..."
+msgstr "Succes..."
+
+msgid "Directory Management"
+msgstr "Management Director"
+
+msgid "Select Directory"
+msgstr "Selecteaza Director"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "Select"
+msgstr "Selecteaza"
+
+msgid "Rename"
+msgstr "Redenumire"
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Move"
+msgstr "Muta"
+
+msgid "Edit Directories"
+msgstr "Editare Directoare"
+
+msgid "no Rights!"
+msgstr "fara Drepturi!"
+
+msgid "really delete?"
+msgstr "chiar doriti sa stergeti ?"
+
+msgid "Directory not empty. however delete?"
+msgstr "Directorul nu este gol. stergeti oricum ?"
+
+msgid "no rights!"
+msgstr "fara Drepturi!"
+
+msgid "no rights to create"
+msgstr "nu aveti drepturi de a crea"
+
+msgid "Directory exists"
+msgstr "Directorul exista"
+
+msgid "no rights to rename"
+msgstr "nu aveti drepturi de a redenumi"
+
+msgid "Insert"
+msgstr "Introdu"
+
+msgid "Specified Writescript not exist!"
+msgstr "Scriptul specificat petru scriere nu exista!"
+
+msgid "Cannot execute Writescript!"
+msgstr "Nu pot executa scriptul pentru scriere!"
+
+msgid "Burn Now?"
+msgstr "Scriu acum ?"
+
+msgid "Read DVD"
+msgstr "Citeste DVD"
+
+msgid "Specified Readscript not exist!"
+msgstr "Scriptul specificat petru citire nu exista!"
+
+msgid "Cannot execute Readscript!"
+msgstr "Nu pot executa scriptul pentru citire!"
+
+msgid "Now Read?"
+msgstr "Citesc acum ?"
+
+msgid "Image-File"
+msgstr "Fisier Imagine"
+
+msgid "Image-Directory"
+msgstr "Imagine Director"
+
+msgid "Previously seen DVDs"
+msgstr "DVD-urile folosite anterior"
+
+msgid "Archives DVDs and plays it from Harddisk"
+msgstr "Arhiveaza DVD-uri si reda-le de pe Harddisc"
+
+msgid "Archive Video-DVD"
+msgstr "Arhiva Video-DVD"
+
+msgid "Image Directory not readable or does not exist"
+msgstr ""
+
+msgid "DVD-Plugin not found! Function deactivated!"
+msgstr "Pluginul DVD nu a fost gasit! Functie dezactivata!"
+
+msgid "Directory with 'VIDEO_TS' Folder"
+msgstr "Directorul cu dosarul 'VIDEO_TS' "
+
+msgid "Directory"
+msgstr "Director"
+
+msgid "File with '.iso' Extension"
+msgstr "Fisier cu extensia '.iso'"
+
+msgid "Iso-Image"
+msgstr "Imagine Iso"
+
+msgid "My DVDs"
+msgstr "DVD-urile mele"
+
+msgid "free"
+msgstr "liber"
+
+msgid "DVD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Use the red button to create a archive."
+msgstr ""
+
+msgid "No DVD found in drive."
+msgstr ""
+
+msgid "Insert a DVD to create a archive"
+msgstr ""
+
+msgid "to change"
+msgstr "pentru a fi schimbat"
+
+msgid "File exists in Directory"
+msgstr "Fisierul exista in Director"
+
+msgid "Please wait. Searching for DVD images"
+msgstr "Va rog asteaptati.Caut dupa imagini DVD"
+
+msgid "without Category"
+msgstr "fara Categorie"
+
+#, c-format
+msgid "(Size %03.1f GB)\t"
+msgstr "(Dimensiune %03.1f GB)\t"
+
+msgid "DVD-Drive"
+msgstr "Unitate DVD"
+
+msgid "insert Media"
+msgstr ""
+
+msgid "no Rights to rename"
+msgstr "nu aveti drepturi de a redenumi"
+
+msgid "RIP a DVD"
+msgstr "Extrage pe Harddisc un DVD"
+
+msgid "All Images"
+msgstr "Toate Imaginile"
+
+msgid "All with Cat."
+msgstr "Toate cu Categorie"
+
+msgid "Directories"
+msgstr "Directoare"
+
+msgid "Image-Type"
+msgstr "Tip Imagine"
+
+msgid "File-Type"
+msgstr "Tip Fisier"
+
+msgid "none"
+msgstr "nimic"
+
+msgid "ascending"
+msgstr "crescator"
+
+msgid "descending"
+msgstr "descrescator"
+
+msgid "none Function"
+msgstr "Functia nimic"
+
+msgid "Dir. Management"
+msgstr "Management Director"
+
+msgid "Tray open"
+msgstr "Sertar deschis"
+
+msgid "Tray close"
+msgstr "Sertar inchis"
+
+msgid "Play"
+msgstr "Redare"
+
+msgid "Image rename"
+msgstr "Redenumire imagine"
+
+msgid "Image move"
+msgstr "Muta Imagine"
+
+msgid "Image delete"
+msgstr "Sterge Imagine"
+
+msgid "Image burn"
+msgstr "Scrie Imagine"
+
+msgid "Image read"
+msgstr "Citeste Imagine"
+
+msgid "Dir.Mgmt."
+msgstr "Management Director"
+
+msgid "Open"
+msgstr "Deschide"
+
+msgid "Close"
+msgstr "Inchide"
+
+msgid "Burn"
+msgstr "Scrie"
+
+msgid "Copy"
+msgstr "Copiaza"
+
+msgid "Use -> and <- for opening and closing menus"
+msgstr "Foloseste -> si <- pentru a deschide si inchide meniuri"
+
+msgid "Save"
+msgstr "Salveaza"
+
+msgid "Generic Settings"
+msgstr "Setari generice"
+
+msgid "\tImagetypes"
+msgstr "\tTip Imagine"
+
+msgid "\tView free DiskSpace"
+msgstr "\tArata spatiul liber de pe disc"
+
+msgid "Display Settings"
+msgstr "Setari Display"
+
+msgid "\tDisplay Mode"
+msgstr "\tMod Display"
+
+msgid "\t  Category Type"
+msgstr "\t  Categorie Tip"
+
+msgid "\t  invisible empty Dir's/Cat."
+msgstr "\t  invizbil gol Dir/Cat."
+
+msgid "\tAlphabetic Sort"
+msgstr "\tSortare Alfabetica  "
+
+msgid "\tvisible DVD-Drive"
+msgstr "\tunitati DVD vizibile"
+
+msgid "Special Display Settings"
+msgstr "Setari speciale Display"
+
+msgid "\tvisible Image-Type Col"
+msgstr "\tvizibil Tip Imagine Col"
+
+msgid "\t  Width for Image-Col"
+msgstr "\t  Latime pentru Coloana Imagine"
+
+msgid "\tchar for Cat.Line"
+msgstr "\tcaracter pentru linia Categorie "
+
+msgid "\t  Count before Cat.Name"
+msgstr "\t  Numar inainte de Nume Categorie"
+
+msgid "\tSpaces before/after Cat.Name"
+msgstr "\tSpatii inainte/dupa Nume Categorie"
+
+msgid "\tCutText for Subcat"
+msgstr "\tTaie text pentru Subcategorii"
+
+msgid "Navigation"
+msgstr "Navigare"
+
+msgid "\tCat.Jump by Left/Right"
+msgstr "\tCategorie sari cu Stanga/Dreapta"
+
+msgid "Key allocation"
+msgstr "Alocare taste"
+
+msgid "\tKey 1"
+msgstr "\tTasta 1"
+
+msgid "\tKey 2"
+msgstr "\tTasta 2"
+
+msgid "\tKey 3"
+msgstr "\tTasta 3"
+
+msgid "\tKey 4"
+msgstr "\tTasta 4"
+
+msgid "\tKey 5"
+msgstr "\tTasta 5"
+
+msgid "\tKey 6"
+msgstr "\tTasta 6"
+
+msgid "\tKey 7"
+msgstr "\tTasta 7"
+
+msgid "\tKey 8"
+msgstr "\tTasta 8"
+
+msgid "\tKey 9"
+msgstr "\tTasta 9"
+
+msgid "\tKey 0"
+msgstr "\tTasta 0"
+
+msgid "\tKey Green"
+msgstr "\tTasta Verde"
+
+msgid "\tKey Yellow"
+msgstr "\tTasta Galbena"
+
+msgid "\tKey OK"
+msgstr "\tTasta OK"
+
+msgid "to adjust"
+msgstr "pentru a ajusta"
+
+msgid "Imagetypes"
+msgstr "Tip imagine"
+
+msgid "Edit"
+msgstr "Editare"
+
+msgid "really delete Entry?"
+msgstr "chiar doriti sa sterg intrarea ?"
+
+msgid "File"
+msgstr "Fisier"
+
+msgid "Description:"
+msgstr "Descriere:"
+
+msgid "Type-Title:"
+msgstr "Tip - Titlu:"
+
+msgid "Image Type"
+msgstr "Tip Imagine"
+
+msgid "Directory contains:"
+msgstr "Directorul contine:"
+
+msgid "File Extension:"
+msgstr "Extensie Fisier:"
+
+msgid "Hide Extension"
+msgstr "Ascunde extensie"
+
+msgid "'Description' must not empty!"
+msgstr "'Descrierea' nu trebuie sa fie goala"
+
+msgid "'Type-Title' must not empty!"
+msgstr "'Tip - Titlu' nu trebuie sa fie gol! "
+
+msgid "'Directory contains' must not empty!"
+msgstr "'Directorul Contine' nu trebuie sa fie gol!"
+
+msgid "'File Extension' must not empty!"
+msgstr "'Extensie Fisier' nu trebuie sa fie gol!"
+
+#~ msgid "Image Directory not readable or not exist"
+#~ msgstr "Directorul Imagine nu este redabil sau nu exista"
+
+#, fuzzy
+#~ msgid "Rename DVD"
+#~ msgstr "Citeste DVD"
+
+#~ msgid "New:"
+#~ msgstr "Nou"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+#~ msgstr " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+
+#~ msgid "Rename:"
+#~ msgstr "Redenumire:"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+#~ msgstr " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+
+#~ msgid "\tImage Dir."
+#~ msgstr "\tDirector Imagine"
+
+#~ msgid "\tchange Character"
+#~ msgstr "\tschimba caracter"

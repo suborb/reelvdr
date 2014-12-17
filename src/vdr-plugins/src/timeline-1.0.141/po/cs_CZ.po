@@ -1,0 +1,49 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-timeline\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:44+0200\n"
+"PO-Revision-Date: 2009-03-06 16:01+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Prio"
+msgstr "Priorita"
+
+msgid "Conflict on"
+msgstr "Konflikt"
+
+msgid "same input device"
+msgstr "stejné vstupní zařízení"
+
+msgid "Repeating conflict on"
+msgstr "Opakovaný konflikt"
+
+msgid "No conflicts"
+msgstr "Žádné konflikty"
+
+msgid "Cursor up/down/left/right+Nums"
+msgstr "Kurzorové šipky + číslice"
+
+msgid "(today)"
+msgstr "(dnes)"
+
+msgid "Timeline"
+msgstr "Časová osa"
+
+msgid "Ignore primary interface"
+msgstr "Ignorovat primární rozhraní"
+
+msgid "Show timer overview and collisions"
+msgstr "Zobrazit přehled a kolize časovačů"
+
+msgid "Timer Timeline"
+msgstr "Časová osa časovačů"

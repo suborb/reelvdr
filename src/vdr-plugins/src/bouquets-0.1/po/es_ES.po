@@ -1,0 +1,314 @@
+# VDR-plugin language source file.
+# This file is distributed under the same license as the VDR package.
+# elpajare, Diciembre 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bouquets 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-01-22 02:29+0100\n"
+"PO-Revision-Date: 2008-07-09 14:54+0200\n"
+"Last-Translator: elpajare <>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Select channels with OK"
+msgstr "Seleccionar canales con OK"
+
+#, fuzzy
+msgid "Customize channels: "
+msgstr "Modificar canal"
+
+msgid "Favorites: "
+msgstr ""
+
+#, fuzzy
+msgid "encrypted radio channels"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "free radio channels"
+msgstr "Modificar canal"
+
+#, fuzzy
+msgid "radio channels"
+msgstr "Modificar canal"
+
+#, fuzzy
+msgid "encrypted TV channels"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "free TV channels"
+msgstr "Canales"
+
+#, fuzzy
+msgid "TV channels"
+msgstr "Canales"
+
+#, fuzzy
+msgid "encrypted channels"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "free channels"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "HD channels"
+msgstr "Canales"
+
+#, fuzzy
+msgid "non HD channels"
+msgstr "Modificar canal"
+
+#, fuzzy
+msgid "all channels"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "Select channels with blue key"
+msgstr "Seleccionar canales con OK"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Arriba/Abajo para mover - OK para confirmar"
+
+msgid "Channel is being used by a timer!"
+msgstr "¡Hay una grabación programada para este canal!"
+
+msgid "Delete channel?"
+msgstr "¿Eliminar canal?"
+
+#, fuzzy
+msgid "Channel deleted"
+msgstr "Lista de canales"
+
+msgid "Delete channels?"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "Channels deleted"
+msgstr "Lista de canales"
+
+#, fuzzy
+msgid "Channels have been moved"
+msgstr "Lista de canales"
+
+msgid "Favorites"
+msgstr "Favoritos"
+
+msgid "Add to Favorites?"
+msgstr "Añadir a Favoritos"
+
+msgid "Button$New"
+msgstr "Nuevo"
+
+msgid "Bouquets"
+msgstr "Bouquets"
+
+msgid "Key$Previous"
+msgstr ""
+
+msgid "Key$Next"
+msgstr "Siguiente"
+
+#, fuzzy
+msgid "Button$Customize"
+msgstr "Pausa"
+
+msgid "Move"
+msgstr "Mover"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Arriba/Abajo para mover - OK para confirmar"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Arriba/Abajo para mover - OK para confirmar"
+
+msgid "Channels"
+msgstr "Canales"
+
+msgid "Customize Bouquets"
+msgstr ""
+
+msgid "New"
+msgstr "Nuevo"
+
+msgid "Delete Bouquet?"
+msgstr "¿Eliminar Bouquet?"
+
+msgid "Edit Bouquet"
+msgstr "Editar Bouquet"
+
+msgid "Add Bouquet"
+msgstr "Añadir Bouquet"
+
+msgid "CI-Slot for this Bouquet"
+msgstr "Ranura CI para este Bouquet"
+
+msgid "Bouquet starts with number"
+msgstr ""
+
+msgid "Note:"
+msgstr "Nota:"
+
+msgid "Select CI-Slot for this Bouquet."
+msgstr ""
+
+msgid "Select channelnumber for first channel inside this bouquet"
+msgstr ""
+
+msgid "Symbolrate"
+msgstr ""
+
+msgid "System-ID"
+msgstr ""
+
+msgid "CI-Slot"
+msgstr ""
+
+msgid "No CAM at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "channellist"
+msgstr "Lista de canales"
+
+msgid "current bouquet"
+msgstr "Bouquet actual"
+
+msgid "bouquet list"
+msgstr "Lista de Bouquets"
+
+#, fuzzy
+msgid "Channellist: set filters"
+msgstr "Funciones de listas de canales"
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+#, fuzzy
+msgid "All channels"
+msgstr "¿Eliminar canales?"
+
+#, fuzzy
+msgid "Only TV channels"
+msgstr "Modificar canal"
+
+#, fuzzy
+msgid "Only radio channels"
+msgstr "Modificar canal"
+
+#, fuzzy
+msgid "non encrypted channels"
+msgstr "¿Eliminar canales?"
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Lista de canales empieza con"
+
+#, fuzzy
+msgid "non encrypted TV channels"
+msgstr "¿Eliminar canales?"
+
+msgid "Channellist"
+msgstr ""
+
+#~ msgid "Select CI-Slot for current Bouquet."
+#~ msgstr "Seleccionar la ranura CI para el Bouquet actual"
+
+#, fuzzy
+#~ msgid "Customize Bouquet"
+#~ msgstr "A los Bouquets"
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Channel settings are not unique!"
+#~ msgstr "!Propiedades del canal duplicadas!"
+
+#~ msgid "Delete"
+#~ msgstr "Borrar"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Modificar"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Borrar"
+
+#~ msgid "Button$Mark"
+#~ msgstr "Marcar"
+
+#~ msgid "Key$Back"
+#~ msgstr "Anterior"
+
+#~ msgid "Button$Insert"
+#~ msgstr "Insertar"
+
+#~ msgid "Edit channel"
+#~ msgstr "Modificar canal"
+
+#~ msgid "Source"
+#~ msgstr "Fuente"
+
+#~ msgid "Frequency"
+#~ msgstr "Frecuencia"
+
+#~ msgid "Polarization"
+#~ msgstr "Polarización"
+
+#~ msgid "Srate"
+#~ msgstr "SRate"
+
+#~ msgid "CoderateH"
+#~ msgstr "CoderateH"
+
+#~ msgid "none"
+#~ msgstr "Ninguno"
+
+#~ msgid "CoderateL"
+#~ msgstr "CoderateL"
+
+#~ msgid "Vpid"
+#~ msgstr "Vpid"
+
+#~ msgid "Ppid"
+#~ msgstr "Ppid"
+
+#~ msgid "Apid1"
+#~ msgstr "Apid1"
+
+#~ msgid "Apid2"
+#~ msgstr "Apid2"
+
+#~ msgid "Tpid"
+#~ msgstr "Tpid"
+
+#~ msgid "Sid"
+#~ msgstr "Sid"
+
+#~ msgid "Modulation"
+#~ msgstr "Modulación"
+
+#~ msgid "Bandwidth"
+#~ msgstr "Ancho de banda"
+
+#~ msgid "Transmission"
+#~ msgstr "Transmisión"
+
+#~ msgid "Guard"
+#~ msgstr "Int.Guarda"
+
+#~ msgid "Hierarchy"
+#~ msgstr "Jerarquía"
+
+#~ msgid "Rolloff"
+#~ msgstr "Desplegar"

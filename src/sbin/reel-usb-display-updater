@@ -1,0 +1,59 @@
+#!/bin/sh
+
+#
+# Reel USB OLED display updater
+# (C) 2011 Reel Multimedia GmbH
+# License: GPL V2
+#
+# Version 0.9
+# Date 06.12.2011
+#
+# HISTORY:
+# 06.12.11: 0.9: Initial version (RC)
+#
+
+. /etc/default/globals
+
+exec > /tmp/`basename $0`.log 2>&1
+
+echo $0 $*
+set
+
+PROVIDED_VERSION_DEFAULT="20110730"
+USBID="16d0:054b"
+
+PROVIDED_VERSION=$(cat /usr/share/reel/oled-display/latest-version)
+[ -z $PROVIDED_VERSION ] && PROVIDED_VERSION="$PROVIDED_VERSION_DEFAULT"
+
+FIRMWARWED="/usr/share/reel/oled-display/$PROVIDED_VERSION"
+
+if [ -z $ID_SERIAL_SHORT ] ; then
+	ID_SERIAL_SHORT=$(lsusb -d $USBID -v | grep iSerial | awk '{print $3}')
+fi
+
+set -x
+
+if [ $ACTION = 'add' ] ; then
+
+    if [ $ID_SERIAL_SHORT -lt $PROVIDED_VERSION ]; then
+	echo "Version $ID_SERIAL_SHORT for Reel OLED display is to old. Update needed."
+	Syslog "Reel OLED has old firmware version $ID_SERIAL_SHORT. Doing update to $PROVIDED_VERSION"
+	if which fxload >/dev/null ; then
+	    if ps ax | grep reelbox-ctrld | grep -q -v grep ; then
+		echo stopping reelbox-control
+		stop reelbox-control
+	    fi
+	    fxload -v -c $FIRMWARWED/GrauTecUSBOLED-Display160D-054B-$PROVIDED_VERSION.iic -t fx2 -s $FIRMWARWED/Vend_Ax.hex  \
+                 -I $FIRMWARWED/GrauTecUSBOLED-Display160D-054B-$PROVIDED_VERSION.hex -D $DEVNAME 2>&1
+	    [ $? = 0 ] && Syslog "Update successful."
+	    echo  "Update successful."
+	    start reelbox-control
+	else
+	    echo "fxload not found. please install."
+	fi
+    else
+	Syslog "Detected Reel USB OLED display with firmware $ID_SERIAL_SHORT"
+	echo "Firmware version $ID_SERIAL_SHORT is up to date."
+    fi
+
+fi

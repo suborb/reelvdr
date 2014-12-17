@@ -1,0 +1,99 @@
+#!/bin/sh
+#
+# Samba-Server Setup Script for Reelbox II+III
+# Date: 21.11.2007
+#
+# last changes:
+
+# 2012-07.09: enable/disable samba correct for 10.04 (RC)
+# 2010-10-08: adjust for 10.04 (RC)
+
+PATH="/usr/sbin:/bin:/usr/bin:/sbin"
+
+SYSCONFIG="/etc/default/sysconfig"
+. $SYSCONFIG
+
+if [ "$1" = "" ];then
+    SOPTION="start"
+else
+    SOPTION="$1"
+fi
+
+
+iface_check () {
+SAMBA_WLAN=ath0
+
+test_wlan=`ifconfig -a | grep ^wlan[0-9]\ | awk '{ print $1 }'`
+if [ "$test_wlan" = "wlan0" ]; then
+	SAMBA_WLAN=wlan0
+fi
+
+if [ "$ETH1" = "yes" ]; then
+	SAMBA_IFACE=eth1
+elif [ "$ETH2" = "yes" ]; then
+	SAMBA_IFACE=eth2
+elif [ "$WLAN" = "yes" ]; then
+	SAMBA_IFACE=$SAMBA_WLAN
+fi
+
+}
+
+# write config for samba server
+samba_conf () {
+    cp -a /etc/default/smb.conf /etc/samba/smb.conf
+}
+
+fstart (){
+	sed -i "s/workgroup = .*/workgroup = $SAMBA_WORKGRP/" /etc/samba/smb.conf
+	sed -i "s/interfaces = .*/interfaces = $SAMBA_IFACE/" /etc/samba/smb.conf
+	# old sysV init
+	[ -f /etc/init.d/samba ] && /etc/init.d/samba start
+	# upstart
+	[ -f /etc/init/smbd.conf ] && start smbd
+	[ -f /etc/init/nmbd.conf ] && start nmbd
+}
+
+
+
+fstop () {
+	# old sysV init
+	[ -f /etc/init.d/samba ] && /etc/init.d/samba stop
+	# upstart
+	[ -f /etc/init/smbd.conf ] && stop smbd
+	[ -f /etc/init/nmbd.conf ] && stop nmbd
+}
+
+
+case $SOPTION in
+	start)
+		if [ "$START_SMBSRV" = "yes" ]; then
+			echo "Start SMB services."
+			iface_check
+			samba_conf
+			[ -f /etc/init/smbd.disabled ] && mv /etc/init/smbd.disabled /etc/init/smbd.conf
+			[ -f /etc/init/nmbd.disabled ] && mv /etc/init/nmbd.disabled /etc/init/nmbd.conf
+			[ -f /etc/init/smbd.conf ] && sed -i s/"#start on local-filesystems"/"start on local-filesystems"/ /etc/init/smbd.conf
+			[ -f /etc/init/nmbd.conf ] && sed -i s/"#start on (local-filesystems"/"start on (local-filesystems"/ /etc/init/nmbd.conf
+			fstart
+		else
+			echo  "Samba server turned off in sysconfig"
+			[ -f /etc/init/smbd.conf ] && mv /etc/init/smbd.conf /etc/init/smbd.disabled
+			[ -f /etc/init/nmbd.conf ] && mv /etc/init/nmbd.conf /etc/init/nmbd.disabled
+		fi
+		;;
+	stop)
+	        echo "Stopping SMB services."
+			fstop
+	        ;;
+	restart)
+		echo "Shutting down SMB server."
+		fstop
+		sleep 1
+		$0 start
+		;;
+	    *)
+	        echo "Usage: $0 { start | stop | restart }"
+	        exit 1
+	        ;;
+esac
+exit 0

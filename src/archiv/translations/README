@@ -1,0 +1,53 @@
+As already some people have offered their help in translating the ReelBox software here is a brief
+description how to do this.
+
+
+In General:
+- Use an editor that is capable of Unix line-endings
+- Use an editor that lets you choose UTF-8 encoding
+  (Since the switch to utf-8 it is no longer required to use iso8859- codepage. The opposite is
+   now true: u *must* use utf-8 and nothing else)
+- Do not translate word-by-word but "by meaning". always think what could be easiest to understand
+  by a non-technician
+- if you see a "%s" somewhere: this one is replaced by a number (in most cases) on execution time,
+  so keep care of the position where this should be displayed
+  (e.g.: "recording starts in %s minutes")
+- if you see a "$" sign, anything *before* the $ is only for labeling of the entry, so only
+  translate the string *after* the $ (i.e. "Button$Recording" -> only translate "Recording")
+- In most languages it is common to start a line (or a sentence) with a capital letter, so think
+  if an item is on the beginning of a new line or not
+- please note leading or trailing blanks
+- don't convert the files to anything else (line-endings, character set)
+- lines starting with a "#" are comments, translations with "#~" are translations not used by the
+  software any more.
+- if unshure about the charset make a test with a few items and post them here or send them to me (RC)
+- if unshure about the translation itself, ask the forum :)
+
+
+Translating the *.po files:
+for every supported language and every part of the software there is one .po-file. There is one
+directory for every software part (plugin) containing the translations for every supported language.
+The filename starts with two letters for the language, _ (underscore) and two letters for the country.
+i.e. ca_ES is Catalan/Spain, es_ES is Spanish/Spain and es_MX is Spanish/Mexico.
+
+if there is no language file for you language/country just rename any other file in the same
+directory and replace already existing entries.
+
+- start with the vdr/xx_XX.po as it is the most important one (and the largest)
+- Every text item consists of two lines:
+  msgid "....."  is the english text
+  msgstr "....." is the translation
+- enter missing translations to msgstr ..., do *not* change the english text!
+- if you see a line with "#fuzzy": check the translation carefully for correctness and remove the
+  "#fuzzy"-line afterwords. (fuzzy translations are automatically inserted by the software and may
+  not be correct)
+- if you want to and have the time: also check the other translations for correctness
+
+
+Post the files in the forum ( http://www.reelbox-forum.com ) so that the next
+one can use them as a starting point or send them to me.
+
+
+
+regards and thanks for your work!
+RollerCoaster

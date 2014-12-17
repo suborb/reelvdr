@@ -1,0 +1,84 @@
+#!/bin/sh
+#
+# Simple hotplug replacement for reel
+#
+# 13.11.2005 by Andi
+# 17.11.2005 fixed loading firmware by RC
+# 24.11.2005 added scsi-support for ieee1394 devices by Andi
+#
+
+Syslog () {
+        logger -t HOTPLUG -s "$1"
+}
+
+# directories with the firmware files
+FIRMWARE_DIRS="/lib/firmware /usr/local/lib/firmware /usr/lib/hotplug/firmware"
+
+# mountpoint of sysfs
+SYSFS=$(sed -n 's/^.* \([^ ]*\) sysfs .*$/\1/p' /proc/mounts)
+
+#logger -s "HOTPLUG: $* `env`"
+Syslog "$* ACTION: $ACTION"
+
+case "$1" in
+	usb)
+		/etc/hotplug/usb.agent
+		;;
+	scsi)
+		if [ "$ACTION" = "add" ] ; then
+			i=0
+			while [ ! -f $SYSFS/$DEVPATH/vendor ] ; do
+				usleep 100
+				let i++
+				[ $i -gt 100 ] && break
+			done
+			Syslog "vendor file needed $(($i*100))ms"
+			vendor=`cat $SYSFS/$DEVPATH/vendor`
+			model=`cat $SYSFS/$DEVPATH/model`
+			rev=`cat $SYSFS/$DEVPATH/rev`
+			Syslog "MESG $vendor $model $rev"
+			svdrpsend.sh MESG "$vendor $model $rev"
+		fi
+		;;
+	scsi_generic)  #sometimes ieee1394-devices only generate scsi-actions
+		/etc/hotplug/scsi.agent
+		;;
+	scsi_host)
+		if [ "$ACTION" = "add" ]  ; then
+			svdrpsend.sh "MESG detecting new external device ..."
+		fi
+		;;
+	ieee1394)
+		/etc/hotplug/ieee1394.agent
+		;;
+	firmware)
+		case $ACTION in
+		add)
+			if [ ! -e $SYSFS/$DEVPATH/loading ]; then
+				sleep 1
+			fi
+
+			FIRMWARE_EXISTS=0
+			for DIR in $FIRMWARE_DIRS; do
+				if [ -e "$DIR/$FIRMWARE" ]; then
+					FIRMWARE_EXISTS=1
+					break
+				fi
+			done
+
+			if [ $FIRMWARE_EXISTS = 1 ] ; then
+				logger -s "$0: loading firmware $FIRMWARE"
+				echo 1 > $SYSFS/$DEVPATH/loading
+				cp "$DIR/$FIRMWARE" $SYSFS/$DEVPATH/data
+				echo 0 > $SYSFS/$DEVPATH/loading
+			else
+				echo -1 > $SYSFS/$DEVPATH/loading
+				logger -s "$0: firmware $FIRMWARE not found. :("
+			fi
+			;;
+		*)
+			logger -s "$0: unknown action $ACTION for firmware :("
+			;;
+		esac
+		;;
+esac

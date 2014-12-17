@@ -1,0 +1,131 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-01-12 11:37+0100\n"
+"PO-Revision-Date: 2008-09-29 10:10+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "StyLutMażKwieMajCzeLipSieWrzPaźLisGru"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Muzyka"
+
+msgid "File"
+msgstr "Plik"
+
+msgid "Image"
+msgstr "Obraz"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Powtórzyć"
+
+msgid "no"
+msgstr "nie"
+
+msgid "yes"
+msgstr "tak"
+
+msgid "not in menu"
+msgstr "nie w menu"
+
+msgid "compressed"
+msgstr "skompresowana"
+
+msgid "auto"
+msgstr "auto"
+
+msgid "medium"
+msgstr "nośnik"
+
+msgid "large"
+msgstr "duży"
+
+msgid "never"
+msgstr "nigdy"
+
+msgid "once"
+msgstr "raz"
+
+msgid "always"
+msgstr "zawsze"
+
+msgid "Show Date/Time"
+msgstr "Pokaż Date/Czas"
+
+msgid "Show Channel"
+msgstr "Pokaż Kanał"
+
+msgid "Show Logo"
+msgstr "Pokaż Logo"
+
+msgid "Show Symbols"
+msgstr "Pokaż Symbole"
+
+msgid "Show ET Symbols"
+msgstr "Pokaż Symbole ET"
+
+msgid "Show Program"
+msgstr "Pokaż Program"
+
+msgid "Show Timebar"
+msgstr "Pokaż Czasomież"
+
+msgid "Show Menu"
+msgstr "Pokaż Menu"
+
+msgid "Show Messages"
+msgstr "Pokaż Wiadomości"
+
+msgid "Show Volume"
+msgstr "Pokaż Głosność"
+
+msgid "Show free Tuner"
+msgstr "Pokaż wolny Tuner"
+
+msgid "Identify replay type"
+msgstr "Identifikuj rodzaj powtórek"
+
+msgid "Modify replay string"
+msgstr "Zmień napis powtarzania"
+
+msgid "Scroll text lines"
+msgstr "Przewijanie lini tekstowych"
+
+msgid "Scroll speed"
+msgstr "Szybkość Przewijania"
+
+msgid "Scroll time interval"
+msgstr "Przewijania przedziału czasu"
+
+msgid "Brightness on user activity"
+msgstr "Jasność w czasie aktywnośći uzytkownika"
+
+msgid "Brightness on user inactivity"
+msgstr "Jasność w czasie nieaktywnośći uzytkownika"
+
+msgid "Brightness delay [s]"
+msgstr "Opuznienie jasnośći [s]"
+
+msgid "Show clock on user inactivity"
+msgstr "Pokaż zegarek w czasie uzytkowania"
+
+msgid "Unknown title"
+msgstr "Nieznany tytuł"

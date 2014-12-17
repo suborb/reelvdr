@@ -1,0 +1,42 @@
+Thanks to:
+
+Major
+======
+
+* FIXME: add all contributors ..
+
+Marco Schluessler
+	- cvs team
+
+Miko Wohlgemuth
+	- cvs team
+
+Sven Goethel
+	- cvs team
+	- successor dev.
+
+Andreas Schultz 		
+	- Original Author
+
+Minor
+======
+
+Martin Hammerschmid 
+	- lcdproc hint
+
+Sascha Volkenandt
+	- for the HideMainMenu patch
+
+André Weidemann
+        - for the vaspect patch
+
+Angelo Lambiasi
+        - buffer overflow in A52Decoder
+
+Rolf Ahrenberg
+	- for the finnish translation
+
+Stefan Lucke
+	- for fix segfault
+
+... and all the many testers and test case contributors ..

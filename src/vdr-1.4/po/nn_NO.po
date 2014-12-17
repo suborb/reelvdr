@@ -1,0 +1,2140 @@
+# VDR language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jørgen Tvedt <pjtvedt@online.no>, 2001
+# Truls Slevigen <truls@slevigen.no>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 13:00+0100\n"
+"PO-Revision-Date: 2007-08-12 14:17+0200\n"
+"Last-Translator: Truls Slevigen <truls@slevigen.no>\n"
+"Language-Team: Norwegian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "New Channels"
+msgstr "Kanaler"
+
+msgid "Favorites"
+msgstr ""
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Ugyldig Kanal! ***"
+
+msgid "Channel not available!"
+msgstr ""
+
+msgid "Can't start Transfer Mode!"
+msgstr "Kan ikke starte transfer modus!"
+
+msgid "Starting EPG scan"
+msgstr ""
+
+msgid "No title"
+msgstr ""
+
+#, fuzzy
+msgid "No help available"
+msgstr "Pas d'audio disponible!"
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Norsk"
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "nor"
+
+#. TRANSLATORS:
+#. / Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+#, fuzzy
+msgid "Timer Manager"
+msgstr "Timere"
+
+#, fuzzy
+msgid "Search-Timer Manager"
+msgstr "Timere"
+
+msgid "Parental Control"
+msgstr ""
+
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr ""
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr ""
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr ""
+
+msgid "View, edit and manage recording timers"
+msgstr ""
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr ""
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Internet Radio"
+msgstr ""
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio"
+msgstr ""
+
+msgid "Play music, manage and copy music files"
+msgstr ""
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr ""
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr ""
+
+msgid "Copy an Audio CD to the music library"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Ta opp"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Opptaksmargin start (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Opptaksmargin slutt (min)"
+
+#, fuzzy
+msgid "Undelete Recordings"
+msgstr "Slette opptak?"
+
+msgid "New folder"
+msgstr ""
+
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr ""
+
+#, fuzzy
+msgid "Movie library, TV recordings"
+msgstr "Stoppe opptak?"
+
+msgid "Watch movies, manage and copy movie files"
+msgstr ""
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr ""
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr ""
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr ""
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr ""
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Slette opptak?"
+
+msgid "Playlist"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist actions"
+msgstr "Polarisasjon"
+
+#, fuzzy
+msgid "Playlist Commands"
+msgstr "Kommandoer"
+
+msgid "Filebrowser Commands"
+msgstr ""
+
+#, fuzzy
+msgid "Save playlist as"
+msgstr "Polarisasjon"
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "File Manager, Web browser, ReelBlog"
+msgstr ""
+
+msgid "File Manager, ReelBlog"
+msgstr ""
+
+msgid "Copy, move, edit and delete files"
+msgstr ""
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr ""
+
+msgid "Read news & information on the ReelBox"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Menu "Additional Software"
+msgid "Additional Software"
+msgstr ""
+
+msgid "Magazine EPG"
+msgstr ""
+
+msgid "Additional software provided by third party developers"
+msgstr ""
+
+#. TRANSLATORS:
+#. / More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr ""
+
+msgid "Show currently active background processes"
+msgstr ""
+
+msgid "Format a DVD-RW"
+msgstr ""
+
+msgid "Directory browser"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Special Menus that have a bar at the left
+msgid "My Pictures"
+msgstr ""
+
+msgid "My Music"
+msgstr ""
+
+msgid "My Videos"
+msgstr ""
+
+msgid "My DVDs"
+msgstr ""
+
+#, fuzzy
+msgid "EPG Commands: "
+msgstr "Kommandoer"
+
+#, fuzzy
+msgid "Search actions"
+msgstr "Timere"
+
+#, fuzzy
+msgid "Search entries"
+msgstr "Timere"
+
+#, fuzzy
+msgid "Search templates"
+msgstr "Timere"
+
+#, fuzzy
+msgid "Edit search"
+msgstr "Editer timer"
+
+msgid "Edit timer"
+msgstr "Editer timer"
+
+msgid "Edit blacklist"
+msgstr ""
+
+#, fuzzy
+msgid "Edit template"
+msgstr "Editer timer"
+
+msgid "Edit user-defined days of week"
+msgstr ""
+
+#, fuzzy
+msgid "found recordings"
+msgstr "Opptak"
+
+#, fuzzy
+msgid "Select directory"
+msgstr "Slette opptak?"
+
+msgid "Timer conflicts -"
+msgstr ""
+
+msgid "Title$Childlock"
+msgstr ""
+
+#, fuzzy
+msgid "Games"
+msgstr "Navn"
+
+msgid "Multifeed Options"
+msgstr ""
+
+#, fuzzy
+msgid "Move recording"
+msgstr "Stoppe opptak?"
+
+msgid "Select Reelblog item"
+msgstr ""
+
+#, fuzzy
+msgid "SleepTimer"
+msgstr "Timere"
+
+msgid "Rename entry"
+msgstr ""
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Slette opptak?"
+
+msgid "Choose action"
+msgstr ""
+
+#. TRANSLATORS:
+#. / Setup Menus with "Setup"-bar on the left
+msgid "Setup"
+msgstr "Konfigurasjon"
+
+msgid "Software Update"
+msgstr ""
+
+#, fuzzy
+msgid "Channel Lists"
+msgstr "Kanaler"
+
+msgid "Channel lists functions"
+msgstr ""
+
+#, fuzzy
+msgid "Channelscan"
+msgstr "Kanaler"
+
+msgid "Installation Wizard"
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+#, fuzzy
+msgid "Remote Control / Automation"
+msgstr "Lære fjernkontrolltaster"
+
+#, fuzzy
+msgid "MultiRoom Setup"
+msgstr "Konfigurasjon"
+
+#, fuzzy
+msgid "MultiRoom - Error!"
+msgstr "Konfigurasjon"
+
+#, fuzzy
+msgid "Basic Settings"
+msgstr "nor"
+
+#, fuzzy
+msgid "Network Settings"
+msgstr "Opptak"
+
+msgid "EPG Services"
+msgstr ""
+
+#, fuzzy
+msgid "Reception Settings"
+msgstr "Opptak"
+
+#, fuzzy
+msgid "Network"
+msgstr "nor"
+
+#, fuzzy
+msgid "Global Settings"
+msgstr "nor"
+
+#, fuzzy
+msgid "UMTS Settings"
+msgstr "nor"
+
+msgid "Dynamic DNS"
+msgstr ""
+
+msgid "GnuDIP service"
+msgstr ""
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr ""
+
+msgid "Windows Network Connection"
+msgstr ""
+
+msgid "NFS Client"
+msgstr ""
+
+msgid "Video Recorder "
+msgstr ""
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr ""
+
+msgid "Setup - Audio/Video"
+msgstr ""
+
+msgid "Timezone & clock"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "NetCeiver diagnostics"
+msgstr ""
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+#, fuzzy
+msgid "Antenna settings"
+msgstr "Opptak"
+
+#, fuzzy
+msgid "Rotor Setup"
+msgstr "Konfigurasjon"
+
+#, fuzzy
+msgid "Language Settings"
+msgstr "nor"
+
+#, fuzzy
+msgid "Timezone"
+msgstr "Opptak"
+
+#, fuzzy
+msgid "Timezone Settings"
+msgstr "nor"
+
+msgid "Front Panel"
+msgstr ""
+
+msgid "TVTV Service"
+msgstr ""
+
+msgid "International EPG"
+msgstr ""
+
+msgid "Energy Options"
+msgstr ""
+
+msgid "Factory defaults"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "Ubrukt SVDRP-levetid (s)"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr "Ubrukt SVDRP-levetid (s)"
+
+#, fuzzy
+msgid "Option$Quick"
+msgstr "Søndag"
+
+#. TRANSLATORS:
+#. / Recording Commands
+msgid "Mark Commercials"
+msgstr ""
+
+msgid "Add Child Lock"
+msgstr ""
+
+msgid "Remove Child Lock"
+msgstr ""
+
+#, fuzzy
+msgid "Change title"
+msgstr "Kanal"
+
+msgid "Mark as New"
+msgstr ""
+
+msgid "Remove Archive Mark"
+msgstr ""
+
+msgid "Remove Crop Mark"
+msgstr ""
+
+msgid "Remove Archived Recording"
+msgstr ""
+
+#, fuzzy
+msgid "Restore Archived Recording"
+msgstr "Slette opptak?"
+
+msgid "Convert to MPEG (TS)"
+msgstr ""
+
+msgid "Directory Selector:"
+msgstr ""
+
+#, fuzzy
+msgid "Select Media"
+msgstr "Slette opptak?"
+
+#, fuzzy
+msgid "Directory commands"
+msgstr "Kommandoer"
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "No CI-Module"
+msgstr ""
+
+#, fuzzy
+msgid "Edit Channels"
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "Customize Bouquets"
+msgstr "Slette timer?"
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Fase 1: Finne fjernkontroll-kodetype"
+
+msgid "Press any key on the RC unit"
+msgstr "Trykk en av tastene på fjernkontrollen"
+
+msgid "RC code detected!"
+msgstr "Fjernkontroll-kodetype funnet!"
+
+msgid "Do not press any key..."
+msgstr "Ikke trykk på noen av tastene..."
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Fase 2: Lære spesifikke tastekoder"
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Trykk tasten for '%s'"
+
+msgid "Press 'Up' to confirm"
+msgstr "Trykk 'Opp' for å bekrefte"
+
+msgid "Press 'Down' to continue"
+msgstr "Trykk Ned' for å fortsette"
+
+msgid "(press 'Up' to go back)"
+msgstr "(trykk 'Opp' for å gå tilbake)"
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(trykk 'Ned' for å avslutte innlæring)"
+
+msgid "(press 'Menu' to skip this key)"
+msgstr ""
+
+msgid "Learning Remote Control Keys"
+msgstr "Lære fjernkontrolltaster"
+
+msgid "Phase 3: Saving key codes"
+msgstr "Fase 3: Lagre tastekoder"
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "Trykk 'Opp' for å lagre, 'Ned' for å avbryte"
+
+msgid "Key$Up"
+msgstr "Opp"
+
+msgid "Key$Down"
+msgstr "Ned"
+
+msgid "Key$Menu"
+msgstr "Meny"
+
+msgid "Key$Ok"
+msgstr "Ok"
+
+msgid "Key$Back"
+msgstr "Tilbake"
+
+msgid "Key$Left"
+msgstr "Venstre"
+
+msgid "Key$Right"
+msgstr "Høyre"
+
+msgid "Key$Red"
+msgstr "Rød"
+
+msgid "Key$Green"
+msgstr "Grønn"
+
+msgid "Key$Yellow"
+msgstr "Gul"
+
+msgid "Key$Blue"
+msgstr "Blå"
+
+msgid "Key$Play"
+msgstr ""
+
+msgid "Key$Pause"
+msgstr ""
+
+msgid "Key$Stop"
+msgstr ""
+
+#, fuzzy
+msgid "Key$Eject"
+msgstr "Venstre"
+
+msgid "Key$Record"
+msgstr ""
+
+msgid "Key$FastFwd"
+msgstr ""
+
+msgid "Key$FastRew"
+msgstr ""
+
+msgid "Key$Next"
+msgstr ""
+
+msgid "Key$Prev"
+msgstr ""
+
+msgid "Key$Power"
+msgstr "Power"
+
+msgid "Key$Channel+"
+msgstr ""
+
+msgid "Key$Channel-"
+msgstr ""
+
+msgid "Key$PrevChannel"
+msgstr ""
+
+msgid "Key$Volume+"
+msgstr "Volum+"
+
+msgid "Key$Volume-"
+msgstr "Volum-"
+
+msgid "Key$Mute"
+msgstr "Lyd av"
+
+msgid "Key$Audio"
+msgstr ""
+
+msgid "Key$Subtitles"
+msgstr ""
+
+#, fuzzy
+msgid "Key$Aspect"
+msgstr "Venstre"
+
+msgid "Key$Schedule"
+msgstr "Programmer"
+
+msgid "Key$Channels"
+msgstr "Kanaler"
+
+msgid "Key$Timers"
+msgstr "Timere"
+
+#, fuzzy
+msgid "Key$Search"
+msgstr "Tilbake"
+
+msgid "Key$Recordings"
+msgstr "Opptak"
+
+msgid "Key$Setup"
+msgstr "Konfigurasjon"
+
+msgid "Key$Commands"
+msgstr "Kommandoer"
+
+#, fuzzy
+msgid "Key$Greater"
+msgstr "Grønn"
+
+#, fuzzy
+msgid "Key$Less"
+msgstr "Venstre"
+
+#, fuzzy
+msgid "Key$2digit"
+msgstr "Høyre"
+
+#, fuzzy
+msgid "Key$DVD"
+msgstr "Ned"
+
+#, fuzzy
+msgid "Key$DVB"
+msgstr "Ned"
+
+#, fuzzy
+msgid "Key$PVR"
+msgstr "Rød"
+
+#, fuzzy
+msgid "Key$Reel"
+msgstr "Rød"
+
+#, fuzzy
+msgid "Key$TT"
+msgstr "Opp"
+
+#, fuzzy
+msgid "Key$PiP"
+msgstr "Høyre"
+
+msgid "Key$User1"
+msgstr ""
+
+msgid "Key$User2"
+msgstr ""
+
+msgid "Key$User3"
+msgstr ""
+
+msgid "Key$User4"
+msgstr ""
+
+msgid "Key$User5"
+msgstr ""
+
+msgid "Key$User6"
+msgstr ""
+
+msgid "Key$User7"
+msgstr ""
+
+msgid "Key$User8"
+msgstr ""
+
+msgid "Key$User9"
+msgstr ""
+
+msgid "Key$Info"
+msgstr ""
+
+#, fuzzy
+msgid "Key$Help"
+msgstr "Opp"
+
+msgid "Timeshift mode"
+msgstr ""
+
+msgid "Recording started"
+msgstr ""
+
+msgid "Free To Air"
+msgstr ""
+
+msgid "no"
+msgstr "nei"
+
+msgid "internal CAM"
+msgstr ""
+
+msgid "No CI at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "encrypted"
+msgstr ""
+
+msgid "Rotor - shared LNB"
+msgstr ""
+
+msgid "auto"
+msgstr ""
+
+msgid "Edit channel"
+msgstr "Editer kanal"
+
+msgid "New"
+msgstr ""
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Source"
+msgstr ""
+
+msgid "Frequency"
+msgstr "Frekvens"
+
+msgid "Polarization"
+msgstr "Polarisasjon"
+
+msgid "Srate"
+msgstr "Srate"
+
+msgid "CoderateH"
+msgstr "CoderateH"
+
+msgid "none"
+msgstr ""
+
+msgid "CoderateL"
+msgstr "CoderateL"
+
+msgid "Vpid"
+msgstr "Vpid"
+
+msgid "Ppid"
+msgstr "Ppid"
+
+msgid "Apid1"
+msgstr "Apid1"
+
+msgid "Apid2"
+msgstr "Apid2"
+
+msgid "Tpid"
+msgstr "Tekst-TV pid"
+
+msgid "Sid"
+msgstr "Sid"
+
+msgid "Modulation"
+msgstr "Modulation"
+
+msgid "Bandwidth"
+msgstr "Bandwidth"
+
+msgid "Transmission"
+msgstr "Transmission"
+
+msgid "Guard"
+msgstr "Guard"
+
+msgid "Hierarchy"
+msgstr "Hierarchy"
+
+msgid "Rolloff"
+msgstr ""
+
+msgid "Button$New"
+msgstr "Ny"
+
+msgid "Channel settings are not unique!"
+msgstr ""
+
+#, fuzzy
+msgid "channellist"
+msgstr "Kanaler"
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+#, fuzzy
+msgid "Channellist: set filters"
+msgstr "Kanaler"
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+#, fuzzy
+msgid "All channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "Only TV channels"
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "Only radio channels"
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "non encrypted channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Posisjon på kanalinformasjon"
+
+#, fuzzy
+msgid "non encrypted TV channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "encrypted radio channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "HD channels"
+msgstr "Kanaler"
+
+msgid "Channels"
+msgstr "Kanaler"
+
+msgid "Button$Edit"
+msgstr "Editer"
+
+msgid "Button$Delete"
+msgstr "Slett"
+
+msgid "Button$Mark"
+msgstr "Marker"
+
+msgid "Channel is being used by a timer!"
+msgstr "Kanalen er i bruk av en timer!"
+
+msgid "Delete channel?"
+msgstr "Slette kanal?"
+
+msgid "Edit Bouquet"
+msgstr ""
+
+msgid "Add Bouquet"
+msgstr ""
+
+msgid "CI-Slot for this Bouquet"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Select CI-Slot for current Bouquet."
+msgstr ""
+
+msgid "Bouquets"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Customize"
+msgstr "Fortsett"
+
+msgid "Move"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Slett"
+
+#, fuzzy
+msgid "Delete Bouquet?"
+msgstr "Slette timer?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Opp/Ned for ny plass - OK for å flytte"
+
+#, fuzzy
+msgid "Select channels with OK"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "Customize channels: "
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "free radio channels"
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "radio channels"
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "encrypted TV channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "free TV channels"
+msgstr "Kanaler"
+
+#, fuzzy
+msgid "TV channels"
+msgstr "Kanaler"
+
+#, fuzzy
+msgid "encrypted channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "free channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "non HD channels"
+msgstr "Editer kanal"
+
+#, fuzzy
+msgid "all channels"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "Select channels with blue key"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "Channel deleted"
+msgstr "Kanaler"
+
+#, fuzzy
+msgid "Delete channels?"
+msgstr "Slette kanal?"
+
+#, fuzzy
+msgid "Channels deleted"
+msgstr "Kanaler"
+
+#, fuzzy
+msgid "Channels have been moved"
+msgstr "Kanaler"
+
+msgid "Add to Favorites?"
+msgstr ""
+
+msgid "Button$Insert"
+msgstr ""
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Opp/Ned for ny plass - OK for å flytte"
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Opp/Ned for ny plass - OK for å flytte"
+
+msgid "Help"
+msgstr ""
+
+msgid "Already first help item"
+msgstr ""
+
+msgid "Already last help item"
+msgstr ""
+
+msgid "low"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "high"
+msgstr ""
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "Day"
+msgstr "Dag"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Stop"
+msgstr "Slutt"
+
+msgid "VPS"
+msgstr ""
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Lifetime"
+msgstr "Levetid"
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Child protection"
+msgstr ""
+
+msgid "yes"
+msgstr "ja"
+
+msgid "File"
+msgstr "Filnavn"
+
+msgid "First day"
+msgstr "Første dag"
+
+#, fuzzy
+msgid "Could not add timer"
+msgstr "Slette timer?"
+
+msgid "Timers"
+msgstr "Timere"
+
+msgid "Button$On/Off"
+msgstr "Av/På"
+
+msgid "Button$Info"
+msgstr ""
+
+msgid "Delete timer?"
+msgstr "Slette timer?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Timer gjør opptak - vil du slette likevel?"
+
+#, fuzzy
+msgid "Could not delete timer"
+msgstr "Slette timer?"
+
+msgid "Event"
+msgstr "Hendelse"
+
+msgid "Button$Timer"
+msgstr ""
+
+msgid "Button$Record"
+msgstr "Ta opp"
+
+msgid "Button$Switch"
+msgstr "Skift til"
+
+#, fuzzy
+msgid "ActiveEvent"
+msgstr "Aktiv"
+
+msgid "What's on now?"
+msgstr "Hvilket program sendes nå?"
+
+msgid "What's on next?"
+msgstr "Hvilket program er neste?"
+
+msgid "Button$Next"
+msgstr "Neste"
+
+msgid "Button$Now"
+msgstr "Nå"
+
+msgid "Button$Schedule"
+msgstr "Programmer"
+
+msgid "Can't switch channel!"
+msgstr "Ikke mulig å skifte kanal!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Program Guide - %s"
+
+#, c-format
+msgid "This event - %s"
+msgstr ""
+
+msgid "This event - all channels"
+msgstr ""
+
+msgid "All events - all channels"
+msgstr ""
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr ""
+
+msgid "Recording info"
+msgstr ""
+
+msgid "Button$Play"
+msgstr "Spill av"
+
+msgid "Button$Rewind"
+msgstr "Spol tilbake"
+
+msgid "Scale Picture"
+msgstr ""
+
+msgid "Recordings"
+msgstr "Opptak"
+
+msgid "Button$Open"
+msgstr "Åpne"
+
+msgid "Commands"
+msgstr "Kommandoer"
+
+msgid "Error while accessing recording!"
+msgstr "Feil under lesing av opptak!"
+
+msgid "Delete recording?"
+msgstr "Slette opptak?"
+
+msgid "Error while deleting recording!"
+msgstr "Feil under sletting av opptak!"
+
+msgid "Recording commands"
+msgstr ""
+
+#, fuzzy
+msgid "OSD & Language"
+msgstr "Språk"
+
+msgid "never"
+msgstr ""
+
+msgid "skin dependent"
+msgstr ""
+
+msgid "always"
+msgstr ""
+
+msgid "User defined"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "FontSize$Normal"
+msgstr ""
+
+msgid "Setup.OSD$Language"
+msgstr "Språk"
+
+msgid "Setup.DVB$Display subtitles"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$OSD color"
+msgstr "Bredde"
+
+#, fuzzy
+msgid "Setup.OSD$OSD Font Size"
+msgstr "Rask rulling i menyer"
+
+msgid "Setup.OSD$OSD font size (pixel)"
+msgstr ""
+
+msgid "Setup.OSD$Use small font"
+msgstr ""
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Rask rulling i menyer"
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr ""
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$Show expert menu options"
+msgstr "Bredde"
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr "Tid meldinger skal vises (s)"
+
+#, fuzzy
+msgid "channelinfo"
+msgstr "Kanal"
+
+#, fuzzy
+msgid "Standard"
+msgstr "Søndag"
+
+#, fuzzy
+msgid "Setup.OSD$  Program +/- keys"
+msgstr "Posisjon på kanalinformasjon"
+
+#, fuzzy
+msgid "Channell./Bouquets"
+msgstr "Kanaler"
+
+msgid "Expertmenu"
+msgstr ""
+
+msgid "OSD - Expertmenu"
+msgstr ""
+
+msgid "Setup.OSD$Skin"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$OSD font name"
+msgstr "Rask rulling i menyer"
+
+#, fuzzy
+msgid "Setup.OSD$Small font name"
+msgstr "Rask rulling i menyer"
+
+#, fuzzy
+msgid "Setup.OSD$Fixed font name"
+msgstr "Bredde"
+
+msgid "Setup.OSD$Small font size (pixel)"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font size (pixel)"
+msgstr ""
+
+msgid "Setup.OSD$Left"
+msgstr ""
+
+msgid "Setup.OSD$Top"
+msgstr ""
+
+msgid "Setup.OSD$Width"
+msgstr "Bredde"
+
+msgid "Setup.OSD$Height"
+msgstr "Høyde"
+
+#, fuzzy
+msgid "Setup.OSD$Random menu placement"
+msgstr "Bredde"
+
+#, fuzzy
+msgid "Setup.OSD$Optional languages"
+msgstr "Språk"
+
+#, fuzzy
+msgid "Setup.OSD$ Optional language"
+msgstr "Språk"
+
+msgid "EPG"
+msgstr "Programoversikt"
+
+msgid "Button$Scan"
+msgstr ""
+
+msgid "Audio"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle language"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr ""
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr ""
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr ""
+
+msgid " Delay ac3 (10ms)"
+msgstr ""
+
+msgid " Prefer ac3 over HDMI"
+msgstr ""
+
+msgid "Delay Stereo (10ms)"
+msgstr ""
+
+msgid "Dish settings"
+msgstr ""
+
+msgid "DiSEqC disabled"
+msgstr ""
+
+msgid "Different Setups"
+msgstr ""
+
+msgid "Tuner"
+msgstr ""
+
+msgid "DiSEqC Type"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "   LNB Type"
+msgstr ""
+
+msgid "Delay (ms)"
+msgstr ""
+
+msgid "Number of LNBs"
+msgstr ""
+
+#, fuzzy
+msgid "Repeat"
+msgstr "Spill av"
+
+msgid "Rotor on tuner"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Expert"
+msgstr ""
+
+msgid "Rotor Settings"
+msgstr ""
+
+msgid "Sat positions must be unique!"
+msgstr ""
+
+msgid "Overwrite DiSEqC.conf?"
+msgstr ""
+
+#, fuzzy
+msgid "Changes done"
+msgstr "Kanal"
+
+msgid "Init"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "--OFF--"
+msgstr ""
+
+msgid "Common Interface"
+msgstr ""
+
+#, fuzzy
+msgid "Reset"
+msgstr "Start på nytt"
+
+#, fuzzy
+msgid "On/Off"
+msgstr "Av/På"
+
+msgid "Opening CAM menu..."
+msgstr ""
+
+msgid "Can't open CAM menu!"
+msgstr ""
+
+msgid "Resetting CAM..."
+msgstr ""
+
+msgid "CAM has been reset"
+msgstr ""
+
+msgid "Can't reset CAM!"
+msgstr ""
+
+msgid "Recording"
+msgstr "Opptak"
+
+#, fuzzy
+msgid "Setup.Recording$Timer Buffer at Start (min)"
+msgstr "Opptaksmargin start (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Timer Buffer at End (min)"
+msgstr "Opptaksmargin slutt (min)"
+
+#, fuzzy
+msgid "Setup.Recording$Default Priority"
+msgstr "Normal prioritet (Timer)"
+
+#, fuzzy
+msgid "Setup.Recording$Default Recording Lifetime"
+msgstr "Normal levetid timer (d)"
+
+msgid "Setup.Recording$Use VPS"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr "Markere direkteopptak"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr "Markere direkteopptak"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr "Markere direkteopptak"
+
+#, fuzzy
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr "Markere direkteopptak"
+
+#, fuzzy
+msgid "Setup.Recording$Mark Blocks after Recording"
+msgstr "Markere direkteopptak"
+
+msgid "Replay"
+msgstr "Spill av"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Multispeed modus"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Vis avspillingsmodus"
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "intelligent"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr "Resume ID"
+
+#, fuzzy
+msgid "Setup.Replay$Resume play after jump"
+msgstr "Resume ID"
+
+msgid "off"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "at the end"
+msgstr ""
+
+msgid "to bouquets"
+msgstr ""
+
+msgid "Background Services"
+msgstr ""
+
+msgid "Request"
+msgstr ""
+
+#, fuzzy
+msgid "Standby"
+msgstr "Søndag"
+
+msgid "Power off"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Scan EPG"
+msgstr "Skift til"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr ""
+
+msgid "Setup.DVB$Autom. update channels"
+msgstr ""
+
+msgid "  Update mode"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr ""
+
+msgid "Setup.Miscellaneous$as before"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Initial volume (%)"
+msgstr "Ubrukt SVDRP-levetid (s)"
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Ledig tid før EPG-søk (h)"
+
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr ""
+
+msgid "Permanent Timeshift"
+msgstr ""
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Permanent Timeshift has been disabled."
+msgstr ""
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+#, fuzzy
+msgid "System Settings"
+msgstr "nor"
+
+msgid "This plugin has no setup parameters!"
+msgstr ""
+
+msgid "Title$Setup"
+msgstr "Konfigurasjon"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "OSD"
+msgstr "OSD"
+
+msgid "DVB"
+msgstr "DVB-enheter"
+
+#, fuzzy
+msgid "CICAM"
+msgstr "CAM"
+
+#, fuzzy
+msgid "Recording settings"
+msgstr "Opptak"
+
+msgid "Replay settings"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr "Forskjellig"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Restart"
+msgstr "Start på nytt"
+
+msgid "Really restart?"
+msgstr "Vil du virkelig starte på nytt?"
+
+msgid "Recording - restart anyway?"
+msgstr "Gjør opptak - starte på nytt likevel?"
+
+msgid "restart anyway?"
+msgstr "starte på nytt likevel?"
+
+msgid " Stop recording "
+msgstr " Stopp opptak fra "
+
+#, fuzzy
+msgid "Channel list"
+msgstr "Kanaler"
+
+#, fuzzy
+msgid "Title$Menu"
+msgstr "Meny"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "free"
+msgstr "ledig"
+
+#, fuzzy
+msgid "Title$Main Menu"
+msgstr "Meny"
+
+msgid " Stop replaying"
+msgstr " Stopp avspilling"
+
+#, fuzzy
+msgid "Button$Recordings"
+msgstr "Ta opp"
+
+#, fuzzy
+msgid "Button$Multifeed"
+msgstr "Slett"
+
+msgid " Cancel editing"
+msgstr " Avbryt redigering"
+
+msgid "Stop recording?"
+msgstr "Stoppe opptak?"
+
+msgid "Cancel editing?"
+msgstr "Avbryte redigering?"
+
+msgid "Button$Audio"
+msgstr ""
+
+msgid "No audio available!"
+msgstr "Pas d'audio disponible!"
+
+msgid "No subtitles"
+msgstr ""
+
+msgid "Button$Subtitles"
+msgstr ""
+
+msgid "No subtitles available!"
+msgstr ""
+
+msgid "Not enough disk space to start recording!"
+msgstr ""
+
+msgid "recording already running - Start another?"
+msgstr ""
+
+#, fuzzy
+msgid "A recording is already active!"
+msgstr "Redigeringsprosessen er allerede aktiv!"
+
+msgid "An instant recording is already active!"
+msgstr ""
+
+msgid "No free DVB device to record!"
+msgstr "Ingen ledige DVB enheter for opptak!"
+
+msgid "Pausing live video..."
+msgstr ""
+
+msgid "Jump: "
+msgstr "Hopp: "
+
+msgid "No editing marks defined!"
+msgstr ""
+
+msgid "Can't start editing process!"
+msgstr "Kan ikke starte redigeringsprosessen!"
+
+msgid "Editing process started"
+msgstr "Redigeringsprosess startet"
+
+msgid "Editing process already active!"
+msgstr "Redigeringsprosessen er allerede aktiv!"
+
+msgid "Power Off ReelBox"
+msgstr ""
+
+#, fuzzy
+msgid "Recording - Activating QuickStandby"
+msgstr "Gjør opptak - starte på nytt likevel?"
+
+msgid "Activating QuickStandby"
+msgstr ""
+
+#, fuzzy
+msgid "Running Process - Activating QuickStandby"
+msgstr "Gjør opptak - starte på nytt likevel?"
+
+#, fuzzy
+msgid "Quick Standby"
+msgstr "Søndag"
+
+msgid "Reboot"
+msgstr ""
+
+#, fuzzy
+msgid "Set Sleeptimer"
+msgstr "Timere"
+
+msgid "Pause Live-TV"
+msgstr ""
+
+msgid "Activating standby"
+msgstr ""
+
+msgid "Activating deep standby"
+msgstr ""
+
+#, fuzzy
+msgid "Activating quick standby"
+msgstr "Gjør opptak - starte på nytt likevel?"
+
+msgid "Activating reboot"
+msgstr ""
+
+msgid "Recording - shut down anyway?"
+msgstr "Gjør opptak - slå av likevel?"
+
+#, fuzzy
+msgid "A recording starts soon, shut down anyway?"
+msgstr "Gjør opptak - slå av likevel?"
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr ""
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr ""
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc"
+
+msgid "Button$Overwrite"
+msgstr ""
+
+msgid "Please select"
+msgstr ""
+
+msgid "Main Menu"
+msgstr ""
+
+msgid "Channel locked (recording)!"
+msgstr "Kanalen er låst (opptak)!"
+
+msgid "can't record - check your configuration"
+msgstr ""
+
+msgid "Low disk space!"
+msgstr "Lite ledig diskplass!"
+
+msgid "Recording-file already exists!"
+msgstr ""
+
+#, fuzzy
+msgid "Teletext not available!"
+msgstr "Pas d'audio disponible!"
+
+#, fuzzy
+msgid "PiP not available!"
+msgstr "Pas d'audio disponible!"
+
+msgid "Volume "
+msgstr "Volum "
+
+msgid "Classic VDR"
+msgstr ""
+
+msgid "ST:TNG Panels"
+msgstr ""
+
+msgid "MTWTFSS"
+msgstr "MTOTFLS"
+
+#, fuzzy
+msgid "Database not available!"
+msgstr "Pas d'audio disponible!"
+
+msgid "MonTueWedThuFriSatSun"
+msgstr "ManTirOnsTorFreLørSøn"
+
+msgid "Monday"
+msgstr "Manday"
+
+msgid "Tuesday"
+msgstr "Tirsday"
+
+msgid "Wednesday"
+msgstr "Onsday"
+
+msgid "Thursday"
+msgstr "Torsdag"
+
+msgid "Friday"
+msgstr "Fredag"
+
+msgid "Saturday"
+msgstr "Lørdag"
+
+msgid "Sunday"
+msgstr "Søndag"
+
+msgid "ejecting media"
+msgstr ""
+
+#, fuzzy
+msgid "Upcoming VPS recording!"
+msgstr " Stopp opptak fra "
+
+#, fuzzy
+msgid "Timeshift is not available!"
+msgstr "Pas d'audio disponible!"
+
+#, fuzzy
+msgid "No free tuner to record!"
+msgstr "Ingen ledige DVB enheter for opptak!"
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Kan ikke slå av - startet uten parameteret '-s'!"
+
+msgid "Switching primary DVB..."
+msgstr "Bytter første DVB-enhet..."
+
+#, fuzzy
+msgid "End recording"
+msgstr "Opptak"
+
+msgid "Editing process failed!"
+msgstr "Feil under redigering!"
+
+msgid "Editing process finished"
+msgstr "Redigeringsprosess avsluttet"
+
+msgid "Switching to server-mode"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Back"
+#~ msgstr "Tilbake"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Søndag"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Skin color"
+#~ msgstr "Bredde"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Ok shows"
+#~ msgstr "Bredde"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Channel +/- keys"
+#~ msgstr "Posisjon på kanalinformasjon"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Switch Channels in EPG"
+#~ msgstr "Posisjon på kanalinformasjon"
+
+#~ msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+#~ msgstr "Minimumstid med inaktivitet (min)"
+
+#, fuzzy
+#~ msgid "An instant recording is already runnig!"
+#~ msgstr "Redigeringsprosessen er allerede aktiv!"
+
+#, fuzzy
+#~ msgid "Select bouquet with OK"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "Channels sucessfully moved"
+#~ msgstr "Kanaler"
+
+#, fuzzy
+#~ msgid "Only video channels"
+#~ msgstr "Editer kanal"
+
+#, fuzzy
+#~ msgid "Only non decrypted channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "Only non decrypted video channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "Only decrypted radio channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "non encrypted radio channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "encrypted video channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "non encrypted video channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "video channels"
+#~ msgstr "Editer kanal"
+
+#, fuzzy
+#~ msgid "Only non encrypted channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "Only non encrypted TV channels"
+#~ msgstr "Slette kanal?"
+
+#, fuzzy
+#~ msgid "Setup.OSD$  Ok button shows"
+#~ msgstr "Bredde"
+
+#, fuzzy
+#~ msgid "Setup.OSD$  Channellist/Bouquets on +/- keys"
+#~ msgstr "Posisjon på kanalinformasjon"
+
+#, fuzzy
+#~ msgid "Rename"
+#~ msgstr "Navn"
+
+#~ msgid "shut down anyway?"
+#~ msgstr "slå av likevel?"
+
+#~ msgid "Recording in %ld minutes, shut down anyway?"
+#~ msgstr "Skal gjøre opptak om %ld minutter - slå av likevel?"
+
+#, fuzzy
+#~ msgid "Setup.Recording$Record Digital Audio"
+#~ msgstr "Markere direkteopptak"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Use Symbol"
+#~ msgstr "Rask rulling i menyer"
+
+#, fuzzy
+#~ msgid "Setup.OSD$ScrollBar Width"
+#~ msgstr "Bredde"
+
+#~ msgid "Setup.Miscellaneous$Min. event timeout (min)"
+#~ msgstr "Minste hendelsespause (min)"
+
+#~ msgid "Setup.Recording$Split edited files"
+#~ msgstr "Splitt redigerte filer"
+
+#, fuzzy
+#~ msgid "Setup.Miscellaneous$Mark Blocks after Recording"
+#~ msgstr "Markere direkteopptak"
+
+#, fuzzy
+#~ msgid "Receiving"
+#~ msgstr "Opptak"
+
+#, fuzzy
+#~ msgid "Scheduled Recordings"
+#~ msgstr "Opptak"
+
+#, fuzzy
+#~ msgid "Menu"
+#~ msgstr "Meny"
+
+#, fuzzy
+#~ msgid "*Recordings"
+#~ msgstr "Opptak"
+
+#~ msgid "Dpid1"
+#~ msgstr "AC3pid1"
+
+#~ msgid "Dpid2"
+#~ msgstr "AC3pid2"
+
+#~ msgid "CA"
+#~ msgstr "Kortleser"
+
+#~ msgid "Inversion"
+#~ msgstr "Inversion"
+
+#~ msgid "bottom"
+#~ msgstr "nedre"
+
+#~ msgid "top"
+#~ msgstr "øvre"
+
+#~ msgid "Setup.OSD$Info on channel switch"
+#~ msgstr "Info ved kanalskifte"
+
+#~ msgid "Setup.OSD$Recording directories"
+#~ msgstr "Kataloger til opptak"
+
+#~ msgid "Setup.EPG$EPG bugfix level"
+#~ msgstr "Nivå for EPG-feilretting"
+
+#~ msgid "Setup.EPG$Set system time"
+#~ msgstr "Juster system-klokken"
+
+#~ msgid "Setup.EPG$Use time from transponder"
+#~ msgstr "Bruk klokke fra transponder"
+
+#~ msgid "pan&scan"
+#~ msgstr "pan&scan"
+
+#~ msgid "letterbox"
+#~ msgstr "letterbox"
+
+#~ msgid "center cut out"
+#~ msgstr "center cut out"
+
+#~ msgid "Setup.DVB$Primary DVB interface"
+#~ msgstr "Hoved DVB-enhet"
+
+#~ msgid "Setup.DVB$Video format"
+#~ msgstr "TV-Format"
+
+#~ msgid "Setup.LNB$Use DiSEqC"
+#~ msgstr "Bruk DiSEqC"
+
+#~ msgid "Setup.LNB$SLOF (MHz)"
+#~ msgstr "LO-grensefrekvens (MHz)"
+
+#~ msgid "Setup.LNB$Low LNB frequency (MHz)"
+#~ msgstr "LO-frekvens i lavbåndet (MHz)"
+
+#~ msgid "Setup.LNB$High LNB frequency (MHz)"
+#~ msgstr "LO-frekvens i høybåndet (MHz)"
+
+#~ msgid "Button$Menu"
+#~ msgstr "Meny"
+
+#~ msgid "Setup.Recording$Primary limit"
+#~ msgstr "Prioritetsgrense HovedDVB"
+
+#~ msgid "Setup.Recording$Use episode name"
+#~ msgstr "Bruk episodenavn"
+
+#~ msgid "Setup.Recording$Name instant recording"
+#~ msgstr "Navngi direkteopptak"
+
+#~ msgid "Setup.Recording$Max. video file size (MB)"
+#~ msgstr "Maksimal størrelse på videofiler (MB)"
+
+#~ msgid "Schedule"
+#~ msgstr "Programmer"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"
+
+#~ msgid "Button$Stop"
+#~ msgstr "Stopp"
+
+#~ msgid "Plugin"
+#~ msgstr "Plugin"
+
+#~ msgid "Press any key to cancel shutdown"
+#~ msgstr "Trykk en tast for ikke å slå av"

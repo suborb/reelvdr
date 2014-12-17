@@ -1,0 +1,166 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2010-04-15 12:16+0200\n"
+"PO-Revision-Date: 2008-09-30 14:40+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr "VTP-suoratoistoasiakas "
+
+msgid "Streaming Client"
+msgstr ""
+
+msgid "Server is suspended"
+msgstr "Palvelin on pysäytetty"
+
+msgid "Couldn't suspend Server!"
+msgstr "Palvelinta ei onnistuttu pysäyttämään!"
+
+msgid "VDR Streaming Server"
+msgstr "VDR-suoratoistopalvelin"
+
+msgid "Pause Live TV"
+msgstr "Pysäytä suora TV-lähetys"
+
+msgid "Streaming Server"
+msgstr ""
+
+msgid "Streaming active"
+msgstr "Suoratoistopalvelin aktiivinen"
+
+msgid "Offer suspend mode"
+msgstr ""
+
+#, fuzzy
+msgid "Always suspended"
+msgstr "Asiakas saa pysäyttää palvelimen"
+
+#, fuzzy
+msgid "Never suspended"
+msgstr "Palvelin on pysäytetty"
+
+msgid "Common Settings"
+msgstr "Yleiset asetukset"
+
+msgid "Maximum Number of Clients"
+msgstr "Suurin sallittu asiakkaiden määrä"
+
+msgid "Suspend behaviour"
+msgstr "Pysäytystoiminto"
+
+msgid "Client may suspend"
+msgstr "Asiakas saa pysäyttää palvelimen"
+
+#, fuzzy
+msgid "ReelBox-to-ReelBox Server"
+msgstr "VDR-palvelin"
+
+#, fuzzy
+msgid "Start ReelBox-to-ReelBox Server"
+msgstr "Käynnistä VDR-palvelin"
+
+#, fuzzy
+msgid "ReelBox-to-ReelBox Server Port"
+msgstr "VDR-palvelimen portti"
+
+msgid "Bind to IP"
+msgstr "Sido osoitteeseen"
+
+msgid "HTTP Server"
+msgstr "HTTP-palvelin"
+
+msgid "Start HTTP Server"
+msgstr "Käynnistä HTTP-palvelin"
+
+msgid "HTTP Server Port"
+msgstr "HTTP-palvelimen portti"
+
+msgid "HTTP Streamtype"
+msgstr "HTTP-lähetysmuoto"
+
+#, fuzzy
+msgid "Multicast Streaming Server"
+msgstr "VDR-suoratoistopalvelin"
+
+#, fuzzy
+msgid "Start IGMP Server"
+msgstr "Käynnistä HTTP-palvelin"
+
+#, fuzzy
+msgid "Multicast Client Port"
+msgstr "Käynnistä VDR-asiakas"
+
+#, fuzzy
+msgid "Multicast Streamtype"
+msgstr "HTTP-lähetysmuoto"
+
+msgid "Start Client"
+msgstr "Käynnistä VDR-asiakas"
+
+msgid "Remote IP"
+msgstr "Etäkoneen IP-osoite"
+
+msgid "Remote Port"
+msgstr "Etäkoneen portti"
+
+msgid "Filter Streaming"
+msgstr "Suodatetun tiedon suoratoisto"
+
+msgid "Synchronize EPG"
+msgstr "Päivitä ohjelmaopas"
+
+msgid "Minimum Priority"
+msgstr ""
+
+msgid "Maximum Priority"
+msgstr ""
+
+#~ msgid "Streaming Control"
+#~ msgstr "Suoratoiston hallinta"
+
+#~ msgid "Remote Schedule"
+#~ msgstr "Etäkoneen ohjelmaopas"
+
+#~ msgid "Remote Timers"
+#~ msgstr "Etäajastimet"
+
+#~ msgid "Remote Recordings"
+#~ msgstr "Etätallenteet"
+
+#~ msgid "Suspend Server"
+#~ msgstr "Pysäytä palvelin"
+
+#~ msgid "Edit remote timer"
+#~ msgstr "Muokkaa etäajastinta"
+
+#~ msgid "Fetching recordings..."
+#~ msgstr "Haetaan tallenteita..."
+
+#~ msgid "Please restart VDR to activate changes"
+#~ msgstr "Aktivoi muutokset käynnistämällä VDR uudelleen"
+
+#~ msgid "Couldn't save timer! Try again..."
+#~ msgstr "Ajastimen tallennus epäonnistui! Yritä uudelleen..."
+
+#~ msgid "Timers not in sync! Try again..."
+#~ msgstr "Ajastimet eivät täsmää! Yritä uudelleen..."
+
+#~ msgid "Server error! Try again..."
+#~ msgstr "Palvelimessa virhe! Yritä uudelleen..."
+
+#~ msgid "Couldn't delete timer! Try again..."
+#~ msgstr "Ajastimen poistaminen epäonnistui! Yritä uudelleen..."

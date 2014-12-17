@@ -1,0 +1,3 @@
+HDE_PLAYER= -DHDE_PLAYER=1
+PROJ_NAME = xineplug_hde1
+

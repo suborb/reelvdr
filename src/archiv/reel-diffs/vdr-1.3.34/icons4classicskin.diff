@@ -1,0 +1,227 @@
+diff -urNad vdr-1.3.37~/skinclassic.c vdr-1.3.37/skinclassic.c
+--- vdr-1.3.37~/skinclassic.c	2005-12-05 18:58:49.000000000 +0000
++++ vdr-1.3.37/skinclassic.c	2005-12-05 19:29:07.671197181 +0000
+@@ -10,6 +10,7 @@
+ #include "skinclassic.h"
+ #include "font.h"
+ #include "i18n.h"
++#include "menu.h"
+ #include "osd.h"
+ #include "themes.h"
+
+@@ -43,6 +44,10 @@
+ THEME_CLR(Theme, clrChannelEpgTimeBg,       clrRed);
+ THEME_CLR(Theme, clrChannelEpgTitle,        clrCyan);
+ THEME_CLR(Theme, clrChannelEpgShortText,    clrYellow);
++THEME_CLR(Theme, clrChannelSymbolOn,        clrWhite);
++THEME_CLR(Theme, clrChannelSymbolOff,       clrGray50);
++THEME_CLR(Theme, clrChannelSymbolRecFg,     clrWhite);
++THEME_CLR(Theme, clrChannelSymbolRecBg,     clrRed);
+ THEME_CLR(Theme, clrMenuTitleFg,            clrBlack);
+ THEME_CLR(Theme, clrMenuTitleBg,            clrCyan);
+ THEME_CLR(Theme, clrMenuDate,               clrBlack);
+@@ -106,8 +111,29 @@
+
+ void cSkinClassicDisplayChannel::SetChannel(const cChannel *Channel, int Number)
+ {
++  int x = 2;
+   osd->DrawRectangle(0, 0, osd->Width() - 1, lineHeight - 1, Theme.Color(clrBackground));
+-  osd->DrawText(2, 0, ChannelString(Channel, Number), Theme.Color(clrChannelName), Theme.Color(clrBackground), cFont::GetFont(fontOsd));
++  if (Channel && !Channel->GroupSep()) {
++     int d = 3;
++     bool rec = cRecordControls::Active();
++     osd->DrawBitmap(x, max (0, (lineHeight - bmRecording.Height()) / 2), bmRecording, Theme.Color(rec ? clrChannelSymbolRecFg : clrChannelSymbolOff), Theme.Color(rec ? clrChannelSymbolRecBg : clrBackground));
++     x += bmRecording.Width() + d;
++     osd->DrawBitmap(x, max (0, (lineHeight - bmEncrypted.Height()) / 2), bmEncrypted, Theme.Color(Channel->Ca() ? clrChannelSymbolOn : clrChannelSymbolOff), Theme.Color(clrBackground));
++     x += bmEncrypted.Width() + d;
++     osd->DrawBitmap(x, max (0, (lineHeight - bmDolbyDigital.Height()) / 2), bmDolbyDigital, Theme.Color(Channel->Dpid(0) ? clrChannelSymbolOn : clrChannelSymbolOff), Theme.Color(clrBackground));
++     x += bmDolbyDigital.Width() + d;
++     osd->DrawBitmap(x, max (0, (lineHeight - bmAudio.Height()) / 2), bmAudio, Theme.Color(Channel->Apid(1) ? clrChannelSymbolOn : clrChannelSymbolOff), Theme.Color(clrBackground));
++     x += bmAudio.Width() + d;
++     if (Channel->Vpid()) {
++        osd->DrawBitmap(x, max (0, (lineHeight - bmTeletext.Height()) / 2), bmTeletext, Theme.Color(Channel->Tpid() ? clrChannelSymbolOn : clrChannelSymbolOff), Theme.Color(clrBackground));
++        x += bmTeletext.Width() + d;
++        }
++     else if (Channel->Apid(0)) {
++        osd->DrawBitmap(x, max (0, (lineHeight - bmRadio.Height()) / 2), bmRadio, Theme.Color(clrChannelSymbolOn), Theme.Color(clrBackground));
++        x += bmRadio.Width() + d;
++        }
++     }
++  osd->DrawText(x, 0, ChannelString(Channel, Number), Theme.Color(clrChannelName), Theme.Color(clrBackground), cFont::GetFont(fontOsd));
+ }
+
+ void cSkinClassicDisplayChannel::SetEvents(const cEvent *Present, const cEvent *Following)
+@@ -542,7 +568,7 @@
+   cSkinClassicDisplayTracks(const char *Title, int NumTracks, const char * const *Tracks);
+   virtual ~cSkinClassicDisplayTracks();
+   virtual void SetTrack(int Index, const char * const *Tracks);
+-  virtual void SetAudioChannel(int AudioChannel) {}
++  virtual void SetAudioChannel(int AudioChannel);
+   virtual void Flush(void);
+   };
+
+@@ -551,11 +577,12 @@
+   const cFont *font = cFont::GetFont(fontOsd);
+   lineHeight = font->Height();
+   currentIndex = -1;
+-  int ItemsWidth = font->Width(Title);
++  int ItemsLeft = max (bmAudioStereo.Width(), max (bmAudioLeft.Width(), bmAudioRight.Width()));
++  int ItemsWidth = font->Width(Title) + ItemsLeft + 2;
+   for (int i = 0; i < NumTracks; i++)
+       ItemsWidth = max(ItemsWidth, font->Width(Tracks[i]));
+   ItemsWidth += 10;
+-  x0 = 0;
++  x0 = 2;
+   x1 = Setup.OSDWidth;
+   int d = x1 - x0;
+   if (d > ItemsWidth) {
+@@ -566,9 +593,9 @@
+   y1 = lineHeight;
+   y2 = y1 + NumTracks * lineHeight;
+   osd = cOsdProvider::NewOsd(Setup.OSDLeft, Setup.OSDTop + Setup.OSDHeight - y2);
+-  tArea Areas[] = { { x0, y0, x1 - 1, y2 - 1, 4 } };
++  tArea Areas[] = { { x0 - 2, y0, x1 + 1, y2 - 1, 4 } };
+   osd->SetAreas(Areas, sizeof(Areas) / sizeof(tArea));
+-  osd->DrawText(x0, y0, Title, Theme.Color(clrMenuTitleFg), Theme.Color(clrMenuTitleBg), font, x1 - x0);
++  osd->DrawText(ItemsLeft + 2, y0, Title, Theme.Color(clrMenuTitleFg), Theme.Color(clrMenuTitleBg), font, x1 - x0);
+   for (int i = 0; i < NumTracks; i++)
+       SetItem(Tracks[i], i, false);
+ }
+@@ -602,6 +629,21 @@
+   SetItem(Tracks[Index], Index, true);
+ }
+
++void cSkinClassicDisplayTracks::SetAudioChannel(int AudioChannel)
++{
++  cBitmap *bm = NULL;
++  switch (AudioChannel) {
++    case 0: bm = &bmAudioStereo; break;
++    case 1: bm = &bmAudioLeft;   break;
++    case 2: bm = &bmAudioRight;  break;
++    }
++  int y = max (0, (lineHeight - bm->Height()) / 2);
++  if (bm)
++     osd->DrawBitmap(2, y, *bm, Theme.Color(clrMenuTitleFg), Theme.Color(clrMenuTitleBg));
++  else
++     osd->DrawRectangle(2, y, bm->Width() + 1, y + bm->Height() - 1, Theme.Color(clrMenuTitleBg));
++}
++
+ void cSkinClassicDisplayTracks::Flush(void)
+ {
+   osd->Flush();
+diff -urNad vdr-1.3.37~/skins.c vdr-1.3.37/skins.c
+--- vdr-1.3.37~/skins.c	2005-11-27 15:52:25.000000000 +0000
++++ vdr-1.3.37/skins.c	2005-12-05 19:27:37.749465746 +0000
+@@ -332,3 +332,26 @@
+   if (cSkinDisplay::Current())
+      cSkinDisplay::Current()->Flush();
+ }
++
++// --- Shared bitmaps ----------------------------------------------------------------
++
++#include "symbols/audio.xpm"
++#include "symbols/audioleft.xpm"
++#include "symbols/audioright.xpm"
++#include "symbols/audiostereo.xpm"
++#include "symbols/dolbydigital.xpm"
++#include "symbols/encrypted.xpm"
++#include "symbols/radio.xpm"
++#include "symbols/recording.xpm"
++#include "symbols/teletext.xpm"
++
++cBitmap bmTeletext(teletext_xpm);
++cBitmap bmRadio(radio_xpm);
++cBitmap bmAudio(audio_xpm);
++cBitmap bmDolbyDigital(dolbydigital_xpm);
++cBitmap bmEncrypted(encrypted_xpm);
++cBitmap bmRecording(recording_xpm);
++cBitmap bmAudioLeft(audioleft_xpm);
++cBitmap bmAudioRight(audioright_xpm);
++cBitmap bmAudioStereo(audiostereo_xpm);
++
+diff -urNad vdr-1.3.37~/skins.h vdr-1.3.37/skins.h
+--- vdr-1.3.37~/skins.h	2005-11-27 15:41:44.000000000 +0000
++++ vdr-1.3.37/skins.h	2005-12-05 19:28:05.231549933 +0000
+@@ -349,4 +349,8 @@
+
+ extern cSkins Skins;
+
++extern cBitmap
++  bmTeletext, bmRadio, bmAudio, bmDolbyDigital, bmEncrypted, bmRecording,
++  bmAudioLeft, bmAudioRight, bmAudioStereo;
++
+ #endif //__SKINS_H
+diff -urNad vdr-1.3.37~/skinsttng.c vdr-1.3.37/skinsttng.c
+--- vdr-1.3.37~/skinsttng.c	2005-12-05 18:58:50.000000000 +0000
++++ vdr-1.3.37/skinsttng.c	2005-12-05 19:28:34.365518965 +0000
+@@ -19,12 +19,6 @@
+
+ #include "symbols/arrowdown.xpm"
+ #include "symbols/arrowup.xpm"
+-#include "symbols/audio.xpm"
+-#include "symbols/audioleft.xpm"
+-#include "symbols/audioright.xpm"
+-#include "symbols/audiostereo.xpm"
+-#include "symbols/dolbydigital.xpm"
+-#include "symbols/encrypted.xpm"
+ #include "symbols/ffwd.xpm"
+ #include "symbols/ffwd1.xpm"
+ #include "symbols/ffwd2.xpm"
+@@ -36,8 +30,6 @@
+ #include "symbols/mute.xpm"
+ #include "symbols/pause.xpm"
+ #include "symbols/play.xpm"
+-#include "symbols/radio.xpm"
+-#include "symbols/recording.xpm"
+ #include "symbols/sfwd.xpm"
+ #include "symbols/sfwd1.xpm"
+ #include "symbols/sfwd2.xpm"
+@@ -46,7 +38,6 @@
+ #include "symbols/srew1.xpm"
+ #include "symbols/srew2.xpm"
+ #include "symbols/srew3.xpm"
+-#include "symbols/teletext.xpm"
+ #include "symbols/volume.xpm"
+
+ #define Roundness   10
+@@ -131,7 +122,6 @@
+   const cEvent *present;
+   int lastSeen;
+   tTrackId lastTrackId;
+-  static cBitmap bmTeletext, bmRadio, bmAudio, bmDolbyDigital, bmEncrypted, bmRecording;
+ public:
+   cSkinSTTNGDisplayChannel(bool WithInfo);
+   virtual ~cSkinSTTNGDisplayChannel();
+@@ -141,13 +131,6 @@
+   virtual void Flush(void);
+   };
+
+-cBitmap cSkinSTTNGDisplayChannel::bmTeletext(teletext_xpm);
+-cBitmap cSkinSTTNGDisplayChannel::bmRadio(radio_xpm);
+-cBitmap cSkinSTTNGDisplayChannel::bmAudio(audio_xpm);
+-cBitmap cSkinSTTNGDisplayChannel::bmDolbyDigital(dolbydigital_xpm);
+-cBitmap cSkinSTTNGDisplayChannel::bmEncrypted(encrypted_xpm);
+-cBitmap cSkinSTTNGDisplayChannel::bmRecording(recording_xpm);
+-
+ cSkinSTTNGDisplayChannel::cSkinSTTNGDisplayChannel(bool WithInfo)
+ {
+   present = NULL;
+@@ -876,7 +859,6 @@
+   int lineHeight;
+   tColor frameColor;
+   int currentIndex;
+-  static cBitmap bmAudioLeft, bmAudioRight, bmAudioStereo;
+   void SetItem(const char *Text, int Index, bool Current);
+ public:
+   cSkinSTTNGDisplayTracks(const char *Title, int NumTracks, const char * const *Tracks);
+@@ -886,10 +868,6 @@
+   virtual void Flush(void);
+   };
+
+-cBitmap cSkinSTTNGDisplayTracks::bmAudioLeft(audioleft_xpm);
+-cBitmap cSkinSTTNGDisplayTracks::bmAudioRight(audioright_xpm);
+-cBitmap cSkinSTTNGDisplayTracks::bmAudioStereo(audiostereo_xpm);
+-
+ cSkinSTTNGDisplayTracks::cSkinSTTNGDisplayTracks(const char *Title, int NumTracks, const char * const *Tracks)
+ {
+   const cFont *font = cFont::GetFont(fontOsd);

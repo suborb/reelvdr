@@ -1,0 +1,447 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvdswitch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 13:48+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Reading DVD"
+msgstr "S'està llegint el DVD"
+
+msgid "Writing DVD"
+msgstr "S'està gravant el DVD"
+
+#, fuzzy
+msgid "Copying DVD"
+msgstr "S'està llegint el DVD"
+
+msgid "Please insert DVD: "
+msgstr "Si us plau, inseriu un DVD: "
+
+msgid "Commands"
+msgstr "Ordres"
+
+msgid "Burn image"
+msgstr "Grava una imatge"
+
+msgid "Rename image"
+msgstr "Canvia el nom de la imatge"
+
+msgid "Open DVD-tray"
+msgstr "Obre la safata del DVD"
+
+msgid "Close DVD-tray"
+msgstr "Tanca la safata del DVD"
+
+msgid "Delete cache"
+msgstr "Suprimeix la memòria cau"
+
+msgid "Format DVD-RW"
+msgstr "Dóna format a un DVD-RW"
+
+msgid "Directory management"
+msgstr "Gestiona les carpetes"
+
+msgid "Success..."
+msgstr "Ha finalitzat amb èxit..."
+
+msgid "Directory Management"
+msgstr "Gestiona les carpetes"
+
+msgid "Select Directory"
+msgstr "Selecciona una carpeta"
+
+msgid "New"
+msgstr "Nova"
+
+msgid "Select"
+msgstr "Selecciona"
+
+msgid "Rename"
+msgstr "Canvia el nom"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Move"
+msgstr "Mou"
+
+msgid "Edit Directories"
+msgstr "Edita les carpetes"
+
+msgid "no Rights!"
+msgstr "No teniu autorització!"
+
+msgid "really delete?"
+msgstr "voleu suprimir-la?"
+
+msgid "Directory not empty. however delete?"
+msgstr "La carpeta no és buida. Voleu suprimir-la?"
+
+msgid "no rights!"
+msgstr "No teniu autorització!"
+
+msgid "no rights to create"
+msgstr "No teniu autorització per crear-la"
+
+msgid "Directory exists"
+msgstr "La carpeta ja existeix"
+
+msgid "no rights to rename"
+msgstr "No teniu autorització per canviar el nom"
+
+msgid "Insert"
+msgstr "Insereix"
+
+msgid "Specified Writescript not exist!"
+msgstr "Aquest script d'escriptura no existeix!"
+
+msgid "Cannot execute Writescript!"
+msgstr "No es pot executar l'script d'escriptura!"
+
+msgid "Burn Now?"
+msgstr "Enregistrar ara?"
+
+msgid "Read DVD"
+msgstr "Llegeix el DVD"
+
+msgid "Specified Readscript not exist!"
+msgstr "Aquest script de lectura no existeix!"
+
+msgid "Cannot execute Readscript!"
+msgstr "No es pot executar l'script de lectura!"
+
+msgid "Now Read?"
+msgstr "Llegir ara?"
+
+msgid "Image-File"
+msgstr "Fitxer d'imatge"
+
+msgid "Image-Directory"
+msgstr "Carpeta d'imatges"
+
+msgid "Previously seen DVDs"
+msgstr "DVDs utilitzats anteriorment"
+
+msgid "Archives DVDs and plays it from Harddisk"
+msgstr "Arxiva els DVDs i reprodueix-los des del disc dur"
+
+msgid "Archive Video-DVD"
+msgstr "Arxiva el DVD-Vídeo"
+
+msgid "Image Directory not readable or does not exist"
+msgstr ""
+
+msgid "DVD-Plugin not found! Function deactivated!"
+msgstr "No s'ha trobat el connector DVD! La funció s'ha desactivat!"
+
+msgid "Directory with 'VIDEO_TS' Folder"
+msgstr "Carpeta amb el directori 'VIDEO_TS'"
+
+msgid "Directory"
+msgstr "Carpeta"
+
+msgid "File with '.iso' Extension"
+msgstr "Fitxer amb extensió '.iso'"
+
+msgid "Iso-Image"
+msgstr "Imatge iso"
+
+msgid "My DVDs"
+msgstr "Els meus DVDs"
+
+msgid "free"
+msgstr "lliure"
+
+msgid "DVD found in drive."
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "Use the red button to create a archive."
+msgstr ""
+
+msgid "No DVD found in drive."
+msgstr ""
+
+msgid "Insert a DVD to create a archive"
+msgstr ""
+
+msgid "to change"
+msgstr "per canviar"
+
+msgid "File exists in Directory"
+msgstr "El fitxer és a la carpeta"
+
+msgid "Please wait. Searching for DVD images"
+msgstr "Si us plau, espereu. S'estan cercant imatges de DVD"
+
+msgid "without Category"
+msgstr "sense Categoria"
+
+#, c-format
+msgid "(Size %03.1f GB)\t"
+msgstr "(Mida %03.1f GB)\t"
+
+msgid "DVD-Drive"
+msgstr "Unitat de DVD"
+
+msgid "insert Media"
+msgstr "insereix el suport"
+
+msgid "no Rights to rename"
+msgstr "No teniu autorització per canviar el nom"
+
+msgid "RIP a DVD"
+msgstr "Extreu els fitxers d'un DVD"
+
+msgid "All Images"
+msgstr "Totes les imatges"
+
+msgid "All with Cat."
+msgstr "Totes amb Cat."
+
+msgid "Directories"
+msgstr "Carpetes"
+
+msgid "Image-Type"
+msgstr "Tipus d'imatge"
+
+msgid "File-Type"
+msgstr "Tipus de fitxer"
+
+msgid "none"
+msgstr "cap"
+
+msgid "ascending"
+msgstr "ascendent"
+
+msgid "descending"
+msgstr "descendent"
+
+msgid "none Function"
+msgstr "cap Funció"
+
+msgid "Dir. Management"
+msgstr "Gest. Carpetes"
+
+msgid "Tray open"
+msgstr "Safata oberta"
+
+msgid "Tray close"
+msgstr "Safata tancada"
+
+msgid "Play"
+msgstr "Reprodueix"
+
+msgid "Image rename"
+msgstr "Canvia el nom de la imatge"
+
+msgid "Image move"
+msgstr "Mou la imatge"
+
+msgid "Image delete"
+msgstr "Suprimeix la imatge"
+
+msgid "Image burn"
+msgstr "Grava la imatge"
+
+msgid "Image read"
+msgstr "Llegeix la imatge"
+
+msgid "Dir.Mgmt."
+msgstr "Gest.Carp."
+
+msgid "Open"
+msgstr "Obre"
+
+msgid "Close"
+msgstr "Tanca"
+
+msgid "Burn"
+msgstr "Grava"
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Use -> and <- for opening and closing menus"
+msgstr "Utilitza -> i <- per obrir i tancar menús"
+
+msgid "Save"
+msgstr "Desa"
+
+msgid "Generic Settings"
+msgstr "Paràmetres generals"
+
+msgid "\tImagetypes"
+msgstr "\tTipus Imatge"
+
+msgid "\tView free DiskSpace"
+msgstr "\tMostra espai disp. al Disc"
+
+msgid "Display Settings"
+msgstr "Configuració de pantalla"
+
+msgid "\tDisplay Mode"
+msgstr "\tMode de visualització"
+
+msgid "\t  Category Type"
+msgstr "\t  Tipus de Categoria"
+
+msgid "\t  invisible empty Dir's/Cat."
+msgstr "\t  no mostrar Carp./Cat. buides"
+
+msgid "\tAlphabetic Sort"
+msgstr "\tOrdena alfabèticament"
+
+msgid "\tvisible DVD-Drive"
+msgstr "\tUnitat de DVD visible"
+
+msgid "Special Display Settings"
+msgstr "Configuració especial de pantalla"
+
+msgid "\tvisible Image-Type Col"
+msgstr "\tCol. Tipus imatge visible"
+
+msgid "\t  Width for Image-Col"
+msgstr "\t  Amplada de Col. Imatge"
+
+msgid "\tchar for Cat.Line"
+msgstr "\tcar. per la línia Cat."
+
+msgid "\t  Count before Cat.Name"
+msgstr "\t  Compta abans nom Cat."
+
+msgid "\tSpaces before/after Cat.Name"
+msgstr "\tEspais abans/després nom Cat."
+
+msgid "\tCutText for Subcat"
+msgstr "\tRetalla text a Subcat"
+
+msgid "Navigation"
+msgstr "Navegació"
+
+msgid "\tCat.Jump by Left/Right"
+msgstr "\tSalta Cat. amb Esquerra/Dreta"
+
+msgid "Key allocation"
+msgstr "Assignació de tecles"
+
+msgid "\tKey 1"
+msgstr "\tTecla 1"
+
+msgid "\tKey 2"
+msgstr "\tTecla 2"
+
+msgid "\tKey 3"
+msgstr "\tTecla 3"
+
+msgid "\tKey 4"
+msgstr "\tTecla 4"
+
+msgid "\tKey 5"
+msgstr "\tTecla 5"
+
+msgid "\tKey 6"
+msgstr "\tTecla 6"
+
+msgid "\tKey 7"
+msgstr "\tTecla 7"
+
+msgid "\tKey 8"
+msgstr "\tTecla 8"
+
+msgid "\tKey 9"
+msgstr "\tTecla 9"
+
+msgid "\tKey 0"
+msgstr "\tTecla 0"
+
+msgid "\tKey Green"
+msgstr "\tTecla verda"
+
+msgid "\tKey Yellow"
+msgstr "\tTecla groga"
+
+msgid "\tKey OK"
+msgstr "\tTecla OK"
+
+msgid "to adjust"
+msgstr "per ajustar"
+
+msgid "Imagetypes"
+msgstr "Tipus d'imatge"
+
+msgid "Edit"
+msgstr "Edita"
+
+msgid "really delete Entry?"
+msgstr "voleu esborrar l'entrada?"
+
+msgid "File"
+msgstr "Fitxer"
+
+msgid "Description:"
+msgstr "Descripció:"
+
+msgid "Type-Title:"
+msgstr "Tipus de títol:"
+
+msgid "Image Type"
+msgstr "Tipus d'imatge"
+
+msgid "Directory contains:"
+msgstr "La carpeta conté:"
+
+msgid "File Extension:"
+msgstr "Extensió de fitxer:"
+
+msgid "Hide Extension"
+msgstr "Oculta l'extensió"
+
+msgid "'Description' must not empty!"
+msgstr "'Descripció' no es pot deixar buit!"
+
+msgid "'Type-Title' must not empty!"
+msgstr "'Tipus de títol' no es pot deixar buit!"
+
+msgid "'Directory contains' must not empty!"
+msgstr "'La carpeta conté' no es pot deixar buit!"
+
+msgid "'File Extension' must not empty!"
+msgstr "'Extensió de fitxer' no es pot deixar buit!"
+
+#~ msgid "Image Directory not readable or not exist"
+#~ msgstr "No es pot llegir la carpeta d'imatges o no existeix"
+
+#~ msgid "Rename DVD"
+#~ msgstr "Canvia el nom del DVD"
+
+#~ msgid "New:"
+#~ msgstr "Nova:"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+#~ msgstr " abcdefghijklmnopqrstuvwxyz0123456789-.#~"
+
+#~ msgid "Rename:"
+#~ msgstr "Canvia el nom"
+
+#~ msgid " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+#~ msgstr " abcdefghijklmnopqrstuvwxyz0123456789-_.#~"
+
+#~ msgid "\tImage Dir."
+#~ msgstr "\tCarp. Imatge"
+
+#~ msgid "\tchange Character"
+#~ msgstr "\tcanvia Caràcter"

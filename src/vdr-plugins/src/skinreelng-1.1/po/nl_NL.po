@@ -1,0 +1,307 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreelng\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-12-04 16:52+0100\n"
+"PO-Revision-Date: 2010-05-13 17:40+0100\n"
+"Last-Translator: TechNL <tech@reelbox4all.com>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Sunday"
+msgstr "Zondag"
+
+msgid "Monday"
+msgstr "maandag"
+
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+msgid "Wednesday"
+msgstr "woensdag"
+
+msgid "Thursday"
+msgstr "Donderdag"
+
+msgid "Friday"
+msgstr "Vrijdag"
+
+msgid "Saturday"
+msgstr "Zaterdag"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Ongeldig Kanaal ***"
+
+msgid "mins"
+msgstr "mins"
+
+msgid "min"
+msgstr "min"
+
+msgid "en_US"
+msgstr "nl_NL"
+
+msgid "TIMERS"
+msgstr "TIMERS"
+
+msgid "Languages"
+msgstr "Talen"
+
+msgid "Size"
+msgstr "Grootte"
+
+msgid "Auxiliary information"
+msgstr "Hulp informatie"
+
+msgid "Subtitles"
+msgstr "Ondertitels"
+
+msgid "Reel Classic"
+msgstr "Reel Classic"
+
+msgid "TrueType Font"
+msgstr "TrueType Font"
+
+msgid "No TTF support!"
+msgstr "TTF niet ondersteund!"
+
+msgid "Default OSD Font"
+msgstr "Standaard OSDfont"
+
+msgid "Default Fixed Size Font"
+msgstr "Standaardwaarde font"
+
+msgid "Default Small Font"
+msgstr "Standaard klein font"
+
+msgid "General"
+msgstr "Algemeen"
+
+msgid "Logos & Symbols"
+msgstr "Logo's & Symbolen"
+
+msgid "Fonts"
+msgstr "Fonts"
+
+msgid "Changes done"
+msgstr "Veranderingen uitgevoerd"
+
+msgid "elapsed"
+msgstr "gedane"
+
+msgid "remaining"
+msgstr "resterend"
+
+msgid "percent"
+msgstr "procent"
+
+msgid "never"
+msgstr "nooit"
+
+msgid "use size.vdr only"
+msgstr "alleen size.vdr gebruiken"
+
+msgid "always"
+msgstr "Altijd"
+
+msgid "Last line"
+msgstr "Laatste regel"
+
+msgid "Help buttons"
+msgstr "Hulp knoppen"
+
+msgid "Free last line"
+msgstr "Laatste vrije regel"
+
+msgid "Try 8bpp single area"
+msgstr "Op 8bpp bereik testen"
+
+msgid "Show info area in main menu"
+msgstr "Info in hoofdmenu"
+
+msgid "Show auxiliary information"
+msgstr "Toon hulp informatie"
+
+msgid "Show recording's size"
+msgstr "Opnamegrootte tonen"
+
+msgid "Show remaining/elapsed time"
+msgstr "Toon resterend/gedane tijd"
+
+msgid "Show VPS"
+msgstr "VPS tonen"
+
+msgid "Show progressbar"
+msgstr "Voorgangsindicator tonen"
+
+msgid "Show messages in menu on"
+msgstr "Toon berichten in het menu aan"
+
+msgid "pixel algo"
+msgstr "pixelalgoritme"
+
+msgid "ratio algo"
+msgstr "algoritmeratio"
+
+msgid "zoom image"
+msgstr "zoomen"
+
+msgid "Flushing channel logo cache..."
+msgstr "Kanaallogo cache legen..."
+
+msgid "Show symbols"
+msgstr "Symbolen tonen"
+
+msgid "  Show symbols in menu"
+msgstr "  Symbolen in menu"
+
+msgid "  Show symbols in replay"
+msgstr "  Symbolen bij weergave"
+
+msgid "  Show symbols in messages"
+msgstr "  Symbolen bij berichten"
+
+msgid "  Show symbols in audio"
+msgstr "  Symbolen bij audio"
+
+msgid "Show symbols in lists"
+msgstr "Symbolen in lijsten"
+
+msgid "Show marker in lists"
+msgstr "Markering in lijsten tonen"
+
+msgid "Show status symbols"
+msgstr "Symbolen tonen"
+
+msgid "  Show flags"
+msgstr "  Vlaggen tonen"
+
+msgid "Show event/recording images"
+msgstr "EPG/opnamedetails tonen"
+
+msgid "  Resize images"
+msgstr "  Aanpassen beeldgrootte"
+
+msgid "  Image width"
+msgstr "  Beeldbreedte"
+
+msgid "  Image height"
+msgstr "  Beeldhoogte"
+
+msgid "  Image format"
+msgstr "  Beeldformaat"
+
+msgid "Show channel logos"
+msgstr "Toon kanaallogo's"
+
+msgid "  Identify channel by"
+msgstr "  Kanaalidentificatie door"
+
+msgid "name"
+msgstr "naam"
+
+msgid "data"
+msgstr "data"
+
+msgid "Channel logo cache size"
+msgstr "Kanaallogo cache"
+
+msgid "Button$Flush cache"
+msgstr "Cache legen"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Width"
+msgstr "Breedte"
+
+msgid "No TrueType fonts installed!"
+msgstr "Geen TrueType fonten geinstalleerd!"
+
+msgid "Font Sizes"
+msgstr "Fonts"
+
+msgid "Fixed Font"
+msgstr "Vaste waarde font"
+
+msgid "Button$Set"
+msgstr "Veranderen"
+
+msgid "OSD title"
+msgstr "OSD titel"
+
+msgid "Messages"
+msgstr "Meldingen"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Help keys"
+msgstr "Help toetsen"
+
+msgid "Channelinfo: title"
+msgstr "Kanaalinfo: titel"
+
+msgid "Channelinfo: subtitle"
+msgstr "Kanaalinfo: ondertitel"
+
+msgid "Channelinfo: language"
+msgstr "Kanaalinfo: taal"
+
+msgid "List items"
+msgstr "Lijsten"
+
+msgid "Info area: timers title"
+msgstr "Infobereik: Timertitel"
+
+msgid "Info area: timers text"
+msgstr "Infobereik: Timertekst"
+
+msgid "Info area: warning title"
+msgstr "Infobereik: waarschuwing titel"
+
+msgid "Info area: warning text"
+msgstr "Infobereik: waarschuwing tekst"
+
+msgid "Details: title"
+msgstr "Details: titel"
+
+msgid "Details: subtitle"
+msgstr "Details: ondertitel"
+
+msgid "Details: date"
+msgstr "Details: datum"
+
+msgid "Details: text"
+msgstr "Details: tekst"
+
+msgid "Replay: times"
+msgstr "Weergave: tijden"
+
+msgid "ReelNG skin"
+msgstr "ReelNG skin"
+
+msgid "Channel:"
+msgstr "Kanaal:"
+
+msgid "Search pattern:"
+msgstr "Zoekpatroon:"
+
+msgid "Timer check"
+msgstr "Monitoren"
+
+msgid "No timer check"
+msgstr "Geen controle"
+
+#~ msgid "Full title width"
+#~ msgstr "Volle titelbreedte"
+

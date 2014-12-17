@@ -1,0 +1,311 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-rbmini\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-02-04 10:16+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "HDMI: %s      SCART: %s"
+msgstr "HDMI: %s      EUROCONNECTOR: %s"
+
+msgid "Setup - Video"
+msgstr "Configuració - Vídeo"
+
+msgid "Setup - Audio"
+msgstr "Configuració - Àudio"
+
+msgid "Keep these settings?"
+msgstr "Mantenir aquesta configuració?"
+
+msgid "Using old settings"
+msgstr "S'està utilitzant la configuració anterior"
+
+msgid "Audio"
+msgstr "Àudio"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Experts"
+msgstr "Avançats"
+
+msgid "HDMI settings"
+msgstr "Configuració HDMI"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output"
+msgstr "Sortida"
+
+msgid "Aspect"
+msgstr "Aspecte"
+
+msgid "Aspect ratio"
+msgstr "Relació d'aspecte"
+
+msgid "SCART settings"
+msgstr "Configuració Euroconnector"
+
+msgid "Mpeg2 settings"
+msgstr "Configuració Mpeg2"
+
+msgid "Postprocessing"
+msgstr "S'està processant"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr "Confirmeu els canvis a 'Mode' o 'Sortida'. Si la nova configuració no està suportada, espereu 20 segons o premeu Exit per cancel·lar els canvis."
+
+msgid "Video"
+msgstr "Vídeo"
+
+msgid "Audio settings"
+msgstr "Configuració d'Àudio"
+
+#, fuzzy
+msgid "Analog offset"
+msgstr "Òfset analògic (1/100s)"
+
+msgid "Dolby Digital offset"
+msgstr ""
+
+#, fuzzy
+msgid "Note:"
+msgstr "Cap"
+
+msgid "The adjustable range is 1/100 seconds."
+msgstr ""
+
+msgid "None"
+msgstr "Cap"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Desconegut"
+
+msgid "Init"
+msgstr "Inicia"
+
+msgid "Play"
+msgstr "Reprodueix"
+
+msgid "Pause"
+msgstr "Posa en pausa"
+
+msgid "Trick"
+msgstr "Salta"
+
+msgid "Stereo"
+msgstr "Estèreo"
+
+msgid "Left"
+msgstr "Esquerra"
+
+msgid "Right"
+msgstr "Dreta"
+
+msgid "Mpg2"
+msgstr "Mpg2"
+
+msgid "h264"
+msgstr "h264"
+
+msgid "jpeg"
+msgstr "jpeg"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "Ntsc Jap"
+
+msgid "Ntsc 443"
+msgstr "Ntsc 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "SECAM"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "Ntsc BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr "1080p23"
+
+msgid "1080p24"
+msgstr "1080p24"
+
+msgid "1080p25"
+msgstr "1080p25"
+
+msgid "1080p29"
+msgstr "1080p29"
+
+msgid "1080p30"
+msgstr "1080p30"
+
+msgid "Source"
+msgstr "Origen"
+
+msgid "1:1"
+msgstr "1:1"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "14:9"
+msgstr "14:9"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "20:9"
+msgstr "20:9"
+
+msgid "Fill to Screen"
+msgstr "Ajusta a la pantalla"
+
+msgid "Crop to Fill"
+msgstr "Retalla per ajustar"
+
+msgid "Fill to Aspect"
+msgstr "Ajusta segons l'aspecte"
+
+msgid "NL X"
+msgstr "NL X"
+
+msgid "NL Y"
+msgstr "NL Y"
+
+msgid "NL XY"
+msgstr "NL XY"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr "Tot"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YPrPb"
+
+msgid "Deblock"
+msgstr "Deblock"
+
+msgid "Deblock & dering"
+msgstr "Deblock i dering"
+
+#, fuzzy
+#~ msgid "Dolby D offset"
+#~ msgstr "Òfset Dolby D (1/100s)"
+
+#~ msgid "Ignore"
+#~ msgstr "Ignora"
+
+#~ msgid "You will have to confirm changes to mode or output."
+#~ msgstr "Confirmeu els canvis de mode o sortida."
+
+#~ msgid "If your display doesn not support the new settings,"
+#~ msgstr "Si la vostra pantalla no suporta la nova configuració,"
+
+#~ msgid "just wait for 20 seconds or press Exit to cancel"
+#~ msgstr "espereu 20 segons o premeu Exit per cancel·lar"
+
+#~ msgid "the changes."
+#~ msgstr "els canvis."

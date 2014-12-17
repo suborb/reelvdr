@@ -1,0 +1,784 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-install\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-11-08 11:41+0100\n"
+"PO-Revision-Date: 2009-06-21 00:38+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "The ReelBox installation wizard"
+msgstr "Installazione guidata ReelBox"
+
+msgid "The channellist could not be installed automatically from the ReelBox Avantgarde."
+msgstr ""
+
+msgid "Channellist"
+msgstr "Lista canali"
+
+msgid "Channelscan"
+msgstr "Ricerca canali"
+
+msgid "We shall now scan for channels."
+msgstr "Ora verrà eseguita una ricerca canali."
+
+msgid "This will take a few minutes."
+msgstr "Saranno necessari alcuni minuti."
+
+msgid "Press OK to continue"
+msgstr "OK -> Continuare"
+
+msgid "MultiRoom"
+msgstr "MultiRoom"
+
+msgid "Scanning for ReelBox MultiRoom server on network. Please wait..."
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Attendere..."
+
+msgid "The MultiRoom system is already active."
+msgstr ""
+
+msgid "The MultiRoom system cannot be activated."
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is currently configured as recording server:"
+msgstr "Rilevato il seguente ReelBox Avantgarde, che sarà utilizzato come server registrazioni:"
+
+#, fuzzy
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server (the first one was used up to now):"
+msgstr "Questi ReelBox Avantgarde sono stati rilevati sulla rete e si possono utilizzare come server di registrazione."
+
+#, fuzzy
+msgid "\tDisable MultiRoom"
+msgstr "MultiRoom"
+
+#, fuzzy
+msgid "Note:"
+msgstr "Nessuno"
+
+msgid "* MultiRoom is not enabled!"
+msgstr ""
+
+#, fuzzy
+msgid "This ReelBox Avantgarde is found, but has MultiRoom disabled, so cannot be used as recording server:"
+msgstr "Rilevato il seguente ReelBox Avantgarde, che sarà utilizzato come server registrazioni:"
+
+msgid "This ReelBox Avantgarde is found and will be used as recording server:"
+msgstr "Rilevato il seguente ReelBox Avantgarde, che sarà utilizzato come server registrazioni:"
+
+msgid "\tLeave MultiRoom unconfigured"
+msgstr ""
+
+msgid "These ReelBox Avantgardes are found on the network and can be used as a recording server."
+msgstr "Questi ReelBox Avantgarde sono stati rilevati sulla rete e si possono utilizzare come server di registrazione."
+
+msgid "Please select one of them:"
+msgstr "Selezionare uno dei seguenti: "
+
+#, fuzzy
+msgid "No ReelBox Avantgarde was found in the network."
+msgstr "Nessun ReelBox Avantgarde rilevato sulla rete!"
+
+msgid "If you own an Avantgarde, turn it on and activate the MultiRoom System in Setup/Installation/MultiRoom."
+msgstr ""
+
+msgid "Rescan"
+msgstr ""
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Skip"
+msgstr "Saltare"
+
+msgid "Setting changes - please wait"
+msgstr "Modifica configurazione - Attendere"
+
+msgid "Storing failed! (UUID is missing)"
+msgstr "Salvataggio fallito! (UUID mancante)"
+
+msgid "Settings stored"
+msgstr "Configurazione salvata"
+
+msgid "Reception"
+msgstr "Ricezione"
+
+msgid "Searching for NetCeiver in network. Please wait..."
+msgstr ""
+
+msgid "Searching for directly connected NetCeiver..."
+msgstr ""
+
+#, c-format
+msgid "Searching for NetCeiver in VLAN %d"
+msgstr ""
+
+msgid "Internal NetCeiver found"
+msgstr ""
+
+msgid "NetCeiver found in VLAN"
+msgstr ""
+
+msgid "System error!"
+msgstr "Errore di sistema!"
+
+msgid "No NetCeiver found!"
+msgstr "Nessun NetCeiver trovato!"
+
+msgid "Please check if the system cable is connected properly."
+msgstr "Verificare che il cavo sia connesso correttamente!"
+
+msgid "Harddisk"
+msgstr "Harddisk"
+
+msgid "Internal harddisk found."
+msgstr ""
+
+msgid "Press OK to format now, otherwise the yellow buttown 'skip'."
+msgstr ""
+
+msgid ""
+"If this is the first usage of the harddisk, it must be formatted now. Formatting will DELETE ALL data on the harddisk.\n"
+" If you have used this harddisk before, you could skip this step."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' was already used before and may contain recordings and multimedia files."
+msgstr ""
+
+msgid "Do you want to mount it and use it as a device for your media files?"
+msgstr ""
+
+msgid "\tYes, mount it, preserve all recordings"
+msgstr ""
+
+msgid "\tNo, do not use the harddisk at all"
+msgstr ""
+
+msgid "You should mount this disk now if you want to use it for permanent timeshift even if you are not going to use it for your media files."
+msgstr ""
+
+#, c-format
+msgid "The disk '%s' is already in use for media files."
+msgstr ""
+
+msgid "No action needs to be taken."
+msgstr ""
+
+#, fuzzy
+msgid "Press red key, if you want to format this harddisk:"
+msgstr "OK -> Formattazione dell'harddisk interno."
+
+msgid "CAUTION:"
+msgstr "ATTENZIONE: "
+
+#, fuzzy
+msgid "If you choose to format, ALL data on the internal harddisk will be deleted!"
+msgstr "L'intero contenuto dell'harddisk verrà cancellato!"
+
+msgid "Format"
+msgstr "Formattare"
+
+#, fuzzy
+msgid "Formatting in progress"
+msgstr "Formattazione fallita!"
+
+#, fuzzy
+msgid "Formatting"
+msgstr "Formattare"
+
+#, fuzzy
+msgid "Formatting in progress."
+msgstr "Formattazione eseguita correttamente!"
+
+#, fuzzy
+msgid "Please wait ..."
+msgstr "Attendere..."
+
+msgid "Time elapsed"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting complete"
+msgstr "Formattazione fallita!"
+
+#, fuzzy
+msgid "Formatting was successful."
+msgstr "Formattazione eseguita correttamente!"
+
+msgid "The harddisk is now prepared for recording."
+msgstr "Harddisk pronto per registrare."
+
+msgid "Press 'Next' to proceed with the installation."
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Not Formatting!"
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "Formatting failed!"
+msgstr ""
+
+msgid "Formating failed!"
+msgstr "Formattazione fallita!"
+
+msgid "Mounting harddisk ..."
+msgstr ""
+
+msgid "Please select the target for your recordings:"
+msgstr "Selezionare la destinazione per le registrazioni: "
+
+msgid " I want to store my recordings ..."
+msgstr "Archiviare le registrazioni..."
+
+msgid " - on the local harddisk of this NetClient."
+msgstr "- su harddisk locale del NetClient."
+
+msgid " - on the harddisk of the ReelBox Avantgarde."
+msgstr "- su harddisk del ReelBox Avantgarde."
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "No Harddisk found."
+msgstr "Nessun harddisk trovato!"
+
+msgid "Recording is not possible."
+msgstr "Registrazione impossibile!"
+
+msgid "Handling"
+msgstr "Operazione in corso"
+
+msgid "Please select a language"
+msgstr "Selezionare una lingua"
+
+msgid "Please select a language and timezone"
+msgstr "Selezionare lingua e fuso orario"
+
+msgid "Setup.OSD$Language"
+msgstr "Lingua"
+
+msgid "City/Region"
+msgstr "Città/Regione"
+
+msgid "Please select the prefered language using the"
+msgstr "Selezionare la lingua preferita usando"
+
+msgid "cursor keys on the remote control."
+msgstr "i tasti cursore sul telecomando."
+
+msgid "Then press OK to continue."
+msgstr "Al termine, OK -> Proseguire"
+
+msgid "Done"
+msgstr "Fatto"
+
+msgid "Congratulations."
+msgstr "Congratulazioni!"
+
+msgid "All required settings for the initial operation have"
+msgstr "Tutte le configurazioni iniziali"
+
+msgid "been saved."
+msgstr "sono state salvate."
+
+msgid "Reel Multimedia wishes you a lot of fun with"
+msgstr "Reel Multimedia augura a tutti buon divertimento con"
+
+msgid "your NetClient."
+msgstr "il NetClient"
+
+msgid "your ReelBox."
+msgstr "il proprio ReelBox!"
+
+msgid "The Install prodecure wasn't completed"
+msgstr "La procedura di installazione NON è stata completata"
+
+msgid "successfully."
+msgstr "correttamente!"
+
+msgid "End"
+msgstr "Fine"
+
+msgid "In this step you can configure the Reel MultiRoom system."
+msgstr ""
+
+msgid "Enable MultiRoom"
+msgstr ""
+
+msgid "Use this Reelbox as recording server?"
+msgstr ""
+
+msgid "No. of Clients in the network"
+msgstr ""
+
+msgid "Scan for MultiRoom server now"
+msgstr ""
+
+#, c-format
+msgid "Configuring as server: %d%%"
+msgstr ""
+
+msgid "Network"
+msgstr "Rete"
+
+msgid "Changes done"
+msgstr "Modifiche effettuate"
+
+msgid "Network (WLAN)"
+msgstr ""
+
+msgid "setup plugin missing: cannot configure WLAN"
+msgstr ""
+
+msgid "Network disabled"
+msgstr "Rete disabilitata"
+
+msgid "Do you want to enable the network?"
+msgstr "Abilitare la Rete?"
+
+msgid "Yes"
+msgstr "Sì"
+
+msgid "No"
+msgstr "No"
+
+msgid "Do you want to set up the network now?"
+msgstr "Configurare la rete ora?"
+
+msgid "Disable Network"
+msgstr "Disabilitare la rete"
+
+msgid "These settings are retrieved by DHCP:"
+msgstr "Configurazione recuperata attraverso DHCP: "
+
+msgid "IP Address"
+msgstr "Indirizzo IP"
+
+msgid "Network mask"
+msgstr "Network Mask"
+
+msgid "Gateway"
+msgstr "Gateway"
+
+msgid "Nameserver"
+msgstr "Nameserver"
+
+msgid "Current settings:"
+msgstr "Configurazione corrente: "
+
+msgid "Do you want to use these settings?"
+msgstr "Usare questa configurazione?"
+
+msgid "Yes, store"
+msgstr ""
+
+msgid "No, configure network manually"
+msgstr "No, la rete verà configurata manualmente."
+
+msgid "No, configure WiFi"
+msgstr ""
+
+msgid "Manual network setting"
+msgstr "Configurazione di rete manuale"
+
+msgid "Use DHCP"
+msgstr "Utilizzare DHCP"
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Sì"
+
+msgid "Hostname"
+msgstr "Nome Host"
+
+msgid "Domain"
+msgstr "Dominio"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Connection"
+msgstr "Connessione"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Progressive"
+msgstr "Progressivo"
+
+msgid "Interlaced"
+msgstr "Interlacciato"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "On"
+msgstr "On"
+
+msgid "Component"
+msgstr "Componente"
+
+msgid "Select a video mode for your screen"
+msgstr "Selezionare modalità video"
+
+msgid "TV connected by"
+msgstr "TV collegata attraverso"
+
+msgid "Display Type"
+msgstr "Tipo display"
+
+msgid "Digital Output"
+msgstr "Output digitale"
+
+msgid "Analog Output"
+msgstr "Output analogico"
+
+msgid "Analog Port"
+msgstr "Porta analogica"
+
+msgid "fill to screen"
+msgstr "Adattare allo schermo"
+
+msgid "fill to aspect"
+msgstr "Adattare all'aspetto"
+
+msgid "crop to fill"
+msgstr "Ritagliare per adattare"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Ctrl. Rapporto d'aspetto"
+
+msgid "Resolution"
+msgstr "Risoluzione"
+
+msgid "Norm/Framerate"
+msgstr "Norm/Framerate"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressivo/Interlacciato"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Expert"
+msgstr "Avanzato"
+
+msgid "Video Settings"
+msgstr ""
+
+msgid "Error: no menu got from reelice plugin"
+msgstr ""
+
+msgid "reelice plugin not found"
+msgstr ""
+
+msgid "Keep these settings?"
+msgstr "Mantenere questa configurazione?"
+
+msgid "Using old settings"
+msgstr "Utilizzare configurazione precedente"
+
+msgid "HDMI settings"
+msgstr "Configurazione HDMI"
+
+msgid "Mode"
+msgstr "Modalità"
+
+msgid "Output"
+msgstr "Output"
+
+msgid "Aspect"
+msgstr "Aspetto"
+
+msgid "Aspect ratio"
+msgstr "Rapporto d'aspetto"
+
+msgid "SCART settings"
+msgstr "Configurazione SCART"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr "E' necessario confermare le modifiche a modalità o output. Se il display non supportasse la nuova configurazione, attendere 20 secondi o premere Exit per annullare."
+
+msgid "samba not installed!"
+msgstr ""
+
+msgid "not set"
+msgstr ""
+
+msgid "Installation Wizard"
+msgstr "Wizard d'installazione"
+
+msgid "None"
+msgstr "Nessuno"
+
+msgid "TS"
+msgstr "TS"
+
+msgid "PES"
+msgstr "PES"
+
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Play"
+msgstr "Play"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Trick"
+msgstr "Astuzia"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Left"
+msgstr "Sinistro"
+
+msgid "Right"
+msgstr "Destro"
+
+msgid "Mpg2"
+msgstr "Mpg2"
+
+msgid "h264"
+msgstr "h264"
+
+msgid "jpeg"
+msgstr "jpeg"
+
+msgid "NTSC"
+msgstr "NTSC"
+
+msgid "Ntsc Jap"
+msgstr "Ntsc Jap"
+
+msgid "Ntsc 443"
+msgstr "Ntsc 443"
+
+msgid "Pal B IT"
+msgstr "Pal B IT"
+
+msgid "PAL"
+msgstr "PAL"
+
+msgid "Pal B Aus"
+msgstr "Pal B Aus"
+
+msgid "Pal B NZ"
+msgstr "Pal B NZ"
+
+msgid "Pal I"
+msgstr "Pal I"
+
+msgid "SECAM"
+msgstr "SECAM"
+
+msgid "Secam D"
+msgstr "Secam D"
+
+msgid "Pal D"
+msgstr "Pal D"
+
+msgid "Pal G"
+msgstr "Pal G"
+
+msgid "Pal H"
+msgstr "Pal H"
+
+msgid "Pal M"
+msgstr "Pal M"
+
+msgid "Pal 60"
+msgstr "Pal 60"
+
+msgid "Pal N"
+msgstr "Pal N"
+
+msgid "Pal NC"
+msgstr "Pal NC"
+
+msgid "Ntsc BT470"
+msgstr "Ntsc BT470"
+
+msgid "480p60"
+msgstr "480p60"
+
+msgid "576p50"
+msgstr "576p50"
+
+msgid "720p50"
+msgstr "720p50"
+
+msgid "720p59"
+msgstr "720p59"
+
+msgid "720p60"
+msgstr "720p60"
+
+msgid "1080i50"
+msgstr "1080i50"
+
+msgid "1080i59"
+msgstr "1080i59"
+
+msgid "1080i60"
+msgstr "1080i60"
+
+msgid "1080p23"
+msgstr "1080p23"
+
+msgid "1080p24"
+msgstr "1080p24"
+
+msgid "1080p25"
+msgstr "1080p25"
+
+msgid "1080p29"
+msgstr "1080p29"
+
+msgid "1080p30"
+msgstr "1080p30"
+
+msgid "Source"
+msgstr "Sorgente"
+
+msgid "1:1"
+msgstr "1:1"
+
+msgid "4:3"
+msgstr "4:3"
+
+msgid "14:9"
+msgstr "14:9"
+
+msgid "16:9"
+msgstr "16:9"
+
+msgid "20:9"
+msgstr "20:9"
+
+#, fuzzy
+msgid "Fill to Screen"
+msgstr "Adattare allo schermo"
+
+msgid "Crop to Fill"
+msgstr "Tagliare per adattare"
+
+msgid "Fill to Aspect"
+msgstr "Adattare all'aspetto"
+
+msgid "NL X"
+msgstr "NL X"
+
+msgid "NL Y"
+msgstr "NL Y"
+
+msgid "NL XY"
+msgstr "NL XY"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr "Tutti"
+
+msgid "CVBS"
+msgstr "CVBS"
+
+msgid "CVBS DLY"
+msgstr "CVBS DLY"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "YC"
+msgstr "YC"
+
+msgid "YPrPb"
+msgstr "YPrPb"
+
+msgid "Deblock"
+msgstr "Deblock"
+
+msgid "Deblock & dering"
+msgstr "Deblock & dering"
+
+#~ msgid "of"
+#~ msgstr "di"
+
+#~ msgid "Mpa"
+#~ msgstr "Mpa"
+
+#~ msgid "Mp3"
+#~ msgstr "Mp3"
+
+#~ msgid "Ac3"
+#~ msgstr "Ac3"
+
+#, fuzzy
+#~ msgid "Please wait!"
+#~ msgstr "Attendere..."
+
+#~ msgid "Storing settings. Please wait..."
+#~ msgstr "Salvataggio configurazione in corso, attendere..."
+
+#~ msgid "Ignore"
+#~ msgstr "Ignorare"
+
+#, fuzzy
+#~ msgid "Do you want to keep these settings?"
+#~ msgstr "Usare questa configurazione?"
+
+#~ msgid "Do you want to enable the Reel MultiRoom system?"
+#~ msgstr "Abilitare il sistema MultiRoom?"
+
+#~ msgid ""
+#~ "Disables the MultiRoom-System.\n"
+#~ "Please press 'OK' to store the setting."
+#~ msgstr ""
+#~ "Disabilita il systema MultiRoom.\n"
+#~ "OK -> Salvare la configurazione."
+
+#~ msgid "Enables the MultiRoom-System to connect the NetClient with your ReelBox Avantgarde in the network."
+#~ msgstr "Abilita il systema MultiRoom per connettere il NetClient al ReelBox Avantgarde sulla rete."
+
+#~ msgid "No ReelBox Avantgarde was found on the network!"
+#~ msgstr "Nessun ReelBox Avantgarde rilevato sulla rete!"
+
+#~ msgid "Please check the network settings or disable MultiRoom."
+#~ msgstr "Verificare la configurazione di rete o disabilitare MultiRoom."
+
+#~ msgid "If you want to format now, press the red key."
+#~ msgstr "Rosso -> Procedere con la formattazione."
+
+#~ msgid "Formatting harddisk. Please wait..."
+#~ msgstr "Formattazione in corso, attendere..."

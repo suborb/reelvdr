@@ -1,0 +1,239 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Istvan Koenigsberger <istvnko@hotmail.com>, 2002
+# Guido Josten <guido.josten@t-online.de>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-17 11:57+0200\n"
+"PO-Revision-Date: 2008-10-01 14:52+0200\n"
+"Last-Translator: Istvan Koenigsberger <istvnko@hotmail.com>, Guido Josten <guido.josten@t-online.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Jump: "
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Cannot play"
+msgstr ""
+
+msgid "file type"
+msgstr ""
+
+msgid "Waiting for server ..."
+msgstr ""
+
+msgid "Network read error"
+msgstr ""
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr ""
+
+msgid "Open Error"
+msgstr ""
+
+msgid "Only MPEG-1 format supported"
+msgstr ""
+
+msgid "Could not play file"
+msgstr ""
+
+msgid "VideoCodec not supported!"
+msgstr ""
+
+msgid "AudioCodec not supported!"
+msgstr ""
+
+msgid "Please wait, Loading..."
+msgstr ""
+
+msgid "Please check your network connection"
+msgstr ""
+
+msgid "Opening "
+msgstr ""
+
+msgid "Chapter"
+msgstr ""
+
+msgid "Unable to get default CD device"
+msgstr ""
+
+msgid "Unable open CD device"
+msgstr ""
+
+msgid "No tracks found in CD"
+msgstr ""
+
+msgid "No audio tracks found"
+msgstr ""
+
+msgid "Track"
+msgstr ""
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid ""
+"Media library playlist is empty.\n"
+"Please press RED key for selecting files."
+msgstr ""
+
+msgid "Replaymode: Normal"
+msgstr ""
+
+msgid "Replaymode: Repeat"
+msgstr ""
+
+msgid "Replaymode: Shuffle"
+msgstr ""
+
+msgid "Paused"
+msgstr ""
+
+msgid "Mute"
+msgstr ""
+
+msgid "Shuffle"
+msgstr ""
+
+msgid "Repeat"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Filelist"
+msgstr ""
+
+msgid "Functions"
+msgstr ""
+
+msgid "shoutcast"
+msgstr ""
+
+msgid "Add to favs"
+msgstr ""
+
+msgid "Exit mediaplayer?"
+msgstr ""
+
+msgid "Volume"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Repeat single"
+msgstr ""
+
+msgid "Delete selected item"
+msgstr ""
+
+msgid "Clear playlist"
+msgstr ""
+
+msgid "Save playlist"
+msgstr ""
+
+msgid "Save playlist as..."
+msgstr ""
+
+msgid "Burn playlist to CD..."
+msgstr ""
+
+msgid "Copy all playlist items to new folder..."
+msgstr ""
+
+msgid "Select a playlist..."
+msgstr ""
+
+msgid "Remember playlist"
+msgstr ""
+
+msgid "    start mediaplayer with previous playlist"
+msgstr ""
+
+msgid "    start mediaplayer with empty playlist"
+msgstr ""
+
+msgid "Mediaplayer Functions"
+msgstr ""
+
+msgid "Deleting playlist item..."
+msgstr ""
+
+msgid "Playlist item deleted"
+msgstr ""
+
+msgid "Deleting playlist item: failed"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Directory"
+msgstr ""
+
+msgid "Artist"
+msgstr ""
+
+msgid "Album"
+msgstr ""
+
+msgid "Genre"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Year"
+msgstr ""
+
+msgid "Length"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "Bitrate"
+msgstr ""
+
+msgid "Samplerate"
+msgstr ""
+
+msgid "ID3$Channels"
+msgstr ""
+
+msgid "Original"
+msgstr ""
+
+msgid "MPEG-Layer"
+msgstr ""
+
+msgid "Copyrighted"
+msgstr ""
+
+msgid "Protected"
+msgstr ""
+
+msgid "File size"
+msgstr ""
+
+msgid "Last Modified"
+msgstr ""
+
+msgid "Mediaplayer ID3 Info:"
+msgstr ""
+
+msgid "No Id3 info found!"
+msgstr ""

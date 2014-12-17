@@ -1,0 +1,33 @@
+Dies ist ein Plugin für den Video Disk Recorder (VDR).
+
+von:                  Dirk Leber <dirkleber@gmx.de>
+
+Projektseite:         -
+
+letzte Version erhältlich: -
+
+Bitte die Datei COPYING für Lizenzinformationen beachten.
+ 
+Beschreibung:
+Zeigt die EPG-Daten in Form einer Timeline an.
+Unterstützt wird zur Zeit nur der Reel-Skin. Ist dieser nicht ausgewäht, wird die Anzeige von tvonscreen verwendet, sofern das Plugin vorhanden ist.
+
+Bedienung:
+Folgende Tasteneingaben sind in der Timeline-Ansicht möglich:
+1,2,3,4,5,6	Bestimmt, wieviele Stunden angezeigt werden
+7,8,9				Bestimmt die Höhe der Einträge
+0						Wechselt zur aktuellen Sendung
+>						Wechselt zur Magazin-Ansicht
+Folgende Tasteneingaben sind in der Magazin-Ansicht möglich:
+1,2,3,4,5,6	Bestimmt die Anzahl der Sender
+7,8,9       Bestimmt, wieviele Stunden angezeigt werden
+0						Wechselt zur aktuellen Sendung
+>						Wechselt zur Timeline-Ansicht
+
+Kompilieren:
+
+
+Installation Reelbox:
+Plugin in das /opt/lib/vdr und Bilder in da /opt/lib/vdr/img Verzeichnis kopieren.
+Datei /etc/video/plugins.conf um den Eintrag "-Ptlepg " erweitern.
+

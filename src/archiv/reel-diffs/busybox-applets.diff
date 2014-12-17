@@ -1,0 +1,10 @@
+--- busybox-1.00/applets/applets.c.orig	2004-04-14 19:51:07.000000000 +0200
++++ busybox-1.00/applets/applets.c	2005-08-11 15:13:56.000000000 +0200
+@@ -45,6 +45,7 @@
+ #undef APPLET
+ #undef APPLET_NOUSAGE
+ #undef PROTOTYPES
++#include "config.h"
+ #include "applets.h"
+ 
+ 

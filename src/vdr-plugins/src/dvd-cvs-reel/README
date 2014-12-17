@@ -1,0 +1,143 @@
+This is the DVD plugin for the Video Disk Recorder (VDR).
+
++++
+
+Project's homepage:          
+	http://www.jausoft.com/Files/vdr/vdr-dvd/
+
+sf.net's CVS Archive:
+	http://sourceforge.net/projects/dvdplugin/
+
+Written by:                  
+
+	Andreas Schultz 		Original Author
+		http://www.cs.uni-magdeburg.de/~aschultz/dvd/
+		<aschultz@warp10.net> 
+
+	Sven Goethel    		New Maintainer
+		http://www.jausoft.com/Files/vdr/
+
+	Marco Schluessler
+		- cvs team
+
+	Miko Wohlgemuth
+		- cvs team
+
++++
+
+See the file COPYING for license information.
+
+Requirements:
+-------------
+
+vdr >= 1.3.25		http://cadsoft.de/vdr/, ftp://ftp.cadsoft.de/vdr/Developer/
+libdvdcss >= 20030724	http://www.videolan.org/libdvdcss/download.html
+libdvdnav >= 0.1.10	http://dvd.sf.net
+a52dec >= 0.7.4		http://liba52.sourceforge.net/
+
+The plugin has been tested with the following versions:
+
+libdvdcss:	20030724 (cvs)
+libdvdnav:	0.1.10
+liba52:		0.7.4
+
++++
+
+libdvdcss is optional, but required for playing CSS protected DVDs.
+The libraries should be installed into /usr/lib, e.g.:
+
+   # ./configure --prefix=/usr
+   # make
+   # make install
+
+But be aware to check your countries law, for example, nowadays
+it is prohibited in europe to workaround a _copy_protection_ - so just don't copy ;-)
+
+Accessing the DVD drive:
+------------------------
+
+The plugin uses libdvdcss to access CSS protected DVDs. Older version on
+the library worked best with DVDCSS_METHODE set. Newer versions no longer
+require.
+
+Note that the user id under which VDR runs needs to have write access to
+the DVD device in order to replay CSS protected DVDs.
+
+By default VDR expects the DVD drive to be located at /dev/dvd (which
+typically is a symbolic link to the actual device, for instance /dev/hdc).
+You can use the '-C' option to overwrite this, as in
+
+  vdr -P"dvd -C/media/dvd"
+
+Navigation in DVD mode:
+-----------------------
+
+The following navigation keys are available in DVD mode:
+
+Key            Function
+-------------------------------------------------------------
+Red            Goto position (enter time)
+Green          1 min. backward
+Yellow         1 min. forward
+Blue           Goto title (enter title number)
+
+Back           Stop Replay - Exit
+
+Ok             toggle progess display (this will mess up any subtitles)
+
+Up,   kPlay    playback
+Down, kPause   pauses playback
+
+Left/Right     rewind/forward (fast if play mode, slow if pause mode)
+kFastRew/kFastFwd
+
+Audio          select audio track
+
+2              skip to next     subtitle ( if "no subtitle" is reached, progress display on, 
+                                           if subtitle language code is prefixed with "forced-" 
+					   (eg. 'forced-en') only forced subs will be shown )
+3              skip to next     angle    (skip copyright notice)
+
+4              skip to previous chapter
+6              skip to next     chapter
+7, kChanDn     skip to previous title
+9, kChanUp     skip to next     title
+
+5              DvdNavigationForce ON / go to DVD Root menu (if progess display on)
+8              go to DVD Title menu
+0              go to DVD Audio menu      (only avaiable if progess display off)
+
+In DVD-Menu:
+2/8/4/6,5      DVD menu Up/Down/Left/Right, OK control's
+               Left/Right/Up/Down OK also work when in menuspace
+	       Red 	      Leave DvdNavigationForce
+	       Green          skip to previous title
+	       Yellow         skip to next     title
+	       Goto title (enter title number)
+	       
+Notes:
+=======
+
+if you use next/prev title, and you are e.g. jumping from title 3
+to title 13, then this is not a bug, but a feature of the author 
+of the current DVD !
+
+so you can use Goto title, to manually check a specific one ..
+this way enables you to look at "hidden" titles ;-)
+
+HowTo play DVD games ..
+------------------------
+
+Assume you have a typical DVD game, 
+so you need to enter/force DVD Navigation mode !
+
+	- Key 5  	DvdNavigationForce ON (not if progess display on)
+	- Key Red  	Leave DvdNavigationForce
+
+
+BUG:
+====
+if you have subtitles enabled by setup, or by key, the osd / progress display,
+may disappear, but believes it is still visible ..
+so just press OK one more time to make it hide for real.
+

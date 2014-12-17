@@ -1,0 +1,54 @@
+--- linux-2.6.11.11/include/linux/dvb/frontend.h	2005-05-27 07:06:46.000000000 +0200
++++ linux-2.6.11.11/include/linux/dvb/frontend.h.new	2007-05-15 16:44:18.000000000 +0200
+@@ -7,6 +7,8 @@
+  *                    Andre Draszik <ad@convergence.de>
+  *                    for convergence integrated media GmbH
+  *
++ * S2-backport compatibility for Reelbox by Georg Acher (acher at baycom.de)
++ * 
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU Lesser General Public License
+  * as published by the Free Software Foundation; either version 2.1
+@@ -33,9 +35,16 @@
+         FE_QPSK,
+         FE_QAM,
+ 	FE_OFDM,
+-	FE_ATSC
++	FE_ATSC,
++	FE_DVBS2	// S2, QPSK+8PSK
+ } fe_type_t;
+ 
++typedef enum fe_rolloff {
++	FE_ROLLOFF_35    = 0,
++        FE_ROLLOFF_25    = 1,
++        FE_ROLLOFF_20    = 2,
++        FE_ROLLOFF_UNKNOWN =3
++} fe_rollof_t;
+ 
+ typedef enum fe_caps {
+ 	FE_IS_STUPID                  = 0,
+@@ -147,7 +156,12 @@
+         FEC_6_7,
+         FEC_7_8,
+         FEC_8_9,
+-        FEC_AUTO
++        FEC_AUTO,
++        FEC_1_4,   // S2
++        FEC_1_3,   // S2
++        FEC_2_5,   // S2
++        FEC_3_5,   // S2
++        FEC_9_10   // S2
+ } fe_code_rate_t;
+ 
+ 
+@@ -160,7 +174,9 @@
+         QAM_256,
+ 	QAM_AUTO,
+ 	VSB_8,
+-	VSB_16
++	VSB_16,
++	QPSK_S2,  // S2
++	PSK8,    // S2
+ } fe_modulation_t;
+ 
+ typedef enum fe_transmit_mode {

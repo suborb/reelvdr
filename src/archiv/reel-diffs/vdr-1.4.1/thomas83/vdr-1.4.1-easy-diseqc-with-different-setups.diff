@@ -1,0 +1,2210 @@
+diff -ubw vdr-1.4.1/diseqc.c vdr-1.4.1-patch/diseqc.c
+--- vdr-1.4.1/diseqc.c	2006-08-15 12:05:51.307005096 +0200
++++ vdr-1.4.1-patch/diseqc.c	2006-08-15 12:06:17.465028472 +0200
+@@ -7,35 +7,137 @@
+  * $Id: diseqc.c 1.5 2005/12/30 15:41:48 kls Exp $
+  */
+ 
+-#include "diseqc.h"
+ #include <ctype.h>
++#include "tools.h"
++#include "diseqc.h"
+ #include "sources.h"
+ #include "thread.h"
++#include "config.h"
+ 
+ // -- cDiseqc ----------------------------------------------------------------
+ 
+ cDiseqc::cDiseqc(void)
+ {
++  tuner = 0;
++  satName = NULL;
+   commands = NULL;
++  source = 0;
+   parsing = false;
+   numCodes = 0;
++  lnbType = -1;
++}
++
++cDiseqc::cDiseqc(int Source)
++:source(Source)
++{
++  tuner = 0;
++  asprintf(&satName,"%s",*cSource::ToString(source));
++  commands = NULL;
++  parsing = false;
++  numCodes = 0;
++  lnbType = -1;
++}
++
++cDiseqc::cDiseqc(int Source , int LnbType)
++:source(Source),lnbType(LnbType)
++{
++  tuner = 0;
++  asprintf(&satName,"%s",*cSource::ToString(source));
++#if DEBUG_DISEQC
++  dsyslog (" new DiSEqC %s", *cSource::ToString(source));
++#endif
++  commands = NULL;
++  parsing = false;
++  numCodes = 0;
++  SetLof();
+ }
+ 
+ cDiseqc::~cDiseqc()
+ {
++  free(satName);
+   free(commands);
+ }
+ 
++void cDiseqc::SetLof()
++{
++#if DEBUG_DISEQC
++  dsyslog (" SetLof %d",lnbType);
++#endif
++  switch (lnbType)
++  {
++     case 0:
++           lofLo = 9750;
++           lofHi = 10600;
++           lofThreshold = 11700;
++           break;
++     case 1:
++           lofLo = 10750;
++           lofHi = 11250;
++           lofThreshold = 11700;
++           break;
++     case 2:
++           lofLo = 0;
++           lofHi = 5150;
++           lofThreshold = 0;
++           break;
++     case 3:
++           lofLo = 0;
++           lofHi = 9750;
++           lofThreshold = 0;
++           break;
++     case 4:
++           lofLo = 0;
++           lofHi = 106000;
++           lofThreshold = 0;
++           break;
++     case 5:
++           lofLo = 0;
++           lofHi = 11250;
++           lofThreshold = 0;
++           break;
++     case 6:
++           lofLo = 0;
++           lofHi = 11475;
++           lofThreshold = 0;
++           break;
++     default:
++           esyslog ("ERROR: Unknown DiSEqC Type");
++           lofLo = 9750;
++           lofHi = 10600;
++           lofThreshold = 11700;
++           break;
++     }
++}
++
+ bool cDiseqc::Parse(const char *s)
+ {
++
++#if DEBUG_DISEQC
++  dsyslog("PARSE \"%s\"  ",s);
++#endif
+   bool result = false;
+-  char *sourcebuf = NULL;
+-  int fields = sscanf(s, "%a[^ ] %d %c %d %a[^\n]", &sourcebuf, &slof, &polarization, &lof, &commands);
++  repeat = 0;
++
++  if (satName) {
++     free(satName);
++     satName = NULL;
++  }
++
++  if (strchr(s,'A') && strchr(s,'A') < strchr(s,'S'))
++    tuner = atoi(strchr(s,'A')+1);
++
++  int fields = sscanf(strchr(s,'S'), "%a[^ ] %d %c %d %a[^\n]", &satName, &lofThreshold, &polarization, &lof, &commands);
++#if DEBUG_DISEQC
++  printf(" Parse SatName %s-  lof %d  slof %d -\n", satName, lof, lofThreshold);
++#endif
+   if (fields == 4)
+      commands = NULL; //XXX Apparently sscanf() doesn't work correctly if the last %a argument results in an empty string
++  if (!strchr(commands,'W'))
++     Diseqcs.SetWaitMs(0, tuner);
++
+   if (4 <= fields && fields <= 5) {
+-     source = cSource::FromString(sourcebuf);
+-     if (Sources.Get(source)) {
++     source = cSource::FromString(satName);
++     if (Sources.Get(source) || source == cSource::stSat) {
+         polarization = toupper(polarization);
+         if (polarization == 'V' || polarization == 'H' || polarization == 'L' || polarization == 'R') {
+            parsing = true;
+@@ -49,9 +151,13 @@
+            esyslog("ERROR: unknown polarization '%c'", polarization);
+         }
+      else
+-        esyslog("ERROR: unknown source '%s'", sourcebuf);
++        esyslog("ERROR: unknown source '%s'", satName);
+      }
+-  free(sourcebuf);
++#if DEBUG_DISEQC
++  fprintf(stderr,"repeat %d\n",Diseqcs.RepeatCmd(tuner));
++  fprintf(stderr,"repeat %s\n",satName);
++#endif
++
+   return result;
+ }
+ 
+@@ -61,6 +167,7 @@
+   errno = 0;
+   int n = strtol(s, &p, 10);
+   if (!errno && p != s && n >= 0) {
++     Diseqcs.SetWaitMs(n, tuner);
+      if (!parsing)
+         cCondWait::SleepMs(n);
+      return p;
+@@ -115,22 +222,570 @@
+           case 'A': return daMiniA;
+           case 'B': return daMiniB;
+           case 'W': *CurrentAction = Wait(*CurrentAction); break;
+-          case '[': *CurrentAction = Codes(*CurrentAction); return *CurrentAction ? daCodes : daNone;
++          case '[': *CurrentAction = Codes(*CurrentAction);
++          if (parsing)
++              repeat++;
++          return *CurrentAction ? daCodes : daNone;
+           default: return daNone;
+           }
+         }
+   return daNone;
+ }
+ 
++cString cDiseqc::ToText(const cDiseqc *Diseqc)
++{
++/* Syntax:     single LNB        | mini | all            full                 mini         mini
++ *   | S19.2E  | 11700 |  V  | 9750 |   t  |   v  | W15  | [E0 10 38 F0] | W15  |   A   |  W15  | t
++ *   | SatCode | SLOF  | POL | LOF  | tone | volt | Wait |  diseqc code  | Wait | MinAB |  Wait | tone
++ *   |
++ * 1.|   --    |  low  |  V  |  low |  x   |  13  |  x   | [E0 10 38 x ]  | x    |   x   | t
++ * 2.|   --    |   hi  |  V  |  hi  |  x   |  13  |  x   | [E0 10 38 x+1] | x    |   x   | T
++ * 3.|   --    |  low  |  H  |  low |  x   |  18  |  x   | [E0 10 38 x+2] | x    |   x   | t
++ * 3.|   --    |   hi  |  H  |  hi  |  x   |  18  |  x   | [E0 10 38 x+3] | x    |   x   | T
++ */
++
++   char *s, fullString[255];
++   s = fullString;
++
++   //dsyslog( " ToText SatName : %s /%s  Source : %d ", Diseqc->SatName(),Diseqc->SatName(), Diseqc->Source() );
++
++   char Atuner[6] = "";
++   if (Diseqc->Tuner())
++     snprintf(Atuner,6,"A%d ",Diseqc->Tuner());
++
++   s += sprintf(s,"%s%s  %5d ", Atuner, Diseqc->SatName(), Diseqc->Slof());
++   s += sprintf(s,"%c  %5d ", Diseqc->polarization,Diseqc->Lof());
++   s += sprintf(s,"%s",Diseqc->Commands());
++   s += sprintf(s,"\n");
++   *s = 0;
++
++   return cString(fullString,false);
++}
++
++bool cDiseqc::SetFullDiseqCommands(int Line)
++{
++/*
++# S19.2E  11700 V  9750 t v [E0 10 38 F0] t    lnb 0 +line 0
++# S19.2E  99999 V 10600 t v [E0 10 38 F1] T X  lnb 0 +line 1
++# S19.2E  11700 H  9750 t V [E0 10 38 F2] t    lnb 0 +line 2
++# S19.2E  99999 H 10600 t V [E0 10 38 F3] T X  lnb 0 +line 3  || if lofHi == 0   lnb 0 + 1  F1
++#
++# S21.5E  11700 V  9750 t v [E0 10 38 F4]     lnb1 *4  +line 0
++# S21.5E  99999 V 10600 t v [E0 10 38 F5]  X  lnb1 *4  +line 1
++# S21.5E  11700 H  9750 t V [E0 10 38 F6]     lnb1 *4  +line 2
++# S21.5E  99999 H 10600 t V [E0 10 38 F7]  X  lnb1 *4  *line 3  || lofHi == 0 lnb 1 *4 +1
++
++# S28.3E  11700 V  9750 t [E0 10 38 F8]     lnb2 *4 + line 0
++# S28.3E  99999 V 10600 t [E0 10 38 F9]  X
++# S28.3E  11700 H  9750 t [E0 10 38 FA]
++# S28.3E  99999 H 10600 t [E0 10 38 FB]  X
++
++
++# EchoStar 7 - 119W - Port 1
++S119.0W 99999 V 11250 t v W15 [E0 10 38 F1]
++S119.0W 99999 H 11250 t V W15 [E0 10 38 F1]
++
++# EchoStar 6/8 - 110W - Port 2
++S110.0W 99999 V 11250 t v W15 [E0 10 38 F5]
++S110.0W 99999 H 11250 t V W15 [E0 10 38 F5]
++
++# Nimiq 1 - 91W - Port 3
++S91.0W 99999 V 11250 t v W15 [E0 10 38 F9]
++S91.0W 99999 H 11250 t V W15 [E0 10 38 F9]
++
++*/
++
++#if DEBUG_DISEQC
++  dsyslog (" SetFullDiseqCommands line %d LnbNum %d",Line, Diseqcs.LnbCount());
++#endif
++
++  int line  = Line;
++
++  char waitStr[6];
++  if (Diseqcs.WaitMs(tuner) != 0)
++    snprintf(waitStr,5,  "W%d  ", Diseqcs.WaitMs(tuner));
++  else
++    strcpy(waitStr,"");
++
++
++  int lnbNr = Diseqcs.LnbCount(tuner) -1;
++
++  #define COMMANDS_MAX_LENGTH 200
++
++  char buffer[COMMANDS_MAX_LENGTH];
++  char buf[COMMANDS_MAX_LENGTH/4];
++  char Atuner[6] = "";
++  if (tuner)
++     snprintf(Atuner,6,"A%d ",tuner);
++  switch (Line) {
++     case 0:
++           if (lofLo == 0) {
++#if DEBUG_DISEQC
++              dsyslog (" Single frequence band LNB ");
++#endif
++              return false;
++           }
++           snprintf(buffer,100, "%s%s  %d V  %d  t v %s[E0 10 38 F%X]", Atuner, satName, lofThreshold, lofLo, waitStr, lnbNr*4+line);
++           for (int i =0; i< Diseqcs.RepeatCmd(tuner); i++) {
++               snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s[E1 10 38 F%X]", waitStr, lnbNr*4+line);
++               strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++               }
++
++           snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s t", waitStr);
++           strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++
++           Parse(buffer);
++           return true;
++
++     case 1:
++           snprintf(buffer,100, "%s%s  99999 V  %d t v %s[E0 10 38 F%X]",Atuner, satName, lofHi, waitStr, lnbNr*4+line);
++           for (int i =0; i< Diseqcs.RepeatCmd(tuner); i++) {
++               snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s[E1 10 38 F%X]", waitStr, lnbNr*4+line);
++               strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++             }
++           snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s T", waitStr);
++           strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++
++           Parse(buffer);
++           return true;
++
++     case 2:
++           if (lofLo == 0) return false;
++           snprintf(buffer,100, "%s%s  %d H  %d  t V %s[E0 10 38 F%X]",Atuner, satName, lofThreshold, lofLo, waitStr, lnbNr*4+line);
++           for (int i =0; i< Diseqcs.RepeatCmd(tuner); i++) {
++               snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s[E1 10 38 F%X]", waitStr, lnbNr*4+line);
++               strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++              }
++           snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s t", waitStr);
++           strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++
++           Parse(buffer);
++           return true;
++
++     case 3:
++           snprintf(buffer,100, "%s%s  99999 H  %d  t V %s[E0 10 38 F%X]",Atuner, satName, lofHi, waitStr, lnbNr*4+line);
++           for (int i =0; i< Diseqcs.RepeatCmd(tuner); i++) {
++               snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s[E1 10 38 F%X]", waitStr, lnbNr*4+line);
++               strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++              }
++           snprintf(buf, COMMANDS_MAX_LENGTH/4, " %s T", waitStr);
++           strncat(buffer, buf, COMMANDS_MAX_LENGTH - strlen(buffer) - 1);
++
++           Parse(buffer);
++           return true;
++     default:
++           esyslog ("ERROR: check  DiSEqC  handling");
++    }
++    return false;
++
++}
++
++bool cDiseqc::SetDisiCon4Commands(int Line)
++{
++/*
++  Only DisiCon
++# S19.2E  99999 H 10560 t v
++# S19.2E  12110 V 11080 t v
++# S19.2E  99999 V 10720 t v
++* */
++
++#if DEBUG_DISEQC
++  dsyslog ("SetDisiCon4Commands Line %d", Line);
++#endif
++  char buffer[100];
++  char Atuner[6] = "";
++  if (tuner)
++    snprintf(Atuner,6,"A%d ",tuner);
++  switch (Line) {
++    case 0:
++           snprintf(buffer,100,"%s%s 99999 H 10560 t v",Atuner,satName);
++           Parse(buffer);
++           break;
++    case 1:
++           snprintf(buffer,100,"%s%s 12110 V 11080 t v",Atuner,satName);
++           Parse(buffer);
++           break;
++    case 2:
++           snprintf(buffer,100,"%s%s 99999 V 10720 t v",Atuner,satName);
++           Parse(buffer);
++           break;
++    default:
++           esyslog ("ERROR: check  DiSEqC  handling");
++    }
++  return true;
++}
++
++bool cDiseqc::SetMiniDiseqCommands(int Line)
++{
++
++/*
++  Mini Diseq
++S19.2E  11700 V  9750  t v W15 A W15 t
++S19.2E  99999 V 10600  t v W15 A W15 T
++S19.2E  11700 H  9750  t V W15 A W15 t
++S19.2E  99999 H 10600  t V W15 A W15 T
++
++S119.0W 99999 V 11250  t v W15 B W15 T
++S119.0W 99999 H 11250  t V W15 B W15 T
++
++# EchoStar 7 - 119W - Port 1
++S119.0W 99999 V 11250 t v W15 A W15 T
++S119.0W 99999 H 11250 t V W15 A W15 T
++*/
++#if DEBUG_DISEQC
++  dsyslog ("SetMiniCommands Line %d LNB: %d, Count %d ", Line, Diseqcs.LnbCount(), Diseqcs.Count());
++#endif
++
++  /*
++  char satName[10];
++  snprintf("%s",10, *cSource::ToString(source));
++  */
++
++
++  char AB = Diseqcs.LnbCount(tuner)==1 ?'A':'B';
++  int wait = Diseqcs.WaitMs(tuner)?Diseqcs.WaitMs(tuner):15; // XXX
++  dsyslog ("SetMiniCommands SatName  %s  wait W%d Line %d  lofHi %d ",satName , wait, Line, lofHi);
++
++  char buffer[100];
++  char Atuner[6] = "";
++  if (tuner)
++    snprintf(Atuner,6,"A%d ",tuner);
++  switch (Line) {
++    case 0:
++           if (lofLo == 0) return false;
++           snprintf(buffer,100,"%s%s  %d V  %d  t v W%d %c W%d t", Atuner, satName, lofThreshold, lofLo,wait,AB,wait);
++           Parse(buffer);
++           return true;
++    case 1:
++           snprintf(buffer,100,"%s%s  99999 V  %d  t v W%d %c W%d T", Atuner,  satName, lofHi, wait, AB, wait);
++           Parse(buffer);
++           return true;
++    case 2:
++           if (lofLo == 0) return false;
++           snprintf(buffer,100,"%s%s  %d H  %d  t V W%d %c W%d t", Atuner, satName, lofThreshold, lofLo, wait, AB,  wait);
++           Parse(buffer);
++           return true;
++    case 3:
++           snprintf(buffer,100,"%s%s  99999 H  %d  t V W%d %c W%d T", Atuner, satName, lofHi, wait, AB, wait);
++           Parse(buffer);
++           return true;
++    default:
++           esyslog ("ERROR: check  DiSEqC  handling");
++           return false;
++    }
++   return false;
++}
++
++bool cDiseqc::SetNoDiseqcCommands(int Line)
++{
++/*
++  Only LNB settings
++# S19.2E  11700 V  9750 t v
++# S19.2E  99999 V 10600 T v
++# S19.2E  12110 H  9750 t V
++# S19.2E  99999 H 10600 T V
++* */
++
++  char buffer[100];
++  char Atuner[6] = "";
++  if (tuner)
++    snprintf(Atuner,6,"A%d ",tuner);
++  switch (Line) {
++    case 0:
++           snprintf(buffer,100,"%s%s %d V %d t v",Atuner,satName,lofThreshold, lofLo);
++           Parse(buffer);
++           break;
++    case 1:
++           snprintf(buffer,100,"%s%s 99999 V %d T v",Atuner,satName, lofHi);
++           Parse(buffer);
++           break;
++    case 2:
++           snprintf(buffer,100,"%s%s %d H %d t V",Atuner,satName, lofThreshold,lofLo);
++           Parse(buffer);
++           break;
++    case 3:
++           snprintf(buffer,100,"%s%s 99999 H %d T V",Atuner,satName, lofHi);
++           Parse(buffer);
++           break;
++    default:
++           esyslog ("ERROR: check  DiSEqC  handling");
++    }
++  return true;
++}
++
++
++cString cDiseqc::ToText(void)
++{
++   return ToText(this);
++}
++
++bool cDiseqc::Save(FILE *f)
++{
++   dsyslog ("Save(FILE): %s ", *ToText());
++   return fprintf(f, "%s", *ToText()) > 0;
++
++} 
++
+ // -- cDiseqcs ---------------------------------------------------------------
+ 
+ cDiseqcs Diseqcs;
+ 
+-cDiseqc *cDiseqcs::Get(int Source, int Frequency, char Polarization)
++cDiseqcs::cDiseqcs()
++{
++   for (int i=0; i<=MAXTUNERS; i++) {
++      waitMs[i] = 0;
++      repeatCmd[i] = 0;
++      lnbCount[i] = 0;
++      }
++}
++
++cDiseqc *cDiseqcs::Get(int Source, int Frequency, char Polarization, int Tuner)
+ {
+   for (cDiseqc *p = First(); p; p = Next(p)) {
+-      if (p->Source() == Source && p->Slof() > Frequency && p->Polarization() == toupper(Polarization))
++      if (p->Source() == Source && p->Slof() > Frequency && p->Polarization() == toupper(Polarization) && (!Tuner || !p->Tuner() || p->Tuner() == Tuner))
+         return p;
+       }
+   return NULL;
+ }
++
++bool cDiseqcs::ProvidesSource(int Source, int Tuner)
++{
++  for (cDiseqc *p = First(); p; p = Next(p)) {
++      if (p->Source() == Source && (p->Tuner() == Tuner || !p->Tuner()))
++        return p;
++      }
++  return false;
++}
++
++bool cDiseqcs::Load(const char *FileName, bool AllowComments, bool MustExist)
++{
++  for (int i=0; i<=MAXTUNERS; i++) 
++      lnbCount[i] = 0;
++  if (cConfig<cDiseqc>::Load(FileName, AllowComments, MustExist)) {
++    ConfigureLNBs();
++   //dsyslog (" DEBUG vdr-diseqc: LOAD...  lnbs %d  fertig", Diseqcs.LnbCount());
++    return true;
++   }
++  else {
++          esyslog ("No diseqc.conf, disabling Diseqc!");
++          ::Setup.DiSEqC=0;
++  }
++  return true;
++}
++
++void cDiseqcs::ConfigureLNBs()
++{
++#if DEBUG_DISEQC
++   dsyslog (" DEBUG vdr-diseqc:  ConfigureLNBs");
++   dsyslog (" Diseqcs.Count %d, Diseqcs.First %s", Diseqcs.Count(), Diseqcs.First()?"yes":"no");
++#endif
++
++   if (Diseqcs.First()==NULL) {
++           esyslog ("No entries in diseqc.conf, disabling Diseqc!");
++           ::Setup.DiSEqC=0;
++           return;
++   }
++   if (Diseqcs.First()->LnbType() == -1)
++   {
++       for(cDiseqc *diseqc = Diseqcs.First(); diseqc; diseqc=Diseqcs.Next(diseqc))
++       {
++          if (diseqc != Diseqcs.First() && diseqc->Source() == Diseqcs.Prev(diseqc)->Source() && diseqc->Tuner() == Diseqcs.Prev(diseqc)->Tuner()) {
++             diseqc->SetLnbType(GetLnbType(diseqc->Lof(), Diseqcs.Prev(diseqc)->Lof()));
++             continue;
++          }
++          else
++          {
++            lnbCount[diseqc->Tuner()]++;
++          }
++      }
++   }
++   for(cDiseqc *diseqc = Diseqcs.First(); diseqc; diseqc=Diseqcs.Next(diseqc))
++   {
++      if (diseqc->LnbType() == -1)
++      {
++          //dsyslog (" if Diseqcs.Next(diseqc) ");
++          if (Diseqcs.Next(diseqc))
++            diseqc->SetLnbType(Diseqcs.Next(diseqc)->LnbType());
++      }
++   }
++
++#if DEBUG_DISEQC
++  dsyslog (" DEBUG vdr-diseqc: print all diseqcs  ");
++  int i = 0;
++  for(cDiseqc *diseqc = Diseqcs.First(); diseqc; diseqc=Diseqcs.Next(diseqc))
++  {
++     dsyslog (" DEBUG  Conf LNBs diseqc[%d]: name:%s type %d lof %d  Slof %d ",i, diseqc->SatName(), diseqc->LnbType(),
++                                                  diseqc->Lof(), diseqc->Slof());
++     i++;
++  }
++#endif
++
++}
++
++void cDiseqcs::Clear()
++{
++  //dsyslog (" cDiseqcs::NewLnb lnbCount = 0");
++  for (int i=0; i<=MAXTUNERS; i++)
++     lnbCount[i]=0;
++  while (Diseqcs.Count()) {
++     cDiseqc *p = Diseqcs.First();
++     Diseqcs.Del(p);
++     }
++}
++
++void cDiseqcs::NewLnb(int DiseqcType, int Source, int LnbType, int Tuner)
++{
++
++  lnbCount[Tuner]++;
++  //dsyslog (" cDiseqcs::NewLnb lnbCount++ %d", lnbCount[Tuner]);
++  if ((Source & cSource::st_Mask) != cSource::stSat)
++     Source = cSource::stSat;
++  switch (DiseqcType) {
++    case DISICON4: {
++         //dsyslog ("DISICON-4");
++         for (int line = 0; line<3; line++) {
++            cDiseqc *d = new cDiseqc(Source);
++            d->SetTuner(Tuner);
++            d->SetDisiCon4Commands(line);
++            Diseqcs.Add(d);
++           }
++         }
++         break;
++      case MINI:  {
++           //dsyslog ("MINI DiSEqC   LnbType %d:", LnbType);
++           for (int line=0;line<4;line++) {
++              cDiseqc *d = new cDiseqc(Source,LnbType);
++              d->SetTuner(Tuner);
++              if(d->SetMiniDiseqCommands(line))
++                Diseqcs.Add(d);
++              else
++                delete d;
++            }
++           }
++           break;
++      case FULL:  {
++           //dsyslog ("FULL DiSEqC");
++           for (int line=0;line<4;line++) {
++              cDiseqc *d = new cDiseqc(Source,LnbType);
++              d->SetTuner(Tuner);
++              if(d->SetFullDiseqCommands(line))
++                Diseqcs.Add(d);
++              else
++                delete d;
++            }
++           }
++           break;
++      case NONE:   {
++           if (Tuner) {
++              for (int line=0;line<4;line++) {
++                 cDiseqc *d = new cDiseqc(Source,LnbType);
++                 d->SetTuner(Tuner);
++                 d->SetNoDiseqcCommands(line);
++                 Diseqcs.Add(d);
++                 }
++              }
++           }
++           break;
++     default:
++          ; //XXX
++
++     }
++}
++
++void cDiseqcs::SetLnbType(int LofStat)
++{
++  // Add SLOF
++  switch (LofStat)
++  {
++     case 0:
++           ::Setup.LnbFrequLo = 9750;
++           ::Setup.LnbFrequHi = 10600;
++           break;
++     case 1:
++           ::Setup.LnbFrequLo = 10750;
++           ::Setup.LnbFrequHi = 11250;
++           break;
++     case 2:
++           ::Setup.LnbFrequLo = 0;
++           ::Setup.LnbFrequHi = 5150 ;
++           break;
++     case 3:
++           ::Setup.LnbFrequLo = 0;
++           ::Setup.LnbFrequHi = 9750;
++           break;
++     case 4:
++           ::Setup.LnbFrequLo = 0;
++           ::Setup.LnbFrequHi = 10600;
++           break;
++     case 5:
++           ::Setup.LnbFrequLo = 0;
++           ::Setup.LnbFrequHi = 11250;
++           break;
++     case 6:
++           ::Setup.LnbFrequLo = 0;
++           ::Setup.LnbFrequHi = 11475;
++           break;
++     default:
++           esyslog ("ERROR: Unknown DiSEqC Type");
++           ::Setup.LnbFrequLo = 9750;
++           ::Setup.LnbFrequHi = 10600;
++           break;
++     }
++}
++
++int cDiseqcs::GetLnbType(int Freq1, int Freq2)
++{
++
++  int FrequLo = 0;
++  int FrequHi = 0;
++
++  if (Freq1<Freq2)
++  {
++     FrequLo = Freq1;
++     FrequHi = Freq2;
++  }
++  else
++  {
++     FrequHi = Freq1;
++     FrequLo = Freq2;
++  }
++
++  switch (FrequLo) {
++    case 9750:
++         if (FrequHi == 10600)
++             return 0;
++         else
++             return 3;
++    case 10750:
++               return 1;
++    case 5150:
++              return 2;
++    case  10600:
++              return 4;
++    case  11250:
++              return 5;
++    case  11475:
++              return 6;
++    case 10560:
++    case 11080:
++              return 7; 
++    default:
++              esyslog (" error in \"diseqc.conf\". Please check configurations");
++              return 0;
++   }
++   return 0;
++}
++
++bool cDiseqcs::IsUnique(int *Src, int Lnbs)
++{
++   for(int i = 0; i<Lnbs*4; i+=4){
++      int k = i+4;
++      while (k<Lnbs*4){
++          if (Src[i] == Src[k]){
++             return false;
++          }
++          k+=4;
++      }
++   }
++   return true;
++}
+diff -ubw vdr-1.4.1/diseqc.h vdr-1.4.1-patch/diseqc.h
+--- vdr-1.4.1/diseqc.h	2006-08-15 12:05:51.395991568 +0200
++++ vdr-1.4.1-patch/diseqc.h	2006-08-15 12:06:17.469027864 +0200
+@@ -10,7 +10,32 @@
+ #ifndef __DISEQC_H
+ #define __DISEQC_H
+ 
++#define  NONE 0
++#define  MINI 1
++#define  FULL 2
++#define  DISICON4 3
++#define  DISEQC12 0x10
++#define  GOTOX 0x20
++#define  ROTORLNB 0x40
++#define  ROTORMASK 0x70
++#define  SWITCHMASK 0x0F
++#define  TUNERMASK 0x7F
++#define  TUNERBITS 7
++#define  DIFFSETUPS 0x10000000 
++
++#define DISEQCMOD_NONE 0
++#define DISEQCMOD_FILE 1
++#define DISEQCMOD_USER 2
++
++#define DISEQCSMOD_NONE 0
++
++#define MINLNBS 1
++#define MAXLNBS 4
++#define MAXTUNERS 4
++
+ #include "config.h"
++#include "sources.h"
++
+ 
+ class cDiseqc : public cListObject {
+ public:
+@@ -26,19 +51,38 @@
+     };
+   enum { MaxDiseqcCodes = 6 };
+ private:
++  //cDiseqc(const cDiseqc &diseqc);
++  static cString ToText(const cDiseqc *Diseqc);
++  enum ID {A=65, B, C, D, E, F, G, H} lnbID;
++  int tuner;
+   int source;
+-  int slof;
++  int lnbType;
++  char *satName;
+   char polarization;
+   int lof;
++  int lofThreshold;
++  int lofLo;
++  int lofHi;
++
+   char *commands;
+   bool parsing;
++  cString ToText(const cDiseqc diseqc);
+   uchar codes[MaxDiseqcCodes];
+   int numCodes;
+   char *Wait(char *s);
+   char *Codes(char *s);
++  void SetLof(void);
++  ///< Set Lof values if diseqc objects saved by cMenuSetupLNB
++  int repeat;
+ public:
+   cDiseqc(void);
++  cDiseqc(int Source);
++  cDiseqc(int Source, int LnbType);
++  ///< this diseqc constr is used by NewLnb
+   ~cDiseqc();
++  cDiseqc &operator=(const cDiseqc &diseqc);
++  cString ToText(void);
++  bool Save(FILE *f);
+   bool Parse(const char *s);
+   eDiseqcActions Execute(char **CurrentAction);
+       // Parses the DiSEqC commands and returns the appropriate action code
+@@ -48,17 +92,64 @@
+       // it. Call Execute() repeatedly (always providing the same CurrentAction pointer)
+       // until it returns daNone. After a successful execution of all commands
+       // *CurrentAction points to the value 0x00.
++  const char *SatName(void) const { return  satName; } //*cSource::ToString(source); }
++  int NumCodes(void) const { return numCodes; }
++ 
++  void SetLnbType(int LnbType) { lnbType = LnbType; }
++  void SetTuner(int Tuner) { tuner = Tuner; }
++  int LnbType(void) const { return lnbType; }
++
++  int Tuner(void) const { return tuner; }
+   int Source(void) const { return source; }
+-  int Slof(void) const { return slof; }
+-  char Polarization(void) const { return polarization; }
+   int Lof(void) const { return lof; }
++  int Slof(void) const { return lofThreshold; }
++    // HiLof or LoLof depends on  sequence
++
++  char Polarization(void) const { return polarization; }
+   const char *Commands(void) const { return commands; }
++
+   uchar *Codes(int &NumCodes) { NumCodes = numCodes; return numCodes ? codes : NULL; }
++
++  bool SetMiniDiseqCommands(int Sequence);
++  bool SetFullDiseqCommands(int Sequence);
++  bool SetDisiCon4Commands(int Sequence);
++  bool SetNoDiseqcCommands(int Sequence);
++
+   };
+ 
++// --- cDiseqcs -----------------------------------------------
+ class cDiseqcs : public cConfig<cDiseqc> {
++
++private:
++  int waitMs[MAXTUNERS+1];
++  int repeatCmd[MAXTUNERS+1];
++  int lnbCount[MAXTUNERS+1];
++  void ConfigureLNBs();
++
+ public:
+-  cDiseqc *Get(int Source, int Frequency, char Polarization);
++  cDiseqcs();
++  void Clear();
++  bool Load(const char *FileName, bool AllowComments = false, bool MustExist = false);
++  void NewLnb(int DiseqcType, int Source=0, int lnbType=0, int Tuner = 0);
++
++  void SetLnbType(int LofStat);
++  ///< Set Global LnbType in setup.conf
++
++  static int GetLnbType(int HiFreq, int LoFreq);
++  ///<increment Lnb counter  
++  void LnbInc(int Tuner = 0) { lnbCount[Tuner]++; } // private
++  int LnbCount(int Tuner = 0) { return lnbCount[Tuner]; }
++
++  cDiseqc *Get(int Source, int Frequency, char Polarization, int Tuner=0); // XX
++
++  bool ProvidesSource(int Source, int Tuner);
++
++  int WaitMs(int Tuner = 0) const { return waitMs[Tuner]; }
++  void SetWaitMs(int ms, int Tuner = 0) { waitMs[Tuner] = ms; }
++  int RepeatCmd(int Tuner = 0) const { return repeatCmd[Tuner]; }
++  void SetRepeatCmd(int rep, int Tuner = 0) { repeatCmd[Tuner] = rep; }
++
++  bool IsUnique(int *src, int lnbs);
+   };
+ 
+ extern cDiseqcs Diseqcs;
+diff -ubw vdr-1.4.1/dvbdevice.c vdr-1.4.1-patch/dvbdevice.c
+--- vdr-1.4.1/dvbdevice.c	2006-08-15 12:05:51.455982448 +0200
++++ vdr-1.4.1-patch/dvbdevice.c	2006-08-15 12:06:17.475026952 +0200
+@@ -22,6 +22,7 @@
+ #include "dvbosd.h"
+ #include "eitscan.h"
+ #include "player.h"
++#include "plugin.h"
+ #include "receiver.h"
+ #include "status.h"
+ #include "transfer.h"
+@@ -206,7 +207,9 @@
+          unsigned int frequency = channel.Frequency();
+ 
+          if (Setup.DiSEqC) {
+-            cDiseqc *diseqc = Diseqcs.Get(channel.Source(), channel.Frequency(), channel.Polarization());
++            cDiseqc *diseqc = Diseqcs.Get(channel.Source(), channel.Frequency(), channel.Polarization(), cardIndex+1); 
++            if (!diseqc)
++               diseqc = Diseqcs.Get(cSource::stSat, channel.Frequency(), channel.Polarization(), cardIndex+1); // default diseqc settings
+             if (diseqc) {
+                if (diseqc->Commands() && (!diseqcCommands || strcmp(diseqcCommands, diseqc->Commands()) != 0)) {
+                   cDiseqc::eDiseqcActions da;
+@@ -807,6 +810,10 @@
+ bool cDvbDevice::ProvidesSource(int Source) const
+ {
+   int type = Source & cSource::st_Mask;
++ 
++  if (Setup.DiSEqC && type == cSource::stSat && frontendType == FE_QPSK && Source != cSource::stSat) 
++    return (Diseqcs.ProvidesSource(Source, CardIndex()+1) || cPluginManager::ProvidesSource(Source, CardIndex()+1));
++
+   return type == cSource::stNone
+       || type == cSource::stCable && frontendType == FE_QAM
+       || type == cSource::stSat   && frontendType == FE_QPSK
+@@ -815,7 +822,7 @@
+ 
+ bool cDvbDevice::ProvidesTransponder(const cChannel *Channel) const
+ {
+-  return ProvidesSource(Channel->Source()) && (!cSource::IsSat(Channel->Source()) || !Setup.DiSEqC || Diseqcs.Get(Channel->Source(), Channel->Frequency(), Channel->Polarization()));
++  return ProvidesSource(Channel->Source()) && (!cSource::IsSat(Channel->Source()) || !Setup.DiSEqC || Diseqcs.Get(Channel->Source(), Channel->Frequency(), Channel->Polarization(), CardIndex()+1));  
+ }
+ 
+ bool cDvbDevice::ProvidesChannel(const cChannel *Channel, int Priority, bool *NeedsDetachReceivers) const
+diff -ubw vdr-1.4.1/i18n.c vdr-1.4.1-patch/i18n.c
+--- vdr-1.4.1/i18n.c	2006-08-15 12:05:50.887068936 +0200
++++ vdr-1.4.1-patch/i18n.c	2006-08-15 12:06:17.494024064 +0200
+@@ -4195,6 +4195,402 @@
+     "Anvend DiSEqC",
+     "Pou¾ívat DiSEqC",
+   },
++  { "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++    "LNB / DiSEqC",
++  },
++  { "Different Setups",
++    "Tuner unterschiedlich",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },  
++  { "Tuner",
++    "Tuner",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Satellite",
++    "Satellit",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "DiSEqC Type",
++    "DiSEqC Typ",
++    "",
++    "Tipo di DiSEqC",
++    "DiSEqC Type",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "DiSEqC disabled",
++    "kein DiSEqC",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "None / Single LNB",
++    "Kein / einfach LNB",
++    "",
++    "Nessuno / LNB Singolo",
++    "Geen / enkele LNB",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "LNB Type",
++    "LNB Typ",
++    "",
++    "Tipo di LNB",
++    "LNB Type",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Number of LNBs",
++    "Anzahl der LNBs",
++    "",
++    "Numero di LNB",
++    "Antal LNB's",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Rotor - shared LNB",
++    "Rotor - mitbenutztes LNB",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Rotor on Tuner",
++    "Rotor an Tuner",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Rotor Settings",
++    "Rotor Einstellungen",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },  
++  { "Expert",
++    "Experten",
++    "",
++    "Esperto",
++    "Expert",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Normal",
++    "Normal",
++    "",
++    "Normale",
++    "Normaal",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Delay (ms)",
++    "Verzögerung (ms)",
++    "",
++    "Ritardo (ms)",
++    "Vertraging (ms)",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Repeat",
++    "Wiederholungen",
++    "",
++    "Ripetere",
++    "Herhalen",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Overwrite DiSEqC.conf?",
++    "DiSEqC Conf. Überschreiben?",
++    "",
++    "Sovrascrivere la configurazione DiSEqC?",
++    "DiSEqC conf. overschrijven?",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
++  { "Sat positions must be unique!",
++    "Keine doppelten Sat Positionen!",
++    "",
++    "La posizione dei satelliti deve essere univoca!",
++    "Satpositie moet uniek zijn!",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "",
++    "" // CZ
++  },
+   { "Setup.CICAM$CICAM DVB",
+     "CICAM-DVB",
+     "CICAM DVB",
+Nur in vdr-1.4.1-patch: i18n.c.orig.
+Gemeinsame Unterverzeichnisse: vdr-1.4.1/libsi und vdr-1.4.1-patch/libsi.
+diff -ubw vdr-1.4.1/menu.c vdr-1.4.1-patch/menu.c
+--- vdr-1.4.1/menu.c	2006-08-15 12:05:50.854073952 +0200
++++ vdr-1.4.1-patch/menu.c	2006-08-15 12:18:32.650263328 +0200
+@@ -28,6 +28,7 @@
+ #include "timers.h"
+ #include "transfer.h"
+ #include "videodir.h"
++#include "diseqc.h"
+ 
+ #define MAXWAIT4EPGINFO   3 // seconds
+ #define MODETIMEOUT       3 // seconds
+@@ -145,6 +146,173 @@
+   return state;
+ }
+ 
++// --- cMenuEditSrcEItem ------------------------------------------------------
++
++class cMenuEditSrcEItem : public cMenuEditIntItem {
++private:
++  const cSource *source;
++  int *Diseqc;
++  int tuner;
++  bool HasRotor(int Tuner);
++protected:
++  virtual void Set(void);
++public:
++  cMenuEditSrcEItem(const char *Name, int *Value, int diseqc[MAXTUNERS], int Tuner);
++  eOSState ProcessKey(eKeys Key);
++  };
++
++cMenuEditSrcEItem::cMenuEditSrcEItem(const char *Name, int *Value, int diseqc[MAXTUNERS], int Tuner)
++:cMenuEditIntItem(Name, Value, 0)
++{
++  source = Sources.Get(*Value);
++  Diseqc = diseqc;
++  tuner = Tuner;
++  Set();
++}
++
++bool cMenuEditSrcEItem::HasRotor(int Tuner)
++{
++  if (Diseqc && Tuner!=tuner)
++     return ((Diseqc[Tuner] & (DISEQC12 | GOTOX)) && !(Diseqc[Tuner] & ROTORLNB) && cDevice::GetDevice(Tuner-1) && cDevice::GetDevice(Tuner-1)->ProvidesSource(cSource::stSat));
++  else 
++     return false;
++}
++
++void cMenuEditSrcEItem::Set(void)
++{
++  if (source) {
++     char *buffer = NULL;
++     asprintf(&buffer, "%s - %s", *cSource::ToString(source->Code()), source->Description());
++     SetValue(buffer);
++     free(buffer);
++     }
++  else {
++     switch (*value) {
++        case 0: {
++                  char buffer[] = "Rotor - DiSEqC1.2";
++                  SetValue(buffer);
++                  break;
++                }
++        case 1: {
++                  char buffer[] = "Rotor - GotoX";
++                  SetValue(buffer);
++                  break;
++                }            
++        default:{
++                  char *buffer = NULL;
++                  asprintf(&buffer, "%s %d", tr("Rotor - shared LNB"), *value-1);
++                  SetValue(buffer);
++                  free(buffer);
++                  break;
++                }
++        }
++     }
++}
++
++eOSState cMenuEditSrcEItem::ProcessKey(eKeys Key)
++{
++  eOSState state = cMenuEditItem::ProcessKey(Key);
++
++  if (state == osUnknown) {
++     if (NORMALKEY(Key) == kLeft) { 
++        if (source && source->Prev()) {
++           source = (cSource *)source->Prev();
++           *value = source->Code();
++           }
++        else {
++           if (source) {
++              source = NULL;
++              *value = 0;
++              }
++            else if (!(*value)) {
++              *value+=1;
++              }
++            else {
++              int i;
++              for (i=*value; i<=4 && !HasRotor(i); i++);
++              if (i<=4)
++                 *value=i+1;
++              } 
++           }
++        }
++     else if (NORMALKEY(Key) == kRight) {
++        if (source) {
++           if (source->Next())
++              source = (cSource *)source->Next();
++           }
++        else if (*value) {
++           *value-=1;
++           while (*value>=2 && !HasRotor(*value-1))
++             *value-=1;
++           }
++        else
++           source = Sources.First();
++        if (source)
++           *value = source->Code();
++        }
++     else
++        return state; 
++     Set();
++     state = osContinue;
++     }
++  return state;
++}
++
++// --- cMenuEditRShItem ------------------------------------------------------
++
++class cMenuEditRShItem : public cMenuEditIntItem {
++private:
++  int *Diseqc;
++  bool HasRotor(int Tuner);
++public:
++  cMenuEditRShItem(const char *Name, int *Value, int diseqc[MAXTUNERS]);
++  eOSState ProcessKey(eKeys Key);
++  };
++
++cMenuEditRShItem::cMenuEditRShItem(const char *Name, int *Value, int diseqc[MAXTUNERS])
++:cMenuEditIntItem(Name, Value, 0)
++{
++  Diseqc = diseqc;
++  while (!HasRotor(*value) && *value>0)
++    *value-=1;
++  while (!HasRotor(*value) && *value<MAXTUNERS)
++    *value+=1; 
++  Set();
++}
++
++bool cMenuEditRShItem::HasRotor(int Tuner)
++{
++  if (Diseqc)
++     return ((Diseqc[Tuner] & (DISEQC12 | GOTOX)) && !(Diseqc[Tuner] & ROTORLNB) && cDevice::GetDevice(Tuner-1) && cDevice::GetDevice(Tuner-1)->ProvidesSource(cSource::stSat));
++  else
++     return false;
++}
++
++eOSState cMenuEditRShItem::ProcessKey(eKeys Key)
++{
++  eOSState state = cMenuEditItem::ProcessKey(Key);
++
++  if (state == osUnknown) {
++     if (NORMALKEY(Key) == kRight) {
++        int i;
++        for (i=*value+1; i<=4 && !HasRotor(i); i++);
++        if (i<=4)
++           *value=i;
++        }
++     else if (NORMALKEY(Key) == kLeft) {
++        int i;
++        for (i=*value-1; i && !HasRotor(i); i--);
++        if (i)
++           *value=i;
++        }
++     else
++        return state; 
++     Set();
++     state = osContinue;
++     }
++  return state;
++}
++
+ // --- cMenuEditMapItem ------------------------------------------------------
+ 
+ class cMenuEditMapItem : public cMenuEditItem {
+@@ -2422,41 +2590,475 @@
+ class cMenuSetupLNB : public cMenuSetupBase {
+ private:
+   void Setup(void);
++  void SetHelpKeys(void);
++  bool IsUnique(int Tuner = 0, int Source=0);
++  void LoadActuall();
++  void AddDefault();
++  void ResetLnbs();
++  void Init();
++
++  // holds only unique Sources
++  struct tLnbType {
++     int source;
++     int lnbType;
++     } /* keep this */ ;
++  tLnbType lnbTypes[MAXTUNERS+1][MAXLNBS];
++  int Tuner;
++  int DiSEqC[MAXTUNERS+1];
++  int Diseqc[MAXTUNERS+1];
++  int RotorLNBTuner[MAXTUNERS+1];
++  int diffSetups;
++  static int IntCmp(const void *a, const void *b);
++  void LoadTmpSources();
++
++  bool extended;
++  const char *useDiSEqcTexts[7];
++  const char *lofTexts[7];
++  int lnbNumber[MAXTUNERS+1];  // number of diffrent LNBs/sources
++  int oldLnbNumber;
++  int currentChannel;
++  bool circular; // XXX
++  int waitMs[MAXTUNERS+1];
++  int repeat[MAXTUNERS+1];
++
+ public:
+   cMenuSetupLNB(void);
+   virtual eOSState ProcessKey(eKeys Key);
++  eOSState Save();
+   };
+ 
+ cMenuSetupLNB::cMenuSetupLNB(void)
+ {
+-  SetSection(tr("LNB"));
++  SetSection(tr("LNB / DiSEqC"));
++  SetCols(19);
++  extended = false;
++  circular = 0;
++  oldLnbNumber = 0;
++  Tuner = (::Setup.DiSEqC & DIFFSETUPS) == DIFFSETUPS;
++  diffSetups = Tuner;
++  for (int i=0; i<=MAXTUNERS; i++) {
++     DiSEqC[i]=0;
++     lnbNumber[i]=0;
++     RotorLNBTuner[i]=0;
++     }
++  if (Tuner) {
++     for (int i=0; i<MAXTUNERS; i++)
++        DiSEqC[i+1]=(::Setup.DiSEqC & (TUNERMASK << (TUNERBITS * i))) >> (TUNERBITS * i);
++     }
++  else 
++     DiSEqC[0]=::Setup.DiSEqC;
++
++  for (int i=0; i<=MAXTUNERS; i++) {
++     if (DiSEqC[i] & SWITCHMASK)
++        Diseqc[i]=DiSEqC[i] & SWITCHMASK;
++     else if (DiSEqC[i] & ROTORLNB)
++        Diseqc[i] = 6;
++     else if (DiSEqC[i] & GOTOX)
++        Diseqc[i] = 5;
++     else if (DiSEqC[i] & DISEQC12)
++        Diseqc[i] = 4;
++     else
++        Diseqc[i] = 0;
++     }
++
++  for (int i=1; i<=MAXTUNERS; i++)
++     RotorLNBTuner[i]=(DiSEqC[i] & ROTORLNB) ? (DiSEqC[i] & 0x30) >> 4 : 0;
++
++  Init();
++
++  currentChannel = cDevice::CurrentChannel();
++
++  //XXX nasty
++  if (currentChannel > Channels.Count())
++     currentChannel = 1;
++  for (int i=0; i<=MAXTUNERS; i++) {
++     waitMs[i] = Diseqcs.WaitMs(i);
++     repeat[i] = Diseqcs.RepeatCmd(i);
++     }
++
+   Setup();
+ }
+ 
+ void cMenuSetupLNB::Setup(void)
+ {
+   int current = Current();
+-
+   Clear();
+ 
+-  Add(new cMenuEditBoolItem(tr("Setup.LNB$Use DiSEqC"),               &data.DiSEqC));
+-  if (!data.DiSEqC) {
+-     Add(new cMenuEditIntItem( tr("Setup.LNB$SLOF (MHz)"),               &data.LnbSLOF));
+-     Add(new cMenuEditIntItem( tr("Setup.LNB$Low LNB frequency (MHz)"),  &data.LnbFrequLo));
+-     Add(new cMenuEditIntItem( tr("Setup.LNB$High LNB frequency (MHz)"), &data.LnbFrequHi));
++  useDiSEqcTexts[0] = tr("DiSEqC disabled");
++  useDiSEqcTexts[1] = "mini DiSEqC";
++  useDiSEqcTexts[2] = "Full DiSEqC";
++  useDiSEqcTexts[3] = "DisiCon 4";
++  useDiSEqcTexts[4] = "Rotor - DiSEqC1.2";
++  useDiSEqcTexts[5] = "Rotor - GotoX";
++  useDiSEqcTexts[6] = tr("Rotor - shared LNB");
++
++  lofTexts[0] = "9750/10600 MHz";
++  lofTexts[1] = "10750/11250 MHz";
++  lofTexts[2] = "5150 MHz";
++  lofTexts[3] = "9750 MHz";
++  lofTexts[4] = "10600 Mhz";
++  lofTexts[5] = "11250 MHz";
++  lofTexts[6] = "11475 MHz";
++
++  char buffer[16];
++  char LnbC = 'A';
++
++  bool hasRotor = false;
++  for (int i = diffSetups; i < diffSetups*MAXTUNERS + 1; i++)
++     if (i!=Tuner && ((DiSEqC[i] & ROTORMASK) == GOTOX || (DiSEqC[i] & ROTORMASK) == DISEQC12) && (!i || cDevice::GetDevice(i-1) && cDevice::GetDevice(i-1)->ProvidesSource(cSource::stSat)))
++        hasRotor = true;
++
++  if (extended)
++     Add(new cMenuEditBoolItem(tr("Different Setups"),  &diffSetups));
++  if (Tuner)
++     Add(new cMenuEditSatTunItem(tr("Tuner"), &Tuner));
++  if ((Diseqc[Tuner])==6 && !hasRotor)
++     Diseqc[Tuner]=DiSEqC[Tuner]=0;
++  Add(new cMenuEditStraItem(tr("DiSEqC Type"),     &Diseqc[Tuner], hasRotor ? 7 : 6, useDiSEqcTexts));
++  if (!(Diseqc[Tuner] == DISICON4  || extended) || Diseqc[Tuner] >= 4) 
++     Add(new cMenuEditStraItem(tr("LNB Type"), &lnbTypes[Tuner][0].lnbType, 7, lofTexts));
++
++  switch (Diseqc[Tuner]) {
++     case NONE:
++            lnbNumber[Tuner] = 1;
++            if (Tuner)
++                    Add(new cMenuEditSrcItem(tr("Satellite"), &lnbTypes[Tuner][0].source));
++            break;
++     case MINI :
++            lnbNumber[Tuner] = 2;
++            for (int i=0; i < lnbNumber[Tuner];i++) {
++               snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++               Add(new cMenuEditSrcEItem(buffer, &lnbTypes[Tuner][i].source, DiSEqC, Tuner));
++               if (extended)
++                     Add(new cMenuEditStraItem(tr("   LNB Type"), &lnbTypes[Tuner][i].lnbType, 7, lofTexts));
++               }
++
++             if (extended)
++                Add(new cMenuEditIntItem(tr("Delay (ms)"), &waitMs[Tuner], 0, 100));
++             break;
++     case FULL:
++             Add(new cMenuEditIntItem(tr("Number of LNBs"), &lnbNumber[Tuner],MINLNBS,MAXLNBS));
++
++             for (int i=0;i < lnbNumber[Tuner];i++) {
++                 snprintf(buffer, sizeof(buffer), "LNB %c",LnbC+i);
++                 Add(new cMenuEditSrcEItem(buffer, &lnbTypes[Tuner][i].source, DiSEqC, Tuner));
++                 if (extended)
++                    Add(new cMenuEditStraItem(tr("   LNB Type"), &lnbTypes[Tuner][i].lnbType, 7, lofTexts));
++               }
++
++              if (extended) {
++                 Add(new cMenuEditIntItem(tr("Delay (ms)"), &waitMs[Tuner], 0, 100));
++                 Add(new cMenuEditIntItem(tr("Repeat"), &repeat[Tuner], 0, 3));
++                 }
++              else if (((::Setup.DiSEqC & (SWITCHMASK << (Tuner ? (Tuner-1)*TUNERBITS : 0))) >> (Tuner ? (Tuner-1)*TUNERBITS : 0))==MINI)
++                 waitMs[Tuner] = 0;
++              break;
++     case DISICON4:
++             lnbNumber[Tuner] = 1;
++             Add(new cMenuEditSrcEItem(tr("Satellite"), &lnbTypes[Tuner][0].source, DiSEqC, Tuner));
++             break;
++     case 6:
++             lnbNumber[Tuner] = 7;
++             Add(new cMenuEditRShItem(tr("Rotor on Tuner"), &RotorLNBTuner[Tuner], DiSEqC));
++             break;
++     default:
++             lnbNumber[Tuner] = 1;
++
+      }
+ 
++  SetHelp(extended? tr("Normal") : tr("Expert"), (DiSEqC[Tuner] & ROTORMASK) ? tr("Rotor Settings") : NULL);
+   SetCurrent(Get(current));
+   Display();
+ }
+ 
++int cMenuSetupLNB::IntCmp(const void *a, const void *b)
++{
++  return (* (int *)a - *(int *)b);
++}
++
++void cMenuSetupLNB::Init()
++{
++  //dsyslog ("Load Diseqcs Sources to tmpSource");
++  ResetLnbs();
++
++  for (int i=0; i<=MAXTUNERS; i++)
++     lnbNumber[i] = 0;
++  LoadActuall();
++  AddDefault();
++}
++
++void cMenuSetupLNB::ResetLnbs()
++{
++  for (int k=0;k<=MAXTUNERS;k++)
++     for (int i=0;i<MAXLNBS;i++) {  // runs initTypes
++        lnbTypes[k][i].source = 0;
++        lnbTypes[k][i].lnbType = 0;
++        }
++}
++
++void cMenuSetupLNB::LoadActuall()
++{
++  //dsyslog(" LoadActuall() D.Count() %d D.LnbCount() %d", Diseqcs.Count(), Diseqcs.LnbCount());
++  //Loading already configured LnbTypes to LnbStruct
++  for (int i=0; i<=MAXTUNERS; i++)
++     lnbNumber[i] = 0;
++  if (Diseqcs.Count() == 0)
++     return;
++
++  //dsyslog(" LoadActuall()  ");
++
++  for (cDiseqc *diseqc = Diseqcs.First(); diseqc; diseqc = Diseqcs.Next(diseqc)) {
++     //dsyslog(" comp %d vs. %d   ",lnbTypes[i-1].source, diseqc->Source());
++     bool found=false;
++
++     for (int k=0; k<lnbNumber[diseqc->Tuner()]; k++)
++        if (lnbTypes[diseqc->Tuner()][k].source == diseqc->Source())
++           found=true;
++     if (!found) {
++        lnbTypes[diseqc->Tuner()][lnbNumber[diseqc->Tuner()]].source = diseqc->Source();
++        lnbTypes[diseqc->Tuner()][lnbNumber[diseqc->Tuner()]].lnbType = diseqc->LnbType();
++        lnbNumber[diseqc->Tuner()]++;
++        if (!diseqc->Tuner())
++           for (int i=1; i<=MAXTUNERS; i++) {
++              lnbTypes[i][lnbNumber[i]].source = diseqc->Source();
++              lnbTypes[i][lnbNumber[i]].lnbType = diseqc->LnbType();
++              lnbNumber[i]++;
++              }
++        }
++     }
++
++  for (int k=0; k<=MAXTUNERS; k++)
++     for (int i=0; i<lnbNumber[k]; i++) {
++        if (lnbTypes[k][i].source == cSource::stSat)
++           switch (DiSEqC[k] & ROTORMASK) {
++              case DISEQC12: lnbTypes[k][i].source=0;
++                             break;
++              case GOTOX:    lnbTypes[k][i].source=1;
++                             break;
++              default:       lnbTypes[k][i].source = 1 + ((DiSEqC[k] & 0x30) >> 4);
++              }
++        }
++  if (Tuner) {
++     for (int k=1; k<=MAXTUNERS; k++)
++        for (int i=1; i<lnbNumber[k]; i++)
++           if (lnbTypes[k][i].lnbType!=lnbTypes[k][0].lnbType)
++              extended=true;
++     }
++  else
++     for (int i=1; i<lnbNumber[0]; i++)
++        if (lnbTypes[0][i].lnbType!=lnbTypes[0][0].lnbType)
++           extended=true;
++
++#if 0
++dsyslog ("load actuall ");
++dsyslog ("found  %d LNBs", lnbNumber);
++for (int i=0;i<MAXLNBS;i++) {
++dsyslog ("lnbTypes[%d].source %d", i, lnbTypes[i].source);
++}
++#endif
++
++}
++
++void cMenuSetupLNB::AddDefault()
++{
++tLnbType initTypes[] = {
++       { 35008, 0 },
++       { 34946, 0 },
++       { 35031, 0 },
++       { 35098, 0 }
++};
++  // fill up with default values to avoid string "0"  in EditSrcItem
++  for (int k=0; k<=MAXTUNERS; k++) {
++     int cnt = lnbNumber[k];
++     bool found = false;
++     for (int i=0;i<4;i++) {  // runs initTypes
++        for(int j=0;j<cnt;j++) {
++           if (lnbTypes[k][j].lnbType > 6)
++              lnbTypes[k][j].lnbType = 0;
++           if (lnbTypes[k][j].source == initTypes[i].source) {
++              found = true;
++              continue;
++              }
++           }
++        if (!found && cnt<MAXLNBS) {
++           lnbTypes[k][cnt].source = initTypes[i].source;
++           lnbTypes[k][cnt].lnbType = initTypes[i].lnbType;
++           //printf("add %d in LnbTypes[%d].source \n", initTypes[i].source, cnt);
++           cnt++;
++           }
++        found = false;
++        }
++     }
++}
++
++bool cMenuSetupLNB::IsUnique(int Tuner, int Source)
++{
++  if(Source) {
++     for (int i=0;i<0;i++) {
++        if (lnbTypes[Tuner][i].source == Source)
++           return false;
++        }
++     return true;
++     }
++
++  int tmp[MAXLNBS] = { 0 };
++
++  for (int i=0;i<MAXLNBS;i++) 
++     tmp[0]=lnbTypes[Tuner][i].source;
++
++  qsort(tmp, MAXLNBS ,sizeof(int), IntCmp);
++
++#if 0
++for (int i= 0; i< MAXLNBS;i++)
++  dsyslog (" SortSources[%d] ",tmp[i]);
++#endif
++
++  for (int i= 1; i< MAXLNBS;i++) {
++     if (tmp[i] == tmp[i-1]&& tmp[i]!= 0)
++        return false;
++     }
++
++  return true;
++}
++
++eOSState cMenuSetupLNB::Save()
++{
++  eOSState state = osContinue;
++
++  bool isUnique = true;
++  if (!Tuner)
++     isUnique = IsUnique();
++  else
++     for (int k=1; k<=MAXTUNERS; k++) {
++        if (!cDevice::GetDevice(k-1) || !(cDevice::GetDevice(k-1)->ProvidesSource(cSource::stSat)))
++           continue;
++        if (!IsUnique(k))
++           isUnique = false;
++        }
++  if (!isUnique) {
++     Skins.Message(mtError, tr("Sat positions must be unique!"));
++     return osContinue;
++     }
++
++  if (!extended)
++     for (int k = 0; k<=MAXTUNERS; k++)
++        for (int i = 1; i<lnbNumber[k];i++)
++           lnbTypes[k][i].lnbType = lnbTypes[k][0].lnbType;
++
++  // ask user to rewrite diseqc.conf
++  if (Interface->Confirm(tr("Overwrite DiSEqC.conf?"))) {
++
++  for (int i=0; i<=MAXTUNERS; i++)
++     if (Diseqc[i]>3)
++        lnbTypes[i][0].source = cSource::stSat;
++
++  //XXX
++  // Diseqcs.SetLnbType(lnbTypes[0].lnbType);
++
++  // dsyslog ("DBG LNB_TYPE: DiSEqC: %d", data.DiSEqC);
++  // dsyslog ("delete all Diseqs");
++  Diseqcs.Clear();
++
++  if (!Tuner) {
++     Diseqcs.SetRepeatCmd(repeat[0],0);
++     Diseqcs.SetWaitMs(waitMs[0],0);
++
++     for (int i=0;i<lnbNumber[0];i++) {
++        Diseqcs.NewLnb(DiSEqC[0] & SWITCHMASK, lnbTypes[0][i].source, lnbTypes[0][i].lnbType);
++        }
++     }
++ else
++    for (int k=1; k<=MAXTUNERS; k++) {
++       if (!cDevice::GetDevice(k-1) || !(cDevice::GetDevice(k-1)->ProvidesSource(cSource::stSat)))
++          continue;
++       Diseqcs.SetRepeatCmd(repeat[k],k);
++       Diseqcs.SetWaitMs(waitMs[k],k);
++
++       for (int i=0;i<lnbNumber[k];i++) {
++          //dsyslog ("for  lnbNumber %d newLnb(dyseqType: %d, source: %d, lnbType %d", lnbNumber, data.DiSEqC, lnbTypes[i].source, lnbTypes[i].lnbType);
++          Diseqcs.NewLnb(DiSEqC[k] & SWITCHMASK, lnbTypes[k][i].source, lnbTypes[k][i].lnbType, k);
++          }
++       }
++    // update current Setup  Object
++    ::Setup.DiSEqC= Tuner ? (DIFFSETUPS | (DiSEqC[4]<<(TUNERBITS*3)) | (DiSEqC[3]<<(TUNERBITS*2)) | (DiSEqC[2]<<TUNERBITS) | (DiSEqC[1])): DiSEqC[0];
++
++    if (::Setup.DiSEqC) {  ///XXX
++       Diseqcs.Save();
++
++       // workaround to trigger diseqc codes
++       Channels.SwitchTo(currentChannel+9);
++       Channels.SwitchTo(currentChannel);
++       }
++    state = osBack;
++
++    }
++  return state;
++}
++
+ eOSState cMenuSetupLNB::ProcessKey(eKeys Key)
+ {
+-  int oldDiSEqC = data.DiSEqC;
++
++  oldLnbNumber = lnbNumber[Tuner];
++  int oldDiSEqC = Diseqc[Tuner];
++  int oldDiffSetups = diffSetups;
++
+   eOSState state = cMenuSetupBase::ProcessKey(Key);
+ 
+-  if (Key != kNone && data.DiSEqC != oldDiSEqC)
++  //dsyslog (" lnbNumber < oldLnbNumber  %d < %d", lnbNumber, oldLnbNumber);
++
++  if (Key == kOk) 
++     return Save();
++
++  if (Key == kGreen && (DiSEqC[Tuner] & ROTORMASK)) {
++     cPlugin *p = cPluginManager::GetPlugin("rotor");
++     if (p) {
++        int oldDiSEqC = ::Setup.DiSEqC;
++        ::Setup.DiSEqC= Tuner ? (DIFFSETUPS | (DiSEqC[4]<<(TUNERBITS*3)) | (DiSEqC[3]<<(TUNERBITS*2)) | (DiSEqC[2]<<TUNERBITS) | (DiSEqC[1])) : DiSEqC[0];
++        AddSubMenu((cOsdMenu *) p->MainMenuAction());
++        ::Setup.DiSEqC = oldDiSEqC;
++        }
++     }
++
++  if ((Key != kNone)) {
++     if (Diseqc[Tuner] != oldDiSEqC || lnbNumber[Tuner] != oldLnbNumber) {
++        switch (Diseqc[Tuner]) {
++           case 4: DiSEqC[Tuner] = DISEQC12;
++                   break;
++           case 5: DiSEqC[Tuner] = GOTOX;
++                   break;
++           case 6: DiSEqC[Tuner] = ROTORLNB + (RotorLNBTuner[Tuner] << 4);
++                   break;
++          default: DiSEqC[Tuner] = Diseqc[Tuner];
++                   break;
++           }
++        }
++     if (Diseqc[Tuner]<4)
++        for (int i=0; i<lnbNumber[Tuner]; i++) {
++            if ((lnbTypes[Tuner][i].source & cSource::st_Mask) == cSource::stNone) {
++               switch (lnbTypes[Tuner][i].source) {
++                  case 0: DiSEqC[Tuner] = DISEQC12 | Diseqc[Tuner];
++                          break;
++                  case 1: DiSEqC[Tuner] = GOTOX | Diseqc[Tuner];
++                          break;
++                 default: DiSEqC[Tuner] = (ROTORLNB + ((lnbTypes[Tuner][i].source - 1) << 4))  | Diseqc[Tuner];
++                          break;
++                  }
++               }
++            else
++               DiSEqC[Tuner] = Diseqc[Tuner];
++         }
++      if (oldDiffSetups != diffSetups) {
++         if (diffSetups)
++            Tuner=1;
++         else
++            Tuner=0;
++         }
++      if (Key == kRed)
++         extended = extended?false:true;
++
+      Setup();
++      } // endif other key as kOk
++
+   return state;
+ }
+ 
+diff -ubw vdr-1.4.1/menuitems.c vdr-1.4.1-patch/menuitems.c
+--- vdr-1.4.1/menuitems.c	2006-08-15 12:05:51.570964968 +0200
++++ vdr-1.4.1-patch/menuitems.c	2006-08-15 12:06:17.512021328 +0200
+@@ -864,6 +864,77 @@
+   return state;
+ }
+ 
++// ---  cMenuEditSatTunItem -----------------------------------------------
++
++cMenuEditSatTunItem::cMenuEditSatTunItem(const char *Name, int *Value, const char *MinString)
++:cMenuEditItem(Name)
++{
++  value = Value;
++  min = 1;
++  max = 9;
++  minString = NULL;
++  if (*value < min)
++     *value = min;
++  else if (*value > max)
++     *value = max;
++  Set();
++}
++
++void cMenuEditSatTunItem::Set(void)
++{
++  if (minString && *value == min)
++     SetValue(minString);
++  else {
++     char buf[16];
++     snprintf(buf, sizeof(buf), "%d", *value);
++     SetValue(buf);
++     }
++}
++
++eOSState cMenuEditSatTunItem::ProcessKey(eKeys Key)
++{
++  eOSState state = cMenuEditItem::ProcessKey(Key);
++
++  if (state == osUnknown) {
++     Key = NORMALKEY(Key);
++     switch (Key) {
++       case kNone: break;
++       case k0 ... k9:
++            if (Key == k0 || cDevice::GetDevice(Key - k1) && cDevice::GetDevice(Key - k1)->ProvidesSource(cSource::stSat))
++              *value = Key - k0;
++            break;
++       case kLeft:
++            {
++            int tvalue = *value;
++            do
++            {
++              tvalue = tvalue>min ? tvalue - 1 : min;
++            } while (tvalue > min && !(cDevice::GetDevice(tvalue-1) && cDevice::GetDevice(tvalue-1)->ProvidesSource(cSource::stSat)));
++            if ((cDevice::GetDevice(tvalue-1) && cDevice::GetDevice(tvalue-1)->ProvidesSource(cSource::stSat)))
++              *value = tvalue;
++            break;
++            }
++       case kRight:
++            {
++            int tvalue = *value;
++            do
++            {
++              tvalue = tvalue<max ? tvalue + 1 : max;
++            } while (tvalue < max && !(cDevice::GetDevice(tvalue-1) && cDevice::GetDevice(tvalue-1)->ProvidesSource(cSource::stSat)));
++            if ((cDevice::GetDevice(tvalue-1) && cDevice::GetDevice(tvalue-1)->ProvidesSource(cSource::stSat)))
++              *value = tvalue;
++            break;
++            }
++       default:
++            if (*value < min) { *value = min; Set(); }
++            if (*value > max) { *value = max; Set(); }
++            return state;
++       }
++     state = osContinue;
++     }
++  return state;
++}
++
+ // --- cMenuSetupPage --------------------------------------------------------
+ 
+ cMenuSetupPage::cMenuSetupPage(void)
+diff -ubw vdr-1.4.1/menuitems.h vdr-1.4.1-patch/menuitems.h
+--- vdr-1.4.1/menuitems.h	2006-08-15 12:05:51.884917240 +0200
++++ vdr-1.4.1-patch/menuitems.h	2006-08-15 12:06:17.517020568 +0200
+@@ -152,6 +152,17 @@
+   virtual eOSState ProcessKey(eKeys Key);
+   };
+ 
++class cMenuEditSatTunItem : public cMenuEditItem {
++protected:
++  int *value;
++  int min, max;
++  const char *minString;
++  virtual void Set(void);
++public:
++  cMenuEditSatTunItem(const char *Name, int *Value, const char *MinString = NULL);
++  eOSState ProcessKey(eKeys Key);
++};
++
+ class cPlugin;
+ 
+ class cMenuSetupPage : public cOsdMenu {
+diff -ubw vdr-1.4.1/plugin.c vdr-1.4.1-patch/plugin.c
+--- vdr-1.4.1/plugin.c	2006-08-15 12:05:51.023048264 +0200
++++ vdr-1.4.1-patch/plugin.c	2006-08-15 12:06:17.520020112 +0200
+@@ -79,6 +79,11 @@
+   return NULL;
+ }
+ 
++bool cPlugin::ProvidesSource(int Source, int Tuner)
++{
++  return false;
++}
++
+ const char *cPlugin::MainMenuEntry(void)
+ {
+   return NULL;
+@@ -408,6 +413,20 @@
+   return false;
+ }
+ 
++bool cPluginManager::ProvidesSource(int Source, int Tuner)
++{
++  if (pluginManager) {
++     for (cDll *dll = pluginManager->dlls.First(); dll; dll = pluginManager->dlls.Next(dll)) {
++         cPlugin *p = dll->Plugin();
++         if (p) {
++            if (p->ProvidesSource(Source,Tuner))
++               return true;
++            }
++         }
++     }
++  return false;
++}
++
+ bool cPluginManager::HasPlugins(void)
+ {
+   return pluginManager && pluginManager->dlls.Count();
+diff -ubw vdr-1.4.1/plugin.h vdr-1.4.1-patch/plugin.h
+--- vdr-1.4.1/plugin.h	2006-08-15 12:05:51.030047200 +0200
++++ vdr-1.4.1-patch/plugin.h	2006-08-15 12:06:17.523019656 +0200
+@@ -39,6 +39,7 @@
+   virtual bool Start(void);
+   virtual void Stop(void);
+   virtual void Housekeeping(void);
++  virtual bool ProvidesSource(int Source, int Tuner);
+   virtual void MainThreadHook(void);
+   virtual cString Active(void);
+ 
+@@ -94,6 +95,7 @@
+   bool StartPlugins(void);
+   void Housekeeping(void);
+   void MainThreadHook(void);
++  static bool ProvidesSource(int Source, int Tuner);
+   static bool Active(const char *Prompt = NULL);
+   static bool HasPlugins(void);
+   static cPlugin *GetPlugin(int Index);
+Gemeinsame Unterverzeichnisse: vdr-1.4.1/.svn und vdr-1.4.1-patch/.svn.
+Gemeinsame Unterverzeichnisse: vdr-1.4.1/symbols und vdr-1.4.1-patch/symbols.
+diff -ubw vdr-1.4.1/tools.c vdr-1.4.1-patch/tools.c
+--- vdr-1.4.1/tools.c	2006-08-15 12:05:51.514973480 +0200
++++ vdr-1.4.1-patch/tools.c	2006-08-15 12:06:17.528018896 +0200
+@@ -300,6 +300,28 @@
+   return Free;
+ }
+ 
++bool FileWriteble(const char *FileName,bool LogErrors)
++{
++  LogErrors = true ; // remove this
++  struct stat fs;
++  if (stat(FileName, &fs) == 0) {
++     if (S_ISREG(fs.st_mode)) {
++                 //fprintf(stderr,"file %s ist regular file\n",FileName);
++        if (fs.st_mode & S_IWUSR){  // FileName, R_OK | W_OK) == 0)
++                 //fprintf(stderr,"file %s user writable\n",FileName);
++           return true;
++          }
++        else if (LogErrors)
++           esyslog("ERROR: can't access %s", FileName);
++        }
++     else if (LogErrors)
++        esyslog("ERROR: %s is not a Filename", FileName);
++     }
++  else if (LogErrors)
++     LOG_ERROR_STR(FileName);
++  return false;
++}
++
+ bool DirectoryOk(const char *DirName, bool LogErrors)
+ {
+   struct stat ds;
+diff -ubw vdr-1.4.1/tools.h vdr-1.4.1-patch/tools.h
+--- vdr-1.4.1/tools.h	2006-08-15 12:05:51.535970288 +0200
++++ vdr-1.4.1-patch/tools.h	2006-08-15 12:06:17.533018136 +0200
+@@ -115,6 +115,7 @@
+ cString itoa(int n);
+ cString AddDirectory(const char *DirName, const char *FileName);
+ int FreeDiskSpaceMB(const char *Directory, int *UsedMB = NULL);
++bool FileWriteble(const char *FileName, bool LogErrors = false);
+ bool DirectoryOk(const char *DirName, bool LogErrors = false);
+ bool MakeDirs(const char *FileName, bool IsDirectory = false);
+ bool RemoveFileOrDir(const char *FileName, bool FollowSymlinks = false);

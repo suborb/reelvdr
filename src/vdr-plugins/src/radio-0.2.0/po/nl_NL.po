@@ -1,0 +1,280 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-radio 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-03-17 14:45+0100\n"
+"PO-Revision-Date: 2008-02-26 17:20+0100\n"
+"Last-Translator: Reelbox4all.com <info@reelbox4all.com>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid "only Text"
+msgstr "alleen Tekst"
+
+msgid "Text+TagInfo"
+msgstr "Text+Labelinfo"
+
+msgid "only, if some"
+msgstr "alleen als bepaalde"
+
+msgid "always"
+msgstr "altijd"
+
+msgid "Top"
+msgstr "Boven"
+
+msgid "Bottom"
+msgstr "Onder"
+
+msgid "latest at Top"
+msgstr "laatste Boven"
+
+msgid "latest at Bottom"
+msgstr "laatste Onderaan"
+
+msgid "Black"
+msgstr "Zwart"
+
+msgid "White"
+msgstr "Wit"
+
+msgid "Red"
+msgstr "Rood"
+
+msgid "Green"
+msgstr "Groen"
+
+msgid "Yellow"
+msgstr "Geel"
+
+msgid "Magenta"
+msgstr "Magenta"
+
+msgid "Blue"
+msgstr "Blauw"
+
+msgid "Cyan"
+msgstr "Cyan(groenblauw)"
+
+msgid "Transparent"
+msgstr "Transparant"
+
+msgid "about MainMenu"
+msgstr "over het HoofdMenu"
+
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgid "only Taginfo"
+msgstr "alleen Labelinfo"
+
+msgid "RaSS only"
+msgstr "Alleen RaSS"
+
+msgid "RaSS+Text mixed"
+msgstr "RaSS+Text gemengd"
+
+msgid "Activate"
+msgstr "Aktiveer"
+
+msgid "RDSText Function"
+msgstr "RDSText Functie"
+
+msgid "RDSText OSD-Position"
+msgstr "RDSText OSD-Positie"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "RDSText OSD-Titel kolom"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "RDSText OSD-Titel kolommen (1-5)"
+
+msgid "unknown program type"
+msgstr "Onbekend Programma type"
+
+msgid "News"
+msgstr "Nieuws"
+
+msgid "Current affairs"
+msgstr "Huidige zaken"
+
+msgid "Information"
+msgstr "Informatie"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Education"
+msgstr "Onderwijs"
+
+msgid "Drama"
+msgstr "Drama"
+
+msgid "Culture"
+msgstr "Cultuur"
+
+msgid "Science"
+msgstr "Wetenschap"
+
+msgid "Varied"
+msgstr "Gevarieerd"
+
+msgid "Pop music"
+msgstr "Pop muziek"
+
+msgid "Rock music"
+msgstr "Rock muziek"
+
+msgid "M.O.R. music"
+msgstr "M.O.R muziek"
+
+msgid "Light classical"
+msgstr "Licht klassiek"
+
+msgid "Serious classical"
+msgstr "Serieuze klassiek"
+
+msgid "Other music"
+msgstr "Andere muziek"
+
+msgid "Alarm"
+msgstr "Alarm"
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radiotext"
+
+msgid "  [waiting ...]"
+msgstr "[wachten ...]"
+
+msgid "Title  :"
+msgstr "Titel :"
+
+msgid "Artist :"
+msgstr "Artiest :"
+
+msgid "Records"
+msgstr "Opnames"
+
+msgid "with <0>"
+msgstr "met <0>"
+
+msgid "Playlist"
+msgstr "Afspeellijst"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Lottery"
+msgstr "Loterij"
+
+msgid "Weather"
+msgstr "Het weer"
+
+msgid "Stockmarket"
+msgstr "Beurs"
+
+msgid "Other"
+msgstr "Anders"
+
+msgid "RTplus Memory  since"
+msgstr "RTplus geheugen sinds"
+
+msgid "Programme"
+msgstr "Programma"
+
+msgid "Station"
+msgstr "Zender"
+
+msgid "Now"
+msgstr "Nu"
+
+msgid "...Part"
+msgstr "...Deel"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Edit.Staff"
+msgstr "Host.bewerken"
+
+msgid "Homepage"
+msgstr "Homepage"
+
+msgid "Interactivity"
+msgstr "Interactief"
+
+msgid "Phone-Hotline"
+msgstr "Telefoon-hotline"
+
+msgid "Phone-Studio"
+msgstr "Telefoon-Studio"
+
+msgid "Email-Hotline"
+msgstr "Email-Hotline"
+
+msgid "Email-Studio"
+msgstr "Email-Studio"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "NewsLocal"
+msgstr "Lokaal nieuws"
+
+msgid "DateTime"
+msgstr "DatumTijd"
+
+msgid "Traffic"
+msgstr "Verkeer"
+
+msgid "Advertising"
+msgstr "Reclame"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Exit"
+msgstr "Afsluiten"
+
+msgid "RTplus-File saved"
+msgstr "RTplus Bestand opgeslagen"
+
+msgid "last seen Radiotext"
+msgstr "laatst Bekeken Radiotekst"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Artist"
+msgstr "Artiest"
+
+msgid "Refresh Off"
+msgstr "Vernieuwen uit"
+
+msgid "Refresh On"
+msgstr "Vernieuwen aan"
+
+msgid "Back"
+msgstr "Terug"

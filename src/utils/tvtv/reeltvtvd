@@ -1,0 +1,738 @@
+#!/bin/ash
+#
+# Reel TvTv daemon
+# (C) 2006 by Reel Multimedia
+# written by RollerCoaster (rollercoaster at reel-multimedia.com)
+#
+# Version: 0.6.7
+#
+# HISTORY:
+#  07/2006 0.1 : initial version from scratch
+# 25/07/06 0.2 : "delete"-jobs werden beachtet und führen zum Löschen des vorhandenen Timers
+#                 (Patch von tvkeller) 7/2006
+# 25/07/06 0.3  : check if a timer is outdated and if so do not programm it
+# 12/03/07 0.3.1: Fix for titles containing commas (by Christian Hilgers)
+# 04/05/07 0.3.2: Added exit code 10 from tvtv4l (by Roman Weber [Wintemrute])
+# 04/05/07 0.4  : Added ability to add more than one entry in tvtvchannels.map
+#                   (by Roman Weber [Wintemrute])
+# 12/08/07 0.4.1: Fixed a nasty bug with the channelmap. Thanks to tvkeller and rubinho
+#                   (by Roman Weber [Wintemrute])
+# 15/08/07 0.4.2: Add check if using busybox, adoptions for RB II (RC)
+# 15/01/08 0.4.3: Fixed finding the channel+ID in channels.conf if there is more than
+#                   one match (i.e. ZDF matches more than once) (RC)
+# 15/01/08 0.5  : Seperate description and persons and add a blank line between
+# 23/02/08 0.5.1: "vdr not running" wird wieder korrekt erkannt (by tvkeller)
+# 27/02/08 0.5.2: SetWakeUp restructured so that old timers (vdr should have deleted them)
+#                   don't get used for wakeup (by tvkeller)
+# 27/02/08 0.5.3: Fixed a bug in GetChannelID if using tvtv name of channel
+#                   directly with channels.conf (by tvkeller)
+# 22/03/08 0.5.4: GetChannelConf() and GetChannelID() find the right entries more
+#			  accurately (by dh42)
+# 11/10/08 0.5.5: ParseJoblist (): tail syntax corrected (by tvkeller)
+# 11/10/08 0.6.0: SyncJoblist (): Make it working with UTF-8. Note: tvtvchannels.map must be converted to UTF-8 in advance (by tvkeller)
+# 11/10/08 0.6.1: SyncJoblist (): Really reset serial and lastsync in tvtv.conf? (by tvkeller)
+# 11/10/08 0.6.2: some changes: -s option forces a sync and parses; -u parses an already synced Joblist; Mainloop only parses when there is new data (by tvkeller)
+# 11/10/08 0.6.3: no more need for the 15 minute timeslot (by tvkeller)
+# 17/10/08 0.6.4: after getting new data, wait 15 minutes (by tvkeller)
+# 09/11/08 0.6.5: Timer wouldn't get programmed, when vdr is starting up, wait for it (by tvkeller)
+# 27/12/08 0.6.6: Further adaption to tvtv behaviour, still some timers weren't fetched (by tvkeller)
+# 14/01/09 0.6.7: moved "sleep 60" to start of deamon (by tvkeller),
+#                 combine two sleeps to one, remove the one from SyncJobList() (RC)
+# 21/10/09 0.6.8 removed some inconsistancies with the pidfile in /var/run/ (by tvkeller)
+#
+#
+# TODO:
+# - fix start time if margin would switch the day (i.e. start @ 01-01-07 0:00 - 2min)
+# - map tvtv channel IDs (i.e. "8") to the real channel name (i.e. "Kabel eins")
+# - feed the epg.data with the description as this is not taken from the timer description
+#   any longer (since vdr 1.4.0)
+#
+#
+
+Sysconfig="/etc/default/sysconfig"
+Reelglobals="/etc/default/globals"
+
+. $Sysconfig
+. $Reelglobals
+
+# Global Vars
+
+#config path for tvtv. note that tvtv4l appends directory "tvtv" to this path
+configd=/etc
+vdrconfigd=/etc/vdr
+
+#using busybox?
+if date -h 2>&1 | grep -q BusyBox; then
+	Busybox=true
+else
+	Busybox=false
+fi
+
+ReelboxFP=true
+loglevel=2  # 0=errors 1=info 2=more info 3=debug 4=more debug
+
+###
+# you should not have to edit beyond this line
+configf=$configd/tvtv/tvtv.conf
+tvtvlogf=$configd/tvtv/tvtv.log
+vdrconfigf=$vdrconfigd/setup.conf
+timersconf=$vdrconfigd/timers.conf
+
+tvtv=tvtv4l
+joblist=$configd/tvtv/tvtvJobs.csv
+channelmap=$configd/tvtv/tvtvchannels.map
+channelsconf="$vdrconfigd/channels.conf"
+lastsync=$((`date +%s`-600))
+REELFPCTL=/sbin/reelfpctl
+MyName=`basename $0`
+PIDFILE=/var/run/$MyName.pid
+
+# functions
+Log () {
+	if [ $1 -le $loglevel ] ; then
+		shift
+		#echo $* >&2
+		logger -t $MyName -s $*
+	fi
+}
+
+Syntax () {
+cat << EOF
+Usage: $MyName -c | -d | -s | -t | -u
+Description:
+     ReelBox tvtv daemon
+
+Options:
+     no option,
+     -h		give help
+     -c		create a new config (read settings from $Sysconfig)
+     -d		run as daemon in background
+     -s		forces sync of tvtv job list with server (and does -u)
+     -t		terminate a running $MyName
+     -u		create vdr timers from joblist and set wakeup time
+
+EOF
+}
+
+CreateNewConfig () {
+	if [ $DS_ENABLE == "yes" ] && [ $TVTV == "yes" ]; then
+		smesg "DeepStandby activated! TVTV disabled."
+	fi
+
+	Log 4 "CreateNewConfig ()"
+	for i in "$TVTVUsername" "$TVTVPasswd" "$TVTVServer" ; do
+		if [ "$i" = "" ] ; then
+			Log 0 "Settings not correct. run setup."
+			return `false`
+		fi
+	done
+	$tvtv -p $configd -s --login "$TVTVUsername" --passwd "$TVTVPasswd" --target "$TVTVServer"
+	ret=$?
+	case $ret in
+		0)
+			Log 1 "Creation of config file successfull"
+			;;
+		10)	Log 0 "Wrong username or password"
+			return `false`
+			;;
+		40)
+			Log 0 "no valid service for account and hardware product"
+			return `false`
+			;;
+		88)
+			Log 0 "curl could not resolve hostname. check network configuration"
+			return `false`
+			;;
+		104)
+			Log 0 "syncing to fast (not in timeslot)"
+			Log 0 "Creation of config file FAILED"
+			;;
+		*)
+			Log 0 "unknown error $ret"
+			Log 0 "Creation of config file FAILED"
+			;;
+	esac
+	return $ret
+}
+
+
+DeleteTimer () {
+	Log 4 "DeleteTimer ()"
+	TIMERNUMBER=`grep -n $uid $timersconf | sed -e 's/:/\n/' | head -n 1`
+	Log 3 "TIMERNUMBER: $TIMERNUMBER"
+	VdrRunning
+	case $? in
+		0)
+			Log 2 "vdr not running. deleting timer direct"
+			Log 3 "Deleting timer with uid $uid"
+			sed -e "/$uid/d" $timersconf > $vdrconfigd/temp
+			cat $vdrconfigd/temp > $timersconf
+			;;
+		1)
+			Log 2 "vdr IS running. deleting timer via svdrp"
+			echo -e "DELT $TIMERNUMBER\r\nQUIT" | nc 127.0.0.1 2001
+			;;
+		2)
+			Log 2 "vdr is shutting down. doing nothing!"
+			;;
+		*)
+			Log 0 VdrRunning: Unknown return status
+			;;
+	esac
+}
+
+
+EvalStartTime () {
+	Log 4 "EvalStartTime ()"
+	VPS=$1
+	date=$2
+	if $VPS ; then
+		MarginStart=$(($VpsMargin/60))
+	fi
+	IFS=:
+	set -- $date
+	hour=$1
+	min=$2
+	[ $min -lt 10 ] && min=`echo $min | cut -b2`
+	[ $hour -lt 10 ] && hour=`echo $hour | cut -b2`
+	min=$(($min-$MarginStart))
+	if [ $min -lt 0 ] ; then
+		min=$(($min+60))
+		hour=$(($hour-1))
+	fi
+	if [ $hour -lt 0 ] ; then
+		Log 0 "FIXME: need to correct date as hour is $hour"
+		hour=$1
+		min=$2
+	fi
+	test ${#hour} -lt 2 && hour="0$hour"
+	test ${#min} -lt 2 && min="0$min"
+	echo $hour$min
+}
+
+
+EvalStopTime () {
+	Log 4 "EvalStopTime ()"
+	IFS=:
+	set -- $1
+	hour=$1
+	min=$2
+	[ $min -lt 10 ] && min=`echo $min | cut -b2`
+	[ $hour -lt 10 ] && hour=`echo $hour | cut -b2`
+	min=$(($min+$MarginStop))
+	if [ $min -ge 60 ] ; then
+		min=$(($min-60))
+		hour=$(($hour+1))
+	fi
+	if [ $hour -lt 0 ] ; then
+		Log 0 "FIXME: need to correct date as hour is $hour"
+		hour=$1
+		min=$2
+	fi
+	test ${#hour} -lt 2 && hour="0$hour"
+	test ${#min} -lt 2 && min="0$min"
+	echo $hour$min
+}
+
+GetChannelConf () {
+	Log 4 "GetChannelConf ($1)"
+
+	IFS=:
+	# z.B. "RTL" soll nicht "RTL 2" finden, deshalb [,;]
+	grep "^$1[,;]" $channelsconf | \
+		while read Name Frequency Parameters Source Srate \
+				VPID APID TPID CA SID NID TID RID rest ; do
+			Log 4 "$Name $Frequency $Parameters $Source $Srate $VPID $APID $TPID $CA $SID $NID $TID $RID $rest"
+			channelID="$Source-$NID-$TID-$SID-$RID"
+			Log 4 "CID: $channelID"
+			if [ $channelID != "" ] ; then
+				echo $channelID
+				# only get the first entry
+				break
+			fi
+		done
+
+	Log 4 "End GetChannelConf ()"
+}
+
+GetChannelID () {
+	Log 4 "GetChannelID ($1)"
+
+	channelID=`GetChannelMap $1`
+
+	if [ "$channelID" = "----" ] || [ -z $channelID ] ; then
+		Log 3 "channel $1 not in channelmap. Using real name."
+		IFS=:
+		# [,;] wie oben
+		grep "^$1[,;]" $channelsconf | \
+			while read Name Frequency Parameters Source Srate \
+					VPID APID TPID CA SID NID TID RID rest ; do
+				Log 4 "$Name $Frequency $Parameters $Source $Srate $VPID $APID $TPID $CA $SID $NID $TID $RID $rest"
+				channelID="$Source-$NID-$TID-$SID-$RID"
+				if [ "$channelID" = "----" ] || [ -z $channelID ] ; then
+					echo ""
+				else
+					echo $channelID
+					#we only want the first entry in the list
+					break
+				fi
+		 	done
+	else
+		echo $channelID
+	fi
+
+	Log 4 "End GetChannelID ()"
+}
+
+GetChannelMap () {
+	Log 4 "GetChannelMap ($1)"
+
+	IFS==
+	grep "^$1" $channelmap | \
+		while read name rn ; do
+
+			if [ $1 != $name ] ; then
+				#false alarm, channel name not found yet,
+				#e.g. looking for "RTL", found "RTL2" or "Super RTL"
+				continue
+			fi
+
+			if [ -z $rn ] ; then
+				continue
+			fi
+
+			Log 4 "Found name: $name rn: $rn"
+
+			entry=`GetChannelConf $rn`
+
+			if [ ! -z $entry ] ; then
+				Log 4 "Found Entry: $entry"
+				echo $entry
+				break
+			fi
+		done
+
+	Log 4 "End GetChannelMap ()"
+}
+
+################################################
+# original procedure GetFirstTimer obsolete
+################################################
+
+#GetFirstTimer () {
+#	Log 4 "GetFirstTimer ()"
+#	unset IFS
+#	#ugly hack to get the first timer
+#	for first in `cut -f3-4 -d: $timersconf | sort` ; do
+#		#Log 3 "first timer: $first"
+#		echo $first | grep [A-Z] >/dev/null || break
+#	done
+#}
+
+GetVDRConfig () {
+	Log 4 "GetVDRConfig ()"
+	let "`grep "^UseVps" $vdrconfigf`"
+	let "`grep "^VpsMargin" $vdrconfigf`"
+	let "`grep "^MarginStart" $vdrconfigf`"
+	let "`grep "^MarginStop" $vdrconfigf`"
+	if [ "$UseVps" = "1" ] ; then
+		UseVps=true
+	fi
+	let "`grep "^DefaultLifetime" $vdrconfigf`"
+	let "`grep "^DefaultPriority" $vdrconfigf`"
+}
+
+
+ParseJoblist () {
+	Log 4 "ParseJoblist ()"
+	oldIFS="$IFS"
+	IFS=,
+	# we do not need the first two lines at all so tail +3 starts at line 3
+	# replace all , within "" with @@@ each
+	# affects title, description and persons
+	/usr/bin/tail -n +3 $joblist | sed -e ':LOOP; s/\("[^",]\+\),/\1@@@/; t LOOP;' |\
+		while read -r channel channelnum uid starttime endtime action title pg quality \
+			sequence priority protection nature format vps description persons ; do
+
+	Log 3 "channel: $channel"
+	channelid=`GetChannelID "$channel"`
+	if [ "$channelid" = "----" ] || [ -z $channelid ] ; then
+		Log 0 "channel $channel not found in channellist. Can't program timer."
+		echo
+		continue
+	fi
+
+	IFS=" "
+
+
+	# tvtv sends a " as "" so we have to replace it by \"
+	# vdr wants newline as |
+	# replace @@@ with ,
+	# delete return at end of line
+	description=`echo $description | sed s/'""'/'\\\"'/g | sed s/'\\\n'/'|'/g | sed -e "s/@@@/,/g" | tr -d '\r' `
+	persons=`echo $persons | sed s/'""'/'\\\"'/g | sed s/'\\\n'/'|'/g | sed -e "s/@@@/,/g" | tr -d '\r' `
+
+	Log 3 "calculating start times"
+	if [ "$vps" ] && $UseVps ; then
+		active=5
+		set -- $vps
+		day=$1; start=`EvalStartTime true $2`
+	else
+		active=1
+		set -- $starttime
+		day=$1; start=`EvalStartTime false $2`
+	fi
+
+	set -- $endtime
+	stop=`EvalStopTime $2`
+
+	#title must not contain any ":" and also replace @@@ with ,
+	title=`echo $title | sed -e "s/':'/'|'/g" -e "s/@@@/,/g"`
+
+	Log 3 channel: $channel
+	Log 3 channelid: $channelid
+	Log 3 uid: $uid
+	Log 3 day: $day
+	Log 3 "start: $start ($starttime) (vps: $vps)"
+	Log 3 "stop: $stop ($endtime)"
+	Log 3 action: $action
+	Log 3 title: $title
+	Log 3 pg: $pg
+	Log 3 quality: $quality
+	Log 3 sequence: $sequence
+	Log 3 priority: $priority
+	Log 3 protection: $protection
+	Log 3 nature: $nature
+	Log 3 format: $format
+	Log 4 description: $description
+	Log 4 persons: $persons
+
+	if ! `TimerOutdated "$endtime"` ; then
+		Log 1 "Timer $title is outdated. discarding."
+		echo
+		IFS=,
+		continue
+	fi
+
+	case $action in
+		rec)
+			if grep -q $uid $timersconf ; then
+				Log 2 "Timer \"$title\" already programmed."
+			else
+				Log 1 "found new timer \"$title\" $starttime (vps: $vps)"
+				SetTimer
+			fi
+			;;
+		delete)
+			if grep -q $uid $timersconf ; then
+				Log 1 "Timer \"$title\" programmed, deleting."
+				DeleteTimer
+			else
+				Log 2 "Timer \"$title\" should be deleted but is not programmed, doing nothing"
+			fi
+			;;
+		*)
+			Log 0 "unknown action $action, doing nothing."
+			;;
+	esac
+
+	echo
+	IFS=,
+done
+IFS="$oldIFS"
+
+return `true`
+}
+
+
+SyncJobList () {
+	Log 4 "SyncJobList ()"
+
+	###############################################################
+	# must be done every time through the loop:
+	# doing an initial serialnumber reset to make shure to get all
+	# changes since last run!
+
+	#sed -i "s/lastSync=.*/lastSync=0;/" $configf
+	#sed -i "s/serial=.*/serial=0;/" $configf
+	###############################################################
+	# leave it out to try if it is really neccessary.
+	###############################################################
+
+	#let dialup-router establish connection
+	ping -c 3 212.66.15.231
+
+	Log 1 "syncing joblist with tvtv"
+	$tvtv -p $configd -j
+	ret=$?
+	case $ret in
+		0)
+			Log 1 "syncing joblist completed"
+
+			###########################################################################
+			#Joblist must be converted to UTF-8.
+
+			mv $joblist $joblist.save
+			iconv -f iso-8859-15 -o $joblist $joblist.save
+
+			###########################################################################
+
+			ParseJoblist
+			#sleep $((10*60))
+			return
+			;;
+		1)
+			Log 1 "no new data or some other undefined error condition."
+			return
+			;;
+		104)
+			Log 1 "syncing to fast (not in timeslot)"
+			return
+			;;
+		*)
+			Log 0 "unknown error $ret"
+			return
+			;;
+	esac
+}
+
+SetTimer () {
+	Log 4 "SetTimer ()"
+	TIMER="$active:$channelid:$day:$start:$stop:$DefaultPriority:$DefaultLifetime:$title:$title||$description||$persons||uid: $uid"
+	Log 4 timer: $TIMER
+	VdrRunning
+	case $? in
+		0)
+			Log 2 "vdr not running. progging timer direct"
+			echo $TIMER >> $timersconf
+			SetWakeup
+			;;
+		1)
+			Log 2 "vdr IS running. progging timer via svdrp"
+			echo -e "NEWT $TIMER\r\nQUIT" | nc 127.0.0.1 2001
+			;;
+		2)
+			Log 2 "vdr is shutting down. doing nothing!"
+			;;
+		*)
+			Log 0 VdrRunning: Unknown return status
+			;;
+	esac
+}
+
+# SetWakeUp should read all timers until the alphanumeric
+# ones if needed, as it could be more than one outdated.
+
+SetWakeup () {
+	Log 2 "SetWakeup ()"
+	wakeupf=/tmp/vdr.wakeup
+	if [ -f $wakeupf ]; then
+		curwakeup=`cat $wakeupf`
+	else
+		curwakeup=4294967295
+	fi
+
+####################### neuer Code
+####################################################################
+# This routine should be executed until a timer is found whose
+# starttime is in the future, an alphanumeric timer (like MDM----)
+# is found, or the end of the timers.conf
+
+
+	now=`date +%s` ; Log 3 "now = $now"
+
+	unset IFS
+
+	for f in `cut -f3-5 -d: $timersconf | sort` ; do
+
+		first=`echo $f`
+		Log 3 $first
+
+		if [ $f = "" ] ; then
+			Log 3 "no more timers, nothing to do in SetWakeup" # shouldn't happen
+			return
+		fi
+		if echo $f | grep [A-Z] ; then
+			Log 3 "alpha timer, skipping" # shouldn't happen either
+			continue
+		fi
+
+		IFS=:
+		set -- $f
+		date=$1 ; time=$2; end=$3
+		IFS=-
+		set -- $date
+		CCYY=$1 ; MM=$2 ; DD=$3
+		unset IFS
+		hh=`echo $time | cut -b1-2`
+		mm=`echo $time | cut -b3-4`
+		endhh=`echo $end | cut -b1-2`
+		endmm=`echo $end | cut -b3-4`
+
+		#busybox needs different format for date -d :(
+		if $Busybox ; then
+			Log 3 "time MMDDhhmm[[CC]YY: $MM$DD$time[$CCYY]"
+			Log 3 "end MMDDhhmm[[CC]YY: $MM$DD$end[$CCYY]"
+			newwakeup=`date +%s -d "$MM$DD$time$CCYY"`
+			endtime=`date +%s -d "$MM$DD$end$CCYY"`
+		else
+			Log 3 "time CCYY-MM-DD hh:mm: $CCYY-$MM-$DD $hh:$mm"
+			Log 3 "end CCYY-MM-DD hh:mm: $CCYY-$MM-$DD $endhh:$endmm"
+			newwakeup=`date +%s -d "$CCYY-$MM-$DD $hh:$mm"`
+			endtime=`date +%s -d "$CCYY-$MM-$DD $endhh:$endmm"`
+		fi
+
+		# don't set a wakeuptime for a timer that has already been recorded,
+		# take the next one instead.
+
+		Log 3 "endtime = $endtime"
+
+		if [ $now -lt $endtime ]
+			then break
+		fi
+
+	done
+
+
+################################################################################################
+
+
+	# problem: timer date set by vdr could also be MDMDF-- (or the like) what we don't handle,
+	# so we have to look if any newer timer is already set by vdr
+
+	if [ $newwakeup -lt $curwakeup ] ; then
+		Log 2 "Setting new wakeup to $first"
+		Log 3 "newwakeup = $newwakeup"
+		echo $newwakeup > $wakeupf
+		if $ReelboxFP ; then
+			$REELFPCTL -wakeup $newwakeup
+			$REELFPCTL -toptext "TIMER" -displaymode 1
+		fi
+	fi
+}
+
+
+TimerOutdated () {
+	Log 4 "TimerOutdated ()"
+	#format $1: 2006-07-27 23:00:00
+	#busybox needs different format for date -d :(
+	if $Busybox ; then
+		IFS=" "
+		set -- $*
+		IFS="-"
+		date=$1 ; time=$2
+		Log 3 "date: $date, time: $time"
+		set -- $date
+		CCYY=$1 ; MM=$2 ; DD=$3
+		IFS=":"
+		set -- $time
+		hh=$1 ; mm=$2
+		IFS=" "
+		Log 3 "stop-time MMDDhhmm[[CC]YY: $MM$DD$hh$mm[$CCYY]"
+		Log 4 "newstop=date +%s '-d' $MM$DD$hh$mm$CCYY"
+		newstop=`date +%s -d "$MM$DD$hh$mm$CCYY"`
+	else
+		newstop=`date +%s -d $1`
+	fi
+	now=`date +%s`
+
+	if [ $now -gt $newstop ] ; then
+		Log 1 "Timer $title is outdated"
+		return 1
+	else
+		Log 3 "Timer $title is ok"
+		return 0
+	fi
+}
+
+VdrRunning () {
+	Log 4 "VdrRunning ()"
+#return 0=no, 1=running, 2=in shutdown (FIXME: needs changes to reelvdr!)
+	if [ -f /tmp/vdr.standby ] ; then
+		#Log 3 VdrRunning: no
+		return 0
+	elif [ -f /tmp/vdr.shutdown ] ; then
+		sleep 60
+		if [ -f /tmp/vdr.standby ] ; then return 0 ; fi
+		#Log 3 VdrRunning: shutting down
+		return 2
+	else
+		#Log 3 VdrRunning: yes, but wait, just in case
+		#sleep 60
+		return 1
+	fi
+}
+
+MainLoop () {
+	Log 4 "MainLoop ()"
+	while true ; do
+		#keep log file small
+		:> $tvtvlogf
+		SyncJobList
+		sleep $((15*60))
+	done
+}
+
+
+#
+# main
+#
+
+$Busybox && Log 4 "Using BusyBox: yes" || Log 4 "Using BusyBox: no"
+Log 2 "vdrconfigd: $vdrconfigd"
+
+case $1 in
+	-d)
+		GetVDRConfig
+		if [ "$TVTV" = "yes" ] ; then
+			if [ ! -f $configf ] ; then
+				Log 0 "Can't find TvTv's config file $configf. Run setup first."
+			else
+				#doing an initial serialnumber reset to make shure to get all
+				#changes since last run!
+				sed -i "s/lastSync=.*/lastSync=0;/" $configf
+				sed -i "s/serial=.*/serial=0;/" $configf
+				sleep 60
+				MainLoop &
+				echo $! > $PIDFILE
+			fi
+		else
+			Log 0 "tvtv turned off in $Sysconfig"
+		fi
+		;;
+	-t)
+		Log 1 "Terminating running $MyName"
+		kill `cat $PIDFILE`
+		rm $PIDFILE
+		;;
+	-s|sync)
+		GetVDRConfig
+		#force sync by deleting serial and lastsync
+		sed -i "s/lastSync=.*/lastSync=0;/" $configf
+		sed -i "s/serial=.*/serial=0;/" $configf
+		SyncJobList
+		;;
+	-c|setup)
+		[ -d $configd ] || mkdir $configd
+		if [ -f $PIDFILE ] ; then
+			Log 1 "Terminating running $MyName"
+			kill `cat $PIDFILE`
+			rm $PIDFILE
+		fi
+
+		CreateNewConfig
+		if [ $? -eq 0 ] ; then
+			$0 -d &
+		else
+			return $?
+		fi
+		;;
+	-u|set)
+		GetVDRConfig
+		ParseJoblist
+		;;
+	*|-h)
+		Syntax
+		exit 1
+		;;
+esac

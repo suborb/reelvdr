@@ -1,0 +1,57 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com> ,2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-loadepg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2008-02-10 08:58+0100\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Load EPG Data sent to Mediahighway receivers"
+msgstr "Ładuj dane EPG wysłane do odbiorników Telewizji Cyfrowej"
+
+msgid "LoadEPG"
+msgstr "ŁadowanieEPG"
+
+msgid "Card not available"
+msgstr "Karta niedostępna"
+
+msgid "Select a provider and press Ok"
+msgstr "Wybierz operatora i naciśnij Ok"
+
+msgid "Wait load epg data"
+msgstr "Czekaj aż załaduje dane epg"
+
+msgid "No epg data available"
+msgstr "Dane epg niedostępne"
+
+#, fuzzy
+msgid "No data epg available"
+msgstr "Dane epg niedostępne"
+
+msgid "Use file channels equivalences"
+msgstr "Uzywaj odpowiednich plików kanałów"
+
+msgid "No"
+msgstr "Nie"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "DVB-S device for scanning"
+msgstr "Urzadzenie DVB-S do scanowania"
+
+msgid "Invalid provider number"
+msgstr "Błedny numer operatora"
+
+msgid "The plugin is already active"
+msgstr "Wtyczka juz aktywna"

@@ -1,0 +1,33 @@
+VDR Plugin 'tlepg' Revision History
+--------------------------------------
+
+2006-08-10: Version 0.1.0
+
+- Initial revision.
+2006-08-20: Version 0.1.1
+CHG: Anzeige nach dem Erstellen und Bearbeiten von Aufnahmen korrigiert
+2006-08-26: Version 0.1.2
+CHG: k_Repeat für schnelleres scrollen
+2006-10-18: Version 0.1.3
+CHG: Es können nun auch Events in der Vergangenheit angezeigt werden.
+ADD: Wiederholungen für Events, die in der Vergangenheit liegen, können nun gesucht werden
+CHG: Der define SWITCHTIMER muss in timeline.c aktiviert werden, wenn man die Umschalttimer aktivieren will
+BUG: Gruppenauswahl funktioniert nun wieder
+2006-10-18: Version 0.1.4
+BUG: Absturz, wenn die Sendernummern nicht durchgehend sind
+CHG: Nur noch die aktuelle Gruppe wird angezeigt
+2006-01-21: Version 0.1.5
+CHG: Anpassung an ReelSkin -> Eigene Imageliste wird jetzt verwaltet
+2007-01-31: Version 0.1.6
+CHG: i18n aktualisiert
+BUG: Erster Eintrag in Kanalliste muss kein Gruppeneintrag sein
+BUG: Crash behoben, wenn kein Sender selektiert und OK / Bouquets ausgewählt wird
+CHG: Toleranteres Handling, wenn Kanal nicht ermittelt werden kann.
+ADD: Unterstützung von mehreren Designvarianten
+ADD: Defaultfarben aus aktuellem Theme ermitteln
+2007-02-05: Version 0.1.7
+ADD: Magazinansicht
+ADD: Buttons für Infoscreen
+ADD: Button > für Wechsel zwischen Timeline- und Magazin-Ansicht
+CGH: Keine Zeitlinien bei Magazinansicht
+

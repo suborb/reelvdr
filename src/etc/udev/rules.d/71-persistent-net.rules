@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="net", DRIVERS=="MOSCHIP usb-ethernet driver", PROGRAM="/usr/bin/lspci -d 8086:2e6e", NAME="eth0"
+ACTION=="add", SUBSYSTEM=="net", DRIVERS=="e1000",                       PROGRAM="/usr/bin/lsusb -d 9710:7830", NAME="eth1"

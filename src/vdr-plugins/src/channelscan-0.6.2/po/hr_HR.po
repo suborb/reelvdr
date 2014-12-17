@@ -1,0 +1,336 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Drazen Dupor <drazen.dupor@dupor.com>, 2004
+# Dino Ravnic <dino.ravnic@fer.hr>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-channelscan\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-09-06 10:13+0200\n"
+"PO-Revision-Date: 2008-09-29 10:24+0200\n"
+"Last-Translator: Drazen Dupor <drazen.dupor@dupor.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel lists"
+msgstr ""
+
+msgid "Backup"
+msgstr ""
+
+msgid "Backup channel list to..."
+msgstr ""
+
+msgid "Restore channel list from..."
+msgstr ""
+
+msgid "Restore failed!"
+msgstr ""
+
+msgid "Favourites List successfully loaded"
+msgstr ""
+
+msgid "Invalid file"
+msgstr ""
+
+msgid "Channel List successfully loaded"
+msgstr ""
+
+msgid "Backup failed!"
+msgstr ""
+
+msgid "Channel List successfully stored"
+msgstr ""
+
+msgid "TV only"
+msgstr ""
+
+msgid "Radio only"
+msgstr ""
+
+msgid "HDTV only"
+msgstr ""
+
+msgid "Radio + TV"
+msgstr ""
+
+msgid "Servicetype"
+msgstr ""
+
+msgid "Enable Logfile"
+msgstr ""
+
+msgid "No tuners, please stop recording and retry"
+msgstr ""
+
+msgid "Channelscan"
+msgstr ""
+
+msgid "Detailed search"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "SearchMode$Auto"
+msgstr ""
+
+msgid "End of channellist"
+msgstr ""
+
+msgid "New channellist"
+msgstr ""
+
+msgid "Bouquets"
+msgstr ""
+
+msgid "Intelligent 6900/6875/6111"
+msgstr ""
+
+msgid "Try all 6900/6875/6111"
+msgstr ""
+
+msgid "Satellite-S2"
+msgstr ""
+
+msgid "Satellite-S"
+msgstr ""
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid "Cable"
+msgstr ""
+
+msgid "DVB-T - Terrestrial"
+msgstr ""
+
+msgid "Tuner"
+msgstr ""
+
+msgid "DVB-C - Cable"
+msgstr ""
+
+msgid "DVB-S2 - Satellite"
+msgstr ""
+
+msgid "DVB-S - Satellite"
+msgstr ""
+
+msgid "Search Mode"
+msgstr ""
+
+msgid "Add new channels to"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "No Tuners available"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid "Bandwidth"
+msgstr ""
+
+msgid "Symbol Rates"
+msgstr ""
+
+msgid "Frequency (MHz)"
+msgstr ""
+
+msgid "Polarization"
+msgstr ""
+
+msgid "Symbolrate"
+msgstr ""
+
+msgid "Modulation"
+msgstr ""
+
+msgid "Frequency (kHz)"
+msgstr ""
+
+msgid "Recording is running !"
+msgstr ""
+
+msgid "Button$Start"
+msgstr ""
+
+msgid "Channel sel."
+msgstr ""
+
+msgid "DiSEqC"
+msgstr ""
+
+msgid "Scanning aborted"
+msgstr ""
+
+msgid "Scanning succed"
+msgstr ""
+
+msgid "Retrieving transponders failed!"
+msgstr ""
+
+msgid "Please check satellites.conf."
+msgstr ""
+
+msgid "Tuner obtained no lock!"
+msgstr ""
+
+msgid "Please check your connections and satellites.conf."
+msgstr ""
+
+msgid "Unpredictable error occured!"
+msgstr ""
+
+msgid "Please try again later"
+msgstr ""
+
+msgid "Information:"
+msgstr ""
+
+msgid "Entries in current channellist"
+msgstr ""
+
+msgid "Recording is running"
+msgstr ""
+
+msgid "Scan active"
+msgstr ""
+
+msgid "TV Channels\tRadio Channels"
+msgstr ""
+
+#, c-format
+msgid "Retrieving transponder list from %s"
+msgstr ""
+
+#, c-format
+msgid "Scanning %s (%iMHz) %s"
+msgstr ""
+
+#, c-format
+msgid "Scanning %s (%.1fMHz) %s"
+msgstr ""
+
+#, c-format
+msgid "Scanning %s (%.3fMHz)\t%s"
+msgstr ""
+
+msgid "No new channels found"
+msgstr ""
+
+msgid "Added new channels"
+msgstr ""
+
+msgid "Press OK to go back to rotor settings"
+msgstr ""
+
+msgid "Press OK to finish or Exit for new scan"
+msgstr ""
+
+msgid "Scanning on transponder"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "enabled"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Load predefined channel list"
+msgstr ""
+
+msgid "Start channelscan"
+msgstr ""
+
+msgid "    Overwrite Favourites list"
+msgstr ""
+
+msgid "You have the choice of loading a predefined channel list OR starting channelscan to find channels"
+msgstr ""
+
+msgid "Press OK to reload default channel list"
+msgstr ""
+
+msgid "Functions"
+msgstr ""
+
+msgid "Please select a channellist:"
+msgstr ""
+
+msgid "Overwrite existing favourites list, also?"
+msgstr ""
+
+msgid "Loading channel list ..."
+msgstr ""
+
+msgid "Channellist was installed successfully"
+msgstr ""
+
+msgid "Error while loading channellist"
+msgstr ""
+
+msgid "Changes Done"
+msgstr ""
+
+msgid "Please check your Timers!"
+msgstr ""
+
+msgid "Changes failed"
+msgstr ""
+
+msgid "Reloaded default channel list"
+msgstr ""
+
+msgid "Error loading default channel list"
+msgstr ""
+
+msgid "Delete channel list?"
+msgstr ""
+
+msgid "Channel lists functions"
+msgstr ""
+
+msgid "Import a channellist"
+msgstr ""
+
+msgid "Export current channellist"
+msgstr ""
+
+msgid "Import favourites list"
+msgstr ""
+
+msgid "Export current favourites list"
+msgstr ""
+
+msgid "Import channels from ReelBox Avantgarde"
+msgstr ""
+
+msgid "Scanning channels on DVB-T/C/S and S2 Tuners"
+msgstr ""
+
+msgid "Channel Scan"
+msgstr ""

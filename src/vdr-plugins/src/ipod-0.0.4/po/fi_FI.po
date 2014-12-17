@@ -1,0 +1,58 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ipod\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-10-14 20:20+0200\n"
+"PO-Revision-Date: 2008-10-08 11:35+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ipod not found."
+msgstr ""
+
+msgid "Add recursivly?"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Playlist"
+msgstr ""
+
+msgid "Add to playlist"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Delete entry?"
+msgstr ""
+
+msgid "Clear playlist?"
+msgstr ""
+
+msgid "Mount Script"
+msgstr ""
+
+msgid "Mount Point"
+msgstr ""
+
+msgid "mp3 Plugin's Playlist Path"
+msgstr ""

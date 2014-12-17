@@ -1,0 +1,689 @@
+diff -Nur mp3-0.9.0/common.h mp3-0.9.0jau01/common.h
+--- mp3-0.9.0/common.h	2002-08-04 12:26:54.000000000 +0200
++++ mp3-0.9.0jau01/common.h	2004-05-28 05:14:56.021809616 +0200
+@@ -30,4 +30,8 @@
+ #define d(x) ; 
+ #endif
+ 
++#define MSG_ERROR(x)	Skins.Message(mtError,x)
++#define MSG_INFO(x)	Skins.Message(mtInfo,x)
++#define MSG_STATUS(x)	Skins.Message(mtStatus,x)
++
+ #endif //___COMMON_H
+diff -Nur mp3-0.9.0/config.h mp3-0.9.0jau01/config.h
+--- mp3-0.9.0/config.h	2002-08-11 22:12:50.000000000 +0200
++++ mp3-0.9.0jau01/config.h	2004-05-28 05:29:46.478439632 +0200
+@@ -110,7 +110,9 @@
+ 
+ // Uncomment to enable generic debugging messages to the console. This may slow
+ // down operation in some cases.
+-#define DEBUG
++#ifndef DEBUG
++//	#define DEBUG
++#endif
+ 
+ // Uncomment to disable audio output to the dvb driver. The audio data is
+ // simply discarded.
+diff -Nur mp3-0.9.0/decoder-snd.c mp3-0.9.0jau01/decoder-snd.c
+--- mp3-0.9.0/decoder-snd.c	2004-05-01 15:58:58.000000000 +0200
++++ mp3-0.9.0jau01/decoder-snd.c	2004-05-28 05:18:08.895488360 +0200
+@@ -648,9 +648,7 @@
+   bool res=false;
+   
+   if(Interface) {
+-    Interface->Open(0,-1);
+-    Interface->Status(tr("Remote CDDB lookup..."));
+-    Interface->Flush();
++    MSG_STATUS(tr("Remote CDDB lookup..."));
+     }
+ 
+   delete net; net=new cNet(16*1024,CDDB_TOUT,CDDB_TOUT);
+@@ -709,10 +707,6 @@
+ 
+   delete net; net=0;
+ 
+-  if(Interface) {
+-    Interface->Close();
+-    }
+-
+   return res;
+ }
+ 
+diff -Nur mp3-0.9.0/menu-mplayer.c mp3-0.9.0jau01/menu-mplayer.c
+--- mp3-0.9.0/menu-mplayer.c	2004-05-01 16:05:51.000000000 +0200
++++ mp3-0.9.0jau01/menu-mplayer.c	2004-05-28 05:19:35.270357384 +0200
+@@ -62,6 +62,7 @@
+   bool visible, modeOnly, haveBeauty;
+   time_t timeoutShow;
+   int lastCurrent, lastTotal, osdPos;
++  cSkinDisplayReplay *displayReplay;
+   //
+   bool jumpactive, jumphide, jumpmode;
+   int jumpval;
+@@ -107,12 +108,17 @@
+   if(symD != osdD) haveBeauty=true;
+   d(printf("mplayer: beauty patch %sdetected\n",haveBeauty?"":"NOT "))
+ #endif
++  displayReplay = NULL;
+ }
+ 
+ cMPlayerControl::~cMPlayerControl()
+ {
+   Stop();
+   cStatus::MsgReplaying(this, NULL);
++  if(displayReplay) {
++	    delete displayReplay;
++	    displayReplay = NULL;
++  }
+ }
+ 
+ void cMPlayerControl::SetFilename(const char *FileName)
+@@ -138,21 +144,17 @@
+ void cMPlayerControl::Hide(void)
+ {
+   if(visible) {
+-    Interface->Close();
++    if(displayReplay) {
++	    delete displayReplay;
++	    displayReplay = NULL;
++    }
+     needsFastResponse=visible=modeOnly=false;
+     }
+ }
+ 
+ void cMPlayerControl::DisplayAtBottom(const char *s)
+ {
+-  const int p=modeOnly ? 0 : 2;
+-  if(s) {
+-    const int d=max(Width()-cOsd::WidthInCells(s),0) / 2;
+-    if(modeOnly) Interface->Fill(0, p, Interface->Width(), 1, clrTransparent);
+-    Interface->Write(d, p, s);
+-    }
+-  else
+-    Interface->Fill(12, p, Width() - 22, 1, clrBackground);
++  displayReplay->SetJump(s);
+ }
+ 
+ void cMPlayerControl::ShowProgress(void)
+@@ -162,32 +164,21 @@
+   if(GetIndex(Current,Total) && Total>0) {
+     bool flush=false;
+     if(!visible) {
+-      Interface->Open(Setup.OSDwidth,osdPos-3);
+-      Interface->Clear();
+-      if(osdPos<0) Interface->Fill(0,3,Interface->Width(),-osdPos,clrTransparent);
++      displayReplay = Skins.Current()->DisplayReplay(false);
+       needsFastResponse=visible=true;
+       if(fileName) {
+-        int n=strlen(fileName);
+-        if(n>Width()) {
+-          n=n-Width()+4; if(n<0) n=0;
+-          char str[72];
+-          snprintf(str,sizeof(str),"... %s",fileName+n);
+-          Interface->Write(0,0,str);
+-          }
+-        else Interface->Write(0,0,fileName);
++        displayReplay->SetTitle(fileName);
+         }
+       lastCurrent=lastTotal=-1;
+       flush=true;
+       }
+ 
+     if(Current!=lastCurrent) {
+-       cProgressBar ProgressBar(Width() * cOsd::CellWidth(), cOsd::LineHeight(), Current, Total);
+-       Interface->SetBitmap(0, cOsd::LineHeight(), ProgressBar);
+-       Interface->Write(0,2,IndexToHMSF(Current));
+-       flush=true;
++       displayReplay->SetTotal(IndexToHMSF(Total));
++       displayReplay->SetProgress(Current, Total);
++       displayReplay->SetCurrent(IndexToHMSF(Current));
+        lastCurrent=Current; lastTotal=Total;
+        }
+-    if(flush) Interface->Flush();
+     ShowMode();
+     }
+ }
+@@ -207,14 +198,13 @@
+ 
+        if(!visible) {
+          if(NormalPlay) return;
+-         Interface->Open(0,osdPos-1);
++         displayReplay = Skins.Current()->DisplayReplay(true);
+          visible=modeOnly=true;
+          }
+ 
+        if(modeOnly && !timeoutShow && NormalPlay) timeoutShow=time(0)+SELECTHIDE_TIMEOUT;
+ 
+        char buf[16];
+-       eDvbFont OldFont;
+ #ifdef HAVE_BEAUTYPATCH
+        if(haveBeauty) {
+          int i=0;
+@@ -226,23 +216,13 @@
+          i++;
+          if(!(Width()&1)) buf[i++]=' ';
+          buf[i]=0;
+-         OldFont = Interface->SetFont(fontSym);
+          }
+        else {
+ #endif
+-         const char *Mode;
+-         if (Speed == -1) Mode = Play    ? "  >  " : " ||  ";
+-         else if (Play)   Mode = Forward ? " X>> " : " <<X ";
+-         else             Mode = Forward ? " X|> " : " <|X ";
+-         strn0cpy(buf, Mode, sizeof(buf));
+-         char *p = strchr(buf, 'X');
+-         if(p) *p = Speed > 0 ? '1' + Speed - 1 : ' ';
+-         OldFont = Interface->SetFont(fontFix);
++         displayReplay->SetMode(Play, Forward, Speed);
+ #ifdef HAVE_BEAUTYPATCH
+          }
+ #endif
+-       DisplayAtBottom(buf);
+-       Interface->SetFont(OldFont);
+        }
+     }
+ }
+diff -Nur mp3-0.9.0/menu.c mp3-0.9.0jau01/menu.c
+--- mp3-0.9.0/menu.c	2004-05-01 18:44:30.000000000 +0200
++++ mp3-0.9.0jau01/menu.c	2004-05-28 05:17:35.725530960 +0200
+@@ -107,8 +107,7 @@
+ bool cMenuBrowse::LoadDir(const char *dir)
+ {
+   Clear();
+-  Interface->Status(tr("Scanning directory..."));
+-  Interface->Flush();
++  MSG_STATUS(tr("Scanning directory..."));
+   if(!list->Load(source,dir)) return false;
+ 
+   cFileObj *item=list->First();
+@@ -132,7 +131,7 @@
+     return true;
+     }
+   free(ncur);
+-  Interface->Error(tr("Error scanning directory!"));
++  MSG_ERROR(tr("Error scanning directory!"));
+   return false;
+ }
+ 
+@@ -265,7 +264,7 @@
+ {
+   cFileSource *src=selected ? selected:current;
+   if(src->NeedsMount() && !src->Status()) {
+-    Interface->Error(tr("Selected source is not mounted!"));
++    MSG_ERROR(tr("Selected source is not mounted!"));
+     return false;
+     }
+   return true;
+@@ -277,7 +276,7 @@
+ 
+   cFileSource *src = ((cMenuSourceItem *)Get(Current()))->Source();
+   if(src->NeedsMount() && !src->Status()) {
+-    if(!DoMount(src)) Interface->Info(tr("Mount failed!"));
++    if(!DoMount(src)) MSG_ERROR(tr("Mount failed!"));
+     }
+   if(!src->NeedsMount() || src->Status()) {
+     selected=src;
+@@ -292,8 +291,8 @@
+ 
+   cFileSource *src = ((cMenuSourceItem *)Get(Current()))->Source();
+   if(src->NeedsMount() && !src->Status()) {
+-    if(DoMount(src)) Interface->Info(tr("Mount succeeded"));
+-    else Interface->Error(tr("Mount failed!"));
++    if(DoMount(src)) MSG_INFO(tr("Mount succeeded"));
++    else MSG_ERROR(tr("Mount failed!"));
+     }
+   return osContinue;
+ }
+@@ -307,8 +306,8 @@
+     bool res=src->Unmount();
+     RefreshCurrent();
+     DisplayCurrent(true);
+-    if(res) Interface->Info(tr("Unmount succeeded"));
+-    else Interface->Error(tr("Unmount failed!"));
++    if(res) MSG_INFO(tr("Unmount succeeded"));
++    else MSG_ERROR(tr("Unmount failed!"));
+     }
+   return osContinue;
+ }
+@@ -322,7 +321,7 @@
+     bool res=src->Eject();
+     RefreshCurrent();
+     DisplayCurrent(true);
+-    if(!res) Interface->Error(tr("Eject failed!"));
++    if(!res) MSG_ERROR(tr("Eject failed!"));
+     }
+   return osContinue;
+ }
+@@ -346,15 +345,4 @@
+   return state;
+ }
+ 
+-// --- cProgressBar ------------------------------------------------------------
+-
+-cProgressBar::cProgressBar(int Width, int Height, int Current, int Total)
+-:cBitmap(Width, Height, 2)
+-{
+-  if(Total > 0) {
+-    int p = Current * width / Total;;
+-    Fill(0, 0, p, Height - 1, clrGreen);
+-    Fill(p + 1, 0, Width - 1, Height - 1, clrWhite);
+-    }
+-}
+ 
+diff -Nur mp3-0.9.0/menu.h mp3-0.9.0jau01/menu.h
+--- mp3-0.9.0/menu.h	2004-05-01 16:04:22.000000000 +0200
++++ mp3-0.9.0jau01/menu.h	2004-05-28 05:04:34.996219856 +0200
+@@ -23,6 +23,8 @@
+ #define ___MENU_H
+ 
+ #include <vdr/osd.h>
++#include <vdr/menu.h>
++#include <vdr/interface.h>
+ 
+ // ----------------------------------------------------------------
+ 
+@@ -77,11 +79,4 @@
+   static cFileSource *GetSelected(void) { return selected; }
+   };
+ 
+-// ----------------------------------------------------------------
+-
+-class cProgressBar : public cBitmap {
+-public:
+-  cProgressBar(int Width, int Height, int Current, int Total);
+-  };
+-
+ #endif //___MENU_H
+diff -Nur mp3-0.9.0/mp3.c mp3-0.9.0jau01/mp3.c
+--- mp3-0.9.0/mp3.c	2004-05-01 17:33:50.000000000 +0200
++++ mp3-0.9.0jau01/mp3.c	2004-05-28 05:45:24.798793256 +0200
+@@ -26,6 +26,8 @@
+ #include <vdr/menuitems.h>
+ #include <vdr/status.h>
+ #include <vdr/plugin.h>
++#include <vdr/interface.h>
++#include <vdr/skins.h>
+ 
+ #include "common.h"
+ #include "setup.h"
+@@ -131,6 +133,11 @@
+   int flip, flipint, top;
+   int lastIndex, lastTotal, lastTop;
+   int framesPerSecond;
++
++  cSkinDisplayReplay *displayReplay;
++  cOsd *displayBig;
++  const cFont *fontList;
++
+ //
+   bool jumpactive, jumphide, jumpsecs;
+   int jumpmm;
+@@ -164,6 +171,9 @@
+   lastMode=0;
+   framesPerSecond=SecondsToFrames(1);
+   plist=0; // the player is responsible to delete playlist
++  displayReplay = NULL;
++  displayBig    = NULL;
++  fontList = cFont::GetFont(fontOsd);
+ }
+ 
+ cMP3Control::~cMP3Control()
+@@ -172,6 +182,14 @@
+   Hide();
+   Stop();
+   cStatus::MsgReplaying(this, NULL);
++  if(displayReplay) {
++	    delete displayReplay;
++	    displayReplay = NULL;
++  }
++  if(displayBig) {
++	    delete displayBig;
++	    displayBig = NULL;
++  }
+ }
+ 
+ void cMP3Control::Stop(void)
+@@ -209,7 +227,14 @@
+ void cMP3Control::Hide(void)
+ {
+   if(visible) {
+-    Interface->Close();
++    if(displayReplay) {
++	    delete displayReplay;
++	    displayReplay = NULL;
++    }
++    if(displayBig) {
++	    delete displayBig;
++	    displayBig = NULL;
++    }
+     needsFastResponse=visible=bigwin=false;
+     }
+ }
+@@ -217,7 +242,7 @@
+ #define CTAB    11 // some tabbing values for the progress display
+ #define CTAB2   5
+ 
+-#define PL_ROWS (Setup.OSDheight-3)
++#define PL_ROWS (Setup.OSDHeight-fontList->Height())
+ 
+ void cMP3Control::ShowProgress(bool open, bool bigWin)
+ {
+@@ -226,12 +251,12 @@
+   if(player->GetIndex(index,total) && total>=0) {
+     index/=framesPerSecond; total/=framesPerSecond;
+     if(!visible && open) {
+-      static int cols[] = { 5,0 };
+-      Interface->Open(Setup.OSDwidth, bigWin?0:-2);
+-      Interface->SetCols(cols);
+       bigwin=bigWin;
++      if(bigwin) {
++      	displayBig = cOsdProvider::NewOsd(0,0);
++      }
++      displayReplay = Skins.Current()->DisplayReplay(false);
+       needsFastResponse=visible=true;
+-      Interface->Clear();
+       fliptime=listtime=0; flipint=0; flip=-1; top=lastTop=-1; lastIndex=lastTotal=-1;
+       delete lastMode; lastMode=0;
+       }
+@@ -256,33 +281,27 @@
+ 
+       if(!selecting && changed) {
+         char *buf=0;
+-        asprintf(&buf,"(%d/%d)",mode->Num,mode->MaxNum);
+-        Interface->Fill(0,-2,CTAB,1,clrBackground);
+-        Interface->Write(0,-2,buf);
++	char buf2[10];
++	buf2[0]=0;
++        if(mode->Loop) strncat(buf2, "L ", 10);
++        if(mode->Shuffle) strncat(buf2, "S ", 10);
++        if(mode->Artist[0])
++		asprintf(&buf,"%s - %s (%d/%d) %s", 
++			mode->Title, mode->Artist, mode->Num,mode->MaxNum, buf2);
++	else
++		asprintf(&buf,"%s (%d/%d) %s", 
++			mode->Title, mode->Num,mode->MaxNum, buf2);
++        displayReplay->SetTitle(buf);
+         free(buf);
+         flush=true;
+         }
+ 
+-      if(!lastMode || mode->Loop!=lastMode->Loop) {
+-        if(mode->Loop) Interface->Write(-4,-1,"L",clrBlack,clrYellow);
+-        else Interface->Fill(-4,-1,2,1,clrBackground);
+-        flush=true;
+-        }
+-      if(!lastMode || mode->Shuffle!=lastMode->Shuffle) {
+-        if(mode->Shuffle) Interface->Write(-2,-1,"S",clrWhite,clrRed);
+-        else Interface->Fill(-2,-1,2,1,clrBackground);
+-        flush=true;
+-        }
+-
+       if(index!=lastIndex || total!=lastTotal) {
+         if(total>0) {
+-          cProgressBar ProgressBar((Width()-CTAB-CTAB2)*cOsd::CellWidth(), cOsd::LineHeight(), index, total);
+-          Interface->SetBitmap(CTAB*cOsd::CellWidth(), (abs(Height())-1)*cOsd::LineHeight(), ProgressBar);
++	  displayReplay->SetTotal(IndexToHMSF(total));
++          displayReplay->SetProgress(index, total);
+           }
+-        char *buf;
+-        asprintf(&buf,total?"%02d:%02d/%02d:%02d":"%02d:%02d",index/60,index%60,total/60,total%60);
+-        Interface->Write(0,-1,buf);
+-        free(buf);
++	displayReplay->SetCurrent(IndexToHMSF(index));
+         flush=true;
+         }
+ 
+@@ -306,17 +325,13 @@
+ 	        flip=0;
+ 	        // fall through
+ 	      case 0:
+-	        asprintf(&buf,mode->Artist[0]?"%s - %s":"%s",mode->Title,mode->Artist);
+-	        flipint=6;
+-	        break;
+-	      case 1:
+                 if(mode->Album[0]) {
+       	          asprintf(&buf,mode->Year>0?"from: %s (%d)":"from: %s",mode->Album,mode->Year);
+ 	          flipint=4;
+ 	          }
+                 else fliptime=0;
+                 break;
+-	      case 2:
++	      case 1:
+                 if(mode->MaxBitrate>0)
+                   asprintf(&buf,"%.1f kHz, %d-%d kbps, %s",mode->SampleFreq/1000.0,mode->Bitrate/1000,mode->MaxBitrate/1000,mode->SMode);
+                 else
+@@ -328,7 +343,7 @@
+             }
+           }
+ 
+-        if(bigwin && mode->PlayList) {
++        if(bigwin && displayBig && mode->PlayList) {
+           bool all=(top!=lastTop || changed);
+           if(all || time(0)>listtime+2) {
+             int num=(top>0 && mode->Num==lastMode->Num) ? top : mode->Num - PL_ROWS/2;
+@@ -343,12 +358,12 @@
+                 asprintf(&buf,si->Artist?"%d.\t%s - %s":"%d.\t%s",num,si->Title,si->Artist);
+               else
+                 asprintf(&buf,"%d.\t%s",num,song->Name());
+-              eDvbColor fg=clrWhite, bg=clrBackground;
++              int fg=clrWhite, bg=clrTransparent;
+               int hash=MakeHash(buf);
+               if(num==mode->Num) { fg=clrBlack; bg=clrCyan; hash=(hash^77) + 23; }
+               if(all || hash!=hashlist[i]) {
+-                Interface->Fill(0,i,Setup.OSDwidth,1,clrBackground);
+-                Interface->WriteText(0,i,buf,fg,bg);
++                displayBig->DrawRectangle(0,i,Setup.OSDWidth,i+1,clrTransparent);
++                displayBig->DrawText(0,i,buf,fg,bg,fontList);
+                 flush=true;
+                 hashlist[i]=hash;
+                 }
+@@ -359,8 +374,7 @@
+             }
+           }
+         }
+-
+-      if(flush) Interface->Flush();
++        if(flush && displayBig) displayBig->Flush();
+       }
+ 
+     lastIndex=index; lastTotal=total;
+@@ -370,8 +384,7 @@
+ 
+ void cMP3Control::DisplayInfo(const char *s)
+ {
+-  Interface->Fill(CTAB,-2,Width()-CTAB,1,clrBackground);
+-  if(s) Interface->Write(CTAB,-2,s);
++  displayReplay->SetJump(s);
+ }
+ 
+ void cMP3Control::JumpDisplay(void)
+@@ -496,9 +509,7 @@
+                      selecting=true; lastkeytime=time_ms();
+                      char *buf=0;
+                      asprintf(&buf,"(%d-/%d)",number,lastMode->MaxNum);
+-                     Interface->Fill(0,-2,CTAB,1,clrBackground);
+-                     Interface->Write(0,-2,buf);
+-                     Interface->Flush();
++        	     displayReplay->SetTitle(buf);
+                      free(buf);
+                      break;
+                      }
+@@ -593,7 +604,7 @@
+   char *buf=0;
+   asprintf(&buf,"%s:\t%s",name,text?text:"");
+   cOsdItem *item = new cOsdItem(buf,osBack);
+-  item->SetColor(clrWhite, clrBackground);
++  //item->SetColor(clrWhite, clrTransparent);
+   free(buf);
+   Add(item); return item;
+ }
+@@ -756,8 +767,7 @@
+ {
+   cFileObj *item=cMenuInstantBrowse::GetSelected();
+   if(item) {
+-    Interface->Status(tr("Scanning directory..."));
+-    Interface->Flush();
++    MSG_STATUS(tr("Scanning directory..."));
+     cInstantPlayList *newpl=new cInstantPlayList(item);
+     if(newpl->Load()) {
+       if(newpl->Count()) {
+@@ -780,9 +790,9 @@
+           Refresh(); Display();
+           }
+         }
+-      else Interface->Error(tr("Empty directory!"));
++      else MSG_ERROR(tr("Empty directory!"));
+       }
+-    else Interface->Error(tr("Error scanning directory!"));
++    else MSG_ERROR(tr("Error scanning directory!"));
+     delete newpl;
+     }
+ }
+@@ -869,7 +879,7 @@
+   char *buf=NULL;
+   asprintf(&buf,"%s\t%s",tr("Old name:"),oldname);
+   cOsdItem *old = new cOsdItem(buf,osContinue);
+-  old->SetColor(clrWhite, clrBackground);
++  // old->SetColor(clrWhite, clrTransparent);
+   Add(old);
+   free(buf);
+ 
+@@ -972,8 +982,7 @@
+ void cMenuMP3::ScanLists(void)
+ {
+   Clear();
+-  Interface->Status(tr("Scanning playlists..."));
+-  Interface->Flush();
++  MSG_STATUS(tr("Scanning playlists..."));
+   if(lists->Load(MP3Sources.GetSource())) {
+     cPlayList *plist=lists->First();
+     while(plist) {
+@@ -981,7 +990,7 @@
+       plist=lists->Next(plist);
+       }
+     }
+-  else Interface->Error(tr("Error scanning playlists!"));
++  else MSG_ERROR(tr("Error scanning playlists!"));
+ }
+ 
+ eOSState cMenuMP3::Delete(void)
+@@ -995,7 +1004,7 @@
+         cOsdMenu::Del(Current());
+         Display();
+         }
+-      else Interface->Error(tr("Error deleting playlist!"));
++      else MSG_ERROR(tr("Error deleting playlist!"));
+       }
+     }
+   return osContinue;
+@@ -1018,7 +1027,7 @@
+     isyslog("MP3: playlist %s added", plist->Name());
+     return AddSubMenu(new cMenuPlayList(plist));
+     }
+-  Interface->Error(tr("Error creating playlist!"));
++  MSG_ERROR(tr("Error creating playlist!"));
+   delete plist;
+   return osContinue;
+ }
+@@ -1039,7 +1048,7 @@
+       RefreshCurrent();
+       DisplayCurrent(true);
+       }
+-    else Interface->Error(tr("Error renaming playlist!"));
++    else MSG_ERROR(tr("Error renaming playlist!"));
+     }
+   return osContinue;
+ }
+@@ -1049,12 +1058,12 @@
+   if(HasSubMenu() || Count() == 0) return osContinue;
+ 
+   cPlayList *plist = ((cMenuMP3Item *)Get(Current()))->List();
+-  if(!plist->Load()) Interface->Error(tr("Error loading playlist!"));
++  if(!plist->Load()) MSG_ERROR(tr("Error loading playlist!"));
+   else if(!plist->IsWinAmp()) {
+     isyslog("MP3: editing playlist %s", plist->Name());
+     return AddSubMenu(new cMenuPlayList(plist));
+     }
+-  else Interface->Error(tr("Can't edit a WinAmp playlist!"));
++  else MSG_ERROR(tr("Can't edit a WinAmp playlist!"));
+   return osContinue;
+ }
+ 
+@@ -1062,8 +1071,7 @@
+ {
+   if(HasSubMenu() || Count() == 0) return osContinue;
+ 
+-  Interface->Status(tr("Loading playlist..."));
+-  Interface->Flush();
++  MSG_STATUS(tr("Loading playlist..."));
+   cPlayList *newpl=new cPlayList(((cMenuMP3Item *)Get(Current()))->List());
+   if(newpl->Load() && newpl->Count()) {
+     isyslog("mp3: playback started with playlist %s", newpl->Name());
+@@ -1071,7 +1079,7 @@
+     return osEnd;
+     }
+   delete newpl;
+-  Interface->Error(tr("Error loading playlist!"));
++  MSG_ERROR(tr("Error loading playlist!"));
+   return osContinue;
+ }
+ 
+@@ -1104,8 +1112,7 @@
+   instanting=false;
+   cFileObj *item=cMenuInstantBrowse::GetSelected();
+   if(item) {
+-    Interface->Status(tr("Building playlist..."));
+-    Interface->Flush();
++    MSG_STATUS(tr("Building playlist..."));
+     cInstantPlayList *newpl = new cInstantPlayList(item);
+     if(newpl->Load() && newpl->Count()) {
+       isyslog("mp3: playback started with instant playlist %s", newpl->Name());
+@@ -1113,7 +1120,7 @@
+       return osEnd;
+       }
+     delete newpl;
+-    Interface->Error(tr("Error building playlist!"));
++    MSG_ERROR(tr("Error building playlist!"));
+     }
+   return osContinue;
+ }
+diff -Nur mp3-0.9.0/player-mp3.c mp3-0.9.0jau01/player-mp3.c
+--- mp3-0.9.0/player-mp3.c	2004-05-01 17:30:12.000000000 +0200
++++ mp3-0.9.0jau01/player-mp3.c	2004-05-28 06:03:01.518147496 +0200
+@@ -1218,7 +1218,9 @@
+           playing=0;
+           if(decoder) { decoder->Stop(); decoder=0; }
+           levelgood=false;
++#ifdef DEBUG
+           out->Stats(); if(haslevel) norm.Stats();
++#endif
+           if(state==msStop) SetPlayMode(pmStopped);
+           break;
+         case msWait:
+diff -Nur mp3-0.9.0/stream.c mp3-0.9.0jau01/stream.c
+--- mp3-0.9.0/stream.c	2004-05-01 22:01:14.000000000 +0200
++++ mp3-0.9.0jau01/stream.c	2004-05-28 05:15:32.439273320 +0200
+@@ -370,10 +370,8 @@
+   free(p); free(h);  
+ 
+   cc++;
+-  if(cc==1 && Interface) {
+-    Interface->Open(0,-1);
+-    Interface->Status(tr("Connecting to stream server ..."));
+-    Interface->Flush();
++  if(cc==1) {
++    MSG_STATUS(tr("Connecting to stream server ..."));
+     }
+ 
+   if(net->Connect(MP3Setup.UseProxy ? MP3Setup.ProxyHost:host , MP3Setup.UseProxy ? MP3Setup.ProxyPort:port)) {
+@@ -381,9 +379,6 @@
+     if(net->Puts(buff)>0) res=GetHTTPResponse();
+     }
+ 
+-  if(cc==1 && Interface) {
+-    Interface->Close();
+-    }
+   cc--;
+   return res;
+ }

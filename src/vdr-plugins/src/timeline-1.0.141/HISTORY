@@ -1,0 +1,57 @@
+VDR Plugin 'timeline' Revision History
+--------------------------------------
+
+2003-08-03: Version 0.0.1
+
+- Initial revision.
+
+2003-08-04: Version 0.1.1
+
+- First public release - working
+
+2003-08-05: Version 0.2.0
+
+- added numbering of timers
+- added thread for blinking current recording
+- enhanced thread for alternating display (required semaphores/mutex)
+
+2003-08-05: Version 0.2.1
+
+- collision list now uses only one color
+
+2003-08-05: Version 0.2.2
+
+- blinker was broken
+- inactiv timers are now ignored by collision check
+  (but not by timeline)
+- multi device support was not 100% correct
+
+2003-08-05: Version 0.2.3
+
+- added another semaphore for blinker
+
+2003-08-06: Version 0.2.4
+
+- timer was still shown if no timer was present
+- "today" crash fixed
+
+2003-09-08: Version 0.8.0
+
+- another strange timer usage found and algo modified
+- support for repeating timers added
+- conflict algo improved
+- timeline output modified - multiline output added
+- priority output for conflicts and timeline added
+- time output format changed
+
+2003-09-08: Version 0.8.1
+
+- layout calculation was wrong with more than 2 timeline entries
+- output prio of 2nd timers where wrong (was prio of 1st)
+- output of month was wrong - +1 required
+
+2006-06-18: Version 1.0.141
+
+- official VDR 1.4.1 version
+- introduced new version number schema: last number is minimum VDR API version
+

@@ -1,0 +1,286 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-reelbox\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-09 12:08+0200\n"
+"PO-Revision-Date: 2011-09-07 18:33+0100\n"
+"Last-Translator: TechNL <technl@gmx.net>\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "brightness"
+msgstr "helderheid"
+
+msgid "contrast"
+msgstr "contrast"
+
+msgid "colour"
+msgstr "kleur"
+
+msgid "sharpness"
+msgstr "scherpte"
+
+msgid "gamma cor."
+msgstr "gamma correctie"
+
+msgid "flicker"
+msgstr "flicker"
+
+msgid "Reset to default"
+msgstr "terug standaard instelling"
+
+msgid "Picture Settings"
+msgstr "Beeld instellingen"
+
+msgid "Fill to Screen"
+msgstr "Schermvullend"
+
+msgid "Fill to Aspect"
+msgstr "Zoom"
+
+msgid "Crop to Fill"
+msgstr "Origineel"
+
+msgid "Setup - Video"
+msgstr "Instellingen - Video"
+
+msgid "SDTV only"
+msgstr "alleen SDTV"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid "Progressive"
+msgstr "Progressief"
+
+msgid "Interlaced"
+msgstr "Interlaced"
+
+msgid "Maximum"
+msgstr "Maximaal"
+
+msgid "Media resolution"
+msgstr "Media resolutie"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Always on"
+msgstr "Altijd aan"
+
+msgid "Always off"
+msgstr "Altijd uit"
+
+msgid "On"
+msgstr "Aan"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "SCART"
+msgstr "SCART"
+
+msgid "Mini-DIN"
+msgstr "Mini-DIN"
+
+msgid "Analog+digital"
+msgstr "Analoog en digitaal"
+
+msgid "Experts"
+msgstr "Expert"
+
+msgid "Video Settings"
+msgstr "Video instellingen"
+
+msgid "Use extension HD"
+msgstr "Gebruik HD uitbreiding module"
+
+msgid "Output"
+msgstr "Uitgang"
+
+msgid "Analog Output"
+msgstr "Analoge uitgang"
+
+msgid "Analog Port"
+msgstr "Analoge poort"
+
+msgid "Secondary Output"
+msgstr "Tweede uitgang"
+
+msgid "Switching Voltage"
+msgstr "Schakelspanning"
+
+msgid "Display Type"
+msgstr "Display type"
+
+msgid "Aspect Ratio"
+msgstr "Verhoudings controle"
+
+msgid "Resolution"
+msgstr "Resolutie"
+
+msgid "Refresh Rate"
+msgstr "Verversing graad"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressive/Interlaced"
+
+msgid "Deinterlacer for SDTV"
+msgstr "Deinterlacer voor SDTV"
+
+msgid "Dot by Dot"
+msgstr "Dot by dot"
+
+msgid "Resolution change"
+msgstr "Resolutie aanpassing"
+
+msgid "OSD scaling"
+msgstr "OSD schaal"
+
+msgid "Overscan"
+msgstr "Overscan"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Output mode"
+msgstr "Output mode"
+
+msgid "Anamorphic+WSS"
+msgstr "Anamorph+WSS"
+
+msgid "Anamorphic"
+msgstr "Anamorph"
+
+msgid "Manual"
+msgstr "Handmatig"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Beeld verhouding controle"
+
+msgid "Auto PAL50/PAL60"
+msgstr "Auto PAL50/PAL60"
+
+msgid "PAL50 only"
+msgstr "Alleen PAL50"
+
+msgid "NTSC only"
+msgstr "Alleen NTSC"
+
+msgid "Norm/Framerate"
+msgstr "Norm/framerate"
+
+msgid "At Startup"
+msgstr "Tijdens opstarten"
+
+msgid "Scart Voltage"
+msgstr "Scart spanning"
+
+msgid "Auto 75Hz+60Hz (VESA)"
+msgstr "Auto 75Hz+60Hz (VESA)"
+
+msgid "Auto 50Hz+60Hz (NON-VESA!)"
+msgstr "Auto 50Hz+60Hz (NON-VESA!)"
+
+msgid "Auto 67Hz+60Hz (NON-VESA!)"
+msgstr "Auto 67Hz+60Hz (NON-VESA!)"
+
+msgid "50Hz Only (NON-VESA!)"
+msgstr "50Hz Alleen (NON-VESA!)"
+
+msgid "60Hz Only (VESA)"
+msgstr "60Hz Alleen (VESA)"
+
+msgid "67Hz Only (NON-VESA!)"
+msgstr "67Hz Alleen (NON-VESA!)"
+
+msgid "75Hz Only (VESA)"
+msgstr "75Hz Alleen (VESA)"
+
+msgid "Framerate"
+msgstr "Framerate"
+
+msgid "no"
+msgstr "nee"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "Upscaling for SDTV"
+msgstr "Opscalen voor SDTV"
+
+msgid "Setup - Audio"
+msgstr "Instellingen - Audio"
+
+msgid "Audio Settings"
+msgstr "Audio instellingen"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Dolby Digitaal gebruiken"
+
+msgid " Output Dolby D/dts on"
+msgstr "Uitgang DD/DTS naar"
+
+msgid "S/P-DIF"
+msgstr "S/P-DIF"
+
+msgid " Output as"
+msgstr "Uitgang als"
+
+msgid "Stereo (PCM)"
+msgstr "Stereo (PCM)"
+
+msgid "bitstream (Dolby D)"
+msgstr "bitstream (Dolby D)"
+
+msgid "Soundcard"
+msgstr "Geluidskaart"
+
+msgid " Delay (1/100s)"
+msgstr "Vertraging (1/100s)"
+
+msgid "Analog Audio on"
+msgstr "Analoog geluid naar"
+
+msgid "TRS (3.5mm phone jack)"
+msgstr "TRS (3.5mm hoofdtelefoon aansluiting)"
+
+msgid "HDMI/SCART/RCA jack"
+msgstr "HDMI/Scart/tulp"
+
+msgid "Analog Mix"
+msgstr "Analoge mix"
+
+msgid "Restart ReelBox now? Please wait 2 minutes!"
+msgstr "Reelbox herstarten? wacht aub 2 minuten"
+
+#~ msgid "Reel"
+#~ msgstr "Reel"
+
+#~ msgid "Reel Lite"
+#~ msgstr "Reel-Lite"
+
+#, fuzzy
+#~ msgid " Delay Dolby D/dts"
+#~ msgstr "Vertraging DD/DTS"
+
+#~ msgid "Delay Stereo"
+#~ msgstr "Stereo vertraging"

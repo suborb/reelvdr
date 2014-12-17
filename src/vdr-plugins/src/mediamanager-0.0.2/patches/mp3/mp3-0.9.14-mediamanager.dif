@@ -1,0 +1,500 @@
+diff -urN mp3-0.9.14.orig/mediaservice.h mp3-0.9.14/mediaservice.h
+--- mp3-0.9.14.orig/mediaservice.h	1970-01-01 01:00:00.000000000 +0100
++++ mp3-0.9.14/mediaservice.h	2007-03-25 14:42:44.000000000 +0200
+@@ -0,0 +1,78 @@
++#ifndef _MEDIA_SERVICE_H
++#define _MEDIA_SERVICE_H
++
++#include <vdr/plugin.h>
++
++/* flags for MediaManager_Status_v1_0 */
++#define MEDIA_STATUS_REPLAY 	0x01
++#define MEDIA_STATUS_EJECTDISC	0x02
++#define MEDIA_STATUS_ACTIVE 	0x04
++#define MEDIA_STATUS_CRASHED	0x08
++
++#define MEDIA_MANAGER_REGISTER_ID	"MediaManager-Register-v1.0"
++#define MEDIA_MANAGER_ACTIVATE_ID	"MediaManager-Activate-v1.0"
++#define MEDIA_MANAGER_MAINMENU_ID	"MediaManager-Mainmenu-v1.0"
++#define MEDIA_MANAGER_STATUS_ID 	"MediaManager-Status-v1.0"
++#define MEDIA_MANAGER_PLUGIN		"mediamanager"
++
++enum eMediaType {
++	mtInvalid	= -1,
++	mtNoDisc	= 0,
++	mtBlank 	= 1,
++	mtAudio 	= 2,
++	mtVideoDvd	= 3,
++	mtSvcd		= 4,
++	mtVcd		= 5,
++	mtData		= 6,
++	mtVDRdata	= 7,
++	mtAudioData	= 8,
++	mtImageData = 9,
++	mtExternUse = 10
++};
++
++struct MediaManager_Register_v1_0 {
++	const char *PluginName;
++	const char *MainMenuEntry;
++	const char *Description;
++	eMediaType mediatype;
++	bool shouldmount;
++};
++
++struct MediaManager_Status_v1_0 {
++	bool set;
++	int flags;
++	bool isreplaying;
++	bool ejectdisc;
++	bool active;		/* read only */
++	bool crashed;
++};
++
++struct MediaManager_Activate_v1_0 {
++	bool on;
++	const char *device_file;
++	const char *mount_point;
++};
++
++struct MediaManager_Mainmenu_v1_0 {
++	cOsdObject *mainmenu;
++};
++
++class cMediaService {
++  private:
++	static cPlugin *manager;
++	static bool active;
++	static bool replaying;
++  public:
++	cMediaService(void);
++	~cMediaService(void);
++
++	void SetManager(cPlugin *Manager);
++
++	static bool HaveManager(void);
++	static void SetReplaying(bool Replaying);
++	static void SetActive(bool Active);
++	static bool IsReplaying(void);
++	static bool IsActive(void);
++	static void EjectDisc(void);
++};
++#endif
+diff -urN mp3-0.9.14.orig/mp3.c mp3-0.9.14/mp3.c
+--- mp3-0.9.14.orig/mp3.c	2006-01-08 15:17:05.000000000 +0100
++++ mp3-0.9.14/mp3.c	2007-04-07 14:49:59.000000000 +0200
+@@ -44,6 +44,7 @@
+ #include "decoder.h"
+ #include "i18n.h"
+ #include "version.h"
++#include "mediaservice.h"
+ 
+ #ifdef DEBUG
+ #include <mad.h>
+@@ -51,6 +52,72 @@
+ 
+ cFileSources MP3Sources;
+ 
++// --- cMediaService --------------------------------------------------------
++cPlugin *cMediaService::manager = NULL;
++bool cMediaService::active = false;
++bool cMediaService::replaying = false;
++
++cMediaService::cMediaService(void)
++{
++  manager = NULL;
++}
++
++cMediaService::~cMediaService(void)
++{
++  manager = NULL;
++}
++
++void cMediaService::SetManager(cPlugin *Manager)
++{
++  manager = Manager;
++}
++
++bool cMediaService::HaveManager(void)
++{
++  if(manager) return true;
++  return false;
++}
++
++void cMediaService::SetReplaying(bool Replaying)
++{
++  if(manager && active) {
++    MediaManager_Status_v1_0 st;
++    st.set = true;
++    st.flags = MEDIA_STATUS_REPLAY;
++    st.isreplaying = Replaying;
++    manager->Service(MEDIA_MANAGER_STATUS_ID, &st);
++    replaying = Replaying;
++    }
++   else
++     replaying = false;
++}
++
++void cMediaService::SetActive(bool Active)
++{
++  active = Active;
++}
++
++bool cMediaService::IsReplaying(void)
++{
++  return replaying;
++}
++
++bool cMediaService::IsActive(void)
++{
++  return active;
++}
++
++void cMediaService::EjectDisc(void)
++{
++  if(manager && active) {
++    MediaManager_Status_v1_0 st;
++    st.set = true;
++    st.flags = MEDIA_STATUS_EJECTDISC;
++    st.ejectdisc = true;
++    manager->Service(MEDIA_MANAGER_STATUS_ID, &st);
++    }
++}
++
+ // --- cMenuSetupMP3 --------------------------------------------------------
+ 
+ class cMenuSetupMP3 : public cMenuSetupPage {
+@@ -223,6 +290,7 @@
+   bool jumpactive, jumphide, jumpsecs;
+   int jumpmm;
+   //
++  static bool replaysFromMedia;
+   void ShowTimed(int Seconds=0);
+   void ShowProgress(bool open=false, bool bigWin=false);
+   void ShowStatus(bool force);
+@@ -242,9 +310,11 @@
+   virtual void Show(void) { ShowTimed(); }
+   virtual void Hide(void);
+   bool Visible(void) { return visible; }
+-  static bool SetPlayList(cPlayList *plist);
++  static bool SetPlayList(cPlayList *plist, bool FromMedia = false);
+   };
+ 
++bool cMP3Control::replaysFromMedia = false;
++
+ cMP3Control::cMP3Control(void)
+ :cControl(player=new cMP3Player)
+ {
+@@ -264,6 +334,8 @@
+ #else
+   cStatus::MsgReplaying(this,"MP3");
+ #endif
++  if(replaysFromMedia)
++    cMediaService::SetReplaying(true);
+ }
+ 
+ cMP3Control::~cMP3Control()
+@@ -280,12 +352,16 @@
+ #else
+   cStatus::MsgReplaying(this,0);
+ #endif
++  if(replaysFromMedia) {
++    cMediaService::SetReplaying(false);
++    replaysFromMedia = false;
++    }
+   delete player; player=0;
+   mgr->Halt();
+   mgr->Flush(); //XXX remove later
+ }
+ 
+-bool cMP3Control::SetPlayList(cPlayList *plist)
++bool cMP3Control::SetPlayList(cPlayList *plist, bool FromMedia)
+ {
+   bool res;
+   cControl *control=cControl::Control();
+@@ -293,11 +369,16 @@
+   if(control && typeid(*control)==typeid(cMP3Control)) {
+     // add songs to running playlist
+     mgr->Add(plist);
++	if(!replaysFromMedia && FromMedia) {
++      replaysFromMedia = FromMedia;
++      cMediaService::SetReplaying(true);
++	  }
+     res=true;
+     }
+   else {
+     mgr->Flush();
+     mgr->Add(plist);
++    replaysFromMedia = FromMedia;
+     cControl::Launch(new cMP3Control);
+     res=false;
+     }
+@@ -808,7 +889,10 @@
+     case kBack:
+       Hide();
+ #if VDRVERSNUM >= 10332
+-      cRemote::CallPlugin(i18n_name);
++      if(replaysFromMedia)
++        cRemote::CallPlugin(MEDIA_MANAGER_PLUGIN);
++      else
++        cRemote::CallPlugin(i18n_name);
+       return osBack;
+ #else
+       return osEnd;
+@@ -1489,6 +1573,111 @@
+   return state;
+ }
+ 
++// --- cMenuMP3Media --------------------------------------------------------
++
++class cMenuMP3Media : public cMenuBrowse {
++private:
++  cFileSource *source;
++  eOSState ID3Info(void);
++  eOSState Play(cFileObj *Item);
++  bool ejectrequest;
++public:
++  cMenuMP3Media(cFileSource *Source, const char *Title);
++  ~cMenuMP3Media(void);
++  virtual void SetButtons(void);
++  virtual eOSState ProcessKey(eKeys Key);
++  };
++
++cMenuMP3Media::cMenuMP3Media(cFileSource *Source, const char *Title)
++:cMenuBrowse(Source,true,true,Title)
++{
++  excl=excl_br; // defined in data-mp3.c
++  ejectrequest = false;
++  source=Source;
++  SetButtons();
++}
++
++cMenuMP3Media::~cMenuMP3Media(void)
++{
++  if(ejectrequest)
++    cMediaService::EjectDisc();
++
++}
++
++void cMenuMP3Media::SetButtons(void)
++{
++  SetHelp(tr("Button$Play"), currentdir?tr("Parent"):tr("Play all"),
++          cMediaService::IsReplaying()?0:tr("Button$Eject"), tr("ID3 info"));
++  Display();
++}
++
++eOSState cMenuMP3Media::ID3Info(void)
++{
++  cFileObj *item=CurrentItem();
++  if(item && item->Type()==otFile) {
++    cSong *song=new cSong(item);
++    cSongInfo *si;
++    if(song && (si=song->Info())) {
++      AddSubMenu(new cMenuID3Info(si,item->Path()));
++      }
++    delete song;
++    }
++  return osContinue;
++}
++
++eOSState cMenuMP3Media::Play(cFileObj *Item)
++{
++  if(Item) {
++    Status(tr("Building playlist..."));
++    cInstantPlayList *newpl = new cInstantPlayList(Item);
++    if(newpl->Load() && newpl->Count()) {
++      isyslog("mp3: playback started with instant playlist %s", newpl->Name());
++      cMP3Control::SetPlayList(newpl, true);
++	  if(MP3Setup.KeepSelect) { Status(0); SetButtons(); return osContinue; }
++      return osEnd;
++      }
++    Status(0);
++    delete newpl;
++    Error(tr("Error building playlist!"));
++    }
++
++  return osContinue;
++}
++
++eOSState cMenuMP3Media::ProcessKey(eKeys Key)
++{
++  eOSState state = cOsdMenu::ProcessKey(Key);
++  if(!cMediaService::IsActive())
++    return osEnd;
++
++  if(state==osUnknown) {
++     switch (Key) {
++       case kGreen:
++	     if(!currentdir) {
++           lastselect=new cFileObj(source,0,0,otBase);
++           return Play(lastselect);
++		 }
++		 break;
++       case kYellow:
++         if(!cMediaService::IsReplaying()) {
++           ejectrequest = true;
++           return osEnd;
++           }
++         break;
++       default: break;
++       }
++     }
++
++  if(state==osUnknown) {
++    state=cMenuBrowse::ProcessStdKey(Key,state);
++	if(state==osBack) {
++	  return Play(GetSelected());
++      }
++    }
++
++  return state;
++}
++
+ // --- PropagateImage ----------------------------------------------------------
+ 
+ void PropagateImage(const char *image)
+@@ -1504,6 +1693,11 @@
+ static const char *MAINMENUENTRY  = "MP3";
+ 
+ class cPluginMp3 : public cPlugin {
++private:
++  cMediaService *mediaservice;
++  char *managerentry;
++  cFileSource *disc;
++  int mp3SourcesCount;
+ public:
+   cPluginMp3(void);
+   virtual ~cPluginMp3();
+@@ -1513,14 +1707,14 @@
+   virtual bool ProcessArgs(int argc, char *argv[]);
+ #if VDRVERSNUM >= 10131
+   virtual bool Initialize(void);
+-#else
+-  virtual bool Start(void);
+ #endif
++  virtual bool Start(void);
+   virtual void Housekeeping(void);
+   virtual const char *MainMenuEntry(void);
+   virtual cOsdObject *MainMenuAction(void);
+   virtual cMenuSetupPage *SetupMenu(void);
+   virtual bool SetupParse(const char *Name, const char *Value);
++  virtual bool Service(const char *Id, void *Data);
+   };
+ 
+ cPluginMp3::cPluginMp3(void)
+@@ -1528,12 +1722,17 @@
+   // Initialize any member varaiables here.
+   // DON'T DO ANYTHING ELSE THAT MAY HAVE SIDE EFFECTS, REQUIRE GLOBAL
+   // VDR OBJECTS TO EXIST OR PRODUCE ANY OUTPUT!
++  mediaservice = NULL;
++  managerentry = NULL;
++  disc = NULL;
+ }
+ 
+ cPluginMp3::~cPluginMp3()
+ {
+   InfoCache.Save();
+   delete mgr;
++  free(managerentry);
++  delete mediaservice;
+ }
+ 
+ const char *cPluginMp3::CommandLineHelp(void)
+@@ -1613,20 +1812,39 @@
+ 
+ #if VDRVERSNUM >= 10131
+ bool cPluginMp3::Initialize(void)
+-#else
+-bool cPluginMp3::Start(void)
++{
++  return true;
++}
+ #endif
++bool cPluginMp3::Start(void)
+ {
+   if(!CheckVDRVersion(1,1,29,"mp3")) return false;
+   i18n_name=Name();
++  RegisterI18n(Phrases);
+   MP3Sources.Load(AddDirectory(ConfigDirectory(),"mp3sources.conf"));
+-  if(MP3Sources.Count()<1) {
++  mediaservice = new cMediaService();
++  cPlugin *manager = cPluginManager::GetPlugin(MEDIA_MANAGER_PLUGIN);
++  if(manager) {
++    MediaManager_Register_v1_0 reg;
++    asprintf(&managerentry,"%s%s","Media ",tr(MAINMENUENTRY));
++    reg.PluginName = i18n_name;
++    reg.MainMenuEntry = managerentry;
++    reg.Description = tr(DESCRIPTION);
++    reg.mediatype = mtAudioData;
++    reg.shouldmount = true;
++    if(manager->Service(MEDIA_MANAGER_REGISTER_ID, &reg)) {
++      mediaservice->SetManager(manager);
++      isyslog("mp3: Successful registered");
++    }
++  }
++
++  mp3SourcesCount = MP3Sources.Count();
++  if((mp3SourcesCount<1) && (!manager)) {
+      esyslog("ERROR: you should have defined at least one source in mp3sources.conf");
+      fprintf(stderr,"No source(s) defined in mp3sources.conf\n");
+      return false;
+      }
+   InfoCache.Load();
+-  RegisterI18n(Phrases);
+   mgr=new cPlayManager;
+   if(!mgr) {
+     esyslog("ERROR: creating playmanager failed");
+@@ -1645,11 +1863,17 @@
+ 
+ const char *cPluginMp3::MainMenuEntry(void)
+ {
+-  return MP3Setup.HideMainMenu ? 0 : tr(MAINMENUENTRY);
++  if(MP3Setup.HideMainMenu || (mp3SourcesCount < 1))
++    return NULL;
++
++  return tr(MAINMENUENTRY);
+ }
+ 
+ cOsdObject *cPluginMp3::MainMenuAction(void)
+ {
++  if(mp3SourcesCount < 1)
++    return NULL;
++
+   return new cMenuMP3;
+ }
+ 
+@@ -1658,6 +1882,34 @@
+   return new cMenuSetupMP3;
+ }
+ 
++bool cPluginMp3::Service(const char *Id, void *Data)
++{
++  // Handle custom service requests from other plugins
++  if(Data == NULL)
++    return false;
++
++  if(strcmp(Id, MEDIA_MANAGER_ACTIVATE_ID) == 0) {
++    struct MediaManager_Activate_v1_0 *act = (MediaManager_Activate_v1_0*)Data;
++    if(act->on) {
++      disc = new cFileSource(act->mount_point, "CDROM", false, "*.mp3/*.ogg/*.wav");
++      cMediaService::SetActive(true);
++      return true;
++    } else {
++      cMediaService::SetActive(false);
++      delete(disc);
++      disc = NULL;
++      return true;
++      }
++  } else if(strcmp(Id, MEDIA_MANAGER_MAINMENU_ID) == 0) {
++    if(cMediaService::IsActive()) {
++      MediaManager_Mainmenu_v1_0 *m = (MediaManager_Mainmenu_v1_0*)Data;
++      m->mainmenu = new cMenuMP3Media(disc, managerentry);
++      }
++      return true;
++  }
++  return false;
++}
++
+ bool cPluginMp3::SetupParse(const char *Name, const char *Value)
+ {
+   if      (!strcasecmp(Name, "InitLoopMode"))     MP3Setup.InitLoopMode    = atoi(Value);

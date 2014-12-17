@@ -1,0 +1,5 @@
+# 
+# Simply add a list of the channels in this file with the following format:
+#
+# <MediahighwayChannelId> <OtherChannelId> <ChannelName>
+#

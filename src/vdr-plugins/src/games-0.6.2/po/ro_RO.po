@@ -1,0 +1,50 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-games\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-18 12:20+0200\n"
+"PO-Revision-Date: 2009-02-27 16:20+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "OSD Games Collection"
+msgstr "Colectia de jocuri OSD"
+
+msgid "Games "
+msgstr "Jocuri"
+
+msgid "Games"
+msgstr "Jocuri"
+
+msgid "OSD Size"
+msgstr "Dimensiune OSD"
+
+msgid "X Position"
+msgstr "Pozitie X"
+
+msgid "Y Position"
+msgstr "Pozitie Y"
+
+msgid "Computer Skill"
+msgstr "Indemanare Computer"
+
+msgid "Key Repeat"
+msgstr "Tasta repetare"
+
+msgid "Off"
+msgstr "Oprit"
+
+msgid "On"
+msgstr "Pornit"

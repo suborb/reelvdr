@@ -1,0 +1,78 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare-Tododream. Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-09-15 23:55+0200\n"
+"PO-Revision-Date: 2008-09-26 12:18+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Smartbrowser"
+msgstr "Explorador simple"
+
+msgid "Webbrowser"
+msgstr "Explorador de WEB"
+
+msgid "KDE-Desktop"
+msgstr "Escritorio KDE"
+
+msgid "No browser available"
+msgstr ""
+
+msgid "CRT"
+msgstr "CRT"
+
+msgid "LCD (RGB)"
+msgstr "LCD (RGB)"
+
+msgid "LCD (BGR)"
+msgstr "LCD (BGR)"
+
+msgid "Simple Browser"
+msgstr "Explorador elemental"
+
+msgid "SNES-emu-only session"
+msgstr "Sesión SNES-sólo emu"
+
+msgid "Center"
+msgstr "Centrado"
+
+msgid "Full"
+msgstr "Completo"
+
+msgid "Mode"
+msgstr "Modo"
+
+msgid "start URL"
+msgstr "Iniciar URL"
+
+msgid "font size in menu"
+msgstr "Tamaño fuente en menú"
+
+msgid "font size"
+msgstr "Tamaño fuente"
+
+msgid "picture scaling (%)"
+msgstr "Escalado imágen (%)"
+
+msgid "transparency"
+msgstr "Transparencia"
+
+msgid "margin horizontal"
+msgstr "Márgen horizontal"
+
+msgid "margin vertical"
+msgstr "Márgen vertical"
+
+msgid "optimize for"
+msgstr "Optimizado para"
+
+msgid "scaling mode"
+msgstr "Modo escalado"

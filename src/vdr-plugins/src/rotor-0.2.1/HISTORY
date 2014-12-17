@@ -1,0 +1,75 @@
+VDR Plugin 'rotor' Revision History
+-----------------------------------
+
+2003-11-29: Version 0.0.1
+
+- Initial revision.
+
+2003-12-01: Version 0.0.2
+
+- The plugin now has an entry in the mainmenu
+- You can select the card, which is connected with the motor in the setup of the plugin
+- Diseqc-command repeat is configurable
+- Added signalstrength-display
+ 
+
+2003-12-05: Version 0.0.3
+
+- Now diseqc.conf is read, so you can select a satellite and the according position will be displayed (Goto/Store)
+- Added confirmation for store/recalc ("Are you sure?")
+
+2003-12-07: Version 0.0.4
+
+- Bigger osd
+- You can now tune to a transponder in order to see if you receive it
+
+2004-02-07: Version 0.0.5
+
+- Added GotoX-command(thanks to Francesco Perillo): Select the satellite by pressing left and right and then press OK to drive to the satelliteposition via GotoX
+- There is a patch for the GotoX-command in the patches directory, so you can use the GotoX-commands instead of diseqc.conf. You have to select "Use GotoX" in LNB-setup of vdr.('Use Diseqc' no)
+- Modified the recalc-command.
+- Added "Scan Transponder"-Button (vdr-1.3.x). So you can tune to a transponder by pressing "Scan Transponder" and vdr scans this transponder
+
+2004-05-10: Version 0.0.6
+
+- Added Russian translation (thanks to  Vyacheslav Dikonov)
+- Added French translation (thanks to Erik Arnaud)
+- LNB settings are now adjustable
+- Added info message on channel switch
+- GotoX on channel switch is now also possible via the plugin without patching vdr
+
+2004-11-27: Version 0.1.0
+
+- only vdr versions >= 1.3.7 are supported
+- Finished Russian translation (thanks to Vyacheslav Dikonov)
+- The plugin doesn't draw the osd itself anymore
+- Cleaned up code
+- Added a patch (based on the patch written by Christian Schuld) to separate newly found channels from different satellites and to separate radio/tv and encrypted/unencryted channels: vdr-1.3.17-Source-dependant-NewChannels-Insertation.diff
+- Known problems:
+  - if you get errors like "ERROR: Operation not permitted" please apply the patch: vdr-1.3.17-Fd_Frontend.diff
+
+2005-09-05: Version 0.1.1
+
+- for the plugin a patch for vdr is now mandatory: vdr-1.3.31-Rotor.diff
+- you can now select to which cards should be reacted on channelswitch if GotoX is activated
+- 'Scan Transonder' shows all channel, which could be found, in a new window
+- added svdrp commands
+
+2005-10-23: Version 0.1.2
+
+- Added Finnish translation (thanks to Rolf Ahrenberg)
+- Fix for circular polarity in diseqc.conf (thanks to M Racine)
+- Added a patch for text2skin. With this patch the rotor plugin could force text2skin to not use true type fonts in the rotor menu.
+
+2006-03-27: Version 0.1.4
+
+- now displaying additionaly the status (Signal, Carrier, Viterbi, Sync)
+- fixed problems with skincurses (reported by Jeremy Hall)
+- fixed segfault when editablewidth is to small (thanks to Andreas Brugger)
+- Added 'GotoPosition on channelswitch'
+- new config file rotor.conf, where the assignment from satellite to position is stored
+- with the new config file more exotic setups are possible
+
+2005-05-01: Version 0.2.0
+
+- ...

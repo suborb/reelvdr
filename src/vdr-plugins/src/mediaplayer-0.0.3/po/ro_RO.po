@@ -1,0 +1,92 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-05-30 16:11+0200\n"
+"PO-Revision-Date: 2009-03-03 17:00+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Abkhazian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Media Player"
+msgstr "Player Media "
+
+msgid "Recordings"
+msgstr "Inregistrari"
+
+msgid "Music"
+msgstr "Muzica"
+
+msgid "Images"
+msgstr "Imagini"
+
+msgid "Videos"
+msgstr "Video"
+
+msgid "My Music"
+msgstr "Muzica mea"
+
+msgid "My Images"
+msgstr "Imaginile mele"
+
+msgid "My Videos"
+msgstr "Flmele mele"
+
+msgid "Browser"
+msgstr ""
+
+msgid "Rotor"
+msgstr "Rotor"
+
+msgid "My Recordings"
+msgstr "Inregistrarile mele"
+
+msgid "Play CD/DVD"
+msgstr "Redare CD/DVD"
+
+msgid "Internet radio"
+msgstr "Radio prin Internet"
+
+msgid "Play Ipod"
+msgstr "Redare Ipod"
+
+msgid "Audio Player2"
+msgstr ""
+
+msgid "Music & media player"
+msgstr ""
+
+msgid "Audio Player"
+msgstr "Player Audio "
+
+msgid "Music Library"
+msgstr "Librarie Muzica"
+
+msgid "Image Player"
+msgstr "Player Imagini"
+
+msgid "Image Library"
+msgstr "Librarie Imagini"
+
+msgid "MediaplayerDvd"
+msgstr "Mediaplayer Dvd"
+
+msgid "Video Library"
+msgstr "Librarie Video"
+
+msgid "Movie & media player"
+msgstr ""
+
+msgid "Movie Library"
+msgstr "Librarie Filme"

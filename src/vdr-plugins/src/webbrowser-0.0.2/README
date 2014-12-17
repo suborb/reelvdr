@@ -1,0 +1,13 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Tobias Bratfisch <tobias@reel-multimedia.com>
+
+Project's homepage:          URL
+
+Latest version available at: URL
+
+See the file COPYING for license information.
+
+Description:
+Starts and ends the links2-webbrowser on the framebuffer of the hd-extension
+

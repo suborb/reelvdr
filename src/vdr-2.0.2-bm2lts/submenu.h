@@ -1,0 +1,179 @@
+/****************************************************************************
+ * DESCRIPTION:
+ *             Submenu
+ *
+ * $Id: vdr-1.3.44-Setup-0.3.0.diff,v 1.1 2006/03/04 09:58:47 ralf Exp $
+ *
+ * Contact:    ranga@teddycats.de
+ *
+ * Copyright (C) 2004, 2005 by Ralf Dotzert
+ *
+ * modified for the VDR Extensions Patch by zulu @vdr-portal
+ ****************************************************************************/
+
+#ifndef SUBMENU_H
+#define SUBMENU_H
+
+#include "thread.h"
+#include "tools.h"
+#include <vector>
+#include "tinyxml/tinystr.h"
+#include "tinyxml/tinyxml.h"
+
+
+
+class cSubMenuNode;
+class cSubMenuNodes;
+class cSubMenu;
+
+
+class cSubMenuNodes : public cList<cSubMenuNode> {};
+
+// execute cmd thread
+class cExecCmdThread : public cThread {
+private:
+  cString ExecCmd;
+protected:
+  virtual void Action(void) {
+     if (system(ExecCmd) == 0)
+        esyslog("%s - finished", *ExecCmd);
+     delete(this);
+     };
+public:
+  cExecCmdThread(char *cmd) {
+     ExecCmd = cString::sprintf("%s", cmd);
+     }
+  cExecCmdThread(const char *cmd) {
+     ExecCmd = cString::sprintf("%s", cmd);
+     }
+  ~cExecCmdThread() {
+     };
+  };
+
+//################################################################################
+//# SubMenuNode
+//################################################################################
+class cSubMenuNode : public cListObject {
+public:
+#ifdef REELVDR
+  enum Type { UNDEFINED, SYSTEM, COMMAND, THREAD, PLUGIN, MENU, INCLUDE };
+#else
+  enum Type { UNDEFINED, SYSTEM, COMMAND, THREAD, PLUGIN, MENU };
+#endif /* REELVDR */
+  cSubMenuNode(TiXmlElement *xml, int level, cSubMenuNodes *currentMenu, cSubMenuNodes *parentMenu);
+  cSubMenuNode(cSubMenuNodes *currentMenu, cSubMenuNodes *parentMenu);
+  ~cSubMenuNode();
+  bool SaveXml(TiXmlElement *root);
+  static cSubMenuNode::Type IsType(const char *name);
+  void  SetType(const char *name);
+  void  SetType(enum Type type);
+#ifdef REELVDR
+  int SubMenuSize(){return _subMenus.Count();}
+  bool IncludeXml(const char *includeXML);
+  void SetHelp(const char *Help);
+  const char *GetHelp() {return _help;};
+  void SetInfo(const char *Info);
+  const char *GetInfo() {return _info;};
+  void SetIconNumber(const char* iconNumber);
+  const char *GetIconNumber() {return _iconNumber;};
+  void SetSetupLink(const char*name);
+  const char *GetSetupLink() {return _setupLink;};
+  void  SetPlugin(const char *link=NULL);
+#else
+  void  SetPlugin();
+#endif /* REELVDR */
+  cSubMenuNode::Type GetType();
+  const char *GetTypeAsString();
+  void SetCommand(const char *command);
+  bool CommandConfirm();
+  void SetCommandConfirm(int val);
+  const char *GetCommand();
+  void SetCustomTitle(const char *title);
+  const char *GetCustomTitle();
+  void SetName(const char *name);
+  const char*GetName();
+  int  GetLevel();
+  void SetLevel(int level);
+  int  GetPluginIndex();
+  void SetPluginIndex(int index);
+  void SetPluginMainMenuEntry(const char *mainMenuEntry);
+  const char *GetPluginMainMenuEntry();
+  cSubMenuNodes *GetParentMenu();
+  void SetParentMenu(cSubMenuNodes *parent);
+  cSubMenuNodes *GetCurrentMenu();
+  void SetCurrentMenu(cSubMenuNodes *current);
+  cSubMenuNodes *GetSubMenus();
+  bool HasSubMenus();
+  void Print(int index = 0);
+private:
+  Type _type;
+  int _level;
+  // Plugin Variables
+  int _pluginIndex;
+  const char *_pluginMainMenuEntry;
+  // common
+  const char *_name;
+  const char *_command;
+  bool _commandConfirm;
+  const char *_title;
+#ifdef REELVDR
+  const char *_help;
+  const char *_info;
+  const char *_iconNumber;
+  char *_setupLink;
+#endif /* REELVDR */
+  cSubMenuNodes _subMenus;
+  cSubMenuNodes *_parentMenu;
+  cSubMenuNodes *_currentMenu;
+  void init();
+  };
+
+
+//################################################################################
+//# SubMenu Class
+//################################################################################
+class cSubMenu {
+public:
+  cSubMenu();
+  ~cSubMenu();
+  enum Where { BEFORE, BEHIND, INTO};
+  bool LoadXml(cString fname);
+  bool SaveXml(cString fname);
+  bool SaveXml();
+  cSubMenuNodes *GetMenuTree();
+  bool Up(int *ParentIndex);
+  bool Down(cSubMenuNode* node, int currentIndex);
+  int  GetNrOfNodes();
+  cSubMenuNode* GetAbsNode(int index);
+  cSubMenuNode* GetNode(int index);
+  void PrintMenuTree();
+  bool IsPluginInMenu(const char *name);
+  void AddPlugin(const char *name);
+  void CreateCommand(int index, const char *name, const char *execute, int confirm);
+  void CreateThread(int index, const char *name, const char *execute, int confirm);
+  const char *ExecuteCommand(const char *command);
+  void MoveMenu(int index, int toindex, enum Where);
+  void CreateMenu(int index, const char *menuTitle);
+  void DeleteMenu(int index);
+  cString GetMenuSuffix() { return _menuSuffix; }
+  void SetMenuSuffix(char *suffix) { _menuSuffix = suffix; }
+  bool isTopMenu() { return (_currentParentMenuTree == NULL); }
+  const char *GetParentMenuTitel();
+private:
+  cSubMenuNodes _menuTree;
+  cSubMenuNodes *_currentMenuTree;
+  cSubMenuNodes *_currentParentMenuTree;
+  int _currentParentIndex;
+  cString _fname;
+  char *_commandResult;
+  int _nrNodes;
+  cSubMenuNode **_nodeArray;
+  cString _menuSuffix;
+  int countNodes(cSubMenuNodes *tree);
+  void tree2Array(cSubMenuNodes *tree, int &index);
+  void addMissingPlugins();
+  void reloadNodeArray();
+  void removeUndefinedNodes();
+  };
+
+#endif //__SUBMENU_H

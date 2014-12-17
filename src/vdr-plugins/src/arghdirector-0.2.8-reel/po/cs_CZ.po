@@ -1,0 +1,56 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-arghdirector\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2008-12-10 17:10+0100\n"
+"PO-Revision-Date: 2009-02-25 18:03+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Multifeed Options"
+msgstr "Možnosti multifeedu"
+
+msgid "Portal Mode"
+msgstr "Režim portálu"
+
+msgid "no"
+msgstr "ne"
+
+msgid "yes"
+msgstr "ano"
+
+msgid "Display info on channel change"
+msgstr "Zobrazit informace při změně kanálu"
+
+msgid "Display EPG information"
+msgstr "Zobrazit informace EPG"
+
+msgid "Show plugin again on button"
+msgstr "Zobrazit modul znovu tlačítkem"
+
+msgid "Swap up and down"
+msgstr "Zaměnit tlačítka Nahoru a Dolů"
+
+msgid "Show old director OSD"
+msgstr "Zobrazit původní nabídku OSD"
+
+msgid "No EPG available"
+msgstr "EPG není k dispozici"
+
+msgid "No Multifeed options"
+msgstr "Žádné možnosti multifeedu"
+
+msgid "plugin to use the multifeed option"
+msgstr "modul pro použití možností multifeedu"
+
+msgid "Multifeed Options "
+msgstr "Možnosti multifeedu"
+

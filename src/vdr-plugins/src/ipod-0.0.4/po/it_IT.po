@@ -1,0 +1,63 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-ipod\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2009-06-20 16:13+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Ipod not found."
+msgstr "Ipod NON trovato!"
+
+msgid "Add recursivly?"
+msgstr "Aggiungere ricorsivamente?"
+
+msgid "Play"
+msgstr "Riprodurre"
+
+msgid "Add"
+msgstr "Aggiungere"
+
+msgid "Playlist"
+msgstr "Playlist"
+
+msgid "Add to playlist"
+msgstr "Aggiungere alla playlist"
+
+msgid "Delete"
+msgstr "Cancellare"
+
+msgid "Clear"
+msgstr "Ripulire"
+
+msgid "Delete entry?"
+msgstr "Cancellare la voce?"
+
+msgid "Clear playlist?"
+msgstr "Ripulire la playlist?"
+
+msgid "Mount Script"
+msgstr "Mount script"
+
+msgid "Mount Point"
+msgstr "Mount point"
+
+msgid "mp3 Plugin's Playlist Path"
+msgstr "Percorso della playlist plugin mp3"
+

@@ -1,0 +1,5 @@
+HANDLEROBJS += media_cdda/cdda_menu.o \
+media_cdda/cdda_disc.o \
+	media_cdda/cdda_player.o \
+	media_cdda/cdda_handler.o
+HANDLERLIBS += -lcdio

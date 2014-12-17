@@ -1,0 +1,32 @@
+#!/bin/bash
+# SRG-DRS 1-Playlist
+# $1 = outfile
+
+### Variabel
+Name="SRG-DRS 1 [services.drs.ch]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://services.drs.ch/webradioplayer/webradioXmlDRS1.xml"
+
+# Artist/Title
+label="sequence='present'"
+present=`grep -B15 '<\/titles>' /tmp/playlist | grep -c "$label"`
+if [ $present -gt 0 ]; then
+	artist=`grep -B15 '<\/titles>' /tmp/playlist | grep -A1 "$label"`
+	artist=${artist/*$'<artist>'/}; artist=${artist/$'<'\/'artist>'*/}
+	title=`grep -B15 '<\/titles>' /tmp/playlist | grep -A2 "$label"`
+	title=${title/*$'<title>'/}; title=${title/$'<'\/'title>'*/}
+else
+	artist="---"
+	title="---"
+fi
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

@@ -1,0 +1,115 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-vlcclient 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-03-24 14:59+0100\n"
+"PO-Revision-Date: 2008-02-26 17:20+0100\n"
+"Last-Translator: Team Reelbox4all.com <info@reelbox4all.com>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Remote VLC"
+msgstr "Remote VLC"
+
+msgid "Fetching recordings"
+msgstr "Opnamen ophalen"
+
+msgid "Error fetching recordings"
+msgstr "Fout bij het ophalen opnamens"
+
+msgid "Play"
+msgstr "Afspelen"
+
+msgid "Open"
+msgstr "Openen"
+
+msgid "Error while accessing recording!"
+msgstr "Fout tijdens het openen van de opname!"
+
+msgid "Jump: "
+msgstr "Spring: "
+
+msgid "very low"
+msgstr "zeer Laag"
+
+msgid "low"
+msgstr "laag"
+
+msgid "ok"
+msgstr "ok"
+
+msgid "good"
+msgstr "goed"
+
+msgid "very good"
+msgstr "zeer goed"
+
+msgid "IP of remote VLC"
+msgstr "IP of remote VLC"
+
+msgid "Remote VLC Directory"
+msgstr "Remote VLC Directory"
+
+msgid "Streaming Resolution"
+msgstr "Streaming Resolutie"
+
+msgid "Stream DD (works only if movie has DD)"
+msgstr "Stream DD (werkt alleen als de film DD heeft)"
+
+msgid "no"
+msgstr "nee"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "Sync on audio"
+msgstr "Audio synchronisatie"
+
+msgid "Remote CPU Power"
+msgstr "Remote CPU Stroom"
+
+msgid "Deinterlace before encoding"
+msgstr "Samenvoegen voor coderen"
+
+msgid "Post processing quality"
+msgstr "Post proces kwaliteit"
+
+msgid "Render subtitles into stream"
+msgstr "Voeg ondertitels toe in de stream"
+
+msgid "HQ-profile"
+msgstr "HQ-Profiel"
+
+msgid "Interlace"
+msgstr "Samenvoegen"
+
+msgid "Interlaced motion estimation"
+msgstr "Schatting samenvoeging"
+
+msgid "Pre-motion estimation"
+msgstr "Vroeg-motie schatting"
+
+msgid "Hurry up"
+msgstr "Opschieten"
+
+msgid "Noise reduction"
+msgstr "Ruis onderdrukking"
+
+msgid "Strict standard compliance"
+msgstr "Alleen standaard norm"
+
+msgid "VLC returned HTTP-Error 404"
+msgstr "VLC stuurde HTTP-Fout 404 terug"
+
+msgid "ERROR: VLC-CLient: VLC returned nothing"
+msgstr "FOUT: VLC-Client: VLC Stuurde niks terug"

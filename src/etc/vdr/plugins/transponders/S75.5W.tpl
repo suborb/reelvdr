@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S75.5W
+2=SBS 6
+3=West
+4=75.5

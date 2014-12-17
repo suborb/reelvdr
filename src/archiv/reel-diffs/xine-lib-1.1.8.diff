@@ -1,0 +1,35 @@
+diff -Nru xine-lib-1.1.4-org/src/xine-engine/audio_out.h xine-lib-1.1.4/src/xine-engine/audio_out.h
+--- xine-lib-1.1.4-org/src/xine-engine/audio_out.h	2007-07-26 17:12:13.888427638 +0200
++++ xine-lib-1.1.4/src/xine-engine/audio_out.h	2007-07-26 17:20:41.364516263 +0200
+@@ -336,7 +336,7 @@
+ #define AO_CTRL_FLUSH_BUFFERS	2      
+ 
+ /* above that value audio frames are discarded */
+-#define AO_MAX_GAP              15000
++#define AO_MAX_GAP              150000
+ 
+ #ifdef __cplusplus
+ }
+diff -Nru xine-lib-1.1.4-org/src/xine-engine/xine.c xine-lib-1.1.4/src/xine-engine/xine.c
+--- xine-lib-1.1.4-org/src/xine-engine/xine.c	2007-07-26 17:12:13.900428585 +0200
++++ xine-lib-1.1.4/src/xine-engine/xine.c	2007-07-26 17:21:07.382571592 +0200
+@@ -1261,7 +1261,7 @@
+   /* Wait until the first frame produced is displayed
+    * see video_out.c
+    */
+-  wait_first_frame (stream);
++  //wait_first_frame (stream);
+   
+   xprintf (stream->xine, XINE_VERBOSITY_DEBUG, "play_internal ...done\n");
+ 
+--- xine-lib-1.1.6/configure.org	2007-08-29 18:54:41.000000000 +0200
++++ xine-lib-1.1.6/configure	2007-08-29 18:54:27.000000000 +0200
+@@ -26081,7 +26081,7 @@
+ else
+   ac_save_CFLAGS="$CFLAGS"
+      ac_save_LIBS="$LIBS"
+-     CFLAGS="$CFLAGS $cc_cv_werror $PTHREAD_CFLAGS"
++     CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+ 
+      LIBS="$LIBS $PTHREAD_LIBS"
+      cat >conftest.$ac_ext <<_ACEOF

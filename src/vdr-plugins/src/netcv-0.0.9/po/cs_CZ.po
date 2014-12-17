@@ -1,0 +1,530 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netcv\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-06-15 17:07+0200\n"
+"PO-Revision-Date: 2009-03-04 12:53+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "empty"
+msgstr "prázdný"
+
+msgid "DiSEqC list"
+msgstr "Seznam DiSEqC"
+
+msgid "Restarting NetCeiver..."
+msgstr "Restartování netceiveru..."
+
+msgid "Restarting VDR..."
+msgstr "Restartování VDR..."
+
+msgid "Please wait..."
+msgstr "Počkejte prosím..."
+
+msgid "Reloading diseqc.conf failed!"
+msgstr "Znovunačtení souboru diseqc.conf se nezdařilo!"
+
+msgid "Settings stored"
+msgstr "Nastavení uloženo"
+
+msgid "Reloading channels.conf failed"
+msgstr "Znovunačtení souboru channels.conf se nezdařilo"
+
+msgid "Reloading diseqc.conf failed"
+msgstr "Znovunačtení souboru diseqc.conf se nezdařilo"
+
+msgid "Error: Store failed! Error Number: "
+msgstr "Chyba: Uložení se nezdařilo! Číslo chyby:"
+
+msgid "Error: Only 4 LNBs per cascade is allowed!"
+msgstr "Chyba: Jsou povoleny jen čtyři LNB v kaskádě!"
+
+msgid "Error: Every DiSEqC list must have a name!"
+msgstr "Chyba: Každý seznam DiSEqC musí mít název!"
+
+msgid "Error: Duplicate DiSEqC list name is not allowed!"
+msgstr "Chyba: Duplicitní názvy seznamů DiSEqC nejsou povoleny!"
+
+msgid "Error: Every tuner must have a valid DiSEqC list!"
+msgstr "Chyba: Každý tuner musí mít platný seznam DiSEqC!"
+
+msgid "Error: At least 1 tuner must be enabled!"
+msgstr "Chyba: Musí být povolen nejméně jeden tuner!"
+
+msgid "Unknown Error: "
+msgstr "Neznámá chyba:"
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC zakázáno"
+
+msgid "Diseqc$Source"
+msgstr "Zdroj"
+
+msgid "LNB Type"
+msgstr "Typ LNB"
+
+msgid "DiSEqC Mini"
+msgstr "DiSEqC Mini"
+
+msgid "Number of LNBs"
+msgstr "Počet LNB"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Single Cable Router"
+msgstr ""
+
+msgid "Unique Slot Nr."
+msgstr ""
+
+msgid "Downlink freq. (MHz)"
+msgstr ""
+
+msgid "PIN (optional)"
+msgstr ""
+
+msgid "No pin"
+msgstr ""
+
+msgid "DiSEqC 1.0"
+msgstr "DiSEqC 1.0"
+
+msgid "DiSEqC 1.1"
+msgstr "DiSEqC 1.1"
+
+msgid "Multiswitch"
+msgstr "Multiswitch"
+
+msgid "Cascade"
+msgstr "Kaskáda"
+
+msgid "DiSEqC 1.2"
+msgstr "DiSEqC 1.2"
+
+msgid "Number of sources"
+msgstr "Počet zdrojů"
+
+msgid "Rotor (GotoX)"
+msgstr "Rotor (GotoX)"
+
+msgid "off"
+msgstr "vypnuto"
+
+msgid "fine"
+msgstr "jemné"
+
+msgid "coarse"
+msgstr "hrubé"
+
+msgid "maximum"
+msgstr "maximum"
+
+msgid "Min Position"
+msgstr "Min. pozice"
+
+msgid "East"
+msgstr "Východ"
+
+msgid "West"
+msgstr "Západ"
+
+msgid "Max Position"
+msgstr "Max. pozice"
+
+msgid "Longitude"
+msgstr "Zeměpisná délka"
+
+msgid "Latitude"
+msgstr "Zeměpisná šířka"
+
+msgid "North"
+msgstr "Sever"
+
+msgid "South"
+msgstr "Jih"
+
+msgid "Autofocus"
+msgstr "Autofokus"
+
+msgid "DisiCon 4"
+msgstr "DisiCon 4"
+
+msgid "DiSEqC mode:"
+msgstr "Režim DiSEqC:"
+
+msgid "no"
+msgstr "ne"
+
+msgid "yes"
+msgstr "ano"
+
+msgid " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Antenna settings"
+msgstr "Nastavení antény"
+
+msgid "NetCeiver Firmwareupdate is running!"
+msgstr "Probíhá aktualizace firmwaru netceiveru!"
+
+msgid "No NetCeiver found!"
+msgstr "NetCeiver nebyl nalezen!"
+
+msgid "Creating directory tmp failed!"
+msgstr "Vytvoření adresáře tmp se nezdařilo!"
+
+msgid "Retrieving information about tuners failed!"
+msgstr "Načtení informací o tunerech se nezdařilo!"
+
+msgid "Getting network interface failed!"
+msgstr "Získání síťového rozhraní se nezdařilo!"
+
+msgid "sec"
+msgstr "s"
+
+msgid "min"
+msgstr "min"
+
+msgid "h"
+msgstr "h"
+
+msgid "d"
+msgstr ""
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DiSEqC settings"
+msgstr "Nastavení DiSEqC"
+
+msgid "NetCeiver is being updated."
+msgstr "Probíhá aktualizace netceiveru."
+
+msgid "Try again later."
+msgstr "Opakujte akci později."
+
+msgid "Error!"
+msgstr "Chyba!"
+
+msgid "Failed to open directory "
+msgstr "Otevření adresáře se nezdařilo"
+
+msgid "No file found in "
+msgstr "Nebyl nalezen žádný soubor v"
+
+msgid "Please select a setting for upload: "
+msgstr "Vyberte nastavení, které chcete odeslat:"
+
+msgid "Finished!"
+msgstr "Dokončeno!"
+
+msgid "Uploading failed!"
+msgstr "Odeslání se nezdařilo!"
+
+msgid "Current"
+msgstr "Aktuální"
+
+msgid "NetCeiver diagnostics"
+msgstr "Diagnostika netceiveru"
+
+msgid "Alive"
+msgstr "Aktivní"
+
+msgid "Yes"
+msgstr "Ano"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "Tuners"
+msgstr "Tunery"
+
+msgid "OS"
+msgstr "OS"
+
+msgid "App"
+msgstr "Aplikace"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Hardware"
+msgstr "Hardware"
+
+msgid "Serial"
+msgstr "Sériové číslo"
+
+msgid "System uptime"
+msgstr "Doba prov. sys."
+
+msgid "Process uptime"
+msgstr "Doba prov. proc."
+
+msgid "Dish settings"
+msgstr "Nastavení talíře"
+
+msgid "State"
+msgstr "Stav"
+
+msgid "Slot"
+msgstr "Slot"
+
+msgid "Chip"
+msgstr ""
+
+msgid "Used"
+msgstr "Použito"
+
+msgid "Lock"
+msgstr "Zámek"
+
+msgid "Frequency"
+msgstr "Frekvence"
+
+msgid "Strenght"
+msgstr "Síla"
+
+msgid "SNR"
+msgstr "SNR"
+
+msgid "BER"
+msgstr "BER"
+
+msgid "UNC"
+msgstr ""
+
+#, fuzzy
+msgid "electric$Current"
+msgstr "Aktuální"
+
+msgid "Power save mode"
+msgstr ""
+
+msgid "Couldn't create tmp-path!"
+msgstr "Nelze vytvořit cestu tmp!"
+
+msgid "Internal Error! Sorry!"
+msgstr "Vnitřní chyba!"
+
+#, fuzzy
+msgid "Loading data from NetCeiver failed!"
+msgstr "Načtení dat z netceiveru se nezdařilo!"
+
+msgid "Please check the Connection to NetCeiver!"
+msgstr "Zkontrolujte připojení k netceiveru!"
+
+#, fuzzy
+msgid "Number of Tuners"
+msgstr "Počet tunerů"
+
+msgid "Please choose the satellites you can receive:"
+msgstr "Zvolte satelity, které můžete přijímat:"
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Skip"
+msgstr "Přeskočit"
+
+msgid "Static antenna"
+msgstr "Statická anténa"
+
+msgid "Single Cable System"
+msgstr ""
+
+msgid "Rotor antenna"
+msgstr "Otočná anténa"
+
+msgid "Updating... please wait!"
+msgstr "Aktualizace... počkejte prosím!"
+
+msgid "Satellite"
+msgstr "Satelit"
+
+msgid "Cable"
+msgstr "Kabel"
+
+msgid "Terrestrial"
+msgstr "Pozemní"
+
+msgid "on"
+msgstr "zapnuto"
+
+msgid "Antenna type"
+msgstr "Typ antény"
+
+msgid "Rotor"
+msgstr "Rotor"
+
+msgid "Experts"
+msgstr "Rozšířené"
+
+msgid "Unknown Error! Sorry!"
+msgstr "Neznámá chyba!"
+
+#, fuzzy
+msgid "Internal Error: DiSEqC not working"
+msgstr "Vnitřní chyba: Diseqc nefunguje"
+
+#, fuzzy
+msgid "Internal Error: Loading netceiver.conf failed"
+msgstr "Znovunačtení souboru diseqc.conf se nezdařilo"
+
+msgid "Save changes?"
+msgstr "Uložit změny?"
+
+msgid "No netcvrotor-Plugin found!"
+msgstr "Modul netcvrotor nebyl nalezen!"
+
+#, fuzzy
+msgid "Status"
+msgstr "Stav"
+
+msgid "Multi-Transponder-Decryption is"
+msgstr ""
+
+msgid "impossible because of mixed CAMs"
+msgstr ""
+
+msgid "Multi-Transponder"
+msgstr ""
+
+msgid "Signal (strength/snr)"
+msgstr "Signál (síla/SNR)"
+
+msgid "Signal (ber/unc)"
+msgstr "Signál (BER/UNC)"
+
+msgid "Update firmware"
+msgstr "Aktualizovat firmware"
+
+msgid "Load"
+msgstr "Načíst"
+
+msgid "Clear"
+msgstr "Vymazat"
+
+msgid "Add DiSEqC list"
+msgstr "Přidat seznam DiSEqC"
+
+msgid "disable"
+msgstr "zakázat"
+
+msgid "enable"
+msgstr "povolit"
+
+msgid "No tmp files available."
+msgstr "Nejsou k dispozici žádné soubory tmp."
+
+msgid "Update progress: "
+msgstr "Průběh aktualizace:"
+
+msgid "Information"
+msgstr "Informace"
+
+#, fuzzy
+msgid "CAM settings"
+msgstr "Nastavení DiSEqC"
+
+msgid "Tuner settings"
+msgstr "Nastavení tuneru"
+
+msgid "CAM"
+msgstr ""
+
+msgid "not selected"
+msgstr "nevybráno"
+
+msgid "Setting loaded"
+msgstr "Nastavení načteno"
+
+msgid "Loading failed! (Error: "
+msgstr "Načtení se nezdařilo! (Chyba:"
+
+msgid "Update finished"
+msgstr "Aktualizace byla dokončena"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "normal"
+msgstr "normální"
+
+msgid "disabled"
+msgstr "zakázáno"
+
+msgid "NetCeiver update available. Do you want to update?"
+msgstr "Je k dispozici aktualizace netceiveru. Aktualizovat?"
+
+msgid "NetCeiver firmware update"
+msgstr "Aktualizace firmwaru netceiveru"
+
+#, fuzzy
+msgid "There is a new firmware version for the NetCeiver available!"
+msgstr "Je k dispozici nová verze firmwaru netceiveru!"
+
+msgid "Current version:"
+msgstr "Aktuální verze:"
+
+msgid "New version:"
+msgstr "Nová verze:"
+
+msgid "If you want to use CA-modules, it is absolutely required to perform this update right now."
+msgstr ""
+
+#, fuzzy
+msgid "Do you want to update the NetCeiver firmware now?"
+msgstr "Chcete aktualizovat firmware netceiveru?"
+
+msgid "Caution:"
+msgstr "Upozornění:"
+
+msgid "Current recordings will be interrupted for a few minutes."
+msgstr "Aktuální nahrávání bude na několik minut přerušeno."
+
+msgid "Update"
+msgstr "Aktualizovat"
+
+msgid "Update failed!"
+msgstr "Aktualizace se nezdařila!"
+
+msgid "internal error!"
+msgstr "Vnitřní chyba!"
+
+#~ msgid "Button$ABC/abc"
+#~ msgstr "ABC/abc"
+
+#~ msgid "Button$Overwrite"
+#~ msgstr "Přepsat"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Odstranit"
+
+#~ msgid "Delete"
+#~ msgstr "Odstranit"
+
+#, fuzzy
+#~ msgid "Normal"
+#~ msgstr "normální"
+
+#~ msgid "Current power"
+#~ msgstr "Aktuální výkon"
+
+#~ msgid "No DiSEqC-Settings available!"
+#~ msgstr "Nastavení DiSEqC není k dispozici!"

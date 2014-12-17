@@ -1,0 +1,257 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare-Tododream. Marzo 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-17 11:57+0200\n"
+"PO-Revision-Date: 2008-10-01 14:52+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Jump: "
+msgstr ""
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Cannot play"
+msgstr "No se puede reproducir"
+
+msgid "file type"
+msgstr "Tipo de archivo"
+
+msgid "Waiting for server ..."
+msgstr "Esperando al servidor...."
+
+msgid "Network read error"
+msgstr "Error de lectura de Red"
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr "Lista de rep. del servidor inválida. Reprodu. la siguiente."
+
+msgid "Open Error"
+msgstr "Error al abrir"
+
+msgid "Only MPEG-1 format supported"
+msgstr "Solo está soportado el formato MPEG-1"
+
+msgid "Could not play file"
+msgstr "No se puede reproducir este archivo"
+
+msgid "VideoCodec not supported!"
+msgstr "¡VideoCodec no soportado!"
+
+msgid "AudioCodec not supported!"
+msgstr "¡AudioCodec no soportado!"
+
+msgid "Please wait, Loading..."
+msgstr "Cargando..."
+
+msgid "Please check your network connection"
+msgstr "Revise su conexión de Red"
+
+msgid "Opening "
+msgstr "Abriendo"
+
+msgid "Chapter"
+msgstr "Capítulo"
+
+msgid "Unable to get default CD device"
+msgstr "Imposible detectar el lector CD por defecto"
+
+msgid "Unable open CD device"
+msgstr "Imposible abrir el lector CD"
+
+msgid "No tracks found in CD"
+msgstr "No se han encontrado pistas en CD"
+
+msgid "No audio tracks found"
+msgstr "No se han encontrado pistas de audio"
+
+msgid "Track"
+msgstr "Pista"
+
+msgid "Mediaplayer"
+msgstr ""
+
+msgid ""
+"Media library playlist is empty.\n"
+"Please press RED key for selecting files."
+msgstr ""
+
+msgid "Replaymode: Normal"
+msgstr "Modo rep.: Normal"
+
+msgid "Replaymode: Repeat"
+msgstr "Modo rep.: Repetición"
+
+msgid "Replaymode: Shuffle"
+msgstr "Modo rep.: Aleatorio"
+
+msgid "Paused"
+msgstr "Pausa"
+
+msgid "Mute"
+msgstr "Silencio"
+
+msgid "Shuffle"
+msgstr "Barajar"
+
+msgid "Repeat"
+msgstr "Repetir"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Filelist"
+msgstr ""
+
+msgid "Functions"
+msgstr ""
+
+msgid "shoutcast"
+msgstr "Shoutcast"
+
+msgid "Add to favs"
+msgstr ""
+
+msgid "Exit mediaplayer?"
+msgstr ""
+
+msgid "Volume"
+msgstr "Volumen"
+
+msgid "Loading..."
+msgstr "Cargando..."
+
+msgid "Repeat single"
+msgstr ""
+
+msgid "Delete selected item"
+msgstr ""
+
+msgid "Clear playlist"
+msgstr ""
+
+msgid "Save playlist"
+msgstr ""
+
+msgid "Save playlist as..."
+msgstr ""
+
+msgid "Burn playlist to CD..."
+msgstr ""
+
+msgid "Copy all playlist items to new folder..."
+msgstr ""
+
+msgid "Select a playlist..."
+msgstr ""
+
+msgid "Remember playlist"
+msgstr ""
+
+msgid "    start mediaplayer with previous playlist"
+msgstr ""
+
+msgid "    start mediaplayer with empty playlist"
+msgstr ""
+
+msgid "Mediaplayer Functions"
+msgstr ""
+
+msgid "Deleting playlist item..."
+msgstr ""
+
+msgid "Playlist item deleted"
+msgstr ""
+
+msgid "Deleting playlist item: failed"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Directory"
+msgstr ""
+
+msgid "Artist"
+msgstr "Artista"
+
+msgid "Album"
+msgstr "Álbum"
+
+msgid "Genre"
+msgstr "Género"
+
+msgid "Comment"
+msgstr "Comentario"
+
+msgid "Year"
+msgstr "Año"
+
+msgid "Length"
+msgstr "Tamaño"
+
+msgid "min"
+msgstr "Min"
+
+msgid "Bitrate"
+msgstr "Tasa de bits"
+
+msgid "Samplerate"
+msgstr "Tasa de muestreo"
+
+msgid "ID3$Channels"
+msgstr "Canales"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-Capa"
+
+msgid "Copyrighted"
+msgstr "Con derechos de autor"
+
+msgid "Protected"
+msgstr "Protegido"
+
+msgid "File size"
+msgstr "Tamaño del archivo"
+
+msgid "Last Modified"
+msgstr "Última modificación"
+
+msgid "Mediaplayer ID3 Info:"
+msgstr ""
+
+msgid "No Id3 info found!"
+msgstr "No hay info Id3"
+
+#~ msgid "Mediaplayer - Id3 Info:"
+#~ msgstr "Mediaplayer - Info Id3"
+
+#~ msgid "Overview"
+#~ msgstr "Vista general"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "Options"
+#~ msgstr "Opciones"
+
+#~ msgid "Function"
+#~ msgstr "Función"
+
+#, fuzzy
+#~ msgid "Could not play file!"
+#~ msgstr "No se puede reproducir este archivo"

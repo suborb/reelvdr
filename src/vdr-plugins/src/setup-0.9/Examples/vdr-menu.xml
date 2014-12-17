@@ -1,0 +1,46 @@
+<!--
+   ReelVDR Menu-Configuration File
+-->
+
+<menus>
+	<menu name="Mediacenter">
+		<plugin name="filebrowser" />
+		<plugin name="mp3" />
+		<plugin name="vdrcd" />
+		<plugin name="burn" />
+		<plugin name="dvdswitch" />
+	</menu>
+
+	<menu name="Videorecorder">
+		<plugin name="extrecmenu" />
+		<plugin name="undelete" />
+	</menu>
+
+	<menu name="EPG Service">
+		<plugin name="loadepg" />
+		<plugin name="tvonscreen" />
+		<plugin name="epgsearch" />
+	</menu>
+
+	<menu name="Timer Service">
+		<plugin name="timeline" />
+		<system name="Timers" />
+	</menu>
+
+	<plugin name="setup" link="TVTVService"/>
+	<menu name="Streaming">
+		<plugin name="streamdev-server" />
+	</menu>
+
+	<plugin name="pin" />
+
+	<menu name="Add-ons / Misc">
+		<plugin name="reelbox" />
+		<system name="Channels" />
+		<plugin name="director" />
+		<plugin name="osdteletext" />
+		<plugin name="sleeptimer" />
+		<plugin name="games" />
+	</menu>
+
+</menus>

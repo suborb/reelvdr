@@ -1,0 +1,245 @@
+diff -Nur vdr-1.3.34-pl6/menu.c vdr-1.3.34/menu.c
+--- vdr-1.3.34-pl6/menu.c	2005-10-04 19:30:10.000000000 +0200
++++ vdr-1.3.34/menu.c	2005-10-04 19:36:26.000000000 +0200
+@@ -3232,13 +3232,14 @@
+ 
+ #define DIRECTCHANNELTIMEOUT 1000 //ms
+ 
+-cDisplayChannel::cDisplayChannel(int Number, bool Switched)
++cDisplayChannel::cDisplayChannel(int Number, bool Switched, bool Timeout )
+ :cOsdObject(true)
+ {
+   group = -1;
+   withInfo = !Switched || Setup.ShowInfoOnChSwitch;
+   displayChannel = Skins.Current()->DisplayChannel(withInfo);
+   number = 0;
++  timeout = Timeout;
+   channel = Channels.GetByNumber(Number);
+   lastPresent = lastFollowing = NULL;
+   if (channel) {
+@@ -3249,11 +3250,12 @@
+   lastTime.Set();
+ }
+ 
+-cDisplayChannel::cDisplayChannel(eKeys FirstKey)
++cDisplayChannel::cDisplayChannel(eKeys FirstKey, bool Timeout)
+ :cOsdObject(true)
+ {
+   group = -1;
+   number = 0;
++  timeout = Timeout;
+   lastPresent = lastFollowing = NULL;
+   lastTime.Set();
+   withInfo = Setup.ShowInfoOnChSwitch;
+@@ -3389,7 +3391,7 @@
+          Refresh();
+          break;
+     case kNone:
+-         if (number && lastTime.Elapsed() > DIRECTCHANNELTIMEOUT) {
++         if (number && lastTime.Elapsed() > DIRECTCHANNELTIMEOUT && timeout) {
+             if (Channels.GetByNumber(number))
+                Channels.SwitchTo(number);
+             else {
+@@ -3405,6 +3407,8 @@
+     //TODO
+     //XXX case kGreen:  return osEventNow;
+     //XXX case kYellow: return osEventNext;
++    case kHelp:
++        return osEnd; 
+     case kOk:     if (group >= 0) {
+                      channel = Channels.Get(Channels.GetNextNormal(group));
+                      if (channel)
+@@ -3422,7 +3426,7 @@
+                      return osEnd;
+                      }
+     };
+-  if (lastTime.Elapsed() < (uint64)(Setup.ChannelInfoTime * 1000)) {
++  if (lastTime.Elapsed() < (uint64)(Setup.ChannelInfoTime * 1000) || !timeout) {
+      if (!number && group < 0 && channel && channel->Number() != cDevice::CurrentChannel())
+         Refresh(); // makes sure a channel switch through the SVDRP CHAN command is displayed
+      DisplayInfo();
+diff -Nur vdr-1.3.34-pl6/menu.h vdr-1.3.34/menu.h
+--- vdr-1.3.34-pl6/menu.h	2005-10-04 19:11:20.000000000 +0200
++++ vdr-1.3.34/menu.h	2005-10-04 19:36:26.000000000 +0200
+@@ -76,6 +76,7 @@
+   bool withInfo;
+   cTimeMs lastTime;
+   int number;
++  bool timeout;
+   cChannel *channel;
+   const cEvent *lastPresent;
+   const cEvent *lastFollowing;
+@@ -83,8 +84,8 @@
+   void DisplayInfo(void);
+   void Refresh(void);
+ public:
+-  cDisplayChannel(int Number, bool Switched);
+-  cDisplayChannel(eKeys FirstKey);
++  cDisplayChannel(int Number, bool Switched, bool Timeout = true );
++  cDisplayChannel(eKeys FirstKey, bool Timeout = true );
+   virtual ~cDisplayChannel();
+   virtual eOSState ProcessKey(eKeys Key);
+   };
+diff -Nur vdr-1.3.34-pl6/vdr.c vdr-1.3.34/vdr.c
+--- vdr-1.3.34-pl6/vdr.c	2005-10-04 19:30:10.000000000 +0200
++++ vdr-1.3.34/vdr.c	2005-10-04 20:13:50.000000000 +0200
+@@ -431,6 +431,10 @@
+   bool ForceShutdown = false;
+   bool UserShutdown = false;
+   bool TimerInVpsMargin = false;
++  eOSState active_function = osUnknown;
++  eOSState active_function_cp = osUnknown;
++  eOSState last_active_function = osUnknown; 
++  bool channelinfo_requested = false;
+ 
+   // Load plugins:
+ 
+@@ -656,7 +660,8 @@
+         // Channel display:
+         if (!EITScanner.Active() && cDevice::CurrentChannel() != LastChannel) {
+            if (!Menu)
+-              Menu = Temp = new cDisplayChannel(cDevice::CurrentChannel(), LastChannel > 0);
++              Menu = Temp = new cDisplayChannel(cDevice::CurrentChannel(), LastChannel > 0, !channelinfo_requested);
++           channelinfo_requested = false; 
+            LastChannel = cDevice::CurrentChannel();
+            LastChannelChanged = time(NULL);
+            }
+@@ -721,7 +726,8 @@
+                key = kNone; // nobody else needs to see this key
+                if (Menu) {
+                   DELETENULL(Menu);
+-                  if (!Temp)
++                  active_function = osUnknown;
++                  //if (!Temp)
+                      break;
+                   }
+                if (cControl::Control())
+@@ -729,21 +735,29 @@
+                Menu = new cMenuMain(cControl::Control());
+                Temp = NULL;
+                break;
+-          #define DirectMainFunction(function)\
++          #define DirectMainFunction(function, startKey)\
+             DELETENULL(Menu);\
+-            if (cControl::Control())\
+-               cControl::Control()->Hide();\
+-            Menu = new cMenuMain(cControl::Control(), function);\
+-            Temp = NULL;\
+-            key = kNone; // nobody else needs to see this key
+-          case kSchedule:   DirectMainFunction(osSchedule); break;
+-          case kChannels:   DirectMainFunction(osChannels); break;
+-          case kTimers:     DirectMainFunction(osTimers); break;
+-          case kRecordings: DirectMainFunction(osRecordings); break;
++            active_function_cp = active_function;\
++            if (function == osChannels && last_active_function == osPlugin);\
++              else if (function != active_function) {\
++                        if (cControl::Control())\
++                            cControl::Control()->Hide();\
++                        Menu = new cMenuMain(cControl::Control(), function);\
++                        Temp = NULL;\
++                   }\
++                   else {\
++                           active_function = osUnknown;\
++                        }\
++            last_active_function = active_function_cp;\
++            key = startKey; // normaly this is kNone
++          case kSchedule:   DirectMainFunction(osSchedule, kOk); break;
++          case kChannels:   DirectMainFunction(osChannels, kNone); break;
++          case kTimers:     DirectMainFunction(osTimers, kNone); break;
++          case kRecordings: DirectMainFunction(osRecordings, kNone); break;
+           case kSetup:      cRemote::PutMacro(key); break;
+                //PluginManager.GetPlugin("setup"); break;
+                //DirectMainFunction(osSetup); break;
+-          case kCommands:   DirectMainFunction(osCommands); break;
++          case kCommands:   DirectMainFunction(osCommands, kNone); break;
+           case kUser1 ... kUser9: cRemote::PutMacro(key); key = kNone; break;
+           case k_Plugin: {
+                DELETENULL(Menu);
+@@ -796,6 +810,7 @@
+                   cControl::Control()->Hide();
+                if (Temp && !cDisplayTracks::IsOpen()) {
+                   DELETENULL(Menu);
++                  active_function = osUnknown;
+                   Temp = NULL;
+                   }
+                if (!Menu && !cOsd::IsOpen())
+@@ -808,6 +823,7 @@
+           case kPause:
+                if (!cControl::Control()) {
+                   DELETENULL(Menu);
++                  active_function = osUnknown;
+                   Temp = NULL;
+                   if (!cRecordControls::PauseLiveVideo())
+                      Skins.Message(mtError, tr("No free DVB device to record!"));
+@@ -827,6 +843,7 @@
+           // Power off:
+           case kPower: isyslog("Power button pressed");
+                        DELETENULL(Menu);
++                       active_function = osUnknown;
+                        Temp = NULL;
+                        if (!Shutdown) {
+                           Skins.Message(mtError, tr("Can't shutdown - option '-s' not given!"));
+@@ -852,12 +869,14 @@
+               }
+            switch (state) {
+              case osPause:  DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown(); // just in case
+                             Temp = NULL;
+                             if (!cRecordControls::PauseLiveVideo())
+                                Skins.Message(mtError, tr("No free DVB device to record!"));
+                             break;
+              case osRecord: DELETENULL(Menu);
++                            active_function = osUnknown;
+                             Temp = NULL;
+                             if (cRecordControls::Start())
+                                ;//XXX Skins.Message(mtInfo, tr("Recording"));
+@@ -866,22 +885,26 @@
+                             break;
+              case osRecordings:
+                             DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             Menu = new cMenuMain(false, osRecordings);
+                             break;
+              case osReplay: DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             cControl::Launch(new cReplayControl);
+                             break;
+              case osStopReplay:
+                             DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             break;
+              case osSwitchDvb:
+                             DELETENULL(Menu);
++                            active_function = osUnknown;
+                             cControl::Shutdown();
+                             Temp = NULL;
+                             Skins.Message(mtInfo, tr("Switching primary DVB..."));
+@@ -894,7 +917,10 @@
+                             break;
+              case osBack:
+              case osEnd:    if (Interact == Menu)
++                            {
+                                DELETENULL(Menu);
++                               active_function = osUnknown;
++                            }
+                             else
+                                cControl::Shutdown();
+                             Temp = NULL;
+@@ -931,8 +957,8 @@
+                   cDevice::SwitchChannel(NORMALKEY(key) == kUp ? 1 : -1);
+                   break;
+              // Viewing Control:
+-             case kOk:   DirectMainFunction(osChannels); break;
+-             case kSchedule:   LastChannel = -1; break; // forces channel display
++             case kOk: DirectMainFunction(osChannels, kNone); break;
++             case kHelp:   LastChannel = -1; channelinfo_requested = true; break; // forces channel display
+              // Instant resume of the last viewed recording:
+              case kPlay:
+                   if (cReplayControl::LastReplayed()) {

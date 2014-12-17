@@ -1,0 +1,368 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Ruben Nunez Francisco <ruben.nunez@tang-it.com>, 2002
+# elpajare Tododream.Diciembre 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-filebrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-07-27 10:21+0200\n"
+"PO-Revision-Date: 2008-09-26 13:30+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Can't open file"
+msgstr "No se puede abrir el fichero"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Artist"
+msgstr "Artista"
+
+msgid "Album"
+msgstr "Álbum"
+
+msgid "Genre"
+msgstr "Género"
+
+msgid "Comment"
+msgstr "Comentarios"
+
+msgid "Year"
+msgstr "Año"
+
+msgid "Track"
+msgstr "Canción"
+
+msgid "Length"
+msgstr "Duración"
+
+msgid "min"
+msgstr "Min"
+
+msgid "Bitrate"
+msgstr "Bitrate"
+
+msgid "Samplerate"
+msgstr "Muestreo"
+
+msgid "ID3$Channels"
+msgstr "ID3$Canales"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "MPEG-Layer"
+msgstr "MPEG-Capa"
+
+msgid "Copyrighted"
+msgstr "Protegido por derechos de autor"
+
+msgid "Protected"
+msgstr "Protegido"
+
+msgid "Minimal bitrate"
+msgstr "Mínima tasa de bits"
+
+msgid "Maximal bitrate"
+msgstr "Máxima tasa de bits"
+
+msgid "Nominal bitrate"
+msgstr "Nominal tasa de bits"
+
+msgid "File size"
+msgstr "Tamaño del archivo"
+
+msgid "Last Modified"
+msgstr "Última modificacion"
+
+msgid "please wait ..."
+msgstr "Por favor espere..."
+
+msgid "packet sucessfully installed"
+msgstr "Paquete instalado con éxito"
+
+msgid "packet installation failed"
+msgstr "Fallo al instalar paquete"
+
+msgid "Language packet sucessfully installed"
+msgstr "Paquete de idioma instalado con éxito"
+
+msgid "Language packet installation failed"
+msgstr "Fallo al instalar paquete de idioma"
+
+msgid "Hard Drive"
+msgstr "Disco duro"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "My Music"
+msgstr "Mi Música"
+
+msgid "My Pictures"
+msgstr "Mis Imágenes"
+
+msgid "My Videos"
+msgstr "Mis Vídeos"
+
+msgid "My Recordings"
+msgstr "Mis Grabaciones"
+
+msgid "My DVDs"
+msgstr "Mis DVD's"
+
+msgid "Cannot mount media"
+msgstr "No puedo montar media"
+
+msgid "Access denied!"
+msgstr ""
+
+msgid "Insert in playlist"
+msgstr "Insertar en playlist"
+
+msgid "File informations"
+msgstr "Información de archivo"
+
+msgid "Attributes from:"
+msgstr "Atributos de:"
+
+msgid "Playlist: "
+msgstr "Playlist:"
+
+msgid "Delete entry"
+msgstr "Borrar entrada"
+
+msgid "Close playlist"
+msgstr "Cerrar lista de reproducción"
+
+msgid "Save playlist as"
+msgstr "Salvar lista de reproducción como"
+
+msgid "Save playlist"
+msgstr "Salvar lista de reproducción"
+
+msgid "Copy playlist to CD"
+msgstr "Copiar lista de reproducción en un CD"
+
+msgid "Playlist Commands"
+msgstr "Comandos lista de reproducción"
+
+msgid "Entry already exists"
+msgstr "La entrada ya existe"
+
+msgid "Change the name and then press 'OK'"
+msgstr ""
+
+msgid "Playlist name"
+msgstr "Nombre lista rep."
+
+msgid "Options for image viewer"
+msgstr "Opciones del visor de imágenes"
+
+msgid "Display image file names"
+msgstr "Mostrar nombres de archivo de imágen"
+
+msgid "no"
+msgstr "No"
+
+msgid "yes"
+msgstr "Si"
+
+msgid "Slide show"
+msgstr "Presentación de diapositivas"
+
+msgid "Random choice"
+msgstr "Selección aleatoria"
+
+msgid "Cyclic display"
+msgstr "Pantalla cíclica"
+
+msgid "Switch time (s)"
+msgstr "Cambiar tiempo"
+
+msgid "Clear cache"
+msgstr "Limpiar cache"
+
+msgid "Cache cleared"
+msgstr "Cache limpiada"
+
+msgid " ...opening file"
+msgstr "...Abriendo fichero"
+
+msgid "Can't open file:"
+msgstr "No puedo abrir fichero"
+
+msgid "No more images"
+msgstr ""
+
+msgid "Slide show started"
+msgstr "Iniciando presentación de diapositivas"
+
+msgid "Slide show halted"
+msgstr "Presentación de diapositivas detenido"
+
+msgid "Standard play mode"
+msgstr ""
+
+msgid "Random play mode"
+msgstr "Selección aleatoria"
+
+msgid "Copying"
+msgstr "Copiando"
+
+msgid "Multiple files"
+msgstr "Múltiples archivos"
+
+msgid "Selection is being deleted. Please wait..."
+msgstr ""
+
+msgid "Really Delete?"
+msgstr "¿Borrar realmente?"
+
+msgid "Save/copy current playlist?"
+msgstr "¿Salvar lista de reproducción actual?"
+
+msgid "Playlist saved as "
+msgstr "Playlist guardada como "
+
+msgid "Working"
+msgstr "Trabajando"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Execute"
+msgstr "Ejecutar"
+
+msgid "Paste selected entries"
+msgstr "Pegar las entradas seleccionadas"
+
+msgid "Insert"
+msgstr "Insertar"
+
+msgid "Create dir"
+msgstr "Crear directorio"
+
+msgid "Selection is copied in background..."
+msgstr ""
+
+msgid "Selection is being moved in background..."
+msgstr ""
+
+msgid "Expert mode"
+msgstr "Modo avanzado"
+
+msgid "Too many entries for playlist!"
+msgstr "¡Demasiadas entradas para lista de reproducción!"
+
+msgid "Playlist"
+msgstr "Lista de reproducción"
+
+msgid "Functions"
+msgstr "Funciones"
+
+msgid "Deselect all"
+msgstr "Desmarcar todo"
+
+msgid "Select all"
+msgstr "Seleccionar todo"
+
+msgid "Deselect"
+msgstr "Desmarcar"
+
+msgid "Select"
+msgstr "Seleccionar"
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Move"
+msgstr "Mover"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Rename entry"
+msgstr "Renombrar entrada"
+
+msgid "Create directory"
+msgstr "Crear directorio"
+
+msgid "Show playlist"
+msgstr "Muestra lista de reproducción"
+
+msgid "Convert to UTF8"
+msgstr "Convertir a UTF8"
+
+msgid "Burn ISO-File"
+msgstr "Grabar archivo ISO"
+
+msgid "Make And burn ISO-File"
+msgstr "Crear y grabar archivo ISO"
+
+msgid "Filebrowser Commands"
+msgstr "Comandos explorador de archivos"
+
+msgid "Started converting"
+msgstr "Empezando conversión"
+
+msgid "Finished converting"
+msgstr "Conversión finalizada"
+
+msgid "Save playlist to disk"
+msgstr "Guardar lista de reproducción en disco"
+
+msgid "Copy playlist to usb stick"
+msgstr "Copiar lista de reproducción en un lapiz usb"
+
+msgid "Playlist actions"
+msgstr "acciones en listas de reproduccion"
+
+msgid "Directory already exists"
+msgstr "El directorio ya existe"
+
+msgid "New"
+msgstr "Nuevo"
+
+msgid "To create a new directory press 'OK'"
+msgstr "Presionar OK para crear nuedo direct."
+
+msgid "Directory Name"
+msgstr "Nombre directorio"
+
+msgid "Rename to"
+msgstr "Renombrar a"
+
+msgid "Filebrowser"
+msgstr "Explorador de archivos"
+
+msgid "File Browser"
+msgstr "Explorador de archivos"
+
+msgid "Picture viewer"
+msgstr "Visor de imágenes"
+
+#~ msgid "Moving"
+#~ msgstr "Moviendo"
+
+#~ msgid "Deleting"
+#~ msgstr "Borrando"
+
+#, fuzzy
+#~ msgid "Last image"
+#~ msgstr "Última modificacion"
+
+#~ msgid "Back to xine"
+#~ msgstr "Volver a xine"
+
+#~ msgid "Back to playlist"
+#~ msgstr "Volver a la lista de reproducción"

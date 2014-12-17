@@ -1,0 +1,258 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare-Tododream. Diciembre 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2010-04-15 12:16+0200\n"
+"PO-Revision-Date: 2008-09-30 14:40+0200\n"
+"Last-Translator: Ruben Nunez Francisco <ruben.nunez@tang-it.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr "Cliente flujo de datos VTP"
+
+msgid "Streaming Client"
+msgstr "Cliente Streaming"
+
+msgid "Server is suspended"
+msgstr "Servidor suspendido"
+
+msgid "Couldn't suspend Server!"
+msgstr "¡No se puede suspender el servidor"
+
+msgid "VDR Streaming Server"
+msgstr "Servidor flujo de datos VDR"
+
+msgid "Pause Live TV"
+msgstr "Pausar emisión TV"
+
+msgid "Streaming Server"
+msgstr "Servidor Streaming"
+
+msgid "Streaming active"
+msgstr "Streaming activo"
+
+msgid "Offer suspend mode"
+msgstr ""
+
+#, fuzzy
+msgid "Always suspended"
+msgstr "El cliente puede suspender"
+
+#, fuzzy
+msgid "Never suspended"
+msgstr "Servidor suspendido"
+
+msgid "Common Settings"
+msgstr "Configuraciones generales"
+
+msgid "Maximum Number of Clients"
+msgstr "Número máximo de clientes"
+
+msgid "Suspend behaviour"
+msgstr "Suspender conducta"
+
+msgid "Client may suspend"
+msgstr "El cliente puede suspender"
+
+#, fuzzy
+msgid "ReelBox-to-ReelBox Server"
+msgstr "Servidor VDR a VDR"
+
+#, fuzzy
+msgid "Start ReelBox-to-ReelBox Server"
+msgstr "Iniciar servidor VDR a VDR"
+
+#, fuzzy
+msgid "ReelBox-to-ReelBox Server Port"
+msgstr "Puerto servidor VDR a VDR"
+
+msgid "Bind to IP"
+msgstr "Asociar a IP"
+
+msgid "HTTP Server"
+msgstr "Servidor HTTP"
+
+msgid "Start HTTP Server"
+msgstr "Iniciar servidor HTTP"
+
+msgid "HTTP Server Port"
+msgstr "Puerto servidor HTTP"
+
+msgid "HTTP Streamtype"
+msgstr "Tipo de flujo HTTP"
+
+#, fuzzy
+msgid "Multicast Streaming Server"
+msgstr "Servidor Streaming"
+
+#, fuzzy
+msgid "Start IGMP Server"
+msgstr "Iniciar servidor HTTP"
+
+#, fuzzy
+msgid "Multicast Client Port"
+msgstr "Iniciar cliente"
+
+#, fuzzy
+msgid "Multicast Streamtype"
+msgstr "Tipo de flujo HTTP"
+
+msgid "Start Client"
+msgstr "Iniciar cliente"
+
+msgid "Remote IP"
+msgstr ""
+
+msgid "Remote Port"
+msgstr "IP remota"
+
+msgid "Filter Streaming"
+msgstr "Filtrar flujo de datos"
+
+msgid "Synchronize EPG"
+msgstr "Sincronizar EPG"
+
+#, fuzzy
+msgid "Minimum Priority"
+msgstr "Prioridad"
+
+#, fuzzy
+msgid "Maximum Priority"
+msgstr "Prioridad"
+
+#~ msgid "Streaming Control"
+#~ msgstr "Control transferencia datos"
+
+#~ msgid "Remote Schedule"
+#~ msgstr "Programación remota"
+
+#~ msgid "Remote Timers"
+#~ msgstr "Temporizadores remotos"
+
+#~ msgid "Remote Recordings"
+#~ msgstr "Grabaciones remotas"
+
+#~ msgid "Suspend Server"
+#~ msgstr "Suspender servidor"
+
+#~ msgid "Edit remote timer"
+#~ msgstr "Modificar temporizador remoto"
+
+#~ msgid "Active"
+#~ msgstr "Activo"
+
+#~ msgid "Channel"
+#~ msgstr "Canal"
+
+#~ msgid "Day"
+#~ msgstr "Día"
+
+#~ msgid "Start"
+#~ msgstr "Epezar"
+
+#~ msgid "Stop"
+#~ msgstr "Parar"
+
+#~ msgid "VPS"
+#~ msgstr "VPS"
+
+#~ msgid "Lifetime"
+#~ msgstr "Tiempo de vida"
+
+#~ msgid "File"
+#~ msgstr "Archivo"
+
+#~ msgid "First day"
+#~ msgstr "Primer día"
+
+#~ msgid "*** Invalid Channel ***"
+#~ msgstr "*** Canal inválido ***"
+
+#~ msgid "What's on now?"
+#~ msgstr "¿Qué hacen de nuevo?"
+
+#~ msgid "What's on next?"
+#~ msgstr "¿Qué hacen después?"
+
+#~ msgid "Record"
+#~ msgstr "Grabación"
+
+#~ msgid "Next"
+#~ msgstr "Siguiente"
+
+#~ msgid "Now"
+#~ msgstr "Ahora"
+
+#~ msgid "Schedule"
+#~ msgstr "Programar"
+
+#~ msgid "Switch"
+#~ msgstr "Cambiar"
+
+#~ msgid "Can't switch channel!"
+#~ msgstr "¡No se puede cambiar de canal!"
+
+#~ msgid "Schedule - %s"
+#~ msgstr "Programar - %s"
+
+#~ msgid "Fetching recordings..."
+#~ msgstr "Buscando grabaciones..."
+
+#~ msgid "Open"
+#~ msgstr "Abrir"
+
+#~ msgid "Delete"
+#~ msgstr "Borrar"
+
+#~ msgid "Summary"
+#~ msgstr "Resumen"
+
+#~ msgid "Error while accessing recording!"
+#~ msgstr "¡Error al acceder a grabación!"
+
+#~ msgid "Delete recording?"
+#~ msgstr "¿Borrar grabación?"
+
+#~ msgid "Edit"
+#~ msgstr "Modificar"
+
+#~ msgid "New"
+#~ msgstr "Nuevo"
+
+#~ msgid "On/Off"
+#~ msgstr "On/Off"
+
+#~ msgid "Delete timer?"
+#~ msgstr "¿Borrar temporizador?"
+
+#~ msgid "MTWTFSS"
+#~ msgstr "MTWTFSS"
+
+#~ msgid "Please restart VDR to activate changes"
+#~ msgstr "Reiniciar VDR para activar cambios"
+
+#~ msgid "Recordings not in sync! Try again..."
+#~ msgstr "¡Grabaciones desincronizadas! pruebe de nuevo..."
+
+#~ msgid "Couldn't delete recording! Try again..."
+#~ msgstr "¡No se puede borrar grabación! pruebe de nuevo..."
+
+#~ msgid "Couldn't save timer! Try again..."
+#~ msgstr "¡No se puede guardar temporizador! pruebe de nuevo..."
+
+#~ msgid "Timers not in sync! Try again..."
+#~ msgstr "¡Temporizadores desincronizados! pruebe de nuevo..."
+
+#~ msgid "Server error! Try again..."
+#~ msgstr "¡Error del servidor! pruebe de nuevo..."
+
+#~ msgid "Couldn't delete timer! Try again..."
+#~ msgstr "¡No se puede borrar el temporizador! pruebe de nuevo..."

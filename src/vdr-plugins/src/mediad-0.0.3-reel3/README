@@ -1,0 +1,151 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:		     Matthias Haas <mediad@pompase.net>
+
+Based on the work of:
+                             Bernd Schweikert <schweikert@dit-gmbh.de>
+                             Sascha Volkenandt <sascha@akv-soft.de>
+
+Thanks also goes to :
+														 Stefan Huelswitt for the mount.sh script
+
+Project's homepage:          www.pompase.net
+
+Latest version available at: www.pompase.net
+
+See the file COPYING for license information.
+
+Description:
+
+This PlugIn tries to identify the type of media inserted by removeable devices like 
+like CD-ROM/DVD or USB sticks. If the type of media gets recognized and an appropriate 
+plugIn is installed, mediad tries to start the plugin. If you have a 
+VDR directory structure on that disc, it launches VDR's own Recording Menu. 
+This also works if you have the MPEG-files stored directly in the root of the 
+disc, starting with 001.vdr. In addition to that dmh-archive-dvds can either 
+be displayed as a dvd (if you have the dvd plugin installed) or you can simply 
+display it as a normal recoding in the recordings menu.
+
+Note that this plugin controls other plugins as well. This means it can
+start a onetrack-VCD on the fly, even if the VCD-PlugIn displays a menu 
+before you can play-back. This also applies to Audio-CD's and MP3-CD's. 
+
+You will need to provide a mount.sh Script, which must react to the commands 
+mount, unmount, eject and status, like in "mount.sh status /cdrom". All 
+those commands return 0 on success (e.g. the disc is mounted or correctly
+ejected) and 1 on failure. You can take the script from the MP3-plugIn by
+Stefan Huelswitt. A copy of this script is placed in the examples directory.
+
+Requirements:
+
++ D-BUS > 0.61 at http://dbus.freedesktop.org/
++ HAL Daemon > 0.5.7 at http://www.freedesktop.org/Software/hal
++ pmount > 0.9.13 at http://www.piware.de/projects.shtml
+
+To enable cdfs with pmount to you have to apply the following patch (atleast with 0.9.13):
+diff -Naur pmount-0.9.13/src/fs.c pmount-0.9.13-devel/src/fs.c
+--- pmount-0.9.13/src/fs.c      2006-08-07 01:21:17.000000000 +0200
++++ pmount-0.9.13-devel/src/fs.c        2007-01-26 09:53:42.000000000 +0100
+@@ -31,6 +31,7 @@
+     { "reiser4", "nodev,noauto,nosuid,user", 0, NULL, 0 },
+     { "xfs", "nodev,noauto,nosuid,user", 0, NULL, 0 },
+     { "jfs", "nodev,noauto,nosuid,user", 0, NULL, 1 },
++    { "cdfs", "nodev,noauto,nosuid,user", 0, NULL, 0 },
+     { NULL, NULL, 0, NULL, 0}
+	 };
+
+If we are lucky this will be include in future versions :-)
+
+According to your system's configuration it might be neccessary to change the
+include und library pathes of the Makefile to compile correctly.
+
+Installation:
+
+Let's say mediad's version is 0.0.1 and vdr's version is 1.4.3. If you 
+use anything else please exchange the version numbers appropriately (this
+way I don't have to update this section all the times;) )
+
+cd vdr-1.4.3/PLUGINS/src
+tar xvfz vdr-mediad-0.0.1.tgz
+ln -s mediad-0.0.1 mediad
+cd ../..
+make [options, if necessary] plugins
+
+Usage:
+
+The Plugin onyl provides one parameter that allows the usage of a different mount script. The
+option -m takes the path to the alternative mount script. All volumes or devices that should be
+be watched for new available media have to be provided at the vdr's 
+plugin configuration path as mediad.conf. Starting with version 0.0.3 symbolic links are allowed  
+for device location. For instance /dev/cdrom is a symbolic link to /dev/hdc. 
+
+A sample file of the configuration can be found at the example directory. It has the following 
+syntax:
+The device/volume to look for
+|        A descriptive name that is shown for the device/volume
+|        |
+|        |
+|        |
+|        |
+hdc;CD-Rom;
+
+By default mediad uses pmount to mount all kinds of devices to the /media directory. pmount is 
+used to be able to use vdr as a nonpriviledged user. It is also used to be able to mount devices that
+are not known to the system's fstab. It might be necessary to add the vdr user to special groups 
+to be allowed to use pmount (i.e. with gentoo this is group plugdev).
+
+Sample fstab entry:
+/dev/dvd  /cdfs cdfs  ro,noauto,user,exec 0 0
+
+At the plugin's settings each plugin that is known to mediad can be configured.
+As mediad detects installed plugins automatically it is neccessary to ALWAYS ADD
+MEDIAD AS THE VERY LAST PLUGIN TO VDR. All plugins that are added after mediad
+will not be recognized.
+Each plugin can be excluded from the detection process, so that it will not be used 
+in case a matching volume is added to the system. In case more than one plugin matches 
+to the added media, the user will be interactively questioned which plugin should be started.
+I.e. a audio CD is added and the vdr has the cdda and ripit plugin installed, both plugins
+match the requirements. As a result the user will be asked whether he wants to rip
+or listen the CD.
+In case only one plugin matches the user can decide whether this plugin should be started 
+automatically or should he be asked for starting. This is also configured at the plugins setup. 
+In case the plugin's main menu entry is not hidden all currently known volumes can be 
+accessed for autodetection. All devices that have currently no media inserted are not shown.
+
+To get rid of having to unmount devices I suggest to mount all automatically added volumes 
+readonly. In addition to that is is very handy to remove the device's mount lock mechanism. 
+This requires root priviledges and is therefore not part of the plugin but can be done with
+the init scripts. As we use hal devices that are removed do get unmounted after the removal 
+of the volume.
+
+To unlock a device from mount lock simply add a line for each device like this as a root user:
+
+echo 0 > /proc/sys/dev/cdrom/lock
+
+These Media-Types should work 
+
+Media        Player   
+Video-CD     vdr-vcd 
+Super-VCD    vdr-vcd
+DVD          vdr-dvd
+DMH-Archive-DVD          vdr-dvd
+DMH-Archive-DVD          vdr itself
+Photo CD     vdr-pcd
+MP3 files    vdr-mp3
+OGG files    vdr-mp3
+Audio CD's   vdr-mp3
+Audio CD's   cdda
+Audio CD's   ripit
+Mixed Mode   vdr-mp3
+AVI files    vdr-mplayer     
+VDR dirs     vdr itself
+VDR files    vdr itself
+Blank DVD    vdr-burn
+
+Planned:
+Picture CD/DVD  vdr-image
+
+Remarks:
+
+This PlugIn is tested with vdr-1.4.7. Currently 1.5.x vdr versions are not tested. 
+

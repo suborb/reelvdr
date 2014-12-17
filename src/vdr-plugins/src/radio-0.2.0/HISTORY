@@ -1,0 +1,173 @@
+VDR Plugin 'radio' Revision History
+-----------------------------------
+
+2006-31-12: Version 0.2.0
+	    U.Hanke <egal@gmx.info>
+- Add RaSS-Implementation 'RadioScreenShow' (workingname QDAr),
+  slideshow with mpeg-stills as backgroundimage & save datafiles,
+  archiv with OSD & Navigation
+- Bugfix: now stopping correct rds-receiver on multiple tunerdevices,
+  thanks to Reinhard Niﬂl
+
+2006-08-14: Version 0.1.4
+	    U.Hanke <egal@gmx.info>
+- add seperate RDS-Receiver for Data-PIDs,
+  on channels like Radio-FFH & co.
+- RDS PS added, text in osd, if no RTplus available
+- RDS PTYN added, shown if no PTY received
+
+2006-07-19: Version 0.1.3
+	    U.Hanke <egal@gmx.info>
+- add Service/OSD-Symbol from audiorecorder for title-recording
+- exchange localtime() with thread-safe localtime_r()
+- add french-translation text, thanks to MichaÎl Nival
+
+2006-04-27: Version 0.1.2
+	    U.Hanke <egal@gmx.info>
+- Bugfix in fopen for DataDir-files, thanks to Thomas G¸nther
+- New command-options --live/--replay = mpegfile for default-mpegs @ live-/replaymode,
+  (mpegfile as absolute incl. Path), suggested by Tobias Grimm
+- Add -fPIC to compiler-flags, thanks to Tobias Grimm
+
+- OSD-Timeout reactivated
+- cPlugin::Active/cPlugin::MainThreadHook only if vdr >= 1.3.47 for better compatibility with patched vdr
+- New svdrp-command 'RTTCLOSE' for temporarily closing OSD (2*Osd-Messagetimeout)
+
+2006-04-19: Version 0.1.0
+	    U.Hanke <egal@gmx.info>
+- Changes for vdr >= 1.3.47
+- RDS-logo in osd added, ../symbols/rds.xpm can also be used in skin-menus
+- StatusMsg for lcdproc&co independent from osd
+- New command-option --data=dir for temp. datafiles
+- Reorg plugin-call for automatic-osd
+- Update/Add finnisch-translation text, thanks to Rolf Ahrenberg
+- Changes for vdr >= 1.3.45
+- Add skincolors for Radiotext-OSD, see setup-option 'Skincolor used'
+- Add crc16 check (CCITT) for rds + qdar-files
+- Makefile-Defines for vdr-patches
+- RTplus-Memory with seperate OSDs added
+- detecting radio in file @ replaymode,
+  thanks to Reinhard Niﬂl for providing the patch
+- cleanup code, vdr < 1.3.43 no longer supported
+- no more own tansferthread -> changing to audiothread,
+  radiotext @ replaymode now possible,
+  better handling of transfer-start,
+  thanks to Reinhard Niﬂl for providing all the patches
+
+2006-01-09: Version 0.0.9
+	    U.Hanke <egal@gmx.info>
+- RDS-PTY OSD changed & no radio-action on Data/Service-channels,
+  thanks to Walter Koch for providing the patch
+- Bugfix: Title-Starttime @ radiotext-service & StatusMsg (lcdproc&co.)
+- Update/Changing to RTplus Version 2.0 (now we have titleend with item-runningbit ;)
+
+2005-11-02: Version 0.0.8e
+	    U.Hanke <egal@gmx.info>
+- Update/Add finnisch-translation text, thanks to Rolf Ahrenberg
+- RText: PlusTag ends, if 2x taglen=0, new seen @ 'Eins Live/Bremen Vier/SWR3',
+         PlusTag changing also without togglebit (seen on 'Bremen Vier'),
+	 PlusTag change entitystr to corresponding char ("&apos;" -> "'" a.s.o)
+	 
+2005-10-12: Version 0.0.8d
+	    U.Hanke <egal@gmx.info>
+- Update/Add finnisch-translation text, thanks to Rolf Ahrenberg
+- Fix for displaying the bg-image, thanks to Joachim Wilke for providing the patch
+- RText: cStatus::MsgOsdProgramme/ItemText added (incl. setup) for lcdproc and other
+	 display-plugins, thanks to Joachim Wilke for providing the initial-patch,
+- RText: length-checking not strict '==', station NDR* sends false MEL
+- RText: PlusTag-startmarker now beginning with '0' (only WDR sends it correct now)
+
+2005-09-12: Version 0.0.8c
+	    U.Hanke <egal@gmx.info>
+- Bugfix: closing own plugin-OSD on channelswitch by CHAN+/- or svdrp
+- Background-checking, if radio-channels get video-Pid (new/temp.), suggested by Rolf Ahrenberg
+- Changes for vdr >= 1.3.32, no more UserMacroKey needed for AutoOsd
+- New extern svdrp-commands > plug radio 'RTINFO' and 'RTCLOSE' (vdr >= 1.3.31):
+  > RTINFO
+  >   Print the radiotext information.
+  > RTCLOSE
+  >   Close the radiotext-osd.
+  >   Reopen can only be done over menu or channelswitch.
+
+2005-09-10: Version 0.0.8a/b
+	    U.Hanke <egal@gmx.info>
+- Update/Add finnisch-translation text, thanks to Rolf Ahrenberg
+- Bugfix: close RText-OSD at channelswitch (svdrp), if no radio-channel
+- AutoOSD: no UserKey after player-end with <Back-Key>,
+           no more closing other plugin-osds
+
+2005-09-09: Version 0.0.8
+	    U.Hanke <egal@gmx.info>
+- Update/Add finnisch-translation text, thanks to Rolf Ahrenberg
+- Delayed OSD-redisplay after menus
+- New OSD-timeout, timerval about setup (0=No, 1-1440 min.)
+- Check textrepeatings in all OSD-Rows
+
+2005-08-31: Version 0.0.7f
+	    U.Hanke <egal@gmx.info>
+- RDS-PTY added, thanks to Walter Koch for providing the patch
+- RDSText-Check @ pes audio-frames instead of ts-frames on vdr >= 1.3.31
+- Update ID "RadioTextService-1.0" service-call for other plugins:
+    struct RadioTextService_v1_0 {
+        int rds_info;			// 0= No / 1= Text / 2= Text + RTplus-Tags (Item,Artist)
+        int rds_pty;			// 0-31, Source http://www.ebu.ch/trev_255-beale.pdf for values
+        char *rds_text;
+        char *rds_title;		// "---" if none @ moment
+        char *rds_artist;		// "---" if none @ moment
+        struct tm *title_start;
+    };
+- Some modifications on RTplus-tags errors
+
+2005-08-27: Version 0.0.7e
+	    U.Hanke <egal@gmx.info>
+- Bugfix: prevent keys Channel+/- to switch twice @ AutoOsd
+- Add char-translation 'additional display characters' for radiotext (see RBDS-Standard for more info)
+	    
+2005-08-24: Version 0.0.7d
+	    U.Hanke <egal@gmx.info>
+- Update finnisch-translation text, thanks to Rolf Ahrenberg
+- RDS-Text: ignore textline-doublettes for OSD,
+- Add ID "RadioTextService-1.0" service-call for other plugins:
+    struct RadioTextService_v1_0 {
+        int rds_info;		// 0= No / 1= Text / 2= Text + RTplus-Tags (Item,Artist)
+        char *rds_text;
+        char *rds_title;
+        char *rds_artist;
+        struct tm *title_start;
+    };
+  See vdr-1.3.30 for more info about 'cPluginName::Service' or
+  demo-plugin 'rtextdemo' on console-output, how it works
+
+2005-08-21: Version 0.0.7c
+	    U.Hanke <egal@gmx.info>
+- Additional finnisch-translation text, thanks to Rolf Ahrenberg
+- RDS-Text: new osd-options 'OSD-Titlerow, OSD-Scrollmode, OSD-Taginfo',
+	    itemtag-end about (no)repeating & min-timer,
+            rdstextcheck-revision since ARD-Radiotransponder sends (20050819)
+- Update transfermode (cThread::Running()), see vdr-1.3.29 for details
+
+2005-08-05: Version 0.0.7b
+	    U.Hanke <egal@gmx.info>
+- Finnisch-translation text, thanks to Rolf Ahrenberg
+- Commandline-option verboselevel for testing
+- RTplus tags (Title/Artist) added, OSD-Option for RTplus tags
+- Radiotextcheck optimized (TS-Header, bytestuffing + co.)
+
+2005-07-31: Version 0.0.7a
+	    U.Hanke <egal@gmx.info>
+- cleanup code, vdr<1.3.22 no longer supported
+- RDS-Radiotext added, show about Mainmenuentry or Automatic
+- Div. Setup-Options for radio/RDS-Radiotext
+- Internationalization added,
+- All AudioTracks now possible
+
+2005-03-19: Version 0.0.6
+- F.PECOURT:
+	modified functions calls for new Audio IDs and
+	radiotransfer for vdr 1.3.22. First dirty hacks
+	still one problem: blank image when switching
+	from one radio to an other. Clear missing!
+	
+2004-11-10: Version 0.0.1
+
+- Initial revision.

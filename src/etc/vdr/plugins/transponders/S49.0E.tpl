@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S49.0E
+2=Yamal 202
+3=East
+4=49.0

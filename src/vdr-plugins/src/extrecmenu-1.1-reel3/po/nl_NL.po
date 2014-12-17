@@ -1,0 +1,548 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2011-06-15 21:00+0100\n"
+"Last-Translator: TechNL <technl@reelbox4all.com>\n"
+"Language-Team: Dutch reelbox4all.com <tech@reelbox4all.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "Delete recording?"
+msgstr "Opname wissen?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+msgid "Directory Selector"
+msgstr "Directory keuze"
+
+msgid "up"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Onderbreken"
+
+msgid "Move"
+msgstr "Verplaats"
+
+msgid "Rec Dir"
+msgstr "Rec Dir"
+
+msgid "Button$Create"
+msgstr "Maak"
+
+msgid "Cannot move into its own sub folder"
+msgstr "Kan niet naar eigen submap verplaatsen"
+
+msgid "Cannot write into directory"
+msgstr "Kan niet in deze map schrijven"
+
+msgid "Moving Recording"
+msgstr "Verplaats Opname"
+
+msgid "Moving Directories"
+msgstr "Verplaats Mappen"
+
+msgid "Move failed. Not enough free space"
+msgstr "Verplaatsen mislukt. Niet genoeg vrije ruimte beschikbaar"
+
+msgid "Copying started"
+msgstr "Kopiëren gestart"
+
+msgid "Cannot copy into its own sub folder"
+msgstr "Niet kan naarzijn eigen sub-map kopiëren"
+
+msgid "Copy failed. Not enough free space"
+msgstr "Kopiëren mislukt. Niet genoeg vrije ruimte beschikbaar"
+
+msgid "Create directory"
+msgstr "Creëer map"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "To create a new directory press 'OK':"
+msgstr "Druk op 'OK' om een nieuwe map te maken:"
+
+msgid "Directory Name"
+msgstr "Map naam"
+
+msgid "Note:"
+msgstr "Opmerking:"
+
+msgid "Directory will only be shown with"
+msgstr "Directory wordt alleen getoont met"
+
+msgid "recordings inside."
+msgstr "Aanwezige opname's."
+
+msgid "Created"
+msgstr "Gemaakt"
+
+msgid "Failed"
+msgstr "Mislukt"
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr "Interne HDD"
+
+msgid "External Media"
+msgstr "Extern Medium"
+
+msgid "Please select the drive where to move the recording:"
+msgstr "Kies aub. de drive waarheen de opname verplaatst moet worden:"
+
+msgid "Select Media"
+msgstr "Selecteer Medium"
+
+msgid "Could not open media"
+msgstr "Kan media niet openen"
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr "Verander titel"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Episode"
+msgstr "Hoofdstuk"
+
+msgid "Invalid title!"
+msgstr "Ongeldige titel!"
+
+msgid "Invalid episode!"
+msgstr "Ongeldig hoofdstuk!"
+
+msgid "Rename directory"
+msgstr "Hernoem directory"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Invalid filename!"
+msgstr "Ongeldige bestandsnaam!"
+
+msgid "Creating directories failed!"
+msgstr "Maken van directory's mislukt!"
+
+msgid "New folder"
+msgstr "Nieuwe map"
+
+msgid "Button$Cancel"
+msgstr "Annuleer"
+
+msgid "Button$Move"
+msgstr "Verplaats"
+
+msgid "Move recording"
+msgstr "Verplaats opname"
+
+msgid "[base dir]"
+msgstr "[basis map]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "Doel is reeds vol, toch proberen?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "Verplaatsen naar eigen subdirectory niet toegestaan!"
+
+msgid "Can't get filesystem information"
+msgstr "Kan bestandsysteem info niet lezen"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "low"
+msgstr "laag"
+
+msgid "normal"
+msgstr "normaal"
+
+msgid "high"
+msgstr "hoog"
+
+msgid "Priority"
+msgstr "Prioriteit"
+
+msgid "Lifetime"
+msgstr "Levensduur"
+
+msgid "unlimited"
+msgstr "ongelimiteerd"
+
+msgid "Info:"
+msgstr "Informatie:"
+
+msgid "In this menu you can adjust the point in time"
+msgstr "In dit menu kan het tijdstip gekozen worden wanneer"
+
+msgid "a recording gets deleted automatically."
+msgstr "een opname automatisch gewist moet worden."
+
+msgid "Recording info"
+msgstr "Opname info"
+
+msgid "Button$Play"
+msgstr "Afspelen"
+
+msgid "Button$Rewind"
+msgstr "Terugspoelen"
+
+msgid "Large picture"
+msgstr "Groot beeld"
+
+msgid "Path"
+msgstr "Pad"
+
+msgid "Channel"
+msgstr "Kanaal"
+
+msgid "Size"
+msgstr "Grootte"
+
+msgid "Opening Recordings..."
+msgstr "Opname's openen ..."
+
+msgid "Error while mounting DVD!"
+msgstr "Fout tijdens het koppelen van de DVD!"
+
+msgid "Recordings"
+msgstr "Opname's"
+
+msgid "free"
+msgstr "vrij"
+
+msgid "Button$Functions"
+msgstr "Funkties"
+
+msgid "Total"
+msgstr "Totaal"
+
+msgid "Last recording"
+msgstr "Laatste opname"
+
+msgid "Error while accessing recording!"
+msgstr "Fout tijdens het ophalen van de opname"
+
+msgid "PIN code: "
+msgstr "PIN code: "
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Laad aub DVD %s"
+
+msgid "DVD plugin is not installed!"
+msgstr "DVD plugin niet geïnstalleerd!"
+
+msgid "No DVD in drive!"
+msgstr "Geen DVD in de speler!"
+
+msgid "Recording not found on DVD!"
+msgstr "Geen opname op de DVD gevonden!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "Fout tijdens het linken van [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "sudo of mount --bind / umount fout (vfat system)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "'dvdarchive.sh' script niet gevonden!"
+
+msgid "Delete directory?"
+msgstr "Directory wissen?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Timer neemt nog op, deze echt wissen?"
+
+msgid "Error while deleting recording!"
+msgstr "Fout tijdens het wissen van de opname"
+
+msgid "Recording commands"
+msgstr "Opname commando's"
+
+msgid "Sort by date"
+msgstr "Sorteer op datum"
+
+msgid "Sort by name"
+msgstr "Sorteer op naam"
+
+msgid "Show title"
+msgstr "Toon titel"
+
+msgid "Show directory name"
+msgstr "Toon naam van directory"
+
+msgid "Invalid PIN"
+msgstr "Ongeldige PIN"
+
+msgid "PIN Aborted"
+msgstr "PIN afgebroken"
+
+msgid "Cancel moving?"
+msgstr "Verplaatsen annuleren?"
+
+msgid "Cancel editing?"
+msgstr "Bewerken annuleren?"
+
+msgid "ascending"
+msgstr "oplopend"
+
+msgid "descending"
+msgstr "aflopend"
+
+msgid "Show recording date"
+msgstr "Toon datum van de opname"
+
+msgid "Show recording time"
+msgstr "Toon tijd van de opname"
+
+msgid "Show recording length"
+msgstr "Toon lengte van de opname"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Toon het aantal nieuwe opnames van een directory"
+
+msgid "Show alternative to new marker"
+msgstr "Toon alternatief voor nieuwe marker"
+
+msgid "Show free disk space for each file system"
+msgstr "Toon vrije diskruimte voor elk bestandssysteem"
+
+msgid "Sorting"
+msgstr "Sorteren"
+
+msgid "Hide main menu entry"
+msgstr "Verberg hoofdmenu invoer"
+
+msgid "Replace original recordings menu"
+msgstr "Vervang het originele opnamen menu"
+
+msgid "Jump to last played recording"
+msgstr "Ga naar laatste gespeelde opname"
+
+msgid "Show recordings menu after playback"
+msgstr "Toon opname-menu na het afspelen"
+
+msgid "Patch font"
+msgstr "Bewerk lettertype"
+
+msgid "~ 16MB/s"
+msgstr "~ 16MB/s"
+
+msgid "~ 7MB/s"
+msgstr "~ 7MB/s"
+
+msgid "~ 3MB/s"
+msgstr "~ 3MB/s"
+
+msgid "Limit bandwidth when moving recordings"
+msgstr "Beperk de bandbreedte tijdens verplaatsen van opnames"
+
+msgid "Use cutter queue"
+msgstr "Gebruik knip wachtrij"
+
+msgid "Undelete Recordings"
+msgstr "Opnamen herstellen"
+
+msgid "No recordings to undelete!"
+msgstr "Geen opnamen om te herstellen!"
+
+msgid "Button$Remove"
+msgstr "Verwijder"
+
+msgid "Button$Undelete"
+msgstr "Herstellen"
+
+msgid "Remove recording from disk?"
+msgstr "Opname van de schijf verwijderen?"
+
+msgid "Removing recording ..."
+msgstr "Verwijderen van de opname ..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Sorry, herstellen van de opname is mislukt"
+
+msgid "Button$Back"
+msgstr "Terug"
+
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "Kan niet in de opname snijden in de videodirectory"
+
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Opname aan de knipwachtrij toegevoegd"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr "Kan via de Netclient niet in opname's knippen zonder een Avantgarde server"
+
+msgid "Recording already in cutter queue!"
+msgstr "Opname al in de te knippen wachtrij!"
+
+msgid "No editing marks defined!"
+msgstr "Geen bewerking punten gedefinieerd"
+
+msgid "Added recording to cutter queue"
+msgstr "Opnamen in de knip wachtrij geplaatst"
+
+msgid "Not enough space on harddisk!"
+msgstr "Niet genoeg ruimte op de harddisk beschikbaar!"
+
+msgid "Rename/Move failed!"
+msgstr "Hernoem/Verplaatsen mislukt!"
+
+msgid "Cutter queue not empty"
+msgstr "Knip-wachtrij niet leeg"
+
+msgid "Move recordings in progress"
+msgstr "Verplaatsen van opnamen bezig"
+
+msgid "Can't start editing process!"
+msgstr "Kan niet met het bewerkings-proces beginnen!"
+
+msgid "Cutting"
+msgstr "Knippen"
+
+msgid "Moving"
+msgstr "Verplaatsen"
+
+msgid "started"
+msgstr "gestart"
+
+msgid "Cancelled"
+msgstr "Geannuleerd"
+
+msgid "Completed"
+msgstr "Afgerond"
+
+msgid "Copying"
+msgstr "Kopiëren"
+
+msgid "copying recording"
+msgstr "opname kopiëren"
+
+msgid "Copy failed!"
+msgstr "Kopiëren mislukt"
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "Deze versie van extrecmenu biedt geen ondersteuning voor deze dienst!"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "ExtRecMenu bestaat niet!"
+
+msgid "Extended recordings menu"
+msgstr "Uitgebreid menu voor opname's"
+
+msgid "Rename"
+msgstr "Hernoem"
+
+msgid "Burn recording"
+msgstr "Brand opname"
+
+msgid "Mark as new"
+msgstr "Markeer als nieuw"
+
+#~ msgid "Button$Open"
+#~ msgstr "Open"
+
+#~ msgid "moving recording"
+#~ msgstr "opname verplaatsen"
+
+#~ msgid "Copy"
+#~ msgstr "Kopieer"
+
+#~ msgid "Button$Info"
+#~ msgstr "Informatie"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Herstellen"
+
+#, fuzzy
+#~ msgid "Set Title"
+#~ msgstr "Titel"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Details"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Bewerk"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Hernoem"
+
+#~ msgid "Create"
+#~ msgstr "Maak"

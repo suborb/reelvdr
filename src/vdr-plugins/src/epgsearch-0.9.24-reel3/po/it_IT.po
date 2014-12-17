@@ -1,0 +1,1239 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-epgsearch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-11-22 07:16+0000\n"
+"PO-Revision-Date: 2009-06-21 00:35+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Channel groups"
+msgstr "Gruppi canali"
+
+msgid "Channel group used by:"
+msgstr "Gruppo di Canali in uso da: "
+
+msgid "Edit$Delete group?"
+msgstr "Cancellare gruppo?"
+
+msgid "Edit channel group"
+msgstr "Modificare gruppo canali"
+
+msgid "Group name"
+msgstr "Nome gruppo"
+
+msgid "Button$Invert selection"
+msgstr "Invertire la selezione"
+
+msgid "Button$All yes"
+msgstr "Tutto Si"
+
+msgid "Button$All no"
+msgstr "Tutto No"
+
+msgid "Group name is empty!"
+msgstr "Nome gruppo vuoto!"
+
+msgid "Group name already exists!"
+msgstr "Nome gruppo già esistente!"
+
+#, c-format
+msgid "%d timer conflict(s)! First at %s. Show them?"
+msgstr "%d Timer in conflitto! Il primo alle %s. Visualizzarli?"
+
+msgid "Direct access to epgsearch's conflict check menu"
+msgstr "Accesso diretto al menu verifica conflitti di EPGSearch"
+
+msgid "Timer conflicts"
+msgstr "Conflitti timer"
+
+msgid "Conflict info in main menu"
+msgstr "Info conflitti nel menu principale"
+
+msgid "next"
+msgstr "Prossimo"
+
+msgid "search the EPG for repeats and more"
+msgstr "Verificare EPG per ripetizioni e altro"
+
+msgid "TV-Guide (EPG)"
+msgstr "Guida TV (EPG)"
+
+msgid "Direct access to epgsearch's search menu"
+msgstr "Accesso diretto menu ricerca EPGSearch"
+
+msgid "Search-Timer Manager"
+msgstr "Gestione timer di ricerca"
+
+msgid "EpgSearch-Search in main menu"
+msgstr "Ricerca EPGSearch nel menu principale"
+
+msgid "Button$Help"
+msgstr "Aiuto"
+
+msgid "Standard"
+msgstr "Predefinito"
+
+msgid "Button$Commands"
+msgstr "Comandi"
+
+msgid "Button$Search"
+msgstr "Ricerca"
+
+msgid "pipes"
+msgstr "Barre"
+
+msgid "graphical"
+msgstr "Grafica"
+
+msgid "never"
+msgstr "Mai"
+
+msgid "always"
+msgstr "Sempre"
+
+msgid "smart"
+msgstr "Intelligente"
+
+msgid "before user-def. times"
+msgstr "Prima orari definiti dall'utente"
+
+msgid "after user-def. times"
+msgstr "Dopo orari definiti dall'utente"
+
+msgid "before 'next'"
+msgstr "Prima del prossimo"
+
+msgid "Standard EPG"
+msgstr "EPG standard"
+
+msgid "Use 'OK Button' for opening and closing menus"
+msgstr ""
+
+msgid "General"
+msgstr "Generale"
+
+msgid "EPG menus"
+msgstr "Menu EPG"
+
+msgid "User-defined EPG times"
+msgstr "Orari EPG definiti dall'utente"
+
+msgid "Timer programming"
+msgstr "Programmazione timer"
+
+msgid "Search and search timers"
+msgstr "Ricerche e timer di ricerca"
+
+msgid "Timer conflict checking"
+msgstr "Verifica conflitti timer"
+
+msgid "Main menu entry"
+msgstr "Voce menu principale"
+
+msgid "Help$The name of the main menu entry which defaults to 'Programm guide'."
+msgstr "Voce del menu principale riferita a \"guida programmi\""
+
+msgid "Start menu"
+msgstr "Menu avvio"
+
+msgid "Help$Choose between 'Overview - Now' and 'Schedule' as start menu when this plugin is called."
+msgstr "Scegliere tra \"Panoramica - In onda\" e \"Pianificazione\" come menu iniziale all'avvio del plugin."
+
+msgid "Ok key"
+msgstr "Tasto Ok"
+
+msgid ""
+"Help$Choose here the behaviour of key 'Ok'. You can use it to display the summary or to switch to the corresponding channel.\n"
+"Note: the functionality of key 'blue' (Switch/Info/Search) depends on this setting."
+msgstr ""
+"Selezionare la funzione da associare al tasto \"Ok\". Può essere utilizzato per mostrare il sommario o passare al canale corrispondente.\n"
+"Nota: La funzione del tasto blu (Switch/Info/Ricerca) dipende da questa configurazione."
+
+msgid "Show channel numbers"
+msgstr "Visual. i numeri canale"
+
+msgid ""
+"Help$Display channel numbers in 'Overview - Now'.\n"
+"\n"
+"(To completely define your own menu look please inspect the MANUAL)"
+msgstr ""
+"Visualizzare i numeri canale in \"Panoramica - In Onda\".\n"
+"\n"
+"(Per configurare in modo approfondito i menu personalizzati consultare il MANUALE)"
+
+#, fuzzy
+msgid "Show bouquet separators"
+msgstr "Mostrare separatori giorno"
+
+msgid "Help$Display VDR channel groups as separators between your channels in 'Overview - Now'."
+msgstr "Mostrare gruppi canali VDR come separatori tra i canali in \"Panoramica - In Onda\"."
+
+msgid "Show day separators"
+msgstr "Mostrare separatori giorno"
+
+msgid "Help$Display a separator line at day break in 'Schedule'."
+msgstr "Mostrare una linea di separazione tra i giorni in \"Pianificazione\""
+
+msgid "Show radio channels"
+msgstr "Mostrare i canali radio"
+
+msgid "Help$Show also radio channels."
+msgstr "Mostrare anche i canali radio."
+
+msgid "Limit channels from 1 to"
+msgstr "Limitare i canali da 1 a "
+
+msgid "Help$If you have a large channel set you can speed up things when you limit the displayed channels with this setting. Use '0' to disable the limit."
+msgstr "In caso di elevato numero di canali, si può velocizzare la risposta limitando il numero di canali visualizzati. \"0\" -> disabilitare la limitazione."
+
+msgid "'One press' timer creation"
+msgstr "Creazione timer \"Con un tasto\""
+
+msgid "Help$When a timer is created with 'Record' you can choose between an immediate creation of the timer or the display of the timer edit menu."
+msgstr "Nella creazione di un timer con \"Registrare\" si può scegliere tra la sua creazione immediata e la visualizzazione del Menu modifica timer."
+
+msgid "Time interval for FRew/FFwd [min]"
+msgstr "Intervallo di tempo per FFW/REW [min]"
+
+msgid ""
+"Help$Choose here the time interval which should be used for jumping through the EPG by pressing FRew/FFwd.\n"
+"\n"
+"(If you don't have those keys, you can toggle to this functionality pressing '0' and get '<<' and '>>' on the keys green and yellow)"
+msgstr ""
+"Intervallo di tempo associato ai tasti FFW/REW per muoversi nell'EPG.\n"
+"\n"
+"(Se non si dispone di tali tasti, si può attivare questa funzione premendo \"0\" e successivamente i tasti Verde(<<) o Giallo(>>) "
+
+msgid "Toggle Green/Yellow"
+msgstr "Alternare i Tasti Verde/Giallo"
+
+msgid "Help$Specify if green and yellow shall also be switched when pressing '0'."
+msgstr "Specificare se anche verde e giallo devono essere cambiati premendo \"0\"."
+
+msgid "Show favorites menu"
+msgstr "Mostrare menu preferiti"
+
+msgid ""
+"Help$A favorites menu can display a list of your favorite broadcasts. Enable this if you want an additional menu besides 'Now' and 'Next'\n"
+"Any search can be used as a favorite. You only have to set the option 'Use in favorites menu' when editing a search."
+msgstr ""
+"Il menu preferiti può mostrare una lista dei programmi preferiti. Abilitarlo se si desidera disporre di un ulteriore menu in aggiunta a \"In Onda\" e \"Prox\"\n"
+"Ogni ricerca può essere utilizzata come un preferito. Occorre solo configurare l'opzione \"Usare nel menu Preferiti\" modificando una ricerca."
+
+msgid "for the next ... hours"
+msgstr "Per le prossime ... ore"
+
+msgid "Help$This value controls the timespan used to display your favorites."
+msgstr "Questo valore controlla l'intervallo di tempo preso in considerazione nella visualizzazione programmi preferiti."
+
+msgid "Use user-defined time"
+msgstr "Utilizzare orari utente"
+
+msgid "Help$Besides 'Now' and 'Next' you can specify up to 4 other times in the EPG which can be used by repeatedly pressing the green key, e.g. 'prime time', 'late night',..."
+msgstr "Oltre a \"In Onda\" e \"Prox\" è possibile specificare nell'EPG fino a 4 altri orari, utilizzabili con pressioni ripetute del tasto verde, come \"Prima serata\", \"Notte\" ecc."
+
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "Help$This is the description for your user-defined time as it will appear as label on the green button."
+msgstr "Descrizione per gli orari definiti dall'utente. Comparirà come etichetta sul tasto verde."
+
+msgid "Time"
+msgstr "Orario"
+
+msgid "Help$Specify the user-defined time here in 'HH:MM'."
+msgstr "Inserire l'orario definito dall'utente come \"HH:MM\""
+
+msgid "Default recording dir"
+msgstr "Cartella registrazioni predefinita"
+
+msgid "Help$When creating a timer you can specify here a default recording directory."
+msgstr "Durante la creazione di un timer, è possibile specificare una cartella registrazioni predefinita."
+
+msgid "Add episode to manual timers"
+msgstr "Aggiungere episodio a timer manuali"
+
+msgid ""
+"Help$If you create a timer for a series, you can automatically add the episode name.\n"
+"\n"
+"- never: no addition\n"
+"- always: always add episode name if present\n"
+"- smart: add only if event lasts less than 80 mins."
+msgstr ""
+"Creando un timer per una serie, è possibile aggiungere automaticamente un nome per l'episodio.\n"
+"\n"
+"- mai: nessuna aggiunta.\n"
+"- sempre: aggiungere sempre il nome episodio, se presente.\n"
+"- intelligente: aggiungere solo se l'evento dura meno di 80 minuti."
+
+msgid "Button$Select"
+msgstr "Selezionare"
+
+msgid "Default timer check method"
+msgstr "Metodo predefinito verifica timer"
+
+msgid "Use search timers"
+msgstr "Usare timer di ricerca"
+
+msgid "Help$'Search timers' can be used to automatically create timers for events that match your search criterions."
+msgstr "\"Timer di ricerca\" può essere utilizzato per creare automaticamente timer per eventi che soddisfino i criteri della ricerca impostati."
+
+msgid "  Update interval [min]"
+msgstr "  Intervallo aggiornamento [min]"
+
+msgid "Help$Specify here the time intervall to be used when searching for events in the background."
+msgstr "Specificare l'intervallo temporale da utilizzare durante ricerche in background di eventi."
+
+msgid "Help$Specify here the default lifetime of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Specificare la persistenza predefinita per timer/registrazioni creati con questo plugin. Anche questo valore potrà essere personalizzato per ogni singola ricerca."
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Margine inizio registrazione (min)"
+
+msgid "Help$Specify here the default start recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Specificare il margine inizio registrazioni predefinito per timer/registrazioni create con questo plugin. Anche questo valore potrà essere personalizzato per ogni singola ricerca."
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Margine fine registrazione (min)"
+
+msgid "Help$Specify here the default stop recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Specificare il margine fine registrazioni predefinito per timer/registrazioni create con questo plugin. Anche questo valore potrà essere personalizzato per ogni singola ricerca."
+
+msgid "No announcements when replaying"
+msgstr "Nessun avviso durante la riproduzione"
+
+msgid "Help$Set this to 'yes' if you don't like to get any announcements of broadcasts if you currently replay anything."
+msgstr "Impostare a \"Sì\" per evitare la visualizzazione di avvisi sui programmi durante la riproduzione."
+
+msgid "Show pip on announcements"
+msgstr ""
+
+msgid "Help$Set this to 'yes' if you want to show up the pip window with the announced channel."
+msgstr ""
+
+msgid "Recreate timers after deletion"
+msgstr "Ricreare timer dopo cancellazione"
+
+msgid "Help$Set this to 'yes' if you want timers to be recreated with the next search timer update after deleting them."
+msgstr "Impostare a \"Sì\" se si desidera che i timer vengano ricreati durante il successivo aggiornamento timer di ricerca dopo la loro cancellazione."
+
+msgid "Without PayTV channels"
+msgstr "Ignorare canali PayTV"
+
+msgid "Help$Set this to 'yes' if don't want to see events on PayTV channels when searching for repeats."
+msgstr "Impostare a \"Sì\" per escludere la visualizzazione di eventi su canali \"PayTV\" durante le ricerche ripetizioni"
+
+msgid "Search templates"
+msgstr "Modelli di ricerca"
+
+msgid "Help$Here you can setup templates for your searches."
+msgstr "E' possibile impostare modelli da utilizzare nelle ricerche."
+
+msgid "Blacklists"
+msgstr "Lista nera"
+
+msgid "Help$Here you can setup blacklists which can be used within a search to exclude events you don't like."
+msgstr "Una lista nera può essere configurata per escludere dalla ricerca eventi non graditi."
+
+msgid "Button$Setup"
+msgstr "Configurazione"
+
+msgid "Ignore below priority"
+msgstr "Ignorare priorità sotto"
+
+msgid "Help$If a timer with priority below the given value will fail it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "I timer falliti con priorità inferiore a un valore predefinito non saranno classificati come Importanti. Solo conflitti importanti produrranno un messaggio OSD circa il conflitto stesso, in seguito ad una verifica conflitti."
+
+msgid "Ignore conflict duration less ... min."
+msgstr "Ignorare conflitti con durata inferiore a ... min."
+
+msgid "Help$If a conflicts duration is less then the given number of minutes it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "I conflitti la cui durata risulti inferiore a un valore predefinito di minuti non saranno classificati come importatnti. Solo conflitti importanti produrranno un messaggio OSD circa il conflitto stesso, in seguito ad una verifica conflitti."
+
+msgid "Only check within next ... days"
+msgstr "Verificare solo entro i prossimi ... giorni"
+
+msgid "Help$This value reduces the conflict check to the given range of days. All other conflicts are classified as 'not yet important'."
+msgstr "la verifica conflitti verrà limitata all'Intervallo di giorni specificato. Tutti gli altri conflitti verranno classificati come \"non ancora importanti\"."
+
+msgid "--- Automatic checking ---"
+msgstr "--- Verifica Automatica ---"
+
+msgid "After each timer programming"
+msgstr "Dopo ogni programmazione timer"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each manual timer programming. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if this timer is involved in any conflict."
+msgstr "Impostare a \"Sì\" per effettuare la verifica dopo la programmazione di ogni timer manuale. In caso di conflitti un messaggio informerà immediatamente in proposito. Il messaggio verrà visualizzato solo se il timer risultasse coinvolto in qualche conflitto."
+
+msgid "When a recording starts"
+msgstr "Su avvio registrazione"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed when a recording starts. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if the conflict is within the next 2 hours."
+msgstr "Impostare a \"Sì\" per effettuare una verifica all'avvio di una registrazione. In caso di conflitto verrà mostrato immediatamente un messaggio che informerà in proposito. Il messaggio verrà visualizzato solo se il conflitto fosse previsto entro le 2 ore successive."
+
+msgid "After each search timer update"
+msgstr "Dopo ogni aggiornamento timer di ricerca"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each search timer update."
+msgstr "Impostare a \"Sì\" per effettuare una verifica dopo ogni aggiornamento timer di ricerca."
+
+msgid "every ... minutes"
+msgstr "Ogni ... minuti"
+
+msgid ""
+"Help$Specify here the time intervall to be used for an automatic conflict check in the background.\n"
+"('0' disables an automatic check)"
+msgstr ""
+"Specificare l'intervallo di tempo da utilizzare per una verifica automatica conflitti in background.\n"
+"(\"0\" -> disabilitare la verifica automatica)"
+
+msgid "if conflicts within next ... minutes"
+msgstr "Se conflitti previsti nei prossimi ... minuti"
+
+msgid "Help$If the next conflict will appear in the given number of minutes you can specify here a shorter check intervall to get more OSD notifications about it."
+msgstr "Se il prossimo conflitto dovesse verificarsi nell'intervallo di tempo specificato, è possibile impostare un intervallo di verifica più ristretto per ottenere maggiori notifiche OSD in proposito."
+
+msgid "Avoid notification when replaying"
+msgstr "Evitare avvisi durante la riproduzione"
+
+msgid "Help$Set this to 'yes' if the don't want to get OSD messages about conflicts if you currently replay something. Nevertheless messages will be displayed if the first upcoming conflict is within the next 2 hours."
+msgstr "Impostare a \"Sì\" per impedire messaggi OSD circa i conflitti durante la riproduzione.I messaggi verranno visualizzati comunque nel caso in cui il primo conflitto fosse previsto entro le 2 ore successive."
+
+msgid "Direct access to epgsearch's timers menu"
+msgstr "Accesso diretto a Menu timer di ricerca EPGSearch"
+
+msgid "Timer Manager"
+msgstr "Gestore timer"
+
+msgid "This version of EPGSearch does not support this service!"
+msgstr "Questa versione di EPGSearch non supporta questo canale!"
+
+msgid "EPGSearch does not exist!"
+msgstr "EPGSearch non trovato!"
+
+msgid "Start/Stop time has changed"
+msgstr "L'ora di avvio/stop è cambiata"
+
+msgid "Title/episode has changed"
+msgstr "Il titolo/episodio è cambiato"
+
+msgid "No new timers were added."
+msgstr "Nessun nuovo timer aggiunto."
+
+msgid "No timers were modified."
+msgstr "Nessun timer modificato."
+
+msgid "No timers were deleted."
+msgstr "Nessun timer cancellato."
+
+#, c-format
+msgid "%d new broadcast"
+msgstr "%d nuovi programmi"
+
+msgid "Button$by channel"
+msgstr "per canale"
+
+msgid "Button$by time"
+msgstr "per orario"
+
+msgid "Button$Episode"
+msgstr "Episodio"
+
+msgid "Button$Title"
+msgstr "Titolo"
+
+msgid "announce details"
+msgstr "Dettagli avviso"
+
+msgid "announce again"
+msgstr "Ripetere avviso"
+
+msgid "with next update"
+msgstr "Con il prossimo aggiornamento"
+
+msgid "again from"
+msgstr "di nuovo da"
+
+msgid "Search timer"
+msgstr "Timer di ricerca"
+
+msgid "Edit blacklist"
+msgstr "Modificare lista nera"
+
+msgid "phrase"
+msgstr "Frase"
+
+msgid "all words"
+msgstr "tutte le parole"
+
+msgid "at least one word"
+msgstr "almeno una parola"
+
+msgid "match exactly"
+msgstr "Corrispondenza esatta"
+
+msgid "regular expression"
+msgstr "Espressione regolare"
+
+msgid "fuzzy"
+msgstr "Approssimativa"
+
+msgid "user-defined"
+msgstr "Definita dall'utente"
+
+msgid "interval"
+msgstr "Intervallo"
+
+msgid "channel group"
+msgstr "Gruppo canali"
+
+msgid "only FTA"
+msgstr "solo in chiaro"
+
+msgid "Search term"
+msgstr "Voci di ricerca"
+
+msgid "Search mode"
+msgstr "Modalità ricerca"
+
+msgid "Tolerance"
+msgstr "Tolleranza"
+
+msgid "Match case"
+msgstr "Corrisp. Maiusc./minusc."
+
+msgid "Use title"
+msgstr "Utilizzare titolo"
+
+msgid "Use subtitle"
+msgstr "Utilizzare sottotitolo"
+
+msgid "Use description"
+msgstr "Utilizzare descrizione"
+
+msgid "Use extended EPG info"
+msgstr "Utilizzare info EPG estese"
+
+msgid "Ignore missing categories"
+msgstr "Ignorare le categorie mancabti"
+
+msgid "Use channel"
+msgstr "Utilizzare canale"
+
+msgid "  from channel"
+msgstr "  da canale"
+
+msgid "  to channel"
+msgstr "  a canale"
+
+msgid "Channel group"
+msgstr "Gruppo canali"
+
+msgid "Use time"
+msgstr "Utilizzare orario"
+
+msgid "  Start after"
+msgstr "  Inizia dopo"
+
+msgid "  Start before"
+msgstr "  Inizia prima"
+
+msgid "Use duration"
+msgstr "Utilizzare durata"
+
+msgid "  Min. duration"
+msgstr "  Durata min."
+
+msgid "  Max. duration"
+msgstr "  Durata max."
+
+msgid "Use day of week"
+msgstr "Utilizzare giorno settimana"
+
+msgid "Day of week"
+msgstr "Giorno della settimana"
+
+msgid "Button$Templates"
+msgstr "Modelli"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canale non valido ***"
+
+msgid "Please check channel criteria!"
+msgstr "Controllare criteri canale!"
+
+msgid "Edit$Delete blacklist?"
+msgstr "Rimuovere la lista nera?"
+
+msgid "Create searchtimer"
+msgstr "Creare timer di ricerca"
+
+msgid "List searchtimers"
+msgstr "Elenco timer di ricerca"
+
+msgid "Search for repeats"
+msgstr "Ricercare ripetizioni"
+
+msgid "List recordings of this broadcast"
+msgstr "Elenco registrazioni del programma"
+
+msgid "Mark as 'already recorded'?"
+msgstr "Etichettare come \"già registrato\"?"
+
+msgid "Activate/deactivate automatic switch?"
+msgstr "Attivare/Disattivare modifiche automatiche?"
+
+msgid "Ignore this broadcast"
+msgstr "Ignorare programma"
+
+msgid "EPG Commands"
+msgstr "Comandi EPG"
+
+msgid "Search"
+msgstr ""
+
+msgid "Already running!"
+msgstr "Già in esecuzione!"
+
+msgid "Add to switch list?"
+msgstr "Aggiungere a lista modifiche?"
+
+msgid "Delete from switch list?"
+msgstr "Cancellare da lista modifiche?"
+
+msgid "Button$Details"
+msgstr "Dettagli"
+
+msgid "Button$Filter"
+msgstr "Filtro"
+
+msgid "Button$Show all"
+msgstr "Mostrare tutto"
+
+msgid "conflicts"
+msgstr "Conflitti"
+
+msgid "no conflicts!"
+msgstr "Nessun conflitto!"
+
+msgid "no important conflicts!"
+msgstr "Nessun conflitto importante!"
+
+msgid "C"
+msgstr "C"
+
+msgid "Button$Repeats"
+msgstr "Ripetizioni"
+
+msgid "Button$Functions"
+msgstr "Funzioni"
+
+msgid "no check"
+msgstr "Nessuna verifica"
+
+msgid "by channel and time"
+msgstr "per canale e orario"
+
+msgid "by event ID"
+msgstr "per ID evento"
+
+msgid "Select directory"
+msgstr "Selezionare cartella"
+
+msgid "Button$Level"
+msgstr "Livello"
+
+msgid "Timers"
+msgstr "Timer"
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Tomorrow"
+msgstr ""
+
+msgid "No timers present."
+msgstr "Nessun timer presente."
+
+msgid "Info:"
+msgstr ""
+
+msgid "Use the green button to create a new timer."
+msgstr ""
+
+msgid "Button$Delete"
+msgstr "Rimuovere"
+
+msgid "Button$New"
+msgstr "Nuovo"
+
+#, fuzzy
+msgid "Button$Off"
+msgstr "On/Off"
+
+#, fuzzy
+msgid "Button$On"
+msgstr "On/Off"
+
+msgid "Delete timer?"
+msgstr "Cancellare timer?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Registrazione programmata attiva! - Rimuoverla?"
+
+msgid "Delete switchtimer?"
+msgstr ""
+
+msgid "Directory"
+msgstr "Cartella"
+
+msgid "Event"
+msgstr "Evento"
+
+msgid "Favorites"
+msgstr "Preferiti"
+
+msgid "Search results"
+msgstr "Risultati ricerca"
+
+msgid "No EPG data available"
+msgstr ""
+
+msgid "Button$Timer"
+msgstr "Timer"
+
+msgid "Timer conflict! Show?"
+msgstr "Conflitto timer! Mostrarlo?"
+
+msgid "New timer"
+msgstr ""
+
+msgid "Please confirm changes with OK"
+msgstr ""
+
+msgid "Channel not in list. Please choose another."
+msgstr ""
+
+msgid ""
+"\n"
+"No epg data available for this channel.\n"
+"Switch to channel to get epg data."
+msgstr ""
+
+msgid "Please select a programme for switchtimer:"
+msgstr ""
+
+msgid "low"
+msgstr "Basso"
+
+msgid "normal"
+msgstr "Normale"
+
+msgid "high"
+msgstr "Alto"
+
+msgid "Timer type"
+msgstr ""
+
+msgid "Recording"
+msgstr ""
+
+msgid "SwitchTimer"
+msgstr ""
+
+msgid "Channel"
+msgstr "Canale"
+
+msgid "Next date"
+msgstr ""
+
+msgid "Repeat"
+msgstr "Ripetere"
+
+msgid "  Day of Week"
+msgstr "  Giorno settimana"
+
+msgid "First day"
+msgstr "Primo giorno"
+
+msgid "unlimited"
+msgstr "Illimitata"
+
+msgid "Child protection"
+msgstr "Protezione bambini"
+
+msgid "[Standard]"
+msgstr ""
+
+msgid "Timer check"
+msgstr "Verifica timer"
+
+msgid "recording with device"
+msgstr "Registrazione con dispositivo"
+
+msgid "File"
+msgstr "File"
+
+msgid "Button$With subtitle"
+msgstr "Con sottotitoli"
+
+msgid "Button$Without subtitle"
+msgstr "Senza sottotitoli"
+
+msgid "Week Day"
+msgstr "Giorno settimana"
+
+msgid "Button$Reset"
+msgstr "Reset"
+
+msgid "Please, select a program to set switch timer"
+msgstr ""
+
+msgid "Switchtimer to this programme already present"
+msgstr ""
+
+msgid "Button$Extended"
+msgstr "Esteso"
+
+msgid "Button$Simple"
+msgstr "Semplice"
+
+msgid "Use blacklists"
+msgstr "Usare lista nera"
+
+msgid "Edit$Search text too short - use anyway?"
+msgstr "Stringa di ricerca troppo corta! - Continuare comunque?"
+
+msgid "Button$by name"
+msgstr "per nome"
+
+msgid "Button$by date"
+msgstr "per data"
+
+msgid "Button$Delete all"
+msgstr "Cancellare tutto"
+
+msgid "Recordings"
+msgstr "Registrazioni"
+
+msgid "Edit$Delete entry?"
+msgstr "Cancellare voce?"
+
+msgid "Edit$Delete all entries?"
+msgstr "Cancellare tutte le voci?"
+
+msgid "Summary"
+msgstr "Sommario"
+
+msgid "Auxiliary info"
+msgstr "Informazioni aggiuntive"
+
+msgid "Button$Aux info"
+msgstr "Info agg."
+
+msgid "No searchtimers present."
+msgstr "Nessun timer di ricerca presente."
+
+msgid "Use the green button to create a new searchtimer."
+msgstr ""
+
+msgid "Search entries"
+msgstr "Ric. voce"
+
+msgid "active"
+msgstr "Attivo"
+
+msgid "Execute"
+msgstr "Eseguire"
+
+msgid "Button$Actions"
+msgstr "Azioni"
+
+msgid "Edit$Delete search?"
+msgstr "Rimuovere la ricerca?"
+
+msgid "Delete all timers created from this search?"
+msgstr "Rimuovere tutti i timer creati dalla ricerca?"
+
+msgid "Search actions"
+msgstr "Azioni ricerca"
+
+msgid "Execute search"
+msgstr "Eseguire ricerca"
+
+msgid "Use as search timer on/off"
+msgstr "Impostare On/Off su timer di ricerca"
+
+msgid "Trigger search timer update"
+msgstr "Attivare aggiornamento timer di ricerca"
+
+msgid "Show recordings done"
+msgstr "Mostrare registrazioni effettuate"
+
+msgid "Delete created timers?"
+msgstr "Rimuovere i timer creati?"
+
+msgid "Timer conflict check"
+msgstr "Verifica conflitti timer"
+
+msgid "Disable associated timers too?"
+msgstr "Disattivare anche timer associati?"
+
+msgid "Activate associated timers too?"
+msgstr "Attivare anche timer associati?"
+
+msgid "Search timers activated in setup."
+msgstr "Timer di ricerca attivati in configurazione"
+
+msgid "Run search timer update?"
+msgstr "Eseguire aggiornamento timer di ricerca?"
+
+msgid "ERROR: Could not trigger search timer update!"
+msgstr "ERRORE: impossibile attivare aggiornamento timer di ricerca!"
+
+msgid "Search timer update triggered."
+msgstr "Aggiornamento timer di ricerca attivato."
+
+msgid "Copy this entry?"
+msgstr "Copiare questa voce?"
+
+msgid "Copy"
+msgstr "Copiare"
+
+msgid "Expert"
+msgstr "Esperto"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Edit search"
+msgstr "Modificare la ricerca"
+
+msgid "Record"
+msgstr "Registrare"
+
+msgid "Announce only"
+msgstr "Solo annuncio"
+
+msgid "Switch only"
+msgstr "Solo modificare"
+
+msgid "Selection"
+msgstr "Selezione"
+
+msgid "all"
+msgstr "Tutto"
+
+msgid "count recordings"
+msgstr "Contare le registrazioni"
+
+msgid "count days"
+msgstr "Contare i giorni"
+
+msgid "Template name"
+msgstr "Nome modello"
+
+msgid "Help$Specify the name of the template."
+msgstr "Specificare il nome del modello."
+
+msgid "Help$Specify here the term to search for."
+msgstr "Specificare qui i criteri di ricerca."
+
+msgid ""
+"Help$The following search modes exist:\n"
+"\n"
+"- phrase: searches for sub terms\n"
+"- all words: all single words must appear\n"
+"- at least one word: at least one single word must appear\n"
+"- match exactly: must match exactly\n"
+"- regular expression: match a regular expression\n"
+"- fuzzy searching: searches approximately"
+msgstr ""
+"Sono previste le seguenti modalità di ricerca:\n"
+"\n"
+"- frase: ricerche per sotto voci\n"
+"- ogni parola: ogni singola parola deve comparire\n"
+"- almeno una voce: almeno una parola deve comparire\n"
+"- corrispondenza esatta: le voci devono corrispondere esattamente\n"
+"- espressione regolare: ricerca attraverso espressioni regolari\n"
+"- ricerca per approssimazione: ricerca per corrispondenzaapprossimativa"
+
+msgid "Help$This sets the tolerance of fuzzy searching. The value represents the allowed errors."
+msgstr "Tolleranza nella ricerca approssimativa. Il valore rappresenta gli errori ammessi."
+
+msgid "Help$Set this to 'Yes' if your search should match the case."
+msgstr "Impostare a \"Sì\" per effettuare una ricerca sensibile a maiuscole/minuscole"
+
+msgid "Help$Set this to 'Yes' if you like to search in the title of an event."
+msgstr "Impostare a \"Sì\" se si desidera ricercare nel titolo di un evento."
+
+msgid "Help$Set this to 'Yes' if you like to search in the episode of an event."
+msgstr "Impostare a \"Sì\" se si desidera ricercare nell'episodio di un evento."
+
+msgid "Help$Set this to 'Yes' if you like to search in the summary of an event."
+msgstr "Impostare a \"Sì\" se si desidera ricercare nel sommario di un evento."
+
+msgid "Help$The summary of an event, can contain additional information like 'Genre', 'Category', 'Year',... called 'EPG categories' within EPGSearch. External EPG providers often deliver this information. This allows refining a search and other nice things, like searching for the 'tip of the day'. To use it set this to 'Yes'."
+msgstr "Il sommario di un evento può contenere informazioni aggiuntive, come \"Genere\", \"Categoria\", \"Anno\", ..., chiamate \"Categorie EPG\" in una ricerca EPG. I provider di EPG esterni spesso veicolano queste informazioni. Ciò consente di affinare le ricerche e utilizzare altre funzioni, come il \"suggerimento del giorno\". Per utilizzare queste possibilità impostare a \"Sì\"."
+
+msgid "Help$The file epgsearchcats.conf specifies the search mode for this entry. One can search by text or by value. You can also edit a list of predefined values in this file that can be selected here."
+msgstr "Il file epgsearchcats.conf specifica le modalità di ricerca per questa voce. Le ricerche si possono effettuare per testo o valore. Può anche essere utilizzata una lista di valori predefiniti (modificabile) selezionabile qui."
+
+msgid "Help$If a selected category is not part of the summary of an event this normally excludes this event from the search results. To avoid this, set this option to 'Yes', but please handle this with care to avoid a huge amount of results."
+msgstr "Se la categoria selezionata non è contenuta nel sommario di un evento normalmente ciò lo esclude dai risultati di una ricerca. Per evitarlo, impostare questa opzione a \"Sì\", ma utilizzarla con cautela per evitare un numero eccessivo di riscontri."
+
+msgid "Use in favorites menu"
+msgstr "Usare in menu preferiti"
+
+msgid "Result menu layout"
+msgstr "Disposizione menu risultati"
+
+msgid "Use as search timer"
+msgstr "Utilizzare come timer di ricerca"
+
+msgid "Action"
+msgstr "Azione"
+
+msgid "Switch ... minutes before start"
+msgstr "Cambiare ... minuti prima dell'avvio"
+
+msgid "Unmute sound"
+msgstr "Riprisinare audio"
+
+msgid "  Series recording"
+msgstr "  Registrazione serie"
+
+msgid "Delete recordings after ... days"
+msgstr "Cancellare registrazioni dopo ... giorni"
+
+msgid "Keep ... recordings"
+msgstr "Conservare ... registrazioni"
+
+msgid "Pause when ... recordings exist"
+msgstr "Pausa quando ... registrazioni presenti"
+
+msgid "Avoid repeats"
+msgstr "Ripetizioni NON consentite"
+
+msgid "Allowed repeats"
+msgstr "Ripetizioni consentite"
+
+msgid "Only repeats within ... days"
+msgstr "Ripetere solo ogni ... giorni"
+
+msgid "Compare title"
+msgstr "Confrontare titolo"
+
+msgid "Compare subtitle"
+msgstr "Confrontare sottotitolo"
+
+msgid "Compare summary"
+msgstr "Confrontare sommario"
+
+msgid "Compare categories"
+msgstr "Confrontare categorie"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Auto delete"
+msgstr "Rimuovere autom."
+
+msgid "after ... recordings"
+msgstr "Dopo ... registrazioni"
+
+msgid "after ... days after first rec."
+msgstr "dopo ... giorni dopo la prima reg."
+
+msgid "Button$Edit"
+msgstr "Modificare"
+
+msgid "Edit user-defined days of week"
+msgstr "Modificare giorni settimana personalizzati"
+
+msgid "Compare"
+msgstr "Confrontare"
+
+msgid "Select blacklists"
+msgstr "Selezionare lista nera"
+
+msgid "Values for EPG category"
+msgstr "Valori per categoria EPG"
+
+msgid "Button$Apply"
+msgstr "Applicare"
+
+msgid "less"
+msgstr "minore"
+
+msgid "less or equal"
+msgstr "minore o uguale"
+
+msgid "greater"
+msgstr "maggiore"
+
+msgid "greater or equal"
+msgstr "maggiore o uguale"
+
+msgid "equal"
+msgstr "uguale"
+
+msgid "not equal"
+msgstr "diverso"
+
+msgid "Activation of search timer"
+msgstr "Attivazione timer di ricerca"
+
+msgid "Last day"
+msgstr "Ultimo giorno"
+
+msgid "Button$all channels"
+msgstr "Tutti i canali"
+
+msgid "Button$only FTA"
+msgstr "Solo in chiaro"
+
+msgid "Button$Timer preview"
+msgstr "Anteprima timer"
+
+#, fuzzy
+msgid "no broadcast found"
+msgstr "- Nessun programma trovato -"
+
+msgid "Blacklist results"
+msgstr "Risultati lista nera"
+
+msgid "found recordings"
+msgstr "Registrazioni trovate"
+
+msgid "- no recording found -"
+msgstr "- Nessuna registrazione trovata -"
+
+msgid "Error while accessing recording!"
+msgstr "Errore in accesso registrazione!"
+
+#, fuzzy
+msgid "No templates present."
+msgstr "Nessun timer presente."
+
+#, fuzzy
+msgid "Use the yellow button to create a new template."
+msgstr "Giallo -> Creare nuovo timer di ricerca."
+
+msgid "Edit$Delete template?"
+msgstr "Rimuovere il modello?"
+
+msgid "Overwrite existing entries?"
+msgstr "Sovrascrivere le voci esistenti?"
+
+msgid "Edit entry"
+msgstr "Modificare voce"
+
+msgid "action at"
+msgstr "Azione alle"
+
+msgid "Unknown channel"
+msgstr ""
+
+msgid "Switch list"
+msgstr "Cambiare lista"
+
+msgid "Edit template"
+msgstr "Modificare modello"
+
+msgid ">>> no info! <<<"
+msgstr ">>> Nessuna info! <<<"
+
+msgid "Overview"
+msgstr "Quadro generale"
+
+msgid "Button$Favorites"
+msgstr "Preferiti"
+
+msgid "Button$Schedule"
+msgstr "Pianificazione"
+
+msgid "Quick search for broadcasts"
+msgstr "Ricerca veloce programmi"
+
+msgid "Quick search"
+msgstr "Ric. veloce"
+
+msgid "Show in main menu"
+msgstr "Mostrare nel menu principale"
+
+#, c-format
+msgid "%d new broadcast(s) found! Show them?"
+msgstr "%d nuovi programmi trovati! Mostrarli?"
+
+msgid "Search timer update done!"
+msgstr "Aggiornamento timer di ricerca effettuato!"
+
+msgid "Programming timer failed!"
+msgstr "Programmazione timer fallita!"
+
+#~ msgid "° EPG for :"
+#~ msgstr "° EPG per :"
+
+#~ msgid "Use the blue button to create a new timer."
+#~ msgstr "Blu -> Creare nuovo timer"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#~ msgid "Use the yellow button to create a new searchtimer."
+#~ msgstr "Giallo -> Creare nuovo timer di ricerca."
+
+#~ msgid "Red key"
+#~ msgstr "Tasto Rosso"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Record' or 'Commands') you like to have on the red key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Selezionare la funzione predefinita (\"Registrare\" o \"Comandi\") da associare al tasto rosso.\n"
+#~ "(Può essere \"scambiata\" utilizzando il tasto \"0\")"
+
+#~ msgid "Blue key"
+#~ msgstr "Tasto Blu"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Switch'/'Info' or 'Search') you like to have on the blue key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr ""
+#~ "Selezionare la funzione predefinita (\"Switch\"-\"Info\" o \"Ricerca\") da associare al tasto blu.\n"
+#~ "(Può essere \"scambiata\" utilizzando il tasto \"0\")"
+
+#, fuzzy
+#~ msgid "No search templates present."
+#~ msgstr "Nessun Timer di Ricerca presente."
+
+#, fuzzy
+#~ msgid "Use the green button to create a new template."
+#~ msgstr "\"Blu\" -> Creare Nuovo Timer"
+
+#~ msgid "Show channel separators"
+#~ msgstr "Mostrare separatori canale"
+
+#~ msgid "Button$Default"
+#~ msgstr "Predefinito"

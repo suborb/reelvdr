@@ -1,0 +1,14 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>
+
+Project's homepage:          URL
+
+Latest version available at: URL
+
+See the file COPYING for license information.
+
+Description:
+This plugin watches the link state of the network card, informs about disconnected
+cables and informs when the screen stays black because of "not enough tuners"
+

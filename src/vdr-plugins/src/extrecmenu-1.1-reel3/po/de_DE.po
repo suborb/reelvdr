@@ -1,0 +1,586 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <kls@cadsoft.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2008-10-01 14:50+0200\n"
+"Last-Translator: Tobias Bratfisch <tobias.bratfisch@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr "Alle Aufnahmen"
+
+msgid "last 30 days"
+msgstr "letzte 30 Tage"
+
+msgid "Both SD and HD"
+msgstr "SD und HD"
+
+msgid "SD only"
+msgstr "Nur SD"
+
+msgid "HD Only"
+msgstr "Nur HD"
+
+msgid "Search Recordings"
+msgstr "Suche nach Aufnahmen"
+
+msgid "Recording Name"
+msgstr "Name der Aufnahme"
+
+msgid "Time"
+msgstr "Uhrzeit"
+
+msgid "Filter by"
+msgstr "Filtern nach"
+
+msgid "Select a recording to play"
+msgstr "Eine Aufnahme zum Abspielen auswählen"
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+"Keine Aufnahme gefunden.\n"
+"Ändern Sie die Suchparameter und versuchen Sie es erneut."
+
+msgid "New Search"
+msgstr "Neue Suche"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Delete recording?"
+msgstr "Aufnahme löschen?"
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr "Aufnahme läuft, beenden und löschen?"
+
+msgid "Unable to delete recording"
+msgstr "Kann Aufnahme nicht löschen"
+
+msgid "Directory Selector"
+msgstr "Ordnerauswahl"
+
+msgid "up"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Move"
+msgstr "Verschieben"
+
+msgid "Rec Dir"
+msgstr "Stammverz."
+
+msgid "Button$Create"
+msgstr "Neuer Ordner"
+
+msgid "Cannot move into its own sub folder"
+msgstr "Verschieben in eigenen Ordner nicht möglich!"
+
+msgid "Cannot write into directory"
+msgstr "Kann nicht in diesen Ordner kopieren"
+
+msgid "Moving Recording"
+msgstr "Aufnahme wird verschoben"
+
+msgid "Moving Directories"
+msgstr "Ordner wird verschoben"
+
+msgid "Move failed. Not enough free space"
+msgstr "Verschieben fehlgeschlagen. Nicht genug Speicher."
+
+msgid "Copying started"
+msgstr "Kopiervorgang gestartet"
+
+msgid "Cannot copy into its own sub folder"
+msgstr "Kopieren in eigenen Ordner nicht möglich!"
+
+msgid "Copy failed. Not enough free space"
+msgstr "Kopieren fehlgeschlagen. Nicht genug Speicher."
+
+msgid "Create directory"
+msgstr "Neuen Ordner anlegen"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "To create a new directory press 'OK':"
+msgstr "Namen angeben und mit 'OK' bestätigen."
+
+msgid "Directory Name"
+msgstr "Ordnername"
+
+msgid "Note:"
+msgstr "Hinweis:"
+
+msgid "Directory will only be shown with"
+msgstr "Ordner werden erst angezeigt, sobald eine"
+
+msgid "recordings inside."
+msgstr "Aufzeichnung darin vorhanden ist."
+
+msgid "Created"
+msgstr "Ordner wurde angelegt"
+
+msgid "Failed"
+msgstr "Fehler"
+
+msgid "Compression options"
+msgstr "Bitte wählen Sie Ihre gewünschte Option aus."
+
+msgid "Compression"
+msgstr "Kompression"
+
+msgid "High"
+msgstr "Hoch"
+
+msgid "Low"
+msgstr "Niedrig"
+
+msgid "Internal HDD"
+msgstr "Interne Festplatte"
+
+msgid "External Media"
+msgstr "Externes Medium"
+
+msgid "Please select the drive where to move the recording:"
+msgstr "Bitte Laufwerk wählen, wohin die Aufnahme verschoben werden soll:"
+
+msgid "Select Media"
+msgstr "Medium auswählen"
+
+msgid "Could not open media"
+msgstr "Öffnen des Mediums nicht möglich"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Change title"
+msgstr "Titel ändern"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Episode"
+msgstr "Episode"
+
+msgid "Invalid title!"
+msgstr "Ungültiger Titel!"
+
+msgid "Invalid episode!"
+msgstr "Ungültige Episode!"
+
+msgid "Rename directory"
+msgstr "Ordner umbenennen"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Invalid filename!"
+msgstr "Ungültiger Dateiname!"
+
+msgid "Creating directories failed!"
+msgstr "Anlegen des Ordners nicht möglich!"
+
+msgid "New folder"
+msgstr "Neuer Ordner"
+
+msgid "Button$Cancel"
+msgstr "Abbrechen"
+
+msgid "Button$Move"
+msgstr "Verschieben"
+
+msgid "Move recording"
+msgstr "Aufnahme verschieben"
+
+msgid "[base dir]"
+msgstr "[Basisordner]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr "Zieldateisystem ist voll - trotzdem versuchen?"
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "Verschieben in eigenen Unterordner nicht erlaubt!"
+
+msgid "Can't get filesystem information"
+msgstr "Kann Informationen über Dateisystem nicht ermitteln"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "low"
+msgstr "niedrig"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "hoch"
+
+msgid "Priority"
+msgstr "Priorität"
+
+msgid "Lifetime"
+msgstr "Lebensdauer"
+
+msgid "unlimited"
+msgstr "unbegrenzt"
+
+msgid "Info:"
+msgstr "Hinweis:"
+
+msgid "In this menu you can adjust the point in time"
+msgstr "In diesem Menü können Sie einstellen,"
+
+msgid "a recording gets deleted automatically."
+msgstr "wann eine Aufnahme automatisch gelöscht wird."
+
+msgid "Recording info"
+msgstr "Informationen zur Aufnahme"
+
+msgid "Button$Play"
+msgstr "Wiedergabe"
+
+msgid "Button$Rewind"
+msgstr "Anfang"
+
+msgid "Large picture"
+msgstr "Bild vergrößern"
+
+msgid "Path"
+msgstr "Pfad"
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Opening Recordings..."
+msgstr "Aufnahmeliste wird geöffnet..."
+
+msgid "Error while mounting DVD!"
+msgstr "Fehler beim Einhängen der DVD!"
+
+msgid "Recordings"
+msgstr "TV-Aufnahmen"
+
+msgid "free"
+msgstr "frei"
+
+msgid "Button$Functions"
+msgstr "Funktionen"
+
+msgid "Total"
+msgstr "Gesamt"
+
+msgid "Last recording"
+msgstr "Letzte Aufnahme"
+
+msgid "Error while accessing recording!"
+msgstr "Fehler beim Zugriff auf die Aufnahme!"
+
+msgid "PIN code: "
+msgstr "PIN Eingabe: "
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Bitte DVD %s einlegen"
+
+msgid "DVD plugin is not installed!"
+msgstr "Das DVD-Plugin ist nicht installiert!"
+
+msgid "No DVD in drive!"
+msgstr "Keine DVD im Laufwerk!"
+
+msgid "Recording not found on DVD!"
+msgstr "Aufnahme auf DVD nicht gefunden!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "Fehler beim Anlegen der Symlinks [0-9]*.vdr!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "sudo oder mount --bind / umount Fehler (VFAT-System)"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "Skript 'dvdarchive.sh' wurde nicht gefunden!"
+
+msgid "Delete directory?"
+msgstr "Ordner löschen?"
+
+msgid "Timer still recording - really delete?"
+msgstr "Aufnahme läuft - trotzdem löschen?"
+
+msgid "Error while deleting recording!"
+msgstr "Fehler beim Löschen der Aufnahme!"
+
+msgid "Recording commands"
+msgstr "Funktionen für TV-Aufnahmen"
+
+msgid "Sort by date"
+msgstr "Sortieren nach Datum"
+
+msgid "Sort by name"
+msgstr "Sortieren nach Namen"
+
+msgid "Show title"
+msgstr "zeige Titel"
+
+msgid "Show directory name"
+msgstr "zeige Verzeichnisnamen"
+
+msgid "Invalid PIN"
+msgstr "Falsche Eingabe"
+
+msgid "PIN Aborted"
+msgstr "Pineingabe abgebrochen"
+
+msgid "Cancel moving?"
+msgstr "Verschieben abbrechen?"
+
+msgid "Cancel editing?"
+msgstr "Editieren abbrechen?"
+
+msgid "ascending"
+msgstr "aufsteigend"
+
+msgid "descending"
+msgstr "absteigend"
+
+msgid "Show recording date"
+msgstr "Aufnahmedatum anzeigen"
+
+msgid "Show recording time"
+msgstr "Aufnahmezeit anzeigen"
+
+msgid "Show recording length"
+msgstr "Aufnahmelänge anzeigen"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Anzahl der neuen Aufz. eines Ordners anzeigen"
+
+msgid "Show alternative to new marker"
+msgstr "Alternative zu Neu-Marker anzeigen"
+
+msgid "Show free disk space for each file system"
+msgstr "Freien Speicherplatz für jede Partition anzeigen"
+
+msgid "Sorting"
+msgstr "Sortierung"
+
+msgid "Hide main menu entry"
+msgstr "Hauptmenüeintrag ausblenden"
+
+msgid "Replace original recordings menu"
+msgstr "Originales Aufnahmemenü ersetzen"
+
+msgid "Jump to last played recording"
+msgstr "Springe zur zuletzt abgespielten Aufnahme"
+
+msgid "Show recordings menu after playback"
+msgstr "Nach Wiedergabe Aufnahmemenü anzeigen"
+
+msgid "Patch font"
+msgstr "Font patchen"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+msgid "Limit bandwidth when moving recordings"
+msgstr "Bandbreite beim Verschieben begrenzen"
+
+msgid "Use cutter queue"
+msgstr "Schnittwarteschlange benutzen"
+
+msgid "Undelete Recordings"
+msgstr "Gelöschte TV-Aufnahmen"
+
+msgid "No recordings to undelete!"
+msgstr "Keine TV-Aufnahmen zum Wiederherstellen vorhanden!"
+
+msgid "Button$Remove"
+msgstr "Entfernen"
+
+msgid "Button$Undelete"
+msgstr "Wiederherstellen"
+
+msgid "Remove recording from disk?"
+msgstr "TV-Aufnahmen von der Festplatte entfernen?"
+
+msgid "Removing recording ..."
+msgstr "TV-Aufnahme wird entfernt ..."
+
+msgid "Sorry, undeleting recording failed"
+msgstr "Löschen der Aufnahme nicht möglich"
+
+msgid "Button$Back"
+msgstr "Zurück"
+
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "Aufnahme kann nicht geschnitten werden (Nicht im Videoverzeichnis)."
+
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Aufnahme der Schnitt-Warteschlange hinzugefügt"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr "Aufnahmen können ohne Avantgarde-Server nicht geschnitten werden"
+
+msgid "Recording already in cutter queue!"
+msgstr "Aufnahme bereits in Schnitt-Warteschlange"
+
+msgid "No editing marks defined!"
+msgstr "Keine Schnittmarken festgelegt!"
+
+msgid "Added recording to cutter queue"
+msgstr "Aufnahme der Schnitt-Warteschlange hinzugefügt"
+
+msgid "Not enough space on harddisk!"
+msgstr "Nicht genug freier Speicherplatz"
+
+msgid "Rename/Move failed!"
+msgstr "Umbenennen/Verschieben fehlgeschlagen!"
+
+msgid "Cutter queue not empty"
+msgstr "Schnitt-Warteschlange ist nicht leer"
+
+msgid "Move recordings in progress"
+msgstr "Es werden Aufnahmen verschoben"
+
+msgid "Can't start editing process!"
+msgstr "Änderungsvorgang kann nicht gestartet werden"
+
+msgid "Cutting"
+msgstr "Schneiden"
+
+msgid "Moving"
+msgstr "Verschiebe"
+
+msgid "started"
+msgstr "Gestartet"
+
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Copying"
+msgstr "Kopiere"
+
+msgid "copying recording"
+msgstr "Kopiere Aufnahme"
+
+msgid "Copy failed!"
+msgstr "Kopieren fehlgeschlagen"
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr "Dieser Dienst wird nicht unterstützt!"
+
+msgid "ExtRecMenu does not exist!"
+msgstr "ExtRecMenu nicht gefunden!"
+
+msgid "Extended recordings menu"
+msgstr "Erweitertes Aufnahmemenü"
+
+msgid "Rename"
+msgstr "Umbenennen"
+
+msgid "Burn recording"
+msgstr "Aufnahme brennen"
+
+msgid "Mark as new"
+msgstr "Als neu markieren"
+
+#~ msgid "Button$Open"
+#~ msgstr "Öffnen"
+
+#~ msgid "Compress recording"
+#~ msgstr "Aufzeichnung komprimieren"
+
+#~ msgid "moving recording"
+#~ msgstr "Verschiebe Aufnahme"
+
+#~ msgid "Copy"
+#~ msgstr "Kopieren"
+
+#~ msgid "Button$Info"
+#~ msgstr "Info"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Löschen"
+
+#~ msgid "Set Title"
+#~ msgstr "XXX Titel"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Editieren"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Umbenennen"
+
+#~ msgid "Create"
+#~ msgstr "Anlegen"
+
+#~ msgid "Create new directory:"
+#~ msgstr "Neuen Ordner anlegen:"
+
+#~ msgid "Button$Commands"
+#~ msgstr "Befehle"
+
+#~ msgid "Use VDR's recording info menu"
+#~ msgstr "VDRs Aufnahme-Info-Menü benutzen"
+
+#~ msgid "Call plugin after playback"
+#~ msgstr "Nach Wiedergabe Plugin aufrufen"
+
+#~ msgid "Mark Commercials"
+#~ msgstr "Werbung markieren"
+
+#~ msgid "Add Child Lock"
+#~ msgstr "Kindersicherung anlegen"
+
+#~ msgid "Remove Child Lock"
+#~ msgstr "Kindersicherung entfernen"
+
+#~ msgid "Mark as New"
+#~ msgstr "Als neu markieren"
+
+#~ msgid "Remove Archive Mark"
+#~ msgstr "Archivmarkierung entfernen"
+
+#~ msgid "Remove Crop Mark"
+#~ msgstr "Schnittmarken entfernen"
+
+#~ msgid "Remove Archived Recording"
+#~ msgstr "Archivierte Aufnahme löschen"
+
+#~ msgid "Restore Archived Recording"
+#~ msgstr "Archivierte Aufnahme wiederherstellen"
+
+#~ msgid "Convert to MPEG"
+#~ msgstr "In MPEG (PS) umwandeln"
+
+#~ msgid "Edit"
+#~ msgstr "Editieren"
+
+#~ msgid "Open"
+#~ msgstr "Öffnen"

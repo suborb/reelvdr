@@ -1,0 +1,109 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <Klaus.Schmidinger@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Vyacheslav Dikonov <sdiconov@mail.ru>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-12-07 16:12+0100\n"
+"PO-Revision-Date: 2008-12-30 14:05+0100\n"
+"Last-Translator: Oleg Roitburd <oleg@roitburd.de>\n"
+"Language-Team: Russian <vdr@linuxtv.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teletext subtitles"
+msgstr "Телетекст-субтитры"
+
+msgid "Hide teletext subtitles"
+msgstr "Скрыть субтитры"
+
+msgid "Display teletext subtitles"
+msgstr "Показывать субтитры"
+
+msgid "deprecated"
+msgstr ""
+
+msgid "Page Selection"
+msgstr "Выбор страницы"
+
+msgid "Display on/off"
+msgstr "включить/выключить"
+
+#, fuzzy
+msgid "4:3/Letterbox (deprecated)"
+msgstr "4:3/широкий экран"
+
+msgid "Page Mode"
+msgstr "Режим страницы"
+
+msgid "All"
+msgstr "Все"
+
+msgid "Only DVB-S"
+msgstr "Только DVB-S"
+
+msgid "Only DVB-T"
+msgstr "Только  DVB-T"
+
+msgid "Only DVB-C"
+msgstr "Только DVB-C"
+
+msgid "Display Subtitles"
+msgstr "Показывать субтитры"
+
+msgid "Record Subtitles"
+msgstr "Записывать субтитры"
+
+msgid "Live Delay"
+msgstr "Live задержка"
+
+msgid "Replay Delay (PES)"
+msgstr "Задержка воспроизведения (PES)"
+
+msgid "Replay Delay (TS)"
+msgstr "Задержка воспроизведения (TS)"
+
+msgid "Workaround for some French chns"
+msgstr "Спец. настройки для франц. каналов"
+
+msgid "DVB Source Selection"
+msgstr "Выбор DVB источника"
+
+msgid "Font Size (pixel)"
+msgstr "Размер фонта  (pixel)"
+
+#, fuzzy
+msgid "Font OutlineWidth (pixel)"
+msgstr "Размер фонта  (pixel)"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Hearing Impaired"
+msgstr "для слабослышащих"
+
+msgid "Subtitle Page Settings"
+msgstr "Настройки страницы субтитров"
+
+msgid "Auto"
+msgstr "Авто"
+
+msgid "Manual"
+msgstr "Ручн."
+
+msgid "Disabled"
+msgstr "отключено"
+
+msgid "Subtitle Mode"
+msgstr "Режим субтитров"
+
+msgid "Manual Subtitle Page"
+msgstr "Ручной выбор страницы"
+
+#~ msgid "Main Menu Alternative"
+#~ msgstr "Команда в главном меню"

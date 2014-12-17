@@ -1,0 +1,233 @@
+VDR Plugin 'ttxtsubs' Revision History
+--------------------------------------
+
+2011-10-08: Version 0.2.4
+- Updated patch for VDR 1.7.21 (Closes #745)
+
+  !!! With this release the channels.conf format has changed !!!
+  !!! You may need to manually update your channels.conf     !!!
+
+  With VDR 1.7.21 the subtitle PIDs are stored in the channels.conf as an
+  extension to the teletext PID (see vdr.5 for details).
+
+  This change made it neccessary to change the extension of the tpid in
+  channels.conf used by the ttxtsubs patch:
+
+  old: ...:201;150=deu,151=fin:...
+  new  ...:201+150=deu,151=fin;2001,2002:...
+
+  ...where 201 is the TPID, 150 and 151 are the teletext pages for the
+  German and Finnish teletext subtitles and 2001,2002 are the DVB
+  subtitle PIDs.
+
+2011-08-21: Version 0.2.3
+- Made changes in font settings be applied instantly, without the need to
+  change the channel (patch provided by Rolf Ahrenberg)
+- Converted *.po to UTF-8
+- Updated patch for VDR 1.7.20 (Closes #689)
+- Don't log all page info received from VDR (Closes #331)
+- Show subtitles with backround rectangle, if outline width is < 2
+  (patch provided by Mike Lampard) (Closes #247)
+
+2010-05-08: Version 0.2.2
+- Fixed channel retune triggering in VDR patch and updated patch to 1.7.14
+  (Dropped 1.7.12 and 1.7.13 patch)
+- Got rid of the backround thread
+- Fixed live TV subtitles on FF cards, where there is no transfer mode
+- Updated README and TROUBLESHOOTING (Closes #323)
+- Increased internal frame buffer and log buffer overflows (Closes #295)
+
+2010-03-06: Version 0.2.1
+- Added Estonian translation by Arthur Konovalov (Closes #271)
+- Finnish translation updated by Rolf Ahrenberg
+- Trigger OSD update when an empty page is sent (making the previous subtitle
+  disappear) (Closes #275)
+- French translation updated by Michaël Nival (Closes #278)
+- Makefile adjustments for VDR 1.7.13.
+- Fixed text rendering to not cut off bottom part (Closes #276)
+- Italian translation update by Diego Pierotto (Closes #283)
+- Added patch for VDR 1.7.13 (Closes #284)
+
+2010-02-27: Version 0.2.0
+- Add Ukrainian translation by Yarema aka Knedlyk (Closes #130)
+- Some code refactoring
+- Major VDR patch update for 1.7.12 (Closes #236, References #139)) - The patch
+  now covers the following changes to VDR:
+   - Record teletext subtitles
+   - Added setup option to enable teletext subtitle recording
+   - Allow configuration of fixed teletetxt subtitle pages
+   - Capture teletext subtitle pages from PMT
+   - Pass teletext date ttxtsubs plugin
+  Special Thx to Rolf Ahrenberg!
+- Fixed replay when the current live ttxtsubs page differs from the
+  one in the recording - Thx to Rolf Ahrenberg (Closes #139)
+- Show colored subtitles if color information is provided e.g. for
+  different speakers and dropped custom color settings (Closes #61)
+- Position subtitles always centered at the bottom, independent of the
+  OSD resolution and dropped custom text position settings (Closes #231)
+- Render subtitles outlined (Closes #51)
+- Decrypt encrypted teletext stream (Closes #241)
+- Don't redisplay unchanged subtitle pages
+
+2009-04-26: Version 0.1.0
+- Updated VDR patch and plugin to VDR 1.7.6 with support for the TS recording
+  format and added separate delay setting for TS recordings. Older VDR versions
+  are no longer supported. Credits go to Rolf Ahrenberg - Thanks a lot!
+- Silence compiler warning about unchecked read return value.
+  (thx to Rolf Ahrenberg)
+- After replaying, reset the last channel variable and trigger a channel switch
+  to reinitialize the live ttxtsubs display. (thx to Rolf Ahrenberg)
+- Removed unused local copy of vdrttxtsubshooks.c|h
+
+2009-04-03: Version 0.0.9
+- Updated French translation provided by Michaël Nival (Closes #49)
+- Install plug-in to lib dir with --remove-destination
+- Added note in README about reported problems with Digitainer II (Closes #62)
+- Don't show page selection menu, when there is no current channel (Closes #111)
+
+2009-01-04: Version 0.0.8
+- Updated Italien translation provided by Diego Pierotto
+- Updated Russian translation provided by Oleg Roitburd (Closes #47)
+- Fixed displaying of multiple rows when antialiasing is enabled by  aquiring a
+  single OSD area for all rows - Thx to Rolf Ahrenberg (Closes #24)
+
+2008-12-18: Version 0.0.7
+- Try to set OSDArea to 8 bpp when AntiAliasing is enabled (Closes #17)
+
+2008-12-14: Version 0.0.6
+- Project moved to http://projects.vdr-developer.org/projects/show/plg-ttxtsubs
+- Applied patch from Rolf Ahrenberg (vdr-ttxtsubs-0.0.5-raastinrauta-edition.diff.gz)
+  which introduces the following changes:
+  - Rolf Ahrenberg
+    - Updated the core patch and Makefile against VDR's current API
+    - Added font, color, and DVB source selection
+    - Added UTF8 support
+    - Added layered OSD support
+    - Fixed EPG scan hiccups
+    - Fixed several race conditions in destructors
+    - Silenced compilation warnings
+  - Vyacheslav Diconov
+    - Russian translation
+  - Ville Skyttä
+    - fixed crash in plugin shutdown
+    - cleaned up logging to use syslog
+  - Thomas Günther
+    - German translation
+  - Michaël Nival
+    - Added missing const declarations
+    - French translation
+  - Luca Olivetti
+    - Fixed displaying subtitles setting
+    - Added a thread based subtitles scanner
+    - Added delay settings
+   - Tobias Grimm
+    - Added manual page selection mode
+- Switched completely to VDR 1.6's I18N system and removed the old crap - no
+  more support for older VDR versions!
+- Removed VDR*.patch and Checkpatch.sh and added up-to-date VDR patches
+  into into "patches" subdirectory (thx to Rolf Ahrenberg)
+- Removed location lines from *.po (thx to Rolf Ahrenberg)
+- Fixed wrong GPL license text (wrong FSF address)
+- Clarified license (it's GPL-2 or any later) and added a licence
+  header to every source file
+
+2004-05-31: Version 0.0.5
+- Note:
+This version is intended for VDR 1.2.6. There is a patch for VDR 1.3.5
+included. It may or may not work with later VDR versions. Also see
+Rolf's patch in the contrib directory.
+
+This may be the last version for VDR 1.2.x, as I hope to start turning
+my attention to VDR 1.3.x now.
+
+- New features:
+  - Italian translation, thanks to Sean Carlos
+  - French translation, thanks to Stéphane Esté-Gracias
+  - German translation, thanks to Tobias Grimm
+  - Another ElchiAIO fix, thanks to Rolf Ahrenberg
+  - Added a "contrib" directory with a VDR 1.3.8 test patch from
+    Rolf Ahrenberg
+  - Added a TROUBLESHOOTING document because of reports from Germany
+    that ttxtsubs doesn't work there. It seems that most German channels
+    on the birds at 19.2E don't announce the subtitles in their Service
+    Information. Please see the document for further info.
+
+- Bugs fixed:
+  - Corrected (again!) national charset selection bit swapping, there
+    was a typo in the fix in 0.0.5pre1.
+
+2004-03-02: Version 0.0.5pre2
+- New features:
+  - Text colours can be set and row spacing can be adjusted.
+    (The usual semitransparent "background" colour appearently
+     doesn't work with the ElchiAIO patch, don't know why.)
+    Thanks to Rolf Ahrenberg for the patch!
+  - ttxtsubs menus can now be translated to different languages.
+    Thanks to Rolf Ahrenberg for the patch!
+    English, Finnish and Swedish now included, others are welcome!
+- Bugs fixed:
+  - Information for channels with no teletext at all is now cached
+    too, making channel switches to such channels faster.
+
+- Note:
+  - The VDR 1.2.x patch "VDR.patch" is the same as in ttxtsubs 0.0.4b,
+    and the 0.0.4 and 0.0.3d patch should work equally well - there is
+    no need to repatch if you previously used any of those.
+
+2004-03-01: Version 0.0.5pre1
+- New features:
+  - More than one language can be chosen, they are used in order of preference
+  - Handles languages with two ISO 639-2 identifiers (as ger/deu, fre/fra)
+  - Subtitles can now be turned on or off
+  - Optional main menu alternative for easy access
+  - Selectable vertical position of text for 4:3/Anamorphic or Letterbox 
+  - Left, Center or Right horizontal position of text
+  - Remapping option for those French channels that incorrectly
+    sends teletext page numbers in decimal instead of hexadecimal.
+    Very moderate remapping done at the moment, I hope it is enough.
+  - Subtitles are now recorded with their PTS (timestamps). Note that
+    the timestamps are completely wrong on some channels, this
+    may confuse uncareful subtitle extracting software.
+  - Included patch for VDR 1.3.5 - untested!
+- Bugs fixed:
+  - Fixed a net-to-host-order bug in the si parser that could make it
+    incorrectly think that there are no subtitles on a channel.
+    Thanks to Nicolas "tarass"!
+  - Fixed a bit swapping bug causing incorrect character encoding for
+    some languages. Thanks to Nicolas "tarass"!
+
+2003-09-26: Version 0.0.4b
+- Fix patch for VDR 1.2.5
+- Minor bug fix for dxr3 display
+
+2003-07-19: Version 0.0.4
+- Release
+
+2003-07-16: Version 0.0.3d
+- IMORTANT! The VDR patch has changed! See README!
+- Improved the OSD hooks to be more compatible with other plugins
+- Added a primitive Service Information caching mechanism to speed
+  up channel switching (will not refresh if channels are modified,
+  will be reset on VDR restart)
+
+2003-07-10: Version 0.0.3c
+- Fixed problems when used with more than one device (I hope)
+
+2003-06-22: Version 0.0.3b
+- Work around for problem with stray segments at channel (frequency)
+  change with driver in hw_sections=0 mode
+- Removed some g++ 3.3 warnings
+- Skipping non dvb devices when calculating /dev/dvb/adapter no
+
+2003-06-20: Version 0.0.3
+- Small adjustments for VDR 1.2.1
+
+2003-05-05: Version 0.0.2
+- Bug fix: Could miss to display subtitles on channels with
+  "Parallel Magazine" transmission. Thanks to Antti Lammi!
+
+2003-04-28: Version 0.0.1b
+- Timeout on SI table reads
+
+2003-03-07: Version 0.0.1
+- Initial revision.

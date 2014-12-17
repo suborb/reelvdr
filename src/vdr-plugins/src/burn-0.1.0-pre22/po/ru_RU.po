@@ -1,0 +1,414 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vyacheslav Dikonov <sdiconov@mail.ru>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <<vdr@smue.org>>\n"
+"POT-Creation-Date: 2008-08-12 12:23+0200\n"
+"PO-Revision-Date: 2008-04-09 10:59+0200\n"
+"Last-Translator: Vyacheslav Dikonov <sdiconov@mail.ru>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Archive recordings"
+msgstr ""
+
+msgid "iso8859-15"
+msgstr ""
+
+msgid "Burn job active"
+msgstr "DVD создаётся"
+
+msgid "Please enter the burn plugin"
+msgstr "Пожалуйста, запустите модуль для создания DVD"
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Вставьте пустой диск DVD и нажмите ОК"
+
+msgid "Job still active - really cancel?"
+msgstr "Задание выполняется - действительно отменить?"
+
+msgid "DVD with menus"
+msgstr "DVD с меню"
+
+msgid "DVD without menus"
+msgstr "DVD без меню"
+
+msgid "Archive disk"
+msgstr "Архивный диск"
+
+msgid "Create ISO only"
+msgstr "Только создать образ"
+
+msgid "Write to Disc"
+msgstr "Жечь на DVD"
+
+msgid "Create ISO and write"
+msgstr "Создать образ и жечь"
+
+msgid "No chapters"
+msgstr "Без глав"
+
+msgid "Use editing marks"
+msgstr "Использовать монтажные метки"
+
+msgid "Every 5 minutes"
+msgstr "Каждые 5 минут"
+
+msgid "Every 10 minutes"
+msgstr "Каждые 10 минут"
+
+msgid "Every 15 minutes"
+msgstr "Каждые 15 минут"
+
+msgid "Every 30 minutes"
+msgstr "Каждые 30 минут"
+
+msgid "Every hour"
+msgstr "Каждый час"
+
+msgid "CD-R"
+msgstr "CD-R"
+
+msgid "Single Layer"
+msgstr "Один слой"
+
+msgid "Double Layer"
+msgstr "Два слоя"
+
+msgid "BlueRay"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "CD-R (700MB)"
+msgstr ""
+
+msgid "DVD (4.7GB)"
+msgstr ""
+
+msgid "DVD-DL (8.5GB)"
+msgstr ""
+
+msgid "BlueRay (25GB)"
+msgstr ""
+
+msgid "BlueRay (50GB)"
+msgstr ""
+
+msgid "VDRSync"
+msgstr "VDRSync"
+
+msgid "ProjectX"
+msgstr "ProjectX"
+
+msgid "Replex"
+msgstr ""
+
+msgid "M2VRequantizer"
+msgstr "M2VRequantizer"
+
+msgid "Transcode"
+msgstr "Transcode"
+
+msgid "Don't requant"
+msgstr ""
+
+msgid "Couldn't convert character sets!"
+msgstr ""
+
+msgid "Couldn't open image file!"
+msgstr ""
+
+msgid "Couldn't create new image!"
+msgstr ""
+
+msgid "Couldn't render menu images!"
+msgstr ""
+
+msgid "Couldn't save image file!"
+msgstr ""
+
+msgid "Recording too big for disc type!"
+msgstr "Запись слишком большая для выбранного типа диска!"
+
+msgid "Disc too big for disc type!"
+msgstr "Диск слишком велик для этого типа!"
+
+msgid "A job failed!"
+msgstr "Ошибка при создании DVD!"
+
+msgid "A job was finished successfully."
+msgstr "DVD создан успешно."
+
+msgid "Recordings"
+msgstr "Записи"
+
+msgid "Burn"
+msgstr "Список"
+
+msgid "Status"
+msgstr "Состояние"
+
+msgid "Move down"
+msgstr "Вниз"
+
+msgid "Track$Off"
+msgstr "Выкл."
+
+msgid "Track$On"
+msgstr "Вкл."
+
+msgid "Language code"
+msgstr "Код языка"
+
+msgid "Choose title"
+msgstr ""
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "Записей: %1$d, общий размер: %2$.1f МБ"
+
+msgid "No recordings marked for burning"
+msgstr "Нет записей для создания DVD"
+
+msgid "Write DVD"
+msgstr "Создать DVD"
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr ""
+
+msgid "Only archive disk possible"
+msgstr ""
+
+msgid "Mark"
+msgstr "Выбрать"
+
+msgid "Analyzing recording..."
+msgstr "Анализирую записи..."
+
+msgid "Job"
+msgstr "Задание"
+
+msgid "DVD title"
+msgstr "Название DVD"
+
+msgid "Archive-ID"
+msgstr "ID Архива"
+
+msgid "Options"
+msgstr "Опции заданий"
+
+msgid "No recordings marked"
+msgstr "Нет выбраных записей"
+
+msgid "Button$Start"
+msgstr "Пуск"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "No video track selected!"
+msgstr "Видео-дорожка не выбрана!"
+
+msgid "No audio track selected!"
+msgstr "Аудио-дорожка не выбрана!"
+
+msgid "Not enough free disk space!"
+msgstr "Недостаточно места на диске"
+
+msgid "Remove recording from list?"
+msgstr "Удалить записи из списка?"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Задание выполняется (Запись: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Задание выполняется (Конвертация: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Задание выполняется (Запись)"
+
+msgid "Job active (Converting)"
+msgstr "Задание выполняется (Конвертация)"
+
+msgid "No active or waiting jobs present"
+msgstr "Нет выполняемых или ждущих заданий"
+
+msgid "Canceled jobs"
+msgstr "Отменённые задания"
+
+msgid "Erroneous jobs"
+msgstr "Задания, прерванные по причине ошибки"
+
+msgid "Restart"
+msgstr "Перестартовать"
+
+msgid "Retry"
+msgstr "Повторить"
+
+msgid "Cancel"
+msgstr "Отменить"
+
+msgid "Replace current job?"
+msgstr "Заменить действующее задание?"
+
+msgid "Remove job from list?"
+msgstr "Удалить задание из списка"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Общий размер: %1$.1f МБ %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(будет сжато)"
+
+msgid "Aspect ratio"
+msgstr "Соотношение сторон"
+
+msgid "Previous page"
+msgstr "Назад"
+
+msgid "Next page"
+msgstr "Далее"
+
+msgid "Play movie"
+msgstr "Воспроизвести"
+
+msgid "Back"
+msgstr "Меню"
+
+msgid "Couldn't read index"
+msgstr "Не смог прочитать индекс!"
+
+msgid "Couldn't browse recording"
+msgstr "Не смог пролистать записи!"
+
+msgid "analog"
+msgstr "аналоговый"
+
+msgid "dolby"
+msgstr "dolby"
+
+msgid "Couldn't read marks"
+msgstr "Не смог прочитать метки!"
+
+msgid "Recording is too short"
+msgstr "Запись слишком короткая"
+
+msgid "Target"
+msgstr "Цель"
+
+msgid "Burn speed"
+msgstr "Скорость записи"
+
+msgid "unlimited"
+msgstr "неограничена"
+
+msgid "Process priority"
+msgstr ""
+
+msgid "Disk type"
+msgstr "Тип диска"
+
+msgid "DMH-archive"
+msgstr "Архив DMH"
+
+msgid "Skin"
+msgstr "Внешний вид"
+
+msgid "Chapters"
+msgstr "Главы"
+
+msgid "Cut"
+msgstr "Монтаж"
+
+msgid "Skip empty titlemenu"
+msgstr "Пропускать пустое меню названий"
+
+msgid "Skip short mainmenu"
+msgstr "Пропускать пустое главное меню"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Общие настройки ------------------------------------------------"
+
+msgid "Remove path component"
+msgstr "Обрезать путь"
+
+msgid "Eject disc after burn"
+msgstr ""
+
+msgid "Demux using"
+msgstr "Демультиплексор"
+
+msgid "Requant using"
+msgstr "Уменьшить с помощью"
+
+msgid "Preserve logfiles"
+msgstr "Сохранить логи"
+
+msgid "Spare language code"
+msgstr "Запасной код языка"
+
+msgid "Status in main menu"
+msgstr "Состояние в главном меню"
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Стандартные настройки заданий ------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Настройки меню заданий -------------------------------------------"
+
+msgid "Offer disk type"
+msgstr "Предлагать вид DVD"
+
+msgid "Offer chapters"
+msgstr "Предлагать главы"
+
+msgid "Offer target"
+msgstr "Предлагать цель"
+
+msgid "Offer burn speed"
+msgstr ""
+
+msgid "Offer process prio"
+msgstr ""
+
+msgid "Offer cutting"
+msgstr "Предлагать монтаж"
+
+msgid "Offer DMH-archive"
+msgstr "Предлагать архив DMH"
+
+msgid "Offer skip titlemenu"
+msgstr "Предлагать пропуск пустого меню"
+
+msgid "Offer skip mainmenu"
+msgstr "Предлагать пропуск пустого главного меню"
+
+msgid "Job options"
+msgstr ""
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "Video track"
+msgstr "Дорожка видео"
+
+msgid "Audio track"
+msgstr "Дорожка аудио"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#~ msgid "Versatile convert-and-burn plugin"
+#~ msgstr "Создание DVD из записей VDR"

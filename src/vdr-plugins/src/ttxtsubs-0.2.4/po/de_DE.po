@@ -1,0 +1,107 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <Klaus.Schmidinger@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Klaus Schmidinger <Klaus.Schmidinger@tvdr.de>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-12-07 16:12+0100\n"
+"PO-Revision-Date: 2007-08-24 23:49+0300\n"
+"Last-Translator: Klaus Schmidinger <Klaus.Schmidinger@tvdr.de>\n"
+"Language-Team: German <vdr@linuxtv.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teletext subtitles"
+msgstr "Teletextuntertitel"
+
+msgid "Hide teletext subtitles"
+msgstr "Verstecke Teletextuntertitel"
+
+msgid "Display teletext subtitles"
+msgstr "Zeige Teletextuntertitel"
+
+msgid "deprecated"
+msgstr "veraltet"
+
+msgid "Page Selection"
+msgstr "Seitenauswahl"
+
+msgid "Display on/off"
+msgstr "Anzeige ein/aus"
+
+msgid "4:3/Letterbox (deprecated)"
+msgstr "4:3/Letterbox (veraltet)"
+
+msgid "Page Mode"
+msgstr "Seitenmodus"
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Only DVB-S"
+msgstr "Nur DVB-S"
+
+msgid "Only DVB-T"
+msgstr "Nur DVB-T"
+
+msgid "Only DVB-C"
+msgstr "Nur DVB-C"
+
+msgid "Display Subtitles"
+msgstr "Zeige Untertitel"
+
+msgid "Record Subtitles"
+msgstr "Nimm Untertitel auf"
+
+msgid "Live Delay"
+msgstr "Live Verzögerung"
+
+msgid "Replay Delay (PES)"
+msgstr "Wiedergabe Verzögerung (PES)"
+
+msgid "Replay Delay (TS)"
+msgstr "Wiedergabe Verzögerung (TS)"
+
+msgid "Workaround for some French chns"
+msgstr "Workaround für französische Kanäle"
+
+msgid "DVB Source Selection"
+msgstr "DVB Quelle Auswahl"
+
+msgid "Font Size (pixel)"
+msgstr "Schriftgröße (pixel)"
+
+msgid "Font OutlineWidth (pixel)"
+msgstr "Schriftrahmen (pixel)"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Hearing Impaired"
+msgstr "Gehörlose"
+
+msgid "Subtitle Page Settings"
+msgstr "Untertitelseiten Einstellung"
+
+msgid "Auto"
+msgstr "Automatisch"
+
+msgid "Manual"
+msgstr "Manuell"
+
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+msgid "Subtitle Mode"
+msgstr "Untertitelmodus"
+
+msgid "Manual Subtitle Page"
+msgstr "Manuelle Untertitelseite"
+
+#~ msgid "Main Menu Alternative"
+#~ msgstr "Hauptmenu Alternative"

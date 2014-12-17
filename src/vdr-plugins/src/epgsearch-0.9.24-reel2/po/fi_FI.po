@@ -1,0 +1,1238 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-epgsearch\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-10-04 12:23+0200\n"
+"PO-Revision-Date: 2008-09-26 17:27+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel groups"
+msgstr "Kanavaryhmät"
+
+#, fuzzy
+msgid "Channel group used by:"
+msgstr "Kanavaryhmät"
+
+msgid "Edit$Delete group?"
+msgstr "Poistetaanko kanavaryhmä?"
+
+msgid "Edit channel group"
+msgstr "Muokkaa kanavaryhmää"
+
+msgid "Group name"
+msgstr "Kanavaryhmän nimi"
+
+msgid "Button$Invert selection"
+msgstr "Päinvastoin"
+
+msgid "Button$All yes"
+msgstr "Kaikki"
+
+msgid "Button$All no"
+msgstr "Ei yhtään"
+
+msgid "Group name is empty!"
+msgstr "Kanavaryhmältä puuttuu nimi!"
+
+msgid "Group name already exists!"
+msgstr "Samanniminen kanavaryhmä on jo olemassa!"
+
+msgid "Direct access to epgsearch's conflict check menu"
+msgstr ""
+
+msgid "Timer conflicts"
+msgstr "Päällekkäiset ajastimet"
+
+msgid "Conflict info in main menu"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+#, c-format
+msgid "%d timer conflict(s)! First at %s. Show them?"
+msgstr "Päällekkäisiä ajastimia (%d kpl %s)! Näytetäänkö?"
+
+msgid "search the EPG for repeats and more"
+msgstr ""
+
+msgid "TV-Guide (EPG)"
+msgstr ""
+
+msgid "Direct access to epgsearch's search menu"
+msgstr ""
+
+#, fuzzy
+msgid "Search-Timer Manager"
+msgstr "Yhteenveto"
+
+msgid "EpgSearch-Search in main menu"
+msgstr ""
+
+msgid "Button$Help"
+msgstr "Opaste"
+
+msgid "Standard"
+msgstr "Vakio"
+
+msgid "Button$Commands"
+msgstr "Komennot"
+
+msgid "Button$Search"
+msgstr "Etsi"
+
+msgid "pipes"
+msgstr "teksti"
+
+msgid "graphical"
+msgstr "grafiikka"
+
+msgid "never"
+msgstr "ei koskaan"
+
+msgid "always"
+msgstr "aina"
+
+msgid "smart"
+msgstr "älykkäästi"
+
+msgid "before user-def. times"
+msgstr "ennen ajankohtia"
+
+msgid "after user-def. times"
+msgstr "ajankohtien jälkeen"
+
+msgid "before 'next'"
+msgstr ""
+
+msgid "Standard EPG"
+msgstr "Ohjelmaopas"
+
+msgid "Use 'OK Button' for opening and closing menus"
+msgstr ""
+
+msgid "General"
+msgstr "Yleiset"
+
+msgid "EPG menus"
+msgstr "Valikot"
+
+msgid "User-defined EPG times"
+msgstr "Käyttäjän määrittelemät ajankohdat"
+
+msgid "Timer programming"
+msgstr "Ajastimien luonti"
+
+msgid "Search and search timers"
+msgstr "Haut ja hakuajastimet"
+
+msgid "Timer conflict checking"
+msgstr "Päällekkäisten ajastimien tarkistus"
+
+msgid "Main menu entry"
+msgstr "Valinta päävalikossa"
+
+msgid "Help$The name of the main menu entry which defaults to 'Programm guide'."
+msgstr "Päävalikossa sijaitsevan valinnan nimi, joka on oletuksena 'Ohjelmaopas'."
+
+msgid "Start menu"
+msgstr "Oletusnäyttö"
+
+msgid "Help$Choose between 'Overview - Now' and 'Schedule' as start menu when this plugin is called."
+msgstr "Valitsee oletusnäytöksi joko tämänhetkisen yleiskatsauksen tai valitun kanavan ohjelmiston."
+
+msgid "Ok key"
+msgstr "'OK' näppäin"
+
+msgid ""
+"Help$Choose here the behaviour of key 'Ok'. You can use it to display the summary or to switch to the corresponding channel.\n"
+"Note: the functionality of key 'blue' (Switch/Info/Search) depends on this setting."
+msgstr "'OK' näppäin"
+
+msgid "Show channel numbers"
+msgstr "Näytä kanavien numerointi"
+
+msgid ""
+"Help$Display channel numbers in 'Overview - Now'.\n"
+"\n"
+"(To completely define your own menu look please inspect the MANUAL)"
+msgstr "Näytä kanavien numerointi"
+
+#, fuzzy
+msgid "Show bouquet separators"
+msgstr "Näytä päiväerottimet"
+
+msgid "Help$Display VDR channel groups as separators between your channels in 'Overview - Now'."
+msgstr "Näyttää erottimet yleiskatsauksessa kanavaville."
+
+msgid "Show day separators"
+msgstr "Näytä päiväerottimet"
+
+msgid "Help$Display a separator line at day break in 'Schedule'."
+msgstr "Näyttää erottimet ohjelmistossa päivän vaihtuessa."
+
+msgid "Show radio channels"
+msgstr "Näytä radiokanavat"
+
+msgid "Help$Show also radio channels."
+msgstr "Näyttää myös radiokanavat listauksessa."
+
+msgid "Limit channels from 1 to"
+msgstr "Näytettävien kanavien rajoitus"
+
+msgid "Help$If you have a large channel set you can speed up things when you limit the displayed channels with this setting. Use '0' to disable the limit."
+msgstr "Voit nopeuttaa toimintoja rajoittamalla näytettävien kanavien lukumäärää tällä asetuksella. Poistat rajoituksen asettamalla arvoksi nollan."
+
+msgid "'One press' timer creation"
+msgstr "Luo ajastimet yhdellä painalluksella"
+
+msgid "Help$When a timer is created with 'Record' you can choose between an immediate creation of the timer or the display of the timer edit menu."
+msgstr "Valitsee oletustoiminnon ajastimen luonnille. Voit luoda ajastimen joko automaattisesti yhdellä painalluksella tai vaihtoehtoisesti avata ajastinvalikon."
+
+msgid "Time interval for FRew/FFwd [min]"
+msgstr "Oletusaikasiirtymä [min]"
+
+msgid ""
+"Help$Choose here the time interval which should be used for jumping through the EPG by pressing FRew/FFwd.\n"
+"\n"
+"(If you don't have those keys, you can toggle to this functionality pressing '0' and get '<<' and '>>' on the keys green and yellow)"
+msgstr "Oletusaikasiirtymä [min]"
+
+msgid "Toggle Green/Yellow"
+msgstr "Käytä aikasiirtymää värinäppäimillä"
+
+msgid "Help$Specify if green and yellow shall also be switched when pressing '0'."
+msgstr "Määrittelee vaihdetaanko vihreän ja keltaisen näppäimen toimintoja painamalla '0' näppäintä."
+
+msgid "Show favorites menu"
+msgstr "Näytä suosikkivalikko"
+
+msgid ""
+"Help$A favorites menu can display a list of your favorite broadcasts. Enable this if you want an additional menu besides 'Now' and 'Next'\n"
+"Any search can be used as a favorite. You only have to set the option 'Use in favorites menu' when editing a search."
+msgstr "Näytä suosikkivalikko"
+
+msgid "for the next ... hours"
+msgstr "seuraaville ... tunnille"
+
+msgid "Help$This value controls the timespan used to display your favorites."
+msgstr "Tämä arvo määrittelee käytetyn ajanjakson suosikkien näyttämiselle."
+
+msgid "Use user-defined time"
+msgstr "Määrittele ajankohta"
+
+msgid "Help$Besides 'Now' and 'Next' you can specify up to 4 other times in the EPG which can be used by repeatedly pressing the green key, e.g. 'prime time', 'late night',..."
+msgstr "Määrittelee käyttäjän muokattavissa olevat ajankohdat 'Nyt' ja 'Seuraavaksi' näyttöjen rinnalle ohjelmaoppaan yleiskatsaukseen."
+
+msgid "Description"
+msgstr "Kuvaus"
+
+msgid "Help$This is the description for your user-defined time as it will appear as label on the green button."
+msgstr "Asettaa kuvauksen vihreään näppäimeen käyttäjän muokkaamalle ajankohdalle."
+
+msgid "Time"
+msgstr "Kellonaika"
+
+msgid "Help$Specify the user-defined time here in 'HH:MM'."
+msgstr "Asettaa kellonajan käyttäjän muokkaamalle ajankohdalle."
+
+msgid "Default recording dir"
+msgstr "Oletushakemisto tallenteille"
+
+msgid "Help$When creating a timer you can specify here a default recording directory."
+msgstr "Määrittelee oletushakemiston tallenteille."
+
+msgid "Add episode to manual timers"
+msgstr "Lisää jakson nimi norm. ajastimiin"
+
+msgid ""
+"Help$If you create a timer for a series, you can automatically add the episode name.\n"
+"\n"
+"- never: no addition\n"
+"- always: always add episode name if present\n"
+"- smart: add only if event lasts less than 80 mins."
+msgstr "Lisää jakson nimi norm. ajastimiin"
+
+msgid "Button$Select"
+msgstr "Valitse"
+
+msgid "Default timer check method"
+msgstr "Oletustapa ajastimen valvonnalle"
+
+msgid "Use search timers"
+msgstr "Käytä hakuajastimia"
+
+msgid "Help$'Search timers' can be used to automatically create timers for events that match your search criterions."
+msgstr "Hakuajastimilla luodaan automaattisesti ajastimia hakuehtoihin sopiviin tapahtumiin."
+
+msgid "  Update interval [min]"
+msgstr "  Päivitysväli [min]"
+
+msgid "Help$Specify here the time intervall to be used when searching for events in the background."
+msgstr "Määrittelee päivitysvälin hakuajastimien taustapäivitykselle."
+
+msgid "Help$Specify here the default lifetime of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Määrittelee oletuseliniän tämän laajennoksen kautta luotaville ajastimille. Elinaikaa voidaan muokata ajastinkohtaisesti."
+
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr ""
+
+msgid "Help$Specify here the default start recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Määrittelee oletusmarginaalin tallennuksen aloitukselle tämän laajennoksen kautta luotaville ajastimille. Marginaaleja voidaan muokata ajastinkohtaisesti."
+
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr ""
+
+msgid "Help$Specify here the default stop recording margin of timers/recordings created with this plugin. This value can also be adjusted for each search itself."
+msgstr "Määrittelee oletusmarginaalin tallennuksen lopetukselle tämän laajennoksen kautta luotaville ajastimille. Marginaaleja voidaan muokata ajastinkohtaisesti."
+
+msgid "No announcements when replaying"
+msgstr "Älä muistuta toiston aikana"
+
+msgid "Help$Set this to 'yes' if you don't like to get any announcements of broadcasts if you currently replay anything."
+msgstr "Laittamalla tämän asetuksen päälle et saa ohjelmista muistutuksia toistettaessa tallenteita."
+
+msgid "Recreate timers after deletion"
+msgstr "Luo ajastimet uudelleen"
+
+msgid "Help$Set this to 'yes' if you want timers to be recreated with the next search timer update after deleting them."
+msgstr "Laittamalla tämän asetuksen päälle saat luotua ajastimet uudelleen seuraava hakuajastin päivityksen yhteydessä, jos olet poistanut ne."
+
+msgid "Without PayTV channels"
+msgstr "Jätä salatut kanavat huomioimatta"
+
+msgid "Help$Set this to 'yes' if don't want to see events on PayTV channels when searching for repeats."
+msgstr "Piilottaa salatut kanavat haettaessa uusintoja."
+
+msgid "Search templates"
+msgstr "Mallipohjat hakuehdoille"
+
+msgid "Help$Here you can setup templates for your searches."
+msgstr "Määrittele mallipohjia hakuehdoille."
+
+msgid "Blacklists"
+msgstr "Mustat listat"
+
+msgid "Help$Here you can setup blacklists which can be used within a search to exclude events you don't like."
+msgstr "Määrittele mustia listoja hakuehdoille. Mustien listojen tapahtumia ei näytetä hakutuloksissa."
+
+msgid "Button$Setup"
+msgstr "Asetukset"
+
+msgid "Ignore below priority"
+msgstr "Sivuuta alhaisemmat prioriteetit"
+
+msgid "Help$If a timer with priority below the given value will fail it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Asetusarvoa korkeammalla prioriteetilla olevat ajastimet ovat merkitseviä. Vain merkitsevät päällekkäisyydet aiheuttavat viestin kuvaruutunäytölle automaattisen tarkistuksen yhteydessä."
+
+msgid "Ignore conflict duration less ... min."
+msgstr "Sivuuta alle ... min. päällekkäisyydet"
+
+msgid "Help$If a conflicts duration is less then the given number of minutes it will not be classified as important. Only important conflicts will produce an OSD message about the conflict after an automatic conflict check."
+msgstr "Jos ajastimien päällekkäisyys on alle asetetun minuuttimäärän, sitä ei pidetä merkitsevänä. Vain merkitsevät päällekkäisyydet aiheuttavat viestin kuvaruutunäytölle tarkistuksen yhteydessä."
+
+msgid "Only check within next ... days"
+msgstr "Tarkista vain seuraavat ... päivää"
+
+msgid "Help$This value reduces the conflict check to the given range of days. All other conflicts are classified as 'not yet important'."
+msgstr "Asettaa ajanjakson päivinä päällekkäisyyksien tarkistukselle. Muita päällekkäisyyksiä ei pidetä vielä merkitsevinä."
+
+msgid "--- Automatic checking ---"
+msgstr "--- Automaattinen tarkistus ---"
+
+msgid "After each timer programming"
+msgstr "Jokaisen ajastimen luonnin jälkeen"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each manual timer programming. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if this timer is involved in any conflict."
+msgstr "Päällekkäisten ajastimien tarkistus suoritaan aina jokaisen ajastimen luonnin jälkeen. Jos luodulle ajastimelle löydetään päällekkäisyyksiä, niin siitä tiedotetaan käyttäjälle heti."
+
+msgid "When a recording starts"
+msgstr "Tallennuksen alkaessa"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed when a recording starts. In the case of a conflict you get immediately a message that informs you about it. The message is only displayed if the conflict is within the next 2 hours."
+msgstr "Päällekkäisten ajastimien tarkistus suoritaan aina tallennuksen alkaessa. Jos luodulle ajastimelle löydetään päällekkäisyyksiä seuraavan kahden tunnin aikana, niin siitä tiedotetaan käyttäjälle heti."
+
+msgid "After each search timer update"
+msgstr "Päivitettäessä hakuajastimia"
+
+msgid "Help$Set this to 'yes' if the conflict check should be performed after each search timer update."
+msgstr "Suorittaa päällekkäisyyksien tarkistuksen jokaisen hakuajastimen päivityksen yhteydessä."
+
+msgid "every ... minutes"
+msgstr "joka ... minuutti"
+
+msgid ""
+"Help$Specify here the time intervall to be used for an automatic conflict check in the background.\n"
+"('0' disables an automatic check)"
+msgstr "joka ... minuutti"
+
+msgid "if conflicts within next ... minutes"
+msgstr "jos päällekkäisyys ... min. kuluessa"
+
+msgid "Help$If the next conflict will appear in the given number of minutes you can specify here a shorter check intervall to get more OSD notifications about it."
+msgstr "Jos seuraava päällekkäisyys esiintyy asetetun ajan kuluessa, tällä asetuksella pystyt määrittämään lyhyemmän tarkistusvälin saadaksesi tarkempia kuvaruutuviestejä."
+
+msgid "Avoid notification when replaying"
+msgstr "Älä näytä ilmoituksia toiston aikana"
+
+msgid "Help$Set this to 'yes' if the don't want to get OSD messages about conflicts if you currently replay something. Nevertheless messages will be displayed if the first upcoming conflict is within the next 2 hours."
+msgstr "Laittamalla tämän asetuksen päälle saat estettyä kuvaruutuviestit päällekkäisistä ajastimista toiston aikana. Kuvaruutuviesti näytetään kuitenkin aina, jos päällekkäinen ajastin on alle kahden tunnin kuluttua."
+
+msgid "Direct access to epgsearch's timers menu"
+msgstr ""
+
+#, fuzzy
+msgid "Timer Manager"
+msgstr "Valvontatapa"
+
+msgid "This version of EPGSearch does not support this service!"
+msgstr ""
+
+msgid "EPGSearch does not exist!"
+msgstr ""
+
+msgid "Start/Stop time has changed"
+msgstr ""
+
+msgid "Title/episode has changed"
+msgstr ""
+
+msgid "No new timers were added."
+msgstr "Yhtään uutta ajastinta ei lisätty."
+
+msgid "No timers were modified."
+msgstr "Yhtään ajastinta ei muokattu."
+
+msgid "No timers were deleted."
+msgstr "Yhtään ajastinta ei poistettu."
+
+#, c-format
+msgid "%d new broadcast"
+msgstr "%d uutta lähetystä"
+
+msgid "Button$by channel"
+msgstr "Kanavat"
+
+msgid "Button$by time"
+msgstr "Kellonajat"
+
+msgid "Button$Episode"
+msgstr "Jaksot"
+
+msgid "Button$Title"
+msgstr "Nimet"
+
+#, fuzzy
+msgid "announce details"
+msgstr "Muistutuksen tiedot: %s"
+
+msgid "announce again"
+msgstr "Muistuta uudelleen"
+
+msgid "with next update"
+msgstr "Seuraavassa päivityksessä"
+
+msgid "again from"
+msgstr "Alkaen taas"
+
+msgid "Search timer"
+msgstr "Hakuajastin"
+
+msgid "Edit blacklist"
+msgstr "Muokkaa mustaa listaa"
+
+msgid "phrase"
+msgstr "fraasi"
+
+msgid "all words"
+msgstr "kaikki sanat"
+
+msgid "at least one word"
+msgstr "yksi sana"
+
+msgid "match exactly"
+msgstr "täsmällinen"
+
+msgid "regular expression"
+msgstr "säännöllinen lauseke"
+
+msgid "fuzzy"
+msgstr "sumea"
+
+msgid "user-defined"
+msgstr "valitut"
+
+msgid "interval"
+msgstr "kyllä"
+
+msgid "channel group"
+msgstr "kanavaryhmä"
+
+msgid "only FTA"
+msgstr "vapaat kanavat"
+
+msgid "Search term"
+msgstr "Hakutermi"
+
+msgid "Search mode"
+msgstr "Hakutapa"
+
+msgid "Tolerance"
+msgstr "Toleranssi"
+
+msgid "Match case"
+msgstr "Huomioi kirjainkoko"
+
+msgid "Use title"
+msgstr "Käytä ohjelmanimeä"
+
+msgid "Use subtitle"
+msgstr "Käytä lyhyttä ohjelmakuvausta"
+
+msgid "Use description"
+msgstr "Käytä ohjelmakuvausta"
+
+msgid "Use extended EPG info"
+msgstr "Käytä laajennettua ohjelmaopasta"
+
+#, fuzzy
+msgid "Ignore missing categories"
+msgstr "Vertaa kategorioita"
+
+msgid "Use channel"
+msgstr "Käytä kanavaa"
+
+msgid "  from channel"
+msgstr "  Kanavasta"
+
+msgid "  to channel"
+msgstr "  Kanavaan"
+
+msgid "Channel group"
+msgstr "Kanavaryhmä"
+
+msgid "Use time"
+msgstr "Käytä aloitusaikaa"
+
+msgid "  Start after"
+msgstr "  Aloitusaika aikaisintaan"
+
+msgid "  Start before"
+msgstr "  Aloitusaika viimeistään"
+
+msgid "Use duration"
+msgstr "Käytä kestoaikaa"
+
+msgid "  Min. duration"
+msgstr "  Kestoaika vähintään"
+
+msgid "  Max. duration"
+msgstr "  Kestoaika enintään"
+
+msgid "Use day of week"
+msgstr "Käytä viikonpäivää"
+
+#, fuzzy
+msgid "Day of week"
+msgstr "  Viikonpäivä"
+
+msgid "Button$Templates"
+msgstr "Mallipohjat"
+
+msgid "*** Invalid Channel ***"
+msgstr ""
+
+msgid "Please check channel criteria!"
+msgstr "Tarkasta hakuehdot!"
+
+msgid "Edit$Delete blacklist?"
+msgstr "Poistetaanko musta lista?"
+
+msgid "Create searchtimer"
+msgstr ""
+
+msgid "List searchtimers"
+msgstr ""
+
+msgid "Search for repeats"
+msgstr ""
+
+msgid "Search in EPG"
+msgstr ""
+
+msgid "List recordings of this broadcast"
+msgstr ""
+
+msgid "Mark as 'already recorded'?"
+msgstr "Merkitse tallennetuksi"
+
+msgid "Activate/deactivate automatic switch?"
+msgstr ""
+
+msgid "Ignore this broadcast"
+msgstr ""
+
+msgid "EPG Commands"
+msgstr "Komennot"
+
+msgid "Already running!"
+msgstr "Nyt menossa!"
+
+msgid "Add to switch list?"
+msgstr "Lisätäänkö kanavanvaihtolistalle?"
+
+msgid "Delete from switch list?"
+msgstr "Poistetaanko kanavanvaihtolistalta?"
+
+msgid "Button$Details"
+msgstr "Lisätiedot"
+
+msgid "Button$Filter"
+msgstr ""
+
+msgid "Button$Show all"
+msgstr "Näytä kaikki"
+
+msgid "conflicts"
+msgstr "päällekkäisyyttä"
+
+msgid "no conflicts!"
+msgstr "ei päällekkäisyyksiä!"
+
+msgid "no important conflicts!"
+msgstr "ei merkitseviä päällekkäisyyksiä!"
+
+msgid "C"
+msgstr "C"
+
+msgid "Button$Repeats"
+msgstr "Toistuvat"
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Komennot"
+
+msgid "no check"
+msgstr "ei valvontaa"
+
+msgid "by channel and time"
+msgstr "kanava ja aika"
+
+msgid "by event ID"
+msgstr "tapahtuman tunniste"
+
+msgid "Select directory"
+msgstr "Valitse hakemisto"
+
+msgid "Button$Level"
+msgstr "Taso"
+
+msgid "Timers"
+msgstr ""
+
+#, fuzzy
+msgid "No timers present."
+msgstr "Yhtään ajastinta ei poistettu."
+
+#, fuzzy
+msgid "Info:"
+msgstr "Tiedot"
+
+msgid "Use the green button to create a new timer."
+msgstr ""
+
+msgid "Button$Delete"
+msgstr "Poista"
+
+msgid "Button$New"
+msgstr "Uusi"
+
+#, fuzzy
+msgid "Button$Off"
+msgstr "Tiedot"
+
+#, fuzzy
+msgid "Button$On"
+msgstr "Tiedot"
+
+msgid "Delete timer?"
+msgstr ""
+
+msgid "Timer still recording - really delete?"
+msgstr ""
+
+msgid "Delete switchtimer?"
+msgstr ""
+
+msgid "Directory"
+msgstr "Hakemisto"
+
+msgid "Event"
+msgstr ""
+
+msgid "Favorites"
+msgstr "Suosikit"
+
+msgid "Search results"
+msgstr "Hakutulokset"
+
+msgid "° EPG for :"
+msgstr ""
+
+msgid "Button$Timer"
+msgstr "Ajastin"
+
+msgid "Timer conflict! Show?"
+msgstr "Päällekkäisiä ajastimia! Näytetäänkö?"
+
+msgid "New timer"
+msgstr ""
+
+msgid "Please confirm changes with OK"
+msgstr ""
+
+msgid "Channel not in list. Please choose another."
+msgstr ""
+
+msgid ""
+"\n"
+"No epg data available for this channel.\n"
+"Switch to channel to get epg data."
+msgstr ""
+
+msgid "Please select a programme for switchtimer:"
+msgstr ""
+
+msgid "low"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "high"
+msgstr ""
+
+msgid "Timer type"
+msgstr ""
+
+msgid "Recording"
+msgstr ""
+
+msgid "SwitchTimer"
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Next date"
+msgstr ""
+
+#, fuzzy
+msgid "Repeat"
+msgstr "Toistuvat"
+
+#, fuzzy
+msgid "  Day of Week"
+msgstr "  Viikonpäivä"
+
+msgid "First day"
+msgstr ""
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Child protection"
+msgstr ""
+
+msgid "Timer check"
+msgstr "Valvontatapa"
+
+msgid "recording with device"
+msgstr "Tallennetaan laitteella"
+
+msgid "File"
+msgstr ""
+
+msgid "Button$With subtitle"
+msgstr "Kuvaus"
+
+msgid "Button$Without subtitle"
+msgstr "Ei kuvausta"
+
+msgid "Week Day"
+msgstr ""
+
+msgid "Button$Reset"
+msgstr "Alusta"
+
+msgid "Please, select a program to set switch timer"
+msgstr ""
+
+msgid "Button$Extended"
+msgstr "Laaja"
+
+msgid "Button$Simple"
+msgstr "Suppea"
+
+msgid "Use blacklists"
+msgstr "Käytä mustia listoja"
+
+msgid "Edit$Search text too short - use anyway?"
+msgstr "Liian suppea hakuehto - etsitäänkö silti?"
+
+msgid "Button$by name"
+msgstr "Nimi"
+
+msgid "Button$by date"
+msgstr "Päivämäärä"
+
+msgid "Button$Delete all"
+msgstr "Poista kaikki"
+
+msgid "Recordings"
+msgstr ""
+
+msgid "Edit$Delete entry?"
+msgstr "Poista hakutermi"
+
+msgid "Edit$Delete all entries?"
+msgstr "Poista kaikki hakutermit"
+
+msgid "Summary"
+msgstr "Yhteenveto"
+
+msgid "Auxiliary info"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Aux info"
+msgstr "Ei yhtään"
+
+msgid "Search actions"
+msgstr "Hakukomennot"
+
+msgid "Execute search"
+msgstr "Suorita haku"
+
+msgid "Use as search timer on/off"
+msgstr "Aseta/poista hakuajastintoiminto"
+
+msgid "Trigger search timer update"
+msgstr "Päivitä hakuajastimet"
+
+msgid "Show recordings done"
+msgstr "Näytä tehdyt tallennukset"
+
+msgid "Delete created timers?"
+msgstr "Poista haulla luodut ajastimet"
+
+msgid "Timer conflict check"
+msgstr "Tarkista päällekkäiset ajastimet"
+
+msgid "Disable associated timers too?"
+msgstr "Poistetaanko käytöstä myös assosioidut ajastimet?"
+
+msgid "Activate associated timers too?"
+msgstr "Otetaanko käyttöön myös assosioidut ajastimet?"
+
+msgid "Search timers activated in setup."
+msgstr "Hakuajastimet aktivoitu asetuksista"
+
+msgid "Run search timer update?"
+msgstr "Päivitetäänkö hakuajastimet?"
+
+#, fuzzy
+msgid "ERROR: Could not trigger search timer update!"
+msgstr "Päivitä hakuajastimet"
+
+#, fuzzy
+msgid "Search timer update triggered."
+msgstr "Hakuajastimet päivitetty!"
+
+msgid "Delete all timers created from this search?"
+msgstr "Poistetaanko kaikki tällä haulla luodut ajastimet?"
+
+msgid "Copy this entry?"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+#, fuzzy
+msgid "No searchtimers present."
+msgstr "Yhtään ajastinta ei poistettu."
+
+msgid "Use the green button to create a new searchtimer."
+msgstr ""
+
+msgid "Search entries"
+msgstr "Hakutermit"
+
+msgid "active"
+msgstr "aktiivista"
+
+msgid "Execute"
+msgstr ""
+
+msgid "Button$Actions"
+msgstr "Komennot"
+
+msgid "Edit$Delete search?"
+msgstr "Poistetaanko haku?"
+
+msgid "Expert"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Edit search"
+msgstr "Muokkaa hakua"
+
+msgid "Record"
+msgstr "Tallenna"
+
+msgid "Announce only"
+msgstr "muistutus"
+
+msgid "Switch only"
+msgstr "kanavanvaihto"
+
+msgid "Selection"
+msgstr "valittu"
+
+msgid "all"
+msgstr "kaikki"
+
+#, fuzzy
+msgid "count recordings"
+msgstr "löydetyt tallenteet"
+
+msgid "count days"
+msgstr ""
+
+msgid "Template name"
+msgstr "Mallipohjan nimi"
+
+msgid "Help$Specify the name of the template."
+msgstr ""
+
+#, fuzzy
+msgid "Help$Specify here the term to search for."
+msgstr "Määrittelee päivitysvälin hakuajastimien taustapäivitykselle."
+
+msgid ""
+"Help$The following search modes exist:\n"
+"\n"
+"- phrase: searches for sub terms\n"
+"- all words: all single words must appear\n"
+"- at least one word: at least one single word must appear\n"
+"- match exactly: must match exactly\n"
+"- regular expression: match a regular expression\n"
+"- fuzzy searching: searches approximately"
+msgstr ""
+
+msgid "Help$This sets the tolerance of fuzzy searching. The value represents the allowed errors."
+msgstr ""
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if your search should match the case."
+msgstr "Suorittaa päällekkäisyyksien tarkistuksen jokaisen hakuajastimen päivityksen yhteydessä."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the title of an event."
+msgstr "Laittamalla tämän asetuksen päälle saat luotua ajastimet uudelleen seuraava hakuajastin päivityksen yhteydessä, jos olet poistanut ne."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the episode of an event."
+msgstr "Laittamalla tämän asetuksen päälle saat luotua ajastimet uudelleen seuraava hakuajastin päivityksen yhteydessä, jos olet poistanut ne."
+
+#, fuzzy
+msgid "Help$Set this to 'Yes' if you like to search in the summary of an event."
+msgstr "Laittamalla tämän asetuksen päälle saat luotua ajastimet uudelleen seuraava hakuajastin päivityksen yhteydessä, jos olet poistanut ne."
+
+msgid "Help$The summary of an event, can contain additional information like 'Genre', 'Category', 'Year',... called 'EPG categories' within EPGSearch. External EPG providers often deliver this information. This allows refining a search and other nice things, like searching for the 'tip of the day'. To use it set this to 'Yes'."
+msgstr ""
+
+msgid "Help$The file epgsearchcats.conf specifies the search mode for this entry. One can search by text or by value. You can also edit a list of predefined values in this file that can be selected here."
+msgstr ""
+
+msgid "Help$If a selected category is not part of the summary of an event this normally excludes this event from the search results. To avoid this, set this option to 'Yes', but please handle this with care to avoid a huge amount of results."
+msgstr ""
+
+msgid "Use in favorites menu"
+msgstr "Käytä suosikkina"
+
+msgid "Result menu layout"
+msgstr "Hakutulosten ulkoasu"
+
+msgid "Use as search timer"
+msgstr "Käytä hakuajastimena"
+
+msgid "Action"
+msgstr "Toiminto"
+
+msgid "Switch ... minutes before start"
+msgstr "Vaihda ... minuuttia ennen alkua"
+
+msgid "Unmute sound"
+msgstr ""
+
+msgid "  Series recording"
+msgstr "  Sarjatallennus"
+
+msgid "Delete recordings after ... days"
+msgstr "Poista tallenteet ... päivän jälkeen"
+
+msgid "Keep ... recordings"
+msgstr "Säilytä ... tallennetta"
+
+msgid "Pause when ... recordings exist"
+msgstr "Keskeytä ... tallenteen jälkeen"
+
+msgid "Avoid repeats"
+msgstr "Estä uusinnat"
+
+msgid "Allowed repeats"
+msgstr "Sallittujen uusintojen lukumäärä"
+
+msgid "Only repeats within ... days"
+msgstr "Vain uusinnat ... päivän sisällä"
+
+msgid "Compare title"
+msgstr "Vertaa nimeä"
+
+msgid "Compare subtitle"
+msgstr "Vertaa jakson nimeä"
+
+msgid "Compare summary"
+msgstr "Vertaa kuvausta"
+
+msgid "Compare categories"
+msgstr "Vertaa kategorioita"
+
+msgid "VPS"
+msgstr ""
+
+#, fuzzy
+msgid "Auto delete"
+msgstr "Poista"
+
+#, fuzzy
+msgid "after ... recordings"
+msgstr "Säilytä ... tallennetta"
+
+msgid "after ... days after first rec."
+msgstr ""
+
+msgid "Button$Edit"
+msgstr "Muokkaa"
+
+msgid "Edit user-defined days of week"
+msgstr "Muokkaa valittuja viikonpäiviä"
+
+msgid "Compare"
+msgstr "Vertaa"
+
+msgid "Select blacklists"
+msgstr "Valitse mustat listat"
+
+msgid "Values for EPG category"
+msgstr "Valinnat ohjelmaoppaan kategorioille"
+
+msgid "Button$Apply"
+msgstr "Käytä"
+
+msgid "less"
+msgstr ""
+
+msgid "less or equal"
+msgstr ""
+
+msgid "greater"
+msgstr ""
+
+msgid "greater or equal"
+msgstr ""
+
+msgid "equal"
+msgstr ""
+
+msgid "not equal"
+msgstr ""
+
+#, fuzzy
+msgid "Activation of search timer"
+msgstr "Haut ja hakuajastimet"
+
+msgid "Last day"
+msgstr ""
+
+msgid "Button$all channels"
+msgstr "Kaikki"
+
+msgid "Button$only FTA"
+msgstr "Vapaat"
+
+msgid "Button$Timer preview"
+msgstr "Esikatselu"
+
+#, fuzzy
+msgid "no broadcast found"
+msgstr "%d uutta lähetystä"
+
+msgid "Blacklist results"
+msgstr "Mustan listan tulokset"
+
+msgid "found recordings"
+msgstr "löydetyt tallenteet"
+
+msgid "- no recording found -"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr ""
+
+#, fuzzy
+msgid "No templates present."
+msgstr "Yhtään ajastinta ei poistettu."
+
+msgid "Use the yellow button to create a new template."
+msgstr ""
+
+msgid "Edit$Delete template?"
+msgstr "Poistetaanko mallipohja?"
+
+msgid "Overwrite existing entries?"
+msgstr "Kirjoitetaanko olemassaolevan päälle?"
+
+msgid "Edit entry"
+msgstr "Muokkaa valintaa"
+
+msgid "action at"
+msgstr "Kellonaika kanavanvaihdolle"
+
+msgid "Unknown channel"
+msgstr ""
+
+msgid "Switch list"
+msgstr "Kanavanvaihtolista"
+
+#, fuzzy
+msgid "Edit template"
+msgstr "Poistetaanko mallipohja?"
+
+msgid ">>> no info! <<<"
+msgstr ">>> ei tietoja! <<<"
+
+msgid "Overview"
+msgstr ""
+
+msgid "Button$Favorites"
+msgstr "Suosikit"
+
+msgid "Button$Schedule"
+msgstr "Ohjelmisto"
+
+msgid "Quick search for broadcasts"
+msgstr ""
+
+#, fuzzy
+msgid "Quick search"
+msgstr "Muokkaa hakua"
+
+#, fuzzy
+msgid "Show in main menu"
+msgstr "Näytä suosikkivalikko"
+
+#, c-format
+msgid "%d new broadcast(s) found! Show them?"
+msgstr "Löydettiin %d uutta lähetystä! Näytetäänkö?"
+
+msgid "Search timer update done!"
+msgstr "Hakuajastimet päivitetty!"
+
+msgid "Programming timer failed!"
+msgstr "Ajastimen ohjelmointi epäonnistui!"
+
+#~ msgid "Button$Info"
+#~ msgstr "Tiedot"
+
+#~ msgid "Red key"
+#~ msgstr "Punainen näppäin"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Record' or 'Commands') you like to have on the red key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr "Punainen näppäin"
+
+#~ msgid "Blue key"
+#~ msgstr "Sininen näppäin"
+
+#~ msgid ""
+#~ "Help$Choose which standard function ('Switch'/'Info' or 'Search') you like to have on the blue key.\n"
+#~ "(Can be toggled with key '0')"
+#~ msgstr "Sininen näppäin"
+
+#, fuzzy
+#~ msgid "No search templates present."
+#~ msgstr "Yhtään ajastinta ei poistettu."
+
+#~ msgid "Show channel separators"
+#~ msgstr "Näytä kanavaerottimet"
+
+#~ msgid "Switch"
+#~ msgstr "Valitse"
+
+#~ msgid "Button$Now"
+#~ msgstr "Nyt"
+
+#~ msgid "Use VDR's timer edit menu"
+#~ msgstr "Käytä alkuperäistä ajastinvalikkoa"
+
+#~ msgid ""
+#~ "Help$This plugin has it's own timer edit menu extending the original one with some extra functionality like\n"
+#~ "- an addtional directory entry\n"
+#~ "- user-defined days of week for repeating timers\n"
+#~ "- adding an episode name\n"
+#~ "- support for EPG variables (see MANUAL)"
+#~ msgstr "Käytä alkuperäistä ajastinvalikkoa"
+
+#~ msgid "Button$Record"
+#~ msgstr "Tallenna"
+
+#~ msgid "Button$Switch"
+#~ msgstr "Valitse"
+
+#~ msgid "Button$Next"
+#~ msgstr "Seuraavaksi"
+
+#~ msgid "Button$Default"
+#~ msgstr "Oletus"
+
+#~ msgid "EPG"
+#~ msgstr "Yleiskatsaus"
+
+#, fuzzy
+#~ msgid "Timer Summary"
+#~ msgstr "Yhteenveto"
+
+#, fuzzy
+#~ msgid "Search Timers"
+#~ msgstr "Hakuajastin"
+
+#, fuzzy
+#~ msgid "Scheduled Recordings"
+#~ msgstr "löydetyt tallenteet"

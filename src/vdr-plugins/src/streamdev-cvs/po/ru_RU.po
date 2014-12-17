@@ -1,0 +1,118 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vyacheslav Dikonov <sdiconov@mail.ru>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2010-04-15 12:16+0200\n"
+"PO-Revision-Date: 2008-09-30 14:40+0200\n"
+"Last-Translator: Vyacheslav Dikonov <sdiconov@mail.ru>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr ""
+
+msgid "Streaming Client"
+msgstr ""
+
+msgid "Server is suspended"
+msgstr ""
+
+msgid "Couldn't suspend Server!"
+msgstr ""
+
+msgid "VDR Streaming Server"
+msgstr ""
+
+msgid "Pause Live TV"
+msgstr ""
+
+msgid "Streaming Server"
+msgstr ""
+
+msgid "Streaming active"
+msgstr ""
+
+msgid "Offer suspend mode"
+msgstr ""
+
+msgid "Always suspended"
+msgstr ""
+
+msgid "Never suspended"
+msgstr ""
+
+msgid "Common Settings"
+msgstr ""
+
+msgid "Maximum Number of Clients"
+msgstr ""
+
+msgid "Suspend behaviour"
+msgstr ""
+
+msgid "Client may suspend"
+msgstr ""
+
+msgid "ReelBox-to-ReelBox Server"
+msgstr ""
+
+msgid "Start ReelBox-to-ReelBox Server"
+msgstr ""
+
+msgid "ReelBox-to-ReelBox Server Port"
+msgstr ""
+
+msgid "Bind to IP"
+msgstr ""
+
+msgid "HTTP Server"
+msgstr ""
+
+msgid "Start HTTP Server"
+msgstr ""
+
+msgid "HTTP Server Port"
+msgstr ""
+
+msgid "HTTP Streamtype"
+msgstr ""
+
+msgid "Multicast Streaming Server"
+msgstr ""
+
+msgid "Start IGMP Server"
+msgstr ""
+
+msgid "Multicast Client Port"
+msgstr ""
+
+msgid "Multicast Streamtype"
+msgstr ""
+
+msgid "Start Client"
+msgstr ""
+
+msgid "Remote IP"
+msgstr ""
+
+msgid "Remote Port"
+msgstr ""
+
+msgid "Filter Streaming"
+msgstr ""
+
+msgid "Synchronize EPG"
+msgstr ""
+
+msgid "Minimum Priority"
+msgstr ""
+
+msgid "Maximum Priority"
+msgstr ""

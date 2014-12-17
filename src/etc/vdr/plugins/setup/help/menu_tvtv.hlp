@@ -1,0 +1,13 @@
+
+Hier können Sie den EPG-Service von tvtv.de für
+die Nutzung mit der ReelBox konfigurieren.
+
+Sie benötigen ein gültiges tvtv-Abonnement.
+Für weitere Details besuchen Sie die Homepage des 
+Anbieters auf http://www.tvtv.de
+
+Einstellbare Optionen:
+-tvtv nutzen: Ein-/Ausschalten des tvtv-Service
+-tvtv Server: Internetadresse des tvtv-Servers
+-Benutzername: Benutzername Ihres tvtv-Abonnements
+-Passwort: Passwort Ihres tvtv-Abonnements

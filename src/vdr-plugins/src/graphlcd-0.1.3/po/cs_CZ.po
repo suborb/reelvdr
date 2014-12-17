@@ -1,0 +1,130 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-graphlcd\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-10 17:53+0200\n"
+"PO-Revision-Date: 2009-03-03 12:03+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "JanFebMarAprMayJunJulAugSepOctNovDec"
+msgstr "LedÚnoBřeDubKvěČrvČrcSrpZářŘíjLisPro"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Music"
+msgstr "Hudba"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Image"
+msgstr "Obrázek"
+
+msgid "CD"
+msgstr "CD"
+
+msgid "Replay"
+msgstr "Přehrát"
+
+msgid "no"
+msgstr "ne"
+
+msgid "yes"
+msgstr "ano"
+
+msgid "not in menu"
+msgstr "není v nabídce"
+
+msgid "compressed"
+msgstr "komprimované"
+
+msgid "auto"
+msgstr "automaticky"
+
+msgid "medium"
+msgstr "střední"
+
+msgid "large"
+msgstr "velké"
+
+msgid "never"
+msgstr "nikdy"
+
+msgid "once"
+msgstr "jednou"
+
+msgid "always"
+msgstr "vždy"
+
+msgid "Show Date/Time"
+msgstr "Zobrazovat datum a čas"
+
+msgid "Show Channel"
+msgstr "Zobrazovat kanál"
+
+msgid "Show Logo"
+msgstr "Zobrazovat logo"
+
+msgid "Show Symbols"
+msgstr "Zobrazovat symboly"
+
+msgid "Show ET Symbols"
+msgstr "Zobrazovat symboly ET"
+
+msgid "Show Program"
+msgstr "Zobrazovat program"
+
+msgid "Show Timebar"
+msgstr "Zobrazovat časový pruh"
+
+msgid "Show Menu"
+msgstr "Zobrazovat nabídku"
+
+msgid "Show Messages"
+msgstr "Zobrazovat zprávy"
+
+msgid "Show Volume"
+msgstr "Zobrazovat hlasitost"
+
+msgid "Show free Tuner"
+msgstr "Zobrazovat volný tuner"
+
+msgid "Identify replay type"
+msgstr "Identifikovat typ přehrávání"
+
+msgid "Modify replay string"
+msgstr "Změnit řetězec přehrávání"
+
+msgid "Scroll text lines"
+msgstr "Posouvat řádky textu"
+
+msgid "Scroll speed"
+msgstr "Rychlost posouvání"
+
+msgid "Scroll time interval"
+msgstr "Interval posouvání"
+
+msgid "Brightness on user activity"
+msgstr "Jas při aktivitě uživatele"
+
+msgid "Brightness on user inactivity"
+msgstr "Jas při neaktivitě uživatele"
+
+msgid "Brightness delay [s]"
+msgstr "Zpoždění jasu (s)"
+
+msgid "Show clock on user inactivity"
+msgstr "Zobrazovat hodiny při neaktivitě uživatele"
+
+msgid "Unknown title"
+msgstr "Neznámý titul"

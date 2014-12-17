@@ -1,0 +1,320 @@
+# ReelBox ICE output plugin
+# Copyright (C) 2011 Reel Multimedia GmbH
+# This file is distributed under the same license as the reelice package.
+# Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: reelice 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-10-17 10:25+0200\n"
+"PO-Revision-Date: 2011-04-21 12:00+0200\n"
+"Last-Translator: Reel Multimedia Team <reelbox-devel@mailings.reelbox.org>\n"
+"Language-Team: German <reelbox-devel@mailings.reelbox.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+msgid "Manual"
+msgstr "Manuell"
+
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Setup - Video"
+msgstr "Einstellungen - Video"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Skip"
+msgstr "Auslassen"
+
+msgid "HDMI settings"
+msgstr "Einstellungen für HDMI-Anschluss"
+
+msgid "Output"
+msgstr "Ausgabe"
+
+msgid "Scale"
+msgstr "Skalieren"
+
+msgid "Display detection"
+msgstr "Display-Erkennung"
+
+msgid "Postprocessing"
+msgstr "Bildoptimierung"
+
+msgid "Degrade level"
+msgstr "Kantenglättung (%)"
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "Setup - Audio"
+msgstr "Einstellungen - Audio"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Experts"
+msgstr "Experten"
+
+msgid "Channels"
+msgstr "Kanäle"
+
+msgid "Delay (ms)"
+msgstr "Verzögerung (ms)"
+
+msgid "S/PDIF settings"
+msgstr "Einstellungen S/P-DIF"
+
+msgid "Analog settings"
+msgstr "Einstellungen analog"
+
+msgid "Keep these settings?"
+msgstr "Diese Einstellungen beibehalten?"
+
+msgid "Using old settings"
+msgstr "Benutze alte Einstellungen"
+
+#, c-format
+msgid "Set current tv mode to %d %s"
+msgstr "Setze TV-Modus auf %d %s"
+
+#, c-format
+msgid "Failed to set current tv mode to %d %s"
+msgstr "Setzen des TV-Modus auf %d %s fehlgeschlagen"
+
+#, c-format
+msgid "Invalid mode parameter %d (Allowed %d..%d)"
+msgstr "Ungültige Parameter %d für Modus (Erlaubt: %d..%d)"
+
+msgid "No mode parameter"
+msgstr "Keine Parameter für Modus"
+
+msgid "Unable to get current tv mode"
+msgstr "Aktueller Display-Modus kann nicht ermittelt werden"
+
+msgid "Output disabled"
+msgstr "Ausgabe deaktiviert"
+
+msgid "None"
+msgstr "Keiner"
+
+msgid "AudioVideo"
+msgstr ""
+
+msgid "AudioOnly"
+msgstr ""
+
+msgid "AudioOnlyBlack"
+msgstr ""
+
+msgid "VideoOnly"
+msgstr ""
+
+msgid "Extern"
+msgstr ""
+
+msgid "PanAndScan"
+msgstr ""
+
+msgid "LetterBox"
+msgstr ""
+
+msgid "CenterCutOut"
+msgstr ""
+
+msgid "INVALID"
+msgstr ""
+
+msgid "STOP"
+msgstr ""
+
+msgid "PAUSE"
+msgstr ""
+
+msgid "PLAY"
+msgstr ""
+
+msgid "analog (PCM)"
+msgstr ""
+
+msgid "bitstream"
+msgstr ""
+
+msgid "Dolby Digital"
+msgstr ""
+
+msgid "dts"
+msgstr ""
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Dual mono"
+msgstr ""
+
+msgid "5.1"
+msgstr ""
+
+msgid "7.1"
+msgstr ""
+
+msgid "Only if scaling"
+msgstr "Nur b. Skalierung"
+
+msgid "Spatial only"
+msgstr "Nur Räumlich"
+
+msgid "Film"
+msgstr ""
+
+msgid "Auto"
+msgstr "Automatisch"
+
+msgid "Top field only"
+msgstr "Nur Top-Field"
+
+msgid "Never"
+msgstr "Nie"
+
+msgid "Scale to fit"
+msgstr "Skalieren"
+
+msgid "No scaling"
+msgstr "Keine Skalierung"
+
+msgid "Zoom to fill"
+msgstr "Zoom"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Non linear"
+msgstr "Anamorph"
+
+msgid "Safe"
+msgstr "Sicher"
+
+msgid "Real"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "480i"
+msgstr ""
+
+msgid "480p"
+msgstr ""
+
+msgid "576i"
+msgstr ""
+
+msgid "576p"
+msgstr ""
+
+msgid "720p50"
+msgstr ""
+
+msgid "720p60"
+msgstr ""
+
+msgid "1080i50"
+msgstr ""
+
+msgid "1080i60"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "1080p50"
+msgstr ""
+
+msgid "1080p60"
+msgstr ""
+
+msgid "Source"
+msgstr "Quellauflösung"
+
+msgid "PiP"
+msgstr ""
+
+msgid "Audio [analog]"
+msgstr ""
+
+msgid "Audio [S/P-DIF]"
+msgstr ""
+
+msgid "Audio [HDMI]"
+msgstr ""
+
+msgid "Audio [Unknown]"
+msgstr "Audio [Unbekannt]"
+
+#~ msgid "Enabled"
+#~ msgstr "Aktiviert"
+
+#~ msgid "Automatic display detection"
+#~ msgstr "Automatische Display-Erkennung"
+
+#~ msgid "Edid mode"
+#~ msgstr "EDID Modus"
+
+#~ msgid "Deinterlacer"
+#~ msgstr "Deinterlacer"
+
+#~ msgid "Deringing level"
+#~ msgstr "Level für Deringing"
+
+#~ msgid "Gaussian level"
+#~ msgstr "Level für Degauss"
+
+#~ msgid "Pan scan"
+#~ msgstr "Zoom"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktivieren"
+
+#~ msgid "Enable"
+#~ msgstr "Aktivieren"
+
+#~ msgid "Override frame polarity"
+#~ msgstr "Frame-polarität überschreiben"
+
+#~ msgid "Original"
+#~ msgstr "Original"
+
+#~ msgid "Native (Display)"
+#~ msgstr "Nativ (wie Display)"
+
+#~ msgid "Zoom to fit"
+#~ msgstr "Einpassen"
+
+#~ msgid "Pass through"
+#~ msgstr "Pass-through"

@@ -1,0 +1,107 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <Klaus.Schmidinger@tvdr.de>
+# This file is distributed under the same license as the VDR package.
+# Arthur Konovalov <artlov@gmail.com>, 2010
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.5.7\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-12-07 16:12+0100\n"
+"PO-Revision-Date: 2007-08-24 23:49+0300\n"
+"Last-Translator: Arthur Konovalov <artlov@gmail.com>\n"
+"Language-Team: Estonian <vdr@linuxtv.org>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teletext subtitles"
+msgstr "Teleteksti subtiitrid"
+
+msgid "Hide teletext subtitles"
+msgstr "Teletekst subtiitrid välja"
+
+msgid "Display teletext subtitles"
+msgstr "Teletekst subtiitrid sisse"
+
+msgid "deprecated"
+msgstr "iganenud"
+
+msgid "Page Selection"
+msgstr "Lehekülje valik"
+
+msgid "Display on/off"
+msgstr "sisse/välja"
+
+msgid "4:3/Letterbox (deprecated)"
+msgstr "pildisuhe (iganenud)"
+
+msgid "Page Mode"
+msgstr "lk valik"
+
+msgid "All"
+msgstr "kõik"
+
+msgid "Only DVB-S"
+msgstr "DVB-S"
+
+msgid "Only DVB-T"
+msgstr "DVB-T"
+
+msgid "Only DVB-C"
+msgstr "DVB-C"
+
+msgid "Display Subtitles"
+msgstr "Subtiitrite kuvamine"
+
+msgid "Record Subtitles"
+msgstr "Subtiitrite salvestamine"
+
+msgid "Live Delay"
+msgstr "Otsesaate viivitus"
+
+msgid "Replay Delay (PES)"
+msgstr "Salvestuse viivitus (PES)"
+
+msgid "Replay Delay (TS)"
+msgstr "Salvestuse viivitus (TS)"
+
+msgid "Workaround for some French chns"
+msgstr "Parandus prantsuse kanalitel"
+
+msgid "DVB Source Selection"
+msgstr "DVB allika valik"
+
+msgid "Font Size (pixel)"
+msgstr "Fondi suurus (pix)"
+
+msgid "Font OutlineWidth (pixel)"
+msgstr "Fondi piirjoone laius (pix)"
+
+msgid "Language"
+msgstr "Keel"
+
+msgid "Hearing Impaired"
+msgstr "kuulmispuudega"
+
+msgid "Subtitle Page Settings"
+msgstr "Subtiitrite lehekülje valikud"
+
+msgid "Auto"
+msgstr "automaatne"
+
+msgid "Manual"
+msgstr "käsitsi"
+
+msgid "Disabled"
+msgstr "väljas"
+
+msgid "Subtitle Mode"
+msgstr "Subtiitrite laad"
+
+msgid "Manual Subtitle Page"
+msgstr "Subtiitrite lehekülg"
+
+#~ msgid "Main Menu Alternative"
+#~ msgstr "Peamenüü valikud"

@@ -1,0 +1,148 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-shoutcast\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-02 15:54+0200\n"
+"PO-Revision-Date: 2009-03-03 16:22+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Internet Radio"
+msgstr "Radio prin Internet"
+
+msgid "My Radio Stations"
+msgstr "Posturile mele Radio"
+
+msgid "Getting playlist for Genre: "
+msgstr "Obtin playlist pentru genul :"
+
+msgid "Internet Radio - Add New Server"
+msgstr "Internet Radio - Adauga post nou"
+
+msgid "Internet Radio - Edit Station Info"
+msgstr "Internet Radio - Editare info post"
+
+msgid "New Station"
+msgstr "Post Nou"
+
+msgid "Station Name"
+msgstr "Nume post"
+
+msgid "Station Url"
+msgstr "Adresa post"
+
+msgid "Save"
+msgstr "Salveaza"
+
+msgid "No URL entered!"
+msgstr ""
+
+msgid "Saved"
+msgstr "Salvat"
+
+msgid "Could not be saved!"
+msgstr "Nu se poate salva"
+
+msgid "Already present"
+msgstr "Este prezent"
+
+msgid "Couldnot save changes"
+msgstr "Nu pot salva modificari"
+
+msgid "Check URL: could not open radio-station"
+msgstr ""
+
+msgid "Please wait: opening radio-station"
+msgstr ""
+
+#, fuzzy
+msgid "Internet Radio Functions"
+msgstr "Functii Radio prin Internet"
+
+msgid "1  Add New Radio Station"
+msgstr "1 Adauga post nou"
+
+msgid "2  Edit current Radio Station"
+msgstr "2  Editare postul curent"
+
+msgid "3  Delete current  Radio Station"
+msgstr "3  Sterge postul curent"
+
+msgid "Selected Radio Station:"
+msgstr "Posturi Radio selectate:"
+
+msgid "Could not save to disk"
+msgstr "Nu pot sa salvez pe disc"
+
+msgid "Deletion failed"
+msgstr "Stergere esuata"
+
+msgid "Internet Radio: My Stations"
+msgstr "Radio prin Internet: Posturile Mele"
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Functii"
+
+msgid "No Radio Stations found."
+msgstr "Nu am gasit posturi Radio."
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please use 'Function' to add a station."
+msgstr ""
+
+msgid "Your SHOUTcast is active."
+msgstr ""
+
+msgid "Your SHOUTcast DevID is"
+msgstr ""
+
+msgid "Reset DevID"
+msgstr ""
+
+msgid "Welcome to Internetradio setup"
+msgstr ""
+
+msgid "To use the internet radio service from SHOUTcast you need an access-key since their switch to the new Interface (API 2.0). "
+msgstr ""
+
+msgid "You can register for this DevID directly on the Website of the AOL Developer Network http://dev.aol.com/keys ."
+msgstr ""
+
+msgid "Enter DevID"
+msgstr ""
+
+msgid "Show this page again"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "DevID is to short, it should be 16 characters long"
+msgstr ""
+
+msgid "Internet Radio Setup"
+msgstr ""
+
+msgid "Radio station added to favorites"
+msgstr ""
+
+#~ msgid "Please use 'Function' to add"
+#~ msgstr "Va rog utilizati 'Functii' pentru a adauga"
+
+#~ msgid "a station"
+#~ msgstr "un post"

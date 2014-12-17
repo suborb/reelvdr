@@ -1,0 +1,26 @@
+#!/bin/bash
+# Rockantenne-Playlist
+# $1 = outfile
+
+### Variabel
+Name="Rockantenne [www.antenne.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.antenne.de/antenne/radio/songsuche/rockantenne.php"
+
+# last Artist/Title
+all=`grep -m1 -A3 '<div style=' /tmp/playlist`
+all=${all//*$'  '/}; artist=${all/ mit \"*/}
+title=${all/* mit \"/}; title=${title/\"$'<br>'*/}
+# temp. no Info
+artist=${artist:='---'}; title=${title:='---'}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

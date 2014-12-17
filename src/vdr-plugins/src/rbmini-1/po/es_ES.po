@@ -1,0 +1,311 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# elpajare tododream Diciembre 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-rbmini\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-02-04 10:16+0100\n"
+"PO-Revision-Date: 2009-04-20 15:53+0200\n"
+"Last-Translator: Andreas Ritter <ar@reel-multimedia.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "HDMI: %s      SCART: %s"
+msgstr ""
+
+msgid "Setup - Video"
+msgstr "Configuración - Viedo"
+
+msgid "Setup - Audio"
+msgstr "Configuración - Audio"
+
+msgid "Keep these settings?"
+msgstr "¿Mantener esta configuración?"
+
+msgid "Using old settings"
+msgstr "Usando configuración anterior"
+
+msgid "Audio"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Experts"
+msgstr "Expertos"
+
+msgid "HDMI settings"
+msgstr "Parámetros HDMI"
+
+msgid "Mode"
+msgstr "Modo"
+
+msgid "Output"
+msgstr "Salida"
+
+msgid "Aspect"
+msgstr "Aspecto"
+
+msgid "Aspect ratio"
+msgstr "Relación aspecto"
+
+msgid "SCART settings"
+msgstr "Parámetros SCART"
+
+msgid "Mpeg2 settings"
+msgstr "parámetros Mpeg2"
+
+msgid "Postprocessing"
+msgstr "Postproducción"
+
+msgid "You will have to confirm changes to mode or output. If your display does not support the new settings, just wait for 20 seconds or press Exit to cancel the changes."
+msgstr ""
+
+msgid "Video"
+msgstr ""
+
+msgid "Audio settings"
+msgstr "Parámetros Audio"
+
+#, fuzzy
+msgid "Analog offset"
+msgstr "Offset analog. (1/100s)"
+
+msgid "Dolby Digital offset"
+msgstr ""
+
+#, fuzzy
+msgid "Note:"
+msgstr "Ninguno"
+
+msgid "The adjustable range is 1/100 seconds."
+msgstr ""
+
+msgid "None"
+msgstr "Ninguno"
+
+msgid "TS"
+msgstr ""
+
+msgid "PES"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Desconocido"
+
+msgid "Init"
+msgstr ""
+
+msgid "Play"
+msgstr "Reproducir"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Trick"
+msgstr "Truco"
+
+msgid "Stereo"
+msgstr ""
+
+msgid "Left"
+msgstr "Izquierda"
+
+msgid "Right"
+msgstr "Derecha"
+
+msgid "Mpg2"
+msgstr ""
+
+msgid "h264"
+msgstr ""
+
+msgid "jpeg"
+msgstr ""
+
+msgid "NTSC"
+msgstr ""
+
+msgid "Ntsc Jap"
+msgstr ""
+
+msgid "Ntsc 443"
+msgstr ""
+
+msgid "Pal B IT"
+msgstr ""
+
+msgid "PAL"
+msgstr ""
+
+msgid "Pal B Aus"
+msgstr ""
+
+msgid "Pal B NZ"
+msgstr ""
+
+msgid "Pal I"
+msgstr ""
+
+msgid "SECAM"
+msgstr ""
+
+msgid "Secam D"
+msgstr ""
+
+msgid "Pal D"
+msgstr ""
+
+msgid "Pal G"
+msgstr ""
+
+msgid "Pal H"
+msgstr ""
+
+msgid "Pal M"
+msgstr ""
+
+msgid "Pal 60"
+msgstr ""
+
+msgid "Pal N"
+msgstr ""
+
+msgid "Pal NC"
+msgstr ""
+
+msgid "Ntsc BT470"
+msgstr ""
+
+msgid "480p60"
+msgstr ""
+
+msgid "576p50"
+msgstr ""
+
+msgid "720p50"
+msgstr ""
+
+msgid "720p59"
+msgstr ""
+
+msgid "720p60"
+msgstr ""
+
+msgid "1080i50"
+msgstr ""
+
+msgid "1080i59"
+msgstr ""
+
+msgid "1080i60"
+msgstr ""
+
+msgid "1080p23"
+msgstr ""
+
+msgid "1080p24"
+msgstr ""
+
+msgid "1080p25"
+msgstr ""
+
+msgid "1080p29"
+msgstr ""
+
+msgid "1080p30"
+msgstr ""
+
+msgid "Source"
+msgstr "Fuente"
+
+msgid "1:1"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "14:9"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "20:9"
+msgstr ""
+
+msgid "Fill to Screen"
+msgstr "Adaptar a la pantalla"
+
+msgid "Crop to Fill"
+msgstr "Cortar para llenar"
+
+msgid "Fill to Aspect"
+msgstr "Adaptar al aspecto"
+
+msgid "NL X"
+msgstr ""
+
+msgid "NL Y"
+msgstr ""
+
+msgid "NL XY"
+msgstr ""
+
+msgid "DVI"
+msgstr ""
+
+msgid "HDMI"
+msgstr ""
+
+msgid "HDMI (PCM)"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "CVBS"
+msgstr ""
+
+msgid "CVBS DLY"
+msgstr ""
+
+msgid "RGB"
+msgstr ""
+
+msgid "YC"
+msgstr ""
+
+msgid "YPrPb"
+msgstr ""
+
+msgid "Deblock"
+msgstr ""
+
+msgid "Deblock & dering"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Dolby D offset"
+#~ msgstr "Dolby D Offset (1/100s)"
+
+#~ msgid "Ignore"
+#~ msgstr "Ignorar"
+
+#~ msgid "You will have to confirm changes to mode or output."
+#~ msgstr "Tiene que confirmar los cambios en Modo o Salida"
+
+#~ msgid "If your display doesn not support the new settings,"
+#~ msgstr "Si su pantalla no soporta la nueva configuración,"
+
+#~ msgid "just wait for 20 seconds or press Exit to cancel"
+#~ msgstr "espere 20 segundos o presione la tecla 'Exit' para cancelar"
+
+#~ msgid "the changes."
+#~ msgstr "los cambios"

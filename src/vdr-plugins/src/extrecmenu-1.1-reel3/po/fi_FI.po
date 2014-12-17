@@ -1,0 +1,572 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Hannu Savolainen <hannu@opensound.com>, 2002
+# Jaakko Hyvätti <jaakko@hyvatti.iki.fi>, 2002
+# Niko Tarnanen <niko.tarnanen@hut.fi>, 2003
+# Rolf Ahrenberg <rahrenbe@cc.hut.fi>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-extrecmenu\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-12-04 08:59+0100\n"
+"PO-Revision-Date: 2008-10-01 14:50+0200\n"
+"Last-Translator: Rolf Ahrenberg <rahrenbe@cc.hut.fi>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "All recordings"
+msgstr ""
+
+msgid "last 30 days"
+msgstr ""
+
+msgid "Both SD and HD"
+msgstr ""
+
+msgid "SD only"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Search Recordings"
+msgstr ""
+
+msgid "Recording Name"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Filter by"
+msgstr ""
+
+msgid "Select a recording to play"
+msgstr ""
+
+msgid ""
+"No recordings found.\n"
+"Modify search parameters and try again."
+msgstr ""
+
+msgid "New Search"
+msgstr ""
+
+#, fuzzy
+msgid "Delete"
+msgstr "Poista"
+
+msgid "Delete recording?"
+msgstr ""
+
+msgid "Recording in progress, stop recording and delete it?"
+msgstr ""
+
+msgid "Unable to delete recording"
+msgstr ""
+
+msgid "Directory Selector"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+#, fuzzy
+msgid "Cancel"
+msgstr "Peruuta"
+
+msgid "Move"
+msgstr ""
+
+msgid "Rec Dir"
+msgstr ""
+
+msgid "Button$Create"
+msgstr "Luo"
+
+msgid "Cannot move into its own sub folder"
+msgstr ""
+
+msgid "Cannot write into directory"
+msgstr ""
+
+msgid "Moving Recording"
+msgstr ""
+
+msgid "Moving Directories"
+msgstr ""
+
+msgid "Move failed. Not enough free space"
+msgstr ""
+
+#, fuzzy
+msgid "Copying started"
+msgstr "Järjestys"
+
+msgid "Cannot copy into its own sub folder"
+msgstr ""
+
+msgid "Copy failed. Not enough free space"
+msgstr ""
+
+#, fuzzy
+msgid "Create directory"
+msgstr "Luo"
+
+msgid "New"
+msgstr ""
+
+msgid "To create a new directory press 'OK':"
+msgstr ""
+
+msgid "Directory Name"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Directory will only be shown with"
+msgstr ""
+
+#, fuzzy
+msgid "recordings inside."
+msgstr "Näytä tallenteen päiväys"
+
+#, fuzzy
+msgid "Created"
+msgstr "Luo"
+
+msgid "Failed"
+msgstr ""
+
+msgid "Compression options"
+msgstr ""
+
+msgid "Compression"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Internal HDD"
+msgstr ""
+
+msgid "External Media"
+msgstr ""
+
+msgid "Please select the drive where to move the recording:"
+msgstr ""
+
+msgid "Select Media"
+msgstr ""
+
+msgid "Could not open media"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Change title"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Episode"
+msgstr ""
+
+msgid "Invalid title!"
+msgstr ""
+
+msgid "Invalid episode!"
+msgstr ""
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Luo"
+
+msgid "Name"
+msgstr ""
+
+msgid "Invalid filename!"
+msgstr "Virheellinen tiedoston nimi!"
+
+msgid "Creating directories failed!"
+msgstr ""
+
+msgid "New folder"
+msgstr "Uusi kansio"
+
+msgid "Button$Cancel"
+msgstr "Peruuta"
+
+msgid "Button$Move"
+msgstr "Siirrä"
+
+msgid "Move recording"
+msgstr ""
+
+msgid "[base dir]"
+msgstr "[juurihakemisto]"
+
+msgid "Target filesystem filled - try anyway?"
+msgstr ""
+
+msgid "Moving into own sub-directory not allowed!"
+msgstr "Siirto omaan alihakemistoon ei ole sallittu!"
+
+msgid "Can't get filesystem information"
+msgstr "Tiedostojärjestelmän tietojen lukeminen epäonnistui"
+
+msgid "Details"
+msgstr "Lisätiedot"
+
+msgid "low"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "high"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Lifetime"
+msgstr ""
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Info:"
+msgstr ""
+
+msgid "In this menu you can adjust the point in time"
+msgstr ""
+
+msgid "a recording gets deleted automatically."
+msgstr ""
+
+msgid "Recording info"
+msgstr ""
+
+msgid "Button$Play"
+msgstr "Toista"
+
+msgid "Button$Rewind"
+msgstr "Alkuun"
+
+msgid "Large picture"
+msgstr ""
+
+msgid "Path"
+msgstr "Polku"
+
+msgid "Channel"
+msgstr ""
+
+msgid "Size"
+msgstr "Koko"
+
+#, fuzzy
+msgid "Opening Recordings..."
+msgstr "Näytä tallenteen päiväys"
+
+msgid "Error while mounting DVD!"
+msgstr "DVD:n avaaminen epäonnistui!"
+
+msgid "Recordings"
+msgstr ""
+
+msgid "free"
+msgstr ""
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Tiedot"
+
+msgid "Total"
+msgstr ""
+
+msgid "Last recording"
+msgstr ""
+
+msgid "Error while accessing recording!"
+msgstr ""
+
+msgid "PIN code: "
+msgstr ""
+
+#, c-format
+msgid "Please insert DVD %s"
+msgstr "Laita DVD %s asemaan"
+
+msgid "DVD plugin is not installed!"
+msgstr "DVD-laajennosta ei löydy!"
+
+msgid "No DVD in drive!"
+msgstr "Asemassa ei ole DVD-levyä!"
+
+msgid "Recording not found on DVD!"
+msgstr "Tallennetta ei löydy DVD:ltä!"
+
+msgid "Error while linking [0-9]*.vdr!"
+msgstr "Tiedostojen [0-9]*.vdr linkittäminen epäonnistui!"
+
+msgid "sudo or mount --bind / umount error (vfat system)"
+msgstr "Sudo tai mount --bind / umount -komento epäonnistui (VFAT)!"
+
+msgid "Script 'dvdarchive.sh' not found!"
+msgstr "'dvdarchive.sh'-skriptiä ei löydetä!"
+
+#, fuzzy
+msgid "Delete directory?"
+msgstr "Luo"
+
+msgid "Timer still recording - really delete?"
+msgstr ""
+
+msgid "Error while deleting recording!"
+msgstr ""
+
+msgid "Recording commands"
+msgstr ""
+
+msgid "Sort by date"
+msgstr "Tallenteet järjestetään päivämäärän mukaan"
+
+msgid "Sort by name"
+msgstr "Tallenteet järjestetään nimen mukaan"
+
+msgid "Show title"
+msgstr ""
+
+msgid "Show directory name"
+msgstr ""
+
+msgid "Invalid PIN"
+msgstr ""
+
+msgid "PIN Aborted"
+msgstr ""
+
+msgid "Cancel moving?"
+msgstr "Peruutetaanko siirto?"
+
+#, fuzzy
+msgid "Cancel editing?"
+msgstr "Peruutetaanko siirto?"
+
+msgid "ascending"
+msgstr "nouseva"
+
+msgid "descending"
+msgstr "laskeva"
+
+msgid "Show recording date"
+msgstr "Näytä tallenteen päiväys"
+
+msgid "Show recording time"
+msgstr "Näytä tallenteen ajankohta"
+
+msgid "Show recording length"
+msgstr "Näytä tallenteen kesto"
+
+msgid "Show nr. of new recordings of a directory"
+msgstr "Näytä uusien tallenteiden lukumäärä"
+
+msgid "Show alternative to new marker"
+msgstr "Merkitse uudet tallenteet symbolilla"
+
+msgid "Show free disk space for each file system"
+msgstr "Näytä vapaa levytila jokaisella tiedostojärjestelmällä"
+
+msgid "Sorting"
+msgstr "Järjestys"
+
+msgid "Hide main menu entry"
+msgstr "Piilota valinta päävalikosta"
+
+msgid "Replace original recordings menu"
+msgstr "Korvaa alkuperäinen tallennevalikko"
+
+#, fuzzy
+msgid "Jump to last played recording"
+msgstr "Siirry viimeksi toistettuun tallenteeseen"
+
+#, fuzzy
+msgid "Show recordings menu after playback"
+msgstr "Näytä tallenteen päiväys"
+
+msgid "Patch font"
+msgstr "Käytä paikattua kirjasinta"
+
+msgid "~ 16MB/s"
+msgstr ""
+
+msgid "~ 7MB/s"
+msgstr ""
+
+msgid "~ 3MB/s"
+msgstr ""
+
+#, fuzzy
+msgid "Limit bandwidth when moving recordings"
+msgstr "Rajoita tallenteiden siirtokaistaa"
+
+msgid "Use cutter queue"
+msgstr ""
+
+msgid "Undelete Recordings"
+msgstr ""
+
+msgid "No recordings to undelete!"
+msgstr ""
+
+msgid "Button$Remove"
+msgstr ""
+
+msgid "Button$Undelete"
+msgstr ""
+
+msgid "Remove recording from disk?"
+msgstr ""
+
+msgid "Removing recording ..."
+msgstr ""
+
+msgid "Sorry, undeleting recording failed"
+msgstr ""
+
+msgid "Button$Back"
+msgstr "Takaisin"
+
+#, fuzzy
+msgid "Cannot cut recording not under VideoDirectory"
+msgstr "Näytä uusien tallenteiden lukumäärä"
+
+#, fuzzy
+msgid "Added recording to cutter queue on Avantgarde"
+msgstr "Tallenne on lisätty leikkausjonoon"
+
+msgid "Cannot cut recordings on NetClient without an Avantgarde server"
+msgstr ""
+
+msgid "Recording already in cutter queue!"
+msgstr "Tallenne on jo leikkausjonossa!"
+
+msgid "No editing marks defined!"
+msgstr ""
+
+msgid "Added recording to cutter queue"
+msgstr "Tallenne on lisätty leikkausjonoon"
+
+msgid "Not enough space on harddisk!"
+msgstr ""
+
+msgid "Rename/Move failed!"
+msgstr "Nimeäminen/siirto epäonnistui!"
+
+msgid "Cutter queue not empty"
+msgstr "Leikkausjono ei ole tyhjä"
+
+msgid "Move recordings in progress"
+msgstr "Tallenteiden siirto käynnissä"
+
+msgid "Can't start editing process!"
+msgstr ""
+
+msgid "Cutting"
+msgstr ""
+
+#, fuzzy
+msgid "Moving"
+msgstr "Järjestys"
+
+msgid "started"
+msgstr ""
+
+#, fuzzy
+msgid "Cancelled"
+msgstr "Peruuta"
+
+#, fuzzy
+msgid "Completed"
+msgstr "Luo"
+
+#, fuzzy
+msgid "Copying"
+msgstr "Järjestys"
+
+#, fuzzy
+msgid "copying recording"
+msgstr "Näytä tallenteen päiväys"
+
+msgid "Copy failed!"
+msgstr ""
+
+msgid "This version of extrecmenu does not support this service!"
+msgstr ""
+
+msgid "ExtRecMenu does not exist!"
+msgstr ""
+
+#, fuzzy
+msgid "Extended recordings menu"
+msgstr "Korvaa alkuperäinen tallennevalikko"
+
+msgid "Rename"
+msgstr "Nimeä"
+
+#, fuzzy
+msgid "Burn recording"
+msgstr "Näytä tallenteen päiväys"
+
+msgid "Mark as new"
+msgstr ""
+
+#~ msgid "Button$Open"
+#~ msgstr "Avaa"
+
+#, fuzzy
+#~ msgid "moving recording"
+#~ msgstr "Näytä tallenteen päiväys"
+
+#~ msgid "Button$Info"
+#~ msgstr "Tiedot"
+
+#, fuzzy
+#~ msgid "Button$Delete"
+#~ msgstr "Luo"
+
+#, fuzzy
+#~ msgid "Show Details"
+#~ msgstr "Lisätiedot"
+
+#~ msgid "Button$Edit"
+#~ msgstr "Muokkaa"
+
+#~ msgid "Button$Rename"
+#~ msgstr "Nimeä"
+
+#, fuzzy
+#~ msgid "Create"
+#~ msgstr "Luo"
+
+#~ msgid "Button$Commands"
+#~ msgstr "Komennot"
+
+#~ msgid "Use VDR's recording info menu"
+#~ msgstr "Käytä alkuperäistä tallenteen tiedot -valikkoa"
+
+#~ msgid "Call plugin after playback"
+#~ msgstr "Avaa laajennos toiston loputtua"

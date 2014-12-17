@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<help>
+  <section name="Hauptmenü">
+   Sie befinden sich in der Online-Hilfe zum "HAUPTMENÜ" der ReelBox.
+   Über das Hauptmenü erreichen Sie die Untermenüs, welche thematisch zusammengehörige Funktionen enthalten.
+   <br/>
+   Nutzen Sie die Pfeil-links- und Pfeil-rechts-Tasten, um den Text nach oben bzw. unten zu verschieben. Das beim Aufruf der Online-Hilfe angezeigte Kapitel bezieht sich immer auf das Menü bzw. Untermenü in dem Sie sich gerade befinden.<br/>
+   <br/>
+   Im Hauptmenü enthaltene Untermenüs und deren Funktionen:<br/>
+   <br/>
+   1 MEDIA PLAYER:<br/>
+   - 1 Meine Bilder<br/>
+   - 2 Meine Musik<br/>
+   - 3 Meine Videos<br/>
+   - 4 Meine Aufnahmen<br/>
+   - 5 DVD - Player<br/>
+   - 6 Internet - Radio<br/>
+   <br/>
+   2 MEDIA MANAGER:<br/>
+   - 1 TV Aufnahmen brennen<br/>
+   - 2 Gelöschte TV Aufnahmen<br/>
+   - 3 DVD kopieren<br/>
+   - 4 AudioCD kopieren<br/>
+   - 5 DVD-RW formatieren<br/>
+   - 6 Dateimanager<br/>
+   <br/>
+   3 EPG DIENSTE:<br/>
+   - 1 EPG Standard<br/>
+   - 2 EPG Magazin<br/>
+   - 3 EPG International<br/>
+   <br/>
+   4 TIMER MANAGER:<br/>
+   - 1 Timer Manager<br/>
+   - 2 Suchtimer<br/>
+   - 3 Timer Zeitleiste<br/>
+   - 4 TVTV Dienst<br/>
+   - 5 Ausschalttimer<br/>
+   <br/>
+   5 WEBBROWSER<br/>
+   <br/>
+   6 EINSTELLUNGEN<br/>
+   - 1 OSD Einstellungen<br/>
+   - 2 Spracheinstellungen<br/>
+   - 3 Zeitzone und Uhr<br/>
+   - 4 Gerätefront<br/>
+   - 5 Bildeinstellungen<br/>
+   - 6 Kanäle<br/>
+   <br/>
+   7 KINDERSICHERUNG<br/>
+   - 1 Kindersicherung aktivieren<br/>
+   - 2 Aktuellen Kanal sperren<br/>
+   - 3 Aktuelle Sendung sperren<br/>
+   - 4 Gesperrte Kanäle bearbeiten<br/>
+   - 5 Gesperrte Sendungen bearbeiten<br/>
+   - 6 Systemeinstellungen bearbeiten<br/>
+   - 7 Setup sperren<br/>
+   <br/>
+   8 EXTRAS / SONSTIGES<br/>
+   - 1 Reelblog<br/>
+   - 2 Multifeed Optionen<br/>
+   - 3 Videotext<br/>
+   - 4 Spiele<br/>
+   - 5 Media Streaming<br/>
+</section>
+
+<section name="Media Player">
+     Sie befinden sich in der Online-Hilfe zum Untermenü "MEDIA PLAYER" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.<br/>
+     Media Player:<br/>
+	 Spielt alle von der ReelBox unterstützten Audio- und Videodateien ab. Die Dateien können sich auf einem internen Laufwerk wie der Festplatte oder einer im DVD-Laufwerk befindlichen CD bzw. DVD befinden.<br/> 
+	 <br/>
+	 Um Ihnen die Übersicht zu erleichtern, finden Sie für die gängigsten Dateitypen vorgefertigte Benutzerordner auf der 	internen Festplatte, z.B. "Meine Bilder", "Meine Musik" etc.<br/>
+	 <br/>
+	 Der Ordner "Meine Aufnahmen" enthält alle TV-Aufnahmen.<br/> 
+	 <br/>
+	 Über den Favoritenordner "Internet-Radio" haben Sie Zugriff auf alle hinterlegten Internet-Radiosender.<br/>
+	 <br/>
+  	 TIPP: Im Live-TV-Betrieb können Sie die Aufzeichnungsübersicht
+	 durch Drücken der roten Farbtaste aufrufen.<br />
+	<br />
+    </section>
+    
+	<section name="Media Manager">
+    Sie befinden sich in der Online-Hilfe zum Untermenü "MEDIA MANAGER" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+    Funktionen im Menü "MEDIA MANAGER"<br/>
+	<br/>
+	TV Aufnahmen brennen:<br/> 
+	Funktion zur Erstellung von Video- oder Archiv-DVDs aus vorhandenen TV-Aufzeichnungen.<br />
+    <br />
+	Gelöschte TV Aufnahmen:<br/>
+	Versehentlich gelöschte TV-Aufzeichnungen wiederherstellen (nur möglich, wenn die ReelBox seit dem Löschen nicht neu  gestartet oder in den Standby versetzt wurde).<br/>
+    <br/>
+	 Media Archiv:<br/>
+	 Hier finden Sie verschiedene Funktionen zum einfachen Kopieren/Archivieren von	 Medieninhalten sowie zum Brennen von Video- oder Archiv-DVD. Sie können z.B. den Inhalt von Audio-CDs oder Video-DVDs auf die Festplatte kopieren oder Ihre TV-Aufzeichnungen als Video-DVD brennen.<br/>
+	 <br/>
+	Dateimanager:<br/> 
+	Ermöglicht das Öffnen, Kopieren, Verschieben und Löschen von Dateien, die sich auf einem der internen
+	Laufwerke der ReelBox oder einem angeschlossenen Massenspeicher bzw. verbundenem Netzlaufwerk befinden.<br/>
+	<br/>
+   </section>
+   
+   <section name="EPG Dienste">
+    Sie befinden sich in der Online-Hilfe zum Untermenü "EPG DIENSTE" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+	Die Abkürzung EPG steht für Electronic Program Guide (elektronische Fernsehzeitschrift). Über das EPG der ReelBox stehen zahlreiche Komfortfunktionen, z.B. zur Programmierung von Aufnahme-Timern, zur Verfügung.<br/>
+    <br/>
+	Funktionen im Menü "EPG DIENSTE"<br/>
+	<br/>
+    EPG Standard:<br/>
+	Ruft die Standard EPG-Darstellung der ReelBox auf.<br/>
+	TIPP: Im Live-TV-Betrieb können Sie diese EPG-Ansicht mit der grünen Farbtaste aufrufen.<br/>
+    <br/>
+	EPG Magazin:<br/>
+	Stellt eine alternative Darstellung der EPG-Daten zur Verfügung. In dieser Ansicht ähnelt die Darstellung der Aufbereitung in einer gedruckten Fernsehzeitung.<br/>
+    <br/>
+	EPG International:<br/>
+	Über diese Funktion können die EPG-Daten einiger ausländischer Pay-TV-Anbieter manuell geladen werden. Dazu
+    gehören z.B. Sky Italia, Cyfra+, Canal+, Canal Digitaal, Digital+.<br/>
+    <br/>
+    </section>
+    
+	<section name="Timer Manager">
+    Sie befinden sich in der Online-Hilfe zum Untermenü "TIMER MANAGER" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+	Funktionen im Menü "TIMER MANAGER"<br/>
+	<br/>
+    Timer Manager:<br/>
+	Hier erhalten Sie eine Übersicht über bestehende Aufnahme-Timer. Sie können Timer manuell anlegen sowie bestehende Timer bearbeiten oder löschen.<br/>
+    <br/>
+	Such Timer:<br/>
+	Öffnet die Such-Timer-Übersicht. In dieser Ansicht werden alle vorhandenen Such-Timer angezeigt. Bestehende Such-Timer können bearbeitet, gelöscht, ein- bzw. ausgeschaltet und ausgeführt werden. Zusätzlich können hier neue Such-Timer angelegt werden.<br/>
+	<br/>
+	Timer Zeitleiste:<br/> 
+	Zeigt alle programmierten Timer auf einer Zeitachse an. Bei Timer-Überschneidungen und daraus resultierenden Aufnahmekonflikten wird eine entsprechende Warnung ausgegeben.<br/>
+    <br/>
+	TVTV Dienst:<br/>
+	Hier können Sie festlegen, ob der Dienst "TVTV" für die Fernprogrammierung der ReelBox genutzt werden soll. Falls Sie über das dafür benötigte Benutzerkonto bei "TVTV" verfügen, können Sie hier Ihren Benutzernamen und das dazugehörige Kennwort angeben.<br/>
+    <br/>
+    Ausschalttimer:<br/>
+	Mit dem Ausschalt-Timer kann die ReelBox zu einer benutzerdefinierten Uhrzeit bzw. nach Ablauf einer frei definierbaren Zeitspanne automatisch in den Standby versetzt werden.<br/>
+    <br/>
+</section>
+
+<section name="Webbrowser">
+	Sie befinden sich in der Online-Hilfe zum Untermenü "Webbrowser" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.<br/>
+	<br/>
+	Durch Auswahl der Funktion "Webbrowser" starten Sie den Internet-Browser "Firefox" im halbtransparenten Modus. Bei bestehender Internetverbindung und angeschlossener Tastatur / Maus können Sie so jederzeit bei laufendem Live-TV bequem im Internet surfen.
+</section>
+
+<section name="Einstellungen">
+	Sie befinden sich in der Online-Hilfe zum Untermenü "EINSTELLUNGEN" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+	<br/>
+	Funktionen im Menü "EINSTELLUNGEN"<br/>
+	<br/>
+	OSD Einstellungen:<br/>
+	Hier kann die Darstellung des Bildschirmmenüs (on screen display = OSD)	an Ihre Vorstellungen angepasst werden.<br/>
+	<br/>
+	Spracheinstellungen:<br/>
+	Hier wählen Sie die im OSD verwendete Sprache aus. Über den Punkt "Optionale Sprachen" kann angegeben werden, in welcher Sprache Funktionen dargestellt werden sollen, für die keine Übersetzung in der eingestellten Hauptsprache vorliegt (z.B. bei Verwendung von Drittanbieter-Plugins).<br/>
+	<br/>
+	Zeiteinstellungen:<br/>
+	Hier wählen Sie die passende Zeitzone für den Standort Ihrer ReelBox aus und können	definieren, nach welchem TV-Sender die Systemzeit der ReelBox automatisch gestellt werden soll. Für den Betrieb in Deutschland empfehlen wir den ARD- oder ZDF-Transponder einzustellen.<br/>
+	<br/>
+	Gerätefront:<br/>
+	Hier können Sie Helligkeit und Farbe der Leuchtdioden (LED) an der Gerätefront einstellen. Weiterhin können die Helligkeit des Front-Displays sowie dessen Anzeigeverhalten verändert werden.<br/>
+	<br/>
+	Bildeinstellungen:<br/>
+	Über diesen Menüpunkt können Sie Helligkeit, Kontrast sowie Gamma individuell einstellen.<br/>
+	<br/>
+	Kanäle:<br/>
+	Ruft den Kanallisteneditor auf. Dieser dient dazu, die Kanalliste nach Ihren Vorstellungen zu organisieren. Bestehende Kanäle können bearbeitet, verschoben und gelöscht werden, neue Kanäle können manuell angelegt werden.
+	</section>
+   
+   <section name="Kindersicherung">
+    Sie befinden sich in der Online-Hilfe zum Untermenü "KINDERSICHERUNG" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+	Funktionen im Menü "KINDERSICHERUNG"<br/>
+	<br/>
+    Kindersicherung aktivieren:<br/>
+	Aktiviert die Kindersicherung, alle zuvor definierten Sperrungen treten in Kraft.<br/>
+    <br/>
+    Aktuellen Kanal sperren:<br/>
+	Durch Aktivieren dieser Funktion wird der aktuell aktive Kanal in die Liste "Gesperrte Kanäle" aufgenommen.<br/>
+    <br/>
+    Aktuelle Sendung sperren:<br/>
+	Durch Aktivieren dieser Funktion wird die aktuell laufende Sendung in die Liste "Gesperrte Sendungen" aufgenommen.<br/>
+    <br/>
+    Gesperrte Kanäle bearbeiten:<br/>
+	Öffnet die Liste "Gesperrte Kanäle". Dort können Kanalsperrungen bearbeitet, hinzugefügt, gelöscht und ein- bzw. ausgeschaltet werden.<br/>
+    <br/>
+    Gesperrte Sendungen bearbeiten:<br/>
+	Öffnet die Liste "Gesperrte Sendungen". Dort können Sperrungen einzelner Sendungen bearbeitet, hinzugefügt, gelöscht und ein- bzw. ausgeschaltet werden.<br/>
+    <br/>
+    Systemeinstellungen bearbeiten:<br/>
+	Öffnet eine Liste mit allen Konfigurationsoptionen der ReelBox. Der Zugang zu den Setup-Optionen kann hier separat gesperrt werden um unbefugte Änderungen in bestimmten Menüs der Systemkonfiguration zu unterbinden.<br/>
+    <br/>
+    Setup sperren:<br/>
+	Sperrt den Zugang zum gesamten Setup-Menü um unbefugte Änderungen im kompletten Setup zu verhindern.<br/>
+    <br/>
+	HINWEIS:<br/>
+	Damit die Sperrung der ausgewählten Kanäle und Sendungen in Kraft tritt, muß
+    nach Anlegen der Sperrlisten die Kindersicherung über den Punkt "Kindersicherung
+    aktivieren" eingeschaltet werden. Beim ersten Aktivieren der Funktion werden Sie
+	aufgefordert, eine 4-stellige PIN festzulegen.<br/>
+    <br/>
+	</section>
+    
+	<section name="Extras / Sonstiges">
+    Sie befinden sich in der Online-Hilfe zum Untermenü "EXTRAS / SONSTIGES" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+	Funktionen im Menü "EXTRAS / SONSTIGES"<br/>
+	<br/>
+    Reelblog:<br/>
+	Zeigt wichtige und interessante Neuigkeiten zu Ihrer ReelBox. Eine Online-Verbindung ist hierfür notwendig.<br/>
+    <br/>
+	Multifeed Optionen:<br/>
+	Aktiviert die Multifeed-Option für Premiere-Kanäle. Multifeed wird z.B. im Premiere Direkt-Bouquet verwendet. Beim Öffnen des Premiere Direkt-Portals wird das Multifeed-Menü automatisch aufgerufen. Mittels der Pfeil-Tasten der Fernbedienung kann zwischen den Multifeed-Angeboten gewählt werden.<br/>
+    <br/>
+    Videotext:<br/>
+	Ruft den Teletext (auch als Videotext bezeichnet) für den aktiven Kanal auf. Bitte beachten Sie, daß nicht jeder Sender Teletext überträgt.<br/>
+    <br/>
+    Spiele:<br/>
+	Hier finden Sie einige kurzweilige Spieleklassiker, die mit der Fernbedienung gespielt werden können. Enthalten
+    sind die Spiele Tetris, Tron, Snake, TicTacToe und Minesweeper.<br/>
+    <br/>
+	Media Streaming:<br/>
+	Hier können Sie den Live-TV-Betrieb pausieren, um alle in der ReelBox verbauten Tuner für das Netzwerk-Streaming verwenden zu können.<br/>
+	VideoLAN-Client: Über diese Funktion kann die ReelBox als Streaming-Client verwendet werden. Dazu wird ein PC, auf dem die Software Video LAN Client (VLC) läuft, benötigt. Die vom PC über den VLC ins Netzwerk übertragenen Audio-/Videodaten können dann von der ReelBox wiedergegeben werden.<br/>
+	<br/>
+    </section>
+    
+	<section name="ReelEPG Magazin-Anzeige (SD)">
+    Sie befinden sich in der Online-Hilfe zum ReelEPG.<br/>
+    Folgende Tasten können zur Navigation bzw. zur Anpassung der Darstellung verwendet werden:<br/>
+    Taste 1..3 : Zeigt zwei, drei oder vier Sender an.<br/>
+    Taste 4..6 : Zeigt ein, zwei oder drei Stunden an.<br/>
+    Taste 7,9 : Springt 24 Stunden zurück, bzw. vor.<br/>
+    Taste 8 : Springt zur aktuellen Zeit.<br/>
+    Taste 0 : Springt zur aktuellen Sendung.<br/>
+    Taste &lt;&lt;,&gt;&gt;: Spring zur vorherigen, bzw. nächsten Senderblock.<br/>
+    Taste &gt; : Wechselt zur Timeline-Ansicht.<br/>
+    Taste OK : Schaltet zum ausgewählten Sender.<br/>
+    Taste Exit : Beendet die Anzeige.<br/>
+    Mit den Navigationstasten rund um die OK Taste können Sie die einzelnen Sendungen auswählen.<br/>
+    </section>
+    <section name="ReelEPG Magazin-Anzeige (HD 720)">
+    Sie befinden sich in der Online-Hilfe zum ReelEPG.<br/>
+    Folgende Tasten können Sie zur Navigation verwenden:<br/>
+    Taste 1..3 : Zeigt drei, vier oder fünf Sender an.<br/>
+    Taste 4..6 : Zeigt 90, 180 oder 270 Minuten an.<br/>
+    Taste 7,9 : Springt 24 Stunden zurück, bzw. vor.<br/>
+    Taste 8 : Springt zur aktuellen Zeit.<br/>
+    Taste 0 : Springt zur aktuellen Sendung.<br/>
+    Taste &lt;&lt;,&gt;&gt;: Springt zum vorherigen bzw. nächsten Senderblock.<br/>
+    Taste &gt; : Wechselt zur Timeline-Ansicht.<br/>
+    Taste OK : Schaltet zum ausgewählten Sender.<br/>
+    Taste Exit : Beendet die Anzeige.<br/>
+    Mit den Navigationstasten rund um die OK Taste können Sie die einzelnen Sendungen auswählen.<br/>
+    </section>
+    <section name="ReelEPG Magazin-Anzeige (HD 1080)">
+    Sie befinden sich in der Online-Hilfe zum ReelEPG.<br/>
+    Folgende Tasten können Sie zur Navigation verwenden:<br/>
+    Taste 1..3 : Zeigt vier, fünf oder sechs Sender an.<br/>
+    Taste 4..6 : Zeigt zwei, vier oder sechs Stunden an.<br/>
+    Taste 7,9 : Springt 24 Stunden zurück, bzw. vor.<br/>
+    Taste 8 : Springt zur aktuellen Zeit.<br/>
+    Taste 0 : Springt zur aktuellen Sendung.<br/>
+    Taste &lt;&lt;,&gt;&gt;: Springt zum vorherigen bzw. nächsten Senderblock.<br/>
+    Taste &gt; : Wechselt zur Timeline-Ansicht.<br/>
+    Taste OK : Schaltet zum ausgewählten Sender.<br/>
+    Taste Exit : Beendet die Anzeige.<br/>
+    Mit den Navigationstasten rund um die OK Taste können Sie die einzelnen Sendungen auswählen.<br/>
+    </section>
+   <section name="ReelEPG Timeline-Anzeige (SD)">
+    Sie befinden sich in der Online-Hilfe zum ReelEPG.<br/>
+    Folgende Tasten können Sie zur Navigation verwenden:<br/>
+    Taste 1..3 : Zeigt 90, 180 oder 270 Minuten an.<br/>
+    Taste 4..6 : Zeigt Sendungen ein-, zwei- oder dreizeilig an.<br/>
+    Taste 7,9 : Springt 24 Stunden zurück bzw. vor.<br/>
+    Taste 8 : Springt zur aktuellen Zeit.<br/>
+    Taste 0 : Springt zur aktuellen Sendung.<br/>
+    Taste &lt;&lt;,&gt;&gt;: Springt zum vorherigen bzw. nächsten Senderblock.<br/>
+    Taste &gt; : Wechselt zur Magazin-Ansicht.<br/>
+    Taste OK : Schaltet zum ausgewählten Sender.<br/>
+    Taste Exit : Beendet die Anzeige.<br/>
+    Mit den Navigationstasten rund um die OK Taste können Sie die einzelnen Sendungen auswählen.<br/>
+    </section>
+    <section name="ReelEPG Timeline-Anzeige (HD 720)">
+    Sie befinden sich in der Online-Hilfe zum ReelEPG.<br/>
+    Folgende Tasten können Sie zur Navigation verwenden:<br/>
+    Taste 1..3 : Zeigt 120, 270, oder 420 Minuten an.<br/>
+    Taste 4..6 : Zeigt Sendungen ein-, zwei- oder dreizeilig an.<br/>
+    Taste 7,9 : Springt 24 Stunden zurück, bzw. vor.<br/>
+    Taste 8 : Springt zur aktuellen Zeit.<br/>
+    Taste 0 : Springt zur aktuellen Sendung.<br/>
+    Taste &lt;&lt;,&gt;&gt;: Springt zum vorherigen bzw. nächsten Senderblock.<br/>
+    Taste &gt; : Wechselt zur Magazin-Ansicht.<br/>
+    Taste OK : Schaltet zum ausgewählten Sender.<br/>
+    Taste Exit : Beendet die Anzeige.<br/>
+    Mit den Navigationstasten rund um die OK Taste können Sie die einzelnen Sendungen auswählen.<br/>
+    </section>
+    <section name="ReelEPG Timeline-Anzeige (HD 1080)">
+    Sie befinden sich in der Online-Hilfe zum ReelEPG.<br/>
+    Folgende Tasten können Sie zur Navigation verwenden:<br/>
+    Taste 1..3 : Zeigt 180, 360 oder 540 Minuten an.<br/>
+    Taste 4..6 : Zeigt Sendungen ein-, zwei- oder dreizeilig an.<br/>
+    Taste 7,9 : Springt 24 Stunden zurück bzw. vor.<br/>
+    Taste 8 : Springt zur aktuellen Zeit.<br/>
+    Taste 0 : Springt zur aktuellen Sendung.<br/>
+    Taste &lt;&lt;,&gt;&gt;: Springt zum vorherigen bzw. nächsten Senderblock.<br/>
+    Taste &gt; : Wechselt zur Magazin-Ansicht.<br/>
+    Taste OK : Schaltet zum ausgewählten Sender.<br/>
+    Taste Exit : Beendet die Anzeige.<br/>
+    Mit den Navigationstasten rund um die OK Taste können Sie die einzelnen Sendungen auswählen.<br/>
+    </section>
+
+<section name="Setup">
+		Sie befinden sich im der Online-Hilfe zum Menü "SETUP" der ReelBox Avantgarde. Hier können Sie alle wichtigen Systemeinstellungen	bearbeiten, um die ReelBox optimal an Ihre Anforderungen anzupassen.
+		<br/>
+		Das Setup gliedert sich in Untermenüs, welche thematisch zusammengehörige Einstellungsdialoge enthalten.<br/>
+		<br/>
+   		Nutzen Sie die Pfeil-links- und Pfeil-rechts-Tasten, um den Text nach oben bzw. unten zu verschieben. Das beim Aufruf der Online-Hilfe angezeigte Kapitel bezieht sich immer auf das Menü bzw. Untermenü in dem Sie sich gerade befinden.<br/>
+   		<br/>
+		Im Menü "SETUP" enthaltene Untermenüs und deren Einstellungsdialoge:<br/>
+		<br/>
+		1 INSTALLATION<br/>
+		- 1 Kanalsuche<br/>
+		- 2 Kanallisten<br/>
+		- 3 Softwareupdate<br/>
+		- 4 NetCeiver / DiSEqC<br/>
+		- 5 Installationsassistent<br/>
+		- 6 Fernsteuerung<br/>
+		- Stromsparmodus, Medium auswerfen bei Ausschalten<br/>
+		<br/>
+		2 NETZWERK<br/>
+		- 1 Ethernet<br/>
+		- 2 Wireless LAN<br/>
+		- 3 UMTS<br/>
+		- 4 Globale Einstellungen<br/>
+		- 5 Netzwerkverbindungen<br/>
+		<br/>
+		3 AUDIO - VIDEO<br/>
+		- Videoausgang, Bildseitenverhältnis, Bildschirmauflösung<br/>
+		<br/>
+		4 VIDEOREKORDER<br/>
+		- 1 Permanentes Timeshift<br/>
+		- 2 Aufnahmeeinstellungen<br/>
+		- 3 Wiedergabeeinstellungen<br/>
+		- 4 Festplatte/Medienlaufwerk<br/>
+		- Werbung automatisch markieren<br/>
+		<br/>
+		5 HINTERGRUNDAKTIONEN<br/>
+		- Zeit bis zur EPG-Aktualisierung, Brückenzeit zwischen Timern, VDR ausschalten bei Inaktivität, Netzschalterverhalten, Midestzeit für Kanalhistorie, Kanäle aktualisieren, Kanal beim Einschalten, Lautstärke beim Einschalten<br/>
+		<br/>
+		6 COMMON INTERFACE<br/>
+		- Oberer Steckplatz, Unterer Steckplatz<br/>
+		<br/>
+		7 SYSTEMEINSTELLUNGEN<br/>
+		Hier kann das Standard-Verhalten der jeweiligen Systemkomponente im Detail konfiguriert werden. Da die Werkseinstellungen für die meisten Anwender sinnvoll sind, sollten nur erfahrene Nutzer hier Änderungen vornehmen.<br/>
+		<br/>
+		- 1 Display - LCD<br/>
+		- 2 TV-Aufnahmen<br/>
+		- 3 Bildbetrachter<br/>
+		- 4 EPG Standard<br/>
+		- 5 TV-Aufnahmen brennen<br/>
+		- 6 DVD kopieren<br/>
+		- 7 Signalinformationen<br/>
+		- 8 Streaming Client<br/>
+		- 9 Live-TV pausieren<br/>
+		- 10 Spiele<br/>
+		- 11 Multifeed Optionen<br/>
+		- 12 Videotext<br/>
+		- 13 CD/DVD abspielen<br/>
+		- 14 Premiere EPG<br/>
+		- 15 Kindersicherung<br/>
+		- 16 VideoLAN-Client<br/>
+		- 17 RDS-Radiotext<br/>
+		- 18 AudioCD kopieren<br/>
+		- 19 ReelNG Skin<br/>
+		- 20 Web Browser<br/>
+		<br/>
+		8 SYSTEMINFORMATION<br/>
+		- Detaillierte Angaben zu: Gerätetyp, Softwareversion, Softwaredatum, Tunerkonfiguration, Arbeitsspeicher, Laufwerken, CPU- & System-Temperatur, Netzwerkinformationen, Signalinformationen, NetCeiver-Informationen;<br/>
+</section>
+
+<section name="Installation">
+Sie befinden sich in der Online-Hilfe zum Untermenü "INSTALLATION" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+	Funktionen im Menü "INSTALLATION"<br/>
+	<br/>
+	1 Kanalsuche:<br/>
+	Hier können Sie einen manuellen oder automatischen Suchlauf nach TV- und Radiosendern durchführen. Bitte beachten Sie, falls Sie TV per Kabel empfangen, daß der Parameter "Symbolrate" vor dem Scan von "Intelligent" auf "versuche alle" umgestellt werden muß. Dies ist leider notwendig geworden, da sowohl regionale als auch überregionale Kabelnetzbetreiber umfangreiche Frequenzverschiebungen in ihren Netzen vorgenommen haben.<br/>
+	<br/>
+	2 Kanallisten:<br/>
+	In diesem Menüpunkt können Sie eine vorgefertigte Kanalliste für Ihre Empfangsart (Cable = DVB-C, Mixed-Config = verschiedene DVB-Tuner im Gerät, Satellite = DVB-S(2), Terrestrial = DVB-T)  auswählen und aktivieren. Alternativ können Sie eine neue, leere Kanalliste anlegen. Über die blaue Schaltfläche "Funktionen" können Kanallisten auf ein Speichermedium, z.B. einen USB-Stick, exportiert werden. Ebenso können Kanallisten von Speichergeräten auf die ReelBox importiert werden.<br/>
+	<br/>
+	3 Software-Update:<br/>
+	- 1 Softwareupdate - CD: Update-Vorgang einzelner Pakete von DVD einleiten;<br/>
+	- 2 Softwareupdate - Online: Update-Vorgang über Internet einleiten;<br/>
+	- Über neue Updates informieren: Automatische Benachrichtigung bei Update-Verfügbarkeit;<br/>
+	<br/>
+	TIPP: Falls Sie ein komplettes Update von DVD starten möchten (Factory- oder Recovery-DVD), legen Sie die entsprechende DVD in das DVD-Laufwerk der ReelBox und führen Sie einen Neustart durch. Eine Factory- oder Recovery-DVD kann NICHT über dieses Menü installiert werden!<br/>
+	<br/>
+	4 NetCeiver/DiSEqC:<br/>
+	Hier konfigurieren Sie ihre Antenneneinstellungen (bei Satellitenempfang). Außerdem können Sie genauere Informationen zu den DVB-Tunern und der Softwareversion des NetCeivers anzeigen lassen (blaue Schaltfläche "Expertenmenü").<br/>
+	<br/>
+	5 Installationsassistent:<br/>
+	Der Installationsassistent wird automatisch bei der Erstinbetriebnahme der ReelBox gestartet. Sie werden in wenigen, einfachen Schritten durch die Grundkonfiguration der ReelBox geführt. Selbstverständlich kann der Installationsassistent jederzeit wieder aufgerufen werden.<br/>
+	<br/>
+	6 Fernsteuerung:<br/>
+	Hier kann ausgewählt werden, ob die ReelBox über die Protokolle RS-232 bzw. UPD ferngesteuert werden kann. Diese Funktionalität wird z.B. benötigt, um die ReelBox in eine Hausautomation einzubinden. Mehr Informationen hierzu erhalten Sie auf unseren Internet-Seiten sowie im Reel Multimedia Support-Forum.<br/>
+	<br/>
+	- Stromsparmodus:<br/>
+	Schalten Sie den Parameter "Stromsparmodus" auf "Ja", damit die ReelBox nach der eingestellten Zeit der Inaktivität (z.B. keine Benutzereingaben durch die Fernbedienung) automatisch in den DeepStandby-Modus (Stromsparmodus) wechselt. Die Dauer der benötigten Inaktivität stellen Sie (in Stunden) unter dem Parameter "Stromsparmodus nach (h)" ein.<br/>
+	<br/>
+	TIPP: Beachten Sie bitte, daß die ReelBox im Stromsparmodus nicht mehr über das Netzwerk erreichbar ist und somit z.B. nicht auf die gespeicherten Aufnahmen zugegriffen werden kann. Damit die ReelBox bei Zugriffen über Netzwerk dennoch "aufwacht", aktivieren Sie bitte unter "SETUP->NETZWERK" den Parameter "Wake-on-LAN" zulassen.<br/>
+	<br/>
+	- Medium auswerfen b. Ausschalten:<br/>
+	Hier kann eingestellt werden, ob eine im DVD-Laufwerk befindliche DVD beim Herunterfahren der ReelBox automatisch ausgeworfen werden soll.<br/>
+	<br/>
+	- Bluetooth abschalten:<br/>
+	Hier kann ein (im Lieferumfang nicht enthaltenes) Bluetooth-Modul ein- bzw. ausgeschaltet werden.
+</section>
+
+<section name="Netzwerk">
+	Sie befinden sich in der Online-Hilfe zum Untermenü "NETZWERK" der ReelBox. Bitte verwenden Sie die Pfeil-links- bzw. Pfeil-rechts-Taste, um den Hilfetext nach oben oder unten zu verschieben.
+    <br/>
+	Funktionen im Menü "NETZWERK"<br/>
+	<br/>
+	1 Ethernet:<br/>
+	Hier können die Netzwerkanschlüsse der ReelBox ein bzw. ausgeschaltet werden.<br/>
+	<br/>
+	2 Wireless LAN:<br/>
+	- WLAN aktivieren: Ein- bzw. Ausschalten einer (nicht im Lieferumfang enthaltenen) WLAN-Karte;<br/>
+	- IP Adresse: Manuelle Eingabemöglichkeit für die IP-Adresse der ReelBox im Netzwerk;<br/>
+	- Netzwerkmaske: Einstellen der im Netzwerk verwendeten Netzwerkmaske;<br/>
+	- DHCP benutzen: Ein- bzw. Ausschalten von DHCP. DHCP wird im Netzwerk genutzt, um angeschlossenen Geräten automatisch eine IP-Adresse zuzuteilen. Fast alle Router und Access-Points bieten die IP-Vergabe über DHCP an.<br/>
+	- Modus: Auswahl der im Funknetzwerk verwendeten Verschlüsselungsmethode.<br/>
+	<br/>
+	WEP Einstellungen:<br/>
+	- (E)SSID: Name Ihres drahtlosen Netzwerks;<br/>
+	- Modus: Verwenden Sie "ad-hoc" für die direkte Verbindung von der ReelBox zu einem PC. Verwenden Sie "managed", um die ReelBox mit einem WLAN-Router bzw. Access-Point zu nutzen.<br/>
+	- Sicherheit: Verwenden Sie "open" für eine unverschlüsselte Verbindung (nicht empfohlen) oder "restricted" für eine gesicherte Verbindung.<br/>
+	- Benutze WEP Schlüssel: Einstellen, welcher WEP-Schlüssel verwendet werden soll.<br/>
+	- WEP Schlüssel 1-4: Hier können bis zu vier unterschiedliche WEP-Schlüssel angelegt werden.<br/><br/>
+	WPA Einstellungen:<br/>
+	- WPA (E)SSID: Name Ihres drahtlosen Netzwerks;<br/>
+	- Suche SSID: Automatische Suche nach in Reichweite befindlichen Funknetzwerken;<br/>
+	- EAPOL Version: - ???<br/>
+	- AP SCAN: ???<br/>
+	- Key MGMT: Keymanagement Modus (WPA-PSK)<br/>
+	- Protokoll: WPA/RSN<br/>
+	- Paarweise: TKIP/CCMP<br/>
+	- Gruppe: TKIP/CCMP<br/>
+	- PSK (Passphrase): Angabe der im Funknetzwerk zur Verschlüsselung verwendeten Passphrase.<br/>
+	  <br/>
+	  3 UMTS:<br/>
+	  - UMTS benutzen: Ein- oder Ausschalten einer UMTS-Verbindung (schneller Internet-Zugang per Mobilfunk, nicht im Lieferumfang enthalten);<br/>
+	  <br/>
+	  4 Globale Einstellungen:<br/>
+	  - Hostname: Angabe des im Netzwerk verwendeten Namens der ReelBox;<br/>
+	  - Domain: Angabe einer eventuell vorhandenen Windows-Domäne;<br/>
+	  - Gateway: Angabe der IP-Adresse des Internet-Gateways im lokalen Netzwerk;<br/>
+	  - Nameserver: Angabe der IP-Adresse des DNS-Servers im lokalen Netzwerk;<br/>
+	  - Proxy nutzen: Ein- bzw. Ausschalten eines eventuell zu verwendenen Proxyservers;<br/>
+	  - Wake-on-LAN zulassen: Definiert, ob die ReelBox per Netzwerk aus dem Standby aktiviert werden kann.<br/>
+	  - Festplatte für Windows freigeben: Definiert, ob die Festplatte für Windows-PCs im lokalen Netzwerk freigegeben werden soll.<br/>
+	  - Arbeitsgruppe: Angabe des Namens einer eventuell genutzten Windows-Arbeitsgruppe;<br/>
+	  - UPnP Dienst einschalten: Definiert, ob der Dienst für Universal Plug and Play (UPnP) genutzt werden soll. Über UPnP können im Netzwerk vorhandene Multimediageräte und PCs Informationen austauschen (z.B. Anbieten von Medienbibliotheken für andere Geräte im lokalen Netzwerk).<br/>
+	  <br/>
+	  1 DNS Dienste:<br/>
+	  - GnuDIP service: Ein- bzw. Ausschalten des Dienstes GnuDIP (Dynamischer DNS-Dienst);<br/>
+	  - DynDNS service: Ein- bzw. Ausschalten des Dienstes DynDNS (Dynamischer DNS-Dienst);<br/>
+	  <br/> 
+	  2 Netzwerkverbindungen manuell einrichten:<br/>
+	  
+	  
+	   2 NFS Anbindung<br/>
+	   NFS Anbindung - hier starten/stoppen Sie den Zugriff auf entfernte Rechner via NFS<br/>
+	   Rechnername/IP - geben Sie hier die IP des Servers an, der die freigegenbenen Dateien bereithält<br/>
+	   Freigabename - geben Sie hier den Freigabepfad an.<br/>
+	   1 Experteneinstellungen<br/>
+	   NFS Version - geben Sie die verwendete NFS Version an<br/>
+	   Protokoll - wählen Sie die Art der Übertragung<br/>
+	   Schreibzugriff zulassen - Schreibschutz für die Freigabe<br/>
+	   hard/soft mounten - ???<br/>
+	   locking benutzen - verhindert gleichzeitige Änderungen an einer Datei um inkonsistenzen zu vermeiden.<br/>
+	   Puffergröße - Größe des Übertragungspuffer in kb<br/>
+	   3 Windows Netzwerk Anbindung<br/>
+	   Windowsfreigabe - hier können Sie den Zugriff auf die Dateien der ReelBox über das Windows Netzwerk erlauben/verbieten.<br/>
+	   Arbeitsgruppe - Name der ReelBox Arbeitsgruppe<br/>
+	   <br/>
+	   Windows Anbindung - hier starten/stopen Sie die Anbindung von Freigaben entfernter Rechner.<br/>
+	   Windows Rechner - hier tragen Sie die IP Adresse des Rechners ein, der die Freigabe zur Verfügung stellt.<br/>
+	   Freigabename - der Name der auf dem entfernten Rechner vorhandenen Freigabe.<br/>
+	   Benutzername - Nutzer, welcher auf dem Rechner der die zu verwendende Freigabe beherbergt angelgt ist, und entsprechende<br/> Zugriffsrechte auf die Freigabe hat.<br/>
+	   Passwort - entsprechendes Passwort des Nutzers<br/>
+	   Verzeichnis DVD Archiv - angezeigter Name des DVD Archivs<br/>
+	   <br/>
+	   4 GnuDIP Dienst<br/>
+	   GnuDIP nutzen - hier starten/stoppen Sie den dynamischen Nameservereintrag<br/>
+	   Benutzername - der auf GnuDIP verwendete Benutzername<br/>
+	   Passwort - das duzugehörige Passwort<br/>
+	   GnuDIP Domain - Ihr eingetragener Domainname bei GnuDIP<br/>
+	   GnuDIP Server - hier tragen Sie den zuständigen Server für Ihre Domain von GnuDIP ein<br/>
+	   <br/>
+	   5 DynDNS Dienst <br/>
+	   DynDNS nutzen - hier starten/stoppen Sie den dynamischen Nameservereintrag<br/>
+	   Benutzername - der auf DynDNS verwendete Benutzername<br/>
+	   Passwort - das duzugehörige Passwort<br/>
+	   DynDNS Rechnername - der Name Ihres Domaineintrags auf DynDNS<br/>
+	   <br/>
+</section>
+
+<section name="Einstellungen">
+	Hier führen Sie die Konfiguratin der Audio und Video Parameter durch,
+	je nachdem wie Sie Ihre Geräte konnektiert haben.<br/><br/>
+
+	VIDEOEINSTELLUNGEN<br/><br/>
+
+	- Digitaler Modus: HDMI/DVI je nachdem wie Ihr TV Gerät angeschlossen ist, wählen Sie bitte für eine korrekte Farbdarstellung den entsprechenden Anschluß des TV Gerätes
+	- Analoger Modus: Aus/Automatisch/YUV/RGB/YC sollten Sie ein analoges TV Gerät bertreiben, können Sie hier einstellen auf welchemAnschluß das Video-Signal ausgegeben werden soll.<br/>
+	- Bildseitenverhältnis: 4:3/16:9 je nachdem welches Bild-Seitenverhältnis Ihr T"V Gerät darstellt <br/>
+	- Seitenverhältnis: Beibehalten/Zoom/Bildschirmfüllend Um auch bei Sendungen mit differirendem Seitenverhältnis eine Formatrichtige Darstellung zu erhalten,
+	können Sie diese entsprechend den Vorgaben beeinflussen.<br/>
+	- Auflösung: 480/576/720/1080 stellen Sie hier die von Ihrem TV Gerät unterstützte Auflösung ein. Bitte beachten Sie, dass bei Ausgabe über YC/SCART eine maximale Zeilenzahl von 576 möglich ist. Höhere Auflösungen können über die benannten Anschlüße nicht ausgegeben werden.<br/>
+	- TV-Norm: 50/60 Hz inder Regel sollte hier 50Hz (PAL-Norm) Verwendung finden. Eine vom TV Gerät nicht unterstützte Nor, kann zu starken Beeinträchtigungen der Bildqualität führen.<br/>
+	-Progressive/Interlaced: Progressive/Interlaced je nachdem welche modi Ihr TV Gerät unterstützt, aktivieren Sie hier den entsprechenden Modus. Bitte beachten Sie, dass die Ausgabe über SCART generell interlaced erfolgen muß.<br/><br/>
+
+	OSD Skallierung: Bildschirmfüllend/Punkt-für-Punkt je nach Größe Ihres TV Gerätes und der gewählten Auflösung kann es notwendig sein,
+	um einwandfreie Lesbarkeit des OSDs sicherzustellen, diesen entsprechend anzupassen.<br/><br/>
+
+	AUDIOEINSTELLUNGEN<br/><br/>
+
+	Drücken Sie bitte die rote A Taste auf Ihrer Fernbedienung um die Audio-Eigenschaften einzustellen.<br/><br/>
+
+	DolbyDigital-dts: Ja/Nein Wenn Sie digitalen Ton verwenden möchten, stellen Sie den Parameter entsprechend auf 'ja' und wählen Sie dann die Art der Ausgabe unter 'Ausgeben als'. Bitte beachten Sie, wenn ein TV via HDMI angeschlossen wurde, der keinen digitalen 5.1 dts Ton verabeiten kann, ist es möglich, dass Sie ein stakkatoartiges Störgeräusch aus den Lautsprechern des TV gerätes erhalten. In diesem Fall kann Ihr Bildschirm leider nciht die dts Signale verarbeiten und Sie müßen wieder unter 'Ausgeben als' Stereo (PCM) als Ausgabeform wählen oder den Ton über Ihren AV-Receiver verarbeiten lassen.<br/>
+	-Verzögerung DD/dts: Dies dient zum Ausgleich der Verabeitungsgeschwindigkeit eines angeschlossenen AV-Receivers. Da jedes Modell auf dem Markt Signale unterschiedlich schnell verarbeitet, bietet Ihnen die ReelBox Avantgarde die Möglichkeit, die Bild-Ton Syncronität perfekt abzugleichen und somit immer perfekten TV Ton zu erleben.<br/>
+	- Analog Audio an: HDMI/SCART/Cinch / Klinke3.5 hiermit wählen Sie, auf welchem Wege der TV Ton ausgegeben wird. Entweder via HDMI/Scart oder Cinch, bzw. über die auf der Rückseite befindlichen 3.5 Stereo Klinkenbuchsen, an die Sie dann Aktiv-Lautsprecherboxen konnektieren können.<br/>
+	- Analog Mix: Aus/An hier wähöen Sie aus, ob der Ton, welcher über das Motherboard (den PC Part der ReelBox) erzeugt wird, nur über die klingenbuchsen ausgegeben wird, oder ob dieser in zu dem TV Ton zugemischt wird, so dass Sie beid Soundquellen über den TV bzw. AV-Receiver hören können.<br/>
+	- Verzögerung Stereo ebenso wie bei der dts Ausgabe, können Sie die Verzögerung für analoge Tonsignale auf Ihren AV-Receiver anpassen.<br/>
+</section>
+
+<section name="Video Recorder">
+	Hier stellen Sie alles, rund um die Aufzeichnungspartition und das Aufnehmen/Wiedergeben der Medien ein.<br/><br/>
+</section>
+
+<section name="Aufnahme">
+	Aufnahmeeinstellungen<br/><br/>
+	- Digitalen Ton Aufnehmen: Ja/nein Einstellung ob digitaler Ton aufgenommen und verwendet werden soll.<br/>
+	- Zeitpuffer Anfang/Ende in Minuten: Um auch bei ungeplanten Programmverscheibungen nicht Teile der Aufnahme zu verpassen, können Sie hier die default Zeit einstellen, die ein programmierter Timer vor und nach der eigentlichen Sendung zusätzlich aufnehmen soll.<br/>
+	- Standard Priorität: Hier stellen Sie ion 3 möglichen Stufen ein, welche Priorität eine Aufnahme ohne Änderung erhalten  soll. Dies wird dann wichtig, wenn mehrere Aufnahmeeinträge (Timer) gleichzeitig mehr Transponder/Frequenzbänder beanspruchen würden, als Tuner im System verfügbar sind.<br/>
+	- Standard Lebensdauer: Legen Sie fest, wie lange eine Aufnahme auf der ReelBox (oder dem entsprechenden Speichermedium) vorgehalten werden soll.<br/>
+	- VPS nutzen: Auf Sendern die ein VPS Signal anbieten, wird dieses automatisch bei der Erstellung von Timern berücksichtigt und verwendet. Lieder wird diese Technik derzeit nur von den öffentlich-rechtlichen Sendern unterstützt.<br/>
+	- Direktaufzeichnung markieren: Hier können Sie festlegen, ob Sendungen die per Direktaufzeichnung getätigt wurden, besonders gekennzeichnet werden sollen. Dies kann bei umfangreichen Aufnahmebeständen hilfreich sein, um direkt optisch zu identifizieren, wo u.U. noch ein Schnitt durchgeführt werden sollte.<br/>
+	- Priorität der Direktaufzeichnung: vergl.standard Priorität.<br/>
+	- Editierte Dateien aufteilen: Um Dateien nicht zu groß für Windows Filesysteme werden zu lassen, können Sie hier die Dateien in passende 'Stücke' aufteilen lassen um so diese auch auf entsprechende Filesystem kopieren zu können.<br/>
+</section>
+
+<section name="NFS Anbindung">
+Hier starten/stoppen Sie die Anbindung weiterer Freigaben via NFS (Network File System) an die ReelBox Avantgarde.
+In der Regel wird dies bevorzugt verwendet, um performantere zugriffe zu ermöglichen, da NFS weniger Protokoll-Overhead mit sich bringt als die Anbindung per SMB (Samba/WindowsNetzwerk).<br/><br/><br/>
+
+Linux bringt dieses Protokoll und entsprechende Server direkt mit, auch auf der ReelBox Avantgarde ist der Zugriff via NFS direkt ohne weitere Konfiguration möglich. Für Windows sind uns leider keine kostenfreien NFS-Server bekannt, so dass diese Art der Anbindung entfernter Systeme primär im Linux Umfeld Sinn macht.<br/><br/>
+
+Sie gehen wie folgt vor:<br/><br/>
+
+NFS Anbindung ja/nein - hiermit starten/stoppen Sie die Anbindung der Quelle per NFS<br/>
+Rechnername/IP - geben Sie den Namen oder die IP  des Rechners ein, der die Freigabe bereithält<br/>
+Freigabename - Der Export-Pfad des freigegebenen Rechners<br/>
+</section>
+
+<section name="Experteneinstellungen">
+	Bitte führen Sie in diesem Bereich nur dann Änderungen durch, wenn diese zwingend notwendig sind um die Funktion zu gewährleisten. Anderweitige 'Optimierungen' sind in diesem Menü nicht möglich.<br/>
+
+</section>
+
+<section name="Ethernet">
+	Stellen Sie hier die IP Daten direkt ein, oder aktivieren Sie die Verwendung von DHCP, um automatisch<br/>
+	eine IP Adresse zu erhalten, sofern Ihr Router dies unterstützt.<br/>
+	Verwenden SIe hierzu den oberen Ethernetanschluß (eth1).<br/><br/>
+	Wenn Sie 'NetCeiver Bridge' aktivieren, stellen Sie die Tuner Ihrer Avantgarde auch anderen Nutzern Ihres LANs zur Belegung zur Verfügung.<br/> Damit ist es dann z.B. möglich, bei mehreren NetCeivern im LAN, diese transparent an allen vorhandenen Clients zu nutzen.
+	Durch die Wahl des Parameters Ethernet1/Ethernet2 geben Sie an, wo (auf welchem der beiden Netzwerkports) der vom NetCeiver erzeugte Tunerstream weitergeleitet werden soll. In der Regel ist hier Ehternet1 zu wählen.<br/>
+</section>
+
+<section name="Wireless LAN">
+	WLAN aktivieren - hier staten/stopen Sie die Verwendung des WLAN.<br/>
+	IP Adresse - geben Sie hier die zu verwendene IP Adresse der ReelBox im WLAN an<br/>
+	Netzwerkmaske - geben Sie hier die Netzwerkmaske Ihres Netzwerkes an<br/>
+	DHCP benutzen - sofern Ihr WLAN-Router DHCP unterstützt, können Sie es hier aktivieren.<br/>
+	Modus - geben Sie hier die Art der Verschlüsselung Ihres WLANs an.<br/><br/>
+	Verwenden Sie bitte nach Möglichkeit die WPA Verschlüsselung, da WEP keinen ausreichenden Schutz bieten kann.<br/><br/>
+	Um eine WLAN Karte Initial Einzurichten, setzten Sie zuerst die entsprechende Mini-PCI-Express WLAN-Steckkarte unten an der Avantgarde ein und konnektieren Sie den in der ReelBox befindlichen Antennenanschluß an den Konnektor der Karte, der mit MAIN beschriftet ist.<br/>
+	Nun deaktivieren Sie (NUR temporär zum Test) die Verschlüsselung und schalten den Parameter 'DHCP benutzen' auf 'ja', damit sich die ReelBox direkt beim starten mit Ihrem WLAN-Router in Verbindung setzt und eine Netzwerkaddresse Ihres LANs erhält. Den Erfolg derAktion sollten Sie dann direkt in Ihrem WLAN-Router kontrollieren, da dort nach erfolgreicher Erteilung einer IP an die WLAN-Karte deren MAC (Hardwareadresse, zu finden auf der Außenseite des Moduls)Adresse dann im sog. 'Lease log' des Routers erscheinen muß.<br/>
+	Nun schalten Sie die Verschlüsselung wieder ein und konfigurieren die WLAN-Karte fertig.<br/>
+</section>
+
+<section name="WEP Einstellungen">
+	(E)SSID - dies ist der Name Ihres dratlosen Netzwerks.Sie entnehmen diesen den Einstellungen Ihres Routers. Bitte beachten Sie<br/> Gross/Kleinschreibung und vermeiden Sie Umlaute und Leerzeichen.<br/>
+	Modus - verwenden Sie 'ad-hoc' für die Verbindung Rechner zu Rechner und  'managed' für den Verbindungsaufbau zu einem<br/> WLAN-Router.
+	Sicherheit - Verwenden Sie 'open' für eine unverschlüsselte Verbindung oder 'restricted' für eine gesichterte Verbindung.<br/>
+	Benutze WEP Schlüssel - hier konfigurieren Sie, welcher WEP Schlüssel verwendet werden soll.<br/>
+	WEP Schlüssel 1-4 - hier geben Sie bis zu 4 unterschiedliche Kodierungsschlüssel an.<br/><br/>
+
+	Bitte beachten Sie, dass die WEP Verschlüsselung inzwischen als 'unsicher' betrachtet wird, da diese mit relativ einfachen Mitteln überwunden werden kann.<br/>
+</section>
+
+<section name="WPA Einstellungen">
+	WPA Einstellungen<br/>
+	WPA (E)SSID - dies ist der Name Ihres dratlosen Netzwerks.Sie entnehmen diesen den Einstellungen Ihres Routers. Bitte beachten<br/>
+	Sie Gross/Kleinschreibung und vermeiden Sie Umlaute und Leerzeichen.<br/><br/>
+	Suche SSID - ???<br/>
+	EAPOL Version - ???<br/>
+	AP SCAN - ???<br/>
+	Key MGMT - Keymanagement Modus (WPA-PSK)<br/>
+	Protokoll - WPA/RSN<br/>
+	Paarweise - TKIP/CCMP<br/>
+	Gruppe - TKIP/CCMP<br/>
+	PSK (Passphrase) - hier geben Sie die zu verwendende Passphrase an.<br/><br/>
+</section>
+
+<section name="Windows Netzwerkanbindung">
+	Windows Netzwerk Anbindung<br/>
+	Windowsfreigabe - hier können Sie den Zugriff auf die Dateien der ReelBox über das Windows Netzwerk erlauben/verbieten.<br/>
+	Arbeitsgruppe - Name der ReelBox Arbeitsgruppe<br/>
+	Windows Anbindung - hier starten/stopen Sie die Anbindung von Freigaben entfernter Rechner.<br/>
+	Windows Rechner - hier tragen Sie die IP Adresse des Rechners ein, der die Freigabe zur Verfügung stellt.<br/>
+	Freigabename - der Name der auf dem entfernten Rechner vorhandenen Freigabe.<br/>
+	Benutzername - Nutzer, welcher auf dem Rechner der die zu verwendende Freigabe beherbergt angelgt ist, und entsprechende Zugriffsrechte auf die Freigabe hat.<br/>
+	Passwort - entsprechendes Passwort des Nutzers<br/>
+	Verzeichnis DVD Archiv - angezeigter Name des DVD Archivs<br/>
+	   <br/>
+</section>
+
+<section name="Globale Einstellungen">
+		   RechnerName - mit diesem Namen erscheint Ihre ReelBox Avantgarde z.B. in Ihrem Windows-Netzwerk.<br/><br/>
+		   z.B. unter Windows wählen Sie das auf Ihrem Desktop befindliche Icon 'Netzwerkumgebung' an, dort dann die Arbeitsgruppe<br/>
+		   'Reelnet' und können dann auf den Computer 'ReelVDR' zugreifen und so Aufnahmen, Musik und Bilder von und zur ReelBox übertragen.<br/>
+		   Sollten Sie zur Authentifizierung aufgefordert werden, verwenden Sie als User, bzw. Kennwort die Eingabe 'reel'.
+		   <br/>
+		   Alternativ können Sie ebenfalls via FTP Zurgiff erlangen. Hier verwenden Sie als User, bzw. Kennwort die Eingabe 'root'.<br/>
+		   Domäne - übergeordnete Arbeitsgruppe der ReelBox.<br/><br/>
+		   Gateway - hier sollten Sie in der Regel die IP Adresse Ihres Routers eintragen.<br/><br/>
+		   Nameserver - hier sollten Sie in der Regel die IP Adresse Ihres Routers eintragen.<br/><br/>
+		   Proxy nutzen - wählen Sie, ob ein Proxy verwendet werden muss. (default=nein)<br/><br/>
+		   Proxy IP - hier tragen Sie, bei Bedarf, die IP des  evtl. vorhandenen Proxy ein, der den Zugriff auf das Internet gestattet.<br/><br/>
+		   Proxy Port - hier tragen Sie, bei Bedarf, die Port-Nummer des zu verwendenden Proxys ein.<br/><br/>
+
+		   Wake-on-LAN zulassen - hiemit starten/stoppen Sie die Möglichkeit Ihre ReelBox per Netzwerk aus dem   Stromsparmodus zu wecken.<br/><br/>
+		   UPnP Dienst einschalten - hiermit straten/stoppen Sie den UPnP Server der ReelBox.<br/><br/>
+</section>
+
+<section name="GnuDIP Dienst">
+	GnuDIP Dienst<br/>
+	GnuDIP nutzen - hier starten/stoppen Sie den dynamischen Nameservereintrag<br/>
+	Benutzername - der auf GnuDIP verwendete Benutzername<br/>
+	Passwort - das duzugehörige Passwort<br/>
+	GnuDIP Domain - Ihr eingetragener Domainname bei GnuDIP<br/>
+	   GnuDIP Server - hier tragen Sie den zuständigen Server für Ihre Domain von GnuDIP ein<br/>
+</section>
+
+<section name="DynDNS Dienst">
+	DynDNS Dienst <br/>
+	DynDNS nutzen - hier starten/stoppen Sie den dynamischen Nameservereintrag<br/>
+	Benutzername - der auf DynDNS verwendete Benutzername<br/>
+	Passwort - das duzugehörige Passwort<br/>
+	DynDNS Rechnername - der Name Ihres Domaineintrags auf DynDNS<br/>
+	   <br/>
+</section>
+
+<section name="SystemInformation">
+	Auf dieser Seite erhalten sie alle wichtigen Informationen rund um Ihre ReelBox Avantgarde.<br/><br/>
+
+Durch drücken der farbig markierten Tasten, können Sie weitere Einzelheiten zu den verschiedenen Komponenten und
+zu Signalqualität sowie den Netzwerkeinstellungen abrufen.<br/><br/>
+
+Bitte beachten Sie, dass ab Werk Mobilprozessoren in der ReelBox Avntgarde verwendet werden,
+die auch noch bei Tempereaturen von bis zu 100 Grad Celsius einwandfrei arbeiten.<br/>
+Die normale Betriebs-Temperatur des Celeron liegt hierbei um 60 Grad Celsius.<br/><br/>
+
+NETZWERK<br/>
+
+Durch drücken der roten Taste Ihrere Fernbedienung erhalten Sie alle Informationen betreffend der Vernetzung und der verfügbaren Netzwerkadapter.
+<br/>
+Bitte beachten Sie, dass eth0 kein durch den Anwender zu konfigurierende Einstellungen enthält, da es exklusiv als Systembus verwendung findet. Aus diesem Grunde wird hier auch keine IP angegeben.<br/>
+Sollten Sie eine MiniPCI-Express WLAN Karte (optional) eingebaut haben, so entnehmen Sie deren Daten dem Eintrag ath0 - <br/>
+wenn Sie einen WLAN-Stick verwenden, wird dieser als wlan0 aufgeführt, die Konfiguration muß dann allerdings über die KDE-Desktop<br/>
+Oberfläche durchgeführt werden, da aufgrund der Vielzahl der Hersteller keine einheitliche Menüführung realisierbar ist.<br/><br/>
+
+Signal<br/>
+
+Um die Signalgüte zu kontrollieren, rufen Sie das Setup auf und wählen dort <br/>
+Systeminformationen und dann den Punkt Signal (grüne Taste).<br/><br/>
+
+Nun wird die Empfangsqualität der Tuner angezeigt, wobei die <br/>
+relevanten Abkürzungen folgende Bedeutung haben:<br/><br/>
+
+
+STR = Signal-Stärke<br/>
+Die STR sollte zumindest 60% betragen, bei Werten unterhalb dieses Levels ist <br/>
+ein stabiler Empfang nicht mehr gewährleistet.<br/>
+Dieser Parameter wird direkt vom Sternverteiler (Kabel) des Hauses beeinflußt und kann <br/>
+in der Verstärkung durch den Kabelnetzanbieter beeinflusst werden. Bei zu <br/>
+geringen Werten, überprüfen Sie entsprechend die Zuleitung und wenden sich <br/>
+ggf. an den Kabelnetzbetreiber um die Leistung erhöhen zu lassen.<br/>
+<br/>
+Bei Sat-Anlagen kommen in der Regel sog. Multischalter zum Einsatz,<br/>
+wenn ein zu geringer Signal-Level anliegt, auch in der Leistung reguliert werden können.<br/>
+Dies wird normalerweise über ein Angleichen der Dämpfung für den jeweiligen<br/>
+Multiswitch Abgang erreicht. <br/>
+<br/>
+SNR = Signal Rauschabstand<br/>
+Der SNR Wert ist normalerweise im ähnlichen Bereich wie der angezeigte STR <br/>
+Wert.<br/>
+<br/>
+Dieser Wert ist nur ein ungefährer Anhaltspunkt für die Signalqualität und sollte<br/>
+wie auch STR mindestens 60% für einen einwandfreien Empfang aufweisen.<br/>
+<br/>
+BER = Anzahl behebbarer Fehler innerhalb des empfangenen Streams.<br/>
+Dieser Wert wird durch eine 8-stellige Ziffer angezeigt, die im <br/>
+Idealfall '00000000' betragen sollte.<br/>
+Falls hier der Wert mehr als '000000xx' betragen sollte, ist der Empfang des <br/>
+Signals zu stark gestört um einen zuverlässigen und einwandfreien Empfang zu <br/>
+gewährleisten.<br/>
+Wenden Sie sich in diesem Fall an Ihren Kabelprovider und überprüfen Sie die <br/>
+Hausverkabelung auf Defekte.<br/>
+<br/>
+Sollten Sie per Sat emfangen, kontrollieren Sie bitte insbesondere die Ver-<br/>
+kabelung vonder Wand zum Gerät und die Anschlüße am Multischalter und -<br/>
+falls notwendig - auch vom LNB, da gerade hier Witterungseinflüsse die Anschlüsse<br/>
+beeinträchtigen können.<br/>
+<br/>
+UNC = Anzahl nicht behebbarer Fehler innerhalb des empfangenen Streams.<br/>
+Dieser Wert wird durch eine 8-stellige Ziffer angezeigt, die im <br/>
+Idealfall '00000000' betragen sollte.<br/>
+Falls hier der Wert mehr als '00000000' betragen sollte, ist der Empfang des <br/>
+Signals zu gestört um einen einwandfreien Empfang zu gewährleisten.<br/>
+Wenden Sie sich in diesem Fall an Ihren Kabelprovider und überprüfen Sie die <br/>
+Hausverkabelung auf Defekte.<br/>
+<br/>
+Sollten Sie per Sat emfangen, kontrollieren Sie bitte insbesondere die Ver-<br/>
+kabelung vonder Wand zum Gerät und die Anschlüße am Multischalter und -<br/>
+falls notwendig - auch vom LNB, da gerade hier Witterungseinflüsse die Anschlüsse<br/>
+beeinträchtigen können.<br/>
+<br/><br/>
+
+Sollte die Anzeige keine befriedigenden Werte zeigen, können Sie versuchen die <br/>
+Tuner direkt gegeneinander auszutauschen. Hierzu lösen Sie die insgesamt 4 <br/>
+Torx-Schrauben der Blenden vor den ZF-Anschlüssen, sowie die Überwurfmuttern <br/>
+(Achtung beim wiederanbringen nicht zu fest anziehen, ansonsten können die <br/>
+ZF-Stecker abgerissen werden.)<br/>
+<br/>
+
+</section>
+</help>

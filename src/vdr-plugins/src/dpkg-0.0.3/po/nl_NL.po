@@ -1,0 +1,193 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Arnold Niessen <niessen@iae.nl> <arnold.niessen@philips.com>, 2001
+# Hans Dingemans <hans.dingemans@tacticalops.nl>, 2003
+# Maarten Wisse <Maarten.Wisse@urz.uni-hd.de>, 2005
+# Team Reelbox4all.com <info@reelbox4all.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dpkg\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-08-30 11:15+0200\n"
+"PO-Revision-Date: 2011-09-04 14:43+0100\n"
+"Last-Translator: Dutch ReelBox4all team <tech@reelbox4all.com>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Dpkg Plugin"
+msgstr "Dpkg Plugin"
+
+msgid "Start Online Update"
+msgstr "Online update starten"
+
+msgid "Updates available! Press OK to update now."
+msgstr "Updates beschikbaar! Druk op 'Upgrade' om het update proces te starten."
+
+msgid "Addon Plugin"
+msgstr "Addon plugin"
+
+msgid "Optional Software "
+msgstr "Optionele software"
+
+msgid "Online Update"
+msgstr "Online update"
+
+msgid "Updating sources..."
+msgstr "Updaten van de bronnen..."
+
+msgid "Updating packages..."
+msgstr "Updaten van de pakketten..."
+
+msgid "Rebooting, please wait..."
+msgstr "Herstarten bezig... moment aub!"
+
+msgid "Execute aptitude upgrade"
+msgstr "Voer 'aptitude updgrade' uit"
+
+msgid "Execute apt upgrade"
+msgstr "Voer 'apt upgrade' uit"
+
+msgid "Execute base install"
+msgstr "Voer 'basisinstallatie' uit"
+
+msgid "Execute forced aptitude upgrade"
+msgstr "Voer 'geforeerde aptitude upgrade' uit"
+
+msgid "Execute forced apt upgrade"
+msgstr "Voer 'geforceerde apt upgrade' uit"
+
+msgid "Software update via online connection:"
+msgstr "Software update via online verbinding:"
+
+msgid "Upgrade"
+msgstr "Upgrade"
+
+msgid "Install"
+msgstr "Installeer"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Skip"
+msgstr "Sla over"
+
+msgid "Packages"
+msgstr "Pakketten"
+
+msgid "Optional"
+msgstr "Optioneel"
+
+msgid "Sources"
+msgstr "Bronnen"
+
+msgid "Please restart your ReelBox after the recording."
+msgstr "Herstart aub. de ReelBox nadat de opname is afgerond!"
+
+msgid "Reboot ?"
+msgstr "Herstarten ?"
+
+msgid "Button$Continue"
+msgstr "Doorgaan"
+
+msgid "Aborting..."
+msgstr "Afbreken..."
+
+msgid "Press OK to abort update."
+msgstr "Druk op OK om de update af te breken."
+
+msgid "Failed to update all sources! Searching for updates..."
+msgstr "Updaten van alle  bronnen mislukt! Zoeken naar updates..."
+
+msgid "Failed to update all sources! Searching for packages..."
+msgstr "Updaten van alle bronnen mislukt! Zoeken naar paketten..."
+
+msgid "Sources up to date. Searching for updates..."
+msgstr "Bronnen zijn up to date. Zoeken naar updates..."
+
+msgid "Sources up to date. Searching for packages..."
+msgstr "Bronnen up to date. Zoeken naar pakketten..."
+
+msgid "Failed to process all packages!"
+msgstr "Niet alle pakketten zijn succesvol geinstalleerd!"
+
+msgid "Failed"
+msgstr "Mislukt"
+
+msgid "Now select upgrade to install the new packages."
+msgstr "Kies 'Upgrade' om de nieuwe pakketten te installeren"
+
+msgid "Following packages will be updated:"
+msgstr "De volgende pakketten zullen worden vervangen"
+
+msgid "The software is up to date."
+msgstr "De software is up to date."
+
+msgid "No updates found."
+msgstr "Geen updates gevonden."
+
+msgid "Downloading Packages..."
+msgstr "Downloaden van pakketten..."
+
+msgid "Processing Packages..."
+msgstr "Verwerken van pakketten..."
+
+msgid "All changes successfull!"
+msgstr "Alle aanpassingen met succes uitgevoerd!"
+
+msgid "Please restart your ReelBox!"
+msgstr "Herstart de ReelBox aub!"
+
+msgid "Please go into deep standby,"
+msgstr "Ga naar deep standby aub,"
+
+msgid "restart the ReelBox and try the update again."
+msgstr "herstart de ReelBox en probeer de update opnieuw uit te voeren."
+
+msgid "Error"
+msgstr "Fout"
+
+msgid "Load"
+msgstr "Laden"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Please check your internet connection."
+msgstr "Controleer uw internet verbinding aub."
+
+msgid "IGN"
+msgstr "Negeer"
+
+msgid "Source list"
+msgstr "Bronlijst"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Undo"
+msgstr "Undo"
+
+msgid "Insert"
+msgstr "Invoegen"
+
+msgid "Delete"
+msgstr "Wis"
+
+msgid "Unable to read from sources.list!"
+msgstr "Kan de sources.list niet lezen!"
+
+msgid "Unable to write to surces.list!"
+msgstr "Kan de sources.list niet schrijven!"
+
+#~ msgid "Dpkg Setup"
+#~ msgstr "Dpkg setup"
+
+#~ msgid "Optional Software Setup"
+#~ msgstr "Optionele software Setup"
+
+#~ msgid "Recording is running !"
+#~ msgstr "Opname is aktief !"

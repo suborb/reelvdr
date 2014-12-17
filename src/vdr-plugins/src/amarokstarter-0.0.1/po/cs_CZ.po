@@ -1,0 +1,79 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-webbrowser\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-09-28 17:31+0200\n"
+"PO-Revision-Date: 2009-03-04 17:58+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Amarok Music Player"
+msgstr ""
+
+#~ msgid "Smartbrowser"
+#~ msgstr "Inteligentní prohlížeč"
+
+#~ msgid "Webbrowser"
+#~ msgstr "Webový prohlížeč"
+
+#~ msgid "KDE-Desktop"
+#~ msgstr "KDE-Desktop"
+
+#~ msgid "CRT"
+#~ msgstr "CRT"
+
+#~ msgid "LCD (RGB)"
+#~ msgstr "LCD (RGB)"
+
+#~ msgid "LCD (BGR)"
+#~ msgstr "LCD (BGR)"
+
+#~ msgid "Simple Browser"
+#~ msgstr "Jednoduchý prohlížeč"
+
+#~ msgid "SNES-emu-only session"
+#~ msgstr "Relace SNES-emu-only"
+
+#~ msgid "Center"
+#~ msgstr "Střed"
+
+#~ msgid "Full"
+#~ msgstr "Úplný"
+
+#~ msgid "Mode"
+#~ msgstr "Režim"
+
+#~ msgid "start URL"
+#~ msgstr "Počáteční adresa URL"
+
+#~ msgid "font size in menu"
+#~ msgstr "Velikost písma v nabídce"
+
+#~ msgid "font size"
+#~ msgstr "Velikost písma"
+
+#~ msgid "picture scaling (%)"
+#~ msgstr "Měřítko obrázků (%)"
+
+#~ msgid "transparency"
+#~ msgstr "Průhlednost"
+
+#~ msgid "margin horizontal"
+#~ msgstr "Vodorovný okraj"
+
+#~ msgid "margin vertical"
+#~ msgstr "Svislý okraj"
+
+#~ msgid "optimize for"
+#~ msgstr "Optimalizovat pro"
+
+#~ msgid "scaling mode"
+#~ msgstr "Režim škálování"

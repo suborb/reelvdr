@@ -1,0 +1,202 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bouquets 1.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-01-22 02:29+0100\n"
+"PO-Revision-Date: 2008-07-09 14:54+0200\n"
+"Last-Translator: Nicolas Huillard <nhuillard@e-dition.fr>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Select channels with OK"
+msgstr "Sélectionner les chaines avec la touche OK"
+
+msgid "Customize channels: "
+msgstr "Personnaliser les chaines: "
+
+msgid "Favorites: "
+msgstr "Favoris: "
+
+msgid "encrypted radio channels"
+msgstr "Radios cryptées"
+
+msgid "free radio channels"
+msgstr "Radios gratuites"
+
+msgid "radio channels"
+msgstr "Radios"
+
+msgid "encrypted TV channels"
+msgstr "Chaines TV cryptées"
+
+msgid "free TV channels"
+msgstr "Chaines TV gratuites"
+
+msgid "TV channels"
+msgstr "Chaines TV"
+
+msgid "encrypted channels"
+msgstr "chaines cryptées"
+
+msgid "free channels"
+msgstr "chaines gratuites"
+
+msgid "HD channels"
+msgstr "Chaines HD"
+
+msgid "non HD channels"
+msgstr "Chaines non HD"
+
+msgid "all channels"
+msgstr "Toutes les chaines"
+
+msgid "Select channels with blue key"
+msgstr "Sélectionner les chaines avec la touche Bleue"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Haut/Bas pour choisir la destination - OK pour déplacer"
+
+msgid "Channel is being used by a timer!"
+msgstr "La chaine est utilisé pour une programmation!"
+
+msgid "Delete channel?"
+msgstr "Supprimer une chaine?"
+
+msgid "Channel deleted"
+msgstr "Chaine supprimée"
+
+msgid "Delete channels?"
+msgstr "Supprimer les chaines?"
+
+msgid "Channels deleted"
+msgstr "Chaines supprimées"
+
+msgid "Channels have been moved"
+msgstr "Les Chaines ont été déplacées"
+
+msgid "Favorites"
+msgstr "Favoris"
+
+msgid "Add to Favorites?"
+msgstr "Ajouter aux Favoris"
+
+msgid "Button$New"
+msgstr "Nouveau"
+
+msgid "Bouquets"
+msgstr "Bouquets"
+
+msgid "Key$Previous"
+msgstr ""
+
+msgid "Key$Next"
+msgstr ""
+
+msgid "Button$Customize"
+msgstr "Personnaliser"
+
+msgid "Move"
+msgstr "Déplacer"
+
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Utiliser Haut/Bas pour la nouvelle position - puis appuyez sur 'Insertion'"
+
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Utiliser Haut/Bas pour la nouvelle position - puis appuyez sur 'OK'"
+
+msgid "Channels"
+msgstr "Chaines"
+
+msgid "Customize Bouquets"
+msgstr "Personnaliser les Bouquets"
+
+msgid "New"
+msgstr "Nouveau"
+
+msgid "Delete Bouquet?"
+msgstr "Supprimer un Bouquet?"
+
+msgid "Edit Bouquet"
+msgstr "Modifier un Bouquet"
+
+msgid "Add Bouquet"
+msgstr "Ajouter un Bouquet"
+
+msgid "CI-Slot for this Bouquet"
+msgstr "Emplacement CI pour ce Bouquet"
+
+msgid "Bouquet starts with number"
+msgstr "Bouquet démarre avec le nombre"
+
+msgid "Note:"
+msgstr "Note:"
+
+msgid "Select CI-Slot for this Bouquet."
+msgstr "Sélectionner l'emplacement CI pour ce Bouquet"
+
+msgid "Select channelnumber for first channel inside this bouquet"
+msgstr "Sélectionner le numéro de chaine de début pour ce bouquet"
+
+msgid "Symbolrate"
+msgstr ""
+
+msgid "System-ID"
+msgstr "Système ID"
+
+msgid "CI-Slot"
+msgstr "Emplacement CI"
+
+msgid "No CAM at"
+msgstr "Aucun CAM à"
+
+msgid "upper slot"
+msgstr "emplacement du haut"
+
+msgid "lower slot"
+msgstr "emplacement du bas"
+
+msgid "channellist"
+msgstr "Liste des chaines"
+
+msgid "current bouquet"
+msgstr "Bouquet actuel"
+
+msgid "bouquet list"
+msgstr "Liste des bouquets"
+
+msgid "Channellist: set filters"
+msgstr "Channellist: appliquer des filtres"
+
+msgid "Please select the content of the channellist"
+msgstr "Sélectionner svp le contenu de la liste des chaines"
+
+msgid "All channels"
+msgstr "Toutes les chaines"
+
+msgid "Only TV channels"
+msgstr "Uniquement les Chaines TV"
+
+msgid "Only radio channels"
+msgstr "Uniquement les Radios"
+
+msgid "non encrypted channels"
+msgstr "Chaines non cryptées"
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Liste des chaines démarre avec"
+
+msgid "non encrypted TV channels"
+msgstr "Chaines TV non cryptées"
+
+msgid "Channellist"
+msgstr "Liste des chaines"

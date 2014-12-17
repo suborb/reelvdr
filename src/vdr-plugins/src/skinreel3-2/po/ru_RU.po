@@ -1,0 +1,357 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vyacheslav Dikonov <sdiconov@mail.ru>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-skinreel3\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-03-01 16:42+0100\n"
+"PO-Revision-Date: 2008-09-26 12:52+0200\n"
+"Last-Translator: Vyacheslav Dikonov <sdiconov@mail.ru>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Неправильный канал ***"
+
+msgid "mins"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "en_US"
+msgstr "ru_RU"
+
+msgid "Unknown Recording"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Cable TV"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "Terrestrial TV"
+msgstr ""
+
+msgid "CI-slot: Upper"
+msgstr ""
+
+msgid "CI-slot: Lower"
+msgstr ""
+
+msgid "background process"
+msgstr ""
+
+msgid "Play Disk"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+msgid "Languages"
+msgstr "Языки"
+
+msgid "Image for recording"
+msgstr ""
+
+msgid "Size"
+msgstr "Размер"
+
+msgid "Auxiliary information"
+msgstr "Расш. информация"
+
+msgid "Subtitles"
+msgstr ""
+
+msgid "Reel Avantgarde"
+msgstr ""
+
+msgid "TrueType Font"
+msgstr ""
+
+msgid "No TTF support!"
+msgstr ""
+
+msgid "Default OSD Font"
+msgstr ""
+
+msgid "Default Fixed Size Font"
+msgstr ""
+
+msgid "Default Small Font"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Logos & Symbols"
+msgstr "Логотипы & символы"
+
+msgid "Fonts"
+msgstr ""
+
+msgid "Changes done"
+msgstr ""
+
+msgid "elapsed"
+msgstr "истекшие"
+
+msgid "remaining"
+msgstr "остальные"
+
+msgid "percent"
+msgstr "процент"
+
+msgid "never"
+msgstr "никогда"
+
+msgid "use size.vdr only"
+msgstr "использовать только size.vdr"
+
+msgid "always"
+msgstr "всегда"
+
+msgid "Last line"
+msgstr ""
+
+msgid "Help buttons"
+msgstr ""
+
+msgid "Free last line"
+msgstr ""
+
+msgid "simple"
+msgstr ""
+
+msgid "graphical"
+msgstr ""
+
+msgid "graphical small"
+msgstr ""
+
+msgid "Show auxiliary information"
+msgstr "Показывать расш. информацию"
+
+msgid "top"
+msgstr ""
+
+msgid "bottom"
+msgstr ""
+
+msgid "Show recording's size"
+msgstr "Показывать размеры записей"
+
+msgid "Show remaining/elapsed time"
+msgstr "Показывать остав./прошед. время"
+
+msgid "Show VPS"
+msgstr "Показывать VPS"
+
+msgid "Show source in the channelinfo"
+msgstr ""
+
+#, fuzzy
+msgid "Progressbar type"
+msgstr "Показывать индикатор продвижения"
+
+msgid "Show channel logos"
+msgstr "Показывать лого каналов"
+
+msgid "Flushing channel logo cache..."
+msgstr "Очищаю кеш..."
+
+msgid "Show symbols"
+msgstr "Показывать символы"
+
+msgid "  Show symbols in replay"
+msgstr ""
+
+msgid "  Show symbols in messages"
+msgstr ""
+
+msgid "  Show symbols in audio"
+msgstr ""
+
+msgid "Show symbols in lists"
+msgstr "Показывать символы в списках"
+
+msgid "Show marker in lists"
+msgstr "Показывать метку в списках"
+
+msgid "Show status symbols"
+msgstr "Показывать символы"
+
+msgid "  Identify channel by"
+msgstr "  Определять канал по"
+
+msgid "name"
+msgstr "названию"
+
+msgid "data"
+msgstr "данным"
+
+msgid "Channel logo cache size"
+msgstr "Размер кеша логoтипов каналов"
+
+msgid "Button$Flush cache"
+msgstr "Очистить кеш"
+
+msgid "Name"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "No TrueType fonts installed!"
+msgstr ""
+
+msgid "Font Sizes"
+msgstr ""
+
+msgid "Fixed Font"
+msgstr ""
+
+msgid "Button$Set"
+msgstr ""
+
+msgid "OSD title"
+msgstr ""
+
+msgid "Messages"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Help keys"
+msgstr ""
+
+msgid "Channelinfo: title"
+msgstr ""
+
+msgid "Channelinfo: subtitle"
+msgstr ""
+
+msgid "Channelinfo: language"
+msgstr ""
+
+msgid "List items"
+msgstr ""
+
+msgid "Info area: timers title"
+msgstr ""
+
+msgid "Info area: timers text"
+msgstr ""
+
+msgid "Info area: warning title"
+msgstr ""
+
+msgid "Info area: warning text"
+msgstr ""
+
+msgid "Details: title"
+msgstr ""
+
+msgid "Details: subtitle"
+msgstr ""
+
+msgid "Details: date"
+msgstr ""
+
+msgid "Details: text"
+msgstr ""
+
+msgid "Replay: times"
+msgstr ""
+
+msgid "ReelBox skin 3rd generation"
+msgstr ""
+
+msgid "Channel:"
+msgstr ""
+
+msgid "Search pattern:"
+msgstr ""
+
+msgid "Timer check"
+msgstr "Проверка таймеров"
+
+msgid "No timer check"
+msgstr ""
+
+#~ msgid "Show progressbar"
+#~ msgstr "Показывать индикатор продвижения"
+
+#, fuzzy
+#~ msgid "stop recording"
+#~ msgstr "Показывать размеры записей"
+
+#~ msgid "Sunday"
+#~ msgstr "Воскресенье"
+
+#~ msgid "Monday"
+#~ msgstr "Понедельник"
+
+#~ msgid "Tuesday"
+#~ msgstr "Вторник"
+
+#~ msgid "Wednesday"
+#~ msgstr "Среда"
+
+#~ msgid "Thursday"
+#~ msgstr "Четверг"
+
+#~ msgid "Friday"
+#~ msgstr "Пятница"
+
+#~ msgid "Saturday"
+#~ msgstr "Суббота"
+
+#~ msgid "TIMERS"
+#~ msgstr "ТАЙМЕРЫ"
+
+#~ msgid "Show info area in main menu"
+#~ msgstr "Показывать инф. обласьт в гл. меню"
+
+#~ msgid "pixel algo"
+#~ msgstr "алгоритм пикселя"
+
+#~ msgid "ratio algo"
+#~ msgstr "алгоритм соотношения"
+
+#~ msgid "zoom image"
+#~ msgstr "Увеличить"
+
+#~ msgid "  Show symbols in menu"
+#~ msgstr "  Показать символы в меню"
+
+#~ msgid "  Show flags"
+#~ msgstr "  Показать флаги"
+
+#~ msgid "Show event/recording images"
+#~ msgstr "Изображения в EPG"
+
+#~ msgid "  Resize images"
+#~ msgstr "  Перерешать используя"
+
+#~ msgid "  Image width"
+#~ msgstr "  Ширина изображения"
+
+#~ msgid "  Image height"
+#~ msgstr "  Высота изображения"
+
+#~ msgid "  Image format"
+#~ msgstr "  Формат изображения"
+
+#~ msgid "Full title width"
+#~ msgstr "Полная ширина заголовка"

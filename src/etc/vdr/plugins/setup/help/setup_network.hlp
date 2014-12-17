@@ -1,0 +1,30 @@
+
+Hier finden Sie alle Konfigurationsmenüs zur Einbindung der ReelBox in ein Netzwerk:
+
+ Globale Einstellungen: 
+ -Name der ReelBox im Netz, Domäne, Gateway- und 
+  Nameserver-Adresse.
+
+ Ethernet:
+ -Die interne Netzwerkschnittstelle konfigurieren
+
+ Wireless LAN:
+  -Funknetzwerk konfigurieren, falls WLAN-Karte vorhanden.
+
+ NFS Anbindung:
+ -Network File System: Zugriff auf Dateien über Netzwerk.
+
+ Windows Netzwerk Anbindung:
+ -Einbindung von Netzlaufwerken eines Windows-PC's zur Nutzung
+  mit der ReelBox.
+
+ DynDNS Dienst:
+ -Nutzung eines dynamischen DNS-Dienstes mit der ReelBox.
+  Dadurch ist die ReelBox z.B. über das Internet unter einer festen
+  Adresse erreichbar.
+
+ GnuDIP Dienst:
+ -Nutzung eines dynamischen DNS-Dienstes der das GnuDIP 
+  Protokoll nutzt.
+  Dadurch ist die ReelBox z.B. über das Internet unter einer festen
+  Adresse erreichbar.

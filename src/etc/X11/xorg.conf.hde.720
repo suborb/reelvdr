@@ -1,0 +1,95 @@
+# xorg.conf for RMM HD extension
+# Framebuffer with 1600*900, 16 bits depth
+
+Section "Files"
+EndSection
+
+Section "Extensions" 
+Option "Composite" "Enable" 
+EndSection
+
+Section "ServerFlags"
+#	Option "RandR" "false" 
+#	Option "XFree86-VidModeExtension" "false"
+EndSection
+
+Section "InputDevice"
+	Identifier	"Generic Keyboard"
+	Driver		"kbd"
+	Option		"CoreKeyboard"
+	Option		"XkbRules"	"xorg"
+	Option		"XkbModel"	"pc105"
+	Option		"XkbLayout"	"de"
+	Option		"XkbOptions"	"lv3:ralt_switch"
+EndSection
+
+Section "InputDevice"
+	Identifier	"Configured Mouse"
+	Driver		"mouse"
+	Option		"CorePointer"
+	Option		"Device"	"/dev/input/mice"
+	Option		"Protocol"	"ImPS/2"
+	Option		"ZAxisMapping"	"4 5"
+	Option		"Emulate3Buttons"	"true"
+EndSection
+
+Section "InputDevice"
+	Driver		"wacom"
+	Identifier	"stylus"
+	Option		"Device"	"/dev/input/wacom"
+	Option		"Type"	"stylus"
+	Option		"ForceDevice"	"ISDV4"# Tablet PC ONLY
+EndSection
+
+Section "InputDevice"
+	Driver		"wacom"
+	Identifier	"eraser"
+	Option		"Device"	"/dev/input/wacom"
+	Option		"Type"	"eraser"
+	Option		"ForceDevice"	"ISDV4"# Tablet PC ONLY
+EndSection
+
+Section "InputDevice"
+	Driver		"wacom"
+	Identifier	"cursor"
+	Option		"Device"	"/dev/input/wacom"
+	Option		"Type"	"cursor"
+	Option		"ForceDevice"	"ISDV4"# Tablet PC ONLY
+EndSection
+
+Section "Device"
+	Identifier	"HDE"
+	Driver		"fbdev"
+	Option "ShadowFB" "on"
+	Option "SWCursor" "on"	
+EndSection
+
+Section "Monitor"
+	Identifier	"DELL 1700FP"
+	Vendorname	"Generic LCD Display"
+	Modelname	"LCD Panel 1024x768"
+	Horizsync	10-100
+	Vertrefresh	10 - 100
+	modeline  "1600x900" 100 1600 1610 1620 1630 900 910 920 930 -vsync -hsync
+	modeline  "1280x720" 90 1280 1290 1300 1310 720 730 740 750 -vsync -hsync
+	modeline  "1120x630" 70 1120 1130 1140 1150 630 640 650 660 -vsync -hsync
+	Gamma	1.0
+ 	Option       "DPMS"
+EndSection
+
+Section "Screen"
+	Identifier	"Default Screen"
+	Device		"HDE"
+	Monitor		"DELL 1700FP"
+	Defaultdepth	16
+	SubSection "Display"
+		Depth	16
+		#Modes	"1280x720"
+		Modes	"1120x630"
+	EndSubSection
+	SubSection "Display"
+		Depth	24
+		Modes	"800x600" 
+	EndSubSection
+EndSection
+

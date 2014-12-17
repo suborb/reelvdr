@@ -1,0 +1,2241 @@
+# ReelVDR setup plugin
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# AUTHOR AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-setup\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2013-01-10 10:51+0100\n"
+"PO-Revision-Date: 2009-03-07 14:36+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Request"
+msgstr ""
+
+msgid "Automatic power saving"
+msgstr ""
+
+msgid "inactive"
+msgstr "inactiv"
+
+msgid "active"
+msgstr "activ"
+
+msgid " Standby after (min)"
+msgstr ""
+
+msgid " Poweroff after (min)"
+msgstr ""
+
+msgid "immediately"
+msgstr ""
+
+msgid "Warning:"
+msgstr ""
+
+msgid "Will cause problems with the MultiRoom-System when Clients are active and try to access the ReelBox. "
+msgstr ""
+
+msgid "Therefore, do not turn off the ReelBox."
+msgstr ""
+
+msgid "Should therefore remain on 'Quick'."
+msgstr ""
+
+#, fuzzy
+msgid "Standard (ext3)"
+msgstr "Standard"
+
+#, fuzzy
+msgid "Recording (jfs)"
+msgstr "Inregistrari"
+
+#, fuzzy
+msgid "Recording (xfs)"
+msgstr "Inregistrari"
+
+msgid "Windows Compatible (vFat)"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Confirm formatting"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "Device:"
+msgstr ""
+
+msgid "Free space:"
+msgstr ""
+
+msgid "Partition size:"
+msgstr ""
+
+msgid "Filesystem:"
+msgstr ""
+
+#, c-format
+msgid "Formatting will destroy all data on \"%s\"!"
+msgstr ""
+
+msgid "Press 'Red' to start formatting now or 'Exit' to cancel formatting."
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Select Filesystem Type"
+msgstr ""
+
+msgid "Filesystem"
+msgstr ""
+
+msgid "Please select the filesystem according to the porpuse of the device."
+msgstr ""
+
+msgid "Press 'Ok' to continue or 'Exit' to cancel now."
+msgstr ""
+
+msgid "Starting format in 3 seconds"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting in progress, please wait..."
+msgstr "Salvez setari, va rog asteptati..."
+
+msgid "Formatting completed successfully."
+msgstr ""
+
+msgid "Error: formatting failed"
+msgstr ""
+
+msgid "Unable to format. Missing command"
+msgstr ""
+
+#, fuzzy
+msgid "Formatting started"
+msgstr "Setari memorate"
+
+#, fuzzy
+msgid "Canceled"
+msgstr "activat"
+
+msgid "TV & Radio"
+msgstr ""
+
+msgid "Music & Pictures"
+msgstr ""
+
+msgid "Films & DVD"
+msgstr ""
+
+msgid "Internet & Extras"
+msgstr ""
+
+msgid "Image Library"
+msgstr ""
+
+msgid "Music Library"
+msgstr ""
+
+msgid "Movie Library"
+msgstr ""
+
+msgid "Additional Software"
+msgstr ""
+
+msgid "Installation"
+msgstr "Instalare"
+
+msgid "Basic Settings"
+msgstr "Setari de baza"
+
+msgid "Video Recorder "
+msgstr "Inregistrare Video"
+
+msgid "Background Services"
+msgstr "Servicii Fundal"
+
+msgid "System Settings"
+msgstr "Setari Sistem"
+
+msgid "Video Settings"
+msgstr "Setari Video"
+
+msgid "Audio Settings"
+msgstr "Setari Audio"
+
+msgid "Reception Settings"
+msgstr "Setari Receptie"
+
+msgid "OSD & Language"
+msgstr "OSD & Limba"
+
+msgid "Language"
+msgstr "Limba"
+
+msgid "Timezone & Clock"
+msgstr " Fus Orar & Ceas"
+
+msgid "EPG Services"
+msgstr "Servicii EPG"
+
+msgid "International EPG"
+msgstr "EPG International"
+
+msgid "Energy Options"
+msgstr "Optiuni Energie"
+
+msgid "Reset to factory defaults"
+msgstr ""
+
+msgid "Edit Channels"
+msgstr "Editare Canale"
+
+msgid "TVTV Service"
+msgstr "Serviciul TVTV"
+
+msgid "Network Settings"
+msgstr "Setari Retea"
+
+msgid "UMTS Settings"
+msgstr "Setari UMTS"
+
+msgid "Enable UMTS to connect your ReelBox to the"
+msgstr ""
+
+msgid "internet using UMTS connection."
+msgstr ""
+
+msgid "Enable UMTS"
+msgstr "Activeaza UMTS"
+
+msgid "UMTS Provider"
+msgstr "Furnizor UMTS"
+
+msgid "Common Interfaces"
+msgstr "Interfete Comune"
+
+msgid "Energy Saving Mode"
+msgstr "Modul 'Economie Energie'"
+
+msgid " Activate after (h)"
+msgstr " Activeaza dupa (ore)"
+
+msgid "Eject Media on Shutdown"
+msgstr "Scoate Disc din unitate la Oprire"
+
+msgid "Channel Lists"
+msgstr "Lista Canale"
+
+msgid "Global Settings"
+msgstr "Setari Globale"
+
+msgid "Hostname"
+msgstr "Nume Gazda"
+
+msgid "Domain"
+msgstr "Domeniu"
+
+msgid "Gateway"
+msgstr "Poarta acces"
+
+msgid "Nameserver"
+msgstr "Nume Server"
+
+msgid "Use Proxy"
+msgstr "Foloseste proxy"
+
+msgid "Streaming Clients"
+msgstr ""
+
+msgid "Setup type of external streaming devices and stream quality"
+msgstr ""
+
+msgid "You can select between 'Tablet' for"
+msgstr ""
+
+msgid "Tablet / Smartphone devices or 'TS' for"
+msgstr ""
+
+msgid "default settings *Standard to stream"
+msgstr ""
+
+msgid "LiveTV to your device."
+msgstr ""
+
+msgid "Stream Type"
+msgstr ""
+
+msgid "Client Speed"
+msgstr ""
+
+msgid "Select client connection type for best stream"
+msgstr ""
+
+msgid "quality"
+msgstr ""
+
+#, fuzzy
+msgid "Ethernet Settings"
+msgstr "Setari Expert"
+
+#, fuzzy
+msgid "Enable Ethernet"
+msgstr "Activeaza Ethernet 1"
+
+msgid "Enable Ethernet 1"
+msgstr "Activeaza Ethernet 1"
+
+msgid "Enable Ethernet 2"
+msgstr "Activeaza Ethernet 2"
+
+msgid " Use DHCP"
+msgstr " Foloseste DHCP"
+
+msgid " IP Address"
+msgstr " Adresa IP"
+
+msgid " Network mask"
+msgstr " Masca Retea"
+
+msgid "NetCeiver bridge"
+msgstr "Puntea NetCeiver"
+
+msgid "Enable Wake-on-LAN"
+msgstr "Activeaza pornirea prin Retea"
+
+#, fuzzy
+msgid "Wakeup ReelBox Avantgarde on startup"
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+msgid "Export Harddisk for Windows"
+msgstr "Exporta Harddisc pentru Windows"
+
+msgid "Workgroup"
+msgstr "Grupul de lucru"
+
+msgid "Enable UPnP service"
+msgstr "Activeaza serviciul UPnP"
+
+msgid "Use Windows Client"
+msgstr "Foloseste client Windows"
+
+msgid "Windows Network Connection"
+msgstr "Conectare Retea Windows"
+
+msgid "Windows Server"
+msgstr "Server Windows"
+
+msgid "Sharename"
+msgstr "Nume Share"
+
+msgid "DVD archive directory"
+msgstr "Directorul arhive DVD"
+
+msgid "Use NFS Client"
+msgstr "Foloseste client NFS"
+
+msgid "NFS Client"
+msgstr "Client NFS"
+
+msgid "Expert Settings"
+msgstr "Setari Expert"
+
+msgid "Host/IP"
+msgstr "Gazda/IP"
+
+msgid "Allow writing"
+msgstr "Permite scriere"
+
+msgid "Use locking"
+msgstr "Foloseste blocare"
+
+msgid "Buffersize"
+msgstr "Dimensiune buffer"
+
+msgid "Mark Blocks after Recording"
+msgstr "Marcheaza Blocuri dupa Inregistrare"
+
+msgid "Playback Settings"
+msgstr "Setari Redare"
+
+msgid "Harddisk/Media device"
+msgstr "Harddisc/Dispozitiv media"
+
+msgid "Channel Scan"
+msgstr "Cautare Canale"
+
+msgid "Installation Wizard"
+msgstr "Vrajitor Instalare"
+
+msgid "Use tvtv service"
+msgstr "Foloseste serviciul tvtv"
+
+msgid "GnuDIP service"
+msgstr "Serviciul GnuDIP"
+
+msgid "DynDNS service"
+msgstr "Serviciul DynDNS"
+
+msgid "Use GnuDIP service"
+msgstr "Foloseste serviciul GnuDIP"
+
+msgid "Use DynDNS service"
+msgstr "Foloseste serviciul DynDNS"
+
+msgid "DynDNS hostname"
+msgstr "Nume Gazda DynDNS"
+
+msgid "Recording settings"
+msgstr "Setari Inregistrare"
+
+msgid "LEDs while operating"
+msgstr "LED-urile in timpul operarii"
+
+msgid "LEDs in Standby"
+msgstr "LED-urile in Stand-by"
+
+#, fuzzy
+msgid "Turn off LEDs in Standby"
+msgstr "LED-urile in Stand-by"
+
+msgid "Color"
+msgstr "Culoare"
+
+msgid "Front Panel"
+msgstr "Panoul Fata"
+
+msgid "Brightness"
+msgstr "Stralucire"
+
+msgid "Brightness Status LEDs"
+msgstr "Stralucire LED Status"
+
+msgid "Display Brightness"
+msgstr "Stralucire Display"
+
+msgid "LC Display Type"
+msgstr "Tip Display LC"
+
+msgid "Black Series"
+msgstr "Seria Neagra"
+
+msgid "External Reel Display Module"
+msgstr ""
+
+msgid "off"
+msgstr "oprit"
+
+msgid "blue"
+msgstr "albastru"
+
+msgid "red"
+msgstr "rosu"
+
+msgid "min"
+msgstr "minim"
+
+msgid "low"
+msgstr "scazut"
+
+msgid "med"
+msgstr "mediu"
+
+msgid "high"
+msgstr "puternic"
+
+msgid "max"
+msgstr "maxim"
+
+msgid "Update from CD/DVD"
+msgstr "Updatare de pe CD/DVD"
+
+msgid "Software update"
+msgstr "Update Software"
+
+msgid "Software Update"
+msgstr "Update Software"
+
+msgid "Update-check on system start"
+msgstr "Verifica update-uri la pornire"
+
+msgid "Manual Network Connections"
+msgstr "Conexiuni manuale Retea"
+
+msgid "Dynamic DNS"
+msgstr "DNS D inamic"
+
+msgid "Remote Control / Automation"
+msgstr "Telecomanda/Automatizari"
+
+msgid "Enable Control via RS232"
+msgstr "Activeaza control prin RS232"
+
+msgid "  Port speed (baud)"
+msgstr ""
+
+msgid "default (115.200)"
+msgstr ""
+
+msgid "Enable Control via UDP"
+msgstr "Activeaza Control  prin UDP"
+
+msgid "UDP Port"
+msgstr "Port UDP"
+
+msgid "Disable Bluetooth Support"
+msgstr "Dezactiveaza Bluetooth-ul"
+
+msgid "Software Update and Installation, Serial Remote control"
+msgstr "Instalari si Update Software, Comanda prin portul Serial"
+
+msgid "Update the ReelBox software by Internet"
+msgstr "Udatare software ReelBox prin Internet"
+
+msgid "Install additional features"
+msgstr "Instaleaza programe aditionale"
+
+msgid "Basic settings in just a few steps"
+msgstr "Setarile de baza in doar cativa pasi"
+
+msgid "Remote control through serial port or network"
+msgstr "Control de la distanta prin portul serial sau prin retea"
+
+msgid "Set up the Reel MultiRoom"
+msgstr ""
+
+msgid "Video and Audio Settings, OSD, Timezone, Front panel, Energy options"
+msgstr "Setari Audio si Video, OSD, Fus Orar, Panoul Fata, Optiuni Energie"
+
+msgid "Adjust automatic standby and poweroff"
+msgstr ""
+
+msgid "Video output, Resolution, Screen format etc."
+msgstr "Iesire Video, Rezolutie, Format Ecran"
+
+msgid "Audio output and format, Audio/Video delay etc."
+msgstr "Iesire Audio si format, intarziere Audio/Video, etc"
+
+msgid "Picture adjustments: Brightness, Contrast, Gamma"
+msgstr "Ajustari imagine: Stralucire, Contrast, Gamma"
+
+msgid "Set your language and on-screen-display options"
+msgstr "Seteaza Limba favorita si optiuni afisare meniuri"
+
+msgid "Time zone and source for automatic setting of system time"
+msgstr "Fus Orar si sursa pentru setari automate pentru ceas "
+
+msgid "LED color and brightness, LCD brightness"
+msgstr "Culoare Led si Stralucire, Stralucire LCD"
+
+msgid "Adjust Energy saving options"
+msgstr "Ajustare optiuni salvare energie"
+
+msgid "Set up local Network and Internet, connect Network storage"
+msgstr "Setari Retea locala si Internet, conectare stocare prin Retea"
+
+msgid "Setup Wireless network: SSID, Encryption etc."
+msgstr "Setare Retea fara fir: SSID, Encriptare, etc"
+
+msgid "Set up LAN ports, DHCP/IP settings"
+msgstr "Setare porturi LAN, Setari DHCP/IP"
+
+msgid "Host name, Domain, Gateway, Proxy, Wake-on-LAN, Dynamic DNS Services"
+msgstr "Nume Gazda, Domeniu, Poarta Acces, Proxy, Pornire prin Retea, Servicii DNS"
+
+msgid "Search and administer network shares"
+msgstr "Cauta si administreaza partajari prin retea"
+
+msgid "Setup UMTS dial-up network connection"
+msgstr "Setare conexiune dial-up prin UMTS"
+
+msgid "Settings for Timeshift, Recordings, Playback, Media storage"
+msgstr "Setari Timeshift, Inregistrari, Redare, Stocare Media"
+
+msgid "Settings for Timeshift"
+msgstr "Setari Timeshift"
+
+msgid "Lead in & out time, VPS, Automatic marking of ads, Audio tracks"
+msgstr "Timpi intrare & iesire, VPS, Marcare automata reclame, Piste Audio"
+
+msgid "Playback options for TV recordings"
+msgstr "Optiuni Redare pentru Inregistrari"
+
+msgid "Set up drive for Media files and Recordings"
+msgstr "Setare drive pentru fisiere Media si Inregistrari"
+
+msgid "Configure background services and tasks"
+msgstr "Configurare servicii fundal si sarcini"
+
+msgid "Channel scan & lists, DiSEqC settings, Common Interface, Signal information"
+msgstr "Cautare Canale & liste, Setari DiSEqC, Interfata Comuna, Informatii Semnal"
+
+#, fuzzy
+msgid "Channel lists, DiSEqC settings, Signal information"
+msgstr "Cautare Canale & liste, Setari DiSEqC, Interfata Comuna, Informatii Semnal"
+
+msgid "Automatic or manual channel scan"
+msgstr "Cautare canale automat sau manual"
+
+msgid "Choose a preconfigured channel list"
+msgstr "Alege o lista de canale preconfigurata"
+
+msgid "Receiveable satellite positions, Number of active tuners / LNBs"
+msgstr "Poziti sateliti receptionabili, Numar de tunere active / LNB-uri"
+
+msgid "Test and adjust your rotor"
+msgstr "Testeaza si ajusteaza rotorul(motorul)"
+
+msgid "Overview and configuration of Common Interface modules"
+msgstr "Rezumat si configuratie module Interfata Comuna"
+
+msgid "Details on Signal strength & quality, Video & audio bit rates etc."
+msgstr "Detalii tarie Semnal & Calitate, Bitrate Audio & Video, etc."
+
+msgid "Advanced setup for system programs"
+msgstr "Setari avansate pentru programele de sistem"
+
+msgid "Information on Hardware, Network and System health"
+msgstr "Informatii despre Hardware, Retea si Sistem"
+
+msgid "Settings needed to serve Reel NetClients"
+msgstr ""
+
+#, fuzzy
+msgid "Enable NetCeiver bridge"
+msgstr "Puntea NetCeiver"
+
+#, fuzzy
+msgid " Bridge NetCeiver to"
+msgstr "NetCeiver"
+
+msgid "Use VLAN for NetCeiver"
+msgstr ""
+
+msgid " VLAN ID"
+msgstr ""
+
+msgid "Prepare harddisk for use in the ReelBox"
+msgstr ""
+
+msgid "Can cause problems when MultiRoom"
+msgstr ""
+
+msgid "is on and should not be activated."
+msgstr ""
+
+msgid "Free To Air"
+msgstr ""
+
+msgid "no"
+msgstr "nu"
+
+msgid "internal CAM"
+msgstr ""
+
+msgid "No CI at"
+msgstr ""
+
+msgid "upper slot"
+msgstr ""
+
+msgid "lower slot"
+msgstr ""
+
+msgid "encrypted"
+msgstr ""
+
+msgid "Setup.OSD$Language"
+msgstr ""
+
+msgid "Setup.OSD$Optional languages"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "Setup.OSD$ Optional language"
+msgstr ""
+
+msgid "Permanent Timeshift"
+msgstr ""
+
+#, fuzzy
+msgid "Info:"
+msgstr "Intr-un"
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr ""
+
+msgid "Channel list"
+msgstr ""
+
+msgid "Title$Menu"
+msgstr ""
+
+msgid "Disk"
+msgstr ""
+
+msgid "free"
+msgstr ""
+
+msgid "Title$Main Menu"
+msgstr ""
+
+msgid " Stop replaying"
+msgstr ""
+
+msgid "Button$Recordings"
+msgstr ""
+
+msgid "EPG"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Button$Multifeed"
+msgstr ""
+
+msgid " Cancel editing"
+msgstr ""
+
+msgid "Functions"
+msgstr "Functii"
+
+msgid "Stop recording?"
+msgstr ""
+
+msgid "Cancel editing?"
+msgstr ""
+
+msgid "yes"
+msgstr "da"
+
+msgid "channelinfo"
+msgstr ""
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Favourites"
+msgstr ""
+
+msgid "Favourit folders"
+msgstr ""
+
+msgid "channellist"
+msgstr ""
+
+msgid "current bouquet"
+msgstr ""
+
+msgid "bouquet list"
+msgstr ""
+
+msgid "Setup.OSD$OSD color"
+msgstr ""
+
+msgid "Setup.OSD$Default font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Random menu placement"
+msgstr ""
+
+msgid "Setup.OSD$Show preview videos"
+msgstr ""
+
+msgid "Setup.OSD$Show expert menu options"
+msgstr ""
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr ""
+
+msgid "Setup.OSD$  Program +/- keys"
+msgstr ""
+
+msgid "Channell./Bouquets"
+msgstr ""
+
+msgid "Expertmenu"
+msgstr ""
+
+msgid "OSD Settings - Expert options"
+msgstr ""
+
+msgid "Setup.OSD$Default font"
+msgstr ""
+
+msgid "Setup.OSD$Small font"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font"
+msgstr ""
+
+msgid "Setup.OSD$Small font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Fixed font size (%)"
+msgstr ""
+
+msgid "Setup.OSD$Use small font"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "unlimited"
+msgstr ""
+
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr ""
+
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr ""
+
+msgid "Setup.Recording$Mark Commercials after Recording"
+msgstr ""
+
+msgid "Setup.Recording$  Prefer new 'markad'"
+msgstr ""
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "at the end"
+msgstr ""
+
+msgid "to bouquets"
+msgstr ""
+
+msgid "permanent"
+msgstr ""
+
+msgid "daily"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Initial Volume (%)"
+msgstr ""
+
+msgid "EPG$  Last channel for EPG scan"
+msgstr ""
+
+msgid "EPG$  Start new scan after"
+msgstr ""
+
+msgid "EPG$  Max concurrent transponders"
+msgstr ""
+
+msgid "EPG$  Max busy devices"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr ""
+
+msgid "Button$Scan EPG"
+msgstr ""
+
+msgid "EPG scan started in background"
+msgstr ""
+
+msgid "With Permanent Timeshift you can pause a running broadcast and proceed it later on."
+msgstr ""
+
+msgid "Permanent Timeshift has been disabled."
+msgstr ""
+
+msgid "This plugin has no setup parameters!"
+msgstr ""
+
+msgid "System Information"
+msgstr "Informatii Sistem"
+
+msgid "Network"
+msgstr "Retea"
+
+msgid "Signal"
+msgstr "Semnal"
+
+msgid "Unknown device"
+msgstr ""
+
+msgid "Device Type:"
+msgstr "Tip Dispozitiv:"
+
+msgid "Software Version:"
+msgstr "Versiune Software:"
+
+msgid "Software date:"
+msgstr "Data Software:"
+
+#, fuzzy
+msgid "Stand-alone"
+msgstr "De sine statator"
+
+#, fuzzy
+msgid "Client"
+msgstr "Client"
+
+msgid "Server"
+msgstr "Server"
+
+#, fuzzy
+msgid "Hotel"
+msgstr "Modul Hotel"
+
+#, fuzzy
+msgid "(MultiRoom inactive)"
+msgstr "Setari pentru mai multe camere"
+
+#, fuzzy
+msgid "MultiRoom Mode:"
+msgstr "Setari pentru mai multe camere"
+
+msgid "Tuner Slot 1:"
+msgstr "Tuner Slot 1:"
+
+msgid "Tuner Slot 2:"
+msgstr "Tuner Slot 2:"
+
+#, c-format
+msgid "Tuners Slot %d:"
+msgstr "Tunere Slot %d:"
+
+msgid "Unconfigured"
+msgstr ""
+
+msgid "RAM:"
+msgstr "RAM:"
+
+#, fuzzy
+msgid "Recording capacity"
+msgstr "Numai Inregistrare"
+
+msgid "Free"
+msgstr "Liber"
+
+#, c-format
+msgid "Drive %d:"
+msgstr "Drive %d:"
+
+msgid "installed"
+msgstr "instalat"
+
+msgid "not installed"
+msgstr "neinstalat"
+
+msgid "CPU Temperature:"
+msgstr "Temperatura Procesor:"
+
+msgid "Mainboard Temp.:"
+msgstr "Temperatura Placa de Baza:"
+
+msgid "Details"
+msgstr ""
+
+msgid "Windows workgroup:"
+msgstr "Grupul de lucru Windows:"
+
+msgid "Hostname:"
+msgstr "Nume Gazda:"
+
+msgid "Interface Name:"
+msgstr "Nume Interfata:"
+
+#, fuzzy
+msgid "   IP Address:"
+msgstr "   Adresa IP:"
+
+#, fuzzy
+msgid "   Network mask:"
+msgstr "   Masca retea:"
+
+#, fuzzy
+msgid "   IPv6 Address:"
+msgstr "   Adresa IP:"
+
+msgid "   Hardware Address:"
+msgstr "   Adresa Hardware:"
+
+msgid "Online connectivity:"
+msgstr ""
+
+#, fuzzy
+msgid "checking"
+msgstr "Foloseste blocare"
+
+msgid "online"
+msgstr "online"
+
+msgid "DNS failure"
+msgstr ""
+
+#, fuzzy
+msgid "routing failure"
+msgstr "Montarea dispozitivului a esuat"
+
+msgid "failure"
+msgstr ""
+
+msgid "enabled"
+msgstr "activat"
+
+msgid "disabled"
+msgstr "dezactivat"
+
+msgid "samba not installed!"
+msgstr "samba nu este instalat!"
+
+msgid "not set"
+msgstr "nu este setat"
+
+#, fuzzy
+msgid "Do you want store recordings here?"
+msgstr "Vreti sa utilizati contul 'Gazda ?'"
+
+msgid "Permament timeshift disabled!"
+msgstr "Timeshift permanet dezactivat!"
+
+msgid "Settings stored"
+msgstr "Setari memorate"
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Really reset?"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Use the red button to reset to factory defaults."
+msgstr ""
+
+msgid "All settings will be lost!"
+msgstr ""
+
+msgid "Resetting ReelBox to factory defaults..."
+msgstr ""
+
+#, fuzzy
+msgid "Rebooting..."
+msgstr "Repornire!"
+
+#, fuzzy
+msgid "MultiRoom - Error!"
+msgstr "Setari pentru mai multe camere"
+
+msgid "Delete Menu?"
+msgstr "Sterg Meniu ?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Sus/Jos pentru noua locatie - OK pentru a muta"
+
+msgid "Into"
+msgstr "Intr-un"
+
+msgid "Before"
+msgstr "Inainte"
+
+msgid "After"
+msgstr "Dupa"
+
+msgid "Create"
+msgstr "Creaza"
+
+msgid "Edit"
+msgstr "Editare"
+
+msgid "Delete"
+msgstr "Dterge"
+
+msgid "Move"
+msgstr "Muta"
+
+msgid "Broadcast"
+msgstr "Transmisie"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "Please select your timezone"
+msgstr "Va rog selectati Fusul Orar"
+
+msgid "Area"
+msgstr "Aria"
+
+msgid "City/Region"
+msgstr "Oras/Regiune"
+
+msgid "Setup.EPG$Set system time by"
+msgstr "Seteaza ceasul sistem dupa"
+
+msgid "Setup.EPG$Use time from transponder"
+msgstr "Foloseste ceasul de pe transponder"
+
+#, fuzzy
+msgid "Setting changes - please wait..."
+msgstr "Setez modificari - va rog asteptati"
+
+msgid "Error - changes unsuccessful"
+msgstr "Eroare - nu sau efectuat modificarile"
+
+msgid "Changes done"
+msgstr "Modificari efectuate"
+
+msgid "on"
+msgstr "pornit"
+
+msgid "Help"
+msgstr "Ajutor"
+
+msgid "No help available"
+msgstr "Ajutorul nu este disponibil"
+
+msgid "Configuration error"
+msgstr "Eroare configuratie"
+
+msgid "Media Device"
+msgstr "Dispozitiv Media"
+
+msgid "Wireless LAN"
+msgstr "Retea fara fir (WLAN)"
+
+msgid "No wlan device found!"
+msgstr "Nu am gasit nici-un dispozitiv WLAN!"
+
+msgid "Network Drives"
+msgstr "Unitati de disc prin Retea"
+
+msgid "Database is being initialized, retry later please!"
+msgstr ""
+
+msgid "Database Setup"
+msgstr ""
+
+msgid "Menu Edit"
+msgstr "Meniul Editare"
+
+msgid "Please stop recording and retry"
+msgstr ""
+
+msgid "Title$Setup"
+msgstr "Setup"
+
+msgid "Error in configuration files"
+msgstr "Eroare in fisierele de configurare"
+
+msgid "Wrong PIN entered"
+msgstr "Ati introdus un PIN gresit"
+
+msgid "Plugins Enable / Disable"
+msgstr "Activeaza / Dezactiveaza Plugin-uri"
+
+msgid "Loading external plugins"
+msgstr "Incarca pluginuri externe"
+
+msgid "protected"
+msgstr "protejat"
+
+msgid "Plugin-Parameter"
+msgstr "Parametru-Plugin"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid " abcdefghijklmnopqrstuvwxyz0123456789-.!/"
+msgstr " abcdefghijklmnopqrstuvwxyz0123456789-.!/"
+
+msgid "change menu name"
+msgstr "schimba nume meniu"
+
+msgid "MultiRoom Setup"
+msgstr "Setari pentru mai multe camere"
+
+#, fuzzy
+msgid "MultiRoom Setup (Expert)"
+msgstr "Setari pentru mai multe camere"
+
+msgid "MultiRoom Setup (Tuner)"
+msgstr ""
+
+msgid "MultiRoom-System"
+msgstr "Sistem - Multicamere"
+
+msgid "MultiRoom Mode"
+msgstr ""
+
+msgid "In Server Mode your recordings and NetCeiver/tuners are available to all clients on the network"
+msgstr ""
+
+msgid "MultiRoom option not available. Plugin is missing."
+msgstr "Optiunea pentru mai multe camere nu este disponibila.Lipseste Pluginul."
+
+msgid "Please press OK to continue"
+msgstr "Apasa OK pentru a continua"
+
+msgid "TV-Output on Avantgarde"
+msgstr "Iesirea Tv la Avantgarde"
+
+msgid "Number of NetClients"
+msgstr "Numarul NetClient"
+
+msgid "Connection via"
+msgstr ""
+
+#, fuzzy
+msgid "Bridge NetCeiver to"
+msgstr "NetCeiver"
+
+msgid "Use VLAN"
+msgstr ""
+
+msgid "VLAN ID"
+msgstr ""
+
+#, fuzzy
+msgid "NetClient-Mode"
+msgstr "Client"
+
+msgid "Receiver-Type"
+msgstr ""
+
+#, fuzzy
+msgid "Stream-Server"
+msgstr "Server Net"
+
+#, fuzzy
+msgid "Recording-Server"
+msgstr "Inregistrari"
+
+#, fuzzy
+msgid "Error: Database Server is not installed!"
+msgstr "neinstalat"
+
+#, fuzzy
+msgid "Error: Database vdr doesn't exist!"
+msgstr "neinstalat"
+
+msgid "Error: my.cnf is not set properly! (bind-address wrong)"
+msgstr ""
+
+msgid "Error: Connection to database failed!"
+msgstr ""
+
+msgid "Error: Cannot login with reeluser!"
+msgstr ""
+
+msgid ""
+"Error: MySQL-Server is not installed.\n"
+"\n"
+"Please press \"Fix it\" to install MySQL-Server. It may take some minutes."
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"\n"
+"Please press \"Fix it\" to initialize the database."
+msgstr ""
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"Access will be possible from this box but not from others in the network. \n"
+"\n"
+"Please press \"Fix it\" to make database accessible from network."
+msgstr ""
+
+msgid "Error: Connection to DB failed. Check if mysqld is running"
+msgstr ""
+
+msgid ""
+"Error: Cannot login with reeluser to mysql.\n"
+"\n"
+"Please press \"Fix it\" to create account reeluser."
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"\n"
+"Please press \"Fix it\" to create missing tables."
+msgstr ""
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"\n"
+"Please press \"Fix it\" to set permissions for reeluser."
+msgstr ""
+
+msgid ""
+"Error: An unknown error occured.\n"
+"Try to reset Database."
+msgstr ""
+
+msgid "Fix it"
+msgstr ""
+
+msgid "Please wait..."
+msgstr "Va rog Ateptati..."
+
+msgid "MySQL-Server successfully installed."
+msgstr ""
+
+msgid "Couldn't install MySQL-Server!"
+msgstr ""
+
+#, fuzzy
+msgid "Database successfully created."
+msgstr "Setarile WLAN memoratew cu succes"
+
+msgid "Couldn't create Database!"
+msgstr ""
+
+#, fuzzy
+msgid "Database successfully configured."
+msgstr "Setarile WLAN memoratew cu succes"
+
+msgid "Couldn't configure Database!"
+msgstr ""
+
+#, fuzzy
+msgid "Account reeluser successfully created."
+msgstr "Setarile WLAN memoratew cu succes"
+
+msgid "Couldn't create reeluser account!"
+msgstr ""
+
+#, fuzzy
+msgid "Missing tables successfully created."
+msgstr "Setarile WLAN memoratew cu succes"
+
+msgid "Couldn't create missing tables!"
+msgstr ""
+
+msgid "Error: Initializing database failed!"
+msgstr ""
+
+msgid "Error: Connecting database failed!"
+msgstr ""
+
+msgid "Error: Clearing database failed!"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "Modificari salvate"
+
+#, fuzzy
+msgid "direct"
+msgstr "Editare"
+
+#, fuzzy
+msgid "network"
+msgstr "Retea"
+
+msgid "Tuner"
+msgstr ""
+
+msgid "Expert"
+msgstr "Expert"
+
+msgid "x Satellite "
+msgstr ""
+
+msgid "x Terrestrial "
+msgstr ""
+
+msgid "x Cable "
+msgstr ""
+
+msgid "Available tuners in MultiRoom Network"
+msgstr ""
+
+msgid ""
+"Error: MySQL-Server is not installed.\n"
+"Disable MultiRoom, then enable it again to try the install again. Or try installing the package 'mysql-server' manually"
+msgstr ""
+
+msgid ""
+"Error: Database is not installed properly.\n"
+"Disable MultiRoom, then enable it again to try to initialize the database again. "
+msgstr ""
+
+msgid ""
+"Error: Permissions to access the database are not set properly.\n"
+"Access will be possible from this box but not from others in the network. Change 'bind-address' in /etc/mysql/my.cnf."
+msgstr ""
+
+msgid "Error: Cannot login with reeluser to mysql. Try re-installing mysql-server."
+msgstr ""
+
+msgid ""
+"Error: An unknown error occured.\n"
+"Disable MultiRoom, manually deinstall mysql-server, then enable MultiRoom again."
+msgstr ""
+
+msgid "Using mixed tuner types with NetClients is not"
+msgstr "Folosirea de tipuri mixte de tunere, cu NetClient"
+
+msgid "yet supported."
+msgstr "nu este inca, suportat(a)."
+
+msgid "Enable the MultiRoom-System to connect NetClients in the network with your ReelBox Avantgarde and to provide TV-signals to the NetClients."
+msgstr ""
+
+msgid "TV-Programs are now available in your network. Please configure your network components according to the installation guide."
+msgstr ""
+
+msgid "MultiRoom setup will now be completed if you confirm the settings with 'Ok'. You can then continue with the installation of the NetClients."
+msgstr ""
+
+msgid "Caution: For this configuration there are not"
+msgstr "Atentie: Pentru aceasta configuratie nu sunt"
+
+msgid "enough tuners available for LiveTV and recording."
+msgstr "destule tunere disponibile pentru Live-Tv si inregistrari"
+
+#, fuzzy
+msgid "simultaneously."
+msgstr "utilizati simultan."
+
+#, fuzzy
+msgid "TV-Output will be disabled after 5 minutes. All tuners are exclusively available to NetClients."
+msgstr "Iesirea Tv a Avantgarde va fi dezactivata dupa"
+
+#, fuzzy
+msgid "enough tuners for providing"
+msgstr "destule tunere a furniza simultan semnale"
+
+#, fuzzy
+msgid "TV-Signals for all NetClients simultaneously."
+msgstr "Tv pentru toti Clierntii Net."
+
+msgid "Caution: In the selected configuration there are"
+msgstr "Atentie: Pentru configuratia selectata nu sant "
+
+msgid "not enough tuners available to be able to provide"
+msgstr "suficiente tunere pentru a furniza simultan semnale"
+
+#, fuzzy
+msgid "TV-signals to all NetClients at the same time."
+msgstr "Tv pentru toti Clierntii Net."
+
+#, fuzzy
+msgid "Please extend the number of tuners to be able"
+msgstr "tunere pentru a utiliza toti Clentii Net simultan."
+
+msgid "to use all NetClients simultaneously."
+msgstr "utilizati simultan."
+
+#, fuzzy
+msgid "Using this configuration i.e. one of"
+msgstr "Cu configuratia selectata urmatoarele actiuni"
+
+#, fuzzy
+msgid "these actions is possible:"
+msgstr "posibilitati de actiune:"
+
+msgid "1x TV-Recording through NetClient or"
+msgstr "1x Inregistrare Tv prin NetClient sau"
+
+msgid "1x Live-TV through NetClient"
+msgstr "1x Live-TV prin NetClient"
+
+#, fuzzy
+msgid "Using this configuration these simultanous"
+msgstr "Cu configuratia selectata urmatoarele actiuni"
+
+#, fuzzy
+msgid "actions are possible:"
+msgstr "posibilitati de actiune:"
+
+msgid "TV-Recordings through NetClients"
+msgstr "Inregistrarea Tv prin NetClient"
+
+#, fuzzy
+msgid " or Avantgarde"
+msgstr "Iesirea Tv la Avantgarde"
+
+msgid "Live-TV through NetClients"
+msgstr "Live-Tv prin NetClienti"
+
+msgid "NetworkConnectPlur$Please connect your NetClients with the network switch."
+msgstr ""
+
+msgid "NetworkConnectSing$Please connect your NetClient with the network switch."
+msgstr ""
+
+#, c-format
+msgid "DirectConnect$Please connect your NetClient to the port labeled \"Ethernet %i\"."
+msgstr ""
+
+msgid "Number of tuners assigned locally:"
+msgstr ""
+
+msgid "Satellite (DVB-S)"
+msgstr ""
+
+msgid "Satellite (DVB-S2)"
+msgstr ""
+
+#, fuzzy
+msgid "Cable"
+msgstr "activat"
+
+msgid "Terrestrial"
+msgstr ""
+
+msgid "Tuners available for the whole MultiRoom-System:"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid ""
+"bridge_on$TV-data is now available in the network for the NetClients.\n"
+"Please note that you also have to enable VLAN and configure the switches inside your network if you experience problems with your network."
+msgstr ""
+
+msgid ""
+"bridge_off$Activate the network bridge to provide TV-signals to your home network.\n"
+"Warning: As soon as you activate the bridge, network components like WLAN routers will possibly not work correct any longer. Thus also enable VLAN and configure your switches according to the installation guide."
+msgstr ""
+
+msgid "Dummytext$"
+msgstr ""
+
+msgid "vlan_on$VLAN ist now active. You can now set up your network switches."
+msgstr ""
+
+msgid ""
+"vlan_off$VLANs are used to separate the network traffic into multiple virtual Networks. With this option you can limit the traffic of the NetCeiver to one VLAN.\n"
+"To reasonably use VLANs you also need VLAN capable switches. You can receive preconfigured switches for the Reel MultiRoom System at your local dealer."
+msgstr ""
+
+msgid "bridge_id$Each VLAN is referenced by its own unique ID. It is recommended to use the ID '2' for NetCeiver and NetClients."
+msgstr ""
+
+msgid "Number of tuners to use on your Avantgarde:"
+msgstr ""
+
+#, fuzzy
+msgid "Not available!"
+msgstr "Ajutorul nu este disponibil"
+
+#, fuzzy
+msgid "No Avantgarde"
+msgstr "Nici-un NetServer/Avantgarde"
+
+msgid "Search"
+msgstr "Cautare"
+
+#, fuzzy
+msgid "MultiRoom is inactive."
+msgstr "Setari pentru mai multe camere"
+
+msgid "Connection to ReelBox Avantgarde is disabled. Recording will be done locally."
+msgstr ""
+
+msgid "MultiRoom is disabled and no harddisk was found - only LiveTV is available!"
+msgstr ""
+
+#, fuzzy
+msgid "Recording and timeshift are disabled."
+msgstr "Timeshift permanet dezactivat!"
+
+msgid "MultiRoom is active. Recording will be done by the ReelBox Avantgarde."
+msgstr ""
+
+msgid ""
+"Error: The ReelBox Avantgarde is not accessible now.\n"
+"Possible reasons are: network hardware error, wrong network settings, Avantgarde is off.\n"
+"Please check the system settings and the network or select a different recording server."
+msgstr ""
+
+#, fuzzy
+msgid "If confirm now, MultiRoom will be deactivated."
+msgstr "Setari pentru mai multe camere"
+
+msgid "Connection to the ReelBox Avantgarde will be disabled. Recording will be done locally."
+msgstr ""
+
+msgid "If confirm now, MultiRoom will be disabled. No harddisk was found - only LiveTV will be available."
+msgstr ""
+
+#, fuzzy
+msgid "Recording and timeshift will be disabled."
+msgstr "Timeshift permanet dezactivat!"
+
+msgid "If confirm now, MultiRoom will be activated. Recording will be done by the ReelBox Avantgarde."
+msgstr ""
+
+#, fuzzy, c-format
+msgid "The ReelBox Avantgarde with the IP address \"%s\" will be used for MultiRoom services."
+msgstr "Va rog selectati un NetServer/Avantgarde:"
+
+#, fuzzy
+msgid "Please select a ReelBox Avantgarde."
+msgstr "Va rog selectati un NetServer/Avantgarde:"
+
+msgid "DummyText RECEIVER_TYPE_TEXT MCLI$"
+msgstr ""
+
+msgid "DummyText RECEIVER_TYPE_TEXT Streamdev$"
+msgstr ""
+
+msgid "Error!"
+msgstr ""
+
+msgid "Please check the network settings and the network connection else please search in network."
+msgstr ""
+
+msgid "Initializing database..."
+msgstr ""
+
+msgid "Save changes?"
+msgstr ""
+
+#, fuzzy
+msgid "Storing settings - please wait..."
+msgstr "Salvez setari, va rog asteptati..."
+
+msgid "Invalid settings: Client without Server!"
+msgstr "Setari invalide: Client fara Server!"
+
+msgid "Some Timer is being edited, cannot save settings."
+msgstr ""
+
+msgid "Internet connection not available!"
+msgstr ""
+
+#, fuzzy
+msgid "Saving Settings..."
+msgstr "Setari Sistem"
+
+#, fuzzy
+msgid "Restarting network..."
+msgstr "Rescanare Retea"
+
+msgid "Database status"
+msgstr ""
+
+msgid "Clear Database"
+msgstr ""
+
+msgid "Clear Table ..."
+msgstr ""
+
+msgid "Change Database Password ..."
+msgstr ""
+
+msgid "Local IP-Address unknown!"
+msgstr ""
+
+#, fuzzy
+msgid "MultiRoom (inactive)"
+msgstr "Setari pentru mai multe camere"
+
+#, fuzzy
+msgid "Error: Connection to ReelBox Avantgarde failed!"
+msgstr "int-o retea cu RellBox Avantgarde si sa furnizeze"
+
+#, fuzzy
+msgid "Wakeup Avantgarde"
+msgstr "Nici-un NetServer/Avantgarde"
+
+#, fuzzy
+msgid "Please enter the number of tuners to use:"
+msgstr "Va rog introduceti key-a pentru encriptare"
+
+msgid "Error! Something went wrong in the Avahi-Plugin!"
+msgstr ""
+
+msgid "Selection"
+msgstr ""
+
+#, fuzzy
+msgid "search"
+msgstr "Cautare"
+
+#, fuzzy
+msgid "Following ReelBox Avantgarde is found in network."
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+#, fuzzy
+msgid "Following ReelBox Avantgarde are found in network."
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+#, fuzzy
+msgid "Please select a ReelBox Avantgarde for MultiRoom services:"
+msgstr "Va rog selectati un NetServer/Avantgarde:"
+
+#, fuzzy
+msgid "Note:"
+msgstr "Modul Hotel"
+
+#, fuzzy
+msgid "No ReelBox Avantgarde found in network."
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+msgid "Rescan"
+msgstr "Rescanare"
+
+#, fuzzy, c-format
+msgid "The ReelBox Avantgarde (%s) which is currently configured as MultiRoom Server was not found on the network."
+msgstr "Va rog selectati un NetServer/Avantgarde:"
+
+msgid "If your ReelBox Avantgarde is configured to use DHCP, we strongly recommend using fixed IP addresses."
+msgstr ""
+
+#, fuzzy
+msgid "No ReelBox Avantgarde is currently configured."
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+#, fuzzy
+msgid "Search for ReelBox Avantgarde on the network"
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+#, fuzzy
+msgid "Continue with MultiRoom deactivated"
+msgstr "Setari pentru mai multe camere"
+
+msgid "Please test:"
+msgstr ""
+
+#, fuzzy
+msgid "Please select a share:"
+msgstr "Va rog selectati un NetServer/Avantgarde:"
+
+#, fuzzy
+msgid "Please press OK to store settings."
+msgstr "Apasa OK pentru a continua"
+
+msgid "AllowedCharsNetShares$ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_-.,#~^$+@{}"
+msgstr ""
+
+msgid "Currently no active connections"
+msgstr "Acum, nu sant conexiuni active"
+
+msgid "Do you want to use Network Shares? Press OK."
+msgstr "Vreti sa folositi partajari ptin Retea ? Apasati OK."
+
+msgid "Button$Disable"
+msgstr "Dezactivare"
+
+msgid "Button$Enable"
+msgstr "Activare"
+
+msgid "Do you want to remove the connection?"
+msgstr "Vreti sa stergeti partajarea ?"
+
+msgid "Recording won't be possible on this share. Continue?"
+msgstr ""
+
+msgid "Scanning..."
+msgstr "Scanez..."
+
+msgid "Scanning complete."
+msgstr "Scanare completa."
+
+msgid "Scanning failed!"
+msgstr "Scanare esuata!"
+
+msgid "Found shares:"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "Host"
+msgstr "Gazda"
+
+msgid "Share name"
+msgstr "Nume partajare"
+
+msgid "Share Number"
+msgstr "Numar partajare"
+
+msgid "Display name"
+msgstr "Afisare nume"
+
+msgid "Username"
+msgstr "Nume Utilizator"
+
+msgid "Password"
+msgstr "Parola"
+
+msgid "Pictures"
+msgstr "Poze"
+
+msgid "Music"
+msgstr "Muzica"
+
+msgid "Videos"
+msgstr "Video"
+
+msgid "Recordings"
+msgstr "Inregistrari"
+
+msgid "Do you want to use the guest account?"
+msgstr "Vreti sa utilizati contul 'Gazda ?'"
+
+msgid "NFS Version"
+msgstr "Versiune NFS"
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "Block size"
+msgstr "Dimensiune Bloc"
+
+msgid "hard/soft"
+msgstr "hard/soft"
+
+msgid "soft"
+msgstr "soft"
+
+msgid "hard"
+msgstr "hard"
+
+msgid "Lock"
+msgstr "Incuie/Blocheaza"
+
+msgid "Read/Write"
+msgstr "Citeste/Scrie"
+
+msgid "Readonly"
+msgstr "Numai citire"
+
+msgid "Read&Write"
+msgstr "Citeste&Scrie"
+
+msgid "Please enter Username & Password,"
+msgstr "Va rog introduceti numele de Utilizator & Parola"
+
+msgid "which is needed for browsing the shares."
+msgstr "care sunt necesare pentru a vedea partajarile."
+
+msgid "Please enter username & password!"
+msgstr "Va rog introduceti numele de Utilizator & Parola!"
+
+msgid "Please select the device for storing your media files:"
+msgstr "Va rog selectati dispozitivul pentru stocare fisiere Media:"
+
+msgid "Drive\tDevice\t\tSize\tFree\tType"
+msgstr ""
+
+#, fuzzy
+msgid "Recording"
+msgstr "Inregistrari"
+
+msgid "All media"
+msgstr ""
+
+msgid "(removable)"
+msgstr "(mobil)"
+
+msgid "MultiRoom Server"
+msgstr ""
+
+#, fuzzy
+msgid "Note: MultiRoom will be disabled."
+msgstr "Setari pentru mai multe camere"
+
+msgid "Unmount"
+msgstr ""
+
+msgid "Mount"
+msgstr ""
+
+msgid "timeshift off"
+msgstr "timeshift oprit"
+
+msgid "timeshift on"
+msgstr "timeshift pornit"
+
+msgid "Resize partition"
+msgstr "Redimensionare partitie"
+
+msgid "Rebooting!"
+msgstr "Repornire!"
+
+msgid "Unable to mount. Missing command"
+msgstr ""
+
+msgid "unmounting"
+msgstr ""
+
+msgid "mounting"
+msgstr ""
+
+msgid "Warning, recording is running!"
+msgstr "Avertisment. aveti o inregistreare in curs!"
+
+msgid "Mounting device failed"
+msgstr "Montarea dispozitivului a esuat"
+
+msgid "Warning, device may be to small for recordings!"
+msgstr "Atentie, acest dispozitiv este prea mic pentru inregistrari!"
+
+msgid "Warning, few space is left on this device!"
+msgstr "Atentie, pe acest dispozitiv aveti spatiul foarte redus!"
+
+#, fuzzy
+msgid "Resize partition now?"
+msgstr "Redimensionare partitie"
+
+#, fuzzy
+msgid "Resizing - please wait..."
+msgstr "Redimensionez... va rog asteptati!"
+
+#, fuzzy
+msgid "Do you want to reboot the ReelBox now?"
+msgstr "Vreti sa stergeti partajarea ?"
+
+msgid "Resizing failed!"
+msgstr "Redimensionare esuata!"
+
+msgid "Warning, device may be too small for recording!"
+msgstr "Avertisment, dispozitivul este prea mic pentru inregistrare!"
+
+msgid "Load settings, please wait..."
+msgstr "Incarc setari, va rog asteptati..."
+
+msgid "Scanning networks, please wait..."
+msgstr "Scanez Reteaua , va rog asteptati..."
+
+#, fuzzy
+msgid "Following hardware was found."
+msgstr "Nu am gasit nici-un NetServer sau Avantgarde!"
+
+#, fuzzy
+msgid "Please choose a WLAN device:"
+msgstr "Va rog alegeti dispozitivul WLAN"
+
+msgid "Rescan WLAN"
+msgstr "Rescanare WLAN"
+
+msgid "Skip"
+msgstr ""
+
+msgid "Device"
+msgstr "Dispozitiv"
+
+msgid "Interface"
+msgstr "Interfata"
+
+msgid "Sorry, no WLAN networks found. Check the antenna, check WLAN settings and try to search again."
+msgstr ""
+
+msgid "Following WLAN networks are found."
+msgstr ""
+
+#, fuzzy
+msgid "Please choose a WLAN network:"
+msgstr "Va rog alegeti reteaua WLAN"
+
+msgid "Name"
+msgstr ""
+
+#, fuzzy
+msgid "Network:"
+msgstr "Retea"
+
+msgid "(E)SSID"
+msgstr "(E)SSID"
+
+#, fuzzy
+msgid "Security:"
+msgstr "Securitate"
+
+msgid "Type"
+msgstr ""
+
+msgid "WEP-Key"
+msgstr "Key-a WEP"
+
+msgid "WPA-Key"
+msgstr "Key-a WPA"
+
+msgid "WPA2-Key"
+msgstr "Key-a WPA2"
+
+msgid "WLAN settings successfully stored"
+msgstr "Setarile WLAN memoratew cu succes"
+
+msgid "Security"
+msgstr "Securitate"
+
+msgid "IP Address"
+msgstr "Adresa IP"
+
+msgid "Subnet"
+msgstr "Subnet"
+
+msgid ""
+"Please press OK to store the settings now.\n"
+"\n"
+"You can also manually set an IP address here."
+msgstr ""
+
+msgid "Running DHCP, please wait..."
+msgstr "Rulez DHCP, va rog asteptati..."
+
+msgid "Retrieving IP from DHCP failed!"
+msgstr "Esuare obtinere IP de la DHCP!"
+
+msgid "Storing settings, please wait..."
+msgstr "Salvez setari, va rog asteptati..."
+
+msgid "Keylength must be at least 10 chars!"
+msgstr "Lungime Key-e trebuie sa fie cel putin 10 caractere!"
+
+msgid "Keylength must be at least 8 chars!"
+msgstr "Lungime Key-e trebuie sa fie cel putin 8 caractere!"
+
+msgid "Authentication failed"
+msgstr "Esuare Autentificare"
+
+msgid "Please enter SSID!"
+msgstr "Va rog introduceti SSID!"
+
+msgid "Store settings?"
+msgstr "Salvez setari ?"
+
+msgid "Wireless LAN: Functions"
+msgstr "Wireless LAN: Functii"
+
+msgid "Retrieve DHCP"
+msgstr "Obtine DHCP"
+
+msgid "Reset WLAN settings"
+msgstr "Resetare setari WLAN"
+
+msgid "Turn WLAN off"
+msgstr "Opreste WLAN"
+
+msgid "Open"
+msgstr "Deschide"
+
+#~ msgid "Active tuners"
+#~ msgstr "Tunere active"
+
+#~ msgid "Load EPG"
+#~ msgstr "Incarca EPG"
+
+#~ msgid "Enable WLAN"
+#~ msgstr "Activeaza WLAN"
+
+#~ msgid "System Help"
+#~ msgstr "Ajutor Sistem"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!_"
+
+#~ msgid "Permanent timeshift"
+#~ msgstr "Timeshift permant"
+
+#, fuzzy
+#~ msgid "Drive\t\tDevice\tSize\tFree\tType"
+#~ msgstr "Drive\t\tDispozitiv\tDimensiune\tLiber\tMedia"
+
+#, fuzzy
+#~ msgid "Energy savings mode"
+#~ msgstr "Modul 'Economie Energie'"
+
+#, fuzzy
+#~ msgid " Automatic Standby after (min)"
+#~ msgstr " Activeaza dupa (ore)"
+
+#, fuzzy
+#~ msgid " Automatic Poweroff after (min)"
+#~ msgstr " Activeaza dupa (ore)"
+
+#, fuzzy
+#~ msgid "Device Name:"
+#~ msgstr "Tip Dispozitiv:"
+
+#, fuzzy
+#~ msgid "directly"
+#~ msgstr "Editare"
+
+#, fuzzy
+#~ msgid "Reset Settings"
+#~ msgstr "Setari Receptie"
+
+#, fuzzy
+#~ msgid "Resetting..."
+#~ msgstr "Salvez setari ?"
+
+#, fuzzy
+#~ msgid "Ethernet"
+#~ msgstr "Internet"
+
+#~ msgid "Please enter encryption key"
+#~ msgstr "Va rog introduceti key-a pentru encriptare"
+
+#, fuzzy
+#~ msgid "Energy Saving Mode is not"
+#~ msgstr "Modul 'Economie Energie'"
+
+#, fuzzy
+#~ msgid "MultiRoom is temporarily disabled."
+#~ msgstr "Setari pentru mai multe camere"
+
+#~ msgid "Recording only"
+#~ msgstr "Numai Inregistrare"
+
+#~ msgid "All"
+#~ msgstr "Toate"
+
+#~ msgid "Only Recording"
+#~ msgstr "Numai Inregistrare"
+
+#, fuzzy
+#~ msgid "Attention:"
+#~ msgstr "Extensie HD:"
+
+#, fuzzy
+#~ msgid "MultiRoom"
+#~ msgstr "Setari pentru mai multe camere"
+
+#, fuzzy
+#~ msgid "Storing settings... please wait."
+#~ msgstr "Salvez setari, va rog asteptati..."
+
+#~ msgid "Please wait!"
+#~ msgstr "Va rog asteptati!"
+
+#~ msgid "Please wait"
+#~ msgstr "Va rog asteptati"
+
+#~ msgid "Rescan network"
+#~ msgstr "Rescanare Retea"
+
+#, fuzzy
+#~ msgid "DUMMYTEXT_Database vdr doesn't exist$"
+#~ msgstr "neinstalat"
+
+#, fuzzy
+#~ msgid "Changes saved (100%)"
+#~ msgstr "Modificari salvate"
+
+#, fuzzy
+#~ msgid "Checking online connection, please wait..."
+#~ msgstr "Scanez Reteaua , va rog asteptati..."
+
+#~ msgid "not online (routing failed)"
+#~ msgstr "nu este online (eroare routare)"
+
+#~ msgid "not online (dns failed)"
+#~ msgstr "nu este online (eroare dns)"
+
+#~ msgid "Resize and then reboot?"
+#~ msgstr "Redimensionez si apoi repornesc ?"
+
+#~ msgid "Using this configuration there is e.g. one of"
+#~ msgstr "Cu configuratia selectata, aveti urmatoarele"
+
+#~ msgid "actions are possible simultaneously:"
+#~ msgstr "sunt posibile simultan:"
+
+#, fuzzy
+#~ msgid "Network plural$"
+#~ msgstr "Retea"
+
+#, fuzzy
+#~ msgid "Network singular$"
+#~ msgstr "Setari Retea"
+
+#~ msgid "NetCeiver"
+#~ msgstr "NetCeiver"
+
+#~ msgid "Loading recordings failed!"
+#~ msgstr "Incarcarea inregistrarilor a esuat!"
+
+#, fuzzy
+#~ msgid "Bridge = on"
+#~ msgstr "NetCeiver"
+
+#, fuzzy
+#~ msgid "VLAN off"
+#~ msgstr "Opreste WLAN"
+
+#~ msgid "Enable MultiRoom-System to connect NetClients"
+#~ msgstr "Activeaza Sistemul MultiCamera sa se conecteza la Clienti Net"
+
+#~ msgid "provide NetClients with TV-signals."
+#~ msgstr "Clienti Net care transmit semnate Tv."
+
+#~ msgid "simultaneously. Please install more tuners so"
+#~ msgstr "simultane. Va rog instalati mai multe tunere"
+
+#~ msgid "Avantgarde and NetClients can be used"
+#~ msgstr "pentru ca Avantgarde si Clienti Net sa fie"
+
+#~ msgid "This is a dummy line for translation number 2$"
+#~ msgstr "Aceasta este o linie de test pentru traducerea nr  2$"
+
+#~ msgid "5 minutes of inactivity. All tuners are available for"
+#~ msgstr "5 minute de inactivitate.Toate tunerele vor fi  disponibile"
+
+#~ msgid "NetClients. Avantgarde can be turned on with"
+#~ msgstr "pentru Clienti Net. Avantgarde poate fi pornit cu"
+
+#~ msgid "Powerkey for administration."
+#~ msgstr "Tasta Power "
+
+#~ msgid "This is a dummy line for translation number 3$"
+#~ msgstr "Aceasta este o linie de test pentru traducerea nr  3$"
+
+#~ msgid "TV-signals to all NetClients at the same time. Please install more"
+#~ msgstr "Tv pentru toti Clientii Net. Va rog instalati mai multe "
+
+#~ msgid "This is a dummy line for translation number 1$"
+#~ msgstr "Aceasta este o linie de test pentru traducerea nr 1$"
+
+#~ msgid "and"
+#~ msgstr "si"
+
+#~ msgid "NetLink"
+#~ msgstr "NetLink"
+
+#~ msgid "Mode"
+#~ msgstr "Mod"
+
+#~ msgid "NetLink: NetServer"
+#~ msgstr "NetLink: NetServer"

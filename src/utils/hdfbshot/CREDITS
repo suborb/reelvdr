@@ -1,0 +1,7 @@
+Elliot Lee <sopwith@redhat.com>
+	Conversion code from 8bpp to 24bpp
+(was not officially adapted into the tree)
+
+Ji-soo Yi <killcat@mizi.com>
+	Various bugfixes
+

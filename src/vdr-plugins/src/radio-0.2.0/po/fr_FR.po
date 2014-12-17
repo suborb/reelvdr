@@ -1,0 +1,280 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Jean-Claude Repetto <jc@repetto.org>, 2001
+# Olivier Jacques <jacquesolivier@hotmail.com>, 2003
+# Gregoire Favre <greg@magma.unil.ch>, 2003
+# Nicolas Huillard <nhuillard@e-dition.fr>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-radio\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-03-17 14:45+0100\n"
+"PO-Revision-Date: 2008-09-26 13:22+0200\n"
+"Last-Translator: Nicolas Huillard <nhuillard@e-dition.fr>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "only Text"
+msgstr "Seulement le texte"
+
+msgid "Text+TagInfo"
+msgstr "Texte+Tag d'info"
+
+msgid "only, if some"
+msgstr "Seulement, si disponible"
+
+msgid "always"
+msgstr "Toujours"
+
+msgid "Top"
+msgstr "Haut"
+
+msgid "Bottom"
+msgstr "Bas"
+
+msgid "latest at Top"
+msgstr "En haut"
+
+msgid "latest at Bottom"
+msgstr "En bas"
+
+msgid "Black"
+msgstr "Noir"
+
+msgid "White"
+msgstr "Blanc"
+
+msgid "Red"
+msgstr "Rouge"
+
+msgid "Green"
+msgstr "Vert"
+
+msgid "Yellow"
+msgstr "Jaune"
+
+msgid "Magenta"
+msgstr "Magenta"
+
+msgid "Blue"
+msgstr "Bleu"
+
+msgid "Cyan"
+msgstr "Cyan"
+
+msgid "Transparent"
+msgstr "Transparent"
+
+msgid "about MainMenu"
+msgstr "A propos de menu principal"
+
+msgid "Automatic"
+msgstr "Automatique"
+
+msgid "only Taginfo"
+msgstr "Seulement Tag Info"
+
+msgid "RaSS only"
+msgstr ""
+
+msgid "RaSS+Text mixed"
+msgstr ""
+
+msgid "Activate"
+msgstr "Activer"
+
+msgid "RDSText Function"
+msgstr "Fonction de RDS-Texte"
+
+msgid "RDSText OSD-Position"
+msgstr "Position OSD de RDS-Texte"
+
+msgid "RDSText OSD-Titlerow"
+msgstr "Titre OSD de RDS-Texte"
+
+msgid "RDSText OSD-Rows (1-5)"
+msgstr "Ligne OSD de RDS-Texte (1-5)"
+
+msgid "unknown program type"
+msgstr "Type de programme inconnu"
+
+msgid "News"
+msgstr "Informations"
+
+msgid "Current affairs"
+msgstr "Affaires courantes"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Education"
+msgstr "Education"
+
+msgid "Drama"
+msgstr "Drame"
+
+msgid "Culture"
+msgstr "Culture"
+
+msgid "Science"
+msgstr "Science"
+
+msgid "Varied"
+msgstr "Divers"
+
+msgid "Pop music"
+msgstr "Musique Pop"
+
+msgid "Rock music"
+msgstr "Musique Rock"
+
+msgid "M.O.R. music"
+msgstr "Musique M.O.R."
+
+msgid "Light classical"
+msgstr "Classique facile"
+
+msgid "Serious classical"
+msgstr "Classique sérieux"
+
+msgid "Other music"
+msgstr "Autre musique"
+
+msgid "Alarm"
+msgstr "Alamre"
+
+msgid "RTplus"
+msgstr "RTplus"
+
+msgid "Radiotext"
+msgstr "Radio Texte"
+
+msgid "  [waiting ...]"
+msgstr "  [attente ...]"
+
+msgid "Title  :"
+msgstr "Titre :"
+
+msgid "Artist :"
+msgstr "Artiste :"
+
+msgid "Records"
+msgstr ""
+
+msgid "with <0>"
+msgstr ""
+
+msgid "Playlist"
+msgstr "Playlist"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Lottery"
+msgstr "Loterie"
+
+msgid "Weather"
+msgstr "Météo"
+
+msgid "Stockmarket"
+msgstr "Bourse"
+
+msgid "Other"
+msgstr "Autre"
+
+msgid "RTplus Memory  since"
+msgstr "Mémoire de RTplus depuis"
+
+msgid "Programme"
+msgstr "Programme"
+
+msgid "Station"
+msgstr "Station"
+
+msgid "Now"
+msgstr "Maintenant"
+
+msgid "...Part"
+msgstr "...Détail"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Host"
+msgstr "Animateur"
+
+msgid "Edit.Staff"
+msgstr "Personne"
+
+msgid "Homepage"
+msgstr "Page d'accueil"
+
+msgid "Interactivity"
+msgstr "Interactivité"
+
+msgid "Phone-Hotline"
+msgstr "Téléphone hotline"
+
+msgid "Phone-Studio"
+msgstr "Téléphone studio"
+
+msgid "Email-Hotline"
+msgstr "E-mail hotline"
+
+msgid "Email-Studio"
+msgstr "E-mail studio"
+
+msgid "Info"
+msgstr "D'autres information"
+
+msgid "NewsLocal"
+msgstr "Information local"
+
+msgid "DateTime"
+msgstr "Date-Heure"
+
+msgid "Traffic"
+msgstr "Traffic"
+
+msgid "Advertising"
+msgstr "Publicité"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Exit"
+msgstr "Sortir"
+
+msgid "RTplus-File saved"
+msgstr "Sauvé fichier TTplus"
+
+msgid "last seen Radiotext"
+msgstr "Dernier Radio-texte"
+
+msgid "Time"
+msgstr "Temps"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Artist"
+msgstr "Artiste"
+
+msgid "Refresh Off"
+msgstr "Arrêter actualisation"
+
+msgid "Refresh On"
+msgstr "Démarrer actualisation"
+
+msgid "Back"
+msgstr "Retour"

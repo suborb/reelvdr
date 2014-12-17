@@ -1,0 +1,22 @@
+Aug 15, 2008
+			Georg Acher <acher at baycom dot de>
+		Swapped RGB and inverted Alpha for Reel Multimedia HDE
+
+Nov 8, 2002
+			Dariusz Swiderski <sfires@sfires.net>
+		Major rewrite, make use of malloc. Corrected support
+		for 15,16,24 and 32 bit depths. Added support for 8
+		bit pseudocolor mode. Removed a grayscale switch 
+		until i write sth to make the conversion correct.
+
+Nov 6, 2002
+			Dariusz Swiderski <sfires@sfires.net>
+		Another takeover of maintainership of code, since 
+		the U4X project seems to be dead. Removed autoconf
+		and automake system for now.
+	
+Sep 9, 2000
+			Paul Mundt       <lethal@u4x.org>
+		Took over maintainership of code, rewrote to use
+		an autoconf/automake system, rewrote getopt
+		handler. Various other cleanups.

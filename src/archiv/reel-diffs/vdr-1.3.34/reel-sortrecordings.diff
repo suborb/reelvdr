@@ -1,0 +1,263 @@
+diff -Nur vdr-1.3.27/menu.c vdr-1.3.27-reel/menu.c
+--- vdr-1.3.27/menu.c   2005-10-03 16:43:49.000000000 +0200
++++ vdr-1.3.27-reel/menu.c      2005-10-01 15:09:14.000000000 +0200
+@@ -1819,34 +1819,45 @@
+   cMenuRecordings::cMenuRecordings(const char *Base, int Level, bool OpenSubMenus)
+ :cOsdMenu(Base ? Base : tr("Recordings"), 8, 6, 6)
+ {
++  if(!Base) {
++               sortByDate = cRecording::SortByDate();
++       }
++  else {
++        if(!sortByDate) ToggleSort();
++  }
++
++
+   base = Base ? strdup(Base) : NULL;
+   level = Setup.RecordingDirs ? Level : -1;
+   Display(); // this keeps the higher level menus from showing up briefly when pressing 'Back' during replay
+   const char *LastReplayed = cReplayControl::LastReplayed();
+   cMenuRecordingItem *LastItem = NULL;
+-  char *LastItemText = NULL;
+-  if (!Base)
++  if (sortByDate) {
++     Recordings.Sort(sortByDate);
++  }
++  else {
+      Recordings.Sort();
+-  for (cRecording *recording = Recordings.First(); recording; recording = Recordings.Next(recording)) {
+-      if (!Base || (strstr(recording->Name(), Base) == recording->Name() && recording->Name()[strlen(Base)] == '~')) {
+-         cMenuRecordingItem *Item = new cMenuRecordingItem(recording, level);
+-         if (*Item->Text() && (!LastItem || strcmp(Item->Text(), LastItemText) != 0)) {
+-            Add(Item);
+-            LastItem = Item;
+-            free(LastItemText);
+-            LastItemText = strdup(LastItem->Text()); // must use a copy because of the counters!
+-            }
+-         else
+-            delete Item;
+-         if (LastItem) {
+-            if (LastReplayed && strcmp(LastReplayed, recording->FileName()) == 0)
+-               SetCurrent(LastItem);
+-            if (LastItem->IsDirectory())
+-               LastItem->IncrementCounter(recording->IsNew());
+-            }
+-         }
+-      }
+-  free(LastItemText);
++       }
++       map<string,int> Items;
++   for (cRecording *recording = Recordings.First(); recording; recording = Recordings.Next(recording)) {
++     if (!Base || (strstr(recording->Name(), Base) == recording->Name() && recording->Name()[strlen(Base)] == '~')) {
++      cMenuRecordingItem *Item = new cMenuRecordingItem(recording, level);
++      if (*Item->Text() && (Items.find(Item->Text()) == Items.end())) {
++            Add(Item);
++            Items[Item->Text()];
++            LastItem = Item;
++         }
++      else
++        delete Item;
++
++     if (LastItem) {
++       if (LastReplayed && strcmp(LastReplayed, recording->FileName()) == 0)
++           SetCurrent(LastItem);
++       if (LastItem->IsDirectory())
++           LastItem->IncrementCounter(recording->IsNew());
++     }
++    }
++  }
+   if (Current() < 0)
+      SetCurrent(First());
+   else if (OpenSubMenus && Open(true))
+@@ -2045,6 +2057,7 @@
+        case kBlue:   return Info();
+        case k0:      return Rename();
+        case k1...k9: return Commands(Key);
++       case kLess:   ToggleSort(); return osRecordings; //osContinue;  //osRecordings;
+        default: break;
+        }
+      }
+@@ -2060,6 +2073,12 @@
+   return state;
+ }
+
++void cMenuRecordings::ToggleSort(void)
++{
++       cRecording::ToggleSort();
++       sortByDate      = cRecording::SortByDate();
++}
++
+ // --- cMenuSetupBase --------------------------------------------------------
+
+ class cMenuSetupBase : public cMenuSetupPage {
+diff -Nur vdr-1.3.27/menu.h vdr-1.3.27-reel/menu.h
+--- vdr-1.3.27/menu.h   2005-10-03 13:00:37.000000000 +0200
++++ vdr-1.3.27-reel/menu.h      2005-08-13 11:24:10.000000000 +0200
+@@ -135,6 +135,7 @@
+   void SetHelpKeys(void);
+   cRecording *GetRecording(cMenuRecordingItem *Item);
+   bool Open(bool OpenSubMenus = false);
++  bool sortByDate;
+   eOSState Play(void);
+   eOSState Rewind(void);
+   eOSState Delete(void);
+@@ -144,6 +145,8 @@
+ public:
+   cMenuRecordings(const char *Base = NULL, int Level = 0, bool OpenSubMenus = false);
+   ~cMenuRecordings();
++  void ToggleSort(void);
++  bool SortByDate(void) { return sortByDate; }
+   virtual eOSState ProcessKey(eKeys Key);
+   };
+ 
+diff -Nur vdr-1.3.27/recording.c vdr-1.3.27-reel/recording.c
+--- vdr-1.3.27/recording.c      2005-10-03 13:49:02.000000000 +0200
++++ vdr-1.3.27-reel/recording.c 2005-09-28 10:38:04.000000000 +0200
+@@ -544,16 +544,42 @@
+ 
+ char *cRecording::SortName(void) const
+ {
+-  if (!sortBuffer) {
++  // if(!sortBuffer) {
++  if(sortBuffer)
++               free(sortBuffer);
++
+      char *s = StripEpisodeName(strdup(FileName() + strlen(VideoDirectory) + 1));
+      int l = strxfrm(NULL, s, 0) + 1;
+      sortBuffer = MALLOC(char, l);
+      strxfrm(sortBuffer, s, l);
+      free(s);
+-     }
++   //  }
+   return sortBuffer;
+ }
+ 
++char *cRecording::SortTime(void) const
++{
++         if(sortBuffer){
++               free(sortBuffer);
++         }
++     char *s = StripEpisodeName(strdup(FileName() + strlen(VideoDirectory) + 1));
++         char *tmpPtr = s; 
++         
++          
++         while (strchr(s,'/')){
++                       s = strchr(s,'/');
++                       s++;              // strip '/'
++         }
++
++
++     int l = strxfrm(NULL, s, 0) + 1;
++     sortBuffer = MALLOC(char, l);
++     strxfrm(sortBuffer, s, l);
++
++         s = tmpPtr; 
++     free(s);
++  return sortBuffer;
++}
+ int cRecording::GetResume(void) const
+ {
+   if (resume == RESUME_NOT_INITIALIZED) {
+@@ -563,11 +589,36 @@
+   return resume;
+ }
+ 
++// Markus
++bool cRecording::sortByDate = true;
++
++bool cRecording::SortByDate()
++{
++       return cRecording::sortByDate;
++}
++
++void cRecording::ToggleSort()
++{
++       sortByDate = sortByDate ? false : true;
++}
++
++
+ int cRecording::Compare(const cListObject &ListObject) const
+ {
++
++  if (cRecording::sortByDate){
++               // cRecording *r = (cRecording *)&ListObject;
++               //fprintf(stderr, "titleBuffer %s, sortBuffer: %X, fileName:%s, name %s \n",
++               //titleBuffer, sortBuffer, fileName, name);
++               cRecording *r = (cRecording *)&ListObject;
++               return strcasecmp(SortTime(), r->SortTime());
++  }
++  else {
++               //return 0;
+   cRecording *r = (cRecording *)&ListObject;
+   return strcasecmp(SortName(), r->SortName());
+ }
++}
+ 
+ const char *cRecording::FileName(void) const
+ {
+diff -Nur vdr-1.3.27/recording.h vdr-1.3.27-reel/recording.h
+--- vdr-1.3.27/recording.h      2005-10-03 13:49:02.000000000 +0200
++++ vdr-1.3.27-reel/recording.h 2005-09-28 10:38:04.000000000 +0200
+@@ -62,7 +62,9 @@
+   cRecordingInfo *info;
+   static char *StripEpisodeName(char *s);
+   char *SortName(void) const;
++  char *SortTime(void) const;
+   int GetResume(void) const;
++  static bool sortByDate;
+ public:
+   time_t start;
+   int priority;
+@@ -92,6 +94,8 @@
+   bool GetSizeCount(long long *lSize, int *Count);
+        // Adds the number of files found in the dir to Count and their size to lSize
+        // Returns false in case of error
++  static bool SortByDate(); // const   { return cRecording::sortByName; }
++  static void ToggleSort();//  { sortByName = sortByName ? false : true;   }
+   };
+ 
+ class cRecordings : public cList<cRecording> {
+diff -Nur vdr-1.3.27/tools.c vdr-1.3.27-reel/tools.c
+--- vdr-1.3.27/tools.c  2005-10-03 12:51:31.000000000 +0200
++++ vdr-1.3.27-reel/tools.c     2005-08-07 12:18:42.000000000 +0200
+@@ -1064,7 +1064,14 @@
+   return la->Compare(*lb);
+ }
+ 
+-void cListBase::Sort(void)
++static int CompareListObjectsReverse(const void *a, const void *b)
++{
++  const cListObject *la = *(const cListObject **)a;
++  const cListObject *lb = *(const cListObject **)b;
++  return lb->Compare(*la);
++}
++
++void cListBase::Sort(bool Reverse)
+ {
+   int n = Count();
+   cListObject *a[n];
+@@ -1074,7 +1081,12 @@
+         a[i++] = object;
+         object = object->Next();
+         }
++  if (!Reverse){
+   qsort(a, n, sizeof(cListObject *), CompareListObjects);
++  }
++  else {
++               qsort(a, n, sizeof(cListObject *), CompareListObjectsReverse);
++  }
+   objects = lastObject = NULL;
+   for (i = 0; i < n; i++) {
+       a[i]->Unlink();
+diff -Nur vdr-1.3.27/tools.h vdr-1.3.27-reel/tools.h
+--- vdr-1.3.27/tools.h  2005-10-03 12:54:22.000000000 +0200
++++ vdr-1.3.27-reel/tools.h     2005-08-07 12:18:42.000000000 +0200
+@@ -225,7 +225,7 @@
+   virtual void Clear(void);
+   cListObject *Get(int Index) const;
+   int Count(void) const { return count; }
+-  void Sort(void);
++  void Sort(bool Reverse = false);
+   };
+ 
+ template<class T> class cList : public cListBase {

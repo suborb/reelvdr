@@ -1,0 +1,432 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-burn\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-05-05 09:40+0200\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Versatile convert-and-burn plugin"
+msgstr "Connector per a convertir i enregistrar"
+
+msgid "Burn Recordings to DVD"
+msgstr "Enregistra gravacions a DVD"
+
+msgid "iso8859-15"
+msgstr "iso8859-15"
+
+msgid "Burn job active"
+msgstr "Enregistra la tasca activa"
+
+msgid "Burn"
+msgstr "Enregistra"
+
+msgid "Please enter the burn plugin"
+msgstr "Si us plau, introduïu el connector per a enregistrar"
+
+msgid "Please insert an empty disk and press Ok"
+msgstr "Si us plau, inseriu un disc buit i premeu la tecla OK"
+
+msgid "Job still active - really cancel?"
+msgstr "La tasca és activa - Voleu cancel·lar-la?"
+
+msgid "Burning DVD"
+msgstr "Enregistrant DVD"
+
+msgid "done"
+msgstr "fet"
+
+msgid "DVD with menus"
+msgstr "DVD amb menús"
+
+msgid "DVD without menus"
+msgstr "DVD sense menús"
+
+msgid "Archive disk"
+msgstr "Desa al disc"
+
+msgid "ISO file only"
+msgstr ""
+
+msgid "Disc"
+msgstr ""
+
+msgid "ISO file and Disc"
+msgstr ""
+
+msgid "No chapters"
+msgstr "Sense capítols"
+
+msgid "Use editing marks"
+msgstr "Utilitza les marques d'edició"
+
+msgid "Every 5 minutes"
+msgstr "Cada 5 minuts"
+
+msgid "Every 10 minutes"
+msgstr "Cada 10 minuts"
+
+msgid "Every 15 minutes"
+msgstr "Cada 15 minuts"
+
+msgid "Every 30 minutes"
+msgstr "Cada 30 minuts"
+
+msgid "Every hour"
+msgstr "Cada hora"
+
+msgid "none"
+msgstr "cap"
+
+msgid "Couldn't convert character sets!"
+msgstr "No es pot convertir el joc de caràcters!"
+
+msgid "Couldn't open image file!"
+msgstr "No es pot obrir el fitxer d'imatge!"
+
+msgid "Couldn't create new image!"
+msgstr "No es pot crear una nova imatge!"
+
+msgid "Couldn't render menu images!"
+msgstr "No es poden renderitzar les imatges del menú!"
+
+msgid "Couldn't save image file!"
+msgstr "No es pot desar el fitxer d'imatge!"
+
+msgid "Recording too big for disc type!"
+msgstr "El disc no té prou capacitat per enregistrar la gravació!"
+
+msgid "Disc too big for disc type!"
+msgstr "La capacitat del disc no està suportada per la unitat!"
+
+msgid "A job failed!"
+msgstr "La tasca no s'ha pogut completar!"
+
+msgid "A job was finished successfully."
+msgstr "La tasca ha finalitzat amb èxit."
+
+msgid "Recordings"
+msgstr "Gravacions"
+
+msgid "Options"
+msgstr "Opcions"
+
+msgid "Title of recording"
+msgstr ""
+
+msgid "Edit recording details"
+msgstr ""
+
+msgid "Move down"
+msgstr "Mou avall"
+
+msgid "Track$Off"
+msgstr "Off"
+
+msgid "Track$On"
+msgstr "On"
+
+msgid "Language code"
+msgstr "Codi d'idioma"
+
+msgid "Choose title"
+msgstr "Trieu el títol"
+
+#, c-format
+msgid "$Recordings: %1$d, total size: %2$.1f MB"
+msgstr "Gravacions: %1$d, capacitat total: %2$.1f MB"
+
+msgid "Write DVD"
+msgstr "Grava DVD"
+
+msgid "Select recordings for burning with 'OK'"
+msgstr ""
+
+#, c-format
+msgid "Recommended media: %s"
+msgstr "Suport recomanat: %s"
+
+msgid "Only archive disk possible"
+msgstr "Només és possible desar-ho al disc"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Button$Burn"
+msgstr "Enregistra"
+
+msgid "Select recording with > OK <"
+msgstr "Seleccioneu les gravacions amb la tecla > OK <"
+
+msgid "Analyzing recording..."
+msgstr "S'està analitzant la gravació..."
+
+msgid "Job"
+msgstr "Tasca"
+
+msgid "DVD title"
+msgstr "Títol del DVD"
+
+msgid "Archive-ID"
+msgstr "ID d'arxiu"
+
+msgid "Recordings scheduled to be burnt are:"
+msgstr ""
+
+msgid "No recordings marked"
+msgstr "No heu seleccionat cap gravació"
+
+msgid "Info:"
+msgstr ""
+
+msgid "Please press the blue key to select recording."
+msgstr ""
+
+msgid "Remove"
+msgstr "Suprimeix"
+
+msgid "Details"
+msgstr ""
+
+msgid "Button$Cancel"
+msgstr "Cancel·la"
+
+msgid "No video track selected!"
+msgstr "No heu seleccionat cap pista de vídeo!"
+
+msgid "No audio track selected!"
+msgstr "No heu seleccionat cap pista d'àudio!"
+
+msgid "Not enough free disk space!"
+msgstr "No hi ha prou espai al disc!"
+
+msgid "Remove recording from list?"
+msgstr "Suprimir la gravació de la llista?"
+
+msgid "Remove all recordings from list?"
+msgstr ""
+
+msgid "Status"
+msgstr "Estat"
+
+#, c-format
+msgid "$Job active (Writing: %1$d%%)"
+msgstr "Tasca activa (Gravant: %1$d%%)"
+
+#, c-format
+msgid "$Job active (Converting: %1$d%%)"
+msgstr "Tasca activa (Convertint: %1$d%%)"
+
+msgid "Job active (Writing)"
+msgstr "Tasca activa (Gravant)"
+
+msgid "Job active (Converting)"
+msgstr "Tasca activa (Convertint)"
+
+msgid "No active or waiting jobs present"
+msgstr "No hi ha tasques actives o en espera"
+
+msgid "Canceled jobs"
+msgstr "Tasques cancel·lades"
+
+msgid "Erroneous jobs"
+msgstr "Tasques amb errors"
+
+msgid "Button$Recordings"
+msgstr "Gravacions"
+
+msgid "Restart"
+msgstr "Reinicia"
+
+msgid "Retry"
+msgstr "Reintenta"
+
+msgid "Button$Remove"
+msgstr "Suprimeix"
+
+msgid "Replace current job?"
+msgstr "Reemplaçar la tasca actual?"
+
+msgid "Remove job from list?"
+msgstr "Suprimir la tasca de la llista?"
+
+#, c-format
+msgid "$Total size: %1$.1f MB %2$s"
+msgstr "Capacitat total: %1$.1f MB %2$s"
+
+msgid "(would be shrinked)"
+msgstr "(s'ha de comprimir)"
+
+msgid "Aspect ratio"
+msgstr "Relació d'aspecte"
+
+msgid "Previous page"
+msgstr "Pàgina anterior"
+
+msgid "Next page"
+msgstr "Pàgina següent"
+
+msgid "Play movie"
+msgstr "Reprodueix pel·lícula"
+
+msgid "Button$Back"
+msgstr "Enrere"
+
+msgid "Couldn't read index"
+msgstr "No es pot llegir l'índex"
+
+msgid "Couldn't browse recording"
+msgstr "No es poden explorar les gravacions"
+
+msgid "mp2"
+msgstr ""
+
+msgid "dolby"
+msgstr "dolby"
+
+msgid "Couldn't read marks"
+msgstr "No es poden llegir les marques"
+
+msgid "Recording is too short"
+msgstr "La gravació és massa curta"
+
+msgid "Disk type"
+msgstr "Tipus de disc"
+
+msgid "Write to"
+msgstr ""
+
+msgid "Burn speed"
+msgstr "Velocitat d'enregistrament"
+
+msgid "unlimited"
+msgstr "il·limitat"
+
+msgid "Skin"
+msgstr "Aparença"
+
+msgid "Chapters"
+msgstr "Capítols"
+
+msgid "Cut"
+msgstr "Talla"
+
+msgid "Skip empty titlemenu"
+msgstr "Omet el títol de menú buit"
+
+msgid "Skip short mainmenu"
+msgstr "Omet el mini-menú principal"
+
+msgid "--- Common settings --------------------------------------------------"
+msgstr "--- Paràmetres generals ----------------------------------------------"
+
+msgid "Remove path component"
+msgstr "Suprimeix el camí del component"
+
+msgid "Eject disc after burn"
+msgstr "Expulsa el disc després de gravar"
+
+msgid "Demux using"
+msgstr "S'està utilitzant Demux"
+
+msgid "Requant using"
+msgstr "S'està utilitzant Requant"
+
+msgid "Preserve logfiles"
+msgstr "Conserva els fitxers de registre"
+
+msgid "Spare language code"
+msgstr "Codi d'idioma alternatiu"
+
+msgid "Status in main menu"
+msgstr "Estat en el menú principal"
+
+msgid "--- Job defaults -----------------------------------------------------"
+msgstr "--- Tasques predeterminades ------------------------------------------"
+
+msgid "--- Job menu settings ------------------------------------------------"
+msgstr "--- Configuració del menú de tasques ---------------------------------"
+
+msgid "Offer disk type"
+msgstr "Ofereix el tipus de disc"
+
+msgid "Offer chapters"
+msgstr "Ofereix els capítols"
+
+msgid "Offer target"
+msgstr "Ofereix la destinació"
+
+msgid "Offer burn speed"
+msgstr "Ofereix la velocitat de gravació"
+
+msgid "Offer cutting"
+msgstr "Ofereix retallar"
+
+msgid "Offer skip titlemenu"
+msgstr "Ofereix l'omissió de títol del menú"
+
+msgid "Offer skip mainmenu"
+msgstr "Ofereix l'omissió de menú principal"
+
+msgid "Job options"
+msgstr "Opcions de tasca"
+
+msgid "Please select burn options below:"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+msgid "skip"
+msgstr ""
+
+msgid "Button$Start"
+msgstr "Inicia"
+
+msgid "Default"
+msgstr "Per defecte"
+
+msgid "Video track"
+msgstr "Pista de vídeo"
+
+msgid "Audio track"
+msgstr "Pista d'àudio"
+
+msgid "Subtitle track"
+msgstr ""
+
+msgid "page"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Desconegut"
+
+#~ msgid "No recordings marked for burning"
+#~ msgstr "No s'ha seleccionat cap gravació per enregistrar"
+
+#~ msgid "Create ISO only"
+#~ msgstr "Crea només la imatge"
+
+#~ msgid "Write to Disc"
+#~ msgstr "Grava al disc"
+
+#~ msgid "Create ISO and write"
+#~ msgstr "Crea la imatge i grava-la"
+
+#~ msgid "analog"
+#~ msgstr "analògic"
+
+#~ msgid "Disk content"
+#~ msgstr "Contingut del disc"
+
+#~ msgid "Format DVD"
+#~ msgstr "Dóna format al DVD"

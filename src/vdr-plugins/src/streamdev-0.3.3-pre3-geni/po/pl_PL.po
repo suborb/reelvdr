@@ -1,0 +1,225 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-streamdev\n"
+"Report-Msgid-Bugs-To: <tobias.bratfisch@reel-multimedia.com>\n"
+"POT-Creation-Date: 2008-10-01 16:06+0200\n"
+"PO-Revision-Date: 2008-09-30 14:40+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "VTP Streaming Client"
+msgstr "Klient VTP Przesyłania Strumienia"
+
+msgid "Streaming Client"
+msgstr "Klient Przesyłania Strumienia"
+
+msgid "VDR Streaming Server"
+msgstr "Serwer VDR Przesyłania Strumienia"
+
+msgid "Streaming Server"
+msgstr "Serwer Przesyłania Strumienia"
+
+msgid "Streaming active"
+msgstr "Przesyłanie Strumienia Aktywne"
+
+msgid "Pause Live TV"
+msgstr "Przerwa TV na żywo"
+
+msgid "Common Settings"
+msgstr "Ustawienia Powrzechne"
+
+msgid "Maximum Number of Clients"
+msgstr "Maximum Ilości Klientów"
+
+msgid "Suspend behaviour"
+msgstr "Zachowanie Zawieszenia"
+
+msgid "Client may suspend"
+msgstr "klient może byc zawieszony"
+
+msgid "VDR-to-VDR Server"
+msgstr "VDR-to-VDR Serwer"
+
+msgid "Start VDR-to-VDR Server"
+msgstr "Start VDR-to-VDR Serwer"
+
+msgid "VDR-to-VDR Server Port"
+msgstr "VDR-to-VDR Serwer Port"
+
+msgid "Bind to IP"
+msgstr "Związać z IP"
+
+msgid "HTTP Server"
+msgstr "Serwer HTTP"
+
+msgid "Start HTTP Server"
+msgstr "Start Serwer HTTP"
+
+msgid "HTTP Server Port"
+msgstr "HTTP Serwer Port"
+
+msgid "HTTP Streamtype"
+msgstr "Rodzaj Przesyłania Strumienia HTTP"
+
+msgid "Streaming Control"
+msgstr "Kontrola Przesyłania Strumienia"
+
+msgid "Remote Schedule"
+msgstr "Rozkład Zdalny"
+
+msgid "Remote Timers"
+msgstr "Timery Zdalne"
+
+msgid "Remote Recordings"
+msgstr "Zdalne Nagrywanie"
+
+msgid "Suspend Server"
+msgstr "Zawieś Serwer"
+
+msgid "Synchronize EPG"
+msgstr "Synchronizuj EPG"
+
+msgid "Server is suspended"
+msgstr "Serwer jest zawieszony"
+
+msgid "Couldn't suspend Server!"
+msgstr "Nie mógł zawiesić Serwera!"
+
+msgid "Edit remote timer"
+msgstr "Edytuj zdalny timer"
+
+msgid "Active"
+msgstr "Aktywny"
+
+msgid "Channel"
+msgstr "Kanał"
+
+msgid "Day"
+msgstr "Dzien"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "VPS"
+msgstr "VPS"
+
+msgid "Priority"
+msgstr "priotytet"
+
+msgid "Lifetime"
+msgstr "Dożywotni"
+
+msgid "File"
+msgstr "Plik"
+
+msgid "First day"
+msgstr "Pierwszy dzień"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Błędny Kanał ***"
+
+msgid "What's on now?"
+msgstr "Co teraz jest?"
+
+msgid "What's on next?"
+msgstr "Co jest nastepne?"
+
+msgid "Record"
+msgstr "Nagraj"
+
+msgid "Next"
+msgstr "Nastepne"
+
+msgid "Now"
+msgstr "Teraz"
+
+msgid "Schedule"
+msgstr "Rozkład"
+
+msgid "Switch"
+msgstr "Zmienić"
+
+msgid "Can't switch channel!"
+msgstr "Nie może zmienić kanału!"
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Rozkład - %s"
+
+msgid "Fetching recordings..."
+msgstr "Pobiera nagrania..."
+
+msgid "Open"
+msgstr "Otwórz"
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Summary"
+msgstr "Podsumowanie"
+
+msgid "Error while accessing recording!"
+msgstr "Błąd w czasie dostępu do nagrania!"
+
+msgid "Delete recording?"
+msgstr "Usunąć nagranie?"
+
+msgid "Edit"
+msgstr "Edytuj"
+
+msgid "New"
+msgstr "Nowy"
+
+msgid "On/Off"
+msgstr "On/Off"
+
+msgid "Delete timer?"
+msgstr "usunąć timer?"
+
+msgid "MTWTFSS"
+msgstr "MTWTFSS"
+
+msgid "Start Client"
+msgstr "Zastartować klienta"
+
+msgid "Remote IP"
+msgstr "Zdalny IP"
+
+msgid "Remote Port"
+msgstr "Zdalny Port"
+
+msgid "Filter Streaming"
+msgstr "Filtr Przesyłania Strumienia"
+
+msgid "Please restart VDR to activate changes"
+msgstr "Prosze ponownie uruchomić VDR żeby zaaktywować zmiany"
+
+msgid "Recordings not in sync! Try again..."
+msgstr "Nagranie nie jest w sync! Spróbuj ponownie..."
+
+msgid "Couldn't delete recording! Try again..."
+msgstr "nie mógł usunąć nagrania! Spróbuj ponownie..."
+
+msgid "Couldn't save timer! Try again..."
+msgstr "Nie mógł zapisać timer! Spróbuj ponownie..."
+
+msgid "Timers not in sync! Try again..."
+msgstr "Timery nie sa w sync! Spróbuj ponownie..."
+
+msgid "Server error! Try again..."
+msgstr "Błąd Serwera! Spróbuj ponownie..."
+
+msgid "Couldn't delete timer! Try again..."
+msgstr "Nie mógł usunąć timer! Spróbuj ponownie..."

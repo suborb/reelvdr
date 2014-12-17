@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S101.0W
+2=SES 1 & DirecTV 4S/8
+3=West
+4=101.0

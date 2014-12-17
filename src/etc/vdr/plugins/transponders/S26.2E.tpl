@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S26.2E
+2=Badr C
+3=East
+4=26.2

@@ -1,0 +1,156 @@
+
+
+### The version number of this plugin (taken from the main source file):
+
+VERSION = $(shell grep 'static const char \*VERSION *=' $(PLUGIN).c | awk '{ print $$6 }' | sed -e 's/[";]//g')
+
+
+### The version number of VDR (taken from VDR's "config.h"):
+
+APIVERSION = $(shell grep 'define APIVERSION ' $(VDRDIR)/config.h | awk '{ print $$3 }' | sed -e 's/"//g')
+APIVERSNUM = $(shell grep 'define APIVERSNUM ' $(VDRDIR)/config.h | awk '{ print $$3 }' | sed -e 's/"//g' )
+
+VDRLOCALE = $(shell grep '^LOCALEDIR' $(VDRDIR)/Makefile)
+
+
+### The name of the distribution archive:
+
+ARCHIVE = $(PLUGIN)-$(VERSION)
+PACKAGE = vdr-$(ARCHIVE)
+
+
+### Includes and Defines (add further entries here):
+
+INCLUDES += -I$(VDRDIR)/include -I$(DVBDIR)/include
+DEFINES  += -D_GNU_SOURCE -D_LARGEFILE_SOURCE
+DEFINES  += -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DAPIVERSNUM=$(APIVERSNUM)
+
+#ifdef DEBUG
+#  DEFINES += -DDEBUG
+#  CXXFLAGS += -g
+#endif
+
+#ifdef RBLITE
+#  DEFINES += -DRBLITE
+#endif
+
+#ifdef RBMINI
+#  DEFINES += -DRBMINI
+#endif
+
+#ifdef REELVDR
+#  DEFINES += -DREELVDR
+#endif
+
+### Targets:
+
+plug: libvdr-$(PLUGIN).so
+
+all: libvdr-$(PLUGIN).so i18n
+
+### Implicit rules:
+
+%.o: %.c
+	$(CXX) $(CXXFLAGS) -c $(DEFINES) -DPLUGIN_NAME='"$(PLUGIN)"' -DPLUGIN_NAME_I18N='"$(PLUGIN)"' $(INCLUDES) -o $@ $<
+
+# Dependencies:
+
+MAKEDEP = $(CXX) -MM -MG
+DEPFILE = .dependencies
+$(DEPFILE): Makefile
+	@$(MAKEDEP) $(DEFINES) $(INCLUDES) $(OBJS:%.o=%.c)   > $@
+
+-include $(DEPFILE)
+
+
+### Internationalization (I18N):
+ifneq ($(strip $(VDRLOCALE)),)
+### do gettext based i18n stuff
+
+PODIR     = po
+LOCALEDIR = $(VDRDIR)/locale
+I18Npo    = $(wildcard $(PODIR)/*.po)
+I18Nmsgs  = $(addprefix $(LOCALEDIR)/, $(addsuffix /LC_MESSAGES/vdr-$(PLUGIN).mo, \
+		$(notdir $(foreach file, $(I18Npo), $(basename $(file))))))
+I18Npot   = $(PODIR)/$(PLUGIN).pot
+
+#%.mo: %.po
+#	msgfmt -c -o $@ $<
+
+.PHONY: $(I18Npot)-rule
+$(I18Npot): $(wildcard *.c $(PLUGIN).h $(EXTRA_I18N))
+	@echo "making: $@"
+	@#echo $(I18Nmsgs)
+	xgettext -C -cTRANSLATORS --no-wrap --no-location -k -ktr -ktrNOOP --from-code=utf-8 --msgid-bugs-address='<reelbox-devel@mailings.reelbox.org>' $^ -o $(I18Npot)
+
+%.po:
+#%.po: $(I18Npot)
+	@echo "making: $@"
+	msgmerge -U --no-wrap --no-location --backup=none -q $@ $<
+	@touch $@
+
+$(I18Nmsgs): $(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo: $(PODIR)/%.po
+	@echo "making: $@"
+	@mkdir -p $(dir $@)
+	msgfmt -c -o $@ $<
+
+.PHONY: i18n
+i18n: $(I18Npot) i18n-pofiles $(I18Nmsgs)
+
+i18n-pofiles: $(I18Npot)
+	@echo "making: $@"
+	@for i in $(I18Npo) ; do \
+		echo msgmerge -U --no-wrap --no-location --backup=none -q $$i $(I18Npot) ;\
+		msgmerge -U -N --no-wrap --no-location --backup=none -q $$i $(I18Npot) ;\
+	done
+
+i18n-dist: $(I18Nmsgs)
+
+#i18n-dist:
+#	@echo "making: $@"
+#	for i in `ls po/*.po` ; do \
+#		odir=`echo $$i | cut -b4-8` ;\
+#		msgfmt -c -o $(LOCALEDIR)/$$odir/LC_MESSAGES/vdr-$(PLUGIN).mo $$i ;\
+#	done
+
+else ### do i18n.c based i18n stuff
+
+i18n:
+	@### nothing to do
+
+#i18n compatibility generator:
+i18n.c: i18n-template.c po2i18n.pl $(I18Npo)
+	./po2i18n.pl < i18n-template.c > i18n.c
+
+endif
+
+
+libvdr-$(PLUGIN).so: $(OBJS)
+	$(CXX) $(CXXFLAGS) -shared $(OBJS) $(LDFLAGS) $(LIBS) -o $@
+	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
+
+dist: distclean
+	@rm -rf $(TMPDIR)/$(ARCHIVE)
+	@mkdir $(TMPDIR)/$(ARCHIVE)
+	@cp -a * $(TMPDIR)/$(ARCHIVE)
+	@rm -f $(TMPDIR)/$(ARCHIVE)/$(PLUGIN).kdevelop
+	@rm -f $(TMPDIR)/$(ARCHIVE)/$(PLUGIN).kdevelop.filelist
+	@rm -f $(TMPDIR)/$(ARCHIVE)/$(PLUGIN).kdevelop.pcs
+	@rm -f $(TMPDIR)/$(ARCHIVE)/$(PLUGIN).kdevses
+	@rm -rf $(TMPDIR)/$(ARCHIVE)/CVS
+	@rm -rf $(TMPDIR)/$(ARCHIVE)/Examples/CVS
+	@rm -rf $(TMPDIR)/$(ARCHIVE)/Patch/CVS
+	@ln -s $(ARCHIVE) $(TMPDIR)/$(PLUGIN)
+	@tar czf $(PACKAGE).tgz -C $(TMPDIR) $(ARCHIVE) $(PLUGIN)
+	@rm -rf $(TMPDIR)/$(ARCHIVE) $(TMPDIR)/$(PLUGIN)
+	@echo Distribution package created as $(PACKAGE).tgz
+
+clean:
+	@-rm -f $(PODIR)/*.mo
+	@-rm -f $(OBJS) $(MAIN) $(DEPFILE) *.so *.tgz core* *~
+	@-rm -f $(LIBDIR)/libvdr-$(PLUGIN).so.$(APIVERSION)
+
+distclean: clean
+	@-rm -f $(PODIR)/*.pot
+
+MAKECOMMON_IS_SOURCED = 1

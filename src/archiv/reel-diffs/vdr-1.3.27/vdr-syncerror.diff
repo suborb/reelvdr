@@ -1,0 +1,22 @@
+--- transfer.c	2005-08-02 19:03:39.000000000 +0200
++++ transfer_neu.c	2005-08-02 19:30:52.000000000 +0200
+@@ -36,7 +36,9 @@
+ {
+   if (On) {
+      if (!active)
+-        Start();
++        active = true;
++        if (!Start())
++           active = false;        
+      }
+   else if (active) {
+      active = false;
+@@ -70,7 +71,7 @@
+   bool GotBufferReserve = false;
+   int RequiredBufferReserve = KILOBYTE(DvbCardWith4MBofSDRAM ? 288 : 576);
+ #endif
+-  active = true;
++  //active = true;
+   while (active) {
+ #ifdef FW_NEEDS_BUFFER_RESERVE_FOR_AC3
+         if (needsBufferReserve && !GotBufferReserve) {

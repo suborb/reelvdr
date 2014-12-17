@@ -1,0 +1,112 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# David F. - Reelbox Tododream Team <david@micaco.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-vlcclient\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-01-12 11:37+0100\n"
+"PO-Revision-Date: 2009-12-08 00:00+0100\n"
+"Last-Translator: David F. <david@micaco.com>\n"
+"Language-Team: Reelbox Tododream Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Remote VLC"
+msgstr "VLC remot"
+
+msgid "Fetching recordings"
+msgstr "S'estan cercant gravacions"
+
+msgid "Error fetching recordings"
+msgstr "S'ha produït un error en cercar les gravacions"
+
+msgid "Play"
+msgstr "Reprodueix"
+
+msgid "Open"
+msgstr "Obre"
+
+msgid "Error while accessing recording!"
+msgstr "S'ha produït un error en accedir a la gravació!"
+
+msgid "Jump: "
+msgstr "Salta: "
+
+msgid "very low"
+msgstr "molt baixa"
+
+msgid "low"
+msgstr "baixa"
+
+msgid "ok"
+msgstr "ok"
+
+msgid "good"
+msgstr "bona"
+
+msgid "very good"
+msgstr "molt bona"
+
+msgid "IP of remote VLC"
+msgstr "IP de l'VLC remot"
+
+msgid "Remote VLC Directory"
+msgstr "Carpeta de l'VLC remot"
+
+msgid "Streaming Resolution"
+msgstr "Resolució de l'Streaming"
+
+msgid "Stream DD (works only if movie has DD)"
+msgstr "Stream DD (només funciona si la pel·lícula està en DD)"
+
+msgid "no"
+msgstr "no"
+
+msgid "yes"
+msgstr "sí"
+
+msgid "Sync on audio"
+msgstr "Sincronitza l'àudio"
+
+msgid "Remote CPU Power"
+msgstr "CPU remota"
+
+msgid "Deinterlace before encoding"
+msgstr "Desentrellaça abans de codificar"
+
+msgid "Post processing quality"
+msgstr "Qualitat de processament"
+
+msgid "Render subtitles into stream"
+msgstr "Renderitza subtítols amb l'stream"
+
+msgid "HQ-profile"
+msgstr "Perfil HQ"
+
+msgid "Interlace"
+msgstr "Entrellaça"
+
+msgid "Interlaced motion estimation"
+msgstr "Estimació del moviment entrellaçat"
+
+msgid "Pre-motion estimation"
+msgstr "Estimació prèvia"
+
+msgid "Hurry up"
+msgstr "Afanya't"
+
+msgid "Noise reduction"
+msgstr "Reducció de soroll"
+
+msgid "Strict standard compliance"
+msgstr "Compliment dels estàndards"
+
+msgid "VLC returned HTTP-Error 404"
+msgstr "VLC retorna l'error HTTP-Error 404"
+
+msgid "ERROR: VLC-CLient: VLC returned nothing"
+msgstr "ERROR: Client VLC: No hi ha retorn"

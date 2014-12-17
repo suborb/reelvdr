@@ -1,0 +1,357 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Oktay Yolgeçen <oktay_73@yahoo.de>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-channelscan\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-09-06 10:13+0200\n"
+"PO-Revision-Date: 2008-09-29 10:24+0200\n"
+"Last-Translator: Oktay Yolgeçen <oktay_73@yahoo.de>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Channel lists"
+msgstr "Kanal Liste"
+
+msgid "Backup"
+msgstr "Yedekleme"
+
+msgid "Backup channel list to..."
+msgstr "Kanal Listeyi Buraya Yedekle"
+
+msgid "Restore channel list from..."
+msgstr ""
+
+msgid "Restore failed!"
+msgstr "Geri Vermek Olmadi"
+
+msgid "Favourites List successfully loaded"
+msgstr ""
+
+msgid "Invalid file"
+msgstr "Bosuk Dosya"
+
+msgid "Channel List successfully loaded"
+msgstr ""
+
+msgid "Backup failed!"
+msgstr "Yedeklemede Olmadi"
+
+msgid "Channel List successfully stored"
+msgstr "Kanal Liste Hafisaya Alindi!"
+
+msgid "TV only"
+msgstr "Sadece TV"
+
+msgid "Radio only"
+msgstr "Sadece Radio"
+
+msgid "HDTV only"
+msgstr "Sadece HDTV"
+
+msgid "Radio + TV"
+msgstr "Radio ve TV"
+
+msgid "Servicetype"
+msgstr "Service Tipi"
+
+msgid "Enable Logfile"
+msgstr "Logfile Bulunmuyor"
+
+msgid "No tuners, please stop recording and retry"
+msgstr ""
+
+msgid "Channelscan"
+msgstr "Kanal Arama"
+
+msgid "Detailed search"
+msgstr "Gelişmiş Arama"
+
+msgid "Manual"
+msgstr "Manuel"
+
+msgid "SearchMode$Auto"
+msgstr "Otomatik"
+
+msgid "End of channellist"
+msgstr "Kanal Listenin Sonunda"
+
+msgid "New channellist"
+msgstr "Yeni Kanal Listesi"
+
+msgid "Bouquets"
+msgstr "Buketler"
+
+msgid "Intelligent 6900/6875/6111"
+msgstr "Gelişmiş 6900/6875/6111"
+
+msgid "Try all 6900/6875/6111"
+msgstr "Hepsi Ara 6900/6875/6111"
+
+#, fuzzy
+msgid "Satellite-S2"
+msgstr "DVB-S - Satellit"
+
+#, fuzzy
+msgid "Satellite-S"
+msgstr "DVB-S - Satellit"
+
+#, fuzzy
+msgid "Terrestrial"
+msgstr "DVB-T - Terrestrik"
+
+#, fuzzy
+msgid "Cable"
+msgstr "Etkili"
+
+msgid "DVB-T - Terrestrial"
+msgstr "DVB-T - Terrestrik"
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DVB-C - Cable"
+msgstr "DVB-C - Kabel"
+
+msgid "DVB-S2 - Satellite"
+msgstr "DVB-S2 - Satellit"
+
+msgid "DVB-S - Satellite"
+msgstr "DVB-S - Satellit"
+
+msgid "Search Mode"
+msgstr "Arama Modu"
+
+msgid "Add new channels to"
+msgstr "Yeni Kanallar Buraya"
+
+msgid "Source"
+msgstr "Kaynak"
+
+msgid "No Tuners available"
+msgstr "Tuner Bulunamadi"
+
+msgid "Position"
+msgstr "Posision"
+
+msgid "no"
+msgstr "Hayir"
+
+msgid "yes"
+msgstr "Evet"
+
+msgid "Bandwidth"
+msgstr ""
+
+msgid "Symbol Rates"
+msgstr "Sembol Orani"
+
+msgid "Frequency (MHz)"
+msgstr "Frekans (MHz)"
+
+msgid "Polarization"
+msgstr "Polarizasyon"
+
+msgid "Symbolrate"
+msgstr "Sembol Orani"
+
+msgid "Modulation"
+msgstr "Moduülasyon"
+
+msgid "Frequency (kHz)"
+msgstr "Frekans (kHz)"
+
+msgid "Recording is running !"
+msgstr "Uyari - Kayit Yapiliyor!"
+
+msgid "Button$Start"
+msgstr "Start"
+
+msgid "Channel sel."
+msgstr ""
+
+msgid "DiSEqC"
+msgstr "DiSEqC"
+
+msgid "Scanning aborted"
+msgstr "Arama Düşüt"
+
+msgid "Scanning succed"
+msgstr "Kanal Arama Bitti"
+
+msgid "Retrieving transponders failed!"
+msgstr ""
+
+msgid "Please check satellites.conf."
+msgstr "Lütven Satellit Listenizi Kontröl Ediniz!"
+
+msgid "Tuner obtained no lock!"
+msgstr ""
+
+msgid "Please check your connections and satellites.conf."
+msgstr "Lütven Satellit Bağlantinizi Kontröl Ediniz!"
+
+msgid "Unpredictable error occured!"
+msgstr ""
+
+msgid "Please try again later"
+msgstr "Lütfen sonra yeniden deneyin"
+
+msgid "Information:"
+msgstr ""
+
+#, fuzzy
+msgid "Entries in current channellist"
+msgstr "Kanal Liste Ihricat Et"
+
+msgid "Recording is running"
+msgstr "Kayit Yapiliyor"
+
+msgid "Scan active"
+msgstr "Kanal Arama Aktiv"
+
+msgid "TV Channels\tRadio Channels"
+msgstr "TV Kanallari\tRadio Kanallari"
+
+#, c-format
+msgid "Retrieving transponder list from %s"
+msgstr "Transponder Listesi %s"
+
+#, fuzzy, c-format
+msgid "Scanning %s (%iMHz) %s"
+msgstr "Arama %s (%iMHz)\t%s"
+
+#, fuzzy, c-format
+msgid "Scanning %s (%.1fMHz) %s"
+msgstr "Arama %s (%.3fMHz)\t%s"
+
+#, c-format
+msgid "Scanning %s (%.3fMHz)\t%s"
+msgstr "Arama %s (%.3fMHz)\t%s"
+
+msgid "No new channels found"
+msgstr "Yeni Kanal Bulunamadi"
+
+msgid "Added new channels"
+msgstr "Yeni Kanallar "
+
+msgid "Press OK to go back to rotor settings"
+msgstr ""
+
+msgid "Press OK to finish or Exit for new scan"
+msgstr "OK - Arama Bitir / Exit - Yeni Arama"
+
+msgid "Scanning on transponder"
+msgstr "Transponder Araniyor"
+
+msgid "Auto"
+msgstr "Otomatik"
+
+msgid "enabled"
+msgstr "Etkili"
+
+msgid "disabled"
+msgstr "Etkisiz"
+
+msgid "Back"
+msgstr "Geri"
+
+msgid "Skip"
+msgstr "Bas"
+
+msgid "Load predefined channel list"
+msgstr ""
+
+msgid "Start channelscan"
+msgstr ""
+
+msgid "    Overwrite Favourites list"
+msgstr ""
+
+msgid "You have the choice of loading a predefined channel list OR starting channelscan to find channels"
+msgstr ""
+
+msgid "Press OK to reload default channel list"
+msgstr ""
+
+msgid "Functions"
+msgstr "Fonksiyonlar"
+
+msgid "Please select a channellist:"
+msgstr "Lütven Bir Kanal Liste Seç"
+
+msgid "Overwrite existing favourites list, also?"
+msgstr ""
+
+#, fuzzy
+msgid "Loading channel list ..."
+msgstr "Kanal Listeyi Buraya Yedekle"
+
+msgid "Channellist was installed successfully"
+msgstr ""
+
+msgid "Error while loading channellist"
+msgstr ""
+
+msgid "Changes Done"
+msgstr "Degışiklikler Hafizadadir"
+
+msgid "Please check your Timers!"
+msgstr "Lütven Timerlariniza Bakiniz"
+
+msgid "Changes failed"
+msgstr "Degışiklikler Olmadi"
+
+msgid "Reloaded default channel list"
+msgstr ""
+
+msgid "Error loading default channel list"
+msgstr ""
+
+msgid "Delete channel list?"
+msgstr "Kanal Liste Sil?"
+
+msgid "Channel lists functions"
+msgstr "Kanal Liste Fonksiyonları"
+
+msgid "Import a channellist"
+msgstr "Kanal Liste Ithal Et"
+
+msgid "Export current channellist"
+msgstr "Kanal Liste Ihricat Et"
+
+msgid "Import favourites list"
+msgstr ""
+
+msgid "Export current favourites list"
+msgstr ""
+
+msgid "Import channels from ReelBox Avantgarde"
+msgstr ""
+
+msgid "Scanning channels on DVB-T/C/S and S2 Tuners"
+msgstr "Kanal Arama DVB-T/C/S ve S2 Tuner"
+
+msgid "Channel Scan"
+msgstr "Kanal Arama"
+
+#~ msgid "DVB-S2 - Rotor"
+#~ msgstr "DVB-S2 - Rotor"
+
+#~ msgid "DVB-S - Rotor"
+#~ msgstr "DVB-S - Rotor"
+
+#, fuzzy
+#~ msgid "Scanning %s (%.1fMHz, %s, SR%i) %s"
+#~ msgstr "Arama %s (%.3fMHz)\t%s"
+
+#~ msgid "Service type"
+#~ msgstr "Service Tipi"
+
+#~ msgid " - "
+#~ msgstr " - "

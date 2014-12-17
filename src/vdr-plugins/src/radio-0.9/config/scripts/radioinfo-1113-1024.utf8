@@ -1,0 +1,25 @@
+#!/bin/bash
+# Hit Radio FFH-Playlist
+# $1 = outfile
+
+### Variabel
+Name="Hit Radio FFH [www.ffh.de]"
+### 
+
+# get...
+wget -q --tries=2 --timeout=5 -O /tmp/playlist "http://www.ffh.de/webradio/hitfinder_index.php"
+
+# Artist/Title
+artist=`grep -A15 '>Datum/Zeit<*' /tmp/playlist`
+artist=${artist//*$'<td>'/}; artist=${artist//$'<'\/'td>'*/}
+title=`grep -A14 '>Datum/Zeit<*' /tmp/playlist`
+title=${title//*$'<td>'/}; title=${title//$'<'\/'td>'*/}
+
+# write...
+if [ $1 ]; then
+	echo $Name    > $1
+	echo $artist >> $1
+	echo $title  >> $1
+else
+	echo "$Name: Interpret/Titel =  $artist / $title"
+fi

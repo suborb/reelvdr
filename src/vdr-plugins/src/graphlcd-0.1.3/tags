@@ -1,0 +1,334 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+ARCHIVE	Makefile	/^ARCHIVE = $(PLUGIN)-$(VERSION)$/;"	m
+Action	display.c	/^void cGraphLCDDisplay::Action(void)$/;"	f	class:cGraphLCDDisplay
+Apid1	compat.h	12;"	d
+Apid2	compat.h	13;"	d
+BrightnessActive	setup.h	/^	int BrightnessActive;$/;"	m	class:cGraphLCDSetup
+BrightnessDelay	setup.h	/^	int BrightnessDelay;$/;"	m	class:cGraphLCDSetup
+BrightnessIdle	setup.h	/^	int BrightnessIdle;$/;"	m	class:cGraphLCDSetup
+ChannelSwitch	state.c	/^void cGraphLCDState::ChannelSwitch(const cDevice * Device, int ChannelNumber)$/;"	f	class:cGraphLCDState
+CheckAndUpdateSymbols	display.c	/^bool cGraphLCDDisplay::CheckAndUpdateSymbols()$/;"	f	class:cGraphLCDDisplay
+CommandLineHelp	plugin.c	/^const char * cPluginGraphLCD::CommandLineHelp()$/;"	f	class:cPluginGraphLCD
+CreateFullFileName	logolist.c	/^std::string cGraphLCDLogoList::CreateFullFileName(const std::string & baseName, ePicType type)$/;"	f	class:cGraphLCDLogoList
+CurrTime	display.h	/^	time_t CurrTime;$/;"	m	class:cGraphLCDDisplay
+CurrTimeval	display.h	/^	struct timeval CurrTimeval;$/;"	m	class:cGraphLCDDisplay
+DEPFILE	Makefile	/^DEPFILE = .dependencies$/;"	m
+DESCRIPTION	plugin.c	/^static const char *DESCRIPTION    = "Output to graphic LCD";$/;"	v	file:
+DVBDIR	Makefile	/^DVBDIR = ..\/..\/..\/..\/DVB$/;"	m
+Display	display.c	/^cGraphLCDDisplay Display;$/;"	v
+DisplayChannel	display.c	/^void cGraphLCDDisplay::DisplayChannel()$/;"	f	class:cGraphLCDDisplay
+DisplayColorButtons	display.c	/^void cGraphLCDDisplay::DisplayColorButtons()$/;"	f	class:cGraphLCDDisplay
+DisplayLogo	display.c	/^void cGraphLCDDisplay::DisplayLogo()$/;"	f	class:cGraphLCDDisplay
+DisplayMenu	display.c	/^void cGraphLCDDisplay::DisplayMenu(void)$/;"	f	class:cGraphLCDDisplay
+DisplayMessage	display.c	/^void cGraphLCDDisplay::DisplayMessage()$/;"	f	class:cGraphLCDDisplay
+DisplayProgramme	display.c	/^void cGraphLCDDisplay::DisplayProgramme()$/;"	f	class:cGraphLCDDisplay
+DisplayReplay	display.c	/^void cGraphLCDDisplay::DisplayReplay(tReplayState & replay)$/;"	f	class:cGraphLCDDisplay
+DisplaySymbols	display.c	/^void cGraphLCDDisplay::DisplaySymbols()$/;"	f	class:cGraphLCDDisplay
+DisplayTextItem	display.c	/^void cGraphLCDDisplay::DisplayTextItem()$/;"	f	class:cGraphLCDDisplay
+DisplayTime	display.c	/^void cGraphLCDDisplay::DisplayTime()$/;"	f	class:cGraphLCDDisplay
+DisplayVolume	display.c	/^void cGraphLCDDisplay::DisplayVolume()$/;"	f	class:cGraphLCDDisplay
+Dpid1	compat.h	14;"	d
+Dpid2	compat.h	15;"	d
+Draw	widgets.c	/^void cScroller::Draw(GLCD::cBitmap * bitmap)$/;"	f	class:cScroller
+FILENAME_EXTERNAL_TRIGGERED_SYMBOLS	display.c	33;"	d	file:
+FRAME_SPACE_X	display.c	/^int     FRAME_SPACE_X;$/;"	v
+FRAME_SPACE_XB	display.c	/^int     FRAME_SPACE_XB;$/;"	v
+FRAME_SPACE_Y	display.c	/^int     FRAME_SPACE_Y;$/;"	v
+FRAME_SPACE_YB	display.c	/^int     FRAME_SPACE_YB;$/;"	v
+FREENULL	global.h	40;"	d
+File	layout.h	/^	const std::string & File() const { return file; }$/;"	f	class:cFontElement
+Font	layout.h	/^	const GLCD::cFont * Font() const { return &font; }$/;"	f	class:cFontElement
+GRAPHLCD_DISPLAY_H	display.h	29;"	d
+GetCardState	state.c	/^tCardState cGraphLCDState::GetCardState(int number)$/;"	f	class:cGraphLCDState
+GetChannelState	state.c	/^tChannelState cGraphLCDState::GetChannelState()$/;"	f	class:cGraphLCDState
+GetEventState	state.c	/^tEventState cGraphLCDState::GetEventState()$/;"	f	class:cGraphLCDState
+GetFont	layout.c	/^const GLCD::cFont * cFontList::GetFont(const std::string & name) const$/;"	f	class:cFontList
+GetLogo	logolist.c	/^cGraphLCDLogo * cGraphLCDLogoList::GetLogo(const std::string & chID, ePicType type)$/;"	f	class:cGraphLCDLogoList
+GetOsdState	state.c	/^tOsdState cGraphLCDState::GetOsdState()$/;"	f	class:cGraphLCDState
+GetProgramme	state.c	/^void cGraphLCDState::GetProgramme()$/;"	f	class:cGraphLCDState
+GetReplayState	state.c	/^tReplayState cGraphLCDState::GetReplayState()$/;"	f	class:cGraphLCDState
+GetVolumeState	state.c	/^tVolumeState cGraphLCDState::GetVolumeState()$/;"	f	class:cGraphLCDState
+GraphLCDSetup	setup.c	/^cGraphLCDSetup GraphLCDSetup;$/;"	v
+GraphLCDState	display.h	/^	cGraphLCDState * GraphLCDState;$/;"	m	class:cGraphLCDDisplay
+Housekeeping	plugin.c	/^void cPluginGraphLCD::Housekeeping()$/;"	f	class:cPluginGraphLCD
+ID	logo.h	/^	const std::string & ID() const { return id; }$/;"	f	class:cGraphLCDLogo
+IdentifyReplayType	setup.h	/^	int IdentifyReplayType;$/;"	m	class:cGraphLCDSetup
+IndexIsGreaterAsOneHour	display.c	/^bool cGraphLCDDisplay::IndexIsGreaterAsOneHour(int Index) const$/;"	f	class:cGraphLCDDisplay
+IndexToMS	display.c	/^const char * cGraphLCDDisplay::IndexToMS(int Index) const$/;"	f	class:cGraphLCDDisplay
+Init	display.c	/^int cGraphLCDDisplay::Init(const char * CfgDir, unsigned int displayNumber)$/;"	f	class:cGraphLCDDisplay
+Init	widgets.c	/^void cScroller::Init(int X, int Y, int Xmax, const GLCD::cFont * Font, const std::string & Text)$/;"	f	class:cScroller
+Initialize	plugin.c	/^bool cPluginGraphLCD::Initialize()$/;"	f	class:cPluginGraphLCD
+IsLogoActive	display.c	/^bool cGraphLCDDisplay::IsLogoActive() const$/;"	f	class:cGraphLCDDisplay
+IsScrollerTextChanged	display.c	/^bool cGraphLCDDisplay::IsScrollerTextChanged(const std::vector<cScroller> & scrollers, const std::vector <std::string> & lines) const$/;"	f	class:cGraphLCDDisplay
+IsSymbolsActive	display.c	/^bool cGraphLCDDisplay::IsSymbolsActive() const$/;"	f	class:cGraphLCDDisplay
+LCD	global.c	/^GLCD::cDriver * LCD;$/;"	v
+LCDMAXCARDS	display.h	48;"	d
+LIBDIR	Makefile	/^LIBDIR = ..\/..\/lib$/;"	m
+LastState	display.h	/^	ThreadState LastState;$/;"	m	class:cGraphLCDDisplay
+LastTime	display.h	/^	time_t LastTime;$/;"	m	class:cGraphLCDDisplay
+LastTimeBrightness	display.h	/^	uint64 LastTimeBrightness;$/;"	m	class:cGraphLCDDisplay
+LastTimeCheckSym	display.h	/^	time_t LastTimeCheckSym;$/;"	m	class:cGraphLCDDisplay
+LastTimeModSym	display.h	/^	time_t LastTimeModSym;$/;"	m	class:cGraphLCDDisplay
+Load	layout.c	/^bool cFontElement::Load(const std::string & url)$/;"	f	class:cFontElement
+Load	layout.c	/^bool cFontList::Load(const std::string & fileName)$/;"	f	class:cFontList
+MAINMENUENTRY	plugin.c	/^static const char *MAINMENUENTRY  = NULL;$/;"	v	file:
+MAKEDEP	Makefile	/^MAKEDEP = g++ -MM -MG$/;"	m
+MAXLINES_MSG	display.c	31;"	d	file:
+MAXLINES_TEXT	display.c	32;"	d	file:
+MAXY_L	display.c	49;"	d	file:
+MAXY_M	display.c	45;"	d	file:
+MAXY_S	display.c	41;"	d	file:
+MAXY_T	display.c	37;"	d	file:
+MINY_L	display.c	48;"	d	file:
+MINY_M	display.c	44;"	d	file:
+MINY_S	display.c	40;"	d	file:
+MINY_T	display.c	36;"	d	file:
+MainMenuAction	plugin.c	/^cOsdObject * cPluginGraphLCD::MainMenuAction()$/;"	f	class:cPluginGraphLCD
+Menu	display.h	/^	Menu$/;"	e	enum:ThreadState
+ModifyReplayString	setup.h	/^	int ModifyReplayString;$/;"	m	class:cGraphLCDSetup
+NSTALLDOCDIR	Makefile	/^export INSTALLDOCDIR = $(INSTALLPREFIX)\/share\/doc$/;"	m
+NSTALLPREFIX	Makefile	/^export INSTALLPREFIX = \/usr\/local$/;"	m
+Name	layout.h	/^	const std::string & Name() const { return name; }$/;"	f	class:cFontElement
+NeedsUpdate	widgets.c	/^bool cScroller::NeedsUpdate()$/;"	f	class:cScroller
+Normal	display.h	/^	Normal,$/;"	e	enum:ThreadState
+OBJS	Makefile	/^OBJS = display.o global.o i18n.o layout.o logo.o logolist.o menu.o plugin.o setup.o state.o strfct.o widgets.o$/;"	m
+OsdChannel	state.c	/^void cGraphLCDState::OsdChannel(const char * Text)$/;"	f	class:cGraphLCDState
+OsdClear	state.c	/^void cGraphLCDState::OsdClear()$/;"	f	class:cGraphLCDState
+OsdCurrentItem	state.c	/^void cGraphLCDState::OsdCurrentItem(const char * Text)$/;"	f	class:cGraphLCDState
+OsdHelpKeys	state.c	/^void cGraphLCDState::OsdHelpKeys(const char * Red, const char * Green, const char * Yellow, const char * Blue)$/;"	f	class:cGraphLCDState
+OsdItem	state.c	/^void cGraphLCDState::OsdItem(const char * Text, int Index)$/;"	f	class:cGraphLCDState
+OsdProgramme	state.c	/^void cGraphLCDState::OsdProgramme(time_t PresentTime, const char * PresentTitle, const char * PresentSubtitle, time_t FollowingTime, const char * FollowingTitle, const char * FollowingSubtitle)$/;"	f	class:cGraphLCDState
+OsdStatusMessage	state.c	/^void cGraphLCDState::OsdStatusMessage(const char * Message)$/;"	f	class:cGraphLCDState
+OsdTextItem	state.c	/^void cGraphLCDState::OsdTextItem(const char * Text, bool Scroll)$/;"	f	class:cGraphLCDState
+OsdTitle	state.c	/^void cGraphLCDState::OsdTitle(const char * Title)$/;"	f	class:cGraphLCDState
+PACKAGE	Makefile	/^PACKAGE = vdr-$(ARCHIVE)$/;"	m
+PLUGIN	Makefile	/^PLUGIN = graphlcd$/;"	m
+PLUGIN_NAME	global.h	37;"	d
+Parse	layout.c	/^bool cFontList::Parse(const std::string & line)$/;"	f	class:cFontList
+Phrases	i18n.c	/^const tI18nPhrase Phrases[] =$/;"	v
+PluginActive	setup.h	/^	int PluginActive;$/;"	m	class:cGraphLCDSetup
+ProcessArgs	plugin.c	/^bool cPluginGraphLCD::ProcessArgs(int argc, char * argv[])$/;"	f	class:cPluginGraphLCD
+Recording	state.c	/^void cGraphLCDState::Recording(const cDevice * Device, const char * Name)$/;"	f	class:cGraphLCDState
+Replay	display.h	/^	Replay,$/;"	e	enum:ThreadState
+ReplayLogo	setup.h	/^	int ReplayLogo;$/;"	m	class:cGraphLCDSetup
+Replaying	display.c	/^void cGraphLCDDisplay::Replaying(bool starting, eReplayMode replayMode)$/;"	f	class:cGraphLCDDisplay
+Replaying	state.c	/^void cGraphLCDState::Replaying(const cControl * Control, const char * Name)$/;"	f	class:cGraphLCDState
+Reset	widgets.c	/^void cScroller::Reset()$/;"	f	class:cScroller
+SPACEWIDTH	global.h	38;"	d
+SYMBOL_SPACE	display.c	/^int     SYMBOL_SPACE;$/;"	v
+ScrollMode	setup.h	/^	int ScrollMode;$/;"	m	class:cGraphLCDSetup
+ScrollSpeed	setup.h	/^	int ScrollSpeed;$/;"	m	class:cGraphLCDSetup
+ScrollTime	setup.h	/^	int ScrollTime;$/;"	m	class:cGraphLCDSetup
+SetBrightness	display.c	/^void cGraphLCDDisplay::SetBrightness() $/;"	f	class:cGraphLCDDisplay
+SetChannel	display.c	/^void cGraphLCDDisplay::SetChannel(int ChannelNumber)$/;"	f	class:cGraphLCDDisplay
+SetChannel	state.c	/^void cGraphLCDState::SetChannel(int ChannelNumber)$/;"	f	class:cGraphLCDState
+SetClear	display.c	/^void cGraphLCDDisplay::SetClear()$/;"	f	class:cGraphLCDDisplay
+SetOsdCurrentItem	display.c	/^void cGraphLCDDisplay::SetOsdCurrentItem()$/;"	f	class:cGraphLCDDisplay
+SetOsdItem	display.c	/^void cGraphLCDDisplay::SetOsdItem(const char * Text)$/;"	f	class:cGraphLCDDisplay
+SetOsdTextItem	display.c	/^void cGraphLCDDisplay::SetOsdTextItem(const char * Text, bool Scroll)$/;"	f	class:cGraphLCDDisplay
+SetOsdTitle	display.c	/^void cGraphLCDDisplay::SetOsdTitle()$/;"	f	class:cGraphLCDDisplay
+SetVolume	state.c	/^void cGraphLCDState::SetVolume(int Volume, bool Absolute)$/;"	f	class:cGraphLCDState
+SetupMenu	plugin.c	/^cMenuSetupPage * cPluginGraphLCD::SetupMenu()$/;"	f	class:cPluginGraphLCD
+SetupParse	plugin.c	/^bool cPluginGraphLCD::SetupParse(const char * Name, const char * Value)$/;"	f	class:cPluginGraphLCD
+ShowChannel	setup.h	/^	int ShowChannel;$/;"	m	class:cGraphLCDSetup
+ShowColorButtons	setup.h	/^	int ShowColorButtons;$/;"	m	class:cGraphLCDSetup
+ShowDateTime	setup.h	/^	int ShowDateTime;$/;"	m	class:cGraphLCDSetup
+ShowETSymbols	setup.h	/^	int ShowETSymbols;$/;"	m	class:cGraphLCDSetup
+ShowLogo	setup.h	/^	int ShowLogo;$/;"	m	class:cGraphLCDSetup
+ShowMenu	setup.h	/^	int ShowMenu;$/;"	m	class:cGraphLCDSetup
+ShowMessages	setup.h	/^	int ShowMessages;$/;"	m	class:cGraphLCDSetup
+ShowNotRecording	setup.h	/^	int ShowNotRecording; \/\/ Empty frame around not recording card's empty icons?$/;"	m	class:cGraphLCDSetup
+ShowProgram	setup.h	/^	int ShowProgram;$/;"	m	class:cGraphLCDSetup
+ShowSymbols	setup.h	/^	int ShowSymbols;$/;"	m	class:cGraphLCDSetup
+ShowTimebar	setup.h	/^	int ShowTimebar;$/;"	m	class:cGraphLCDSetup
+ShowVolume	setup.h	/^	int ShowVolume;$/;"	m	class:cGraphLCDSetup
+Size	layout.h	/^	int Size() const { return size; }$/;"	f	class:cFontElement
+Start	plugin.c	/^bool cPluginGraphLCD::Start()$/;"	f	class:cPluginGraphLCD
+State	display.h	/^	ThreadState State;$/;"	m	class:cGraphLCDDisplay
+Store	menu.c	/^void cGraphLCDMenuSetup::Store()$/;"	f	class:cGraphLCDMenuSetup
+TEXT_OFFSET_X	display.c	/^int     TEXT_OFFSET_X;$/;"	v
+TEXT_OFFSET_Y_CHANNEL	display.c	/^int     TEXT_OFFSET_Y_CHANNEL;$/;"	v
+TEXT_OFFSET_Y_TIME	display.c	/^int     TEXT_OFFSET_Y_TIME;$/;"	v
+TEXT_OFFSET_Y_TITLE	display.c	/^int     TEXT_OFFSET_Y_TITLE;$/;"	v
+TIMEBAR_HEIGHT	display.c	/^int     TIMEBAR_HEIGHT;$/;"	v
+TMPDIR	Makefile	/^TMPDIR = \/tmp$/;"	m
+Text	widgets.h	/^	const std::string & Text() const { return text; }$/;"	f	class:cScroller
+ThreadState	display.h	/^enum ThreadState$/;"	g
+Tick	state.c	/^void cGraphLCDState::Tick()$/;"	f	class:cGraphLCDState
+TimeMs	compat.h	6;"	d
+TimeMs	compat.h	8;"	d
+Type	layout.h	/^	int Type() const { return type; }$/;"	f	class:cFontElement
+Update	display.c	/^void cGraphLCDDisplay::Update()$/;"	f	class:cGraphLCDDisplay
+UpdateAt	display.h	/^	struct timeval UpdateAt;$/;"	m	class:cGraphLCDDisplay
+UpdateIn	display.c	/^void cGraphLCDDisplay::UpdateIn(long usec)$/;"	f	class:cGraphLCDDisplay
+VDRDIR	Makefile	/^VDRDIR = ..\/..\/..$/;"	m
+VDRVERSION	Makefile	/^VDRVERSION = $(shell grep 'define VDRVERSION ' $(VDRDIR)\/config.h | awk '{ print $$3 }' | sed -e 's\/"\/\/g')$/;"	m
+VERSION	Makefile	/^VERSION = $(shell grep 'static const char \\*VERSION *=' plugin.c | awk '{ print $$6 }' | sed -e 's\/[";]\/\/g')$/;"	m
+VERSION	plugin.c	/^static const char *VERSION        = "0.1.2";$/;"	v	file:
+WrapText	display.c	/^int cGraphLCDDisplay::WrapText(std::string & text, std::vector <std::string> & lines, const GLCD::cFont * font, int maxTextWidth, int maxLines, bool cutTooLong)$/;"	f	class:cGraphLCDDisplay
+_GRAPHLCD_COMPAT_H_	compat.h	2;"	d
+_GRAPHLCD_FCT_H_	strfct.h	30;"	d
+_GRAPHLCD_GLOBAL_H_	global.h	29;"	d
+_GRAPHLCD_I18N_H_	i18n.h	29;"	d
+_GRAPHLCD_LOGOLIST_H_	logolist.h	29;"	d
+_GRAPHLCD_LOGO_H_	logo.h	29;"	d
+_GRAPHLCD_MENU_H_	menu.h	29;"	d
+_GRAPHLCD_SETUP_H_	setup.h	29;"	d
+_GRAPHLCD_STATE_H_	state.h	10;"	d
+_GRAPHLCD_WIDGETS_H_	widgets.h	29;"	d
+active	display.h	/^	bool active;$/;"	m	class:cGraphLCDDisplay
+active	widgets.h	/^	bool active;$/;"	m	class:cScroller
+aliasList	logolist.h	/^	std::list <tAliasListElement *> aliasList;$/;"	m	class:cGraphLCDLogoList
+bBrightnessActive	display.h	/^	bool bBrightnessActive;$/;"	m	class:cGraphLCDDisplay
+bitmap	display.h	/^	GLCD::cBitmap * bitmap;$/;"	m	class:cGraphLCDDisplay
+byte	global.h	/^typedef unsigned char   byte;$/;"	t
+cFontElement	layout.c	/^cFontElement::cFontElement(const std::string & fontName)$/;"	f	class:cFontElement
+cFontElement	layout.h	/^class cFontElement$/;"	c
+cFontList	layout.c	/^cFontList::cFontList()$/;"	f	class:cFontList
+cFontList	layout.h	/^class cFontList$/;"	c
+cGraphLCDDisplay	display.c	/^cGraphLCDDisplay::cGraphLCDDisplay()$/;"	f	class:cGraphLCDDisplay
+cGraphLCDDisplay	display.h	/^class cGraphLCDDisplay : public cThread$/;"	c
+cGraphLCDLogo	logo.c	/^cGraphLCDLogo::cGraphLCDLogo(const std::string & id)$/;"	f	class:cGraphLCDLogo
+cGraphLCDLogo	logo.h	/^class cGraphLCDLogo : public GLCD::cImage$/;"	c
+cGraphLCDLogoList	logolist.c	/^cGraphLCDLogoList::cGraphLCDLogoList(const std::string & logodir, const std::string & cfgdir)$/;"	f	class:cGraphLCDLogoList
+cGraphLCDLogoList	logolist.h	/^class cGraphLCDLogoList$/;"	c
+cGraphLCDMenuSetup	menu.c	/^cGraphLCDMenuSetup::cGraphLCDMenuSetup()$/;"	f	class:cGraphLCDMenuSetup
+cGraphLCDMenuSetup	menu.h	/^class cGraphLCDMenuSetup : public cMenuSetupPage$/;"	c
+cGraphLCDSetup	setup.c	/^cGraphLCDSetup::cGraphLCDSetup(void)$/;"	f	class:cGraphLCDSetup
+cGraphLCDSetup	setup.h	/^class cGraphLCDSetup$/;"	c
+cGraphLCDState	state.c	/^cGraphLCDState::cGraphLCDState()$/;"	f	class:cGraphLCDState
+cGraphLCDState	state.h	/^class cGraphLCDState : public cStatus$/;"	c
+cPluginGraphLCD	plugin.c	/^VDRPLUGINCREATOR(cPluginGraphLCD); \/\/ Don't touch this!$/;"	v
+cPluginGraphLCD	plugin.c	/^cPluginGraphLCD::cPluginGraphLCD()$/;"	f	class:cPluginGraphLCD
+cScroller	widgets.c	/^cScroller::cScroller()$/;"	f	class:cScroller
+cScroller	widgets.h	/^class cScroller$/;"	c
+card	state.h	/^	tCardState card[MAXDEVICES];$/;"	m	class:cGraphLCDState
+cfgDir	display.h	/^	std::string cfgDir;$/;"	m	class:cGraphLCDDisplay
+channel	state.h	/^	tChannelState channel;$/;"	m	class:cGraphLCDState
+channelID	logolist.h	/^		std::string channelID;$/;"	m	struct:cGraphLCDLogoList::tAliasListElement
+clip	global.h	/^template<class T> inline void clip(T & value, T min, T max)$/;"	f
+colorButton	state.h	/^	std::string colorButton[4];$/;"	m	struct:tOsdState
+compactspace	strfct.c	/^std::string compactspace(const std::string & s)$/;"	f
+control	state.h	/^	cControl * control;$/;"	m	struct:tReplayState
+current	state.h	/^	int current;$/;"	m	struct:tReplayState
+currentItem	state.h	/^	std::string currentItem;$/;"	m	struct:tOsdState
+currentItemIndex	state.h	/^	int currentItemIndex;$/;"	m	struct:tOsdState
+currentLast	state.h	/^	int currentLast;$/;"	m	struct:tReplayState
+displayNumber	display.h	/^	unsigned int displayNumber;$/;"	m	class:cGraphLCDDisplay
+dword	global.h	/^typedef unsigned int    dword;$/;"	t
+eFontTypes	layout.h	/^} eFontTypes;$/;"	t
+ePicType	logolist.h	/^enum ePicType$/;"	g
+eReplayAudioCD	state.h	/^	eReplayAudioCD$/;"	e	enum:eReplayMode
+eReplayDVD	state.h	/^	eReplayDVD,$/;"	e	enum:eReplayMode
+eReplayFile	state.h	/^	eReplayFile,$/;"	e	enum:eReplayMode
+eReplayImage	state.h	/^	eReplayImage,$/;"	e	enum:eReplayMode
+eReplayMode	state.h	/^enum eReplayMode$/;"	g
+eReplayMusic	state.h	/^	eReplayMusic,$/;"	e	enum:eReplayMode
+eReplayNormal	state.h	/^	eReplayNormal,$/;"	e	enum:eReplayMode
+event	state.h	/^	tEventState event;$/;"	m	class:cGraphLCDState
+file	layout.h	/^	std::string file;$/;"	m	class:cFontElement
+fileName	logolist.h	/^		std::string fileName;$/;"	m	struct:cGraphLCDLogoList::tAliasListElement
+first	state.h	/^	bool first;$/;"	m	class:cGraphLCDState
+followingSubtitle	state.h	/^	std::string followingSubtitle;$/;"	m	struct:tEventState
+followingTime	state.h	/^	time_t followingTime;$/;"	m	struct:tEventState
+followingTitle	state.h	/^	std::string followingTitle;$/;"	m	struct:tEventState
+font	layout.h	/^	GLCD::cFont font;$/;"	m	class:cFontElement
+font	widgets.h	/^	const GLCD::cFont * font;$/;"	m	class:cScroller
+fontDir	display.h	/^	std::string fontDir;$/;"	m	class:cGraphLCDDisplay
+fontList	display.h	/^	cFontList fontList;$/;"	m	class:cGraphLCDDisplay
+fonts	layout.h	/^	std::list <cFontElement *> fonts;$/;"	m	class:cFontList
+ftFNT	layout.h	/^	ftFNT,$/;"	e
+ftFT2	layout.h	/^	ftFT2$/;"	e
+id	logo.h	/^	std::string id;$/;"	m	class:cGraphLCDLogo
+id	state.h	/^	tChannelID id;$/;"	m	struct:tChannelState
+increment	widgets.h	/^	int increment;$/;"	m	class:cScroller
+items	state.h	/^	std::vector <std::string> items;$/;"	m	struct:tOsdState
+kAliasFileName	logolist.c	/^const char * kAliasFileName = "logonames.alias";$/;"	v
+kDefaultConfigFile	plugin.c	/^static const char * kDefaultConfigFile = "\/etc\/graphlcd.conf";$/;"	v	file:
+kGLCDFileExtension	logolist.c	/^const char * kGLCDFileExtension = ".glcd";$/;"	v
+kMaxTabCount	display.h	/^static const int kMaxTabCount = 10;$/;"	v
+largeFont	display.h	/^	const GLCD::cFont * largeFont;$/;"	m	class:cGraphLCDDisplay
+lastChange	state.h	/^	unsigned long long lastChange;$/;"	m	struct:tVolumeState
+lastUpdate	widgets.h	/^	unsigned long long int lastUpdate;$/;"	m	class:cScroller
+logo	display.h	/^	cGraphLCDLogo * logo;$/;"	m	class:cGraphLCDDisplay
+logoDir	display.h	/^	std::string logoDir;$/;"	m	class:cGraphLCDDisplay
+logoDir	logolist.h	/^	std::string logoDir;$/;"	m	class:cGraphLCDLogoList
+logoList	display.h	/^	cGraphLCDLogoList * logoList;$/;"	m	class:cGraphLCDDisplay
+logoList	logolist.h	/^	std::list <cGraphLCDLogo *> logoList;$/;"	m	class:cGraphLCDLogoList
+loopmode	state.h	/^	std::string loopmode;$/;"	m	struct:tReplayState
+menuCount	display.h	/^	int menuCount;$/;"	m	class:cGraphLCDDisplay
+menuTop	display.h	/^	int menuTop;$/;"	m	class:cGraphLCDDisplay
+message	state.h	/^	std::string message;$/;"	m	struct:tOsdState
+mode	state.h	/^	eReplayMode mode;$/;"	m	struct:tReplayState
+mutex	display.h	/^	cMutex mutex;$/;"	m	class:cGraphLCDDisplay
+mutex	state.h	/^	cMutex mutex;$/;"	m	class:cGraphLCDState
+nCurrentBrightness	display.h	/^	int nCurrentBrightness;$/;"	m	class:cGraphLCDDisplay
+name	layout.h	/^	std::string name;$/;"	m	class:cFontElement
+name	state.h	/^	std::string name;$/;"	m	struct:tReplayState
+newGraphLCDSetup	menu.h	/^  cGraphLCDSetup newGraphLCDSetup;$/;"	m	class:cGraphLCDMenuSetup
+normalFont	display.h	/^	const GLCD::cFont * normalFont;$/;"	m	class:cGraphLCDDisplay
+number	state.h	/^	int number;$/;"	m	struct:tChannelState
+osd	state.h	/^	tOsdState osd;$/;"	m	class:cGraphLCDState
+position	widgets.h	/^	int position;$/;"	m	class:cScroller
+presentSubtitle	state.h	/^	std::string presentSubtitle;$/;"	m	struct:tEventState
+presentTime	state.h	/^	time_t presentTime;$/;"	m	struct:tEventState
+presentTitle	state.h	/^	std::string presentTitle;$/;"	m	struct:tEventState
+ptLogoLarge	logolist.h	/^	ptLogoLarge$/;"	e	enum:ePicType
+ptLogoMedium	logolist.h	/^	ptLogoMedium,$/;"	e	enum:ePicType
+ptLogoSmall	logolist.h	/^	ptLogoSmall,$/;"	e	enum:ePicType
+ptPictureFixed	logolist.h	/^	ptPictureFixed,$/;"	e	enum:ePicType
+recordingCount	state.h	/^	int recordingCount;$/;"	m	struct:tCardState
+recordingName	state.h	/^	std::string recordingName;$/;"	m	struct:tCardState
+replay	state.h	/^	tReplayState replay;$/;"	m	class:cGraphLCDState
+scroller	display.h	/^	std::vector<cScroller> scroller;$/;"	m	class:cGraphLCDDisplay
+showVolume	display.h	/^	bool showVolume;$/;"	m	class:cGraphLCDDisplay
+size	layout.h	/^	int size;$/;"	m	class:cFontElement
+smallFont	display.h	/^	const GLCD::cFont * smallFont;$/;"	m	class:cGraphLCDDisplay
+str	state.h	/^	std::string str;$/;"	m	struct:tChannelState
+strTmp	state.h	/^	std::string strTmp;$/;"	m	struct:tChannelState
+strncopy	strfct.c	/^char * strncopy(char * dest , const char * src , size_t n)$/;"	f
+symbols	display.h	/^	const GLCD::cFont * symbols;$/;"	m	class:cGraphLCDDisplay
+szETSymbols	display.h	/^	char szETSymbols[32];$/;"	m	class:cGraphLCDDisplay
+tAliasListElement	logolist.h	/^	struct tAliasListElement$/;"	s	class:cGraphLCDLogoList
+tCardState	state.h	/^struct tCardState$/;"	s
+tChannelState	state.h	/^struct tChannelState$/;"	s
+tEventState	state.h	/^struct tEventState$/;"	s
+tOsdState	state.h	/^struct tOsdState$/;"	s
+tReplayState	state.h	/^struct tReplayState$/;"	s
+tVolumeState	state.h	/^struct tVolumeState$/;"	s
+tab	display.h	/^	int tab[kMaxTabCount];$/;"	m	class:cGraphLCDDisplay
+tabCount	display.h	/^	int tabCount;$/;"	m	class:cGraphLCDDisplay
+tabMax	display.h	/^	int tabMax[kMaxTabCount];$/;"	m	class:cGraphLCDDisplay
+text	widgets.h	/^	std::string text;$/;"	m	class:cScroller
+textItem	state.h	/^	std::string textItem;$/;"	m	struct:tOsdState
+textItemLines	display.h	/^	std::vector <std::string> textItemLines;$/;"	m	class:cGraphLCDDisplay
+textItemTop	display.h	/^	int textItemTop;$/;"	m	class:cGraphLCDDisplay
+textItemVisibleLines	display.h	/^	int textItemVisibleLines;$/;"	m	class:cGraphLCDDisplay
+tickUsed	state.h	/^	bool tickUsed;$/;"	m	class:cGraphLCDState
+title	state.h	/^	std::string title;$/;"	m	struct:tOsdState
+total	state.h	/^	int total;$/;"	m	struct:tReplayState
+totalLast	state.h	/^	int totalLast;$/;"	m	struct:tReplayState
+trim	strfct.c	/^char * trim (char * str)$/;"	f
+trim	strfct.c	/^std::string trim(const std::string & s)$/;"	f
+trimleft	strfct.c	/^char * trimleft(char * str)$/;"	f
+trimright	strfct.c	/^char * trimright(char * str)$/;"	f
+type	layout.h	/^	int type;$/;"	m	class:cFontElement
+update	display.h	/^	bool update;$/;"	m	class:cGraphLCDDisplay
+update	widgets.h	/^	bool update;$/;"	m	class:cScroller
+value	state.h	/^	int value;$/;"	m	struct:tVolumeState
+volume	state.h	/^	tVolumeState volume;$/;"	m	class:cGraphLCDState
+word	global.h	/^typedef unsigned short  word;$/;"	t
+x	widgets.h	/^	int x;$/;"	m	class:cScroller
+xmax	widgets.h	/^	int xmax;$/;"	m	class:cScroller
+y	widgets.h	/^	int y;$/;"	m	class:cScroller
+~cFontList	layout.c	/^cFontList::~cFontList()$/;"	f	class:cFontList
+~cGraphLCDDisplay	display.c	/^cGraphLCDDisplay::~cGraphLCDDisplay()$/;"	f	class:cGraphLCDDisplay
+~cGraphLCDLogoList	logolist.c	/^cGraphLCDLogoList::~cGraphLCDLogoList()$/;"	f	class:cGraphLCDLogoList
+~cGraphLCDSetup	setup.c	/^cGraphLCDSetup::~cGraphLCDSetup(void)$/;"	f	class:cGraphLCDSetup
+~cGraphLCDState	state.c	/^cGraphLCDState::~cGraphLCDState()$/;"	f	class:cGraphLCDState
+~cPluginGraphLCD	plugin.c	/^cPluginGraphLCD::~cPluginGraphLCD()$/;"	f	class:cPluginGraphLCD

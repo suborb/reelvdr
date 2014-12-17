@@ -1,0 +1,12 @@
+diff -Nru vdr-1.3.21-vanilla/osdbase.h vdr-1.3.21-enaio/osdbase.h
+--- vdr-1.3.21-vanilla/osdbase.h	2004-04-30 16:40:11.000000000 +0300
++++ vdr-1.3.21-enaio/osdbase.h	2005-02-13 18:22:50.020988000 +0200
+@@ -95,6 +95,8 @@
+   char *status;
+   int digit;
+   bool hasHotkeys;
++  int key_nr;
++  time_t lastActivity;
+ protected:
+   cSkinDisplayMenu *DisplayMenu(void) { return displayMenu; }
+   const char *hk(const char *s);

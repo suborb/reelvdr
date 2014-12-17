@@ -1,0 +1,5 @@
+HANDLEROBJS += media_vdrarchiv/vdrarchiv_handler.o \
+		media_vdrarchiv/vdrarchiv_menu.o media_vdrarchiv/vdrarchiv_disc.o \
+		media_vdrarchiv/vdrarchiv_player.o 
+
+HANDLERLIBS += 

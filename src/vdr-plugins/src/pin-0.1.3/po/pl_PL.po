@@ -1,0 +1,187 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-pin\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-11-27 15:04+0100\n"
+"PO-Revision-Date: 2008-09-26 13:28+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Recordings"
+msgstr "Nagrania"
+
+msgid "1 Activate childlock"
+msgstr "1 Aktywój blokadę dostépu"
+
+msgid "2 Add current channel to protection list"
+msgstr "2. Dodaj bierzący kanał do listy zabespieczonej"
+
+msgid "3 Add current broadcast to protection list"
+msgstr "3 Dodaj bierzące nadawanie do listy zabespieczonej"
+
+msgid "4 Edit channel locks"
+msgstr "4 Edytuj zamek kanałów"
+
+msgid "5 Edit broadcast locks"
+msgstr "5 Edytuj zamek nadawania"
+
+msgid "6 Unlock setup"
+msgstr "6 Utwórz ustawienie "
+
+msgid "6 Lock setup"
+msgstr "6 Zamknij ustawienia"
+
+msgid "Note:"
+msgstr "Notka:"
+
+msgid "Please activate Childlock by pressing (1)."
+msgstr "Prosze aktywować blokadę dostepu przyciskająć (1)."
+
+msgid "Activated pin protection"
+msgstr "Zabezpieczenie kodu Aktywnyego"
+
+msgid "Please setup a pin code first!"
+msgstr "Prosze ustawic najpier kod!"
+
+msgid "Protected channels"
+msgstr "Zabezpieczone kanały"
+
+msgid "Protected broadcasts"
+msgstr "Zabezbieczone nadawania"
+
+msgid "Plugin protections"
+msgstr "Zabezpieczenia wtyczki"
+
+msgid "locked"
+msgstr "zamkniety"
+
+msgid "unlocked"
+msgstr "otwarty"
+
+msgid "already in list"
+msgstr "juz w liscie"
+
+msgid "added to protection list"
+msgstr "dodano do listy zabezpieczonej"
+
+#, fuzzy
+msgid "No locked channels present."
+msgstr "Omin zabezpieczone kanały cicho"
+
+msgid "Use the green button to lock channels."
+msgstr ""
+
+#, fuzzy
+msgid "No locked broadcasts present."
+msgstr "Zabezbieczone nadawania"
+
+msgid "Use the green button to lock broadcasts."
+msgstr ""
+
+msgid "Edit"
+msgstr "Edytuj"
+
+msgid "Lock / Unlock"
+msgstr "Zamknij / Otwórz"
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "On/Off"
+msgstr "On/Off"
+
+msgid "- new -"
+msgstr "- nowy -"
+
+msgid "Remove entry?"
+msgstr "Usunąć wpis?"
+
+msgid "Lock active"
+msgstr "Zamknięcie Aktywne"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Keyword"
+msgstr "Słowo kluczowe"
+
+msgid "Search mode"
+msgstr "Tryb szukania"
+
+msgid "Setup your pin code: "
+msgstr "Ustaw swoj kod pin: "
+
+msgid "Pin Code: "
+msgstr "Kod Pin: "
+
+msgid "Pin code successfully setup"
+msgstr "kod Pin z sukcesem ustawiony"
+
+msgid "Code accepted"
+msgstr "Kod zaakceptowany"
+
+msgid "Invalid Code !"
+msgstr "Błedny Kod !"
+
+msgid "Title$Childlock"
+msgstr "Blokada dostépu"
+
+msgid "Please enter pin code first"
+msgstr "Prosze podać najpierw kod pin"
+
+msgid "channel is protected"
+msgstr "kanał jest zabezbieczony"
+
+msgid "broadcast is protected"
+msgstr "nadawanie jest zabezbieczone"
+
+msgid "is protected"
+msgstr "jest zabezpieczone"
+
+msgid "Pin code"
+msgstr "Kod Pin"
+
+msgid "Skip protected channel silent"
+msgstr "Omin zabezpieczone kanały cicho"
+
+msgid "Open menu after pin request"
+msgstr "Otwórz menu po rządaniu pin"
+
+msgid "Pin inactivity time [min]"
+msgstr "Czas nieaktywności Pin [min]"
+
+msgid "Autoprotection of recordings"
+msgstr "Automatyczne zabezpieczenie nagrań"
+
+msgid "Ignoring invalid pin"
+msgstr "Ignoruje błędny pin"
+
+msgid "Childlock plugin"
+msgstr "Wtyczka blokady dostępu"
+
+msgid "Parental Control"
+msgstr "Kontrola Rodzicielska"
+
+#~ msgid "Add"
+#~ msgstr "Dodaj"
+
+#~ msgid "7 Unlock setup"
+#~ msgstr "7 Utwórz ustawienie "
+
+#~ msgid "7 Lock setup"
+#~ msgstr "7 Zamknij ustawienia"
+
+#~ msgid "6 Edit plugin locks"
+#~ msgstr "6 Edytuj wtyczke zamku"

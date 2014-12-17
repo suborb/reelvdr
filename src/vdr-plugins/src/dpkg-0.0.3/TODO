@@ -1,0 +1,64 @@
+File Index:
+-----------
+package -> package base class
+dpkgitem -> package menu item class
+mainmenu -> dpkg main menu class (hautmenue mit auswahl packete, 
+cdbrowser oder update)
+pkgmenu -> package browser menu class (menue zur auflistung der packete)
+menu -> menu base class (not used atm)
+dpkgthread -> dpkg thread (arbeits-thread der alle ereignisse enthaelt 
+die das menue blocken koennten)
+cdmenu -> file browser menu
+
+Notes:
+------
+- der dpkg thread wird beim laden des plugins erzeugt und ein zeiger an 
+alle verwendeten menues uebergeben. dem thread wird somit vom 
+entsprechenden menue ein mode zugeteilt und der thread gestartet. das 
+eintragen von packeten ins meneu geschieht ueber einen callback des 
+threads zum menue (mutexed).
+- alle aufrufe zur libept befinden sich in dpkgthread.c
+- der thread kennt verschiedene zustaende und kann stets nur einen 
+dieser annehmen (aufruf wenn am arbeiten wird bisher ignoriert). die 
+zustaende sind im kopf von dpkgthread.c definiert und stellen die 
+aufgaben des threads dar (list packages, update, browse directory).
+<bold><fontfamily><param>Arial</param><color><param>8080,0000,FFFF</param><bigger>File
+Index:
+
+-----------
+
+package -> package base class
+
+dpkgitem -> package menu item class
+
+mainmenu -> dpkg main menu class (hautmenue mit auswahl packete,
+cdbrowser oder update)
+
+pkgmenu -> package browser menu class (menue zur auflistung der
+packete)
+
+menu -> menu base class (not used atm)
+
+dpkgthread -> dpkg thread (arbeits-thread der alle ereignisse enthaelt
+die das menue blocken koennten)
+
+cdmenu -> file browser menu
+
+
+Notes:
+
+------
+
+- der dpkg thread wird beim laden des plugins erzeugt und ein zeiger
+an alle verwendeten menues uebergeben. dem thread wird somit vom
+entsprechenden menue ein mode zugeteilt und der thread gestartet. das
+eintragen von packeten ins meneu geschieht ueber einen callback des
+threads zum menue (mutexed).
+
+- alle aufrufe zur libept befinden sich in dpkgthread.c 
+
+- der thread kennt verschiedene zustaende und kann stets nur einen
+dieser annehmen (aufruf wenn am arbeiten wird bisher ignoriert). die
+zustaende sind im kopf von dpkgthread.c definiert und stellen die
+aufgaben des threads dar (list packages, update, browse directory).
+

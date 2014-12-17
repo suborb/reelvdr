@@ -1,0 +1,434 @@
+VDR Plugin 'graphlcd' Revision History
+-------------------------------------
+
+2006-01-15: Version 0.1.3
+- Don't replace newlines with spaces in text items any longer.
+- Rewritten cGraphLCDDisplay::WrapText(). It is much faster now.
+- Increased time to wait for display task to start (thanks to Andreas
+  Brachold).
+- Explicitly set the current channel to prevent a crash if no channel logo was
+  set (thanks to Andreas Brachold).
+- Added support for VDR version 1.3.38 and up (thanks to Andreas Brachold).
+- Added logos for cable and terrestrial channels and modified some of the old
+  (thanks to Stefan Hußfeldt).
+
+
+2005-09-17: Version 0.1.2
+- split off drivers to GraphLCD base package (libglcddrivers)
+- split off graphics and font handling to GraphLCD base package
+  (libglcdgraphics)
+- split off tools to GraphLCD base package
+- adopted the plugin's code to use the new driver and graphics API
+- removed low level driver settings from the plugin's setup page. They
+  are now located in the driver lirbrary's configuration file.
+- display class: grouped current state values into some structures
+- using a mutex for exclusive access on current state values
+- moved current vdr state structures to new class cGraphLCDState based
+  on old cGraphLCDStatus class.
+- completely rewritten logo list implementation
+- further code revising
+- added channel IDs for logonames.alias.1.3 for the DVB-T channels in Berlin
+  and probably other areas in Germany (thanks to Andreas Brachold)
+- now compiles with gcc 2.95 and 3.x
+- added missing #includes
+- made the plugin more thread-safe by making the global state variable
+  a member of the display class and correcting the initialization order.
+- added possibility to switch on backlight at user activity and switch it off
+  at user inactivity (thanks to Andreas Brachold). Can be enabled or disabled
+  in setup menu.
+- added additional space between progress bar and logo on small LCDs (thanks
+  to Andreas Brachold).
+- added loopmode display in mp3 replay mode (thanks to Wolfgang Fritz).
+- replaced usleep with cCondWait::SleepMs() for vdr version 1.3.14 or greater
+- adapted to changes in vdr 1.3.18
+- now using verdana fonts converted by genfont as default for large displays.
+- moved plugin initialisation to cPluginGraphLCD::Initialize and added a wait
+  for the start of the display thread to cPluginGraphLCD::Start to don't miss
+  first channel switch (thanks to wofritz from vdrportal.de)
+- added rumanian translations (thanks to Lucian Muresan)
+- Added support for Freetype2 fonts based on the patch by Lucian Muresan.
+-- the fonts used by the plugin are no longer specified through symbolic
+   links to the font files but in a config file named fonts.conf that is
+   located in the graphlcd config directory (where logonames.alias is)
+-- the entries in the fonts.conf file are defined in a URL like way, a prefix
+   gives the type of the font and a absolute or relative path gives the
+   font file, plus the size in case of freetype2
+-- I provided several sample fonts.conf files as a replacement for the old
+   symbolic links
+- Fixed length of timebar in case event lasts longer.
+- Added a patch for VDR 1.3.29 and up that adds a new method Tick() to the
+  cStatus class. This method is called from vdr's main task every second. The
+  patch should apply to older versions too, maybe small changes are needed.
+- Now querying the replay state in the cStatus::Tick() method if available.
+- Now loading config file in cPluginGraphLCD::Initialize and not in
+  ProcessArgs. So it is possible to view the help page without specifying
+  config file and display.
+- Rearranged includes to prevent an compiler error regardings the swap
+  function.
+- Added a check for EIT scanner activity in cGraphLCDState::ChannelSwitch
+  function to prevent showing channel logos during replay.
+- Added a check for file extension in replay type identification (thanks to
+  Andreas Brachold).
+- Added channel logos for Radio Eins (thanks to Andreas Brachold).
+
+
+
+2004-09-26: Version 0.1.1
+- fixed vdr 1.2 service id compile error
+- fixed t6963 driver: added range check in Set8Pixels, now all sizes should
+  work
+- new driver: gu256x64-3900, should support other sizes too (thanks to
+  Ralf Müller)
+- Added, replaced and removed some channel logos (thanks to Marco Birkholz)
+- Now using a channels unique channel ID (without Source, VDR-1.3) or service
+  ID (VDR 1.2) instead of channel names to identify the channel logo.
+-- During this I have renamed almost all channel logos so it is needed to
+   replace your old /<vdr config directory>/plugins/graphlcd/ completely.
+-- There are now two logonames.alias files, one for vdr 1.2 and the other one
+   for vdr 1.3, you maybe have to recreate the link, p. e.
+   "ln -sf logonames.alias.1.3 logonames.alias" if you have a vdr 1.3 version.
+- added finnish translations (thanks to Rolf Ahrenberg)
+- fixed sed1520 driver: removed a unnecessary ReverseBits (thanks to Andreas
+  'randy' Weinberger)
+- modified gu140x32f driver
+-- added possibility to choose type of wiring in setup menu (thanks to
+   Andreas Brachold)
+- modified sed1330_2 driver
+-- added support for several different types of wiring the lcd to the parallel
+   port, this is selectable in setup menu
+-- added support for 6800 and 8080 mode for all wirings, selectable in setup
+   menu
+- removed sed1130 driver and replaced it with sed1330_2
+- updated serdisplib support (thanks to Wolfgang Astleitner)
+-- look in README.serdisplib for details
+- fixed 100 percent CPU usage during volume changes if volume display is
+  disabled (thanks to Christoph Haubrich, Andreas Brachold)
+- fixed cGraphLCDDisplay::WrapText (thanks to Lars Altenhain)
+- fixed "special" ownership of logonames.alias files (thanks to Django from
+  vdrportal.de)
+
+
+
+2004-05-22: Version 0.1.0
+- modified hd61830 driver:
+-- fixed bug in partly update
+-- modified write method
+- replaced sed1330 driver with roland praml's original patch
+- modified sed1330 driver:
+-- renamed control line names to reflect the controller's
+   specification a bit more
+-- modified WriteCmd and WriteData
+- modified sed1330_2 driver (thanks to Heinz Gressenberger and Roland Praml)
+-- renamed control line names to reflect the controller's
+   specification a bit more
+-- modified WriteCmd and WriteData
+-- added possibility to change oscillator frequency through setup menu
+-- added experimental support for 8080 operation mode (undef MODE6800 in
+   sed1330_2.c to test it)
+-- commented out sleep calls, probably not needed any longer (please test this)
+- added framebuffer device driver (thanks to Stephan Skrodzki)
+-- README tells you how to use it
+- added serdisplib driver (thanks to Wolfgang Astleitner)
+-- README.serdisplib tells you how to use it
+- fixed a bug in serdisplib driver that caused some flickering
+  (thanks to Wolfgang Astleitner)
+- new GU256x64-372 driver (thanks to Andreas 'randy' Weinberger)
+- fixed an error in T6963 driver's partial refresh when using auto mode
+- new image driver that writes an image sequence in pbm format to /tmp
+- made round rectangle type 4 looking rounder (thanks to Andreas
+  'randy' Weinberger)
+- text item display (programme information) now also contains title
+  and subtitle
+- added up/down scrolling to text item display
+-- fixed a bug with long texts in text items (thanks to Andreas Brachold)
+- fixed cGraphLCDSetup::CopyFrom: copy of ShowMenu was wrong
+- fixed cGraphLCDSetup::CopyFrom: missing ModifiyReplayString
+- simplified the display of the replay string
+-- more than two lines are possible if they fit on screen
+- modified uSleep and nSleep when using wait method 0: now tests if
+  value is greater than 0 before sleeping at least one microsecond
+- added scroller widget, a single scrolling text line
+-- extended Text, Char and CharProp of cGraphLCDLib to support this
+-- using it for program information (present title and subtitle)
+-- scroll speed (time interval and pixel increment) configurable in
+   setup menu
+- fixed DisplayProgramm for small LCD's, no overlapping program
+  information texts with logo or symbols (thanks to Andreas Brachold)
+- fixed german translation of month march (thanks to Andreas Brachold)
+- added new, replaced some and deleted some old channel logos
+  (thanks to Hannes Stein for collecting, sorting and renaming the logos
+  from Holly, Hulk, Lola, C. Born, himself and providing a new
+  logonames.alias)
+- added a lot of splash screens for 140x32, 128x64 and 240x128 LCD's
+  (thanks to Hannes Stein)
+- included DisplayReplay Patch from Andreas Brachold
+-- scrolling ReplayMessage
+-- display of a replay-dependent logo (selectable in setup menu, replay
+   type identification has to be enabled for this)
+-- improved display of time bar and indexes according to display size
+-- just showing minutes and seconds for replays shorter than one hour
+-- simplified DisplayProgramm
+- further code revising and cleaning:
+-- using STL string instead of char array strings for font and graphlib
+   functions
+- some compilation fixes (thanks to Tobias Grimm)
+- the Makefiles now have a proper install target (thanks to Tobias Grimm)
+- fixed some memory leaks in logolist.c and some of the drivers
+  (thanks to Andreas Brachold)
+- showpic: now does a clean exit after "kill" (thanks to Andreas Brachold)
+- showpic: new command line parameter -t (timing) to select low level wait
+  method (thanks to Christian Gmeiner)
+- fixed possible overlapping of replay string and progress bar with logo
+  (thanks to Andreas Brachold)
+- support for animated logos (thanks to Andreas Brachold)
+-- extended plugin, convpic and showpic to support this
+-- convpic now can read and write animations in tuxbox-aniplay-format
+-- included some new animated replay logos
+- now using usleep() instead of low level sleep functions from drivers/fct.h
+  in display.c (this reduces cpu load when gettimeofday wait method is used)
+- new setup parameter "Identify replay type" that makes replay logos possible
+  without forced modifying of the replay's text
+- revised README a little bit
+
+
+
+2004-03-06: Version 0.0.9
+- reworked driver interface:
+  - all drivers in one library
+  - static and dynamic linking of drivers possible (look for STATIC_DRIVERS
+    in Makefile)
+  - moved low level parallel port code to the new class cParallelPort
+  - cleaned up driver's code
+  - adopted plugin and showpic to this new interface
+- gu140x32f updates (thanks to Andreas Brachold)
+  - brightness control through setup works now
+  - timing setup works now
+- fixed cGraphLCDSetup::CopyFrom (thanks to Andreas Brachold)
+- removed memory leak in GraphLCDSetup (thanks to Andreas Brachold)
+- now using driver ID instead of driver name for driver creation
+  (thanks to Andreas Brachold)
+- setup menu: only show entries that are relevant for current driver
+  (thanks to Andreas Brachold)
+- added replay string modification, selectable in setup menu
+  (thanks to Andreas Brachold)
+- showpic: now clearing LCD buffer before displaying image, fixes error
+  when displaying image sequences (thanks to Andreas Brachold)
+- showpic: no double GraphLCDSetup any longer, wait settings now used
+  (thanks to Andreas Brachold for reporting this one)
+- fixed segfault when font is not correctly loaded (Thanks to Andreas
+  Brachold)
+- code revising and cleaning (not completed):
+  - extracted setup menu code from graphlcd.c to menu.c/menu.h
+  - extracted status monitor code from graphlcd.c to status.c/.h
+  - extracted logo code from graphlib.c/.h to logo.c/.h and
+    logolist.c/.h and using list and vector containers from STL for
+    storing the data
+  - showpic and plugin now share the same logo source code
+  - general: using new/delete instead of malloc/free (not completely yet)
+  - using STL's vector and string for storing menu entries
+  - general: using STL string instead of char array strings
+  - sleep functions from fct.c/.h and other are now part of driver library
+    (no double files)
+  - string functions from fct.c/.h are now in strfct.c/.h
+- added new wait method using gettimeofday for kernel 2.6 users (thanks to
+  Henning 'fawkes')
+- new default wait method: nanosleep_rr (same as in 0.0.7)
+- updated ks0108 and sed1520 driver (thanks to Andreas Weinberger)
+  - drawing errors fixed
+  - code cleanups, adopted to new coding style
+  - ks0108: support for displays greater than 128x64
+- removed double ReverseBits from ks0108, sed1330 and sed1520 drivers
+- new alternative sed1330 driver, supports more sizes, choose with "sed1330_2"
+  (modified original driver, thanks by to Heinz Gressenberger)
+  - please test it, maybe we can join these two
+- improved volume display (thanks to Andreas Weinberger)
+  - now disappears correctly after approx. one second
+  - if muted, a symbol will be shown in symbol area and volume bar
+  - slightly modified display, bar has variable height now
+- added RoundRectangle Method to graphic library
+  - both colors are possible now
+  - adopted display code to use this new function
+- new logos for medium displays (thanks to Hannsens)
+- fixed displaying wrong channel, logo, programme when a recording on primary
+  device starts (thanks to burki for reporting this one)
+
+
+
+2004-02-25: Version 0.0.8
+- added support for parport device
+- added support for VDR version 1.3 (tested with 1.3.4)
+- added display of free devices, selectable in setup menu
+  (thanks to Thomas Keil)
+- inverted and round color buttons
+- driver reset after certain setup changes
+- choose the size of logos in setup (no, auto, medium, large)
+- new 'compressed' mode for symbols (show only enabled symbols)
+- Volume controls
+- use of iopl() instead ioperm() (allows ports > 0x3ff)
+- delayed update of the display in menu
+- removed useless 'Good-Bye picture'.
+  You have to call showpic in shutdown script instead.
+- display name of recording without subdirectories
+- new SED1520 driver (thanks to Andreas 'randy' Weinberger).
+- alias list for program names (logonames.alias)
+- new SED1330 driver (thanks to Roland Praml).
+- increased performance by using Set8Pixels() instead of SetPixel()
+  in Char() and CharProp()
+- increased speed in menus (you might apply an included patch against
+  vdr to improve the speed even more...)
+- added a cache for logos to reduce harddisk operations.
+- a value of 0 for Refresh disables the complete refresh of the LCD
+- added a setup option to disable the output to the LCD completely
+- fixed bug displaying long SVDRP Messages (that couldn't be splitted
+  to more lines of text, because they didn't have any spaces)
+- fixed bug with Rec icon. If multiple recordings were active and
+  one recordings has stopped, the Rec icon has been cleared although
+  the others recordings were still active. (thanks to Steffen Schoewitz
+  for reporting and fixing it)
+- select alternative wiring for T6963 (WIRING_WINDOWS)
+  with setup parameter (plugin) and commandline parameter (showpic)
+- improved timing of T6963 driver (thanks to Good)
+- further improved timing of T6963 driver
+- T6963 status check selectable in setup menu
+- added auto mode support for T6963, selectable in setup menu
+- added font select 8x8 support for T6963, selectable in setup menu
+  (thanks to Andreas 'randy' Weinberger)
+- changed way of T6963 control line setting (thanks to Andreas 'randy'
+  Weinberger)
+- changed clipping method (thanks to Andreas Brachold)
+- new Noritake GU140x32f driver (thanks to Andreas Brachold).
+- new classification of LCD sizes:
+    tiny:    0..48
+    small:  49..61
+    medium: 62..127
+    large: 128..
+- more logos (contributed by Carsten Born and Andreas Brachold)
+
+- plugin development and hosting is taken over by Andreas Regel
+
+
+
+2003-06-30: Version 0.0.7
+- the file format of the logos and the pictures have been replaced
+  with a new format: *.GLCD
+- 'Good-Bye picture'
+- added some tools:
+  convpic: a tool to convert *.BMP + *.TIFF images to *.GLCD format.
+      (TIFF: uncompressed, RGB-encoded, 2-color
+       BMP : uncompressed, RGB-encoded, 2-color, WindowsBMP format)
+  showpic: a tool to show an image on the LCD.
+       The image must be in *.GLCD format. (use convpic to convert)
+  crtfont: a tool to create fonts.
+  (see appropriate README files for more info)
+- included 'sources' for logos and fonts
+- fixed problem, if logo was bigger than LCD size.
+- macros in one line
+- added external triggered symbols
+- setup parameters are explained in the README
+- the usage of different fonts are explained in the README
+- now Set8Pixels() is used in Char() and CharProp()
+  (increases performance)
+- replaced strncpy with own fct strncopy.
+
+
+
+2003-06-05: Version 0.0.6
+- fixed segfault on exit of mp3 plugin.
+- added a timebar to show the progress
+  of the current program.
+- added color buttons
+- possibility to disable Date/Time bar in menus
+- don't switch back to replay screen when the menu is
+  active and the next mp3 is going to be played.
+- update values of setup entries
+  (for this, a patch for vdr-1.2.0 is required.
+   Patch vdr with vdr-1.2.0-setup_menu_patch.diff in patches subdirectory.
+   Attention: this patch has NOT been tested with other plugins!)
+- fixed cursor position when a setup item has been changed.
+- better calculation of Tabs
+- use symlinks for fonts. This allows to replace the fonts easily:
+  small displays  ( vertical size < 64 ):
+    f_s_l.fnt  : large font
+    f_s_n.fnt  : normal font
+    f_s_s.fnt  : small font
+    f_s_sym.fnt: symbols
+  medium displays ( vertical size 64..127 ):
+    f_m_l.fnt  : large font
+    f_m_n.fnt  : normal font
+    f_m_s.fnt  : small font
+    f_m_sym.fnt: symbols
+  large displays  ( vertical size >= 128 ):
+    f_l_l.fnt  : large font
+    f_l_n.fnt  : normal font
+    f_l_s.fnt  : small font
+    f_l_sym.fnt: symbols
+- alternative font for 128x64 (ln -s f8n_alt.fnt f_m_n.fnt)
+
+
+
+2003-05-23: Version 0.0.5
+- fixed display if second card does epg scan
+  (thanks to Andreas 'randy' Weinberger)
+- fixed position of the symbols on small lcds
+  (thanks to Andreas 'randy' Weinberger)
+- possibility to en-/disable display of menus per setup
+- fixed problem in the T6963 driver when the LCDs horizontal size
+  was not a multiple of 6
+  (thanks to Andreas 'powARman' Regel)
+- alternative wiring for T6963 (used by some Windows programs)
+  If You have this wiring, You must compile with:
+   eg: GRAPHLCD_DRIVER=T6963 GRAPHLCD_WIRING=WINDOWS make plugins
+  (thanks to Andreas 'powARman' Regel)
+- allow to enter the port in hex (eg: vdr -P"graphlcd -p 0x278" )
+  (thanks to Sascha Volkenandt)
+- creates graphlcd.man in .../PLUGINS/man directory
+- small changes for vdr-1.1.32
+- show different Recording Symbols to show which card is recording
+  currently.
+- added output of Messages
+- added output of Summaries
+
+
+
+2003-05-08: Version 0.0.4
+- display of menus (requires vdr >= 1.1.30)
+- 'round' edges
+
+
+
+2003-04-25: Version 0.0.3
+- new KS0108 driver (thanks to Andreas 'randy' Weinberger).
+  You have to specify the driver during compile:
+   eg: make plugins GRAPHLCD_DRIVER=KS0108
+- uses different fonts & logos for smaller displays
+- changed layout for 128x64 displays
+- changed format of font files (=> new crtfont-0.1.2)
+- removed swab(). SwabByte() uses table instead of calculating
+
+
+
+2003-04-16: Version 0.0.2
+- new T6963 driver (thanks to Andreas 'powARman' Regel).
+  You have to specify the driver during compile:
+   eg: GRAPHLCD_DRIVER=T6963 make plugins
+- support for smaller displays.
+- now it's customizable in the setup menu, what parts should
+  be displayed. The currently available parts are:
+    - Date/Time bar
+    - Channel bar
+    - Logo
+    - Symbols
+    - Program information
+- fonts with special characters like french accents.
+- port + size of LCD are customizable.
+  (allocate LCD buffer dynamically)
+- 2 lines for long titles (in Recording mode)
+- Clear OSDProgramme, if no EPG data is available.
+- refresh display, when title has changed.
+- do not abort, if logo file could not be read successfully.
+
+
+
+2003-01-08: Version 0.0.1
+
+- Initial revision.

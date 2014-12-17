@@ -1,0 +1,117 @@
+#!/bin/busybox ash
+
+. /etc/reel/platform/*.inc
+. /etc/default/sysconfig
+
+SLEEP="usleep 400000"
+
+# definitions used in functions
+STANDBY_LED=1
+REMOTE_LED=2
+RECORD_LED=4
+POWER_LED=8
+ALL_LED=15
+
+
+Red ()
+{
+  if [ "$1" == off ]; then
+    $REELFPCTL -clearled 4
+  else
+    $REELFPCTL -setled 4
+  $SLEEP
+  fi
+}
+
+Blue ()
+{
+  if [ "$1" == off ]; then
+    $REELFPCTL -clearled 2
+  else
+    $REELFPCTL -setled 2
+  $SLEEP
+  fi
+}
+
+Green ()
+{
+  if [ "$1" == off ]; then
+    $REELFPCTL -clearled 1
+  else
+    $REELFPCTL -setled 1
+  $SLEEP
+  fi
+}
+
+#
+# start
+#
+
+fstart () {
+$REELFPCTL -clearled 15
+
+while [ ! -f /tmp/.mediadir ] ; do
+   Red
+   Blue
+   Green
+   Red off
+   $SLEEP
+   Blue off
+   $SLEEP
+   Green off
+   $SLEEP
+   Green
+   Blue
+   Red
+   Green off
+   $SLEEP
+   Blue off
+   $SLEEP
+   Red off
+   $SLEEP
+done
+
+Green
+}
+
+#
+# Main
+#
+
+$REELFPCTL -clearled 15
+
+case $FPSLEDBR in
+	off)	BRIGHT=0 ;;
+	min)	BRIGHT=1 ;;
+	low)	BRIGHT=2 ;;
+	med)	BRIGHT=4 ;;
+	high)	BRIGHT=8 ;;
+	max)	BRIGHT=16 ;;
+	*)	BRIGHT=8 ;;
+esac
+$REELFPCTL -clearled $ALL_LED -setledbrightness $BRIGHT
+$REELFPCTL -setledbrightness $BRIGHT
+
+
+case $1 in
+	start)
+		fstart 2>&1 &
+		;;
+	stop)
+		# turn on the blue led before power off to only have the green one.
+		# sounds funny, but so it is...
+		$REELFPCTL -setled $REMOTE_LED
+		;;
+	restart)
+		;;
+	standby)
+		if [ "$FPLEDSTBOFF" != "yes" ]; then
+			$REELFPCTL -setled $(($STANDBY_LED+$REMOTE_LED))
+		fi
+		;;
+	"")
+		Green
+		;;
+esac
+
+

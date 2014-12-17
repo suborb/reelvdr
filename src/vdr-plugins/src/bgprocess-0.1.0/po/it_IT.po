@@ -1,0 +1,61 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-bgprocess\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-06-03 10:12+0200\n"
+"PO-Revision-Date: 2009-06-20 14:08+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Cutting"
+msgstr "Taglio in corso"
+
+msgid "Collects and lists background processes and their status"
+msgstr "Elenco e stato processi in background"
+
+msgid "Activity"
+msgstr "Attività"
+
+#, c-format
+msgid "%d background process (%d%%)"
+msgstr "%d processi in background (%d%%)"
+
+msgid "Background processes"
+msgstr "Processi in background"
+
+msgid " No process completed"
+msgstr " Nessun processo completato"
+
+msgid "Completed processes"
+msgstr "Processi completati"
+
+msgid "Clear list"
+msgstr "Ripulire lista"
+
+msgid "Running"
+msgstr "In esecuzione"
+
+msgid " No background process running"
+msgstr " Nessun processo in background attivo"
+
+msgid "Running processes"
+msgstr "Processi attivi"
+
+msgid "Completed"
+msgstr "Completato"
+

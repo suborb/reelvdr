@@ -1,0 +1,2141 @@
+# VDR language source file.
+# Copyright (C) 2008 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004, 2005, 2006, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDR 1.6.0\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-11-23 13:00+0100\n"
+"PO-Revision-Date: 2009-03-10 19:01+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "New Channels"
+msgstr "Canale noi"
+
+msgid "Favorites"
+msgstr "Favorites"
+
+msgid "*** Invalid Channel ***"
+msgstr "*** Canal invalid *** "
+
+msgid "Channel not available!"
+msgstr "Canalul  nu este disponibil!"
+
+msgid "Can't start Transfer Mode!"
+msgstr "Nu pot porni modul de transfer! "
+
+msgid "Starting EPG scan"
+msgstr "Pornesc scanare EPG"
+
+msgid "No title"
+msgstr "Fără titlu "
+
+msgid "No help available"
+msgstr "Nu exista informatii ajutatoare"
+
+#. TRANSLATORS: The name of the language, as written natively
+msgid "LanguageName$English"
+msgstr "Română "
+
+#. TRANSLATORS: The 3-letter code of the language
+msgid "LanguageCode$eng"
+msgstr "rom "
+
+#. TRANSLATORS:
+#. / Menu "TV & Radio"
+msgid "TV & Radio"
+msgstr "TV & Radio"
+
+msgid "TV-Guide (EPG)"
+msgstr "Ghidul-Tv (EPG)"
+
+msgid "Timer Manager"
+msgstr "Manager Temporizatoare"
+
+msgid "Search-Timer Manager"
+msgstr "Cauta in Manager Temporizatoare"
+
+msgid "Parental Control"
+msgstr "Control Parental "
+
+msgid "DVB channel list, TV guide, Timer & Search timer menus, Parental control"
+msgstr "Meniurile 'Lista de canale DVB', 'Ghidul Tv (EPG)', 'Temporizator', 'Control Parental'"
+
+msgid "Overview of all TV and radio stations: Switch, manage and edit channels"
+msgstr "Rezumat al tuturor posturilor radio si tv: Comuta, editeaza si manipuleaza canale"
+
+msgid "Get information on TV programs and easily select broadcasts for recording"
+msgstr "Obtine informatii despre programele Tv, si selecteaza transmisii pentru inregistrare"
+
+msgid "View, edit and manage recording timers"
+msgstr "Afisare, editare, management temporizatoare pentru inregistrare"
+
+msgid "Find broadcasts with user defined search terms, i.e for recording TV series"
+msgstr "Cauta transmisii, utilizand termeni de cautare definiti de utilizator"
+
+msgid "Deny access to TV channels, broadcasts or TV recordings by setting a PIN code"
+msgstr "Restrange accesul la programele Tv, transmisii, inregistrari Tv, configurand un cod PIN"
+
+#. TRANSLATORS:
+#. / Menu "Music & Pictures"
+msgid "Music & Pictures"
+msgstr "Muzica &  Poze"
+
+msgid "Image Library"
+msgstr "Librarie Imagini"
+
+msgid "Music Library"
+msgstr "Librarie Mizica"
+
+msgid "Internet Radio"
+msgstr "Radio prin Internet"
+
+msgid "Archive Audio-CD"
+msgstr ""
+
+msgid "Music library, Picture library, Internet radio, Audio CD ripping"
+msgstr "Librarie Muzica, Librarie Imagini, Radio Internet, Extractie Audio CD"
+
+#, fuzzy
+msgid "Music library, Picture library, Internet radio"
+msgstr "Librarie Muzica, Librarie Imagini, Radio Internet, Extractie Audio CD"
+
+msgid "Play music, manage and copy music files"
+msgstr "Asculta, manipuleaza si copiaza muzica"
+
+msgid "Watch pictures, manage and copy picture files"
+msgstr "Priveste, manipuleaza si copiaza imagini"
+
+msgid "Listen to internet radio, manage and add radio stations"
+msgstr "Asculta Radio prin Internet, manipuleaza si adauga posturi Radio"
+
+msgid "Copy an Audio CD to the music library"
+msgstr "Copiaza un CD Audio in Libraria Muzica"
+
+#. TRANSLATORS:
+#. / Menu "Films & DVD"
+msgid "Films & DVD"
+msgstr "Filme & DVD"
+
+msgid "Movie Library"
+msgstr "Librarie Filme"
+
+#, fuzzy
+msgid "Button$Functions"
+msgstr "Sunet "
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at Start (min)"
+msgstr "Marjă la pornire (min) "
+
+#, fuzzy
+msgid "Setup.Recording$Time Buffer at End (min)"
+msgstr "Marjă la oprire (min) "
+
+#, fuzzy
+msgid "Undelete Recordings"
+msgstr "Şterg înregistrarea? "
+
+msgid "New folder"
+msgstr "Dosar nou"
+
+msgid "Movie library, TV recordings, Burn TV recordings, Video DVD ripping"
+msgstr "Librarie Filme, Inregistrari Tv, Scrie inregistrari Tv, Extractie video de pe DVD"
+
+#, fuzzy
+msgid "Movie library, TV recordings"
+msgstr "Muta inregistrare"
+
+msgid "Watch movies, manage and copy movie files"
+msgstr "Urmaresti, copiezi, manipulezi fisiere filme"
+
+msgid "Watch TV recordings, cut, manage and copy TV recordings"
+msgstr "Urmareste, taie, copiaza, si manipuleaza inregistrari Tv"
+
+msgid "Recover accidentally deleted TV recordings"
+msgstr "Recupereaza inregistrarile Tv  sterse accidental"
+
+msgid "Burn TV recordings on CD or DVD"
+msgstr "Scrie inregistrarile pe CD sau DVD"
+
+msgid "Copy a Video-DVD to the movie library"
+msgstr "Copiaza un Video-DVD in Libraria Filme"
+
+#. TRANSLATORS:
+#. / Menu "Internet & Extras"
+msgid "Internet & Extras"
+msgstr "Internet & Extras"
+
+msgid "Filebrowser"
+msgstr "Browser Fisiere"
+
+msgid "Create directory"
+msgstr "Creeaza Director "
+
+msgid "Playlist"
+msgstr "Playlist"
+
+msgid "Playlist actions"
+msgstr "Actiuni Playlist   "
+
+msgid "Playlist Commands"
+msgstr "Comenzi Playlist"
+
+#, fuzzy
+msgid "Filebrowser Commands"
+msgstr "Comenzi pentru Browser Fisiere"
+
+#, fuzzy
+msgid "Save playlist as"
+msgstr "Actiuni Playlist   "
+
+msgid "Insert in playlist"
+msgstr ""
+
+msgid "File Manager, Web browser, ReelBlog"
+msgstr "Manager Fisiere, Browser Web, ReelBlog"
+
+#, fuzzy
+msgid "File Manager, ReelBlog"
+msgstr "Manager Fisiere, Browser Web, ReelBlog"
+
+msgid "Copy, move, edit and delete files"
+msgstr "Copiaza, muta, editare, sterge fisiere"
+
+msgid "Surf the web with Firefox. / Show the Linux desktop."
+msgstr "Navigare Web cu Firefox. / Arata desktop-ul Linux"
+
+msgid "Read news & information on the ReelBox"
+msgstr "Citeste Stiri & Informatii pe ReelBox"
+
+#. TRANSLATORS:
+#. / Menu "Additional Software"
+msgid "Additional Software"
+msgstr "Software Aditional"
+
+msgid "Magazine EPG"
+msgstr "Magazin EPG"
+
+msgid "Additional software provided by third party developers"
+msgstr "Software aditional furnizat de alti dezvoltatori"
+
+#. TRANSLATORS:
+#. / More tooltips in the main menu
+msgid "Play the disk in the drive"
+msgstr "Redare disc aflat in unitate"
+
+msgid "Show currently active background processes"
+msgstr "Arata procesele ce ruleaza in fundal"
+
+msgid "Format a DVD-RW"
+msgstr "Formatare  DVD-RW"
+
+msgid "Directory browser"
+msgstr "Afisare Director"
+
+#. TRANSLATORS:
+#. / Special Menus that have a bar at the left
+msgid "My Pictures"
+msgstr "Pozele Mele"
+
+msgid "My Music"
+msgstr "Muzica Mea"
+
+msgid "My Videos"
+msgstr "Fisierele Mele Video"
+
+msgid "My DVDs"
+msgstr "DVD-urile Mele"
+
+msgid "EPG Commands: "
+msgstr "Comenzi EPG:"
+
+msgid "Search actions"
+msgstr "Actiuni Cautare"
+
+msgid "Search entries"
+msgstr "Cautare Intrari"
+
+msgid "Search templates"
+msgstr "Cautare Sabloane"
+
+msgid "Edit search"
+msgstr "Editare Cautare"
+
+msgid "Edit timer"
+msgstr "Modificare temporizator"
+
+msgid "Edit blacklist"
+msgstr "Editare lista neagra"
+
+msgid "Edit template"
+msgstr "Editare Sablon"
+
+msgid "Edit user-defined days of week"
+msgstr "Editeaza zilele saptamanii 'definite de utilizator'"
+
+msgid "found recordings"
+msgstr "inregistrari gasite"
+
+msgid "Select directory"
+msgstr "Selecteaza Director"
+
+msgid "Timer conflicts -"
+msgstr "Conflict temporizatoare - "
+
+msgid "Title$Childlock"
+msgstr "Blocare Copii"
+
+msgid "Games"
+msgstr "Jocuri"
+
+msgid "Multifeed Options"
+msgstr "Optiuni Multifeed"
+
+msgid "Move recording"
+msgstr "Muta inregistrare"
+
+msgid "Select Reelblog item"
+msgstr "Alege obiect  ReelBlog"
+
+msgid "SleepTimer"
+msgstr "Temporizator Stand-by"
+
+#, fuzzy
+msgid "Rename entry"
+msgstr "doar numele"
+
+#, fuzzy
+msgid "Rename directory"
+msgstr "Creeaza Director "
+
+#, fuzzy
+msgid "Choose action"
+msgstr "Protectie Copii"
+
+#. TRANSLATORS:
+#. / Setup Menus with "Setup"-bar on the left
+msgid "Setup"
+msgstr "Configuraţie "
+
+msgid "Software Update"
+msgstr "Update Software"
+
+msgid "Channel Lists"
+msgstr "Lista Canale"
+
+msgid "Channel lists functions"
+msgstr "Functii Lista Canale"
+
+msgid "Channelscan"
+msgstr "Cautare Canale"
+
+msgid "Installation Wizard"
+msgstr "Vrajitor Instalare"
+
+msgid "Installation"
+msgstr "Instalare"
+
+msgid "Remote Control / Automation"
+msgstr "Telecomanda / Automatizari"
+
+#, fuzzy
+msgid "MultiRoom Setup"
+msgstr "Configurare Rotor"
+
+#, fuzzy
+msgid "MultiRoom - Error!"
+msgstr "Configurare Rotor"
+
+msgid "Basic Settings"
+msgstr "Setari de baza"
+
+msgid "Network Settings"
+msgstr "Setari Retea"
+
+msgid "EPG Services"
+msgstr "Servicii EPG"
+
+msgid "Reception Settings"
+msgstr "Setari Receptie"
+
+msgid "Network"
+msgstr "Retea"
+
+msgid "Global Settings"
+msgstr "Setari Globale"
+
+#, fuzzy
+msgid "UMTS Settings"
+msgstr "Setari Sistem"
+
+msgid "Dynamic DNS"
+msgstr "DNS Dinamic"
+
+#, fuzzy
+msgid "GnuDIP service"
+msgstr "Servicii EPG"
+
+msgid "DynDNS service"
+msgstr ""
+
+msgid "Manual Network Connections"
+msgstr "Conexiune Manuala Retea"
+
+msgid "Windows Network Connection"
+msgstr "Conexiune cu Retea Windows"
+
+msgid "NFS Client"
+msgstr "Client NFS"
+
+msgid "Video Recorder "
+msgstr "Video Recorder "
+
+msgid "Prepare disk:"
+msgstr ""
+
+msgid "Network Drives"
+msgstr "Unitati de disc accesate prin Retea"
+
+msgid "Setup - Audio/Video"
+msgstr "Setup - Audio/Video"
+
+msgid "Timezone & clock"
+msgstr "Fus Orar & Ceas"
+
+msgid "System Information"
+msgstr "Informatii Sistem"
+
+msgid "NetCeiver diagnostics"
+msgstr "Diagnostic NetCeiver"
+
+msgid "NetCeiver firmware update"
+msgstr ""
+
+msgid "Antenna settings"
+msgstr "Setari Antena"
+
+msgid "Rotor Setup"
+msgstr "Configurare Rotor"
+
+msgid "Language Settings"
+msgstr "Setari Lingvistice"
+
+msgid "Timezone"
+msgstr "Fus Orar"
+
+msgid "Timezone Settings"
+msgstr "Setari Fus Orar"
+
+msgid "Front Panel"
+msgstr "Panoul din fata"
+
+msgid "TVTV Service"
+msgstr "Serviciul TVTV"
+
+msgid "International EPG"
+msgstr "EPG International "
+
+msgid "Energy Options"
+msgstr "Otiuni Energie"
+
+msgid "Factory defaults"
+msgstr ""
+
+msgid "Setup.Miscellaneous$Power On/Off option"
+msgstr "Optiunea Pornire/Oprire"
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Standby Mode"
+msgstr "ca mai înainte "
+
+#, fuzzy
+msgid "Option$Quick"
+msgstr "Optiuni"
+
+#. TRANSLATORS:
+#. / Recording Commands
+msgid "Mark Commercials"
+msgstr "Marcheaza Reclamele"
+
+msgid "Add Child Lock"
+msgstr "Adauga 'Blocare Copii'"
+
+msgid "Remove Child Lock"
+msgstr "Sterge 'Blocare Copii'"
+
+msgid "Change title"
+msgstr "Schimba Titlu"
+
+msgid "Mark as New"
+msgstr "Marcheaza ca 'Nou'"
+
+msgid "Remove Archive Mark"
+msgstr "Sterge semn Arhiva"
+
+msgid "Remove Crop Mark"
+msgstr "Sterge semnul  'Taie'"
+
+msgid "Remove Archived Recording"
+msgstr "Sterge inregistrarile Arhivate"
+
+msgid "Restore Archived Recording"
+msgstr "Restaurare Inregistrari Arhivate"
+
+msgid "Convert to MPEG (TS)"
+msgstr "Converteste in  MPEG (TS)"
+
+msgid "Directory Selector:"
+msgstr "Selector pentru Director:"
+
+msgid "Select Media"
+msgstr "Selectare Media"
+
+#, fuzzy
+msgid "Directory commands"
+msgstr "Comenzi pentru înregistrări "
+
+msgid "Copy to local harddisc"
+msgstr ""
+
+msgid "No CI-Module"
+msgstr ""
+
+msgid "Edit Channels"
+msgstr "Editare Canale"
+
+#, fuzzy
+msgid "Customize Bouquets"
+msgstr "la pachete"
+
+msgid "Phase 1: Detecting RC code type"
+msgstr "Faza 1: Detecţia tipului telecomenzii  "
+
+msgid "Press any key on the RC unit"
+msgstr "Apăsaţi o tastă pe telecomandă  "
+
+msgid "RC code detected!"
+msgstr "S-a detectat tipul telecomenzii!  "
+
+msgid "Do not press any key..."
+msgstr "Nu apăsaţi nici o tastă...  "
+
+msgid "Phase 2: Learning specific key codes"
+msgstr "Faza 2: Învăţarea codurilor anumitor taste  "
+
+#, c-format
+msgid "Press key for '%s'"
+msgstr "Apăsaţi tasta pentru '%s'  "
+
+msgid "Press 'Up' to confirm"
+msgstr "Apăsaţi 'Sus' pentru confirmare  "
+
+msgid "Press 'Down' to continue"
+msgstr "Apăsaţi 'Jos' pentru continuare  "
+
+msgid "(press 'Up' to go back)"
+msgstr "(Apăsaţi 'Sus' pentru revenire)  "
+
+msgid "(press 'Down' to end key definition)"
+msgstr "(Apăsaţi 'Jos' pentru terminare)  "
+
+msgid "(press 'Menu' to skip this key)"
+msgstr "(Apăsaţi 'Meniu' pentru a sări peste această tastă)  "
+
+msgid "Learning Remote Control Keys"
+msgstr "Învăţare taste telecomandă  "
+
+msgid "Phase 3: Saving key codes"
+msgstr "Faza 3: Salvarea codurilor de taste  "
+
+msgid "Press 'Up' to save, 'Down' to cancel"
+msgstr "Apăsaţi 'Sus' pentru salvare, 'Jos' pentru anulare  "
+
+msgid "Key$Up"
+msgstr "Sus "
+
+msgid "Key$Down"
+msgstr "Jos "
+
+msgid "Key$Menu"
+msgstr "Meniu "
+
+msgid "Key$Ok"
+msgstr "OK "
+
+msgid "Key$Back"
+msgstr "Înapoi "
+
+msgid "Key$Left"
+msgstr "Stânga "
+
+msgid "Key$Right"
+msgstr "Dreapta "
+
+msgid "Key$Red"
+msgstr "Roşu "
+
+msgid "Key$Green"
+msgstr "Verde "
+
+msgid "Key$Yellow"
+msgstr "Galben "
+
+msgid "Key$Blue"
+msgstr "Albastru "
+
+msgid "Key$Play"
+msgstr "Redare "
+
+msgid "Key$Pause"
+msgstr "Pauză "
+
+msgid "Key$Stop"
+msgstr "Stop "
+
+msgid "Key$Eject"
+msgstr "Scoate Disc "
+
+msgid "Key$Record"
+msgstr "Înregistrare "
+
+msgid "Key$FastFwd"
+msgstr "Derulare înainte "
+
+msgid "Key$FastRew"
+msgstr "Derulare înapoi "
+
+msgid "Key$Next"
+msgstr "Următor "
+
+msgid "Key$Prev"
+msgstr "Anterior "
+
+msgid "Key$Power"
+msgstr "Închidere "
+
+msgid "Key$Channel+"
+msgstr "Canal+ "
+
+msgid "Key$Channel-"
+msgstr "Canal- "
+
+msgid "Key$PrevChannel"
+msgstr "Canal anterior "
+
+msgid "Key$Volume+"
+msgstr "Volum+ "
+
+msgid "Key$Volume-"
+msgstr "Volum- "
+
+msgid "Key$Mute"
+msgstr "Fără sunet "
+
+msgid "Key$Audio"
+msgstr "Sunet "
+
+msgid "Key$Subtitles"
+msgstr "Subtitrare "
+
+msgid "Key$Aspect"
+msgstr "Aspect"
+
+msgid "Key$Schedule"
+msgstr "Program (EPG)"
+
+msgid "Key$Channels"
+msgstr "Canale "
+
+msgid "Key$Timers"
+msgstr "Temporizatoare"
+
+msgid "Key$Search"
+msgstr "Cautare"
+
+msgid "Key$Recordings"
+msgstr "Înregistrări "
+
+msgid "Key$Setup"
+msgstr "Setari"
+
+msgid "Key$Commands"
+msgstr "Comenzi "
+
+msgid "Key$Greater"
+msgstr "Mai mult"
+
+msgid "Key$Less"
+msgstr "Mai putin"
+
+msgid "Key$2digit"
+msgstr "2 digiti"
+
+msgid "Key$DVD"
+msgstr "DVD"
+
+msgid "Key$DVB"
+msgstr "DVB"
+
+msgid "Key$PVR"
+msgstr "PVR"
+
+msgid "Key$Reel"
+msgstr "Reel"
+
+msgid "Key$TT"
+msgstr "TT"
+
+msgid "Key$PiP"
+msgstr "PiP"
+
+msgid "Key$User1"
+msgstr "Utilizator1 "
+
+msgid "Key$User2"
+msgstr "Utilizator2 "
+
+msgid "Key$User3"
+msgstr "Utilizator3 "
+
+msgid "Key$User4"
+msgstr "Utilizator4 "
+
+msgid "Key$User5"
+msgstr "Utilizator5 "
+
+msgid "Key$User6"
+msgstr "Utilizator6 "
+
+msgid "Key$User7"
+msgstr "Utilizator7 "
+
+msgid "Key$User8"
+msgstr "Utilizator8 "
+
+msgid "Key$User9"
+msgstr "Utilizator9 "
+
+msgid "Key$Info"
+msgstr "Info "
+
+msgid "Key$Help"
+msgstr "Ajutor"
+
+msgid "Timeshift mode"
+msgstr "Modul Timeshift"
+
+msgid "Recording started"
+msgstr "A pornit înregistrarea"
+
+msgid "Free To Air"
+msgstr "FTA (necriptat) "
+
+msgid "no"
+msgstr "nu "
+
+msgid "internal CAM"
+msgstr "CAM intern"
+
+msgid "No CI at"
+msgstr "Nu este inserat CI"
+
+msgid "upper slot"
+msgstr "slotul de sus"
+
+msgid "lower slot"
+msgstr "slotul de jos"
+
+msgid "encrypted"
+msgstr "criptat "
+
+msgid "Rotor - shared LNB"
+msgstr "LNB partajat - Motor"
+
+msgid "auto"
+msgstr "automat "
+
+msgid "Edit channel"
+msgstr "Editare canal"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "Name"
+msgstr "Nume "
+
+msgid "Source"
+msgstr "Sursă "
+
+msgid "Frequency"
+msgstr "Frecvenţă "
+
+msgid "Polarization"
+msgstr "Polarizare "
+
+msgid "Srate"
+msgstr "Rată simboluri "
+
+msgid "CoderateH"
+msgstr "CoderateH "
+
+msgid "none"
+msgstr "niciuna(ul)"
+
+msgid "CoderateL"
+msgstr "CoderateL "
+
+msgid "Vpid"
+msgstr "PID Video "
+
+msgid "Ppid"
+msgstr "Ppid "
+
+msgid "Apid1"
+msgstr "PID Audio (1) "
+
+msgid "Apid2"
+msgstr "PID Audio (2) "
+
+msgid "Tpid"
+msgstr "PID Teletext "
+
+msgid "Sid"
+msgstr "Sid "
+
+msgid "Modulation"
+msgstr "Modulaţie "
+
+msgid "Bandwidth"
+msgstr "Lărgime de bandă "
+
+msgid "Transmission"
+msgstr "Transmisie "
+
+msgid "Guard"
+msgstr "Guard"
+
+msgid "Hierarchy"
+msgstr "Ierarhie"
+
+msgid "Rolloff"
+msgstr "Rolloff"
+
+msgid "Button$New"
+msgstr "Nou "
+
+msgid "Channel settings are not unique!"
+msgstr "Parametrii canalului nu sunt univoci!"
+
+msgid "channellist"
+msgstr "Lista Canale"
+
+msgid "current bouquet"
+msgstr "pachet curent"
+
+msgid "bouquet list"
+msgstr "lista pachete"
+
+#, fuzzy
+msgid "Channellist: set filters"
+msgstr "Functii Lista Canale"
+
+msgid "Please select the content of the channellist"
+msgstr ""
+
+#, fuzzy
+msgid "All channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "Only TV channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "Only radio channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "non encrypted channels"
+msgstr "Şterg canale?"
+
+msgid "Setup.OSD$Channellist starts with"
+msgstr "Lista Canale porneste cu"
+
+#, fuzzy
+msgid "non encrypted TV channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "encrypted radio channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "HD channels"
+msgstr "Editare canal"
+
+msgid "Channels"
+msgstr "Canale "
+
+msgid "Button$Edit"
+msgstr "Modifică "
+
+msgid "Button$Delete"
+msgstr "Şterge "
+
+msgid "Button$Mark"
+msgstr "Pune semn"
+
+msgid "Channel is being used by a timer!"
+msgstr "Canalul este utilizat de un temporizator!"
+
+msgid "Delete channel?"
+msgstr "Şterg canalul? "
+
+msgid "Edit Bouquet"
+msgstr "Editare Pachet"
+
+msgid "Add Bouquet"
+msgstr "Adauga Pachet"
+
+msgid "CI-Slot for this Bouquet"
+msgstr "Slotul CI pentru acest pachet"
+
+msgid "Note:"
+msgstr "Nota:"
+
+msgid "Select CI-Slot for current Bouquet."
+msgstr "Selecteaza Slotul CI pentru pachetul curent."
+
+msgid "Bouquets"
+msgstr "Pachete"
+
+#, fuzzy
+msgid "Button$Customize"
+msgstr "Pauză"
+
+msgid "Move"
+msgstr "Muta"
+
+msgid "Delete"
+msgstr "Şterge "
+
+msgid "Delete Bouquet?"
+msgstr "Şterg Pachet ?"
+
+msgid "Up/Dn for new location - OK to move"
+msgstr "Sus/Jos pentru noua locaţie - OK pentru a muta "
+
+msgid "Select channels with OK"
+msgstr "Selecteaza canale cu 'OK'"
+
+#, fuzzy
+msgid "Customize channels: "
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "free radio channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "radio channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "encrypted TV channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "free TV channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "TV channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "encrypted channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "free channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "non HD channels"
+msgstr "Editare canal"
+
+#, fuzzy
+msgid "all channels"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "Select channels with blue key"
+msgstr "Selecteaza canale cu 'OK'"
+
+#, fuzzy
+msgid "Channel deleted"
+msgstr "Lista Canale"
+
+msgid "Delete channels?"
+msgstr "Şterg canale?"
+
+#, fuzzy
+msgid "Channels deleted"
+msgstr "Lista Canale"
+
+#, fuzzy
+msgid "Channels have been moved"
+msgstr "Lista Canale"
+
+msgid "Add to Favorites?"
+msgstr "Adaug la favorite ?"
+
+msgid "Button$Insert"
+msgstr "Inserează "
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'Insert'"
+msgstr "Sus/Jos pentru noua locaţie - OK pentru a muta "
+
+#, fuzzy
+msgid "Move up/down for new position - then press 'OK'"
+msgstr "Sus/Jos pentru noua locaţie - OK pentru a muta "
+
+msgid "Help"
+msgstr "Ajutor"
+
+msgid "Already first help item"
+msgstr "Deja primul obiect din 'Ajutor'"
+
+msgid "Already last help item"
+msgstr "Deja ultimul obiect din 'Ajutor'"
+
+msgid "low"
+msgstr "jos"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "inalt"
+
+msgid "Active"
+msgstr "Activ "
+
+msgid "Channel"
+msgstr "Canal "
+
+msgid "Day"
+msgstr "Ziua "
+
+msgid "Start"
+msgstr "Început "
+
+msgid "Stop"
+msgstr "Sfârşit "
+
+msgid "VPS"
+msgstr "VPS "
+
+msgid "Priority"
+msgstr "Prioritate "
+
+msgid "Lifetime"
+msgstr "Timp de păstrare"
+
+msgid "unlimited"
+msgstr "neimitat"
+
+msgid "Child protection"
+msgstr "Protectie Copii"
+
+msgid "yes"
+msgstr "da "
+
+msgid "File"
+msgstr "Fişier "
+
+msgid "First day"
+msgstr "Prima zi "
+
+#, fuzzy
+msgid "Could not add timer"
+msgstr "Şterg temporizatorul ? "
+
+msgid "Timers"
+msgstr "Temporizatoare"
+
+msgid "Button$On/Off"
+msgstr "Act./Inact. "
+
+msgid "Button$Info"
+msgstr "Info "
+
+msgid "Delete timer?"
+msgstr "Şterg temporizatorul ? "
+
+msgid "Timer still recording - really delete?"
+msgstr "Temporizatorul  tocmai înregistrează - şterg, totuşi? "
+
+#, fuzzy
+msgid "Could not delete timer"
+msgstr "Şterg temporizatorul ? "
+
+msgid "Event"
+msgstr "Emisiune "
+
+msgid "Button$Timer"
+msgstr "Temporizator"
+
+msgid "Button$Record"
+msgstr "Înregistr. "
+
+msgid "Button$Switch"
+msgstr "Comută "
+
+msgid "ActiveEvent"
+msgstr "Emisiunea in curs"
+
+msgid "What's on now?"
+msgstr "Ce emisiuni sunt acum? "
+
+msgid "What's on next?"
+msgstr "Ce emisiuni urmează? "
+
+msgid "Button$Next"
+msgstr "Următor "
+
+msgid "Button$Now"
+msgstr "Acum "
+
+msgid "Button$Schedule"
+msgstr "Program "
+
+msgid "Can't switch channel!"
+msgstr "Nu pot comuta canalul! "
+
+#, c-format
+msgid "Schedule - %s"
+msgstr "Programul canalului %s "
+
+#, c-format
+msgid "This event - %s"
+msgstr "Această emisiune - %s "
+
+msgid "This event - all channels"
+msgstr "Această emisiune - toate canalele "
+
+msgid "All events - all channels"
+msgstr "Toate emisiunile - toate canalele "
+
+#, c-format
+msgid "Please enter %d digits!"
+msgstr "Vă rog introduceţi %d cifre! "
+
+msgid "Recording info"
+msgstr "Detaliile înregistrării "
+
+msgid "Button$Play"
+msgstr "Redare "
+
+msgid "Button$Rewind"
+msgstr "Înapoi "
+
+#, fuzzy
+msgid "Scale Picture"
+msgstr "Pozele Mele"
+
+msgid "Recordings"
+msgstr "Înregistrări "
+
+msgid "Button$Open"
+msgstr "Deschide "
+
+msgid "Commands"
+msgstr "Comenzi "
+
+msgid "Error while accessing recording!"
+msgstr "Eroare la accesarea înregistrării!"
+
+msgid "Delete recording?"
+msgstr "Şterg înregistrarea? "
+
+msgid "Error while deleting recording!"
+msgstr "Eroare la ştergerea înregistrării! "
+
+msgid "Recording commands"
+msgstr "Comenzi pentru înregistrări "
+
+msgid "OSD & Language"
+msgstr "Limba OSD "
+
+msgid "never"
+msgstr "niciodată "
+
+msgid "skin dependent"
+msgstr "dep. de skin "
+
+msgid "always"
+msgstr "întotdeauna "
+
+msgid "User defined"
+msgstr "Definit de Utilizator"
+
+msgid "Small"
+msgstr "Mic"
+
+msgid "FontSize$Normal"
+msgstr "Normal"
+
+msgid "Setup.OSD$Language"
+msgstr "Limba OSD "
+
+msgid "Setup.DVB$Display subtitles"
+msgstr "Afişează subtitrari"
+
+#, fuzzy
+msgid "Setup.OSD$OSD color"
+msgstr "Culoare Skin"
+
+msgid "Setup.OSD$OSD Font Size"
+msgstr "Dimensiune Font"
+
+msgid "Setup.OSD$OSD font size (pixel)"
+msgstr "Dimensiune font (pixeli)"
+
+msgid "Setup.OSD$Use small font"
+msgstr "Utilizare fonturi mici "
+
+msgid "Setup.OSD$Scroll pages"
+msgstr "Derulează pagini "
+
+msgid "Setup.OSD$Scroll wraps"
+msgstr "Derulare circulară "
+
+msgid "Setup.OSD$Channel info time (s)"
+msgstr "Durata afişării info-canal (s) "
+
+#, fuzzy
+msgid "Setup.OSD$Show expert menu options"
+msgstr "Utilizare fonturi mici "
+
+msgid "Setup.OSD$  Use extended navigation keys"
+msgstr ""
+
+#, fuzzy
+msgid "Setup.OSD$  Ok key in TV mode"
+msgstr "Temă"
+
+msgid "channelinfo"
+msgstr "Info Canal"
+
+#, fuzzy
+msgid "Standard"
+msgstr "Standby"
+
+#, fuzzy
+msgid "Setup.OSD$  Program +/- keys"
+msgstr "Durata afişării info-canal (s) "
+
+#, fuzzy
+msgid "Channell./Bouquets"
+msgstr "Canale "
+
+msgid "Expertmenu"
+msgstr "Meniu Expert"
+
+msgid "OSD - Expertmenu"
+msgstr "OSD - Meniu Expert"
+
+msgid "Setup.OSD$Skin"
+msgstr "Skin "
+
+msgid "Setup.OSD$OSD font name"
+msgstr "Nume font OSD"
+
+msgid "Setup.OSD$Small font name"
+msgstr "Nume Font mic"
+
+msgid "Setup.OSD$Fixed font name"
+msgstr "Nume Font cu lăţime fixă"
+
+msgid "Setup.OSD$Small font size (pixel)"
+msgstr "Mărimea 'mică' a fontului (pixeli) "
+
+msgid "Setup.OSD$Fixed font size (pixel)"
+msgstr "Mărimea 'fixă' a fontului (pixeli) "
+
+msgid "Setup.OSD$Left"
+msgstr "Stânga "
+
+msgid "Setup.OSD$Top"
+msgstr "Sus "
+
+msgid "Setup.OSD$Width"
+msgstr "Lăţime OSD "
+
+msgid "Setup.OSD$Height"
+msgstr "Înălţime OSD "
+
+msgid "Setup.OSD$Random menu placement"
+msgstr "Pozitionare aleatorie a meniului"
+
+msgid "Setup.OSD$Optional languages"
+msgstr "Limbi optionale"
+
+msgid "Setup.OSD$ Optional language"
+msgstr "Limba optionala"
+
+msgid "EPG"
+msgstr "EPG "
+
+msgid "Button$Scan"
+msgstr "Căutare canale "
+
+msgid "Audio"
+msgstr "Sunet "
+
+msgid "Setup.DVB$Subtitle languages"
+msgstr "Limbi subtitrare "
+
+msgid "Setup.DVB$Subtitle language"
+msgstr "Limbă subtitrare "
+
+msgid "Setup.DVB$Subtitle offset"
+msgstr "Offset subtitrare "
+
+msgid "Setup.DVB$Subtitle foreground transparency"
+msgstr "Transparenţa prim-planului subtitrării "
+
+msgid "Setup.DVB$Subtitle background transparency"
+msgstr "Transparenţa fundalului subtitrării "
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Utilizeaza Sunet Dolby Digital"
+
+msgid " Delay ac3 (10ms)"
+msgstr " Intarziere ac3 (10ms)"
+
+msgid " Prefer ac3 over HDMI"
+msgstr " Prefer ac3 prin HDMI"
+
+msgid "Delay Stereo (10ms)"
+msgstr "Intarziere Stereo (10ms)"
+
+msgid "Dish settings"
+msgstr "Setari Antena"
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC dezactivat"
+
+msgid "Different Setups"
+msgstr "Setari Diferite"
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DiSEqC Type"
+msgstr "Tip DiSEqC"
+
+msgid "Satellite"
+msgstr "Satelit"
+
+msgid "   LNB Type"
+msgstr "   Tip LNB"
+
+msgid "Delay (ms)"
+msgstr "Intarziere (ms)"
+
+msgid "Number of LNBs"
+msgstr "Numar de LNB-uri"
+
+msgid "Repeat"
+msgstr "Repeta"
+
+msgid "Rotor on tuner"
+msgstr "Motor la Tuner"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Expert"
+msgstr "Expert"
+
+msgid "Rotor Settings"
+msgstr "Setari Rotor"
+
+msgid "Sat positions must be unique!"
+msgstr "Pozitiile Satelitilor trebuie sa fie unice!"
+
+msgid "Overwrite DiSEqC.conf?"
+msgstr "Rescriu  DiSEqC.conf?"
+
+msgid "Changes done"
+msgstr "Modificari efectuate"
+
+msgid "Init"
+msgstr "Initializare"
+
+msgid "Error"
+msgstr "Eroare"
+
+msgid "Disabled"
+msgstr "Dezactivat"
+
+msgid "--OFF--"
+msgstr "--OPRIT--"
+
+msgid "Common Interface"
+msgstr "Interfata Comuna (CI)"
+
+msgid "Reset"
+msgstr "Repornire "
+
+msgid "On/Off"
+msgstr "Act./Inact. "
+
+msgid "Opening CAM menu..."
+msgstr "Deschid meniul CAM... "
+
+msgid "Can't open CAM menu!"
+msgstr "Nu pot deschide meniul CAM!"
+
+msgid "Resetting CAM..."
+msgstr "Repornire CAM..."
+
+msgid "CAM has been reset"
+msgstr "CAM-ul a fost repornit"
+
+msgid "Can't reset CAM!"
+msgstr "Nu pot reseta CAM! "
+
+msgid "Recording"
+msgstr "Înregistrare "
+
+msgid "Setup.Recording$Timer Buffer at Start (min)"
+msgstr "Marjă la pornire (min) "
+
+msgid "Setup.Recording$Timer Buffer at End (min)"
+msgstr "Marjă la oprire (min) "
+
+msgid "Setup.Recording$Default Priority"
+msgstr "Prioritate implicită "
+
+msgid "Setup.Recording$Default Recording Lifetime"
+msgstr "Durata initiala a inregistrarii"
+
+msgid "Setup.Recording$Use VPS"
+msgstr "Utilizează VPS "
+
+msgid "Setup.Recording$Mark Instant Recording"
+msgstr "Lasa semn înregistrare imediată"
+
+msgid "Setup.Recording$Instant Recording Time (min)"
+msgstr "Durata înregistare imediată (min)"
+
+msgid "Setup.Recording$Instant Recording Lifetime"
+msgstr "Durata înregistrare imediată"
+
+msgid "Setup.Recording$Instant Recording Priority"
+msgstr "Prioritate înregistrare imediată"
+
+msgid "Setup.Recording$Mark Blocks after Recording"
+msgstr "Lasa semn Blocuri dupa Inregistrare"
+
+msgid "Replay"
+msgstr "Reluare"
+
+msgid "Setup.Replay$Multi speed mode"
+msgstr "Mod multi-viteză"
+
+msgid "Setup.Replay$Show replay mode"
+msgstr "Arata modul reluare"
+
+msgid "Setup.Replay$Jump width for green/yellow (min)"
+msgstr ""
+
+#, fuzzy
+msgid "intelligent"
+msgstr "Satelit"
+
+msgid "Setup.Replay$Jump over cutting-mark"
+msgstr "Sari peste semnul 'taiere'"
+
+msgid "Setup.Replay$Resume play after jump"
+msgstr "Revenire la pnctul initial dupa 'Salt la:'"
+
+msgid "off"
+msgstr "inactiv"
+
+msgid "update"
+msgstr "update"
+
+msgid "add"
+msgstr "adauga"
+
+msgid "at the end"
+msgstr "la sfarsit"
+
+msgid "to bouquets"
+msgstr "la pachete"
+
+msgid "Background Services"
+msgstr "Servicii Fundal"
+
+msgid "Request"
+msgstr "Cerere"
+
+msgid "Standby"
+msgstr "Standby"
+
+#, fuzzy
+msgid "Power off"
+msgstr "slotul de jos"
+
+msgid "Button$Scan EPG"
+msgstr "Căutare in EPG"
+
+msgid "Setup.Miscellaneous$Zap timeout (s)"
+msgstr "Interval zapping (s) "
+
+msgid "Setup.DVB$Autom. update channels"
+msgstr "Actualizare automata canale"
+
+msgid "  Update mode"
+msgstr "  Mod Update"
+
+msgid "Setup.Miscellaneous$Initial channel"
+msgstr "Canalul de pornire "
+
+msgid "Setup.Miscellaneous$as before"
+msgstr "ca mai înainte "
+
+#, fuzzy
+msgid "Setup.Miscellaneous$Initial volume (%)"
+msgstr "Volumul la pornire "
+
+msgid "Setup.EPG$EPG scan timeout (h)"
+msgstr "Interval achiziţie EPG (h) "
+
+msgid "Setup.Miscellaneous$Update-check on system start"
+msgstr "Cauta actualizari la pornire"
+
+msgid "Permanent Timeshift"
+msgstr "Timeshift Permanent"
+
+msgid "Setup.LiveBuffer$Buffer (min)"
+msgstr "Buffer (min)"
+
+#, fuzzy
+msgid "Info:"
+msgstr "Info "
+
+#, fuzzy
+msgid "Permanent Timeshift has been disabled."
+msgstr "Timeshift Permanent"
+
+msgid "Permanent Timeshift can only be activated with a harddisk."
+msgstr ""
+
+msgid "System Settings"
+msgstr "Setari Sistem"
+
+msgid "This plugin has no setup parameters!"
+msgstr "Acest plugin nu se configurează! "
+
+#, fuzzy
+msgid "Title$Setup"
+msgstr "Meniu "
+
+msgid "LNB"
+msgstr "LNB "
+
+msgid "OSD"
+msgstr "OSD "
+
+msgid "DVB"
+msgstr "Dispozitiv DVB "
+
+msgid "CICAM"
+msgstr "CI & CAM"
+
+msgid "Recording settings"
+msgstr "Setari înregistrări"
+
+msgid "Replay settings"
+msgstr "Setari reluare"
+
+msgid "Miscellaneous"
+msgstr "Diverse "
+
+msgid "Plugins"
+msgstr "Plugin-uri "
+
+msgid "Restart"
+msgstr "Repornire "
+
+msgid "Really restart?"
+msgstr "Sigur repornesc? "
+
+msgid "Recording - restart anyway?"
+msgstr "Tocmai se înregistrează - repornesc, totuşi? "
+
+msgid "restart anyway?"
+msgstr "repornesc, totuşi? "
+
+msgid " Stop recording "
+msgstr " Opreşte înregistrarea  "
+
+msgid "Channel list"
+msgstr "Lista Canale"
+
+msgid "Title$Menu"
+msgstr "Meniu "
+
+msgid "Disk"
+msgstr "Disc "
+
+msgid "free"
+msgstr "liber "
+
+msgid "Title$Main Menu"
+msgstr "Meniul Principal"
+
+msgid " Stop replaying"
+msgstr " Opreşte redarea "
+
+msgid "Button$Recordings"
+msgstr "Înregistr. "
+
+msgid "Button$Multifeed"
+msgstr "Multifeed"
+
+msgid " Cancel editing"
+msgstr " Opreşte editarea"
+
+msgid "Stop recording?"
+msgstr "Opresc înregistrarea? "
+
+msgid "Cancel editing?"
+msgstr "Opresc editarea?"
+
+msgid "Button$Audio"
+msgstr "Sunet "
+
+msgid "No audio available!"
+msgstr "Lipseşte sunetul! "
+
+msgid "No subtitles"
+msgstr "Fara subtirare"
+
+msgid "Button$Subtitles"
+msgstr "Subtitrare "
+
+msgid "No subtitles available!"
+msgstr "Subtitrare indisponibilă! "
+
+msgid "Not enough disk space to start recording!"
+msgstr "Insuficient spaţiu pe disc pentru înregistrare!"
+
+msgid "recording already running - Start another?"
+msgstr "Inregistrarea ruleaza deja - Pornesc alta ?"
+
+#, fuzzy
+msgid "A recording is already active!"
+msgstr "Inregistrarea ruleaza deja - Pornesc alta ?"
+
+#, fuzzy
+msgid "An instant recording is already active!"
+msgstr "Inregistrarea ruleaza deja - Pornesc alta ?"
+
+msgid "No free DVB device to record!"
+msgstr "Nu mai sunt dispozitive DVB disponibile pentru înregistrare! "
+
+msgid "Pausing live video..."
+msgstr "Trec în pauză emisiunea transmisă... "
+
+msgid "Jump: "
+msgstr "Salt la:  "
+
+msgid "No editing marks defined!"
+msgstr "Nu s-au definit semne de editare pentru această înregistrare"
+
+msgid "Can't start editing process!"
+msgstr "Nu pot porni procesul de editare!"
+
+msgid "Editing process started"
+msgstr "Procesul de editare a început"
+
+msgid "Editing process already active!"
+msgstr "Procesul de editare este deja activ!"
+
+#, fuzzy
+msgid "Power Off ReelBox"
+msgstr "Optiunea Pornit/Oprit"
+
+#, fuzzy
+msgid "Recording - Activating QuickStandby"
+msgstr "Activez stand-by"
+
+#, fuzzy
+msgid "Activating QuickStandby"
+msgstr "Activez stand-by"
+
+#, fuzzy
+msgid "Running Process - Activating QuickStandby"
+msgstr "Activez stand-by"
+
+#, fuzzy
+msgid "Quick Standby"
+msgstr "Standby"
+
+msgid "Reboot"
+msgstr "Repornire"
+
+msgid "Set Sleeptimer"
+msgstr "Setare Temporizator  Stand-by"
+
+msgid "Pause Live-TV"
+msgstr "Pauza Live-Tv"
+
+msgid "Activating standby"
+msgstr "Activez stand-by"
+
+msgid "Activating deep standby"
+msgstr "Activez stand-by adanc"
+
+#, fuzzy
+msgid "Activating quick standby"
+msgstr "Activez stand-by"
+
+msgid "Activating reboot"
+msgstr "Activez repornire"
+
+msgid "Recording - shut down anyway?"
+msgstr "Tocmai se înregistrează - închid, totuşi? "
+
+#, fuzzy
+msgid "A recording starts soon, shut down anyway?"
+msgstr "Tocmai se înregistrează - închid, totuşi? "
+
+msgid "FileNameChars$ abcdefghijklmnopqrstuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@&"
+msgstr " aăâbcdefghiîjklmnopqrsştţuvwxyz0123456789-_.,#~\\^$[]|()*+?{}/:%@& "
+
+msgid "CharMap$ 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0@+-_\t.?!,1#~\\^$[]|()*{}/:%&\taăâbc2\tdef3\tghiî4\tjkl5\tmno6\tpqrsş7\ttţuv8\twxyz9                       "
+
+msgid "Button$ABC/abc"
+msgstr "ABC/abc "
+
+msgid "Button$Overwrite"
+msgstr "Suprascrie "
+
+msgid "Please select"
+msgstr "Va rog selectati"
+
+msgid "Main Menu"
+msgstr "Meniul Principal"
+
+msgid "Channel locked (recording)!"
+msgstr "Canal blocat (înregistrare)! "
+
+msgid "can't record - check your configuration"
+msgstr "nu pot inregistra, verificati configuratia"
+
+msgid "Low disk space!"
+msgstr "Spaţiul redus pe disc!"
+
+msgid "Recording-file already exists!"
+msgstr "Fisierul inregistrat exista deja!"
+
+#, fuzzy
+msgid "Teletext not available!"
+msgstr "Canalul  nu este disponibil!"
+
+#, fuzzy
+msgid "PiP not available!"
+msgstr "Canalul  nu este disponibil!"
+
+msgid "Volume "
+msgstr "Volum  "
+
+msgid "Classic VDR"
+msgstr "VDR clasic "
+
+msgid "ST:TNG Panels"
+msgstr "Cons. ST:TNG "
+
+msgid "MTWTFSS"
+msgstr "LMMJVSD "
+
+#, fuzzy
+msgid "Database not available!"
+msgstr "Canalul  nu este disponibil!"
+
+msgid "MonTueWedThuFriSatSun"
+msgstr "LunMarMieJoiVinSâmDum "
+
+msgid "Monday"
+msgstr "Luni "
+
+msgid "Tuesday"
+msgstr "Marţi "
+
+msgid "Wednesday"
+msgstr "Miercuri "
+
+msgid "Thursday"
+msgstr "Joi "
+
+msgid "Friday"
+msgstr "Vineri"
+
+msgid "Saturday"
+msgstr "Sâmbătă "
+
+msgid "Sunday"
+msgstr "Duminică "
+
+msgid "ejecting media"
+msgstr "scoate DVD din unitate"
+
+msgid "Upcoming VPS recording!"
+msgstr "Urmează o înregistrare VPS!"
+
+#, fuzzy
+msgid "Timeshift is not available!"
+msgstr "Subtitrare indisponibilă! "
+
+#, fuzzy
+msgid "No free tuner to record!"
+msgstr "Nu mai sunt dispozitive DVB disponibile pentru înregistrare! "
+
+msgid "Can't shutdown - option '-s' not given!"
+msgstr "Nu pot închide - opţiunea '-s' nu este precizata!"
+
+msgid "Switching primary DVB..."
+msgstr "Comut dispozitiv DVB primar... "
+
+msgid "End recording"
+msgstr "Sfarsit inregistrare"
+
+msgid "Editing process failed!"
+msgstr "Procesul de editare a eşuat!"
+
+msgid "Editing process finished"
+msgstr "Procesul de editare s-a terminat"
+
+msgid "Switching to server-mode"
+msgstr ""
+
+#~ msgid "Edit"
+#~ msgstr "Editare"
+
+#~ msgid "Back"
+#~ msgstr "Înapoi "
+
+#~ msgid "Next"
+#~ msgstr "Următor "
+
+#~ msgid "Options"
+#~ msgstr "Optiuni"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Skin color"
+#~ msgstr "Culoare Skin"
+
+#~ msgid "Setup.OSD$Ok shows"
+#~ msgstr "Ok arata"
+
+#, fuzzy
+#~ msgid "Setup.OSD$Channel +/- keys"
+#~ msgstr "Durata afişării info-canal (s) "
+
+#, fuzzy
+#~ msgid "Setup.OSD$Switch Channels in EPG"
+#~ msgstr "Durata afişării info-canal (s) "
+
+#~ msgid "Setup.Miscellaneous$Min. user inactivity (min)"
+#~ msgstr "Durata minimă de inactivitate (min) "
+
+#, fuzzy
+#~ msgid "An instant recording is already runnig!"
+#~ msgstr "Inregistrarea ruleaza deja - Pornesc alta ?"
+
+#, fuzzy
+#~ msgid "Select bouquet with OK"
+#~ msgstr "Selecteaza canale cu 'OK'"
+
+#, fuzzy
+#~ msgid "Channels sucessfully moved"
+#~ msgstr "Lista Canale"
+
+#, fuzzy
+#~ msgid "Only video channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "Only non decrypted channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "Only non decrypted video channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "Only decrypted radio channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "non encrypted radio channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "encrypted video channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "non encrypted video channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "video channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "Only non encrypted channels"
+#~ msgstr "Şterg canale?"
+
+#, fuzzy
+#~ msgid "Only non encrypted TV channels"
+#~ msgstr "Şterg canale?"
+
+#~ msgid "A Timer starts soon, Proceed?"
+#~ msgstr "Un temporizator porneste curand, Procedez ?"
+
+#~ msgid "UMTS"
+#~ msgstr "UMTS"
+
+#~ msgid "Deep standby"
+#~ msgstr "Stand-by adanc"
+
+#~ msgid "Quick Shutdown"
+#~ msgstr "Oprire Rapida"
+
+#~ msgid "Activated standby after current recording"
+#~ msgstr "Stand-by activat dupa inregistrarea curenta"
+
+#~ msgid "shut down anyway?"
+#~ msgstr "închid, totuşi?"
+
+#~ msgid "Recording in %ld minutes, shut down anyway?"
+#~ msgstr "Înregistrez peste %ld minute - închid, totuşi?"
+
+#~ msgid "Setup.OSD$Theme"
+#~ msgstr "Temă"
+
+#~ msgid "Setup.OSD$Anti-alias"
+#~ msgstr "Antialiere"
+
+#~ msgid "Setup.Miscellaneous$Min. event timeout (min)"
+#~ msgstr "Durată minimă emisiuni (min)"
+
+#~ msgid "Setup.Recording$Split edited files"
+#~ msgstr "Separare fişiere montate"
+
+#~ msgid "Dpid1"
+#~ msgstr "PID AC3 (1)"
+
+#~ msgid "Dpid2"
+#~ msgstr "PID AC3 (2)"
+
+#~ msgid "Spid1"
+#~ msgstr "Spid1"
+
+#~ msgid "Spid2"
+#~ msgstr "Spid2"
+
+#~ msgid "CA"
+#~ msgstr "CA (Acces Condiţional)"
+
+#~ msgid "Inversion"
+#~ msgstr "Inversiune"
+
+#~ msgid "CAM not responding!"
+#~ msgstr "CAM-ul nu reacţionează!"
+
+#~ msgid "Setup.OSD$Message time (s)"
+#~ msgstr "Timp afişare mesaje (sec)"
+
+#~ msgid "Setup.OSD$Default font"
+#~ msgstr "Font implicit"
+
+#~ msgid "Setup.OSD$Default font size (pixel)"
+#~ msgstr "Mărimea implicită a fontului (pixeli)"
+
+#~ msgid "bottom"
+#~ msgstr "jos"
+
+#~ msgid "top"
+#~ msgstr "sus"
+
+#~ msgid "Setup.OSD$Info on channel switch"
+#~ msgstr "Informaţii la comutarea canalului"
+
+#~ msgid "Setup.OSD$Timeout requested channel info"
+#~ msgstr "Durata afişării informaţii canal"
+
+#~ msgid "Setup.OSD$Menu key closes"
+#~ msgstr "Tasta 'Meniu' închide"
+
+#~ msgid "Setup.OSD$Recording directories"
+#~ msgstr "Directoare înregistrări"
+
+#~ msgid "Setup.EPG$EPG bugfix level"
+#~ msgstr "Nivel corecţie EPG"
+
+#~ msgid "Setup.EPG$EPG linger time (min)"
+#~ msgstr "Date EPG expirate cel mult (min)"
+
+#~ msgid "Setup.EPG$Set system time"
+#~ msgstr "Potriveşte ceasul sistem"
+
+#~ msgid "Setup.EPG$Use time from transponder"
+#~ msgstr "Preia ora din transponder"
+
+#~ msgid "Setup.EPG$Preferred languages"
+#~ msgstr "Limbi preferate"
+
+#~ msgid "Setup.EPG$Preferred language"
+#~ msgstr "Limba preferată"
+
+#~ msgid "pan&scan"
+#~ msgstr "pan&scan"
+
+#~ msgid "letterbox"
+#~ msgstr "letterbox"
+
+#~ msgid "center cut out"
+#~ msgstr "center cut out"
+
+#~ msgid "PIDs only"
+#~ msgstr "Numai PID-uri"
+
+#~ msgid "names and PIDs"
+#~ msgstr "nume si PID-uri"
+
+#~ msgid "add new transponders"
+#~ msgstr "adăugare transpondere noi"
+
+#~ msgid "Setup.DVB$Primary DVB interface"
+#~ msgstr "Dispozitiv DVB primar"
+
+#~ msgid "Setup.DVB$Video format"
+#~ msgstr "Format video"
+
+#~ msgid "Setup.DVB$Video display format"
+#~ msgstr "Formatul redării video"
+
+#~ msgid "Setup.DVB$Audio language"
+#~ msgstr "Limba sunetului"
+
+#~ msgid "Setup.LNB$Use DiSEqC"
+#~ msgstr "Utilizare DiSEqC"
+
+#~ msgid "Setup.LNB$SLOF (MHz)"
+#~ msgstr "Frecvenţă comutare bandă, SLOF (MHz)"
+
+#~ msgid "Setup.LNB$Low LNB frequency (MHz)"
+#~ msgstr "Frecvnţă LNB inferioară (Mhz)"
+
+#~ msgid "Setup.LNB$High LNB frequency (MHz)"
+#~ msgstr "Frecvnţă LNB superioară (MHz)"
+
+#~ msgid "CAM present"
+#~ msgstr "CAM preyent"
+
+#~ msgid "CAM ready"
+#~ msgstr "CAM pregătit"
+
+#~ msgid "Button$Menu"
+#~ msgstr "Meniu"
+
+#~ msgid "Button$Reset"
+#~ msgstr "Resetare"
+
+#~ msgid "CAM is in use - really reset?"
+#~ msgstr "CAM-ul este in folosinţă - totuşi resetez?"
+
+#~ msgid "Setup.Recording$Primary limit"
+#~ msgstr "Limită primară"
+
+#~ msgid "Setup.Recording$Pause priority"
+#~ msgstr "Prioritate pauză"
+
+#~ msgid "Setup.Recording$Pause lifetime (d)"
+#~ msgstr "Păstrarea emisiunilor 'pauzate' (zile)"
+
+#~ msgid "Setup.Recording$Use episode name"
+#~ msgstr "Utilizează numele episodului"
+
+#~ msgid "Setup.Recording$VPS margin (s)"
+#~ msgstr "Marjă de timp la utilizare VPS (s)"
+
+#~ msgid "Setup.Recording$Name instant recording"
+#~ msgstr "Nume înregistrare imediată"
+
+#~ msgid "Setup.Recording$Max. video file size (MB)"
+#~ msgstr "Dimensiune maximă a fişierului video (MB)"
+
+#~ msgid "Setup.Miscellaneous$SVDRP timeout (s)"
+#~ msgstr "Timeout SVDRP (sec)"
+
+#~ msgid "Setup.Miscellaneous$Channel entry timeout (ms)"
+#~ msgstr "Timeout la introducerea canalului (ms)"
+
+#~ msgid "Schedule"
+#~ msgstr "Program (EPG)"
+
+#~ msgid "VDR"
+#~ msgstr "VDR"
+
+#~ msgid "Button$Stop"
+#~ msgstr "Stop"
+
+#~ msgid "Button$Resume"
+#~ msgstr "Continuare"
+
+#~ msgid "Plugin"
+#~ msgstr "Plugin (modul adiţional)"
+
+#~ msgid "Editing - shut down anyway?"
+#~ msgstr "Montajul tocmai se efectuează - închid, totuşi?"
+
+#~ msgid "Plugin %s wakes up in %ld min, continue?"
+#~ msgstr "Plugin-ul %s se va trezi +n %ld min, continui?"
+
+#~ msgid "Editing - restart anyway?"
+#~ msgstr "Montajul tocmai se efectuează - repornesc, totuşi?"
+
+#~ msgid "VDR will shut down later - press Power to force"
+#~ msgstr "VDR se va închide mai târziu - apăsaţi 'Power' pentru a forţa"
+
+#~ msgid "Press any key to cancel shutdown"
+#~ msgstr "Apasă orice tastă pentru a anula închiderea"
+
+#~ msgid "Press any key to cancel restart"
+#~ msgstr "Apăsaţi orice tastă pentru a anula repornirea"
+
+#~ msgid "VDR will shut down in %s minutes"
+#~ msgstr "VDR se va închide în %s minute"

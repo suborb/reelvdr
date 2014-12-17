@@ -1,0 +1,11 @@
+diff -Nru vdr-1.3.21-vanilla/menu.h vdr-1.3.21-enaio/menu.h
+--- vdr-1.3.21-vanilla/menu.h	2005-01-08 17:48:57.000000000 +0200
++++ vdr-1.3.21-enaio/menu.h	2005-02-13 18:22:50.011989368 +0200
+@@ -135,6 +135,7 @@
+   eOSState Delete(void);
+   eOSState Summary(void);
+   eOSState Commands(eKeys Key = kNone);
++  eOSState Rename(void);
+ public:
+   cMenuRecordings(const char *Base = NULL, int Level = 0, bool OpenSubMenus = false);
+   ~cMenuRecordings();

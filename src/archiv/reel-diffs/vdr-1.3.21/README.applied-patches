@@ -1,0 +1,33 @@
+# Patch-list for vdr 1.3.21
+# apply all these patches to a vanilla vdr and you'll have a vdr like in
+# svn
+ 
+vdr-1.3.21-enAIO-2.1
+-R vdr-1.3.21-enaio/osdbase.c.diff
+-R vdr-1.3.21-enaio/menu.c.diff
+vdr-1.3.21_27-Setup-0.1.0
+vdr-1.3.22-Fd_Frontend
+diseqc-0.7
+vdr-1.3.21-nl-up
+reel-reduced-buffers.diff
+reel-Makefile-opt.diff
+vdr-1.3.23-dvbspu.c.diff  (dvd--0.3.6_b03) (is this really needed?)
+vdr--k.diff
+
+reel-branding.diff
+reel-tools-tuning.diff
+reel-ga-channel-hash.diff
+reel-ga-epg-hash.diff
+reel-sections-nice.diff
+reel-remux-speedup.diff
+reel-si-speedup.diff
+vdr-reelboxbase.diff
+reel-ca-slots.diff
+reel-changed-keys.diff
+keysinmacro.diff
+reel-interface-fix.diff
+reel-misc.diff
+
+
+suggestions:
++timercmds-0.1 (epgsearch)

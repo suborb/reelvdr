@@ -1,0 +1,89 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Michael Rakowski <mrak@gmx.de>, 2002
+# Krystian Kruszynski <sathumax@yahoo.com>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-mediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-05-30 16:11+0200\n"
+"PO-Revision-Date: 2008-09-26 14:59+0200\n"
+"Last-Translator: Krystian Kruszynski <sathumax@yahoo.com>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Media Player"
+msgstr "Odtwarzacz Multimedialny"
+
+msgid "Recordings"
+msgstr "Nagrania"
+
+msgid "Music"
+msgstr "Muzyka"
+
+msgid "Images"
+msgstr "Obrazy"
+
+msgid "Videos"
+msgstr "Wideo"
+
+msgid "My Music"
+msgstr "Moja Muzyka"
+
+msgid "My Images"
+msgstr "Moje Obrazy"
+
+msgid "My Videos"
+msgstr "Moje Wideo"
+
+msgid "Browser"
+msgstr ""
+
+msgid "Rotor"
+msgstr "Obrotnica"
+
+msgid "My Recordings"
+msgstr "Moje Nagrania"
+
+msgid "Play CD/DVD"
+msgstr "Odgrywaj CD/DVD"
+
+msgid "Internet radio"
+msgstr "Radio Internetowe"
+
+msgid "Play Ipod"
+msgstr "Odgrywaj Ipod"
+
+msgid "Audio Player2"
+msgstr ""
+
+msgid "Music & media player"
+msgstr ""
+
+msgid "Audio Player"
+msgstr "Odtwarzacz Dzwiku"
+
+msgid "Music Library"
+msgstr "Bibloteka Muzyki"
+
+msgid "Image Player"
+msgstr "Odtwarzacz Obrazu"
+
+msgid "Image Library"
+msgstr "Bibloteka Obrazów"
+
+msgid "MediaplayerDvd"
+msgstr "Odtwarzacz MultimedialnyDVD"
+
+msgid "Video Library"
+msgstr "Bibloteka Wideo"
+
+msgid "Movie & media player"
+msgstr ""
+
+msgid "Movie Library"
+msgstr "Bibloteka Filmowa"

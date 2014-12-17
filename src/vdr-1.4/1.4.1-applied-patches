@@ -1,0 +1,21 @@
+vdr-1.4.5-vanilla
+
+maintenance-patch 1.4.5-1
+maintenance-patch 1.4.5-2
+
+Makefile-adjustments
+vdr-1.3.24_add_DolbyInRecordings_switch.diff  	1)
+vdr-1.4.1-audio-delay-settings.diff		1)
+vdr-1.4.1-osdmemory-reelbox.diff		1)
+1.4.1-storemode-items.diff			1)
+vdr-1.4.1-Setup.diff
+vdr--k
+shutdown-fix
+setup-key
+vdr-1.4.0-Rotor.diff
+vdr-1.4.1-easy-diseqc-with-different-setups.diff
+pin-patch
+reelskin
+
+1) needed by reelbox-pi
+2) needed by setup

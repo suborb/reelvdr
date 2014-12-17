@@ -1,0 +1,40 @@
+
+This is the PremiereEpg plugin for VDR.
+
+It parses the extended EPG data which is send by Premiere on their portal
+channels.
+
+Written by:                  Stefan Hülswitt <s.huelswitt@gmx.de>
+Project's homepage:          http://www.muempf.de/
+Latest version available at: http://www.muempf.de/down/
+
+See the file COPYING for license information.
+
+----------------------------------------------------------------------
+
+This plugin parses the extended EPG data which is send by Premiere on their
+portal channels (e.g. SPORT PORTAL). This EPG data is transmitted in a
+non-standard format on a non-standard PID.
+
+This work is based on the premiereepg2vdr commandline tool, which was written
+by Axel Katzur software@katzur.de.
+premiereepg2vdr can be found at:
+<http://www.katzur.de/download/premiereepg2vdr-0.0.4.tar.gz>
+
+Note: the EPG entries created with this plugin aren't fully compatible with
+entries created by premiereepg2vdr. This plugin used a different sheme (IMO more
+reliable) to map the EventID. If you're upgrading from premiereepg2vdr you
+should delete your epg.data file, otherwise you will see duplicate EPG events.
+
+The plugin can tag option events i.e. the same event with the same time on
+different channels e.g. F1 sub channels. The tagging format (e.g. before or
+after event name) can be selected in the plugin setup menu.
+In addition there are two switches in the plugin setup menu to control inclusion
+of order and parental rating information into the event description.
+
+Beside this, there is nothing big to say:
+
+- There are no commandline options for this plugin.
+- There is no plugin mainmenu entry.
+- Everything should work automatically. Whenever a device is tuned to a Premiere
+  channel i.e. by EPG scan or manually, the Premiere EPG scan is triggered.

@@ -1,0 +1,767 @@
+--- base_pkgs/vdr-1.3.21/channels.c	2005-02-06 10:44:53.000000000 +0100
++++ vdr-1.3.21/channels.c	2005-04-01 03:11:41.000000000 +0200
+@@ -123,12 +123,12 @@
+ // -- tChannelID -------------------------------------------------------------
+ 
+ const tChannelID tChannelID::InvalidID;
+-
++/*
+ bool tChannelID::operator== (const tChannelID &arg) const
+ {
+   return source == arg.source && nid == arg.nid && tid == arg.tid && sid == arg.sid && rid == arg.rid;
+ }
+-
++*/
+ tChannelID tChannelID::FromString(const char *s)
+ {
+   char *sourcebuf = NULL;
+@@ -796,6 +796,8 @@
+      else
+         return false;
+      }
++  // GA Speedup
++  Channels.AddHash(this,this->Sid());
+   return ok;
+ }
+ 
+@@ -847,19 +849,31 @@
+   return channel ? Idx : -1;
+ }
+ 
++void cChannels::AddHash(cChannel* channel, int id)
++{
++	if (!channel_hash)
++		channel_hash=new cHash<cChannel>;	
++	channel_hash->Add(channel,channel->Sid());
++}
++
+ void cChannels::ReNumber( void )
+ {
+   int Number = 1;
++  delete channel_hash;
++  channel_hash=new cHash<cChannel>;
++
+   for (cChannel *channel = First(); channel; channel = Next(channel)) {
+       if (channel->GroupSep()) {
+          if (channel->Number() > Number)
+             Number = channel->Number();
+          }
+       else {
++	      channel_hash->Add(channel,channel->Sid()); // GA Speedup
+          maxNumber = Number;
+          channel->SetNumber(Number++);
+          }
+       }
++  printf("Renumber done\n");
+ }
+ 
+ cChannel *cChannels::GetByNumber(int Number, int SkipGap)
+@@ -879,34 +893,90 @@
+ 
+ cChannel *cChannels::GetByServiceID(int Source, int Transponder, unsigned short ServiceID)
+ {
++#if 0
+   for (cChannel *channel = First(); channel; channel = Next(channel)) {
+       if (!channel->GroupSep() && channel->Source() == Source && ISTRANSPONDER(channel->Transponder(), Transponder) && channel->Sid() == ServiceID)
+          return channel;
+       }
+   return NULL;
++#else
++  // GA Speedup
++  cList<cHashObject> *channel_list=channel_hash->GetList(ServiceID);
++  if (!channel_list)
++	  return NULL;
++
++  for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++	  cChannel *channel=(cChannel*)hobj->obj;
++	  if (!channel->GroupSep() && channel->Source() == Source && 
++	      ISTRANSPONDER(channel->Transponder(), Transponder) && channel->Sid() == ServiceID)
++		  return channel;
++      }
++  return 0;
++#endif
++
+ }
+ 
+ cChannel *cChannels::GetByChannelID(tChannelID ChannelID, bool TryWithoutRid, bool TryWithoutPolarization)
+ {
++  int sid=ChannelID.Sid(); // GA-Speedup
++
++#if 0
+   for (cChannel *channel = First(); channel; channel = Next(channel)) {
+-      if (!channel->GroupSep() && channel->GetChannelID() == ChannelID)
+-         return channel;
+-      }
++	  if (!channel->GroupSep() && channel->Sid()==sid)
++		  if (channel->GetChannelID() == ChannelID)
++			  return channel;
++  }
+   if (TryWithoutRid) {
+      ChannelID.ClrRid();
+      for (cChannel *channel = First(); channel; channel = Next(channel)) {
+-         if (!channel->GroupSep() && channel->GetChannelID().ClrRid() == ChannelID)
+-            return channel;
+-         }
++	     if (!channel->GroupSep() && channel->Sid()==sid)
++		     if ( channel->GetChannelID().ClrRid() == ChannelID)
++			     return channel;
+      }
++  }
+   if (TryWithoutPolarization) {
+      ChannelID.ClrPolarization();
+      for (cChannel *channel = First(); channel; channel = Next(channel)) {
+-         if (!channel->GroupSep() && channel->GetChannelID().ClrPolarization() == ChannelID)
+-            return channel;
++         if (!channel->GroupSep() && channel->Sid()==sid)
++		 if (channel->GetChannelID().ClrPolarization() == ChannelID)
++			 return channel;
++     }
++  }
++  return NULL;
++#else
++  // GA Speedup
++  cList<cHashObject> *channel_list=channel_hash->GetList(sid);
++  if (!channel_list)
++	  return NULL;
++
++  for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++	  cChannel *channel=(cChannel*)hobj->obj;
++	  if (!channel->GroupSep() && channel->Sid()==sid)
++		  if (channel->GetChannelID() == ChannelID)
++			  return channel;
++      }
++  if (TryWithoutRid) {
++     ChannelID.ClrRid();
++     for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++
++	     cChannel *channel=(cChannel*)hobj->obj;
++	     if (!channel->GroupSep() && channel->Sid()==sid)
++		     if ( channel->GetChannelID().ClrRid() == ChannelID)
++			     return channel;
+          }
+      }
++  if (TryWithoutPolarization) {
++     ChannelID.ClrPolarization();
++     for (cHashObject *hobj = channel_list->First(); hobj; hobj = channel_list->Next(hobj)) {
++
++	     cChannel *channel=(cChannel*)hobj->obj;
++	     if (!channel->GroupSep() && channel->Sid()==sid)
++		     if (channel->GetChannelID().ClrPolarization() == ChannelID)
++			     return channel;
++     }
++  }
+   return NULL;
++#endif
+ }
+ 
+ bool cChannels::HasUniqueChannelID(cChannel *NewChannel, cChannel *OldChannel)
+--- base_pkgs/vdr-1.3.21/channels.h	2005-01-16 14:46:41.000000000 +0100
++++ vdr-1.3.21/channels.h	2005-04-01 02:19:38.000000000 +0200
+@@ -64,10 +64,12 @@
+ public:
+   tChannelID(void) { source = nid = tid = sid = rid = 0; }
+   tChannelID(int Source, int Nid, int Tid, int Sid, int Rid = 0) { source = Source; nid = Nid; tid = Tid; sid = Sid; rid = Rid; }
+-  bool operator== (const tChannelID &arg) const;
++//  bool operator== (const tChannelID &arg) const;
++	bool inline operator== (const tChannelID &arg) {return source == arg.source && nid == arg.nid && tid == arg.tid && sid == arg.sid && rid == arg.rid;}; //GA
+   bool Valid(void) { return (nid || tid) && sid; } // rid is optional and source may be 0//XXX source may not be 0???
+   tChannelID &ClrRid(void) { rid = 0; return *this; }
+   tChannelID &ClrPolarization(void);
++	int Sid(void) {return sid;};
+   static tChannelID FromString(const char *s);
+   cString ToString(void);
+   static const tChannelID InvalidID;
+@@ -198,8 +200,10 @@
+   int maxNumber;
+   int modified;
+   int beingEdited;
++  cHash<cChannel> *channel_hash;
+ public:
+   cChannels(void);
++  void AddHash(cChannel*, int id);
+   bool Load(const char *FileName, bool AllowComments = false, bool MustExist = false);
+   int GetNextGroup(int Idx);   // Get next channel group
+   int GetPrevGroup(int Idx);   // Get previous channel group
+--- base_pkgs/vdr-1.3.21/epg.c	2005-01-02 12:25:25.000000000 +0100
++++ vdr-1.3.21/epg.c	2005-03-25 20:41:33.000000000 +0100
+@@ -650,6 +650,10 @@
+ cEvent *cSchedule::AddEvent(cEvent *Event)
+ {
+   events.Add(Event);
++#if 1
++  events_hash.Add(Event, Event->EventID()); // GA
++  events_hash1.Add(Event, Event->StartTime()); // GA
++#endif
+   return Event;
+ }
+ 
+@@ -682,12 +686,23 @@
+   // Returns either the event info with the given EventID or, if that one can't
+   // be found, the one with the given StartTime (or NULL if neither can be found)
+   cEvent *pt = NULL;
++  
++#if 0
+   for (cEvent *pe = events.First(); pe; pe = events.Next(pe)) {
+       if (pe->EventID() == EventID)
+-         return pe;
++         return pe; 
+       if (StartTime > 0 && pe->StartTime() == StartTime) // 'StartTime < 0' is apparently used with NVOD channels
+          pt = pe;
+       }
++#else
++  pt=events_hash.Get(EventID); // GA
++  if (pt) 
++	  return pt;
++
++  if (StartTime > 0)
++	  pt=events_hash1.Get(StartTime); // GA
++
++#endif
+   return pt;
+ }
+ 
+@@ -754,6 +769,10 @@
+       if (!Event)
+          break;
+       if (!Event->HasTimer() && Event->EndTime() + Setup.EPGLinger * 60 + 3600 < Time) { // adding one hour for safety
++#if 1	
++	 events_hash.Del(Event,Event->EventID()); // GA
++	 events_hash1.Del(Event,Event->StartTime()); // GA
++#endif
+          events.Del(Event);
+          a--;
+          }
+--- base_pkgs/vdr-1.3.21/epg.h	2005-01-02 11:44:41.000000000 +0100
++++ vdr-1.3.21/epg.h	2005-03-25 17:17:03.000000000 +0100
+@@ -108,6 +108,8 @@
+ private:
+   tChannelID channelID;
+   cList<cEvent> events;
++  cHash<cEvent> events_hash;
++  cHash<cEvent> events_hash1;
+   bool hasRunning;
+   time_t modified;
+ public:
+--- base_pkgs/vdr-1.3.21/interface.c	2004-11-01 15:23:28.000000000 +0100
++++ vdr-1.3.21/interface.c	2005-04-02 17:03:45.000000000 +0200
+@@ -44,7 +45,7 @@
+            }
+         }
+      }
+-  return cRemote::Get(Wait ? 1000 : 10);
++  return cRemote::Get(Wait ? 1000 : 200); // GA: 200 was 10, Race with graphlcd and SVDRP-Update
+ }
+ 
+ eKeys cInterface::Wait(int Seconds, bool KeepChar)
+--- base_pkgs/vdr-1.3.21/libsi/si.c	2004-10-16 17:12:57.000000000 +0200
++++ vdr-1.3.21/libsi/si.c	2005-04-01 03:03:42.000000000 +0200
+@@ -105,7 +105,7 @@
+    return (DescriptorTag)((const DescriptorHeader*)d)->descriptor_tag;
+ }
+ 
+-Descriptor *DescriptorLoop::getNext(Iterator &it) {
++Descriptor *DescriptorLoop::getNext(Iterator &it) {       
+    if (isValid() && it.i<getLength()) {
+       return createDescriptor(it.i, true);
+    }
+@@ -114,9 +114,10 @@
+ 
+ Descriptor *DescriptorLoop::getNext(Iterator &it, DescriptorTag tag, bool returnUnimplemetedDescriptor) {
+    Descriptor *d=0;
+-   if (isValid() && it.i<getLength()) {
++   int len=getLength(); // GA
++   if (isValid() && it.i<len) {
+       const unsigned char *p=data.getData(it.i);
+-      const unsigned char *end=p+getLength()-it.i;
++      const unsigned char *end=p+len-it.i;
+       while (p < end) {
+          if (Descriptor::getDescriptorTag(p) == tag) {
+             d=createDescriptor(it.i, returnUnimplemetedDescriptor);
+@@ -132,9 +133,10 @@
+ 
+ Descriptor *DescriptorLoop::getNext(Iterator &it, DescriptorTag *tags, int arrayLength, bool returnUnimplementedDescriptor) {
+    Descriptor *d=0;
+-   if (isValid() && it.i<getLength()) {
++   int len=getLength(); // GA
++   if (isValid() && it.i<len) {
+       const unsigned char *p=data.getData(it.i);
+-      const unsigned char *end=p+getLength()-it.i;
++      const unsigned char *end=p+len-it.i;
+       while (p < end) {
+          for (int u=0; u<arrayLength;u++)
+             if (Descriptor::getDescriptorTag(p) == tags[u]) {
+@@ -211,15 +213,17 @@
+ }
+ 
+ char *String::getText() {
+-   if (getLength() < 0 || getLength() >4095)
++   int len=getLength(); // GA Speedup
++   if (len < 0 || len >4095)
+       return strdup("text error"); // caller will delete it!
+-   char *data=new char(getLength()+1);
+-   decodeText(data, getLength()+1);
++   char *data=new char(len+1);
++   decodeText(data, len+1);
+    return data;
+ }
+ 
+ char *String::getText(char *buffer, int size) {
+-   if (getLength() < 0 || getLength() >= size) {
++   int len=getLength(); // GA Speedup
++   if (len < 0 || len >= size) {
+       strncpy(buffer, "text error", size);
+       buffer[size-1] = 0;
+       return buffer;
+@@ -230,7 +234,8 @@
+ 
+ //taken from VDR, Copyright Klaus Schmidinger <kls@cadsoft.de>
+ char *String::getText(char *buffer, char *shortVersion, int sizeBuffer, int sizeShortVersion) {
+-   if (getLength() < 0 || getLength() >= sizeBuffer) {
++   int len=getLength(); // GA Speedup
++   if (len< 0 || len >= sizeBuffer) {
+       strncpy(buffer, "text error", sizeBuffer);
+       buffer[sizeBuffer-1] = 0;
+       *shortVersion = 0;
+@@ -244,7 +249,7 @@
+ void String::decodeText(char *buffer, int size) {
+    const unsigned char *from=data.getData(0);
+    char *to=buffer;
+-
++   int len=getLength(); // GA Speedup
+    /* Disable detection of coding tables - libdtv doesn't do it either
+    if ( (0x01 <= *from) && (*from <= 0x1f) ) {
+       codeTable=*from
+@@ -254,7 +259,7 @@
+    if (*from == 0x10)
+       from += 3; // skips code table info
+ 
+-   for (int i = 0; i < getLength(); i++) {
++   for (int i = 0; i < len; i++) {
+       if (*from == 0)
+          break;
+       if (    ((' ' <= *from) && (*from <= '~'))
+@@ -277,13 +282,13 @@
+    char *to=buffer;
+    char *toShort=shortVersion;
+    int IsShortName=0;
++   int len=getLength(); // GA Speedup
+ 
+    if (*from == 0x10)
+       from += 3; // skips code table info
+ 
+-   for (int i = 0; i < getLength(); i++) {
+-      if (*from == 0)
+-         break;
++   for (int i = 0; i < len; i++) {
++      
+       if (    ((' ' <= *from) && (*from <= '~'))
+            || (*from == '\n')
+            || (0xA0 <= *from)
+@@ -299,6 +304,8 @@
+          IsShortName++;
+       else if (*from == 0x87)
+          IsShortName--;
++      else if (*from == 0) // GA Speedup
++         break;
+       from++;
+       if (to - buffer >= sizeBuffer - 1 || toShort - shortVersion >= sizeShortVersion - 1)
+          break;
+--- base_pkgs/vdr-1.3.21/libsi/util.c	2004-10-16 11:58:41.000000000 +0200
++++ vdr-1.3.21/libsi/util.c	2005-03-25 18:56:34.000000000 +0100
+@@ -263,9 +263,11 @@
+ u_int32_t CRC32::crc32 (const char *d, int len, u_int32_t crc)
+ {
+    register int i;
++   // GA Speedup
++   const unsigned char *u=(unsigned char*)d; // Saves & 0xff
+ 
+-   for (i=0; i<len; i++)
+-      crc = (crc << 8) ^ crc_table[((crc >> 24) ^ *d++) & 0xff];
++   for (i=0; i<len; i++) 
++      crc = (crc << 8) ^ crc_table[ ((crc >> 24) ^ *u++) ];
+ 
+    return crc;
+ }
+ 
+--- base_pkgs/vdr-1.3.21/remux.c	2005-02-13 15:36:23.000000000 +0100
++++ vdr-1.3.21/remux.c	2005-03-25 15:19:32.000000000 +0100
+@@ -842,6 +842,7 @@
+      if (Length >= 8) {
+         int i = Offset + 8; // the minimum length of the video packet header
+         i += Data[i] + 1;   // possible additional header bytes
++#if 0
+         for (; i < Offset + Length - 5; i++) {
+             if (Data[i] == 0 && Data[i + 1] == 0 && Data[i + 2] == 1) {
+                switch (Data[i + 3]) {
+@@ -850,7 +851,33 @@
+                  }
+                }
+             }
++#else
++	// GA speedup
++	for(; i < Offset + Length - 5; i+=4) {
++		if (Data[i+1] == 0) {
++			if (Data[i]==0 && Data[i+2]==1 && Data[i+3] == SC_PICTURE) {
++				PictureType = (Data[i + 5] >> 3) & 0x07;
++				return Length;
++			}
++			else if (Data[i+2]==0 && Data[i+3]==1 && Data[i+4] == SC_PICTURE) {
++				PictureType = (Data[i + 6] >> 3) & 0x07;
++				return Length;
++			}
++		}
++		if (Data[i+3] == 0) {
++			if (Data[i+2]==0 && Data[i+4]==1 && Data[i+5] == SC_PICTURE) {
++				PictureType = (Data[i + 7] >> 3) & 0x07;
++				return Length;
++			}
++			else if (Data[i+4]==0 && Data[i+5]==1 && Data[i+6] == SC_PICTURE) {
++				PictureType = (Data[i + 8] >> 3) & 0x07;
++				return Length;
++			}
++		}
+         }
++
++#endif
++       }
+      PictureType = NO_PICTURE;
+      return Length;
+      }
+--- base_pkgs/vdr-1.3.21/sections.c	2004-10-24 13:05:12.000000000 +0200
++++ vdr-1.3.21/sections.c	2005-04-01 03:39:10.000000000 +0200
+@@ -167,8 +167,8 @@
+ void cSectionHandler::Action(void)
+ {
+   active = true;
++  nice(19); // GA
+   while (active) {
+-
+         Lock();
+         if (waitForLock)
+            SetStatus(true);
+--- base_pkgs/vdr-1.3.21/tools.c	2005-02-05 11:10:30.000000000 +0100
++++ vdr-1.3.21/tools.c	2005-04-01 03:21:18.000000000 +0200
+@@ -117,12 +117,32 @@
+ char *strreplace(char *s, char c1, char c2)
+ {
+   char *p = s;
+-
+-  while (p && *p) {
++  if (!p)             // GA speedup
++	  return s;
++#if 0
++  while (*p) {
+         if (*p == c1)
+            *p = c2;
+         p++;
+         }
++#else
++  // GA Speedup (~20%)
++  while(1) {
++	  if (*p) {
++		  if (*p==c1)
++			  *p=c2;
++		  if (*(p+1)) {
++			  if (*(p+1)==c1)
++				  *(p+1)=c2;
++		  }
++		  else
++			  break;
++		  p+=2;
++	  }
++	  else
++		  break;
++  }
++#endif
+   return s;
+ }
+ 
+@@ -143,6 +163,7 @@
+   return s;
+ }
+ 
++
+ char *skipspace(const char *s)
+ {
+   while (*s && isspace(*s))
+@@ -162,6 +183,7 @@
+   return s;
+ }
+ 
++#if 0
+ char *compactspace(char *s)
+ {
+   if (s && *s) {
+@@ -178,6 +200,31 @@
+      }
+   return s;
+ }
++#else
++// GA Speedup
++char *compactspace(char *s)
++{
++	char *source=s;
++	char *dest=s;
++	if (s) {
++		while(*source) {
++			while(*source && *source<=' ')
++				source++;
++			while(*source) {
++				*dest++=*source;
++				if (*source<=' ')
++					break;
++				source++;
++			}
++		}
++		if (isspace(*(dest-1)))
++			*(dest-1)=0;
++		else
++			*dest=0;
++	}
++	return s;
++}
++#endif
+ 
+ cString strescape(const char *s, const char *chars)
+ {
+@@ -912,6 +959,7 @@
+ cListBase::cListBase(void)
+ { 
+   objects = lastObject = NULL;
++  count=0;
+ }
+ 
+ cListBase::~cListBase()
+@@ -932,6 +980,7 @@
+         objects = Object;
+      lastObject = Object;
+      }
++  count++;
+ }
+ 
+ void cListBase::Ins(cListObject *Object, cListObject *Before)
+@@ -947,6 +996,7 @@
+         lastObject = Object;
+      objects = Object;
+      }
++  count++;
+ }
+ 
+ void cListBase::Del(cListObject *Object, bool DeleteObject)
+@@ -958,6 +1008,7 @@
+   Object->Unlink();
+   if (DeleteObject)
+      delete Object;
++  count--;
+ }
+ 
+ void cListBase::Move(int From, int To)
+@@ -997,6 +1048,7 @@
+         objects = object;
+         }
+   objects = lastObject = NULL;
++  count=0;
+ }
+ 
+ cListObject *cListBase::Get(int Index) const
+@@ -1009,6 +1061,8 @@
+   return object;
+ }
+ 
++// GA Speedup
++#if 0
+ int cListBase::Count(void) const
+ {
+   int n = 0;
+@@ -1019,7 +1073,9 @@
+         object = object->Next();
+         }
+   return n;
++
+ }
++#endif
+ 
+ static int CompareListObjects(const void *a, const void *b)
+ {
+@@ -1042,7 +1098,9 @@
+   objects = lastObject = NULL;
+   for (i = 0; i < n; i++) {
+       a[i]->Unlink();
++      count--;
+       Add(a[i]);
+       }
+ }
+ 
++#include "tuning.c" // GA speedup
+--- base_pkgs/vdr-1.3.21/tools.h	2005-02-12 11:17:14.000000000 +0100
++++ vdr-1.3.21/tools.h	2005-03-25 21:09:18.000000000 +0100
+@@ -211,6 +211,7 @@
+ protected:
+   cListObject *objects, *lastObject;
+   cListBase(void);
++  int count; // GA
+ public:
+   virtual ~cListBase();
+   void Add(cListObject *Object, cListObject *After = NULL);
+@@ -220,7 +221,7 @@
+   void Move(cListObject *From, cListObject *To);
+   virtual void Clear(void);
+   cListObject *Get(int Index) const;
+-  int Count(void) const;
++  int inline Count(void) const {return count;};
+   void Sort(void);
+   };
+ 
+@@ -233,4 +234,6 @@
+   T *Next(const T *object) const { return (T *)object->cListObject::Next(); } // avoid ambiguities in case of a "list of lists"
+   };
+ 
++#include "tuning.h"
++
+ #endif //__TOOLS_H
+--- base_pkgs/vdr-1.3.21/transfer.c	2005-02-12 16:54:06.000000000 +0100
++++ vdr-1.3.21/transfer.c	2005-04-03 19:13:39.929057579 +0200
+@@ -126,8 +126,8 @@
+                  if (Result <= 0)
+                     p = NULL;
+                  }
+-              else if (w < 0 && FATALERRNO)
+-                 LOG_ERROR;
++//              else if (w < 0 && FATALERRNO)
++//                 LOG_ERROR;
+               }
+            else {
+               PollTimeouts++;
+--- base_pkgs/vdr-1.3.21/tuning.c	1970-01-01 01:00:00.000000000 +0100
++++ vdr-1.3.21/tuning.c	2005-04-01 01:51:41.000000000 +0200
+@@ -0,0 +1,95 @@
++#include "tools.h"
++#include <ctype.h>
++#include <stdlib.h>
++
++#define START_SIZE 512
++
++
++cHashObject::cHashObject(cListObject *Object, int Id)
++{
++	obj=Object;
++	id=Id;
++}
++
++cHashObject::~cHashObject()
++{
++}
++
++int cHashObject::Compare(const cListObject &ListObject) const
++{
++	cHashObject *c=(cHashObject*)&ListObject;
++	return id-c->id;
++}
++
++
++cHashBase::cHashBase(void)
++{
++	hash_table=(cList<cHashObject>**)calloc(START_SIZE,sizeof(cList<cHashObject>*));
++	size=START_SIZE;
++	count=0;
++}
++
++cHashBase::~cHashBase(void)
++{
++	int n;
++	for (n=0;n<size; n++)
++		if (hash_table[n]!=NULL)
++			delete hash_table[n];
++	free(hash_table);
++}
++
++
++void cHashBase::Add(cListObject *Object, int Id)
++{
++	int hash=hashfn(Id);
++
++	if (hash_table[hash]==NULL)
++		hash_table[hash]=new cList<cHashObject>;
++	hash_table[hash]->Add(new cHashObject(Object,Id));
++}
++
++void cHashBase::Del(cListObject *Object, int Id)
++{
++	int hash=hashfn(Id);
++	cList<cHashObject> *list;
++	cHashObject *hob;
++
++	list=hash_table[hash];
++	if (!list)
++		return;
++	for(hob=list->First(); hob; hob=list->Next(hob)) {
++		if (hob->obj==Object) {
++			list->Del(hob);
++			return;
++		}
++	}
++}
++
++cList<cHashObject> *cHashBase::GetList(int Id) const
++{
++	int hash=hashfn(Id);
++	cList<cHashObject> *list;
++
++	list=hash_table[hash];
++	return list;
++}
++
++
++cListObject *cHashBase::Get(int Id) const
++{
++	int hash=hashfn(Id);
++	cList<cHashObject> *list;
++	cHashObject *hob;
++
++	list=hash_table[hash];
++
++	if (!list)
++		return NULL;
++
++	for(hob=list->First(); hob; hob=list->Next(hob)) {
++		if (hob->id==Id) 
++			return hob->obj;
++	}
++	
++	return NULL;
++}
+--- base_pkgs/vdr-1.3.21/tuning.h	1970-01-01 01:00:00.000000000 +0100
++++ vdr-1.3.21/tuning.h	2005-04-01 01:52:07.000000000 +0200
+@@ -0,0 +1,32 @@
++class cHashObject : public cListObject {
++public:
++	cHashObject(cListObject *Object, int Id);
++	~cHashObject();
++	virtual int Compare(const cListObject &ListObject) const;
++
++	int id;
++	cListObject *obj;
++};
++
++
++class cHashBase {
++protected:
++	cList<cHashObject> **hash_table;
++	cHashBase(void);
++	int count,size;
++	int inline hashfn( int id) const {return id%size;};
++public:
++	virtual ~cHashBase();
++	void Add(cListObject *Object, int id);
++	void Del(cListObject *Object, int id);
++	cListObject *Get(int id) const;
++	cList<cHashObject> *GetList(int id) const;
++  };
++
++
++
++template<class T> class cHash : public cHashBase {
++public:
++	T *Get(int id) const { return (T *)cHashBase::Get(id); }
++//	T *First(cList<cHashObject> *l) const { return (T *)
++  };

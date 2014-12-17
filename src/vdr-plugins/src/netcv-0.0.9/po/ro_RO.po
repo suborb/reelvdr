@@ -1,0 +1,535 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Paul Lacatus <paul@campina.iiruc.ro>, 2002
+# Lucian Muresan <lucianm@users.sourceforge.net>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-netcv\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2011-06-15 17:07+0200\n"
+"PO-Revision-Date: 2009-02-27 16:24+0200\n"
+"Last-Translator: Iacobescu Marian\n"
+"Language-Team: independent <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "empty"
+msgstr "gol"
+
+msgid "DiSEqC list"
+msgstr "Lista DiSEqC"
+
+msgid "Restarting NetCeiver..."
+msgstr "Restartez NetCeiver..."
+
+msgid "Restarting VDR..."
+msgstr "Restartez VDR..."
+
+msgid "Please wait..."
+msgstr "Te rog asteapta"
+
+msgid "Reloading diseqc.conf failed!"
+msgstr "Esuare reincarcare diseqc.conf!"
+
+msgid "Settings stored"
+msgstr "Setari memorate"
+
+msgid "Reloading channels.conf failed"
+msgstr "Eroare  reincarcare channels.conf"
+
+msgid "Reloading diseqc.conf failed"
+msgstr "Esuare reincarcare diseqc.conf!"
+
+msgid "Error: Store failed! Error Number: "
+msgstr "Eroare: Memorare esuata! Eroar Numarul:"
+
+msgid "Error: Only 4 LNBs per cascade is allowed!"
+msgstr "Eroare: Numai 4 LNB-uri in cascada sunt permise!"
+
+msgid "Error: Every DiSEqC list must have a name!"
+msgstr "Eroare: Fiecare liista DiSEqC trebuie sa aiba un nume!"
+
+msgid "Error: Duplicate DiSEqC list name is not allowed!"
+msgstr "Eroare: Numele identice de liste DiSEqC nu sant permise!"
+
+msgid "Error: Every tuner must have a valid DiSEqC list!"
+msgstr "Eroare: Fiecare tuner trebuie sa aiba o lista valida DiSEqC!"
+
+msgid "Error: At least 1 tuner must be enabled!"
+msgstr "Eroare: Cel putin 1 tuner trebuie activat!"
+
+msgid "Unknown Error: "
+msgstr "Eroare necunoscuta"
+
+msgid "DiSEqC disabled"
+msgstr "DiSEqC disabled"
+
+msgid "Diseqc$Source"
+msgstr "Diseqc$Soursa"
+
+msgid "LNB Type"
+msgstr "Tip LNB"
+
+msgid "DiSEqC Mini"
+msgstr "DiSEqC Mini"
+
+msgid "Number of LNBs"
+msgstr "Numar LNB-uri"
+
+msgid "LNB"
+msgstr "LNB"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "Single Cable Router"
+msgstr ""
+
+msgid "Unique Slot Nr."
+msgstr ""
+
+msgid "Downlink freq. (MHz)"
+msgstr ""
+
+msgid "PIN (optional)"
+msgstr ""
+
+msgid "No pin"
+msgstr ""
+
+msgid "DiSEqC 1.0"
+msgstr "DiSEqC 1.0"
+
+msgid "DiSEqC 1.1"
+msgstr "DiSEqC 1.1"
+
+msgid "Multiswitch"
+msgstr "Multiswitch"
+
+msgid "Cascade"
+msgstr "Cascada"
+
+msgid "DiSEqC 1.2"
+msgstr "DiSEqC 1.2"
+
+msgid "Number of sources"
+msgstr "Numar surse"
+
+msgid "Rotor (GotoX)"
+msgstr "Rotor (GotoX)"
+
+msgid "off"
+msgstr "oprit"
+
+msgid "fine"
+msgstr "fin"
+
+msgid "coarse"
+msgstr "inferior"
+
+msgid "maximum"
+msgstr "maximum"
+
+msgid "Min Position"
+msgstr "Pozitie Minima"
+
+msgid "East"
+msgstr "Est"
+
+msgid "West"
+msgstr "Vest"
+
+msgid "Max Position"
+msgstr "Pozitie Maxima"
+
+msgid "Longitude"
+msgstr "Longitudine"
+
+msgid "Latitude"
+msgstr "Latitudine"
+
+msgid "North"
+msgstr "Nord"
+
+msgid "South"
+msgstr "Sud"
+
+msgid "Autofocus"
+msgstr "Autofocus"
+
+msgid "DisiCon 4"
+msgstr "DisiCon 4"
+
+msgid "DiSEqC mode:"
+msgstr "Mod DiSEqC"
+
+msgid "no"
+msgstr "nu"
+
+msgid "yes"
+msgstr "da"
+
+msgid " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+msgstr " 0\t-.#~,/_@1\tabc2\tdef3\tghi4\tjkl5\tmno6\tpqrs7\ttuv8\twxyz9"
+
+msgid "Save"
+msgstr "Salveaza"
+
+msgid "Antenna settings"
+msgstr "Setari Anrena"
+
+msgid "NetCeiver Firmwareupdate is running!"
+msgstr "Se desfasoara update-ul la firmware al NetCeiver!"
+
+msgid "No NetCeiver found!"
+msgstr "Nu am gasit NetCeiver!"
+
+msgid "Creating directory tmp failed!"
+msgstr "Crearea directorului temporar a esuat!"
+
+msgid "Retrieving information about tuners failed!"
+msgstr "Esuare obinere informatii despre tenure!"
+
+msgid "Getting network interface failed!"
+msgstr "Esuare obinere informatii despre interfata de retea!"
+
+msgid "sec"
+msgstr "secunde"
+
+msgid "min"
+msgstr "minute"
+
+msgid "h"
+msgstr "h"
+
+msgid "d"
+msgstr ""
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "DiSEqC settings"
+msgstr "Setari DiSQqC"
+
+msgid "NetCeiver is being updated."
+msgstr "NetCeiver-ul este updatat."
+
+msgid "Try again later."
+msgstr "Va rog incercati mai tarziu"
+
+msgid "Error!"
+msgstr "Eroare!"
+
+msgid "Failed to open directory "
+msgstr "Eroare la deschidere director"
+
+msgid "No file found in "
+msgstr "Nu am gasit nici-un fisier in"
+
+msgid "Please select a setting for upload: "
+msgstr "Va rog selectati o setare pentru upload:"
+
+msgid "Finished!"
+msgstr "Terminat"
+
+msgid "Uploading failed!"
+msgstr "Aesuat uploadarea!"
+
+msgid "Current"
+msgstr "Curent"
+
+msgid "NetCeiver diagnostics"
+msgstr "Diagnostic NetCeiver"
+
+msgid "Alive"
+msgstr "Activ"
+
+msgid "Yes"
+msgstr "Da"
+
+msgid "No"
+msgstr "Nu"
+
+msgid "Tuners"
+msgstr "Tunere"
+
+msgid "OS"
+msgstr "Sistem Operare"
+
+msgid "App"
+msgstr "Aplicatie"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Hardware"
+msgstr "Hardware"
+
+msgid "Serial"
+msgstr "Serial"
+
+msgid "System uptime"
+msgstr "System uptime"
+
+msgid "Process uptime"
+msgstr "Process uptime"
+
+msgid "Dish settings"
+msgstr "Setari Disc"
+
+msgid "State"
+msgstr "Stare"
+
+msgid "Slot"
+msgstr "Slot"
+
+msgid "Chip"
+msgstr ""
+
+msgid "Used"
+msgstr "Utilzat"
+
+msgid "Lock"
+msgstr "Lock"
+
+msgid "Frequency"
+msgstr "Frecventa"
+
+msgid "Strenght"
+msgstr "Tarie"
+
+msgid "SNR"
+msgstr "SNR"
+
+msgid "BER"
+msgstr "BER"
+
+msgid "UNC"
+msgstr ""
+
+#, fuzzy
+msgid "electric$Current"
+msgstr "Curent"
+
+msgid "Power save mode"
+msgstr ""
+
+msgid "Couldn't create tmp-path!"
+msgstr "Nu pot crea cale temporare!"
+
+msgid "Internal Error! Sorry!"
+msgstr "Eroare interna! Ne pare rau!"
+
+#, fuzzy
+msgid "Loading data from NetCeiver failed!"
+msgstr "A esuat incarcarea datelor din NetCeiver!"
+
+msgid "Please check the Connection to NetCeiver!"
+msgstr "Va rog verificati conexiunile catre NetCeiver!"
+
+msgid "Number of Tuners"
+msgstr "Numar de tunere"
+
+msgid "Please choose the satellites you can receive:"
+msgstr "Va rog selectati satelitul pe care doriti sa-l receptionati:"
+
+msgid "Back"
+msgstr "Inapoi"
+
+msgid "Skip"
+msgstr "Sari"
+
+msgid "Static antenna"
+msgstr "Antena fixa"
+
+msgid "Single Cable System"
+msgstr ""
+
+msgid "Rotor antenna"
+msgstr "Antena mobila"
+
+msgid "Updating... please wait!"
+msgstr "Updatez... va rog asteptati!"
+
+msgid "Satellite"
+msgstr "Satelit"
+
+msgid "Cable"
+msgstr "Cablu"
+
+msgid "Terrestrial"
+msgstr "Terestru"
+
+msgid "on"
+msgstr "pornit"
+
+msgid "Antenna type"
+msgstr "Tip antena"
+
+msgid "Rotor"
+msgstr "Rotor"
+
+msgid "Experts"
+msgstr "Expert"
+
+msgid "Unknown Error! Sorry!"
+msgstr "Eroare necunoscuta! Ne pare rau!"
+
+msgid "Internal Error: DiSEqC not working"
+msgstr "Eroare interna: Nu functioneaza DiSEqC"
+
+#, fuzzy
+msgid "Internal Error: Loading netceiver.conf failed"
+msgstr "Esuare reincarcare diseqc.conf!"
+
+msgid "Save changes?"
+msgstr "Salvez modificari ?"
+
+msgid "No netcvrotor-Plugin found!"
+msgstr "Nu am gasit pluginul necvrotor!"
+
+#, fuzzy
+msgid "Status"
+msgstr "Stare"
+
+msgid "Multi-Transponder-Decryption is"
+msgstr ""
+
+msgid "impossible because of mixed CAMs"
+msgstr ""
+
+msgid "Multi-Transponder"
+msgstr ""
+
+msgid "Signal (strength/snr)"
+msgstr "Semnal (tarie/snr)"
+
+msgid "Signal (ber/unc)"
+msgstr "Semnal (ber/unc)"
+
+msgid "Update firmware"
+msgstr "Update firmware"
+
+msgid "Load"
+msgstr "Incarca"
+
+msgid "Clear"
+msgstr "Curat"
+
+msgid "Add DiSEqC list"
+msgstr "Adauga la lista DiSEqC"
+
+msgid "disable"
+msgstr "dezactiveaza"
+
+msgid "enable"
+msgstr "activeaza"
+
+msgid "No tmp files available."
+msgstr "Nu sant disponibile fisiere temporare."
+
+msgid "Update progress: "
+msgstr "Progres Update"
+
+msgid "Information"
+msgstr "Informatii"
+
+#, fuzzy
+msgid "CAM settings"
+msgstr "Setari DiSQqC"
+
+msgid "Tuner settings"
+msgstr "Setari Tuner"
+
+msgid "CAM"
+msgstr ""
+
+msgid "not selected"
+msgstr "nesectat"
+
+msgid "Setting loaded"
+msgstr "Setari incarcate"
+
+msgid "Loading failed! (Error: "
+msgstr "Esuare Incarcare! (Eroare:"
+
+msgid "Update finished"
+msgstr "Update terminat"
+
+msgid "Priority"
+msgstr "Prioritate"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "disabled"
+msgstr "dezactivat"
+
+msgid "NetCeiver update available. Do you want to update?"
+msgstr "Sunt disponibile update-uri pentru NetCeiver. Doriti sa updatati ?"
+
+msgid "NetCeiver firmware update"
+msgstr "Update firmware NetCeiver"
+
+#, fuzzy
+msgid "There is a new firmware version for the NetCeiver available!"
+msgstr "Sunt disponibile versiuni noi de firmware pentru NetCeiver!"
+
+msgid "Current version:"
+msgstr "Versiunea curenta:"
+
+msgid "New version:"
+msgstr "Versiune noua:"
+
+msgid "If you want to use CA-modules, it is absolutely required to perform this update right now."
+msgstr ""
+
+#, fuzzy
+msgid "Do you want to update the NetCeiver firmware now?"
+msgstr "Vreti sa updatati frmware NetCeiver acum ?"
+
+msgid "Caution:"
+msgstr "Precautii:"
+
+msgid "Current recordings will be interrupted for a few minutes."
+msgstr "Inregistrarile curente vor fi intreruopte pentru cateva minute"
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Update failed!"
+msgstr "Esuare update!"
+
+msgid "internal error!"
+msgstr "eroare interna!"
+
+#~ msgid "Button$ABC/abc"
+#~ msgstr "Button$ABC/abc"
+
+#~ msgid "Button$Overwrite"
+#~ msgstr "Button$Suprascriu"
+
+#~ msgid "Button$Delete"
+#~ msgstr "Button$Sterge"
+
+#~ msgid "Delete"
+#~ msgstr "Sterge"
+
+#, fuzzy
+#~ msgid "Normal"
+#~ msgstr "normal"
+
+#~ msgid "Current power"
+#~ msgstr "Alimentare curenta"
+
+#~ msgid "No DiSEqC-Settings available!"
+#~ msgstr "Nu sant disponibile setari DiSEqC!"
+
+#~ msgid "No Netceiver found!"
+#~ msgstr "Nici-un NetCeiver gasit!"

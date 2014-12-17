@@ -1,0 +1,5 @@
+[SATTYPE]
+1=S56.0E
+2=Bonum 1
+3=East
+4=56.0

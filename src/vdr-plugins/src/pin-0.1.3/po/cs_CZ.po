@@ -1,0 +1,186 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Vladimír Bárta <vladimir.barta@k2atmitec.cz>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-pin\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2009-11-27 15:04+0100\n"
+"PO-Revision-Date: 2009-03-04 13:49+0100\n"
+"Last-Translator: Hynek Palatin\n"
+"Language-Team:  <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Recordings"
+msgstr "Nahrávky"
+
+msgid "1 Activate childlock"
+msgstr "1 Aktivovat dětský zámek"
+
+msgid "2 Add current channel to protection list"
+msgstr "2 Přidat aktuální kanál k chráněným"
+
+msgid "3 Add current broadcast to protection list"
+msgstr "3 Přidat aktuální pořad k chráněným"
+
+msgid "4 Edit channel locks"
+msgstr "4 Upravit zámky kanálů"
+
+msgid "5 Edit broadcast locks"
+msgstr "5 Upravit zámky pořadů"
+
+msgid "6 Unlock setup"
+msgstr "6 Odemknout nastavení"
+
+msgid "6 Lock setup"
+msgstr "6 Zamknout nastavení"
+
+msgid "Note:"
+msgstr "Poznámka:"
+
+msgid "Please activate Childlock by pressing (1)."
+msgstr "Aktivujte dětský zámek stisknutím (1)."
+
+msgid "Activated pin protection"
+msgstr "Ochrana kódem PIN aktivována"
+
+msgid "Please setup a pin code first!"
+msgstr "Nastavte nejprve kód PIN!"
+
+msgid "Protected channels"
+msgstr "Chráněné kanály"
+
+msgid "Protected broadcasts"
+msgstr "Chráněné pořady"
+
+msgid "Plugin protections"
+msgstr "Ochrana modulů"
+
+msgid "locked"
+msgstr "zamčeno"
+
+msgid "unlocked"
+msgstr "odemčeno"
+
+msgid "already in list"
+msgstr "již v seznamu"
+
+msgid "added to protection list"
+msgstr "přidáno k chráněným"
+
+#, fuzzy
+msgid "No locked channels present."
+msgstr "Přeskakovat chráněné kanály bez zprávy"
+
+msgid "Use the green button to lock channels."
+msgstr ""
+
+#, fuzzy
+msgid "No locked broadcasts present."
+msgstr "Chráněné pořady"
+
+msgid "Use the green button to lock broadcasts."
+msgstr ""
+
+msgid "Edit"
+msgstr "Upravit"
+
+msgid "Lock / Unlock"
+msgstr "Zamk/odemk"
+
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "On/Off"
+msgstr "Zap/vyp"
+
+msgid "- new -"
+msgstr "- nový -"
+
+msgid "Remove entry?"
+msgstr "Odebrat položku?"
+
+msgid "Lock active"
+msgstr "Zámek aktivní"
+
+msgid "Start"
+msgstr "Začátek"
+
+msgid "Stop"
+msgstr "Konec"
+
+msgid "Keyword"
+msgstr "Klíčové slovo"
+
+msgid "Search mode"
+msgstr "Režim hledání"
+
+msgid "Setup your pin code: "
+msgstr "Nastavte kód PIN:"
+
+msgid "Pin Code: "
+msgstr "Kód PIN:"
+
+msgid "Pin code successfully setup"
+msgstr "Kód PIN úspěšně nastaven"
+
+msgid "Code accepted"
+msgstr "Kód přijat"
+
+msgid "Invalid Code !"
+msgstr "Neplatný kód!"
+
+msgid "Title$Childlock"
+msgstr "Dětský zámek"
+
+msgid "Please enter pin code first"
+msgstr "Zadejte nejprve kód PIN"
+
+msgid "channel is protected"
+msgstr "kanál je chráněný"
+
+msgid "broadcast is protected"
+msgstr "pořad je chráněný"
+
+msgid "is protected"
+msgstr "je chráněný"
+
+msgid "Pin code"
+msgstr "Kód PIN"
+
+msgid "Skip protected channel silent"
+msgstr "Přeskakovat chráněné kanály bez zprávy"
+
+msgid "Open menu after pin request"
+msgstr "Po žádosti o kód PIN otevřít nabídku"
+
+msgid "Pin inactivity time [min]"
+msgstr "Doba nečinnosti kódu PIN (min)"
+
+msgid "Autoprotection of recordings"
+msgstr "Automatická ochrana nahrávek"
+
+msgid "Ignoring invalid pin"
+msgstr "Neplatný kód PIN ignorován"
+
+msgid "Childlock plugin"
+msgstr "Modul dětského zámku"
+
+msgid "Parental Control"
+msgstr "Rodičovská kontrola"
+
+#~ msgid "Add"
+#~ msgstr "Přidat"
+
+#~ msgid "7 Unlock setup"
+#~ msgstr "7 Odemknout nastavení"
+
+#~ msgid "7 Lock setup"
+#~ msgstr "7 Zamknout nastavení"
+
+#~ msgid "6 Edit plugin locks"
+#~ msgstr "6 Upravit zámky modulů"

@@ -1,0 +1,294 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Alberto Carraro <bertocar@tin.it>, 2001
+# Antonio Ospite <ospite@studenti.unina.it>, 2003
+# Sean Carlos <seanc@libero.it>, 2005
+# Dario Croci <spaeleus@croci.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-reelbox\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2012-04-03 19:08+0200\n"
+"PO-Revision-Date: 2009-06-20 22:52+0100\n"
+"Last-Translator: Spaeleus <spaeleus@croci.org>\n"
+"Language-Team: www.linsat.net - Italy <spaeleus@croci.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "brightness"
+msgstr "Luminosità"
+
+msgid "contrast"
+msgstr "Contrasto"
+
+msgid "colour"
+msgstr "Colore"
+
+msgid "sharpness"
+msgstr "Nitidezza"
+
+msgid "gamma cor."
+msgstr "Corr. gamma"
+
+msgid "flicker"
+msgstr "Sfarfallamento"
+
+msgid "Reset to default"
+msgstr "Ripristinare predefiniti"
+
+msgid "Picture Settings"
+msgstr "Configurazione immagine"
+
+msgid "Fill to Screen"
+msgstr "Adattare allo schermo"
+
+msgid "Fill to Aspect"
+msgstr "Adattare all'aspetto"
+
+msgid "Crop to Fill"
+msgstr "Tagliare per adattare"
+
+msgid "Setup - Video"
+msgstr "Configurazione - Video"
+
+msgid "SDTV only"
+msgstr "Solo SDTV"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "Progressive"
+msgstr "Progressivo"
+
+msgid "Interlaced"
+msgstr "Interlacciato"
+
+msgid "Maximum"
+msgstr "Massimo"
+
+msgid "Media resolution"
+msgstr "Risoluzione supporto"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Always on"
+msgstr "Sempre on"
+
+msgid "Always off"
+msgstr "Sempre off"
+
+msgid "On"
+msgstr "On"
+
+msgid "HDMI"
+msgstr "HDMI"
+
+msgid "DVI"
+msgstr "DVI"
+
+msgid "SCART"
+msgstr "SCART"
+
+msgid "Mini-DIN"
+msgstr "Mini-DIN"
+
+msgid "Analog+digital"
+msgstr "Analogico+digitale"
+
+msgid "Experts"
+msgstr "Esperti"
+
+msgid "Video Settings"
+msgstr "Configurazione video"
+
+msgid "Use extension HD"
+msgstr "Usare extension HD"
+
+msgid "Output"
+msgstr "Output"
+
+msgid "Analog Output"
+msgstr "Output analogico"
+
+msgid "Analog Port"
+msgstr "Porta analogica"
+
+msgid "Secondary Output"
+msgstr "Output secondario"
+
+msgid "Switching Voltage"
+msgstr "Commutazione voltaggio"
+
+msgid "Display Type"
+msgstr "Tipo display"
+
+msgid "Aspect Ratio"
+msgstr "Rapporto d'aspetto"
+
+msgid "Resolution"
+msgstr "Risoluzione"
+
+msgid "Refresh Rate"
+msgstr "Refresh Rate"
+
+msgid "Progressive/Interlaced"
+msgstr "Progressivo/Interlacciato"
+
+msgid "Deinterlacer for SDTV"
+msgstr "Deinterlacer per SDTV"
+
+msgid "Dot by Dot"
+msgstr "Punto per punto"
+
+msgid "Resolution change"
+msgstr "Cambio risoluzione"
+
+msgid "OSD scaling"
+msgstr "Scaling OSD"
+
+msgid "Overscan"
+msgstr "Overscan"
+
+msgid "Mode"
+msgstr "Modalità"
+
+msgid "Output mode"
+msgstr "Modalità output"
+
+msgid "Anamorphic+WSS"
+msgstr "Anamorfico + WSS"
+
+msgid "Anamorphic"
+msgstr "Anamorfico"
+
+msgid "Manual"
+msgstr "Manuale"
+
+msgid "Aspect Ratio Ctrl."
+msgstr "Ctrl. rapporto d'aspetto"
+
+msgid "Auto PAL50/PAL60"
+msgstr "PAL50/PAL60 automatico"
+
+msgid "PAL50 only"
+msgstr "Solo PAL50"
+
+msgid "NTSC only"
+msgstr "Solo NTSC"
+
+msgid "Norm/Framerate"
+msgstr "Norm/Framerate"
+
+msgid "At Startup"
+msgstr "All'avvio"
+
+msgid "Scart Voltage"
+msgstr "Voltaggio SCART"
+
+msgid "Auto 75Hz+60Hz (VESA)"
+msgstr "75Hz+60Hz automatico (VESA)"
+
+msgid "Auto 50Hz+60Hz (NON-VESA!)"
+msgstr "50Hz+60Hz automatico  (NON-VESA!)"
+
+msgid "Auto 67Hz+60Hz (NON-VESA!)"
+msgstr "67Hz+60Hz automatico  (NON-VESA!)"
+
+msgid "50Hz Only (NON-VESA!)"
+msgstr "Solo 50Hz (NON-VESA!)"
+
+msgid "60Hz Only (VESA)"
+msgstr "Solo 60Hz (VESA)"
+
+msgid "67Hz Only (NON-VESA!)"
+msgstr "Solo 67Hz (NON-VESA!)"
+
+msgid "75Hz Only (VESA)"
+msgstr "Solo 75Hz (VESA)"
+
+msgid "Framerate"
+msgstr "Framerate"
+
+msgid "no"
+msgstr "No"
+
+msgid "1080i"
+msgstr "1080i"
+
+msgid "720p"
+msgstr "720p"
+
+msgid "Upscaling for SDTV"
+msgstr "Upscaling per SDTV"
+
+msgid "Setup - Audio"
+msgstr "Configurazione - Audio"
+
+msgid "Audio Settings"
+msgstr "Configurazione audio"
+
+msgid "Setup.DVB$Use Dolby Digital"
+msgstr "Usare Dolby Digital"
+
+#, fuzzy
+msgid " Output Dolby D/dts on"
+msgstr "Otput DD/dts su"
+
+msgid "S/P-DIF"
+msgstr "S/P-DIF"
+
+msgid " Output as"
+msgstr " Output come"
+
+msgid "Stereo (PCM)"
+msgstr "Stereo (PCM)"
+
+#, fuzzy
+msgid "bitstream (Dolby D)"
+msgstr "Bitstream (AC3)"
+
+msgid "Soundcard"
+msgstr "Scheda audio"
+
+msgid " Delay (1/100s)"
+msgstr ""
+
+msgid "Analog Audio on"
+msgstr "Audio analogico On"
+
+msgid "TRS (3.5mm phone jack)"
+msgstr "TRS (jack cuffia 3.5mm)"
+
+msgid "HDMI/SCART/RCA jack"
+msgstr "Jack HDMI/SCART/RCA"
+
+msgid "Analog Mix"
+msgstr "Mix analogico"
+
+msgid "Restart ReelBox now? Please wait 2 minutes!"
+msgstr "Riavviare il ReelBox? Attendere 2 minuti!"
+
+#~ msgid "Reel"
+#~ msgstr "Reel"
+
+#~ msgid "Reel Lite"
+#~ msgstr "Reel Lite"
+
+#, fuzzy
+#~ msgid " Delay Dolby D/dts"
+#~ msgstr "Ritardo DD/dts"
+
+#~ msgid "Delay Stereo"
+#~ msgstr "Ritardo stereo"

@@ -1,0 +1,8 @@
+# this should be sourced by /etc/init.d/mountall.sh
+# 20100114 by RC
+
+PATH=$PATH:/usr/bin
+
+for mp in `grep "/media/" /etc/fstab | awk '{print $2}'` ; do
+	[ -d $mp ] || install -d -m000 $mp
+done

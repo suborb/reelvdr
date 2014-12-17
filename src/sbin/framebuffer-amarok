@@ -1,0 +1,7 @@
+#!/bin/sh
+
+xrdb -load $HOME/.Xresources
+xsetroot -solid gray &
+matchbox-window-manager -theme blondie &
+exec amarokapp -m $*
+

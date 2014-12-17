@@ -1,0 +1,178 @@
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+# Mogens Elneff <mogens@elneff.dk>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-xinemediaplayer\n"
+"Report-Msgid-Bugs-To: <reelbox-devel@mailings.reelbox.org>\n"
+"POT-Creation-Date: 2010-06-11 17:09+0200\n"
+"PO-Revision-Date: 2008-10-01 14:52+0200\n"
+"Last-Translator: Mogens Elneff <mogens@elneff.dk>\n"
+"Language-Team: <vdr@linuxtv.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Jump: "
+msgstr ""
+
+msgid "Cannot play"
+msgstr ""
+
+msgid "file type"
+msgstr ""
+
+msgid "Waiting for server ..."
+msgstr ""
+
+msgid "Network read error"
+msgstr ""
+
+msgid "Got Invalid playlist from server. Playing next."
+msgstr ""
+
+msgid "Open Error"
+msgstr ""
+
+msgid "Only MPEG-1 format supported"
+msgstr ""
+
+msgid "VideoCodec not supported!"
+msgstr ""
+
+msgid "AudioCodec not supported!"
+msgstr ""
+
+msgid "Could not play file"
+msgstr ""
+
+msgid "Please wait, Loading..."
+msgstr ""
+
+msgid "Please check your network connection"
+msgstr ""
+
+msgid "Opening "
+msgstr ""
+
+msgid "Chapter"
+msgstr ""
+
+msgid "Unable to get default CD device"
+msgstr ""
+
+msgid "Unable open CD device"
+msgstr ""
+
+msgid "No tracks found in CD"
+msgstr ""
+
+msgid "No audio tracks found"
+msgstr ""
+
+msgid "Track"
+msgstr ""
+
+msgid "Paused"
+msgstr ""
+
+msgid "Mute"
+msgstr ""
+
+msgid "Replaymode: Normal"
+msgstr ""
+
+msgid "Replaymode: Repeat"
+msgstr ""
+
+msgid "Replaymode: Shuffle"
+msgstr ""
+
+msgid "Shuffle"
+msgstr ""
+
+msgid "Repeat"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "shoutcast"
+msgstr ""
+
+msgid "Add to favs"
+msgstr ""
+
+msgid "Volume"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Artist"
+msgstr ""
+
+msgid "Album"
+msgstr ""
+
+msgid "Genre"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Year"
+msgstr ""
+
+msgid "Length"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "Bitrate"
+msgstr ""
+
+msgid "Samplerate"
+msgstr ""
+
+msgid "ID3$Channels"
+msgstr ""
+
+msgid "Original"
+msgstr ""
+
+msgid "MPEG-Layer"
+msgstr ""
+
+msgid "Copyrighted"
+msgstr ""
+
+msgid "Protected"
+msgstr ""
+
+msgid "File size"
+msgstr ""
+
+msgid "Last Modified"
+msgstr ""
+
+msgid "Mediaplayer - Id3 Info:"
+msgstr ""
+
+msgid "No Id3 info found!"
+msgstr ""

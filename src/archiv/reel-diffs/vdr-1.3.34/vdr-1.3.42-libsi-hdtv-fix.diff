@@ -1,0 +1,23 @@
+--- /tmp/vdr-1.3.42/libsi/util.c        Sat May 28 16:15:29 2005
++++ libsi/util.c        Thu Feb 16 22:25:32 2006
+@@ -10,6 +10,7 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++#include <stdio.h>
+ #include <string.h>
+ #include "util.h"
+
+@@ -120,6 +121,12 @@ CharArray::DataOwnData::~DataOwnData() {
+ void CharArray::DataOwnData::assign(const unsigned char*d, unsigned int s) {
+    Delete();
+    size=s;
++if (size > 100000) {
++       printf ("assign size oops %x\n", size);
++       size = 0;
++       data = NULL;
++       return;
++}
+    unsigned char *newdata=new unsigned char[size];
+    memcpy(newdata, d, size);
+    data=newdata;
