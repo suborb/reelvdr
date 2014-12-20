@@ -1,0 +1,35 @@
+svdrpdemo.o: svdrpdemo.c /home/reelvdr/src/vdr-2.1.6/include/vdr/plugin.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/i18n.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/tools.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/menuitems.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/dvbdevice.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/device.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/channels.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/config.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/font.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/sources.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/thread.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/ci.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/dvbsubtitle.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/osd.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/eit.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/filter.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/nit.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/sdt.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/pat.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/positioner.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/remux.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/ringbuffer.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/sections.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/spu.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/osdbase.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/skins.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/epg.h \
+ /home/reelvdr/src/vdr-2.1.6/include/libsi/section.h \
+ /home/reelvdr/src/vdr-2.1.6/include/libsi/si.h \
+ /home/reelvdr/src/vdr-2.1.6/include/libsi/util.h \
+ /home/reelvdr/src/vdr-2.1.6/include/libsi/headers.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/keys.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/recording.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/timers.h \
+ /home/reelvdr/src/vdr-2.1.6/include/vdr/themes.h

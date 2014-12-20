@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: vdr-dvbhddevice 2.1.6\n"
+"Report-Msgid-Bugs-To: <see README>\n"
+"POT-Creation-Date: 2014-12-20 10:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "HD Full Featured DVB device"
+msgstr ""
+
+msgid "Video Conversion"
+msgstr ""
+
+msgid "TV on"
+msgstr ""
+
+msgid "TV off"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Letterbox 16/9"
+msgstr ""
+
+msgid "Letterbox 14/9"
+msgstr ""
+
+msgid "Pillarbox"
+msgstr ""
+
+msgid "CentreCutOut"
+msgstr ""
+
+msgid "Always 16/9"
+msgstr ""
+
+msgid "Zoom 16/9"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Frame rate"
+msgstr ""
+
+msgid "HD Only"
+msgstr ""
+
+msgid "Always"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Analogue only"
+msgstr ""
+
+msgid "HDMI only"
+msgstr ""
+
+msgid "Follow resolution"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "Resolution"
+msgstr ""
+
+msgid "Video Mode Adaption"
+msgstr ""
+
+msgid "TV format"
+msgstr ""
+
+msgid "Analogue Video"
+msgstr ""
+
+msgid "Audio Delay (ms)"
+msgstr ""
+
+msgid "Audio Downmix"
+msgstr ""
+
+msgid "A/V Sync Shift (ms)"
+msgstr ""
+
+msgid "OSD Size"
+msgstr ""
+
+msgid "HDMI CEC"
+msgstr ""
+
+msgid "CEC: Switch TV on"
+msgstr ""
+
+msgid "CEC: Switch TV off"
+msgstr ""
+
+msgid "Remote Control Protocol"
+msgstr ""
+
+msgid "Remote Control Address"
+msgstr ""
+
+msgid "High Level OSD"
+msgstr ""
+
+msgid "Allow True Color OSD"
+msgstr ""
+
+msgid "Hide mainmenu entry"
+msgstr ""

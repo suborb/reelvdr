@@ -1,0 +1,257 @@
+audio.o: audio.c audio.h thread.h tools.h dvbdevice.h device.h channels.h \
+ config.h i18n.h font.h sources.h ci.h dvbsubtitle.h osd.h eit.h filter.h \
+ nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h
+channels.o: channels.c channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h device.h ci.h dvbsubtitle.h osd.h eit.h filter.h \
+ nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h \
+ epg.h libsi/section.h libsi/si.h libsi/util.h libsi/headers.h libsi/si.h \
+ timers.h
+ci.o: ci.c ci.h channels.h config.h i18n.h tools.h font.h sources.h \
+ thread.h device.h dvbsubtitle.h osd.h eit.h filter.h nit.h sdt.h pat.h \
+ positioner.h remux.h ringbuffer.h sections.h spu.h receiver.h
+config.o: config.c config.h i18n.h tools.h font.h device.h channels.h \
+ sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h filter.h nit.h sdt.h \
+ pat.h positioner.h remux.h ringbuffer.h sections.h spu.h interface.h \
+ remote.h keys.h skins.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h recording.h timers.h themes.h svdrp.h menu.h osdbase.h \
+ dvbplayer.h player.h menuitems.h dvbdevice.h recorder.h receiver.h \
+ plugin.h
+cutter.o: cutter.c cutter.h thread.h tools.h menu.h ci.h channels.h \
+ config.h i18n.h font.h sources.h device.h dvbsubtitle.h osd.h eit.h \
+ filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h \
+ spu.h epg.h libsi/section.h libsi/si.h libsi/util.h libsi/headers.h \
+ osdbase.h skins.h keys.h recording.h timers.h themes.h dvbplayer.h \
+ player.h menuitems.h dvbdevice.h recorder.h receiver.h videodir.h
+device.o: device.c device.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h filter.h nit.h sdt.h \
+ pat.h positioner.h remux.h ringbuffer.h sections.h spu.h audio.h \
+ player.h osdbase.h skins.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h keys.h recording.h timers.h themes.h receiver.h status.h \
+ transfer.h
+diseqc.o: diseqc.c diseqc.h config.h i18n.h tools.h font.h positioner.h \
+ thread.h sources.h
+dvbdevice.o: dvbdevice.c dvbdevice.h device.h channels.h config.h i18n.h \
+ tools.h font.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h \
+ filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h \
+ spu.h diseqc.h dvbci.h menuitems.h osdbase.h skins.h epg.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h keys.h \
+ recording.h timers.h themes.h sourceparams.h
+dvbci.o: dvbci.c dvbci.h ci.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h device.h dvbsubtitle.h osd.h eit.h filter.h nit.h \
+ sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h
+dvbplayer.o: dvbplayer.c dvbplayer.h player.h device.h channels.h \
+ config.h i18n.h tools.h font.h sources.h thread.h ci.h dvbsubtitle.h \
+ osd.h eit.h filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h \
+ sections.h spu.h osdbase.h skins.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h keys.h recording.h timers.h themes.h
+dvbspu.o: dvbspu.c dvbspu.h device.h channels.h config.h i18n.h tools.h \
+ font.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h filter.h nit.h \
+ sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h
+dvbsubtitle.o: dvbsubtitle.c dvbsubtitle.h osd.h config.h i18n.h tools.h \
+ font.h thread.h device.h channels.h sources.h ci.h eit.h filter.h nit.h \
+ sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h \
+ libsi/si.h libsi/util.h libsi/headers.h
+eit.o: eit.c eit.h filter.h tools.h epg.h channels.h config.h i18n.h \
+ font.h sources.h thread.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h libsi/descriptor.h
+eitscan.o: eitscan.c eitscan.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h device.h ci.h dvbsubtitle.h osd.h eit.h filter.h \
+ nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h \
+ dvbdevice.h skins.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h keys.h recording.h timers.h themes.h transfer.h player.h \
+ osdbase.h receiver.h
+epg.o: epg.c epg.h channels.h config.h i18n.h tools.h font.h sources.h \
+ thread.h libsi/section.h libsi/si.h libsi/util.h libsi/headers.h \
+ libsi/si.h timers.h
+filter.o: filter.c filter.h tools.h sections.h thread.h
+font.o: font.c font.h tools.h /usr/include/freetype2/freetype/freetype.h \
+ /usr/include/freetype2/freetype/config/ftconfig.h \
+ /usr/include/freetype2/freetype/config/ftoption.h \
+ /usr/include/freetype2/freetype/config/ftstdlib.h \
+ /usr/include/freetype2/freetype/fterrors.h \
+ /usr/include/freetype2/freetype/ftmoderr.h \
+ /usr/include/freetype2/freetype/fterrdef.h \
+ /usr/include/freetype2/freetype/fttypes.h \
+ /usr/include/freetype2/freetype/ftsystem.h \
+ /usr/include/freetype2/freetype/ftimage.h config.h i18n.h osd.h thread.h
+i18n.o: i18n.c i18n.h tools.h
+interface.o: interface.c interface.h config.h i18n.h tools.h font.h \
+ remote.h keys.h thread.h skins.h channels.h sources.h epg.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h osd.h \
+ positioner.h recording.h timers.h themes.h svdrp.h status.h device.h \
+ ci.h dvbsubtitle.h eit.h filter.h nit.h sdt.h pat.h remux.h ringbuffer.h \
+ sections.h spu.h player.h osdbase.h
+keys.o: keys.c keys.h config.h i18n.h tools.h font.h plugin.h menuitems.h \
+ dvbdevice.h device.h channels.h sources.h thread.h ci.h dvbsubtitle.h \
+ osd.h eit.h filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h \
+ sections.h spu.h osdbase.h skins.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h recording.h timers.h themes.h
+lirc.o: lirc.c lirc.h remote.h keys.h config.h i18n.h tools.h font.h \
+ thread.h
+menu.o: menu.c menu.h ci.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h device.h dvbsubtitle.h osd.h eit.h filter.h nit.h \
+ sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h epg.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h osdbase.h \
+ skins.h keys.h recording.h timers.h themes.h dvbplayer.h player.h \
+ menuitems.h dvbdevice.h recorder.h receiver.h cutter.h eitscan.h \
+ interface.h remote.h svdrp.h plugin.h shutdown.h sourceparams.h status.h \
+ transfer.h videodir.h
+menuitems.o: menuitems.c menuitems.h dvbdevice.h device.h channels.h \
+ config.h i18n.h tools.h font.h sources.h thread.h ci.h dvbsubtitle.h \
+ osd.h eit.h filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h \
+ sections.h spu.h osdbase.h skins.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h keys.h recording.h timers.h themes.h \
+ plugin.h remote.h status.h player.h
+nit.o: nit.c nit.h filter.h tools.h sdt.h pat.h thread.h channels.h \
+ config.h i18n.h font.h sources.h dvbdevice.h device.h ci.h dvbsubtitle.h \
+ osd.h eit.h positioner.h remux.h ringbuffer.h sections.h spu.h eitscan.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h \
+ libsi/descriptor.h
+osdbase.o: osdbase.c osdbase.h config.h i18n.h tools.h font.h osd.h \
+ thread.h skins.h channels.h sources.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h keys.h positioner.h recording.h timers.h \
+ themes.h device.h ci.h dvbsubtitle.h eit.h filter.h nit.h sdt.h pat.h \
+ remux.h ringbuffer.h sections.h spu.h menuitems.h dvbdevice.h remote.h \
+ status.h player.h
+osd.o: osd.c osd.h config.h i18n.h tools.h font.h thread.h device.h \
+ channels.h sources.h ci.h dvbsubtitle.h eit.h filter.h nit.h sdt.h pat.h \
+ positioner.h remux.h ringbuffer.h sections.h spu.h
+pat.o: pat.c pat.h filter.h tools.h thread.h channels.h config.h i18n.h \
+ font.h sources.h libsi/section.h libsi/si.h libsi/util.h libsi/headers.h \
+ libsi/descriptor.h
+player.o: player.c player.h device.h channels.h config.h i18n.h tools.h \
+ font.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h filter.h nit.h \
+ sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h osdbase.h \
+ skins.h epg.h libsi/section.h libsi/si.h libsi/util.h libsi/headers.h \
+ keys.h recording.h timers.h themes.h
+plugin.o: plugin.c plugin.h i18n.h tools.h menuitems.h dvbdevice.h \
+ device.h channels.h config.h font.h sources.h thread.h ci.h \
+ dvbsubtitle.h osd.h eit.h filter.h nit.h sdt.h pat.h positioner.h \
+ remux.h ringbuffer.h sections.h spu.h osdbase.h skins.h epg.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h keys.h \
+ recording.h timers.h themes.h interface.h remote.h svdrp.h
+positioner.o: positioner.c positioner.h thread.h tools.h config.h i18n.h \
+ font.h
+receiver.o: receiver.c receiver.h device.h channels.h config.h i18n.h \
+ tools.h font.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h \
+ filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h \
+ spu.h
+recorder.o: recorder.c recorder.h receiver.h device.h channels.h config.h \
+ i18n.h tools.h font.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h \
+ filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h \
+ spu.h recording.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h timers.h shutdown.h
+recording.o: recording.c recording.h channels.h config.h i18n.h tools.h \
+ font.h sources.h thread.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h timers.h cutter.h interface.h remote.h keys.h skins.h \
+ osd.h positioner.h themes.h svdrp.h menu.h ci.h device.h dvbsubtitle.h \
+ eit.h filter.h nit.h sdt.h pat.h remux.h ringbuffer.h sections.h spu.h \
+ osdbase.h dvbplayer.h player.h menuitems.h dvbdevice.h recorder.h \
+ receiver.h videodir.h
+remote.o: remote.c remote.h keys.h config.h i18n.h tools.h font.h \
+ thread.h
+remux.o: remux.c remux.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h device.h ci.h dvbsubtitle.h osd.h eit.h filter.h \
+ nit.h sdt.h pat.h positioner.h ringbuffer.h sections.h spu.h libsi/si.h \
+ libsi/util.h libsi/headers.h libsi/section.h libsi/si.h \
+ libsi/descriptor.h recording.h epg.h timers.h shutdown.h
+ringbuffer.o: ringbuffer.c ringbuffer.h thread.h tools.h
+sdt.o: sdt.c sdt.h filter.h tools.h pat.h thread.h channels.h config.h \
+ i18n.h font.h sources.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h libsi/descriptor.h
+sections.o: sections.c sections.h filter.h tools.h thread.h channels.h \
+ config.h i18n.h font.h sources.h device.h ci.h dvbsubtitle.h osd.h eit.h \
+ nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h spu.h
+shutdown.o: shutdown.c shutdown.h channels.h config.h i18n.h tools.h \
+ font.h sources.h thread.h interface.h remote.h keys.h skins.h epg.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h osd.h \
+ positioner.h recording.h timers.h themes.h svdrp.h menu.h ci.h device.h \
+ dvbsubtitle.h eit.h filter.h nit.h sdt.h pat.h remux.h ringbuffer.h \
+ sections.h spu.h osdbase.h dvbplayer.h player.h menuitems.h dvbdevice.h \
+ recorder.h receiver.h plugin.h
+skinclassic.o: skinclassic.c skinclassic.h skins.h channels.h config.h \
+ i18n.h tools.h font.h sources.h thread.h epg.h libsi/section.h \
+ libsi/si.h libsi/util.h libsi/headers.h keys.h osd.h positioner.h \
+ recording.h timers.h themes.h videodir.h
+skinlcars.o: skinlcars.c skinlcars.h skins.h channels.h config.h i18n.h \
+ tools.h font.h sources.h thread.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h keys.h osd.h positioner.h recording.h \
+ timers.h themes.h menu.h ci.h device.h dvbsubtitle.h eit.h filter.h \
+ nit.h sdt.h pat.h remux.h ringbuffer.h sections.h spu.h osdbase.h \
+ dvbplayer.h player.h menuitems.h dvbdevice.h recorder.h receiver.h \
+ videodir.h symbols/arrowdown.xpm symbols/arrowup.xpm symbols/audio.xpm \
+ symbols/audioleft.xpm symbols/audioright.xpm symbols/audiostereo.xpm \
+ symbols/dolbydigital.xpm symbols/encrypted.xpm symbols/ffwd.xpm \
+ symbols/ffwd1.xpm symbols/ffwd2.xpm symbols/ffwd3.xpm symbols/frew.xpm \
+ symbols/frew1.xpm symbols/frew2.xpm symbols/frew3.xpm symbols/mute.xpm \
+ symbols/pause.xpm symbols/play.xpm symbols/radio.xpm \
+ symbols/recording.xpm symbols/sfwd.xpm symbols/sfwd1.xpm \
+ symbols/sfwd2.xpm symbols/sfwd3.xpm symbols/srew.xpm symbols/srew1.xpm \
+ symbols/srew2.xpm symbols/srew3.xpm symbols/teletext.xpm \
+ symbols/volume.xpm
+skins.o: skins.c skins.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h keys.h osd.h positioner.h recording.h timers.h themes.h \
+ interface.h remote.h svdrp.h status.h device.h ci.h dvbsubtitle.h eit.h \
+ filter.h nit.h sdt.h pat.h remux.h ringbuffer.h sections.h spu.h \
+ player.h osdbase.h
+skinsttng.o: skinsttng.c skinsttng.h skins.h channels.h config.h i18n.h \
+ tools.h font.h sources.h thread.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h keys.h osd.h positioner.h recording.h \
+ timers.h themes.h menu.h ci.h device.h dvbsubtitle.h eit.h filter.h \
+ nit.h sdt.h pat.h remux.h ringbuffer.h sections.h spu.h osdbase.h \
+ dvbplayer.h player.h menuitems.h dvbdevice.h recorder.h receiver.h \
+ videodir.h symbols/arrowdown.xpm symbols/arrowup.xpm symbols/audio.xpm \
+ symbols/audioleft.xpm symbols/audioright.xpm symbols/audiostereo.xpm \
+ symbols/dolbydigital.xpm symbols/encrypted.xpm symbols/ffwd.xpm \
+ symbols/ffwd1.xpm symbols/ffwd2.xpm symbols/ffwd3.xpm symbols/frew.xpm \
+ symbols/frew1.xpm symbols/frew2.xpm symbols/frew3.xpm symbols/mute.xpm \
+ symbols/pause.xpm symbols/play.xpm symbols/radio.xpm \
+ symbols/recording.xpm symbols/sfwd.xpm symbols/sfwd1.xpm \
+ symbols/sfwd2.xpm symbols/sfwd3.xpm symbols/srew.xpm symbols/srew1.xpm \
+ symbols/srew2.xpm symbols/srew3.xpm symbols/teletext.xpm \
+ symbols/volume.xpm
+sourceparams.o: sourceparams.c sourceparams.h channels.h config.h i18n.h \
+ tools.h font.h sources.h thread.h osdbase.h osd.h skins.h epg.h \
+ libsi/section.h libsi/si.h libsi/util.h libsi/headers.h keys.h \
+ positioner.h recording.h timers.h themes.h
+sources.o: sources.c sources.h config.h i18n.h tools.h font.h
+spu.o: spu.c spu.h
+status.o: status.c status.h config.h i18n.h tools.h font.h device.h \
+ channels.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h filter.h \
+ nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h \
+ player.h osdbase.h skins.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h keys.h recording.h timers.h themes.h
+svdrp.o: svdrp.c svdrp.h recording.h channels.h config.h i18n.h tools.h \
+ font.h sources.h thread.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h timers.h device.h ci.h dvbsubtitle.h osd.h eit.h \
+ filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h \
+ spu.h eitscan.h keys.h menu.h osdbase.h skins.h themes.h dvbplayer.h \
+ player.h menuitems.h dvbdevice.h recorder.h receiver.h plugin.h remote.h \
+ videodir.h
+themes.o: themes.c themes.h i18n.h tools.h osd.h config.h font.h thread.h
+thread.o: thread.c thread.h tools.h
+timers.o: timers.c timers.h channels.h config.h i18n.h tools.h font.h \
+ sources.h thread.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h device.h ci.h dvbsubtitle.h osd.h eit.h filter.h nit.h \
+ sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h \
+ libsi/si.h recording.h remote.h keys.h status.h player.h osdbase.h \
+ skins.h themes.h
+tools.o: tools.c tools.h i18n.h thread.h
+transfer.o: transfer.c transfer.h player.h device.h channels.h config.h \
+ i18n.h tools.h font.h sources.h thread.h ci.h dvbsubtitle.h osd.h eit.h \
+ filter.h nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h \
+ spu.h osdbase.h skins.h epg.h libsi/section.h libsi/si.h libsi/util.h \
+ libsi/headers.h keys.h recording.h timers.h themes.h receiver.h
+vdr.o: vdr.c audio.h thread.h tools.h channels.h config.h i18n.h font.h \
+ sources.h cutter.h device.h ci.h dvbsubtitle.h osd.h eit.h filter.h \
+ nit.h sdt.h pat.h positioner.h remux.h ringbuffer.h sections.h spu.h \
+ diseqc.h dvbdevice.h eitscan.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h interface.h remote.h keys.h skins.h \
+ recording.h timers.h themes.h svdrp.h libsi/si.h lirc.h menu.h osdbase.h \
+ dvbplayer.h player.h menuitems.h recorder.h receiver.h plugin.h \
+ shutdown.h skinclassic.h skinlcars.h skinsttng.h sourceparams.h status.h \
+ transfer.h videodir.h
+videodir.o: videodir.c videodir.h tools.h recording.h channels.h config.h \
+ i18n.h font.h sources.h thread.h epg.h libsi/section.h libsi/si.h \
+ libsi/util.h libsi/headers.h timers.h

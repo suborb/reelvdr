@@ -1,0 +1,4 @@
+util.o: util.c util.h
+si.o: si.c si.h util.h headers.h descriptor.h
+section.o: section.c section.h si.h util.h headers.h
+descriptor.o: descriptor.c descriptor.h si.h util.h headers.h

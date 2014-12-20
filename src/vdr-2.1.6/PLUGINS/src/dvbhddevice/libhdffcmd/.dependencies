@@ -1,0 +1,20 @@
+bitbuffer.o: bitbuffer.c bitbuffer.h
+hdffcmd_av.o: hdffcmd_av.c hdffcmd.h hdffcmd_av.h hdffcmd_generic.h \
+ hdffcmd_hdmi.h hdffcmd_mux.h hdffcmd_osd.h hdffcmd_remote.h \
+ hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
+hdffcmd_base.o: hdffcmd_base.c hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
+hdffcmd_generic.o: hdffcmd_generic.c hdffcmd.h hdffcmd_av.h \
+ hdffcmd_generic.h hdffcmd_hdmi.h hdffcmd_mux.h hdffcmd_osd.h \
+ hdffcmd_remote.h hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
+hdffcmd_hdmi.o: hdffcmd_hdmi.c hdffcmd.h hdffcmd_av.h hdffcmd_generic.h \
+ hdffcmd_hdmi.h hdffcmd_mux.h hdffcmd_osd.h hdffcmd_remote.h \
+ hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
+hdffcmd_mux.o: hdffcmd_mux.c hdffcmd.h hdffcmd_av.h hdffcmd_generic.h \
+ hdffcmd_hdmi.h hdffcmd_mux.h hdffcmd_osd.h hdffcmd_remote.h \
+ hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
+hdffcmd_osd.o: hdffcmd_osd.c hdffcmd.h hdffcmd_av.h hdffcmd_generic.h \
+ hdffcmd_hdmi.h hdffcmd_mux.h hdffcmd_osd.h hdffcmd_remote.h \
+ hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
+hdffcmd_remote.o: hdffcmd_remote.c hdffcmd.h hdffcmd_av.h \
+ hdffcmd_generic.h hdffcmd_hdmi.h hdffcmd_mux.h hdffcmd_osd.h \
+ hdffcmd_remote.h hdffcmd_base.h bitbuffer.h hdffcmd_defs.h
