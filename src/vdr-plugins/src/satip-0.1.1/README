@@ -1,0 +1,118 @@
+This is an SAT>IP plugin for the Video Disk Recorder (VDR).
+
+Written by:                  Rolf Ahrenberg
+                             < R o l f . A h r e n b e r g @ s c i . f i >
+
+Project's homepage:          http://www.saunalahti.fi/~rahrenbe/vdr/satip/
+
+Latest version available at: http://www.saunalahti.fi/~rahrenbe/vdr/satip/
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as
+published by the Free Software Foundation.
+See the file COPYING for more information.
+
+Requirements:
+
+- Libcurl - the multiprotocol file transfer library with RTSP support
+  http://curl.haxx.se/libcurl/
+
+- PugiXML - Light-weight, simple and fast XML parser for C++
+  http://pugixml.org/
+  or
+  TinyXML - a simple, small, C++ XML parser
+  http://www.grinninglizard.com/tinyxml/
+
+- VDR-2.1.4+ for scrambled channels
+
+Description:
+
+This plugin integrates SAT>IP network devices seamlessly into VDR.
+You can use any SAT>IP channel like any other normal DVB channel for
+live viewing, recording, etc. The plugin also features full section
+filtering capabilities which allow for example EIT information to be
+extracted from the incoming stream.
+
+Installation:
+
+tar -xzf /put/your/path/here/vdr-satip-X.Y.Z.tgz
+make -C satip-X.Y.Z install
+
+Configuration:
+
+The plugin accepts a "--devices" (-d) command-line parameter defaulting
+to one. This parameter defines how many simultaneous transponders can
+be received, if there are available SAT>IP tuners.
+
+SAT>IP satellite positions (aka. signal sources) shall be defined via
+sources.conf. If the source description begins with a number, it's used
+as SAT>IP signal source selection parameter. Otherwise, the default
+parameter is one:
+
+S19.2E  Astra 1KR/1L/1M/2C
+=> Signal source = 1
+
+S19.2E  2
+=> Signal source = 2
+
+S19.2E  3 Astra 1KR/1L/1M/2C
+=> Signal source = 3
+
+Setup menu:
+
+- Operating mode = off       If you want exclude all SAT>IP devices
+                   low       from VDR's device handling, set this
+                   normal    option to "off". Otherwise, if you want
+                   high      to keep SAT>IP at a low priority when
+                             selecting available devices, set this
+                             option to "low". Similarly, the "high"
+                             value prefers the SAT>IP over the local
+                             DVB cards when selecting available devices.
+- Enable EPG scanning = yes  If you want exclude all SAT>IP devices
+                             from VDR's EIT background scanning, set
+                             this option to "no".
+- Disabled filters = none    Certain section filters might cause some
+                             unwanted behaviour to VDR such as time
+                             being falsely synchronized etc. This option
+                             allows creation of  blacklists of ill-behaving
+                             filters. If this option is set to a non-zero
+                             value, the menu page will contain that many
+                             "Disable filter" options which allow you
+                             to disable the individual section filters.
+                             Valid range: "none" = 0 ... 7
+- [Red:Scan]                 Forces network scanning of SAT>IP hardware.
+- [Blue:Info]                Opens SAT>IP information/statistics menu.
+- [Ok]                       Opens information menu of selected SAT>IP
+                             device.
+
+Information menu:
+
+- [Red:General]              Opens the general information page.
+- [Green:Pids]               Opens the pid statistics page.
+- [Yellow:Filters]           Opens the section filter statistics page.
+- [Blue:Bits/bytes]          Toggles between bits and bytes mode.
+
+Notes:
+
+- The stream id "-1" states about unsuccessful tuning. This might be a
+  result of invalid channel parameters or lack of free SAT>IP tuners.
+
+- SAT>IP specification 1.2 doesn't support DVB-C/DVB-C2 receivers yet,
+  but DVB-C (KABEL>IP) is supported for Digital Devices Octopus Net
+  devices.
+
+- If the plugin doesn't detect your SAT>IP network device, make sure
+  your setup doesn't have firewalled the UDP port 1900.
+
+- Stream decryption requires a separate CAM plugin that works without
+  direct access to any DVB card devices. The integrated CAM slot in
+  Octopus Net devices isn't supported.
+
+- The 100% compliance against SAT>IP specification 1.2 requires a
+  patched VDR providing channel configuration for pilot, T2 system id,
+  and SISO/MISO values.
+
+Acknowledgements:
+
+- Big thanks to Digital Devices GmbH for providing the Octopus Net
+  hardware for development!
